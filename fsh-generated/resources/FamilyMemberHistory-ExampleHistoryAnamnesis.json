@@ -1,0 +1,77 @@
+{
+  "resourceType": "FamilyMemberHistory",
+  "id": "ExampleHistoryAnamnesis",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
+    ]
+  },
+  "relationship": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "65656005",
+        "display": "Natural Mother (person)"
+      }
+    ]
+  },
+  "status": "completed",
+  "patient": {
+    "reference": "Patient/example"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "666",
+          "system": "http://www.orpha.net"
+        }
+      ]
+    }
+  ],
+  "sex": {
+    "coding": [
+      {
+        "code": "femal"
+      }
+    ]
+  },
+  "bornDate": "1954",
+  "deceasedDate": "2004",
+  "condition": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "H35.8",
+            "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+            "version": "2004"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "E11.X",
+            "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+            "version": "2004"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "I21.2",
+            "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+            "version": "2004"
+          }
+        ]
+      },
+      "contributedToDeath": true
+    }
+  ]
+}

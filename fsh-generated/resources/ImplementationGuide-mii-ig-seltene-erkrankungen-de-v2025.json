@@ -47,6 +47,14 @@
     "resource": [
       {
         "reference": {
+          "reference": "FamilyMemberHistory/ExampleHistoryAnamnesis"
+        },
+        "name": "ExampleHistoryAnamnesis",
+        "description": "Example Patient Family Anamnesis",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-molgen-familienanamnese"
         },
         "name": "MII PR MolGen Familienanamnese",
