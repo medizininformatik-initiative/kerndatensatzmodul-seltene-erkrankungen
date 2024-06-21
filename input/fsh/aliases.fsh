@@ -6,3 +6,4 @@ Alias: $UICC = https://www.uicc.org/resources/tnm
 Alias: $ucum =  http://unitsofmeasure.org
 Alias: $ATC_DE = http://fhir.de/CodeSystem/bfarm/atc
 Alias: $FHIR-Version = 4.0.1
+Alias: $ExpandedYesNoIndicator = http://terminology.hl7.org/CodeSystem/v2-0532
