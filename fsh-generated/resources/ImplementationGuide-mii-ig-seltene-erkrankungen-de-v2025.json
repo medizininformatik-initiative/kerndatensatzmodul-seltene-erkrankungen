@@ -47,6 +47,14 @@
     "resource": [
       {
         "reference": {
+          "reference": "StructureDefinition/hairiness-profile"
+        },
+        "name": "Example Patient Profile",
+        "description": "Example of a profile of Patient",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "FamilyMemberHistory/ExampleHistoryAnamnesis"
         },
         "name": "ExampleHistoryAnamnesis",
@@ -55,10 +63,26 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/fastingstatus-profile"
+        },
+        "name": "Fasting status of the patient",
+        "description": "Describes whether the patient is currently in fasted state.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-molgen-familienanamnese"
         },
         "name": "MII PR MolGen Familienanamnese",
         "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/2.16.840.1.113883.3.1937.777.30.11.68--20240620133122"
+        },
+        "name": "Skin phototype finding",
+        "description": "Skin phototype finding",
         "exampleBoolean": false
       }
     ],

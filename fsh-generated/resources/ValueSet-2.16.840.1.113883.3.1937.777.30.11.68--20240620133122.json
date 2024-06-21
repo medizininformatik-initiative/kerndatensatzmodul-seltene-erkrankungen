@@ -1,0 +1,75 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "SkinPhototypeFinding",
+  "id": "2.16.840.1.113883.3.1937.777.30.11.68--20240620133122",
+  "title": "Skin phototype finding",
+  "description": "Skin phototype finding",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/ValueSet/2.16.840.1.113883.3.1937.777.30.11.68--20240620133122",
+  "meta": {
+    "lastUpdated": "2024-06-20T13:31:22Z",
+    "source": "https://art-decor.org/fhir/4.0/cord-",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ],
+    "tag": [
+      {
+        "code": "4.0.1",
+        "system": "http://hl7.org/fhir/FHIR-version"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2024-06-20T13:31:22+02:00"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.3.1937.777.30.11.68"
+    }
+  ],
+  "version": "2024-06-20T13:31:22",
+  "experimental": false,
+  "publisher": "Berliner Institut für Gesundheitsforschung / Berlin Institute of Health (BIH)",
+  "immutable": false,
+  "copyright": "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "403221005",
+            "display": "Skin phototype I (always burn, never tan) (finding)"
+          },
+          {
+            "code": "403222003",
+            "display": "Skin phototype II (initially always burn, then usually tan) (finding)"
+          },
+          {
+            "code": "403226000",
+            "display": "Skin phototype III (initially sometimes burn, then usually tan)"
+          },
+          {
+            "code": "403231003",
+            "display": "Skin phototype IV (rarely burn, then always tan) (finding)"
+          },
+          {
+            "code": "403235007",
+            "display": "Skin phototype V (moderately pigmented) (finding)"
+          },
+          {
+            "code": "403236008",
+            "display": "Skin phototype VI (deeply pigmented) (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}
