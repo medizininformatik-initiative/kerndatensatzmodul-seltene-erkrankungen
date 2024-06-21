@@ -48,7 +48,14 @@ package MII_Modul_Seltene_Erkrankungen {
     object MII_MolGen_Variante_SE {
          + code: HGVS
     }
+    
+    package HL7_DE_Basisprofile {
+    object Koerpergroeße
+    object Koerpergewicht
+    }
+
 }
+
 MII_Diagnose -down--> MII_Diagnose_SE
 MII_Symptom_Observation -down--> MII_Symptom_Observation_SE
 MII_Symptom_Condition -down--> MII_Symptom_Condition_SE
