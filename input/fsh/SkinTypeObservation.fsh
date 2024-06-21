@@ -65,20 +65,8 @@ Description: "Dieses Profil beschreibt einen Hauttyp in der Medizininformatik-In
 * effective[x].extension ^slicing.discriminator.path = "url"
 * effective[x].extension ^slicing.rules = #open
 * issued MS
-* value[x] only Quantity or CodeableConcept
+* value[x] only CodeableConcept
 * value[x] MS
-* value[x] ^slicing.discriminator.type = #type
-* value[x] ^slicing.discriminator.path = "$this"
-* value[x] ^slicing.rules = #open
-* valueQuantity only Quantity
-* valueQuantity MS
-* valueQuantity ^sliceName = "valueQuantity"
-* valueQuantity.value 1.. MS
-* valueQuantity.unit 1.. MS
-* valueQuantity.system 1.. MS
-* valueQuantity.system = "http://unitsofmeasure.org" (exactly)
-* valueQuantity.code 1.. MS
-* valueQuantity.code ^comment = "The mandatory system is UCUM."
 * valueCodeableConcept only CodeableConcept
 * valueCodeableConcept MS
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
