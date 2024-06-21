@@ -12,7 +12,6 @@ Description: "Dieses Profil beschreibt einen Hauttyp in der Medizininformatik-In
 * ^experimental = false
 * ^publisher = "https://www.Medizininformatik-Initiative.de"
 * ^purpose = "Dieses Profil beschreibt einen Hauttyp in der Medizininformatik-Initiative."
-* obeys mii-lab-2
 * id MS
 * meta MS
 * meta.source MS
@@ -54,7 +53,7 @@ Description: "Dieses Profil beschreibt einen Hauttyp in der Medizininformatik-In
 * code.coding ^slicing.rules = #open
 * code.coding contains
     loinc-code 1..1 MS
-* code.coding[loinc-code] = $loinc#94535-2
+* code.coding[loinc-code] = $loinc#94535-2 "Skin tone"
 * subject 1.. MS
 * subject
 * encounter MS
