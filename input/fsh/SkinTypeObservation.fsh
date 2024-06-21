@@ -1,19 +1,17 @@
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $loinc = http://loinc.org
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
-Alias: $QuelleKlinischesBezugsdatum = https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum
-Alias: $results-laboratory-observations-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-observations-uv-ips
 
-Profile: ProfileObservationLaboruntersuchung
+Profile: ProfileObservationHauttyp
 Parent: Observation
-Id: ProfileObservationLaboruntersuchung
-Title: "Profile - Observation - Laboruntersuchung"
-Description: "Dieses Profil beschreibt eine Laborergebnis in der Medizininformatik-Initiative."
-* ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab"
+Id: ProfileObservationHauttyp
+Title: "Profile - Observation - Hauttyp"
+Description: "Dieses Profil beschreibt einen Hauttyp in der Medizininformatik-Initiative."
+* ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-seltene-erkrankungen/StructureDefinition/ObservationLab"
 * ^version = "1.0"
 * ^experimental = false
 * ^publisher = "https://www.Medizininformatik-Initiative.de"
-* ^purpose = "Dieses Profil beschreibt eine Laborergebnis in der Medizininformatik-Initiative."
+* ^purpose = "Dieses Profil beschreibt einen Hauttyp in der Medizininformatik-Initiative."
 * obeys mii-lab-2
 * id MS
 * meta MS
@@ -50,7 +48,6 @@ Description: "Dieses Profil beschreibt eine Laborergebnis in der Medizininformat
     observation-category 1..1 MS
 * category.coding[observation-category] = $observation-category#exam
 * code MS
-* code from $results-laboratory-observations-uv-ips (preferred)
 * code ^binding.description = "Intensional Value Set Definition: LOINC {  {    STATUS in {ACTIVE}    CLASSTYPE in {1}    CLASS exclude {CHALSKIN, H&P.HX.LAB, H&P.HX, NR STATS, PATH.PROTOCOLS.*}  } }"
 * subject 1.. MS
 * subject
@@ -85,7 +82,7 @@ Description: "Dieses Profil beschreibt eine Laborergebnis in der Medizininformat
 * dataAbsentReason MS
 * interpretation MS
 * note MS
-* bodySite ..0
+* bodySite MS
 * method MS
 * specimen MS
 * specimen.reference MS
@@ -94,7 +91,7 @@ Description: "Dieses Profil beschreibt eine Laborergebnis in der Medizininformat
 * referenceRange MS
 
 Invariant: mii-lab-2
-Description: "Falls kein Laborwert verfügbar ist, muss eine dataAbsentReason angegeben werden"
+Description: "Falls kein Hauttyp verfügbar ist, muss eine dataAbsentReason angegeben werden"
 * severity = #error
 * expression = "value.exists().not() implies dataAbsentReason.exists()"
 
