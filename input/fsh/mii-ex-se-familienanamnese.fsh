@@ -12,6 +12,7 @@ Usage: #example
 * deceasedDate = "2004"
 * condition[0].code = $ICD10GM#H35.8
 * condition[0].code.coding.version = "2004"
+// hier ist zu klären, welche Version der ICD-10 zu benutzen ist, wenn die 
 * condition[1].code = $ICD10GM#E11.X
 * condition[1].code.coding.version = "2004"
 * condition[2].code = $ICD10GM#I21.2
