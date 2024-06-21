@@ -40,9 +40,26 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * relationship.coding[v3-RoleCode] from PersonalRelationshipRoleType (required)
 * relationship.coding[v3-RoleCode] ^patternCoding.system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
 * sex MS
+
 * born[x] 0..1 MS
-* born[x] only date
-* bornDate 0..1 MS
+* born[x] only Period or date
+* bornDate MS
+* bornPeriod MS
+
+//* age[x] 0..1 MS
+//* age[x] only Period or date
+//* ageDate MS
+//* agePeriod MS
+
+* deceased[x] 0..1 MS
+* deceased[x] only boolean or date or Age or Range
+* deceasedBoolean 0..1 MS
+* deceasedAge 0..1 MS
+* deceasedRange 0..1 MS
+* deceasedDate 0..1 MS
+
+// TODO von der SE betroffen extension
+
 * reasonCode MS
 * reasonCode.coding 1.. MS
 * reasonCode.coding ^slicing.discriminator.type = #pattern
