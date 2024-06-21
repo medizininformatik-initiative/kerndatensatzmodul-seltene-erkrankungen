@@ -59,7 +59,7 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * deceasedDate 0..1 MS
 
 // alternative extension that could be used by HL7: condition-ver-status
-// TODO von der SE betroffen extension
+* extension contains VonSeBetroffen named vonSEBetroffen 1..1 MS
 
 * reasonCode MS
 * reasonCode.coding 1.. MS
