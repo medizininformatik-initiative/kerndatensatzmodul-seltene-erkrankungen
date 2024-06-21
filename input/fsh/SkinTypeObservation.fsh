@@ -78,9 +78,6 @@ Description: "Dieses Profil beschreibt einen Hauttyp in der Medizininformatik-In
 * note MS
 * bodySite MS
 * method MS
-* specimen MS
-* specimen.reference MS
-* specimen.identifier MS
 * device MS
 * referenceRange MS
 
