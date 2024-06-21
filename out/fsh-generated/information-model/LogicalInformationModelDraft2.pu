@@ -1,0 +1,40 @@
+@startuml MII_SE_Overview
+skinparam Linetype ortho
+'skinparam linetype polyline
+
+object Patient {
+    + Name
+    + Geschlecht
+    + Geburtsdatum
+    + ...
+}
+object Fall {
+
+}
+object Familienanamnese {
+    + Verwandtschaftsverhaeltnis
+    + Geschlecht
+    + Geburtsdatum
+    + Sterbedatum
+    + von gleicher SE betroffen
+    + an gleicher SE verstorben
+}
+object Erkrankung_Pat {
+    + code: ICD-10-GM
+    + code: Orphanet
+    + code: SNOMED C
+}
+object Erkrankung_Fam {
+    + code: ICD-10-GM
+    + code: Orphanet
+    + code: SNOMED CT
+    + Alter bei Diagnose
+    + Symptome
+}
+
+Patient "1" --> "0..*" Fall
+Patient "1" --> "0..*" Familienanamnese
+Patient "1" --> "0..*" Erkrankung_Pat
+Familienanamnese "1" --> "0..*" Erkrankung_Fam
+Erkrankung_Pat -------left--> "Diagnosestellung" Fall
+@enduml
