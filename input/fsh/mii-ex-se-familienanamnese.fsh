@@ -18,3 +18,4 @@ Usage: #example
 * condition[2].code = $ICD10GM#I21.2
 * condition[2].code.coding.version = "2004"
 * condition[2].contributedToDeath = true
+* extension.vonSEBetroffen = $ExpandedYesNoIndicator#Y
