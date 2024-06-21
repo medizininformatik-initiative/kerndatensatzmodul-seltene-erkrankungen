@@ -1,4 +1,5 @@
-Extension: Laterality
-Description: "Body side of a body location."
-* value[x] only CodeableConcept
-* value[x] from http://hl7.org/fhir/ValueSet/bodysite-laterality (required)
+Extension: VonSEBetroffen
+Id: von-se-betroffen
+Description: "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist."
+* value[x] only Code
+* value[x] from von-se-betroffen-vs (required)
