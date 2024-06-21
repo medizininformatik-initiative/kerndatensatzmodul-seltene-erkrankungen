@@ -47,8 +47,14 @@ Description: "Dieses Profil beschreibt einen Hauttyp in der Medizininformatik-In
     loinc-observation 1..1 MS and
     observation-category 1..1 MS
 * category.coding[observation-category] = $observation-category#exam
-* code MS
-* code ^binding.description = "Intensional Value Set Definition: LOINC {  {    STATUS in {ACTIVE}    CLASSTYPE in {1}    CLASS exclude {CHALSKIN, H&P.HX.LAB, H&P.HX, NR STATS, PATH.PROTOCOLS.*}  } }"
+* code 1.. MS
+* code.coding MS
+* code.coding ^slicing.discriminator.type = #pattern
+* code.coding ^slicing.discriminator.path = "$this"
+* code.coding ^slicing.rules = #open
+* code.coding contains
+    loinc-code 1..1 MS
+* code.coding[loinc-code] = $loinc#94535-2
 * subject 1.. MS
 * subject
 * encounter MS
