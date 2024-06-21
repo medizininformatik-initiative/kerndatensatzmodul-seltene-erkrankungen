@@ -119,6 +119,8 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * condition.code.coding[orphanet].system 1.. MS
 * condition.code.coding[orphanet].code 1.. MS
 * condition.contributedToDeath 0..1 MS
+* condition.onset[x] 0..1 MS
+* condition.onset[x] only Age or Range
 
 
 Mapping: MII-KDS
