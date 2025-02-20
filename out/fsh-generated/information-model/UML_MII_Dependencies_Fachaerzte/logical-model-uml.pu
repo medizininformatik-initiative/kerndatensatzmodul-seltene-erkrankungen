@@ -1,0 +1,62 @@
+@startuml
+title Modulvorschau MII Erweiterungsmodul Seltene Erkrankungen
+
+package "MII_Modul_Diagnose" {
+  object MII_Diagnose {
+    o code: ICD10GM
+    o code: Orphacode
+    o Alter bei Diagnose
+    o Status (Verdacht, gesichert..)
+  }
+}
+
+package "MII_Modul_Molekulargenetischer_Befundbericht" {
+  object MII_MolGen_Variante {
+    o code: HGVS
+  }
+  object MII_MolGen_Familienanamnese
+}
+
+package "MII_Modul_Symptom_klinischer_Phänotyp" {
+  object MII_Symptom_Observation
+  object MII_Symptom_Condition
+}
+
+package "MII_Modul_Seltene_Erkrankungen" {
+  object MII_Diagnose_SE {
+    o code: ICD10GM
+    o code: Orphacode
+  }
+  object MII_MolGen_Variante_SE {
+    o code: HGVS
+  }
+  object MII_Familienanamnese_SE
+  object MII_Symptom_Observation_SE {
+      o code: Human Phenotype Ontology (HPO)
+      o value: Presence/Absence
+      o date: Datum
+    }
+  object MII_Symptom_Condition_SE 
+}
+
+package "MII_Modul_ICU" {
+  object Koerpergewicht
+  object Koerpergroeße
+}
+
+object Familienmitglied {
+  o Verwandtschaftsverhaeltnis
+  o Geschlecht
+  o gleiche Erkrankung
+  o andere Erkrankung
+}
+
+MII_Diagnose -- MII_Diagnose_SE
+MII_MolGen_Variante -- MII_MolGen_Variante_SE
+MII_MolGen_Familienanamnese -- MII_Familienanamnese_SE
+MII_Symptom_Observation -- MII_Symptom_Observation_SE
+MII_Symptom_Condition -- MII_Symptom_Condition_SE
+
+MII_Familienanamnese_SE -- Familienmitglied
+
+@enduml
