@@ -1,62 +1,148 @@
-@startuml
+@startuml "MII_Datenmodell_Seltene_Erkrankungen_logisch"
 title Modulvorschau MII Erweiterungsmodul Seltene Erkrankungen
+package "MII_Datenmodell_Seltene_Erkrankungen" {
 
-package "MII_Modul_Diagnose" {
-  object MII_Diagnose {
-    o code: ICD10GM
-    o code: Orphacode
-    o Alter bei Diagnose
-    o Status (Verdacht, gesichert..)
-  }
-}
+  package MII_Person #33CCFF{
+    object MII_Patient {
+      o Geschlecht
+      o Geburtstag/Alter
 
-package "MII_Modul_Molekulargenetischer_Befundbericht" {
-  object MII_MolGen_Variante {
-    o code: HGVS
-  }
-  object MII_MolGen_Familienanamnese
-}
+    }
+    object Vitalstatus  {
+      o Datum
+      o Status
+    }
 
-package "MII_Modul_Symptom_klinischer_Phänotyp" {
-  object MII_Symptom_Observation
-  object MII_Symptom_Condition
-}
-
-package "MII_Modul_Seltene_Erkrankungen" {
-  object MII_Diagnose_SE {
-    o code: ICD10GM
-    o code: Orphacode
   }
-  object MII_MolGen_Variante_SE {
-    o code: HGVS
+  package "MII_Modul_Diagnose" #33CCFF {
+    object MII_Diagnose {
+      o code: ICD10GM
+      o code: Orphacode
+      o Alter bei Diagnose
+      o Status (Verdacht, gesichert..)
+    }
   }
-  object MII_Familienanamnese_SE
-  object MII_Symptom_Observation_SE {
+ 
+  package "MII_Modul_Seltene_Erkrankungen" #FFEE22{
+    object MII_Diagnose_SE {
+      o code: ICD10GM
+      o code: Orphacode
+    }
+    object MII_MolGen_Variante_SE  {
+      o code: HGVS
+    }
+    object MII_Familienanamnese_SE
+    object Familienmitglied {
+      o Verwandtschaftsverhaeltnis
+      o Geschlecht
+      o gleiche Erkrankung
+      o andere Erkrankung
+    }
+    object MII_Symptom_Observation_SE  {
       o code: Human Phenotype Ontology (HPO)
       o value: Presence/Absence
-      o date: Datum
+      o date: Datum der Untersuchung
+      o period: Zeitraum der Symptomatik  
+      o startAge: Alter bei Symptombeginn
+      o change: Änderung
     }
-  object MII_Symptom_Condition_SE 
+    object MII_Symptom_Condition_SE
+
+    object Untersuchung {
+      o Datum
+      o Körperliche_Untersuchung
+      o Diagnostik
+      o Therapiestatus
+    }
+    object Therapiestatus {
+      o Therapieempfehlungen
+      o Durchgeführte_Therapien
+    }
+    object Therapieempfehlungen{
+      o Therapieart
+      o off-label
+      o Studie
+    }
+    object Durchgeführte_Therapien {
+      o Therapieart
+      o Startdatum
+      o Enddatum
+      o Grund_Beendigung
+      o off-label
+      o Studie
+    }
+  }
+  package "MII_Modul_ICU" #00DD00{
+    object Koerpergewicht
+    object Koerpergroeße
+  }
+  package "MII_Modul_Labor" #00DD00 {
+    object Laborparameter
+  }
+  package "MII_Modul_Studie" #00DD00 {
+    object Studie
+  }
+
+  package "MII_Modul_Molekulargenetischer_Befundbericht" #33CCFF{
+    object MII_MolGen_Variante {
+      o code: HGVS
+    }
+    object MII_MolGen_Familienanamnese
+  }
+   package "MII_Modul_Symptom_klinischer_Phänotyp" #33CCFF{
+    object MII_Symptom_Observation
+    object MII_Symptom_Condition
+  }
+
+
+
+  MII_Diagnose <|-down- MII_Diagnose_SE
+  MII_MolGen_Variante <|-down-- MII_MolGen_Variante_SE
+  MII_MolGen_Familienanamnese <|-up-- MII_Familienanamnese_SE
+  MII_Symptom_Observation <|-right- MII_Symptom_Observation_SE
+  MII_Symptom_Condition <|-up- MII_Symptom_Condition_SE
+
+  MII_Familienanamnese_SE o-- Familienmitglied
+  Untersuchung::Diagnostik o-up- Laborparameter
+  Untersuchung::Diagnostik o-- MII_Diagnose_SE
+  Untersuchung::Diagnostik o-- MII_MolGen_Variante_SE
+  Untersuchung::Diagnostik o-- MII_Symptom_Observation_SE
+  Untersuchung::Diagnostik o-- MII_Familienanamnese_SE
+  Untersuchung::Körperliche_Untersuchung o-up- Koerpergewicht
+  Untersuchung::Körperliche_Untersuchung o-up- Koerpergroeße
+  Untersuchung::Körperliche_Untersuchung o-- MII_Symptom_Condition_SE
+  Untersuchung::Therapiestatus o-- Therapiestatus
+  Therapiestatus::Therapieempfehlungen "0..*" o-down- "1..1" Therapieempfehlungen
+  Therapiestatus::Durchgeführte_Therapien "0..*" o-down- "1..1" Durchgeführte_Therapien
+  Therapiestatus::Studie o-- Studie
+
+
+
+
+
+
+
+}
+package "MII_SE_Mappings" {
+  object Mapping_MII_NARSE
+  object Mapping_MII_ERDRI_CDS
+  object Mapping_MII_MVGenomSeq_SE
 }
 
-package "MII_Modul_ICU" {
-  object Koerpergewicht
-  object Koerpergroeße
+package MII_SE_Erfassungsboegen {
+  object Familienanamnese_Questionnaire
+  object Vitalstatus_Todesursache_Questionnaire
+  object Diagnostik_Questionnaire
+  object Verlauf_Questionnaire
+  object Therapiestatus_Questionnaire
+  object NARSE_Consent
 }
 
-object Familienmitglied {
-  o Verwandtschaftsverhaeltnis
-  o Geschlecht
-  o gleiche Erkrankung
-  o andere Erkrankung
-}
+MII_SE_Erfassungsboegen -up---> Untersuchung
+MII_Datenmodell_Seltene_Erkrankungen -down--> Mapping_MII_NARSE
+MII_Datenmodell_Seltene_Erkrankungen -down--> Mapping_MII_ERDRI_CDS
+MII_Datenmodell_Seltene_Erkrankungen -down--> Mapping_MII_MVGenomSeq_SE
 
-MII_Diagnose -- MII_Diagnose_SE
-MII_MolGen_Variante -- MII_MolGen_Variante_SE
-MII_MolGen_Familienanamnese -- MII_Familienanamnese_SE
-MII_Symptom_Observation -- MII_Symptom_Observation_SE
-MII_Symptom_Condition -- MII_Symptom_Condition_SE
 
-MII_Familienanamnese_SE -- Familienmitglied
 
 @enduml
