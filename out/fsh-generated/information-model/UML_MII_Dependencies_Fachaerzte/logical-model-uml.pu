@@ -1,4 +1,6 @@
 @startuml "MII_Datenmodell_Seltene_Erkrankungen_logisch"
+skinparam Linetype ortho
+
 title Modulvorschau MII Erweiterungsmodul Seltene Erkrankungen
 package "MII_Datenmodell_Seltene_Erkrankungen" {
 
@@ -80,7 +82,7 @@ package "MII_Datenmodell_Seltene_Erkrankungen" {
     object Laborparameter
   }
   package "MII_Modul_Studie" #00DD00 {
-    object Studie
+    object MII_Studie
   }
 
   package "MII_Modul_Molekulargenetischer_Befundbericht" #33CCFF{
@@ -102,47 +104,23 @@ package "MII_Datenmodell_Seltene_Erkrankungen" {
   MII_Symptom_Observation <|-right- MII_Symptom_Observation_SE
   MII_Symptom_Condition <|-up- MII_Symptom_Condition_SE
 
-  MII_Familienanamnese_SE o-- Familienmitglied
-  Untersuchung::Diagnostik o-up- Laborparameter
-  Untersuchung::Diagnostik o-- MII_Diagnose_SE
-  Untersuchung::Diagnostik o-- MII_MolGen_Variante_SE
-  Untersuchung::Diagnostik o-- MII_Symptom_Observation_SE
-  Untersuchung::Diagnostik o-- MII_Familienanamnese_SE
-  Untersuchung::Körperliche_Untersuchung o-up- Koerpergewicht
-  Untersuchung::Körperliche_Untersuchung o-up- Koerpergroeße
-  Untersuchung::Körperliche_Untersuchung o-- MII_Symptom_Condition_SE
-  Untersuchung::Therapiestatus o-- Therapiestatus
+  MII_Familienanamnese_SE "1..*" o-- "1..1" Familienmitglied
+  Untersuchung::Diagnostik "0..*" o-up- "0..1" Laborparameter
+  Untersuchung::Diagnostik "0..*" o-- "0..*" MII_Diagnose_SE
+  Untersuchung::Diagnostik "0..*" o-- "0..*" MII_MolGen_Variante_SE
+  Untersuchung::Diagnostik "0..*" o-- "0..*" MII_Symptom_Observation_SE
+  Untersuchung::Diagnostik "0..*" o-- "0..*" MII_Familienanamnese_SE
+  Untersuchung::Körperliche_Untersuchung "0..*" o-up- "0..*" Koerpergewicht
+  Untersuchung::Körperliche_Untersuchung "0..*" o-up- "0..*" Koerpergroeße
+  Untersuchung::Körperliche_Untersuchung "0..*" o-- "0..*" MII_Symptom_Condition_SE
+  Untersuchung::Therapiestatus "0..*" o-- "0..*" Therapiestatus  
   Therapiestatus::Therapieempfehlungen "0..*" o-down- "1..1" Therapieempfehlungen
   Therapiestatus::Durchgeführte_Therapien "0..*" o-down- "1..1" Durchgeführte_Therapien
-  Therapiestatus::Studie o-- Studie
-
-
-
-
-
+  Therapieempfehlungen::Studie "0..*" o-down- "0..*" MII_Studie
+  Durchgeführte_Therapien::Studie "0..*" o-down- "0..*" MII_Studie
 
 
 }
-package "MII_SE_Mappings" {
-  object Mapping_MII_NARSE
-  object Mapping_MII_ERDRI_CDS
-  object Mapping_MII_MVGenomSeq_SE
-}
-
-package MII_SE_Erfassungsboegen {
-  object Familienanamnese_Questionnaire
-  object Vitalstatus_Todesursache_Questionnaire
-  object Diagnostik_Questionnaire
-  object Verlauf_Questionnaire
-  object Therapiestatus_Questionnaire
-  object NARSE_Consent
-}
-
-MII_SE_Erfassungsboegen -up---> Untersuchung
-MII_Datenmodell_Seltene_Erkrankungen -down--> Mapping_MII_NARSE
-MII_Datenmodell_Seltene_Erkrankungen -down--> Mapping_MII_ERDRI_CDS
-MII_Datenmodell_Seltene_Erkrankungen -down--> Mapping_MII_MVGenomSeq_SE
-
 
 
 @enduml
