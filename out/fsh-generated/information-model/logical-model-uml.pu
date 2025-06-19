@@ -51,10 +51,10 @@ package "MII_Datenmodell_Seltene_Erkrankungen" {
     object MII_Symptom_Condition_SE
 
     object Untersuchung {
-      o Datum
-      o Körperliche_Untersuchung
+      o Koerperliche_Untersuchung
       o Diagnostik
       o Therapiestatus
+      o Datum
     }
     object Therapiestatus {
       o Therapieempfehlungen
@@ -105,19 +105,19 @@ package "MII_Datenmodell_Seltene_Erkrankungen" {
   MII_Symptom_Condition <|-up- MII_Symptom_Condition_SE
 
   MII_Familienanamnese_SE "1..*" o-- "1..1" Familienmitglied
-  Untersuchung::Diagnostik "0..*" o-up- "0..1" Laborparameter
-  Untersuchung::Diagnostik "0..*" o-- "0..*" MII_Diagnose_SE
-  Untersuchung::Diagnostik "0..*" o-- "0..*" MII_MolGen_Variante_SE
-  Untersuchung::Diagnostik "0..*" o-- "0..*" MII_Symptom_Observation_SE
-  Untersuchung::Diagnostik "0..*" o-- "0..*" MII_Familienanamnese_SE
-  Untersuchung::Körperliche_Untersuchung "0..*" o-up- "0..*" Koerpergewicht
-  Untersuchung::Körperliche_Untersuchung "0..*" o-up- "0..*" Koerpergroeße
-  Untersuchung::Körperliche_Untersuchung "0..*" o-- "0..*" MII_Symptom_Condition_SE
-  Untersuchung::Therapiestatus "0..*" o-- "0..*" Therapiestatus  
-  Therapiestatus::Therapieempfehlungen "0..*" o-down- "1..1" Therapieempfehlungen
-  Therapiestatus::Durchgeführte_Therapien "0..*" o-down- "1..1" Durchgeführte_Therapien
-  Therapieempfehlungen::Studie "0..*" o-down- "0..*" MII_Studie
-  Durchgeführte_Therapien::Studie "0..*" o-down- "0..*" MII_Studie
+  Untersuchung "0..*" o-up- "0..1" Laborparameter
+  Untersuchung "0..*" o-- "0..*" MII_Diagnose_SE
+  Untersuchung "0..*" o-- "0..*" MII_MolGen_Variante_SE
+  Untersuchung "0..*" o-- "0..*" MII_Symptom_Observation_SE
+  Untersuchung "0..*" o-- "0..*" MII_Familienanamnese_SE
+  Untersuchung "0..*" o-up- "0..*" Koerpergewicht
+  Untersuchung "0..*" o-up- "0..*" Koerpergroeße
+  Untersuchung "0..*" o-- "0..*" MII_Symptom_Condition_SE
+  Untersuchung "0..*" o-- "0..*" Therapiestatus  
+  Therapiestatus "0..*" o-down- "1..1" Therapieempfehlungen
+  Therapiestatus "0..*" o-down- "1..1" Durchgeführte_Therapien
+  Therapieempfehlungen "0..*" o-down- "0..*" MII_Studie
+  Durchgeführte_Therapien "0..*" o-down- "0..*" MII_Studie
 
 
 }
