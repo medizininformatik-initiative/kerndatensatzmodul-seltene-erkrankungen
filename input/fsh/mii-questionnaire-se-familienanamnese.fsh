@@ -1,10 +1,10 @@
-Instance: FamilienAnamnese
+/*Instance: FamilienAnamnese
 InstanceOf: Questionnaire
 Description: "Patient Familienanamnese Fragebogen"
 Usage: #example
 
 * status = #draft
-* code = $sct#124319418
+* code = $SCT#124319418
 * item[+].linkId = "grouper1"
 * item[=].text = "Verwandschaftsverhältnis"
 * item[=].type = #group"
@@ -19,4 +19,5 @@ Usage: #example
 
 
 * item[+].linkId = "relevanteErkrankungen"
-* item[=].item
+* item[=]
+*/

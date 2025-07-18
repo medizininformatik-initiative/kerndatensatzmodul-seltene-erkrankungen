@@ -21,26 +21,6 @@
   "fhirVersion": "4.0.1",
   "mapping": [
     {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
-      "identity": "v2",
-      "uri": "http://hl7.org/v2",
-      "name": "HL7 v2 Mapping"
-    },
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    },
-    {
       "identity": "MII-KDS",
       "name": "MII KDS Mapping"
     }
@@ -62,6 +42,37 @@
             "comment": "Krankengeschichte Familie"
           }
         ]
+      },
+      {
+        "id": "FamilyMemberHistory.extension",
+        "path": "FamilyMemberHistory.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "FamilyMemberHistory.extension:vonSEBetroffen",
+        "path": "FamilyMemberHistory.extension",
+        "sliceName": "vonSEBetroffen",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/von-se-betroffen"
+            ]
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.status",
@@ -192,6 +203,126 @@
       {
         "id": "FamilyMemberHistory.born[x]",
         "path": "FamilyMemberHistory.born[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "Period"
+          },
+          {
+            "code": "date"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.born[x]:bornDate",
+        "path": "FamilyMemberHistory.born[x]",
+        "sliceName": "bornDate",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.born[x]:bornPeriod",
+        "path": "FamilyMemberHistory.born[x]",
+        "sliceName": "bornPeriod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.deceased[x]",
+        "path": "FamilyMemberHistory.deceased[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "Age"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "date"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.deceased[x]:deceasedBoolean",
+        "path": "FamilyMemberHistory.deceased[x]",
+        "sliceName": "deceasedBoolean",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.deceased[x]:deceasedAge",
+        "path": "FamilyMemberHistory.deceased[x]",
+        "sliceName": "deceasedAge",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Age"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.deceased[x]:deceasedRange",
+        "path": "FamilyMemberHistory.deceased[x]",
+        "sliceName": "deceasedRange",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Range"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.deceased[x]:deceasedDate",
+        "path": "FamilyMemberHistory.deceased[x]",
+        "sliceName": "deceasedDate",
+        "min": 0,
+        "max": "1",
         "type": [
           {
             "code": "date"
@@ -489,6 +620,24 @@
         "id": "FamilyMemberHistory.condition.code.coding:orphanet.code",
         "path": "FamilyMemberHistory.condition.code.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.contributedToDeath",
+        "path": "FamilyMemberHistory.condition.contributedToDeath",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.onset[x]",
+        "path": "FamilyMemberHistory.condition.onset[x]",
+        "type": [
+          {
+            "code": "Age"
+          },
+          {
+            "code": "Range"
+          }
+        ],
         "mustSupport": true
       }
     ]

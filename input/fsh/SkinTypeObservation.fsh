@@ -1,5 +1,5 @@
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $loinc = http://loinc.org
+Alias: $LNC = http://loinc.org
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 
 Profile: ProfileObservationHauttyp
@@ -53,7 +53,7 @@ Description: "Dieses Profil beschreibt einen Hauttyp in der Medizininformatik-In
 * code.coding ^slicing.rules = #open
 * code.coding contains
     loinc-code 1..1 MS
-* code.coding[loinc-code] = $loinc#94535-2 "Skin tone"
+* code.coding[loinc-code] = $LNC#94535-2 "Skin tone"
 * subject 1.. MS
 * subject
 * encounter MS

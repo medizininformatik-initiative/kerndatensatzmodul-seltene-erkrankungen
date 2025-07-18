@@ -1,10 +1,10 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "mii-ig-seltene-erkrankungen-de-v2025",
+  "id": "mii-ig-seltene-erkrankungen-v2026-de",
   "language": "de-DE",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/ImplementationGuide/mii-ig-seltene-erkrankungen-de-v2025",
-  "version": "2025.0.0-ballot",
-  "name": "MII_IG_SelteneErkrankungen_DE",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de",
+  "version": "2026.0.0-ballot",
+  "name": "MIIIGModulSelteneErkrankungen",
   "title": "MII IG Seltene Erkrankungen (DE)",
   "status": "draft",
   "publisher": "Medizininformatik Initiative",
@@ -19,28 +19,52 @@
       ]
     }
   ],
-  "packageId": "mii-ig-seltene-erkrankungen-de-v2025",
+  "packageId": "mii-ig-seltene-erkrankungen-v2026-de",
   "fhirVersion": [
     "4.0.1"
   ],
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.4.0",
+      "version": "1.5.x",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
-      "version": "1.0.3",
+      "version": "2025.0.x",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.meta/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.meta",
       "id": "de_medizininformatikinitiative_kerndatensatz_meta"
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.molgen",
-      "version": "1.0.0",
-      "uri": "/guide/MedizininformatikInitiative-ModulMolekulargenetischerBefundberic?version=current",
+      "version": "2025.0.x",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen-v2025-DE",
       "id": "de_medizininformatikinitiative_kerndatensatz_molgen"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.labor",
+      "version": "2025.0.2",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.labor/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.labor",
+      "id": "de_medizininformatikinitiative_kerndatensatz_labor"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.icu",
+      "version": "2025.0.x",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.icu/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.icu",
+      "id": "de_medizininformatikinitiative_kerndatensatz_icu"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.studie",
+      "version": "2025.0.x",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.studie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.studie",
+      "id": "de_medizininformatikinitiative_kerndatensatz_studie"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.diagnose",
+      "version": "2025.0.x",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ImplementationGuide/mii-ig-diagnose",
+      "id": "de_medizininformatikinitiative_kerndatensatz_diagnose"
     }
   ],
   "definition": {
@@ -71,6 +95,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-lm-onko"
+        },
+        "name": "MII LM Onkologie",
+        "description": "MII LogicalModel Modul Onkologie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-molgen-familienanamnese"
         },
         "name": "MII PR MolGen Familienanamnese",
@@ -79,10 +111,34 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/ProfileObservationHauttyp"
+        },
+        "name": "Profile - Observation - Hauttyp",
+        "description": "Dieses Profil beschreibt einen Hauttyp in der Medizininformatik-Initiative.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/2.16.840.1.113883.3.1937.777.30.11.68--20240620133122"
         },
         "name": "Skin phototype finding",
         "description": "Skin phototype finding",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/von-se-betroffen-vs"
+        },
+        "name": "Von SE betroffen Value Set",
+        "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/von-se-betroffen"
+        },
+        "name": "VonSEBetroffen",
+        "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
         "exampleBoolean": false
       }
     ],

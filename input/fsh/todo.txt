@@ -1,0 +1,53 @@
+Logical Model in FHIR 
+inkl. Mapping MII KDS
+inkl. Mapping ERDRI-CDS
+inkl. Mapping NARSE
+inkl. Mapping 
+--> Miriam 
+
+
+
+Profile -> Marco
+
+Untersuchung -> Clinical Impression
+
+Diagnose - Changes? Orpha 1..1
+
+- HipWaistRatio
+
+MII_Symptom Observation
+ - HPO-Untersuchung -> Klinische Symptome Phänotyp Observation
+
+MII_Symptom Condition 
+-> Zeiträume (Alter, startAge, period) 
+-> HPP 
+-> "Syndrom"-Profil 
+
+
+MolGenVariante - Datenfelder? 
+-> HGVS+Referenzgenom MS
+
+Therapieplan : CarePlan
+Therapieempfehlung (entweder als Teil von CarePlan)
+Durchgeführte Therapie
+
+Datenmodell Seltene Erkrankungen
+
+// formal nicht Pflicht, aber ohne ist das Modul nicht zu benutzen Komplexe Ausmodellieriung einer Krankheitsbilds mit relevanten Datenelementen
+
+Datenmodell am Beispiel 
+
+evtl SMA Beispiel -> Steffen
+
+Komplexes Fallbeispiel 
+- Anwendungsszenario als Freitext
+- Anwendungsszenario als FHIR
+
+IG Texte
+
+
+Technische Bereitstellung
+-> Capability Statement
+-> Search Parameter
+...
+

@@ -1,0 +1,327 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ProfileObservationHauttyp",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-seltene-erkrankungen/StructureDefinition/ObservationLab",
+  "version": "1.0",
+  "name": "ProfileObservationHauttyp",
+  "title": "Profile - Observation - Hauttyp",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "https://www.Medizininformatik-Initiative.de",
+  "description": "Dieses Profil beschreibt einen Hauttyp in der Medizininformatik-Initiative.",
+  "purpose": "Dieses Profil beschreibt einen Hauttyp in der Medizininformatik-Initiative.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.id",
+        "path": "Observation.id",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.meta",
+        "path": "Observation.meta",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.meta.source",
+        "path": "Observation.meta.source",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.meta.profile",
+        "path": "Observation.meta.profile",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier",
+        "path": "Observation.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "type"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:analyseBefundCode",
+        "path": "Observation.identifier",
+        "sliceName": "analyseBefundCode",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:analyseBefundCode.type",
+        "path": "Observation.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "OBI",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:analyseBefundCode.type.coding",
+        "path": "Observation.identifier.type.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:analyseBefundCode.type.coding:observationInstanceV2",
+        "path": "Observation.identifier.type.coding",
+        "sliceName": "observationInstanceV2",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:analyseBefundCode.type.coding:observationInstanceV2.system",
+        "path": "Observation.identifier.type.coding.system",
+        "min": 1,
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:analyseBefundCode.type.coding:observationInstanceV2.code",
+        "path": "Observation.identifier.type.coding.code",
+        "min": 1,
+        "fixedCode": "OBI",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:analyseBefundCode.system",
+        "path": "Observation.identifier.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:analyseBefundCode.value",
+        "path": "Observation.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier:analyseBefundCode.assigner",
+        "path": "Observation.identifier.assigner",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category.coding",
+        "path": "Observation.category.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 2,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category.coding:loinc-observation",
+        "path": "Observation.category.coding",
+        "sliceName": "loinc-observation",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category.coding:observation-category",
+        "path": "Observation.category.coding",
+        "sliceName": "observation-category",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "exam",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding:loinc-code",
+        "path": "Observation.code.coding",
+        "sliceName": "loinc-code",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "94535-2",
+          "system": "http://loinc.org",
+          "display": "Skin tone"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "mii-lab-1",
+            "human": "Datetime must be at least to day",
+            "source": "https://www.medizininformatik-initiative.de/fhir/core/modul-seltene-erkrankungen/StructureDefinition/ObservationLab",
+            "severity": "error",
+            "expression": "($this as dateTime).hasValue() implies ($this as dateTime).toString().length() >= 8"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x].extension",
+        "path": "Observation.effective[x].extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.issued",
+        "path": "Observation.issued",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding",
+        "path": "Observation.value[x].coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding.system",
+        "path": "Observation.value[x].coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding.code",
+        "path": "Observation.value[x].coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.dataAbsentReason",
+        "path": "Observation.dataAbsentReason",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation",
+        "path": "Observation.interpretation",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.note",
+        "path": "Observation.note",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.method",
+        "path": "Observation.method",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange",
+        "path": "Observation.referenceRange",
+        "mustSupport": true
+      }
+    ]
+  }
+}

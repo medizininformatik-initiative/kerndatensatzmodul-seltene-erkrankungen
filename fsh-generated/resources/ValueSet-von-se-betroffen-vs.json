@@ -1,0 +1,30 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "VonSEBetroffenVS",
+  "id": "von-se-betroffen-vs",
+  "title": "Von SE betroffen Value Set",
+  "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/ValueSet/von-se-betroffen-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+        "concept": [
+          {
+            "code": "Y",
+            "display": "Ja"
+          },
+          {
+            "code": "N",
+            "display": "Nein"
+          },
+          {
+            "code": "ASKU",
+            "display": "Unbekannt"
+          }
+        ]
+      }
+    ]
+  }
+}

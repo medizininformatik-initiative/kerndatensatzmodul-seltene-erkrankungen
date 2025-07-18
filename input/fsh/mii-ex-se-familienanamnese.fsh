@@ -6,7 +6,7 @@ Usage: #example
 * status = #completed
 * patient = Reference(Patient/example)
 * reasonCode = http://www.orpha.net#666
-* relationship = $sct#65656005 "Natural Mother (person)"
+* relationship = $SCT#65656005 "Natural Mother (person)"
 * sex = #female
 * bornDate = "1954"
 * deceasedDate = "2004"
