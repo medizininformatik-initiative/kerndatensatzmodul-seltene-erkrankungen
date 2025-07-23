@@ -1,11 +1,12 @@
 {
   "resourceType": "Observation",
-  "id": "mii-exa-se-hip-waist-ratio",
+  "id": "mii-exa-se-waist-to-hip-ratio",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-hip-waist-ratio"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-waist-to-hip-ratio"
     ]
   },
+  "status": "draft",
   "code": {
     "coding": [
       {
@@ -17,6 +18,5 @@
   },
   "valueQuantity": {
     "value": 0.85
-  },
-  "status": "final"
+  }
 }

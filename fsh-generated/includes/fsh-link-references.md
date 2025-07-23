@@ -1,11 +1,11 @@
 [MIIProfileSEBehaarung]: StructureDefinition-hairiness-profile.html
 [ExampleHistoryAnamnesis]: FamilyMemberHistory-ExampleHistoryAnamnesis.html
 [FastingStatus]: StructureDefinition-fastingstatus-profile.html
-[HipWaistRatio]: StructureDefinition-mii-pr-se-hip-waist-ratio.html
-[mii-exa-se-hip-waist-ratio]: Observation-mii-exa-se-hip-waist-ratio.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
 [MII_PR_MolGen_Familienanamnese]: StructureDefinition-mii-pr-molgen-familienanamnese.html
 [ProfileObservationHauttyp]: StructureDefinition-ProfileObservationHauttyp.html
 [SkinPhototypeFinding]: ValueSet-2.16.840.1.113883.3.1937.777.30.11.68--20240620133122.html
 [VonSEBetroffenVS]: ValueSet-von-se-betroffen-vs.html
 [VonSEBetroffen]: StructureDefinition-von-se-betroffen.html
+[mii-exa-se-waist-to-hip-ratio]: Observation-mii-exa-se-waist-to-hip-ratio.html
+[WaistToHipRatio]: StructureDefinition-mii-pr-se-waist-to-hip-ratio.html

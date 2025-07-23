@@ -13,10 +13,10 @@ Untersuchung -> Clinical Impression
 
 Diagnose - Changes? Orpha 1..1
 
-- HipWaistRatio
+- HipWaistRatio (Done, Erklärtext fehlt noch)
 
 MII_Symptom Observation
- - HPO-Untersuchung -> Klinische Symptome Phänotyp Observation
+ - HPO-Untersuchung -> Klinische Symptome Phänotyp Observation (Thomas)
 
 MII_Symptom Condition 
 -> Zeiträume (Alter, startAge, period) 
@@ -27,9 +27,9 @@ MII_Symptom Condition
 MolGenVariante - Datenfelder? 
 -> HGVS+Referenzgenom MS
 
-Therapieplan : CarePlan
-Therapieempfehlung (entweder als Teil von CarePlan)
-Durchgeführte Therapie
+Therapieplan : CarePlan (Marco, aktuelle Profile im molekularen Tumorboard Repo, von CarePlan direkt erben, von Careplan auf Therapie verweisen )
+Therapieempfehlung (entweder als Teil von CarePlan oder als MedicationRequest/ServiceRequest)
+Durchgeführte Therapie (Procedure, Therapiearten, ... Medikationstherapie als MedikationStatement, nichtmedikamentös als Procedure)
 
 Datenmodell Seltene Erkrankungen
 

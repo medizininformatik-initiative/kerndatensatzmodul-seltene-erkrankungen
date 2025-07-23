@@ -1,11 +1,11 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-se-hip-waist-ratio",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-hip-waist-ratio",
-  "name": "HipWaistRatio",
-  "title": "Hip-Waist-Ratio of the patient",
+  "id": "mii-pr-se-waist-to-hip-ratio",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-waist-to-hip-ratio",
+  "name": "WaistToHipRatio",
+  "title": "Waist-to-Hip Ratio of the patient",
   "status": "draft",
-  "description": "Describes the hip-waist ratio of the patient.",
+  "description": "Describes the Waist-to-Hip Ratio of the patient.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -17,6 +17,7 @@
       {
         "id": "Observation.status",
         "path": "Observation.status",
+        "patternCode": "draft",
         "mustSupport": true
       },
       {
