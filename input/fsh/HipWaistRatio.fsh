@@ -14,7 +14,7 @@ Description: "Describes the hip-waist ratio of the patient."
 * valueQuantity.code = #1
 
 
-Instance: HipWaistRatioExample
+Instance: mii-exa-se-hip-waist-ratio
 InstanceOf: HipWaistRatio
 Usage: #example
 Title: "HipWaistRatioExample"
