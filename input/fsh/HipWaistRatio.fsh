@@ -1,5 +1,5 @@
 Profile:     HipWaistRatio
-Id:          hipwaistratio-profile
+Id:          mii-pr-se-hip-waist-ratio
 Parent:      Observation
 Title:       "Hip-Waist-Ratio of the patient"
 Description: "Describes the hip-waist ratio of the patient."
