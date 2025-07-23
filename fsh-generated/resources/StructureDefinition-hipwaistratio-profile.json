@@ -1,0 +1,68 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hipwaistratio-profile",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/hipwaistratio-profile",
+  "name": "HipWaistRatio",
+  "title": "Hip-Waist-Ratio of the patient",
+  "status": "draft",
+  "description": "Describes the hip-waist ratio of the patient.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "8280-0",
+              "system": "http://loinc.org",
+              "display": "Waist-hip ratio"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].system",
+        "path": "Observation.value[x].system",
+        "patternUri": "http://unitsofmeasure.org"
+      },
+      {
+        "id": "Observation.value[x].code",
+        "path": "Observation.value[x].code",
+        "patternCode": "1"
+      }
+    ]
+  }
+}

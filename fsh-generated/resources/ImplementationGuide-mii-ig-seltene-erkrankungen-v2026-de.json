@@ -43,12 +43,6 @@
       "id": "de_medizininformatikinitiative_kerndatensatz_molgen"
     },
     {
-      "packageId": "de.medizininformatikinitiative.kerndatensatz.labor",
-      "version": "2025.0.2",
-      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.labor/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.labor",
-      "id": "de_medizininformatikinitiative_kerndatensatz_labor"
-    },
-    {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.icu",
       "version": "2025.0.x",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.icu/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.icu",
@@ -92,6 +86,22 @@
         "name": "Fasting status of the patient",
         "description": "Describes whether the patient is currently in fasted state.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/hipwaistratio-profile"
+        },
+        "name": "Hip-Waist-Ratio of the patient",
+        "description": "Describes the hip-waist ratio of the patient.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Observation/HipWaistRatioExample"
+        },
+        "name": "HipWaistRatioExample",
+        "description": "Example of a Hip-Waist-Ratio observation for a patient.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/hipwaistratio-profile"
       },
       {
         "reference": {
