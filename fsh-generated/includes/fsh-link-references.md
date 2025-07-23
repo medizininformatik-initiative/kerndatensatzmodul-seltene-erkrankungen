@@ -1,7 +1,7 @@
 [MIIProfileSEBehaarung]: StructureDefinition-hairiness-profile.html
 [ExampleHistoryAnamnesis]: FamilyMemberHistory-ExampleHistoryAnamnesis.html
 [FastingStatus]: StructureDefinition-fastingstatus-profile.html
-[HipWaistRatio]: StructureDefinition-hipwaistratio-profile.html
+[HipWaistRatio]: StructureDefinition-mii-pr-se-hip-waist-ratio.html
 [HipWaistRatioExample]: Observation-HipWaistRatioExample.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
 [MII_PR_MolGen_Familienanamnese]: StructureDefinition-mii-pr-molgen-familienanamnese.html
