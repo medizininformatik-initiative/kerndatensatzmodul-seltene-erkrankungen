@@ -10,10 +10,12 @@ Description: "Example of a rare disease diagnosis using ORPHA codes for Marfan s
 * code = $SCT#19346006 "Marfan syndrome (disorder)"
 * subject = Reference(Patient/example-patient)
 * encounter = Reference(Encounter/example-encounter)
-* extension[onsetAge].valueAge.value = 15
-* extension[onsetAge].valueAge.unit = "years"
-* extension[onsetAge].valueAge.system = $UCUM
-* extension[onsetAge].valueAge.code = #a
+* onsetDateTime = "2009-01-15"
+// TODO: Add onsetAge extension once upstream MII profile constraints are resolved
+// * onsetDateTime.extension[onsetAge].valueAge.value = 15
+// * onsetDateTime.extension[onsetAge].valueAge.unit = "years"
+// * onsetDateTime.extension[onsetAge].valueAge.system = $UCUM
+// * onsetDateTime.extension[onsetAge].valueAge.code = #a
 * recordedDate = "2024-01-15"
 * asserter = Reference(Practitioner/example-practitioner)
 * evidence.detail[0] = Reference(Observation/example-genetic-finding)

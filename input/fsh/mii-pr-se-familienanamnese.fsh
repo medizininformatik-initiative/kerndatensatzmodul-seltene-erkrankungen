@@ -7,7 +7,24 @@ Alias: $mii-vs-molgen-family-member-snomed = https://www.medizininformatik-initi
 Alias: $icd-10-gm = http://fhir.de/ValueSet/bfarm/icd-10-gm
 Alias: $alpha-id = http://fhir.de/ValueSet/bfarm/alpha-id
 Alias: $diagnoses-sct = https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct
+Alias: $mii-pr-molgen-familienanamnese = https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese
 
+Profile: MII_PR_SE_Familienanamnese
+Parent: $mii-pr-molgen-familienanamnese
+Id: mii-pr-se-familienanamnese
+Title: "MII PR SE Familienanamnese"
+Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil."
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-pr-se-familienanamnese"
+* insert PR_CS_VS_Version
+* insert Publisher
+* ^status = #draft
+
+// Add SE-specific extension to the inherited MolGen profile
+* extension contains VonSEBetroffen named vonSEBetroffen 1..1 MS
+* extension[vonSEBetroffen] ^short = "Gibt an, ob das Familienmitglied von der gleichen seltenen Erkrankung betroffen ist"
+* extension[vonSEBetroffen] ^definition = "Extension zur Angabe, ob ein Familienmitglied von der gleichen seltenen Erkrankung betroffen ist wie der Patient"
+
+/*
 Profile: MII_PR_MolGen_Familienanamnese
 Parent: FamilyMemberHistory
 Id: mii-pr-molgen-familienanamnese
@@ -129,3 +146,4 @@ Id: MII-KDS
 Title: "MII KDS Mapping"
 Source: MII_PR_MolGen_Familienanamnese
 * -> "mide-dataelement-1740" "Krankengeschichte Familie"
+*/

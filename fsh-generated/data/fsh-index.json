@@ -1,11 +1,43 @@
 [
   {
+    "outputFile": "Condition-mii-exa-se-diagnosis.json",
+    "fshName": "mii-exa-se-diagnosis",
+    "fshType": "Instance",
+    "fshFile": "mii-exa-se-diagnosis.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "Condition-mii-exa-se-symptom-condition.json",
+    "fshName": "mii-exa-se-symptom-condition",
+    "fshType": "Instance",
+    "fshFile": "mii-exa-se-symptom-condition.fsh",
+    "startLine": 1,
+    "endLine": 45
+  },
+  {
+    "outputFile": "Condition-mii-exa-se-syndrome-diagnosis.json",
+    "fshName": "mii-exa-se-syndrome-diagnosis",
+    "fshType": "Instance",
+    "fshFile": "mii-exa-se-syndrome-diagnosis.fsh",
+    "startLine": 1,
+    "endLine": 44
+  },
+  {
     "outputFile": "FamilyMemberHistory-ExampleHistoryAnamnesis.json",
     "fshName": "ExampleHistoryAnamnesis",
     "fshType": "Instance",
-    "fshFile": "mii-ex-se-familienanamnese.fsh",
+    "fshFile": "mii-exa-se-familienanamnese.fsh",
     "startLine": 1,
-    "endLine": 21
+    "endLine": 20
+  },
+  {
+    "outputFile": "Observation-mii-exa-se-hpo-assessment.json",
+    "fshName": "mii-exa-se-hpo-assessment",
+    "fshType": "Instance",
+    "fshFile": "mii-pr-se-hpo-assessment.fsh",
+    "startLine": 67,
+    "endLine": 77
   },
   {
     "outputFile": "Observation-mii-exa-se-waist-to-hip-ratio.json",
@@ -40,6 +72,30 @@
     "endLine": 16
   },
   {
+    "outputFile": "StructureDefinition-mii-ext-se-onset-age.json",
+    "fshName": "OnsetAge",
+    "fshType": "Extension",
+    "fshFile": "extensions\\ext-onset-age.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "StructureDefinition-mii-ext-se-phenotypic-pattern.json",
+    "fshName": "PhenotypicPattern",
+    "fshType": "Extension",
+    "fshFile": "extensions\\ext-phenotypic-pattern.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-mii-ext-se-syndrome-category.json",
+    "fshName": "SyndromeCategory",
+    "fshType": "Extension",
+    "fshFile": "extensions\\ext-syndrome-category.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
     "outputFile": "StructureDefinition-mii-lm-onko.json",
     "fshName": "MII_LM_Onko",
     "fshType": "Logical",
@@ -48,12 +104,44 @@
     "endLine": 123
   },
   {
-    "outputFile": "StructureDefinition-mii-pr-molgen-familienanamnese.json",
-    "fshName": "MII_PR_MolGen_Familienanamnese",
+    "outputFile": "StructureDefinition-mii-pr-se-clinical-impression.json",
+    "fshName": "MIIProfileSEClinicalImpression",
+    "fshType": "Profile",
+    "fshFile": "mii-pr-se-clinical-impression.fsh",
+    "startLine": 1,
+    "endLine": 98
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-se-diagnosis.json",
+    "fshName": "MIIProfileSEDiagnosis",
+    "fshType": "Profile",
+    "fshFile": "mii-pr-se-diagnosis.fsh",
+    "startLine": 1,
+    "endLine": 126
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-se-familienanamnese.json",
+    "fshName": "MII_PR_SE_Familienanamnese",
     "fshType": "Profile",
     "fshFile": "mii-pr-se-familienanamnese.fsh",
-    "startLine": 11,
-    "endLine": 124
+    "startLine": 12,
+    "endLine": 25
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-se-hpo-assessment.json",
+    "fshName": "MIIProfileSEHpoAssessment",
+    "fshType": "Profile",
+    "fshFile": "mii-pr-se-hpo-assessment.fsh",
+    "startLine": 1,
+    "endLine": 48
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-se-symptom-condition.json",
+    "fshName": "MIIProfileSESymptomCondition",
+    "fshType": "Profile",
+    "fshFile": "mii-pr-se-symptom-condition.fsh",
+    "startLine": 1,
+    "endLine": 93
   },
   {
     "outputFile": "StructureDefinition-mii-pr-se-waist-to-hip-ratio.json",
@@ -77,6 +165,30 @@
     "fshType": "ValueSet",
     "fshFile": "SkinPhototypeFindings_FSH.fsh",
     "startLine": 3,
+    "endLine": 27
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-se-hpo-phenotypic-observation-codes.json",
+    "fshName": "HPOPhenotypicObservationCodes",
+    "fshType": "ValueSet",
+    "fshFile": "mii-pr-se-hpo-assessment.fsh",
+    "startLine": 50,
+    "endLine": 55
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-se-hpo-severity-values.json",
+    "fshName": "HPOSeverityValues",
+    "fshType": "ValueSet",
+    "fshFile": "mii-pr-se-hpo-assessment.fsh",
+    "startLine": 57,
+    "endLine": 65
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-se-syndrome-category.json",
+    "fshName": "SyndromeCategoryVS",
+    "fshType": "ValueSet",
+    "fshFile": "extensions\\ext-syndrome-category.fsh",
+    "startLine": 17,
     "endLine": 27
   },
   {

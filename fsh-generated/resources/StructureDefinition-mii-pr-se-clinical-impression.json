@@ -1,0 +1,228 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-se-clinical-impression",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-clinical-impression",
+  "version": "2026.0.0-ballot",
+  "name": "MIIProfileSEClinicalImpression",
+  "title": "MII Profile SE Clinical Impression",
+  "status": "draft",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Profile for clinical impressions in the context of rare diseases. This profile captures clinical assessments and suspected diagnoses based on phenotypic findings and symptoms.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ClinicalImpression",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ClinicalImpression",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ClinicalImpression.id",
+        "path": "ClinicalImpression.id",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.meta",
+        "path": "ClinicalImpression.meta",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.identifier",
+        "path": "ClinicalImpression.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.status",
+        "path": "ClinicalImpression.status",
+        "short": "Status der klinischen Beurteilung",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/clinicalimpression-status"
+        }
+      },
+      {
+        "id": "ClinicalImpression.code",
+        "path": "ClinicalImpression.code",
+        "short": "Art der klinischen Beurteilung",
+        "definition": "Kategorisiert die Art der klinischen Beurteilung, die erstellt wird",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.description",
+        "path": "ClinicalImpression.description",
+        "short": "Zusammenfassung der klinischen Beurteilung",
+        "definition": "Eine Zusammenfassung der Beurteilung mit relevanter klinischer Begründung",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.subject",
+        "path": "ClinicalImpression.subject",
+        "short": "Patient, der beurteilt wird",
+        "definition": "Referenz auf den Patienten, für den diese klinische Beurteilung erstellt wird",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.encounter",
+        "path": "ClinicalImpression.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.effective[x]",
+        "path": "ClinicalImpression.effective[x]",
+        "short": "Zeitpunkt der Beurteilung",
+        "definition": "Der Zeitpunkt oder Zeitraum, über den die klinische Beurteilung gebildet wurde",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.date",
+        "path": "ClinicalImpression.date",
+        "short": "Wann die Beurteilung dokumentiert wurde",
+        "definition": "Gibt an, wann die klinische Beurteilung dokumentiert wurde",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.assessor",
+        "path": "ClinicalImpression.assessor",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.problem",
+        "path": "ClinicalImpression.problem",
+        "short": "Relevante Probleme/Erkrankungen",
+        "definition": "Eine Liste der relevanten Probleme/Erkrankungen für diesen Patienten, die die klinische Beurteilung beeinflussen können",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.investigation",
+        "path": "ClinicalImpression.investigation",
+        "short": "Eine oder mehrere Untersuchungsserien",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.investigation.code",
+        "path": "ClinicalImpression.investigation.code",
+        "short": "Art der Untersuchung"
+      },
+      {
+        "id": "ClinicalImpression.investigation.item",
+        "path": "ClinicalImpression.investigation.item",
+        "short": "Unterstützende Evidenz",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+              "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+              "http://hl7.org/fhir/StructureDefinition/RiskAssessment"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ClinicalImpression.protocol",
+        "path": "ClinicalImpression.protocol",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.summary",
+        "path": "ClinicalImpression.summary",
+        "short": "Zusammenfassung der klinischen Beurteilung",
+        "definition": "Eine Textzusammenfassung der Beurteilung mit hervorgehobenen wichtigsten Aspekten",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.finding",
+        "path": "ClinicalImpression.finding",
+        "short": "Klinische Befunde, die die Beurteilung stützen",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.finding.itemCodeableConcept",
+        "path": "ClinicalImpression.finding.itemCodeableConcept",
+        "short": "HPO-basierter klinischer Befund",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/ValueSet/mii-vs-se-hpo-phenotypic-observation-codes"
+        }
+      },
+      {
+        "id": "ClinicalImpression.finding.itemReference",
+        "path": "ClinicalImpression.finding.itemReference",
+        "short": "Referenz auf klinischen Befund",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Condition",
+              "http://hl7.org/fhir/StructureDefinition/Observation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ClinicalImpression.finding.basis",
+        "path": "ClinicalImpression.finding.basis",
+        "short": "Grundlage für den Befund"
+      },
+      {
+        "id": "ClinicalImpression.prognosisCodeableConcept",
+        "path": "ClinicalImpression.prognosisCodeableConcept",
+        "short": "Kodierte Prognose",
+        "definition": "Kodierte Beurteilung der Prognose",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.prognosisReference",
+        "path": "ClinicalImpression.prognosisReference",
+        "short": "Referenz auf detaillierte Prognose",
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.supportingInfo",
+        "path": "ClinicalImpression.supportingInfo",
+        "short": "Unterstützende Informationen",
+        "definition": "Informationen, die die klinische Beurteilung unterstützen",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/Condition",
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+              "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ClinicalImpression.note",
+        "path": "ClinicalImpression.note",
+        "short": "Zusätzliche Anmerkungen",
+        "definition": "Kommentare zur Beurteilung, die anderswo nicht erfasst sind",
+        "mustSupport": true
+      }
+    ]
+  }
+}

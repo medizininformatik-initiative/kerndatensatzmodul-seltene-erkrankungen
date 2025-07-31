@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "SyndromeCategoryVS",
+  "id": "mii-vs-se-syndrome-category",
+  "title": "Syndrome Category Value Set",
+  "description": "Categories for classifying syndrome types in rare diseases",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/ValueSet/mii-vs-se-syndrome-category",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "32895009",
+            "display": "Genetic disorder"
+          },
+          {
+            "code": "75934005",
+            "display": "Metabolic disease"
+          },
+          {
+            "code": "128139000",
+            "display": "Inflammatory disorder"
+          },
+          {
+            "code": "276654001",
+            "display": "Congenital malformation"
+          },
+          {
+            "code": "371097004",
+            "display": "Developmental disorder"
+          },
+          {
+            "code": "254829008",
+            "display": "Degenerative disorder"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "resourceType": "Condition",
+  "id": "mii-exa-se-diagnosis",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-diagnosis"
+    ]
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "confirmed",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "encounter-diagnosis",
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "19346006",
+        "system": "http://snomed.info/sct",
+        "display": "Marfan syndrome (disorder)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example-patient"
+  },
+  "encounter": {
+    "reference": "Encounter/example-encounter"
+  },
+  "onsetDateTime": "2009-01-15",
+  "recordedDate": "2024-01-15",
+  "asserter": {
+    "reference": "Practitioner/example-practitioner"
+  },
+  "evidence": [
+    {
+      "detail": [
+        {
+          "reference": "Observation/example-genetic-finding"
+        },
+        {
+          "reference": "Condition/mii-exa-se-symptom-condition"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "Patient zeigt typische Merkmale des Marfan-Syndroms einschließlich Arachnodaktylie und Herzklappenprolaps."
+    }
+  ]
+}

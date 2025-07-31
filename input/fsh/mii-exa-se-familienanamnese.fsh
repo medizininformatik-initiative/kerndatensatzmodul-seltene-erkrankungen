@@ -1,5 +1,5 @@
 Instance: ExampleHistoryAnamnesis
-InstanceOf: MII_PR_MolGen_Familienanamnese
+InstanceOf: MII_PR_SE_Familienanamnese
 Description: "Example Patient Family Anamnesis"
 Usage: #example
 
@@ -12,10 +12,9 @@ Usage: #example
 * deceasedDate = "2004"
 * condition[0].code = $ICD10GM#H35.8
 * condition[0].code.coding.version = "2004"
-// hier ist zu klären, welche Version der ICD-10 zu benutzen ist, wenn die 
 * condition[1].code = $ICD10GM#E11.X
 * condition[1].code.coding.version = "2004"
 * condition[2].code = $ICD10GM#I21.2
 * condition[2].code.coding.version = "2004"
 * condition[2].contributedToDeath = true
-* extension[vonSEBetroffen].valueCodeableConcept = $ExpandedYesNoIndicator#Y
+* extension[vonSEBetroffen].valueCodeableConcept = $ExpandedYesNoIndicator#Y "Ja"

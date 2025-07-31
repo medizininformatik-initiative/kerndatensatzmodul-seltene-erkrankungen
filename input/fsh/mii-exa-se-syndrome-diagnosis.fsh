@@ -17,10 +17,12 @@ Description: "Example of a syndrome diagnosis for CHARGE syndrome with phenotypi
 * encounter = Reference(Encounter/example-encounter)
 
 // Onset in early infancy
-* extension[onsetAge].valueAge.value = 0
-* extension[onsetAge].valueAge.unit = "months"
-* extension[onsetAge].valueAge.system = $UCUM
-* extension[onsetAge].valueAge.code = #mo
+* onsetDateTime = "2024-01-01"
+// TODO: Add onsetAge extension once upstream MII profile constraints are resolved
+// * onsetDateTime.extension[onsetAge].valueAge.value = 0
+// * onsetDateTime.extension[onsetAge].valueAge.unit = "months"
+// * onsetDateTime.extension[onsetAge].valueAge.system = $UCUM
+// * onsetDateTime.extension[onsetAge].valueAge.code = #mo
 
 // Syndrome category - genetic disorder
 * extension[syndromeCategory].valueCodeableConcept = $SCT#32895009 "Genetic disorder"

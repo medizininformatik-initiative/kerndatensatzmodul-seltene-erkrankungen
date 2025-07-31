@@ -57,10 +57,7 @@ Description: "Profile for clinical impressions in the context of rare diseases. 
 * date ^short = "Wann die Beurteilung dokumentiert wurde"
 * date ^definition = "Gibt an, wann die klinische Beurteilung dokumentiert wurde"
 
-// Assessor constraints
-* assessor only Reference(Practitioner or PractitionerRole)
-* assessor ^short = "Kliniker, der die Beurteilung durchführt"
-* assessor ^definition = "Der Kliniker, der die Beurteilung durchführt"
+
 
 // Problem constraints - link to conditions/symptoms
 * problem only Reference(Condition or AllergyIntolerance)

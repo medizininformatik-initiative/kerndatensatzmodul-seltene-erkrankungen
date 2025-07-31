@@ -68,18 +68,20 @@ Description: "Profile for rare disease diagnoses based on the MII diagnosis prof
 
 // Extensions for rare disease and syndrome support
 * extension contains 
-    OnsetAge named onsetAge 0..1 MS and
     SyndromeCategory named syndromeCategory 0..1 MS and
     PhenotypicPattern named phenotypicPattern 0..* MS
-
-* extension[onsetAge] ^short = "Alter bei Erkrankungsbeginn"
-* extension[onsetAge] ^definition = "Das Alter des Patienten zum Zeitpunkt des Erkrankungsbeginns als Alternative zu onset[x]"
 
 * extension[syndromeCategory] ^short = "Syndromkategorie"
 * extension[syndromeCategory] ^definition = "Spezifische Kategorisierung für Syndromtypen (genetisch, metabolisch, entwicklungsbedingt, etc.)"
 
 * extension[phenotypicPattern] ^short = "Phänotypisches Muster"
 * extension[phenotypicPattern] ^definition = "Verknüpfung zu charakteristischen Symptommustern oder Phänotyp-Clustern des Syndroms"
+
+// TODO: Re-enable onsetAge extension once upstream MII profile constraints are resolved
+// Onset with R5 backport extension for onsetAge
+// * onset[x] extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Condition.onsetAge named onsetAge 0..1 MS
+// * onset[x].extension[onsetAge] ^short = "Alter bei Erkrankungsbeginn"
+// * onset[x].extension[onsetAge] ^definition = "Das Alter des Patienten zum Zeitpunkt des Erkrankungsbeginns (R5 Backport)"
 
 * abatement[x] only dateTime or Period 
 * abatement[x] ^short = "Auflösung der Erkrankung"

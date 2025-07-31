@@ -38,8 +38,8 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.molgen",
-      "version": "2025.0.x",
-      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen-v2025-DE",
+      "version": "2026.0.0-alpha",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.molgen/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.molgen",
       "id": "de_medizininformatikinitiative_kerndatensatz_molgen"
     },
     {
@@ -77,7 +77,7 @@
         },
         "name": "ExampleHistoryAnamnesis",
         "description": "Example Patient Family Anamnesis",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-pr-se-familienanamnese"
       },
       {
         "reference": {
@@ -89,6 +89,38 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-se-hpo-phenotypic-observation-codes"
+        },
+        "name": "HPO Phenotypic Observation Codes",
+        "description": "Human Phenotype Ontology codes for phenotypic observations",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-se-hpo-severity-values"
+        },
+        "name": "HPO Severity Values",
+        "description": "Codes for describing severity of phenotypic abnormalities",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-se-hpo-assessment"
+        },
+        "name": "HPO Symptom Observation Example",
+        "description": "Example of an HPO-based phenotypic observation for intellectual disability.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-hpo-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-se-symptom-condition"
+        },
+        "name": "MII Example SE Symptom Condition",
+        "description": "Example of a symptom condition in the context of rare diseases using HPO codes",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-symptom-condition"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-lm-onko"
         },
         "name": "MII LM Onkologie",
@@ -97,10 +129,58 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-molgen-familienanamnese"
+          "reference": "StructureDefinition/mii-pr-se-familienanamnese"
         },
-        "name": "MII PR MolGen Familienanamnese",
-        "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen.",
+        "name": "MII PR SE Familienanamnese",
+        "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-se-clinical-impression"
+        },
+        "name": "MII Profile SE Clinical Impression",
+        "description": "Profile for clinical impressions in the context of rare diseases. This profile captures clinical assessments and suspected diagnoses based on phenotypic findings and symptoms.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-se-diagnosis"
+        },
+        "name": "MII Profile SE Diagnosis",
+        "description": "Profile for rare disease diagnoses based on the MII diagnosis profile. This profile extends the core MII diagnosis functionality with rare disease-specific constraints and requirements.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-se-hpo-assessment"
+        },
+        "name": "MII Profile SE HPO Assessment",
+        "description": "Profile for HPO-based phenotypic observations in the context of rare diseases. This profile uses the Human Phenotype Ontology (HPO) to describe clinical symptoms and phenotypic abnormalities.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-se-symptom-condition"
+        },
+        "name": "MII Profile SE Symptom Condition",
+        "description": "Profile for symptom-based conditions in the context of rare diseases. This profile captures symptomatic conditions with temporal characteristics, complementing the HPO Assessment Observation profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ext-se-onset-age"
+        },
+        "name": "Onset Age Extension",
+        "description": "Extension to capture the age at onset of a condition. This backports the onsetAge functionality from FHIR R5 to R4.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ext-se-phenotypic-pattern"
+        },
+        "name": "Phenotypic Pattern Extension",
+        "description": "Extension to link syndrome diagnoses to characteristic phenotypic patterns or symptom clusters",
         "exampleBoolean": false
       },
       {
@@ -113,11 +193,43 @@
       },
       {
         "reference": {
+          "reference": "Condition/mii-exa-se-diagnosis"
+        },
+        "name": "Rare Disease Diagnosis Example",
+        "description": "Example of a rare disease diagnosis using ORPHA codes for Marfan syndrome.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-diagnosis"
+      },
+      {
+        "reference": {
           "reference": "ValueSet/2.16.840.1.113883.3.1937.777.30.11.68--20240620133122"
         },
         "name": "Skin phototype finding",
         "description": "Skin phototype finding",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ext-se-syndrome-category"
+        },
+        "name": "Syndrome Category Extension",
+        "description": "Extension to categorize syndrome types for rare diseases (genetic, metabolic, developmental, etc.)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-se-syndrome-category"
+        },
+        "name": "Syndrome Category Value Set",
+        "description": "Categories for classifying syndrome types in rare diseases",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-se-syndrome-diagnosis"
+        },
+        "name": "Syndrome Diagnosis Example",
+        "description": "Example of a syndrome diagnosis for CHARGE syndrome with phenotypic patterns and syndrome categorization.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-diagnosis"
       },
       {
         "reference": {
