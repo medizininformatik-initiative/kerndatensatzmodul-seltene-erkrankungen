@@ -1,5 +1,5 @@
 /*
-Profile: Studie
+Profile: MII_PR_SE_Studie
 Parent: MII_PR_Studie_Studie
 Id: mii-pr-se-studie
 Title: "MII PR SE Studie"

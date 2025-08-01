@@ -3,7 +3,7 @@
     "outputFile": "CodeSystem-mii-cs-se-empfehlung-status-begruendung.json",
     "fshName": "MII_CS_SE_Empfehlung_StatusBegruendung",
     "fshType": "CodeSystem",
-    "fshFile": "cs-EmpfehlungStatusBegruendung.fsh",
+    "fshFile": "mii-cs-se-empfehlung-status-begruendung.fsh",
     "startLine": 1,
     "endLine": 5
   },
@@ -19,7 +19,7 @@
     "outputFile": "Observation-mii-exa-se-waist-to-hip-ratio.json",
     "fshName": "mii-exa-se-waist-to-hip-ratio",
     "fshType": "Instance",
-    "fshFile": "WaistToHipRatio.fsh",
+    "fshFile": "mii-pr-se-waist-to-hip-ratio.fsh",
     "startLine": 18,
     "endLine": 24
   },
@@ -49,25 +49,25 @@
   },
   {
     "outputFile": "StructureDefinition-mii-ex-se-empfehlung-evidenzgraduierung.json",
-    "fshName": "Empfehlung_Evidenzgraduierung",
+    "fshName": "MII_EX_SE_Empfehlung_Evidenzgraduierung",
     "fshType": "Extension",
-    "fshFile": "ex-EmpfehlungEvidenzgraduierung.fsh",
+    "fshFile": "mii-ex-se-empfehlung-evidenzgraduierung.fsh",
     "startLine": 1,
     "endLine": 31
   },
   {
     "outputFile": "StructureDefinition-mii-ex-se-empfehlung-prioritaet.json",
-    "fshName": "Empfehlung_Prioritaet",
+    "fshName": "MII_EX_SE_Empfehlung_Prioritaet",
     "fshType": "Extension",
-    "fshFile": "ex-EmpfehlungPrioritaet.fsh",
+    "fshFile": "mii-ex-se-empfehlung-prioritaet.fsh",
     "startLine": 1,
     "endLine": 14
   },
   {
     "outputFile": "StructureDefinition-mii-ex-se-empfehlung-publikation.json",
-    "fshName": "Empfehlung_Publikation",
+    "fshName": "MII_EX_SE_Empfehlung_Publikation",
     "fshType": "Extension",
-    "fshFile": "ex-EmpfehlungPublikation.fsh",
+    "fshFile": "mii-ex-se-empfehlung-publikation.fsh",
     "startLine": 1,
     "endLine": 22
   },
@@ -89,25 +89,33 @@
   },
   {
     "outputFile": "StructureDefinition-mii-pr-se-therapieempfehlung-kombination.json",
-    "fshName": "Therapieempfehlung_Kombination",
+    "fshName": "MII_PR_SE_Therapieempfehlung_Kombination",
     "fshType": "Profile",
-    "fshFile": "TherapieempfehlungKombination.fsh",
+    "fshFile": "mii-pr-se-therapieempfehlung-kombination.fsh",
     "startLine": 1,
     "endLine": 40
   },
   {
-    "outputFile": "StructureDefinition-mii-pr-se-therapieplan.json",
-    "fshName": "Therapieplan",
+    "outputFile": "StructureDefinition-mii-pr-se-therapieempfehlung.json",
+    "fshName": "MII_PR_SE_Therapieempfehlung",
     "fshType": "Profile",
-    "fshFile": "Therapieplan.fsh",
+    "fshFile": "mii-pr-se-therapieempfehlung.fsh",
+    "startLine": 1,
+    "endLine": 33
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-se-therapieplan.json",
+    "fshName": "MII_PR_SE_Therapieplan",
+    "fshType": "Profile",
+    "fshFile": "mii-pr-se-therapieplan.fsh",
     "startLine": 1,
     "endLine": 84
   },
   {
     "outputFile": "StructureDefinition-mii-pr-se-waist-to-hip-ratio.json",
-    "fshName": "WaistToHipRatio",
+    "fshName": "MII_PR_SE_Waist_To_Hip_Ratio",
     "fshType": "Profile",
-    "fshFile": "WaistToHipRatio.fsh",
+    "fshFile": "mii-pr-se-waist-to-hip-ratio.fsh",
     "startLine": 1,
     "endLine": 15
   },
@@ -131,7 +139,7 @@
     "outputFile": "ValueSet-mii-vs-se-empfehlung-status-begruendung.json",
     "fshName": "MII_VS_SE_Empfehlung_StatusBegruendung",
     "fshType": "ValueSet",
-    "fshFile": "vs-EmpfehlungStatusBegruendung.fsh",
+    "fshFile": "mii-vs-se-empfehlung-status-begruendung.fsh",
     "startLine": 1,
     "endLine": 5
   },

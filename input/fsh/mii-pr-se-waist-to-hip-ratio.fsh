@@ -1,4 +1,4 @@
-Profile:     WaistToHipRatio
+Profile:     MII_PR_SE_Waist_To_Hip_Ratio
 Id:          mii-pr-se-waist-to-hip-ratio
 Parent:      Observation
 Title:       "Waist-to-Hip Ratio of the patient"
@@ -16,7 +16,7 @@ Description: "Describes the Waist-to-Hip Ratio of the patient."
 
 
 Instance: mii-exa-se-waist-to-hip-ratio
-InstanceOf: WaistToHipRatio
+InstanceOf: MII_PR_SE_Waist_To_Hip_Ratio
 Usage: #example
 Title: "Waist-to-Hip Ratio Example"
 Description: "Example of a Waist-to-Hip Ratio observation for a patient."

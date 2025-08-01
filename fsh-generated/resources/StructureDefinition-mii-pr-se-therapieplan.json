@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-se-therapieplan",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-therapieplan",
-  "name": "Therapieplan",
+  "name": "MII_PR_SE_Therapieplan",
   "title": "MII PR SE Therapieplan",
   "status": "draft",
   "description": "Therapieplan",
@@ -67,9 +67,9 @@
         "mustSupport": true
       },
       {
-        "id": "CarePlan.activity:Therapieempfehlung",
+        "id": "CarePlan.activity:MII_PR_SE_Therapieempfehlung",
         "path": "CarePlan.activity",
-        "sliceName": "Therapieempfehlung",
+        "sliceName": "MII_PR_SE_Therapieempfehlung",
         "short": "Therapieempfehlung Systemische Therapie",
         "definition": "Therapieempfehlung für eine medikamentöse Systemische Therapie",
         "comment": "Kann keine Therapieempfehlung für eine Systemische Therapie gegeben werden, muss dies als Begründung unter `detail.statusReason` angegeben werden",
@@ -78,17 +78,28 @@
         "mustSupport": true
       },
       {
-        "id": "CarePlan.activity:Therapieempfehlung.reference",
+        "id": "CarePlan.activity:MII_PR_SE_Therapieempfehlung.reference",
         "path": "CarePlan.activity.reference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-therapieempfehlung",
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-therapieempfehlung-kombination",
+              "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+              "http://hl7.org/fhir/StructureDefinition/RequestGroup"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
-        "id": "CarePlan.activity:Therapieempfehlung.detail",
+        "id": "CarePlan.activity:MII_PR_SE_Therapieempfehlung.detail",
         "path": "CarePlan.activity.detail",
         "mustSupport": true
       },
       {
-        "id": "CarePlan.activity:Therapieempfehlung.detail.statusReason",
+        "id": "CarePlan.activity:MII_PR_SE_Therapieempfehlung.detail.statusReason",
         "path": "CarePlan.activity.detail.statusReason",
         "binding": {
           "strength": "required",

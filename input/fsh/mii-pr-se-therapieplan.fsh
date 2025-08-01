@@ -1,4 +1,4 @@
-Profile: Therapieplan
+Profile: MII_PR_SE_Therapieplan
 Parent: CarePlan
 Id: mii-pr-se-therapieplan
 Title: "MII PR SE Therapieplan"
@@ -26,20 +26,20 @@ Description: "Therapieplan"
 * activity ^slicing.description = "Slice für Empfehlung zum weiteren Vorgehen auf Basis des referenzierten Ressourcentyps"
 * activity ^slicing.ordered = false
 
-* activity contains Therapieempfehlung 0..* MS
-* activity[Therapieempfehlung] ^short = "Therapieempfehlung Systemische Therapie"
-* activity[Therapieempfehlung] ^definition = "Therapieempfehlung für eine medikamentöse Systemische Therapie"
-* activity[Therapieempfehlung] ^comment = "Kann keine Therapieempfehlung für eine Systemische Therapie gegeben werden, muss dies als Begründung unter `detail.statusReason` angegeben werden"
-* activity[Therapieempfehlung].reference 0..1 MS
-* activity[Therapieempfehlung].reference only Reference(
-    Therapieempfehlung or
-    Therapieempfehlung_Kombination or
+* activity contains MII_PR_SE_Therapieempfehlung 0..* MS
+* activity[MII_PR_SE_Therapieempfehlung] ^short = "Therapieempfehlung Systemische Therapie"
+* activity[MII_PR_SE_Therapieempfehlung] ^definition = "Therapieempfehlung für eine medikamentöse Systemische Therapie"
+* activity[MII_PR_SE_Therapieempfehlung] ^comment = "Kann keine Therapieempfehlung für eine Systemische Therapie gegeben werden, muss dies als Begründung unter `detail.statusReason` angegeben werden"
+* activity[MII_PR_SE_Therapieempfehlung].reference 0..1 MS
+* activity[MII_PR_SE_Therapieempfehlung].reference only Reference(
+    MII_PR_SE_Therapieempfehlung or
+    MII_PR_SE_Therapieempfehlung_Kombination or
     MedicationRequest or
     RequestGroup
 )
 
-* activity[Therapieempfehlung].detail MS // NOTE: Kartinalität min = 1 aus Elterprofil geerbet
-* activity[Therapieempfehlung].detail.statusReason from MII_VS_SE_Empfehlung_StatusBegruendung (required)
+* activity[MII_PR_SE_Therapieempfehlung].detail MS // NOTE: Kartinalität min = 1 aus Elterprofil geerbet
+* activity[MII_PR_SE_Therapieempfehlung].detail.statusReason from MII_VS_SE_Empfehlung_StatusBegruendung (required)
 
 * activity contains HumangenetischeBeratung 0..1 MS
 * activity[HumangenetischeBeratung] ^short = "Empfehlung Human-genetische Beratung"

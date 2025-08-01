@@ -1,5 +1,5 @@
-Profile: Therapieempfehlung
-Parent: Medikation_MedicationRequest
+Profile: MII_PR_SE_Therapieempfehlung
+Parent: $mii-pr-medikation-medication-request
 Id: mii-pr-se-therapieempfehlung
 Title: "MII PR SE Therapieempfehlung Systemische Therapie"
 Description: "Therapieempfehlung für eine medikamentöse Systemische Therapie"
@@ -28,7 +28,7 @@ Description: "Therapieempfehlung für eine medikamentöse Systemische Therapie"
 * reasonReference ^slicing.ordered = false
 
 * extension contains
-    Empfehlung_Prioritaet named Prioritaet 0..1 MS and
-    Empfehlung_Evidenzgraduierung named Evidenzgraduierung 0..1 MS and
-    Empfehlung_Publikation named Publikation 0..* MS
+    MII_EX_SE_Empfehlung_Prioritaet named Prioritaet 0..1 MS and
+    MII_EX_SE_Empfehlung_Evidenzgraduierung named Evidenzgraduierung 0..1 MS and
+    MII_EX_SE_Empfehlung_Publikation named Publikation 0..* MS
 

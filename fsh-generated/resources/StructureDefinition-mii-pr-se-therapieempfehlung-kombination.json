@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-se-therapieempfehlung-kombination",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-therapieempfehlung-kombination",
-  "name": "Therapieempfehlung_Kombination",
+  "name": "MII_PR_SE_Therapieempfehlung_Kombination",
   "title": "MII PR SE Therapieempfehlung Kombinationstherapie",
   "status": "draft",
   "description": "Therapieempfehlung für eine medikamentöse Kombinationstherapie",
@@ -130,6 +130,15 @@
         "id": "RequestGroup.action.resource",
         "path": "RequestGroup.action.resource",
         "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-therapieempfehlung",
+              "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {

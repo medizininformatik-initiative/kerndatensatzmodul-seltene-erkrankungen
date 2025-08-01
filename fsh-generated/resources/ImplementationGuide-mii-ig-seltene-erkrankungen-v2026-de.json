@@ -59,6 +59,12 @@
       "version": "2025.0.x",
       "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ImplementationGuide/mii-ig-diagnose",
       "id": "de_medizininformatikinitiative_kerndatensatz_diagnose"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.medikation",
+      "version": "2025.0.x",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ImplementationGuide/mii-ig-medikation",
+      "id": "de_medizininformatikinitiative_kerndatensatz_medikation"
     }
   ],
   "definition": {
@@ -141,6 +147,14 @@
         },
         "name": "MII PR SE Therapieempfehlung Kombinationstherapie",
         "description": "Therapieempfehlung für eine medikamentöse Kombinationstherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-se-therapieempfehlung"
+        },
+        "name": "MII PR SE Therapieempfehlung Systemische Therapie",
+        "description": "Therapieempfehlung für eine medikamentöse Systemische Therapie",
         "exampleBoolean": false
       },
       {

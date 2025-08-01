@@ -1,5 +1,5 @@
 /*
-Profile: Studieneinschluss_Anfrage
+Profile: MII_PR_SE_Studieneinschluss_Anfrage
 Parent: ServiceRequest
 Id: mii-pr-se-studieneinschluss-anfrage
 Title: "MII PR SE Studieneinschluss Anfrage"

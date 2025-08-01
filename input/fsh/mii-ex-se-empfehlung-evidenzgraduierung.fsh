@@ -1,4 +1,4 @@
-Extension: Empfehlung_Evidenzgraduierung
+Extension: MII_EX_SE_Empfehlung_Evidenzgraduierung
 Id: mii-ex-se-empfehlung-evidenzgraduierung
 Context: RequestGroup, MedicationRequest
 Title: "MII EX SE Empfehlung Evidenzgraduierung"

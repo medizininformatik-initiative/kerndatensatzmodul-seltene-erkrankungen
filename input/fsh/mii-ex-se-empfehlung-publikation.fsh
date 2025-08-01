@@ -1,4 +1,4 @@
-Extension: Empfehlung_Publikation
+Extension: MII_EX_SE_Empfehlung_Publikation
 Id: mii-ex-se-empfehlung-publikation
 Context: MedicationRequest, RequestGroup, ServiceRequest
 Title: "MII EX SE Empfehlung Publikation"
