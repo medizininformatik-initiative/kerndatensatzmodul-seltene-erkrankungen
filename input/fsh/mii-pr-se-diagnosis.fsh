@@ -1,4 +1,4 @@
-Profile:     MIIProfileSEDiagnosis
+Profile:     MII_PR_SE_Diagnose
 Id:          mii-pr-se-diagnosis
 Parent:      MII_PR_Diagnose_Condition
 Title:       "MII Profile SE Diagnosis"

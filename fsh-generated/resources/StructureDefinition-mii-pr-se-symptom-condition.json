@@ -3,7 +3,7 @@
   "id": "mii-pr-se-symptom-condition",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-symptom-condition",
   "version": "2026.0.0-ballot",
-  "name": "MIIProfileSESymptomCondition",
+  "name": "MII_PR_SE_Symptom_Condition",
   "title": "MII Profile SE Symptom Condition",
   "status": "draft",
   "publisher": "Medizininformatik Initiative",
@@ -137,16 +137,6 @@
         "id": "Condition.recordedDate",
         "path": "Condition.recordedDate",
         "mustSupport": true
-      },
-      {
-        "id": "Condition.recorder",
-        "path": "Condition.recorder",
-        "short": "Wer die Symptom-Erkrankung dokumentiert hat"
-      },
-      {
-        "id": "Condition.asserter",
-        "path": "Condition.asserter",
-        "short": "Person, die diese Symptom-Erkrankung behauptet"
       },
       {
         "id": "Condition.stage",

@@ -1,4 +1,4 @@
-Profile:     MIIProfileSEHpoAssessment
+Profile:     MII_PR_SE_HPO_Assessment
 Id:          mii-pr-se-hpo-assessment
 Parent:      Observation
 Title:       "MII Profile SE HPO Assessment"
@@ -65,7 +65,7 @@ Description: "Codes for describing severity of phenotypic abnormalities"
 * $HPO#HP:0040281 "Normal"
 
 Instance: mii-exa-se-hpo-assessment
-InstanceOf: MIIProfileSEHpoAssessment
+InstanceOf: MII_PR_SE_HPO_Assessment
 Usage: #example
 Title: "HPO Symptom Observation Example"
 Description: "Example of an HPO-based phenotypic observation for intellectual disability."

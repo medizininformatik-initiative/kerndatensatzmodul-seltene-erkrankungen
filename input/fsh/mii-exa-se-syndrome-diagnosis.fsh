@@ -1,5 +1,5 @@
 Instance: mii-exa-se-syndrome-diagnosis
-InstanceOf: MIIProfileSEDiagnosis
+InstanceOf: MII_PR_SE_Diagnose
 Usage: #example
 Title: "Syndrome Diagnosis Example"
 Description: "Example of a syndrome diagnosis for CHARGE syndrome with phenotypic patterns and syndrome categorization."

@@ -1,5 +1,5 @@
 Instance: mii-exa-se-diagnosis
-InstanceOf: MIIProfileSEDiagnosis
+InstanceOf: MII_PR_SE_Diagnose
 Usage: #example
 Title: "Rare Disease Diagnosis Example"
 Description: "Example of a rare disease diagnosis using ORPHA codes for Marfan syndrome."

@@ -24,8 +24,8 @@
     "endLine": 44
   },
   {
-    "outputFile": "FamilyMemberHistory-ExampleHistoryAnamnesis.json",
-    "fshName": "ExampleHistoryAnamnesis",
+    "outputFile": "FamilyMemberHistory-mii-exa-se-familienanamnese.json",
+    "fshName": "mii-exa-se-familienanamnese",
     "fshType": "Instance",
     "fshFile": "mii-exa-se-familienanamnese.fsh",
     "startLine": 1,
@@ -75,7 +75,7 @@
     "outputFile": "StructureDefinition-mii-ext-se-onset-age.json",
     "fshName": "OnsetAge",
     "fshType": "Extension",
-    "fshFile": "extensions/ext-onset-age.fsh",
+    "fshFile": "extensions\\ext-onset-age.fsh",
     "startLine": 1,
     "endLine": 26
   },
@@ -83,7 +83,7 @@
     "outputFile": "StructureDefinition-mii-ext-se-phenotypic-pattern.json",
     "fshName": "PhenotypicPattern",
     "fshType": "Extension",
-    "fshFile": "extensions/ext-phenotypic-pattern.fsh",
+    "fshFile": "extensions\\ext-phenotypic-pattern.fsh",
     "startLine": 1,
     "endLine": 15
   },
@@ -91,7 +91,7 @@
     "outputFile": "StructureDefinition-mii-ext-se-syndrome-category.json",
     "fshName": "SyndromeCategory",
     "fshType": "Extension",
-    "fshFile": "extensions/ext-syndrome-category.fsh",
+    "fshFile": "extensions\\ext-syndrome-category.fsh",
     "startLine": 1,
     "endLine": 15
   },
@@ -113,7 +113,7 @@
   },
   {
     "outputFile": "StructureDefinition-mii-pr-se-diagnosis.json",
-    "fshName": "MIIProfileSEDiagnosis",
+    "fshName": "MII_PR_SE_Diagnose",
     "fshType": "Profile",
     "fshFile": "mii-pr-se-diagnosis.fsh",
     "startLine": 1,
@@ -129,7 +129,7 @@
   },
   {
     "outputFile": "StructureDefinition-mii-pr-se-hpo-assessment.json",
-    "fshName": "MIIProfileSEHpoAssessment",
+    "fshName": "MII_PR_SE_HPO_Assessment",
     "fshType": "Profile",
     "fshFile": "mii-pr-se-hpo-assessment.fsh",
     "startLine": 1,
@@ -137,11 +137,11 @@
   },
   {
     "outputFile": "StructureDefinition-mii-pr-se-symptom-condition.json",
-    "fshName": "MIIProfileSESymptomCondition",
+    "fshName": "MII_PR_SE_Symptom_Condition",
     "fshType": "Profile",
     "fshFile": "mii-pr-se-symptom-condition.fsh",
     "startLine": 1,
-    "endLine": 93
+    "endLine": 87
   },
   {
     "outputFile": "StructureDefinition-mii-pr-se-waist-to-hip-ratio.json",
@@ -187,7 +187,7 @@
     "outputFile": "ValueSet-mii-vs-se-syndrome-category.json",
     "fshName": "SyndromeCategoryVS",
     "fshType": "ValueSet",
-    "fshFile": "extensions/ext-syndrome-category.fsh",
+    "fshFile": "extensions\\ext-syndrome-category.fsh",
     "startLine": 17,
     "endLine": 27
   },

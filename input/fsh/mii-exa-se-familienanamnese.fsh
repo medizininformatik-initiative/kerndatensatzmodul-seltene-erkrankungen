@@ -1,4 +1,4 @@
-Instance: ExampleHistoryAnamnesis
+Instance: mii-exa-se-familienanamnese
 InstanceOf: MII_PR_SE_Familienanamnese
 Description: "Example Patient Family Anamnesis"
 Usage: #example

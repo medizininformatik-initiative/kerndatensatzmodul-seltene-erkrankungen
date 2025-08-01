@@ -1,4 +1,4 @@
-Profile:     MIIProfileSESymptomCondition
+Profile:     MII_PR_SE_Symptom_Condition
 Id:          mii-pr-se-symptom-condition
 Parent:      Condition
 Title:       "MII Profile SE Symptom Condition"
@@ -86,8 +86,3 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 * note ^short = "Zusätzliche Anmerkungen zur Symptom-Erkrankung"
 * note ^definition = "Zusätzliche Beschreibung der Symptom-Erkrankung, die in anderen Feldern nicht erfasst ist"
 
-// Recorder constraints
-* recorder ^short = "Wer die Symptom-Erkrankung dokumentiert hat"
-
-// Asserter constraints
-* asserter ^short = "Person, die diese Symptom-Erkrankung behauptet"

@@ -1,5 +1,4 @@
 [MIIProfileSEBehaarung]: StructureDefinition-hairiness-profile.html
-[ExampleHistoryAnamnesis]: FamilyMemberHistory-ExampleHistoryAnamnesis.html
 [FastingStatus]: StructureDefinition-fastingstatus-profile.html
 [HPOPhenotypicObservationCodes]: ValueSet-mii-vs-se-hpo-phenotypic-observation-codes.html
 [HPOSeverityValues]: ValueSet-mii-vs-se-hpo-severity-values.html
@@ -8,9 +7,10 @@
 [MII_LM_SE]: StructureDefinition-mii-lm-se.html
 [MII_PR_SE_Familienanamnese]: StructureDefinition-mii-pr-se-familienanamnese.html
 [MIIProfileSEClinicalImpression]: StructureDefinition-mii-pr-se-clinical-impression.html
-[MIIProfileSEDiagnosis]: StructureDefinition-mii-pr-se-diagnosis.html
-[MIIProfileSEHpoAssessment]: StructureDefinition-mii-pr-se-hpo-assessment.html
-[MIIProfileSESymptomCondition]: StructureDefinition-mii-pr-se-symptom-condition.html
+[MII_PR_SE_Diagnose]: StructureDefinition-mii-pr-se-diagnosis.html
+[MII_PR_SE_HPO_Assessment]: StructureDefinition-mii-pr-se-hpo-assessment.html
+[MII_PR_SE_Symptom_Condition]: StructureDefinition-mii-pr-se-symptom-condition.html
+[mii-exa-se-familienanamnese]: FamilyMemberHistory-mii-exa-se-familienanamnese.html
 [OnsetAge]: StructureDefinition-mii-ext-se-onset-age.html
 [PhenotypicPattern]: StructureDefinition-mii-ext-se-phenotypic-pattern.html
 [ProfileObservationHauttyp]: StructureDefinition-ProfileObservationHauttyp.html

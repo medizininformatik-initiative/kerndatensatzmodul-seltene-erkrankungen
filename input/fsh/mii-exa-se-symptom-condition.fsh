@@ -1,5 +1,5 @@
 Instance: mii-exa-se-symptom-condition
-InstanceOf: MIIProfileSESymptomCondition
+InstanceOf: MII_PR_SE_Symptom_Condition
 Usage: #example
 Title: "MII Example SE Symptom Condition"
 Description: "Example of a symptom condition in the context of rare diseases using HPO codes"

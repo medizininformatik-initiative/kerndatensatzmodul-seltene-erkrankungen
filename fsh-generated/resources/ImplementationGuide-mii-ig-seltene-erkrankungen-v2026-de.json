@@ -73,14 +73,6 @@
       },
       {
         "reference": {
-          "reference": "FamilyMemberHistory/ExampleHistoryAnamnesis"
-        },
-        "name": "ExampleHistoryAnamnesis",
-        "description": "Example Patient Family Anamnesis",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-pr-se-familienanamnese"
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/fastingstatus-profile"
         },
         "name": "Fasting status of the patient",
@@ -166,6 +158,14 @@
         "name": "MII Profile SE Symptom Condition",
         "description": "Profile for symptom-based conditions in the context of rare diseases. This profile captures symptomatic conditions with temporal characteristics, complementing the HPO Assessment Observation profile.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "FamilyMemberHistory/mii-exa-se-familienanamnese"
+        },
+        "name": "mii-exa-se-familienanamnese",
+        "description": "Example Patient Family Anamnesis",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-familienanamnese"
       },
       {
         "reference": {
