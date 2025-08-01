@@ -5,7 +5,7 @@
 [HPOSeverityValues]: ValueSet-mii-vs-se-hpo-severity-values.html
 [mii-exa-se-hpo-assessment]: Observation-mii-exa-se-hpo-assessment.html
 [mii-exa-se-symptom-condition]: Condition-mii-exa-se-symptom-condition.html
-[MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
+[MII_LM_SE]: StructureDefinition-mii-lm-se.html
 [MII_PR_SE_Familienanamnese]: StructureDefinition-mii-pr-se-familienanamnese.html
 [MIIProfileSEClinicalImpression]: StructureDefinition-mii-pr-se-clinical-impression.html
 [MIIProfileSEDiagnosis]: StructureDefinition-mii-pr-se-diagnosis.html

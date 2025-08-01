@@ -8,10 +8,10 @@ Observation-mii-exa-se-waist-to-hip-ratio.json                       mii-exa-se-
 StructureDefinition-ProfileObservationHauttyp.json                   ProfileObservationHauttyp       Profile    SkinTypeObservation.fsh                5 - 81
 StructureDefinition-fastingstatus-profile.json                       FastingStatus                   Profile    FastingState.fsh                       1 - 13
 StructureDefinition-hairiness-profile.json                           MIIProfileSEBehaarung           Profile    MIIProfileSEBehaarung.fsh              4 - 16
-StructureDefinition-mii-ext-se-onset-age.json                        OnsetAge                        Extension  extensions\ext-onset-age.fsh           1 - 26
-StructureDefinition-mii-ext-se-phenotypic-pattern.json               PhenotypicPattern               Extension  extensions\ext-phenotypic-pattern.fsh  1 - 15
-StructureDefinition-mii-ext-se-syndrome-category.json                SyndromeCategory                Extension  extensions\ext-syndrome-category.fsh   1 - 15
-StructureDefinition-mii-lm-onko.json                                 MII_LM_Onko                     Logical    mii-lm-onko.fsh                        1 - 123
+StructureDefinition-mii-ext-se-onset-age.json                        OnsetAge                        Extension  extensions/ext-onset-age.fsh           1 - 26
+StructureDefinition-mii-ext-se-phenotypic-pattern.json               PhenotypicPattern               Extension  extensions/ext-phenotypic-pattern.fsh  1 - 15
+StructureDefinition-mii-ext-se-syndrome-category.json                SyndromeCategory                Extension  extensions/ext-syndrome-category.fsh   1 - 15
+StructureDefinition-mii-lm-se.json                                   MII_LM_SE                       Logical    mii-lm-se.fsh                          1 - 61
 StructureDefinition-mii-pr-se-clinical-impression.json               MIIProfileSEClinicalImpression  Profile    mii-pr-se-clinical-impression.fsh      1 - 98
 StructureDefinition-mii-pr-se-diagnosis.json                         MIIProfileSEDiagnosis           Profile    mii-pr-se-diagnosis.fsh                1 - 126
 StructureDefinition-mii-pr-se-familienanamnese.json                  MII_PR_SE_Familienanamnese      Profile    mii-pr-se-familienanamnese.fsh         12 - 25
@@ -22,5 +22,5 @@ StructureDefinition-von-se-betroffen.json                            VonSEBetrof
 ValueSet-2.16.840.1.113883.3.1937.777.30.11.68--20240620133122.json  SkinPhototypeFinding            ValueSet   SkinPhototypeFindings_FSH.fsh          3 - 27
 ValueSet-mii-vs-se-hpo-phenotypic-observation-codes.json             HPOPhenotypicObservationCodes   ValueSet   mii-pr-se-hpo-assessment.fsh           50 - 55
 ValueSet-mii-vs-se-hpo-severity-values.json                          HPOSeverityValues               ValueSet   mii-pr-se-hpo-assessment.fsh           57 - 65
-ValueSet-mii-vs-se-syndrome-category.json                            SyndromeCategoryVS              ValueSet   extensions\ext-syndrome-category.fsh   17 - 27
+ValueSet-mii-vs-se-syndrome-category.json                            SyndromeCategoryVS              ValueSet   extensions/ext-syndrome-category.fsh   17 - 27
 ValueSet-von-se-betroffen-vs.json                                    VonSEBetroffenVS                ValueSet   von-se-betroffen-valueset.fsh          1 - 7
