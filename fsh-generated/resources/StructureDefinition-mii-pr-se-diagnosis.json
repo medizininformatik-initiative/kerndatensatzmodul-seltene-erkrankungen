@@ -15,7 +15,7 @@
       }
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-diagnosis",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis",
   "version": "2026.0.0-ballot",
   "name": "MIIProfileSEDiagnosis",
   "title": "MII Profile SE Diagnosis",
@@ -52,7 +52,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ext-se-syndrome-category"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-se-syndrome-category"
             ]
           }
         ],
@@ -70,7 +70,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ext-se-phenotypic-pattern"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-se-phenotypic-pattern"
             ]
           }
         ],

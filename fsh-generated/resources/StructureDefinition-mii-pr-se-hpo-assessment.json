@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-pr-se-hpo-assessment",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-hpo-assessment",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-hpo-assessment",
   "version": "2026.0.0-ballot",
   "name": "MIIProfileSEHpoAssessment",
   "title": "MII Profile SE HPO Assessment",
@@ -40,7 +40,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/ValueSet/mii-vs-se-hpo-phenotypic-observation-codes"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-se-hpo-phenotypic-observation-codes"
         }
       },
       {
@@ -116,7 +116,7 @@
         ],
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/ValueSet/mii-vs-se-hpo-severity-values"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-se-hpo-severity-values"
         }
       },
       {

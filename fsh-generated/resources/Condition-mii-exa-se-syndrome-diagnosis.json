@@ -3,12 +3,12 @@
   "id": "mii-exa-se-syndrome-diagnosis",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-diagnosis"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
     ]
   },
   "extension": [
     {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ext-se-syndrome-category",
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-se-syndrome-category",
       "valueCodeableConcept": {
         "coding": [
           {
@@ -20,19 +20,19 @@
       }
     },
     {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ext-se-phenotypic-pattern",
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-se-phenotypic-pattern",
       "valueReference": {
         "reference": "Observation/charge-coloboma-finding"
       }
     },
     {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ext-se-phenotypic-pattern",
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-se-phenotypic-pattern",
       "valueReference": {
         "reference": "Observation/charge-hearing-loss-finding"
       }
     },
     {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ext-se-phenotypic-pattern",
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-se-phenotypic-pattern",
       "valueReference": {
         "reference": "Condition/charge-heart-defect-condition"
       }

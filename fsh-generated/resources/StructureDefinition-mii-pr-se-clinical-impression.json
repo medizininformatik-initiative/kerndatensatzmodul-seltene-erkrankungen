@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-pr-se-clinical-impression",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-clinical-impression",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-impression",
   "version": "2026.0.0-ballot",
   "name": "MIIProfileSEClinicalImpression",
   "title": "MII Profile SE Clinical Impression",
@@ -163,7 +163,7 @@
         "short": "HPO-basierter klinischer Befund",
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/ValueSet/mii-vs-se-hpo-phenotypic-observation-codes"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-se-hpo-phenotypic-observation-codes"
         }
       },
       {
