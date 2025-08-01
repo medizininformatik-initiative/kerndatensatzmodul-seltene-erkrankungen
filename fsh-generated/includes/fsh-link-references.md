@@ -1,9 +1,15 @@
 [MIIProfileSEBehaarung]: StructureDefinition-hairiness-profile.html
 [ExampleHistoryAnamnesis]: FamilyMemberHistory-ExampleHistoryAnamnesis.html
 [FastingStatus]: StructureDefinition-fastingstatus-profile.html
+[MII_CS_SE_Empfehlung_StatusBegruendung]: CodeSystem-mii-cs-se-empfehlung-status-begruendung.html
+[Empfehlung_Evidenzgraduierung]: StructureDefinition-mii-ex-se-empfehlung-evidenzgraduierung.html
+[Empfehlung_Prioritaet]: StructureDefinition-mii-ex-se-empfehlung-prioritaet.html
+[Empfehlung_Publikation]: StructureDefinition-mii-ex-se-empfehlung-publikation.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
 [MII_PR_MolGen_Familienanamnese]: StructureDefinition-mii-pr-molgen-familienanamnese.html
+[Therapieempfehlung_Kombination]: StructureDefinition-mii-pr-se-therapieempfehlung-kombination.html
 [Therapieplan]: StructureDefinition-mii-pr-se-therapieplan.html
+[MII_VS_SE_Empfehlung_StatusBegruendung]: ValueSet-mii-vs-se-empfehlung-status-begruendung.html
 [ProfileObservationHauttyp]: StructureDefinition-ProfileObservationHauttyp.html
 [SkinPhototypeFinding]: ValueSet-2.16.840.1.113883.3.1937.777.30.11.68--20240620133122.html
 [VonSEBetroffenVS]: ValueSet-von-se-betroffen-vs.html

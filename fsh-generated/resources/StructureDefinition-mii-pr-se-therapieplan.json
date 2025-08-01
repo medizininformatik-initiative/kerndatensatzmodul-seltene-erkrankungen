@@ -5,7 +5,7 @@
   "name": "Therapieplan",
   "title": "MII PR SE Therapieplan",
   "status": "draft",
-  "description": "Therapieplan gemäß Beschluss des Molekularen Tumorboards",
+  "description": "Therapieplan",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -18,20 +18,20 @@
         "id": "CarePlan.status",
         "path": "CarePlan.status",
         "definition": "Status der Umsetzung des beschlossenen Therapieplans",
-        "comment": "\n    active: Empfehlung bzw. Therapieoption in Umsetzung (Regelfall), \n    revoked: Molekularer Tumorboard-Fall ist abgeschlossen, \n    completed: Alle Empfehlungen bzw. Therapieoptionen ausgeschöpft oder Patient verstorben"
+        "comment": "\n    active: Empfehlung bzw. Therapieoption in Umsetzung (Regelfall), \n    revoked: Fall ist abgeschlossen, \n    completed: Alle Empfehlungen bzw. Therapieoptionen ausgeschöpft oder Patient verstorben"
       },
       {
         "id": "CarePlan.description",
         "path": "CarePlan.description",
         "short": "Protokollauszug",
-        "definition": "Protokollauszug aus dem Beschluss des Molekularen Tumorboards",
+        "definition": "Protokollauszug aus dem Beschluss",
         "mustSupport": true
       },
       {
         "id": "CarePlan.created",
         "path": "CarePlan.created",
         "short": "Erstellungsdatum",
-        "definition": "Erstellungsdatum des Therapieplans gemäß Beschluss des Molekularen Tumorboards",
+        "definition": "Erstellungsdatum des Therapieplans",
         "min": 1,
         "mustSupport": true
       },
@@ -86,6 +86,14 @@
         "id": "CarePlan.activity:Therapieempfehlung.detail",
         "path": "CarePlan.activity.detail",
         "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:Therapieempfehlung.detail.statusReason",
+        "path": "CarePlan.activity.detail.statusReason",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/ValueSet/mii-vs-se-empfehlung-status-begruendung"
+        }
       },
       {
         "id": "CarePlan.activity:HumangenetischeBeratung",

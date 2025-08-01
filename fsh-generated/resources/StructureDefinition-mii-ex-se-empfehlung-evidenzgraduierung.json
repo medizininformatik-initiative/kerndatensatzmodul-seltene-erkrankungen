@@ -1,0 +1,108 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-ex-se-empfehlung-evidenzgraduierung",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ex-se-empfehlung-evidenzgraduierung",
+  "name": "Empfehlung_Evidenzgraduierung",
+  "title": "MII EX SE Empfehlung Evidenzgraduierung",
+  "status": "draft",
+  "description": "Evidenzgraduierung der (einzelnen) Empfehlung",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "RequestGroup",
+      "type": "element"
+    },
+    {
+      "expression": "MedicationRequest",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "MII EX SE Empfehlung Evidenzgraduierung",
+        "definition": "Evidenzgraduierung der (einzelnen) Empfehlung"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ex-se-empfehlung-evidenzgraduierung"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Evidenzgraduierung",
+        "definition": "Evidenzgraduierung für Biomarker-basierte Empfehlung",
+        "comment": "Evidenzgraduierung wird durch einen Evidenzgrad und einen optionalen Zusatzverweis angegeben",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x].coding",
+        "path": "Extension.value[x].coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open",
+          "description": "Slice für die Evidenzgraduierung anhand von `system`",
+          "ordered": false
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x].coding:Evidenzgrad",
+        "path": "Extension.value[x].coding",
+        "sliceName": "Evidenzgrad",
+        "short": "Evidenzgrad",
+        "definition": "Evidenzgrad der Empfehlung",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x].coding:Evidenzgrad.code",
+        "path": "Extension.value[x].coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x].coding:Zusatzverweis",
+        "path": "Extension.value[x].coding",
+        "sliceName": "Zusatzverweis",
+        "short": "Zusatzverweis",
+        "definition": "Zusatzverweis zum Evidenzgrad",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x].coding:Zusatzverweis.code",
+        "path": "Extension.value[x].coding.code",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

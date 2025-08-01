@@ -2,22 +2,22 @@ Profile: Therapieplan
 Parent: CarePlan
 Id: mii-pr-se-therapieplan
 Title: "MII PR SE Therapieplan"
-Description: "Therapieplan gemäß Beschluss des Molekularen Tumorboards"
+Description: "Therapieplan"
 
 * status ^short = "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
 * status ^definition = "Status der Umsetzung des beschlossenen Therapieplans"
 * status ^comment = "
     active: Empfehlung bzw. Therapieoption in Umsetzung (Regelfall), 
-    revoked: Molekularer Tumorboard-Fall ist abgeschlossen, 
+    revoked: Fall ist abgeschlossen, 
     completed: Alle Empfehlungen bzw. Therapieoptionen ausgeschöpft oder Patient verstorben"
 
 * created 1..1 MS 
 * created ^short = "Erstellungsdatum"
-* created ^definition = "Erstellungsdatum des Therapieplans gemäß Beschluss des Molekularen Tumorboards"
+* created ^definition = "Erstellungsdatum des Therapieplans"
 
 * description 0..1 MS
 * description ^short = "Protokollauszug"
-* description ^definition = "Protokollauszug aus dem Beschluss des Molekularen Tumorboards"
+* description ^definition = "Protokollauszug aus dem Beschluss"
 
 * activity 0..* MS
 * activity ^slicing.discriminator.type = #profile
@@ -31,15 +31,15 @@ Description: "Therapieplan gemäß Beschluss des Molekularen Tumorboards"
 * activity[Therapieempfehlung] ^definition = "Therapieempfehlung für eine medikamentöse Systemische Therapie"
 * activity[Therapieempfehlung] ^comment = "Kann keine Therapieempfehlung für eine Systemische Therapie gegeben werden, muss dies als Begründung unter `detail.statusReason` angegeben werden"
 * activity[Therapieempfehlung].reference 0..1 MS
-/* * activity[Therapieempfehlung].reference only Reference(
-    MII_PR_MTB_Therapieempfehlung or
-    MII_PR_MTB_Therapieempfehlung_Kombination or
+* activity[Therapieempfehlung].reference only Reference(
+    Therapieempfehlung or
+    Therapieempfehlung_Kombination or
     MedicationRequest or
     RequestGroup
-)*/
+)
 
 * activity[Therapieempfehlung].detail MS // NOTE: Kartinalität min = 1 aus Elterprofil geerbet
-//* activity[Therapieempfehlung].detail.statusReason from MII_VS_MTB_Empfehlung_StatusBegruendung (required)
+* activity[Therapieempfehlung].detail.statusReason from MII_VS_SE_Empfehlung_StatusBegruendung (required)
 
 * activity contains HumangenetischeBeratung 0..1 MS
 * activity[HumangenetischeBeratung] ^short = "Empfehlung Human-genetische Beratung"

@@ -89,6 +89,38 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-se-empfehlung-status-begruendung"
+        },
+        "name": "MII CS SE Empfehlung Status Begründung",
+        "description": "Begründung bei fehlender Empfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-se-empfehlung-evidenzgraduierung"
+        },
+        "name": "MII EX SE Empfehlung Evidenzgraduierung",
+        "description": "Evidenzgraduierung der (einzelnen) Empfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-se-empfehlung-prioritaet"
+        },
+        "name": "MII EX SE Empfehlung Priorität",
+        "description": "Priorität der (einzelnen) Empfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-se-empfehlung-publikation"
+        },
+        "name": "MII EX SE Empfehlung Publikation",
+        "description": "Verweis auf Publikation der (einzelnen) Empfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-lm-onko"
         },
         "name": "MII LM Onkologie",
@@ -105,10 +137,26 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-se-therapieempfehlung-kombination"
+        },
+        "name": "MII PR SE Therapieempfehlung Kombinationstherapie",
+        "description": "Therapieempfehlung für eine medikamentöse Kombinationstherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-se-therapieplan"
         },
         "name": "MII PR SE Therapieplan",
-        "description": "Therapieplan gemäß Beschluss des Molekularen Tumorboards",
+        "description": "Therapieplan",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-se-empfehlung-status-begruendung"
+        },
+        "name": "MII VS SE Empfehlung Status Begründung",
+        "description": "ValueSet für Begründung bei fehlender Empfehlung",
         "exampleBoolean": false
       },
       {

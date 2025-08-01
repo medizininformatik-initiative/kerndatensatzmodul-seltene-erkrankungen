@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-ex-se-empfehlung-publikation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ex-se-empfehlung-publikation",
+  "name": "Empfehlung_Publikation",
+  "title": "MII EX SE Empfehlung Publikation",
+  "status": "draft",
+  "description": "Verweis auf Publikation der (einzelnen) Empfehlung",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "MedicationRequest",
+      "type": "element"
+    },
+    {
+      "expression": "RequestGroup",
+      "type": "element"
+    },
+    {
+      "expression": "ServiceRequest",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "MII EX SE Empfehlung Publikation",
+        "definition": "Verweis auf Publikation der (einzelnen) Empfehlung"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ex-se-empfehlung-publikation"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          },
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x]:valueIdentifier",
+        "path": "Extension.value[x]",
+        "sliceName": "valueIdentifier",
+        "short": "Identifikator Publikation",
+        "definition": "Eindeutiger Identifikator zur Publikation in einer Publikationsdatenbank",
+        "comment": "Z.B. Document Object Identifier (DOI): https://doi.org/10.3414/ME18-03-0003 oder PubMed Identifier (PMID): http://www.ncbi.nlm.nih.gov/pubmed/30016818",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x]:valueIdentifier.system",
+        "path": "Extension.value[x].system",
+        "comment": "Publikationsdatenbank, z.B. DOI: http://doi.org oder PMID: http://www.ncbi.nlm.nih.gov/pubmed",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x]:valueIdentifier.value",
+        "path": "Extension.value[x].value",
+        "comment": "Identifikator zur Publikation, z.B. DOI: 10.1000/182 oder PMID: 30016818",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x]:valueString",
+        "path": "Extension.value[x]",
+        "sliceName": "valueString",
+        "short": "Andere Publikationsquelle",
+        "definition": "Publikationsquelle die nicht über eine Publikationsdatenbank referenzierbar ist",
+        "comment": "Z.B. Whitepaper oder Leitlinie",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -9,3 +9,6 @@ Alias: $FHIR-Version = 4.0.1
 Alias: $ExpandedYesNoIndicator = http://terminology.hl7.org/CodeSystem/v2-0532
 // licenses
 Alias: $spdx-license = http://hl7.org/fhir/spdx-license
+
+// Aliases für Profile des MII Medikation-Moduls
+Alias: $mii-pr-medikation-medication-request = https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest

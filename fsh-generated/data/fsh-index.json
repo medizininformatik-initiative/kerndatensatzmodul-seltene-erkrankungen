@@ -1,5 +1,13 @@
 [
   {
+    "outputFile": "CodeSystem-mii-cs-se-empfehlung-status-begruendung.json",
+    "fshName": "MII_CS_SE_Empfehlung_StatusBegruendung",
+    "fshType": "CodeSystem",
+    "fshFile": "cs-EmpfehlungStatusBegruendung.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
     "outputFile": "FamilyMemberHistory-ExampleHistoryAnamnesis.json",
     "fshName": "ExampleHistoryAnamnesis",
     "fshType": "Instance",
@@ -40,6 +48,30 @@
     "endLine": 16
   },
   {
+    "outputFile": "StructureDefinition-mii-ex-se-empfehlung-evidenzgraduierung.json",
+    "fshName": "Empfehlung_Evidenzgraduierung",
+    "fshType": "Extension",
+    "fshFile": "ex-EmpfehlungEvidenzgraduierung.fsh",
+    "startLine": 1,
+    "endLine": 31
+  },
+  {
+    "outputFile": "StructureDefinition-mii-ex-se-empfehlung-prioritaet.json",
+    "fshName": "Empfehlung_Prioritaet",
+    "fshType": "Extension",
+    "fshFile": "ex-EmpfehlungPrioritaet.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-mii-ex-se-empfehlung-publikation.json",
+    "fshName": "Empfehlung_Publikation",
+    "fshType": "Extension",
+    "fshFile": "ex-EmpfehlungPublikation.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
     "outputFile": "StructureDefinition-mii-lm-onko.json",
     "fshName": "MII_LM_Onko",
     "fshType": "Logical",
@@ -54,6 +86,14 @@
     "fshFile": "mii-pr-se-familienanamnese.fsh",
     "startLine": 11,
     "endLine": 124
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-se-therapieempfehlung-kombination.json",
+    "fshName": "Therapieempfehlung_Kombination",
+    "fshType": "Profile",
+    "fshFile": "TherapieempfehlungKombination.fsh",
+    "startLine": 1,
+    "endLine": 40
   },
   {
     "outputFile": "StructureDefinition-mii-pr-se-therapieplan.json",
@@ -86,6 +126,14 @@
     "fshFile": "SkinPhototypeFindings_FSH.fsh",
     "startLine": 3,
     "endLine": 27
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-se-empfehlung-status-begruendung.json",
+    "fshName": "MII_VS_SE_Empfehlung_StatusBegruendung",
+    "fshType": "ValueSet",
+    "fshFile": "vs-EmpfehlungStatusBegruendung.fsh",
+    "startLine": 1,
+    "endLine": 5
   },
   {
     "outputFile": "ValueSet-von-se-betroffen-vs.json",
