@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-pr-se-therapieempfehlung-kombination",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-therapieempfehlung-kombination",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung-kombination",
   "name": "MII_PR_SE_Therapieempfehlung_Kombination",
   "title": "MII PR SE Therapieempfehlung Kombinationstherapie",
   "status": "draft",
@@ -38,7 +38,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ex-se-empfehlung-prioritaet"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-se-empfehlung-prioritaet"
             ]
           }
         ],
@@ -54,7 +54,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ex-se-empfehlung-evidenzgraduierung"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-se-empfehlung-evidenzgraduierung"
             ]
           }
         ],
@@ -70,7 +70,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ex-se-empfehlung-publikation"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-se-empfehlung-publikation"
             ]
           }
         ],
@@ -134,7 +134,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-therapieempfehlung",
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung",
               "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
             ]
           }

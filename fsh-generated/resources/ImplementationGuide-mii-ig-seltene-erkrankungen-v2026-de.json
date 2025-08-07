@@ -111,14 +111,6 @@
       },
       {
         "reference": {
-          "reference": "FamilyMemberHistory/family-history-001"
-        },
-        "name": "Familienanamnese - Urgroßmutter mit Muskelerkrankung",
-        "description": "Urgroßmutter mit unbekannter Muskelerkrankung",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-familienanamnese"
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/fastingstatus-profile"
         },
         "name": "Fasting status of the patient",
@@ -175,6 +167,38 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-se-empfehlung-status-begruendung"
+        },
+        "name": "MII CS SE Empfehlung Status Begründung",
+        "description": "Begründung bei fehlender Empfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-se-empfehlung-evidenzgraduierung"
+        },
+        "name": "MII EX SE Empfehlung Evidenzgraduierung",
+        "description": "Evidenzgraduierung der (einzelnen) Empfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-se-empfehlung-prioritaet"
+        },
+        "name": "MII EX SE Empfehlung Priorität",
+        "description": "Priorität der (einzelnen) Empfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-se-empfehlung-publikation"
+        },
+        "name": "MII EX SE Empfehlung Publikation",
+        "description": "Verweis auf Publikation der (einzelnen) Empfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Condition/mii-exa-se-symptom-condition"
         },
         "name": "MII Example SE Symptom Condition",
@@ -191,10 +215,34 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-familienanamnese"
+          "reference": "StructureDefinition/mii-pr-se-studieneinschluss-anfrage"
         },
-        "name": "MII PR SE Familienanamnese",
-        "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil.",
+        "name": "MII PR SE Studieneinschluss Anfrage",
+        "description": "Anfrage zum Studieneinschluss",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-se-therapieempfehlung-kombination"
+        },
+        "name": "MII PR SE Therapieempfehlung Kombinationstherapie",
+        "description": "Therapieempfehlung für eine medikamentöse Kombinationstherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-se-therapieempfehlung"
+        },
+        "name": "MII PR SE Therapieempfehlung Systemische Therapie",
+        "description": "Therapieempfehlung für eine medikamentöse Systemische Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-se-therapieplan"
+        },
+        "name": "MII PR SE Therapieplan",
+        "description": "Therapieplan",
         "exampleBoolean": false
       },
       {
@@ -231,11 +279,11 @@
       },
       {
         "reference": {
-          "reference": "FamilyMemberHistory/mii-exa-se-familienanamnese"
+          "reference": "ValueSet/mii-vs-se-empfehlung-status-begruendung"
         },
-        "name": "mii-exa-se-familienanamnese",
-        "description": "Example Patient Family Anamnesis",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-familienanamnese"
+        "name": "MII VS SE Empfehlung Status Begründung",
+        "description": "ValueSet für Begründung bei fehlender Empfehlung",
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -284,14 +332,6 @@
         "name": "Skin phototype finding",
         "description": "Skin phototype finding",
         "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "Bundle/bundle-sma-complete"
-        },
-        "name": "SMA Fallbeispiel - Vollständiges Transaction Bundle",
-        "description": "Transaction Bundle mit allen Ressourcen für den SMA Fall inkl. Diagnoseverlauf",
-        "exampleBoolean": true
       },
       {
         "reference": {
@@ -380,6 +420,14 @@
         "name": "Syndrome Diagnosis Example",
         "description": "Example of a syndrome diagnosis for CHARGE syndrome with phenotypic patterns and syndrome categorization.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-se-therapieplan"
+        },
+        "name": "Therapieplan Example",
+        "description": "Example of a Therapieplan for a patient.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieplan"
       },
       {
         "reference": {

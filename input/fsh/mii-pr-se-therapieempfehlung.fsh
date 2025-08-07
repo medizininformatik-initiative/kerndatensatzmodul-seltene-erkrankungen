@@ -1,5 +1,5 @@
 Profile: MII_PR_SE_Therapieempfehlung
-Parent: $mii-pr-medikation-medication-request
+Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest
 Id: mii-pr-se-therapieempfehlung
 Title: "MII PR SE Therapieempfehlung Systemische Therapie"
 Description: "Therapieempfehlung für eine medikamentöse Systemische Therapie"

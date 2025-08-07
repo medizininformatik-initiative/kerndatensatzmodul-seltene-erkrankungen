@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-pr-se-therapieplan",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-therapieplan",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieplan",
   "name": "MII_PR_SE_Therapieplan",
   "title": "MII PR SE Therapieplan",
   "status": "draft",
@@ -84,8 +84,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-therapieempfehlung",
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-therapieempfehlung-kombination",
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung",
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung-kombination",
               "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
               "http://hl7.org/fhir/StructureDefinition/RequestGroup"
             ]
@@ -103,7 +103,7 @@
         "path": "CarePlan.activity.detail.statusReason",
         "binding": {
           "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/ValueSet/mii-vs-se-empfehlung-status-begruendung"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-se-empfehlung-status-begruendung"
         }
       },
       {
@@ -172,7 +172,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-studieneinschluss-anfrage"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-studieneinschluss-anfrage"
             ]
           }
         ],
