@@ -143,6 +143,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-se-studieneinschluss-anfrage"
+        },
+        "name": "MII PR SE Studieneinschluss Anfrage",
+        "description": "Anfrage zum Studieneinschluss",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-se-therapieempfehlung-kombination"
         },
         "name": "MII PR SE Therapieempfehlung Kombinationstherapie",
@@ -188,6 +196,14 @@
         "name": "Skin phototype finding",
         "description": "Skin phototype finding",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-se-therapieplan"
+        },
+        "name": "Therapieplan Example",
+        "description": "Example of a Therapieplan for a patient.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-therapieplan"
       },
       {
         "reference": {

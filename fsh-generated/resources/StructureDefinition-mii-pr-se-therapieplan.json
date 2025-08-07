@@ -168,6 +168,14 @@
         "id": "CarePlan.activity:Studieneinschlussempfehlung.reference",
         "path": "CarePlan.activity.reference",
         "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-studieneinschluss-anfrage"
+            ]
+          }
+        ],
         "mustSupport": true
       }
     ]

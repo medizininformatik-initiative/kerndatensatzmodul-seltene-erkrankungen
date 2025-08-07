@@ -1,4 +1,3 @@
-/*
 Profile: MII_PR_SE_Studieneinschluss_Anfrage
 Parent: ServiceRequest
 Id: mii-pr-se-studieneinschluss-anfrage
@@ -42,13 +41,11 @@ Description: "Anfrage zum Studieneinschluss"
 
 * supportingInfo contains Studie 0..* MS
 * supportingInfo[Studie] only Reference(
-    MII_PR_MTB_Studie or
+    MII_PR_SE_Studie or
     MII_PR_Studie_Studie or
     ResearchStudy
 )
 
 * extension contains
-    MII_EX_MTB_Empfehlung_Prioritaet named Prioritaet 0..1 MS and
-    MII_EX_MTB_Empfehlung_Publikation named Publikation 0..* MS
-
-*/
+    MII_EX_SE_Empfehlung_Prioritaet named Prioritaet 0..1 MS and
+    MII_EX_SE_Empfehlung_Publikation named Publikation 0..* MS

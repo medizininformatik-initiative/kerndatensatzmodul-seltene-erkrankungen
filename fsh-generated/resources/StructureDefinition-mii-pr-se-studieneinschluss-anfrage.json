@@ -1,0 +1,174 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-se-studieneinschluss-anfrage",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-studieneinschluss-anfrage",
+  "name": "MII_PR_SE_Studieneinschluss_Anfrage",
+  "title": "MII PR SE Studieneinschluss Anfrage",
+  "status": "draft",
+  "description": "Anfrage zum Studieneinschluss",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest.extension",
+        "path": "ServiceRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ServiceRequest.extension:statusReason",
+        "path": "ServiceRequest.extension",
+        "sliceName": "statusReason",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/request-statusReason"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.extension:statusReason.value[x].coding",
+        "path": "ServiceRequest.extension.value[x].coding",
+        "short": "Grund für Ablehnung",
+        "definition": "Grund für Ablehnung des Studieneinschlusses (Tod, Studie geschlossen etc)",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.extension:Prioritaet",
+        "path": "ServiceRequest.extension",
+        "sliceName": "Prioritaet",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ex-se-empfehlung-prioritaet"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.extension:Publikation",
+        "path": "ServiceRequest.extension",
+        "sliceName": "Publikation",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-ex-se-empfehlung-publikation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.status",
+        "path": "ServiceRequest.status",
+        "definition": "Status des Studieneinschlusses",
+        "comment": "\n    draft: Nicht umgesetzt, \n    active: In Umsetzung, \n    completed: Abgeschlossen oder abgebrochen (Patient verstorben)",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.intent",
+        "path": "ServiceRequest.intent",
+        "fixedCode": "proposal"
+      },
+      {
+        "id": "ServiceRequest.category",
+        "path": "ServiceRequest.category",
+        "min": 1,
+        "max": "1",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "110465008",
+              "system": "http://snomed.info/sct",
+              "display": "Clinical trial (procedure)"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "short": "Studieneinschlussempfehlung",
+        "definition": "Empfehlung zum Einschluss in eine Studie",
+        "min": 1,
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "702475000",
+              "system": "http://snomed.info/sct",
+              "display": "Referral to clinical trial (procedure)"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.reasonReference",
+        "path": "ServiceRequest.reasonReference",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.supportingInfo",
+        "path": "ServiceRequest.supportingInfo",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "description": "Slice für Referenz auf eine Studie",
+          "ordered": false
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.supportingInfo:Studie",
+        "path": "ServiceRequest.supportingInfo",
+        "sliceName": "Studie",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-studie",
+              "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie",
+              "http://hl7.org/fhir/StructureDefinition/ResearchStudy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

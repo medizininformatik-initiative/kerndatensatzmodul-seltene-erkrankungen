@@ -63,7 +63,7 @@ Description: "Therapieplan"
 * activity[Studieneinschlussempfehlung] ^short = "Studieneinschlussempfehlung"
 * activity[Studieneinschlussempfehlung] ^definition = "Anfrage zum Studieneinschluss"
 * activity[Studieneinschlussempfehlung].reference 1..1 MS
-//* activity[Studieneinschlussempfehlung].reference only Reference(MII_PR_MTB_Studieneinschluss_Anfrage)
+* activity[Studieneinschlussempfehlung].reference only Reference(MII_PR_SE_Studieneinschluss_Anfrage)
 
 // Siehe Konversion R5 nach R4: https://build.fhir.org/ig/HL7/fhir-cross-version/StructureMap-CarePlan5to4.html
 
@@ -89,3 +89,18 @@ Description: "Therapieplan"
 * supportingInfo[Behandlungsepisode] ^definition = "Aktueller Krankheitszustand und bisherige Behandlungsmaßnahmen"
 * supportingInfo[Behandlungsepisode] only Reference(MII_PR_MTB_Behandlungsepisode or ClinicalImpression)
 */
+
+Instance: mii-exa-se-therapieplan
+InstanceOf: MII_PR_SE_Therapieplan
+Usage: #example
+Title: "Therapieplan Example"
+Description: "Example of a Therapieplan for a patient."
+* status = #draft
+* created = 2023-03-28
+* description = "Therapieplan für den Patienten"
+* subject = Reference(Patient/example-patient)
+* intent = #proposal
+* activity[MII_PR_SE_Therapieempfehlung].reference = Reference(MII_PR_SE_Therapieempfehlung)
+* activity[MII_PR_SE_Therapieempfehlung].detail.status = #created
+* activity[MII_PR_SE_Therapieempfehlung].detail.statusReason = #empfehlung
+* activity[Studieneinschlussempfehlung].reference = Reference(MII_PR_SE_Studieneinschlussempfehlung)

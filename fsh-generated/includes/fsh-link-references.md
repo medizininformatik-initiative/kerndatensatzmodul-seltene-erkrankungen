@@ -7,12 +7,14 @@
 [MII_EX_SE_Empfehlung_Publikation]: StructureDefinition-mii-ex-se-empfehlung-publikation.html
 [MII_LM_Onko]: StructureDefinition-mii-lm-onko.html
 [MII_PR_MolGen_Familienanamnese]: StructureDefinition-mii-pr-molgen-familienanamnese.html
+[MII_PR_SE_Studieneinschluss_Anfrage]: StructureDefinition-mii-pr-se-studieneinschluss-anfrage.html
 [MII_PR_SE_Therapieempfehlung_Kombination]: StructureDefinition-mii-pr-se-therapieempfehlung-kombination.html
 [MII_PR_SE_Therapieempfehlung]: StructureDefinition-mii-pr-se-therapieempfehlung.html
 [MII_PR_SE_Therapieplan]: StructureDefinition-mii-pr-se-therapieplan.html
 [MII_VS_SE_Empfehlung_StatusBegruendung]: ValueSet-mii-vs-se-empfehlung-status-begruendung.html
 [ProfileObservationHauttyp]: StructureDefinition-ProfileObservationHauttyp.html
 [SkinPhototypeFinding]: ValueSet-2.16.840.1.113883.3.1937.777.30.11.68--20240620133122.html
+[mii-exa-se-therapieplan]: CarePlan-mii-exa-se-therapieplan.html
 [VonSEBetroffenVS]: ValueSet-von-se-betroffen-vs.html
 [VonSEBetroffen]: StructureDefinition-von-se-betroffen.html
 [mii-exa-se-waist-to-hip-ratio]: Observation-mii-exa-se-waist-to-hip-ratio.html
