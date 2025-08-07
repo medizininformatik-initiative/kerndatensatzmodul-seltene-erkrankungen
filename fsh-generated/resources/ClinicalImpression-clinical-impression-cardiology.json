@@ -1,0 +1,131 @@
+{
+  "resourceType": "ClinicalImpression",
+  "id": "clinical-impression-cardiology",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "encounter": {
+    "reference": "Encounter/encounter-cardiology"
+  },
+  "effectiveDateTime": "2024-12-15",
+  "date": "2024-12-15",
+  "assessor": {
+    "reference": "Practitioner/example"
+  },
+  "summary": "19-jähriger Patient mit klinischen Zeichen eines Marfan-Syndroms. Aortenwurzeldilatation (48mm), AKI Grad II, MKI Grad I. Skelettale Merkmale (Hochwuchs 2,13m, Beinlängendifferenz) und ophthalmologische Manifestation (Z.n. Katarakt-OP) unterstützen die Diagnose.",
+  "finding": [
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "249364003",
+            "system": "http://snomed.info/sct",
+            "display": "Aortic root dilatation"
+          }
+        ]
+      },
+      "itemReference": {
+        "reference": "Observation/symptom-aortic-root"
+      }
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "60573004",
+            "system": "http://snomed.info/sct",
+            "display": "Aortic valve regurgitation"
+          }
+        ]
+      },
+      "itemReference": {
+        "reference": "Observation/symptom-aortic-regurg"
+      }
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "48724000",
+            "system": "http://snomed.info/sct",
+            "display": "Mitral valve regurgitation"
+          }
+        ]
+      },
+      "itemReference": {
+        "reference": "Observation/symptom-mitral-regurg"
+      }
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "249620005",
+            "system": "http://snomed.info/sct",
+            "display": "Tall stature"
+          }
+        ]
+      },
+      "itemReference": {
+        "reference": "Observation/observation-height-001"
+      }
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "271902003",
+            "system": "http://snomed.info/sct",
+            "display": "Leg length discrepancy"
+          }
+        ]
+      },
+      "itemReference": {
+        "reference": "Observation/observation-leg-asymmetry"
+      }
+    }
+  ],
+  "investigation": [
+    {
+      "code": {
+        "text": "Echokardiographie"
+      },
+      "item": [
+        {
+          "reference": "Observation/observation-echo-aortic"
+        },
+        {
+          "reference": "Observation/observation-echo-av"
+        },
+        {
+          "reference": "Observation/observation-echo-mv"
+        }
+      ]
+    }
+  ],
+  "problem": [
+    {
+      "reference": "Condition/condition-marfan-confirmed"
+    }
+  ],
+  "prognosisCodeableConcept": [
+    {
+      "coding": [
+        {
+          "code": "170969009",
+          "system": "http://snomed.info/sct",
+          "display": "Prognosis guarded"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "Marfan-Syndrom klinisch gesichert. OP-Indikation für Aortenwurzelersatz gestellt. Medikamentöse Therapie mit Losartan eingeleitet."
+    },
+    {
+      "text": "Regelmäßige kardiologische Kontrollen alle 6 Monate empfohlen. Genetische Beratung für Familienplanung empfohlen."
+    }
+  ]
+}

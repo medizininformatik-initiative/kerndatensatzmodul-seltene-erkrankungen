@@ -1,6 +1,6 @@
 {
   "resourceType": "Condition",
-  "id": "condition-sma-confirmed",
+  "id": "example-brca1-genetic-diagnosis",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
@@ -21,26 +21,27 @@
     "coding": [
       {
         "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-        "code": "G12.0",
-        "display": "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]",
+        "code": "Z80.3",
+        "display": "Bösartige Neubildung der Brustdrüse [Mamma] in der Familienanamnese",
         "version": "2024"
       },
       {
         "system": "http://snomed.info/sct",
-        "code": "80854005",
-        "display": "Werdnig-Hoffmann disease"
+        "code": "718220008",
+        "display": "Hereditary breast and ovarian cancer syndrome"
       },
       {
         "system": "http://www.orpha.net",
-        "code": "83330",
-        "display": "Infantile spinale Muskelatrophie Typ I"
+        "code": "145",
+        "display": "Hereditary breast and ovarian cancer syndrome"
       },
       {
         "system": "http://omim.org",
-        "code": "253300",
-        "display": "Spinal muscular atrophy, type I"
+        "code": "604370",
+        "display": "Breast-ovarian cancer, familial, 1"
       }
-    ]
+    ],
+    "text": "Hereditäres Mamma- und Ovarialkarzinom-Syndrom (BRCA1)"
   },
   "clinicalStatus": {
     "coding": [
@@ -59,22 +60,15 @@
     ]
   },
   "subject": {
-    "reference": "Patient/patient-sma-001"
+    "reference": "Patient/example"
   },
   "extension": [
     {
       "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/mii-ex-diagnose-feststellungsdatum",
-      "valueDateTime": "2024-07-26"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/replaces",
-      "valueReference": {
-        "reference": "Condition/condition-sma-clinical"
-      }
+      "valueDateTime": "2024-11-01"
     }
   ],
-  "recordedDate": "2024-07-26",
-  "onsetDateTime": "2024-07-01",
+  "recordedDate": "2024-11-01",
   "evidence": [
     {
       "code": [
@@ -90,10 +84,7 @@
       ],
       "detail": [
         {
-          "reference": "Observation/variant-smn1-001"
-        },
-        {
-          "reference": "Observation/variant-smn2-001"
+          "reference": "Observation/molgen-variant-brca1-pathogenic"
         }
       ]
     },
@@ -111,14 +102,14 @@
       ],
       "detail": [
         {
-          "reference": "DiagnosticReport/molgen-diagnostic-implication-sma"
+          "reference": "DiagnosticReport/molgen-brca-panel"
         }
       ]
     }
   ],
   "note": [
     {
-      "text": "0 Kopien des SMN1-Gens, 2 Kopien des SMN2-Gens - krankheitsursächlich. Bestätigt die vorherige klinische Diagnose."
+      "text": "Pathogene Variante c.68_69del (p.Glu23Valfs*17) in BRCA1 nachgewiesen. Penetranz für Mammakarzinom bis 80 Jahre: 72%."
     }
   ]
 }

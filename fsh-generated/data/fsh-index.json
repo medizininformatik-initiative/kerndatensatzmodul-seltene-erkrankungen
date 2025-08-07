@@ -1,5 +1,13 @@
 [
   {
+    "outputFile": "Bundle-bundle-marfan-complete.json",
+    "fshName": "bundle-marfan-complete",
+    "fshType": "Instance",
+    "fshFile": "marfan-transaction-bundle.fsh",
+    "startLine": 3,
+    "endLine": 124
+  },
+  {
     "outputFile": "Bundle-bundle-sma-complete.json",
     "fshName": "bundle-sma-complete",
     "fshType": "Instance",
@@ -8,36 +16,60 @@
     "endLine": 129
   },
   {
+    "outputFile": "ClinicalImpression-clinical-impression-cardiology.json",
+    "fshName": "clinical-impression-cardiology",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 292,
+    "endLine": 321
+  },
+  {
     "outputFile": "ClinicalImpression-clinical-impression-erstvorstellung.json",
     "fshName": "clinical-impression-erstvorstellung",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 272,
-    "endLine": 294
+    "startLine": 279,
+    "endLine": 301
   },
   {
     "outputFile": "ClinicalImpression-clinical-impression-nachsorge.json",
     "fshName": "clinical-impression-nachsorge",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 297,
-    "endLine": 320
+    "startLine": 304,
+    "endLine": 327
+  },
+  {
+    "outputFile": "Condition-condition-cataract.json",
+    "fshName": "condition-cataract",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 49,
+    "endLine": 70
+  },
+  {
+    "outputFile": "Condition-condition-marfan-confirmed.json",
+    "fshName": "condition-marfan-confirmed",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 15,
+    "endLine": 46
   },
   {
     "outputFile": "Condition-condition-sma-clinical.json",
     "fshName": "condition-sma-clinical",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 35,
-    "endLine": 53
+    "startLine": 36,
+    "endLine": 56
   },
   {
     "outputFile": "Condition-condition-sma-confirmed.json",
     "fshName": "condition-sma-confirmed",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 56,
-    "endLine": 77
+    "startLine": 59,
+    "endLine": 84
   },
   {
     "outputFile": "Condition-condition-sma-suspected.json",
@@ -45,7 +77,111 @@
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
     "startLine": 15,
-    "endLine": 32
+    "endLine": 33
+  },
+  {
+    "outputFile": "Condition-example-brca1-genetic-diagnosis.json",
+    "fshName": "example-brca1-genetic-diagnosis",
+    "fshType": "Instance",
+    "fshFile": "diagnosis-profile-examples.fsh",
+    "startLine": 139,
+    "endLine": 163
+  },
+  {
+    "outputFile": "Condition-example-cf-clinical.json",
+    "fshName": "example-cf-clinical",
+    "fshType": "Instance",
+    "fshFile": "diagnosis-profile-examples.fsh",
+    "startLine": 170,
+    "endLine": 194
+  },
+  {
+    "outputFile": "Condition-example-cf-excluded-after-screening.json",
+    "fshName": "example-cf-excluded-after-screening",
+    "fshType": "Instance",
+    "fshFile": "excluded-diagnosis-examples.fsh",
+    "startLine": 109,
+    "endLine": 132
+  },
+  {
+    "outputFile": "Condition-example-cf-genetic.json",
+    "fshName": "example-cf-genetic",
+    "fshType": "Instance",
+    "fshFile": "diagnosis-profile-examples.fsh",
+    "startLine": 196,
+    "endLine": 222
+  },
+  {
+    "outputFile": "Condition-example-dmd-excluded-bmd-confirmed.json",
+    "fshName": "example-dmd-excluded-bmd-confirmed",
+    "fshType": "Instance",
+    "fshFile": "excluded-diagnosis-examples.fsh",
+    "startLine": 86,
+    "endLine": 106
+  },
+  {
+    "outputFile": "Condition-example-dmd-genetic-diagnosis.json",
+    "fshName": "example-dmd-genetic-diagnosis",
+    "fshType": "Instance",
+    "fshFile": "diagnosis-profile-examples.fsh",
+    "startLine": 111,
+    "endLine": 136
+  },
+  {
+    "outputFile": "Condition-example-eds-excluded-clinical.json",
+    "fshName": "example-eds-excluded-clinical",
+    "fshType": "Instance",
+    "fshFile": "excluded-diagnosis-examples.fsh",
+    "startLine": 36,
+    "endLine": 55
+  },
+  {
+    "outputFile": "Condition-example-marfan-clinical-diagnosis.json",
+    "fshName": "example-marfan-clinical-diagnosis",
+    "fshType": "Instance",
+    "fshFile": "diagnosis-profile-examples.fsh",
+    "startLine": 8,
+    "endLine": 43
+  },
+  {
+    "outputFile": "Condition-example-marfan-excluded-clinical.json",
+    "fshName": "example-marfan-excluded-clinical",
+    "fshType": "Instance",
+    "fshFile": "excluded-diagnosis-examples.fsh",
+    "startLine": 9,
+    "endLine": 33
+  },
+  {
+    "outputFile": "Condition-example-metabolic-myopathy-excluded.json",
+    "fshName": "example-metabolic-myopathy-excluded",
+    "fshType": "Instance",
+    "fshFile": "excluded-diagnosis-examples.fsh",
+    "startLine": 139,
+    "endLine": 160
+  },
+  {
+    "outputFile": "Condition-example-noonan-clinical-diagnosis.json",
+    "fshName": "example-noonan-clinical-diagnosis",
+    "fshType": "Instance",
+    "fshFile": "diagnosis-profile-examples.fsh",
+    "startLine": 46,
+    "endLine": 72
+  },
+  {
+    "outputFile": "Condition-example-sma-excluded-genetic.json",
+    "fshName": "example-sma-excluded-genetic",
+    "fshType": "Instance",
+    "fshFile": "excluded-diagnosis-examples.fsh",
+    "startLine": 62,
+    "endLine": 83
+  },
+  {
+    "outputFile": "Condition-example-sma-genetic-diagnosis.json",
+    "fshName": "example-sma-genetic-diagnosis",
+    "fshType": "Instance",
+    "fshFile": "diagnosis-profile-examples.fsh",
+    "startLine": 80,
+    "endLine": 108
   },
   {
     "outputFile": "Condition-mii-exa-se-diagnosis.json",
@@ -72,44 +208,116 @@
     "endLine": 44
   },
   {
+    "outputFile": "DiagnosticReport-molgen-brca-panel.json",
+    "fshName": "molgen-brca-panel",
+    "fshType": "Instance",
+    "fshFile": "molgen-example-resources.fsh",
+    "startLine": 117,
+    "endLine": 129
+  },
+  {
+    "outputFile": "DiagnosticReport-molgen-cf-diagnostic.json",
+    "fshName": "molgen-cf-diagnostic",
+    "fshType": "Instance",
+    "fshFile": "molgen-example-resources.fsh",
+    "startLine": 161,
+    "endLine": 173
+  },
+  {
+    "outputFile": "DiagnosticReport-molgen-diagnostic-dmd.json",
+    "fshName": "molgen-diagnostic-dmd",
+    "fshType": "Instance",
+    "fshFile": "molgen-example-resources.fsh",
+    "startLine": 73,
+    "endLine": 85
+  },
+  {
+    "outputFile": "DiagnosticReport-molgen-diagnostic-implication-sma.json",
+    "fshName": "molgen-diagnostic-implication-sma",
+    "fshType": "Instance",
+    "fshFile": "molgen-example-resources.fsh",
+    "startLine": 31,
+    "endLine": 43
+  },
+  {
+    "outputFile": "DiagnosticReport-molgen-sma-negative.json",
+    "fshName": "molgen-sma-negative",
+    "fshType": "Instance",
+    "fshFile": "excluded-diagnosis-examples.fsh",
+    "startLine": 201,
+    "endLine": 213
+  },
+  {
     "outputFile": "Encounter-encounter-ambulant-001.json",
     "fshName": "encounter-ambulant-001",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 336,
-    "endLine": 348
+    "startLine": 343,
+    "endLine": 355
+  },
+  {
+    "outputFile": "Encounter-encounter-cardiology.json",
+    "fshName": "encounter-cardiology",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 352,
+    "endLine": 366
+  },
+  {
+    "outputFile": "Encounter-encounter-cataract-surgery.json",
+    "fshName": "encounter-cataract-surgery",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 338,
+    "endLine": 350
   },
   {
     "outputFile": "Encounter-encounter-nachsorge-001.json",
     "fshName": "encounter-nachsorge-001",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 364,
-    "endLine": 375
+    "startLine": 371,
+    "endLine": 382
+  },
+  {
+    "outputFile": "Encounter-encounter-ophthalmology.json",
+    "fshName": "encounter-ophthalmology",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 324,
+    "endLine": 336
   },
   {
     "outputFile": "Encounter-encounter-screening-001.json",
     "fshName": "encounter-screening-001",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 323,
-    "endLine": 334
+    "startLine": 330,
+    "endLine": 341
   },
   {
     "outputFile": "Encounter-encounter-stationaer-001.json",
     "fshName": "encounter-stationaer-001",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 350,
-    "endLine": 362
+    "startLine": 357,
+    "endLine": 369
+  },
+  {
+    "outputFile": "Encounter-encounter-surgery-planned.json",
+    "fshName": "encounter-surgery-planned",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 368,
+    "endLine": 380
   },
   {
     "outputFile": "FamilyMemberHistory-family-history-001.json",
     "fshName": "family-history-001",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 80,
-    "endLine": 91
+    "startLine": 87,
+    "endLine": 98
   },
   {
     "outputFile": "FamilyMemberHistory-mii-exa-se-familienanamnese.json",
@@ -118,6 +326,86 @@
     "fshFile": "mii-exa-se-familienanamnese.fsh",
     "startLine": 1,
     "endLine": 20
+  },
+  {
+    "outputFile": "MedicationStatement-medication-losartan.json",
+    "fshName": "medication-losartan",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 271,
+    "endLine": 289
+  },
+  {
+    "outputFile": "Observation-anteverted-nares.json",
+    "fshName": "anteverted-nares",
+    "fshType": "Instance",
+    "fshFile": "hpo-observation-examples.fsh",
+    "startLine": 100,
+    "endLine": 113
+  },
+  {
+    "outputFile": "Observation-aortic-root-dilatation.json",
+    "fshName": "aortic-root-dilatation",
+    "fshType": "Instance",
+    "fshFile": "hpo-observation-examples.fsh",
+    "startLine": 8,
+    "endLine": 24
+  },
+  {
+    "outputFile": "Observation-aortic-root-normal.json",
+    "fshName": "aortic-root-normal",
+    "fshType": "Instance",
+    "fshFile": "excluded-diagnosis-examples.fsh",
+    "startLine": 166,
+    "endLine": 181
+  },
+  {
+    "outputFile": "Observation-arachnodactyly.json",
+    "fshName": "arachnodactyly",
+    "fshType": "Instance",
+    "fshFile": "hpo-observation-examples.fsh",
+    "startLine": 58,
+    "endLine": 75
+  },
+  {
+    "outputFile": "Observation-chronic-diarrhea.json",
+    "fshName": "chronic-diarrhea",
+    "fshType": "Instance",
+    "fshFile": "hpo-observation-examples.fsh",
+    "startLine": 175,
+    "endLine": 189
+  },
+  {
+    "outputFile": "Observation-failure-to-thrive.json",
+    "fshName": "failure-to-thrive",
+    "fshType": "Instance",
+    "fshFile": "hpo-observation-examples.fsh",
+    "startLine": 191,
+    "endLine": 208
+  },
+  {
+    "outputFile": "Observation-hypertelorism.json",
+    "fshName": "hypertelorism",
+    "fshType": "Instance",
+    "fshFile": "hpo-observation-examples.fsh",
+    "startLine": 81,
+    "endLine": 98
+  },
+  {
+    "outputFile": "Observation-lens-dislocation.json",
+    "fshName": "lens-dislocation",
+    "fshType": "Instance",
+    "fshFile": "hpo-observation-examples.fsh",
+    "startLine": 26,
+    "endLine": 40
+  },
+  {
+    "outputFile": "Observation-lymphedema.json",
+    "fshName": "lymphedema",
+    "fshType": "Instance",
+    "fshFile": "hpo-observation-examples.fsh",
+    "startLine": 135,
+    "endLine": 150
   },
   {
     "outputFile": "Observation-mii-exa-se-hpo-assessment.json",
@@ -136,84 +424,236 @@
     "endLine": 24
   },
   {
+    "outputFile": "Observation-molgen-smn1-normal-copies.json",
+    "fshName": "molgen-smn1-normal-copies",
+    "fshType": "Instance",
+    "fshFile": "excluded-diagnosis-examples.fsh",
+    "startLine": 183,
+    "endLine": 199
+  },
+  {
+    "outputFile": "Observation-molgen-variant-brca1-pathogenic.json",
+    "fshName": "molgen-variant-brca1-pathogenic",
+    "fshType": "Instance",
+    "fshFile": "molgen-example-resources.fsh",
+    "startLine": 91,
+    "endLine": 115
+  },
+  {
+    "outputFile": "Observation-molgen-variant-cftr-f508del-homozygous.json",
+    "fshName": "molgen-variant-cftr-f508del-homozygous",
+    "fshType": "Instance",
+    "fshFile": "molgen-example-resources.fsh",
+    "startLine": 135,
+    "endLine": 159
+  },
+  {
+    "outputFile": "Observation-molgen-variant-dmd-deletion-exon45-47.json",
+    "fshName": "molgen-variant-dmd-deletion-exon45-47",
+    "fshType": "Instance",
+    "fshFile": "molgen-example-resources.fsh",
+    "startLine": 49,
+    "endLine": 71
+  },
+  {
+    "outputFile": "Observation-molgen-variant-smn1-deletion.json",
+    "fshName": "molgen-variant-smn1-deletion",
+    "fshType": "Instance",
+    "fshFile": "molgen-example-resources.fsh",
+    "startLine": 8,
+    "endLine": 29
+  },
+  {
     "outputFile": "Observation-observation-alt-001.json",
     "fshName": "observation-alt-001",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 176,
-    "endLine": 187
+    "startLine": 183,
+    "endLine": 194
   },
   {
     "outputFile": "Observation-observation-ast-001.json",
     "fshName": "observation-ast-001",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 190,
-    "endLine": 201
+    "startLine": 197,
+    "endLine": 208
+  },
+  {
+    "outputFile": "Observation-observation-echo-aortic.json",
+    "fshName": "observation-echo-aortic",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 193,
+    "endLine": 205
+  },
+  {
+    "outputFile": "Observation-observation-echo-av.json",
+    "fshName": "observation-echo-av",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 208,
+    "endLine": 220
+  },
+  {
+    "outputFile": "Observation-observation-echo-mv.json",
+    "fshName": "observation-echo-mv",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 223,
+    "endLine": 235
+  },
+  {
+    "outputFile": "Observation-observation-height-001.json",
+    "fshName": "observation-height-001",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 73,
+    "endLine": 87
+  },
+  {
+    "outputFile": "Observation-observation-leg-asymmetry.json",
+    "fshName": "observation-leg-asymmetry",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 90,
+    "endLine": 104
   },
   {
     "outputFile": "Observation-observation-plt-001.json",
     "fshName": "observation-plt-001",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 204,
-    "endLine": 215
+    "startLine": 211,
+    "endLine": 222
   },
   {
     "outputFile": "Observation-observation-sma-screening.json",
     "fshName": "observation-sma-screening",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 94,
-    "endLine": 114
+    "startLine": 101,
+    "endLine": 121
   },
   {
     "outputFile": "Observation-observation-troponin-001.json",
     "fshName": "observation-troponin-001",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 218,
-    "endLine": 229
+    "startLine": 225,
+    "endLine": 236
   },
   {
     "outputFile": "Observation-observation-troponin-002.json",
     "fshName": "observation-troponin-002",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 231,
-    "endLine": 242
+    "startLine": 238,
+    "endLine": 249
   },
   {
     "outputFile": "Observation-observation-troponin-003.json",
     "fshName": "observation-troponin-003",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 244,
-    "endLine": 255
+    "startLine": 251,
+    "endLine": 262
   },
   {
     "outputFile": "Observation-observation-troponin-004.json",
     "fshName": "observation-troponin-004",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 257,
-    "endLine": 269
+    "startLine": 264,
+    "endLine": 276
+  },
+  {
+    "outputFile": "Observation-recurrent-respiratory-infections.json",
+    "fshName": "recurrent-respiratory-infections",
+    "fshType": "Instance",
+    "fshFile": "hpo-observation-examples.fsh",
+    "startLine": 156,
+    "endLine": 173
+  },
+  {
+    "outputFile": "Observation-symptom-aortic-regurg.json",
+    "fshName": "symptom-aortic-regurg",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 159,
+    "endLine": 173
+  },
+  {
+    "outputFile": "Observation-symptom-aortic-root.json",
+    "fshName": "symptom-aortic-root",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 140,
+    "endLine": 156
+  },
+  {
+    "outputFile": "Observation-symptom-cataract.json",
+    "fshName": "symptom-cataract",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 123,
+    "endLine": 137
+  },
+  {
+    "outputFile": "Observation-symptom-chest-pain.json",
+    "fshName": "symptom-chest-pain",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 107,
+    "endLine": 120
+  },
+  {
+    "outputFile": "Observation-symptom-mitral-regurg.json",
+    "fshName": "symptom-mitral-regurg",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 176,
+    "endLine": 190
+  },
+  {
+    "outputFile": "Observation-tall-stature.json",
+    "fshName": "tall-stature",
+    "fshType": "Instance",
+    "fshFile": "hpo-observation-examples.fsh",
+    "startLine": 42,
+    "endLine": 56
   },
   {
     "outputFile": "Observation-variant-smn1-001.json",
     "fshName": "variant-smn1-001",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 117,
-    "endLine": 138
+    "startLine": 124,
+    "endLine": 145
   },
   {
     "outputFile": "Observation-variant-smn2-001.json",
     "fshName": "variant-smn2-001",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 141,
-    "endLine": 156
+    "startLine": 148,
+    "endLine": 163
+  },
+  {
+    "outputFile": "Observation-vsd.json",
+    "fshName": "vsd",
+    "fshType": "Instance",
+    "fshFile": "hpo-observation-examples.fsh",
+    "startLine": 115,
+    "endLine": 133
+  },
+  {
+    "outputFile": "Patient-patient-marfan-001.json",
+    "fshName": "patient-marfan-001",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 4,
+    "endLine": 12
   },
   {
     "outputFile": "Patient-patient-sma-001.json",
@@ -224,12 +664,28 @@
     "endLine": 12
   },
   {
+    "outputFile": "Procedure-procedure-aortic-planned.json",
+    "fshName": "procedure-aortic-planned",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 255,
+    "endLine": 268
+  },
+  {
+    "outputFile": "Procedure-procedure-cataract-surgery.json",
+    "fshName": "procedure-cataract-surgery",
+    "fshType": "Instance",
+    "fshFile": "marfan-example-resources.fsh",
+    "startLine": 238,
+    "endLine": 252
+  },
+  {
     "outputFile": "Procedure-procedure-gentherapy-001.json",
     "fshName": "procedure-gentherapy-001",
     "fshType": "Instance",
     "fshFile": "sma-example-resources.fsh",
-    "startLine": 159,
-    "endLine": 173
+    "startLine": 166,
+    "endLine": 180
   },
   {
     "outputFile": "StructureDefinition-ProfileObservationHauttyp.json",
@@ -254,6 +710,38 @@
     "fshFile": "MIIProfileSEBehaarung.fsh",
     "startLine": 4,
     "endLine": 16
+  },
+  {
+    "outputFile": "StructureDefinition-mii-ex-se-age-of-onset.json",
+    "fshName": "AgeOfOnset",
+    "fshType": "Extension",
+    "fshFile": "mii-ex-se-diagnosis-extensions.fsh",
+    "startLine": 4,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-mii-ex-se-genetic-basis.json",
+    "fshName": "GeneticBasis",
+    "fshType": "Extension",
+    "fshFile": "mii-ex-se-diagnosis-extensions.fsh",
+    "startLine": 36,
+    "endLine": 49
+  },
+  {
+    "outputFile": "StructureDefinition-mii-ex-se-inheritance-pattern.json",
+    "fshName": "InheritancePattern",
+    "fshType": "Extension",
+    "fshFile": "mii-ex-se-diagnosis-extensions.fsh",
+    "startLine": 20,
+    "endLine": 33
+  },
+  {
+    "outputFile": "StructureDefinition-mii-ex-se-penetrance.json",
+    "fshName": "Penetrance",
+    "fshType": "Extension",
+    "fshFile": "mii-ex-se-diagnosis-extensions.fsh",
+    "startLine": 52,
+    "endLine": 68
   },
   {
     "outputFile": "StructureDefinition-mii-ext-se-onset-age.json",
@@ -288,6 +776,14 @@
     "endLine": 61
   },
   {
+    "outputFile": "StructureDefinition-mii-pr-se-clinical-diagnosis.json",
+    "fshName": "MII_PR_SE_ClinicalDiagnosis",
+    "fshType": "Profile",
+    "fshFile": "mii-pr-se-clinical-diagnosis.fsh",
+    "startLine": 2,
+    "endLine": 62
+  },
+  {
     "outputFile": "StructureDefinition-mii-pr-se-clinical-impression.json",
     "fshName": "MII_PR_SE_ClinicalImpression",
     "fshType": "Profile",
@@ -310,6 +806,14 @@
     "fshFile": "mii-pr-se-familienanamnese.fsh",
     "startLine": 1,
     "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-se-genetic-diagnosis.json",
+    "fshName": "MII_PR_SE_GeneticDiagnosis",
+    "fshType": "Profile",
+    "fshFile": "mii-pr-se-genetic-diagnosis.fsh",
+    "startLine": 2,
+    "endLine": 77
   },
   {
     "outputFile": "StructureDefinition-mii-pr-se-hpo-assessment.json",
@@ -352,6 +856,38 @@
     "endLine": 27
   },
   {
+    "outputFile": "ValueSet-mii-vs-se-clinical-diagnosis-category.json",
+    "fshName": "ClinicalDiagnosisCategoryVS",
+    "fshType": "ValueSet",
+    "fshFile": "mii-vs-se-diagnosis-valuesets.fsh",
+    "startLine": 4,
+    "endLine": 19
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-se-genetic-basis.json",
+    "fshName": "GeneticBasisValueSet",
+    "fshType": "ValueSet",
+    "fshFile": "mii-vs-se-diagnosis-valuesets.fsh",
+    "startLine": 70,
+    "endLine": 86
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-se-hpo-age-of-onset.json",
+    "fshName": "HPOAgeOfOnsetValueSet",
+    "fshType": "ValueSet",
+    "fshFile": "mii-vs-se-diagnosis-valuesets.fsh",
+    "startLine": 22,
+    "endLine": 42
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-se-hpo-inheritance-pattern.json",
+    "fshName": "HPOInheritancePatternValueSet",
+    "fshType": "ValueSet",
+    "fshFile": "mii-vs-se-diagnosis-valuesets.fsh",
+    "startLine": 45,
+    "endLine": 67
+  },
+  {
     "outputFile": "ValueSet-mii-vs-se-hpo-phenotypic-observation-codes.json",
     "fshName": "HPOPhenotypicObservationCodes",
     "fshType": "ValueSet",
@@ -366,6 +902,14 @@
     "fshFile": "mii-pr-se-hpo-assessment.fsh",
     "startLine": 57,
     "endLine": 65
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-se-penetrance.json",
+    "fshName": "PenetranceValueSet",
+    "fshType": "ValueSet",
+    "fshFile": "mii-vs-se-diagnosis-valuesets.fsh",
+    "startLine": 89,
+    "endLine": 100
   },
   {
     "outputFile": "ValueSet-mii-vs-se-syndrome-category.json",

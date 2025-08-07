@@ -1,0 +1,55 @@
+{
+  "resourceType": "Observation",
+  "id": "symptom-mitral-regurg",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "imaging",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "HP:0001653",
+        "system": "http://hpo.jax.org/app/",
+        "display": "Mitral regurgitation"
+      },
+      {
+        "code": "48724000",
+        "system": "http://snomed.info/sct",
+        "display": "Mitral valve regurgitation"
+      }
+    ],
+    "text": "Mitralklappeninsuffizienz"
+  },
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "effectiveDateTime": "2024-12-15",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "255604002",
+        "system": "http://snomed.info/sct",
+        "display": "Mild"
+      }
+    ],
+    "text": "Grad I"
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "A",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display": "Abnormal"
+        }
+      ]
+    }
+  ]
+}

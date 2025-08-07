@@ -58,3 +58,77 @@ The IG depends on several German MII core datasets:
 - All FSH files should follow the established rulesets for licensing, versioning, and copyright
 - The project is part of the broader German Medical Informatics Initiative standardization effort
 - IG publishing is handled automatically through Simplifier integration, not local HL7 IG Publisher
+
+## Methodology for Comprehensive Disease Modeling
+
+When creating comprehensive FHIR examples for rare disease cases, follow this systematic approach:
+
+### 1. Clinical Narrative Analysis
+- Start with a complete clinical narrative describing the patient journey
+- Identify key temporal milestones (diagnosis dates, procedures, follow-ups)
+- Extract all clinical data points that need to be represented
+
+### 2. Semantic Annotation Structure
+Create a markdown documentation page with:
+- **Timeline overview**: Chronological progression of events
+- **Semantic annotations**: Detailed breakdown of each data point with proper coding systems
+- **Resource mapping tables**: Structured overview of all FHIR resources
+- **PlantUML diagrams**: Visual representation of resource relationships
+
+### 3. FHIR Resource Creation Strategy
+
+#### Core Patient Journey Resources
+- **Patient**: Central resource with identifiers
+- **Encounters**: Model each clinical contact (screening, ambulatory, inpatient, follow-up)
+- **Conditions**: Use diagnosis progression with `replaces` extension:
+  - Suspected (unconfirmed)
+  - Clinical (provisional)
+  - Confirmed (confirmed)
+
+#### Diagnostic Resources
+- **Observations**: Laboratory values, genetic findings, vital signs
+- **DiagnosticReports**: Comprehensive test results
+- **FamilyMemberHistory**: Relevant family medical history
+
+#### Treatment Resources
+- **Procedures**: Surgical interventions, therapies
+- **MedicationStatement/MedicationAdministration**: Drug treatments
+
+#### Clinical Assessment
+- **ClinicalImpression**: Document clinical reasoning at key decision points
+  - Initial assessment (Erstvorstellung)
+  - Follow-up assessments (Nachsorge)
+  - Link findings, problems, and investigations
+
+### 4. Coding System Priorities
+Use standard terminologies in this order:
+1. **ICD-10-GM**: German modification for diagnoses
+2. **Orpha codes**: Specific rare disease identification
+3. **SNOMED CT**: Clinical findings and procedures
+4. **LOINC**: Laboratory observations and panels
+5. **HPO**: Phenotypic abnormalities
+6. **OPS**: German procedure classification
+7. **UNII**: Drug identification codes
+
+### 5. Resource Relationship Patterns
+- Use `replaces` extension for diagnosis progression
+- Link evidence to conditions via `evidence.detail`
+- Connect procedures to conditions via `reasonReference`
+- Associate encounters with diagnoses via `encounter.diagnosis`
+- Chain ClinicalImpressions with `previous` reference
+
+### 6. Implementation Steps
+1. Create individual resource definitions in FSH
+2. Build transaction bundle containing all resources
+3. Generate visualization diagrams showing relationships
+4. Document semantic annotations with coding tables
+5. Validate all references and coding systems
+
+### 7. Quality Checks
+- Ensure temporal consistency across resources
+- Verify all references resolve correctly
+- Validate coding system usage
+- Check for complete resource linkage
+- Confirm narrative alignment with structured data
+
+This methodology ensures comprehensive, consistent, and clinically accurate FHIR representations of rare disease cases that align with German MII standards.

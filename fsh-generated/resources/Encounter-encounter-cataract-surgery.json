@@ -1,0 +1,44 @@
+{
+  "resourceType": "Encounter",
+  "id": "encounter-cataract-surgery",
+  "status": "finished",
+  "class": {
+    "code": "SS",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "display": "short stay"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "305408004",
+          "system": "http://snomed.info/sct",
+          "display": "Admission to surgical department"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "period": {
+    "start": "2024-11-12T07:00:00Z",
+    "end": "2024-11-12T15:00:00Z"
+  },
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/condition-cataract"
+      },
+      "use": {
+        "coding": [
+          {
+            "code": "CC",
+            "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+            "display": "Chief complaint"
+          }
+        ]
+      }
+    }
+  ]
+}

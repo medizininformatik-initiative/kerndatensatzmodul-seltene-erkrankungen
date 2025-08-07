@@ -1,6 +1,6 @@
 {
   "resourceType": "Condition",
-  "id": "condition-sma-confirmed",
+  "id": "example-cf-genetic",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
@@ -21,24 +21,24 @@
     "coding": [
       {
         "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-        "code": "G12.0",
-        "display": "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]",
+        "code": "E84.0",
+        "display": "Zystische Fibrose mit Lungenmanifestationen",
         "version": "2024"
       },
       {
         "system": "http://snomed.info/sct",
-        "code": "80854005",
-        "display": "Werdnig-Hoffmann disease"
+        "code": "190905008",
+        "display": "Cystic fibrosis"
       },
       {
         "system": "http://www.orpha.net",
-        "code": "83330",
-        "display": "Infantile spinale Muskelatrophie Typ I"
+        "code": "586",
+        "display": "Cystic fibrosis"
       },
       {
         "system": "http://omim.org",
-        "code": "253300",
-        "display": "Spinal muscular atrophy, type I"
+        "code": "219700",
+        "display": "Cystic fibrosis"
       }
     ]
   },
@@ -59,22 +59,21 @@
     ]
   },
   "subject": {
-    "reference": "Patient/patient-sma-001"
+    "reference": "Patient/example"
   },
   "extension": [
     {
       "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/mii-ex-diagnose-feststellungsdatum",
-      "valueDateTime": "2024-07-26"
+      "valueDateTime": "2024-08-25"
     },
     {
       "url": "http://hl7.org/fhir/StructureDefinition/replaces",
       "valueReference": {
-        "reference": "Condition/condition-sma-clinical"
+        "reference": "Condition/example-cf-clinical"
       }
     }
   ],
-  "recordedDate": "2024-07-26",
-  "onsetDateTime": "2024-07-01",
+  "recordedDate": "2024-08-25",
   "evidence": [
     {
       "code": [
@@ -90,10 +89,7 @@
       ],
       "detail": [
         {
-          "reference": "Observation/variant-smn1-001"
-        },
-        {
-          "reference": "Observation/variant-smn2-001"
+          "reference": "Observation/molgen-variant-cftr-f508del-homozygous"
         }
       ]
     },
@@ -111,14 +107,14 @@
       ],
       "detail": [
         {
-          "reference": "DiagnosticReport/molgen-diagnostic-implication-sma"
+          "reference": "DiagnosticReport/molgen-cf-diagnostic"
         }
       ]
     }
   ],
   "note": [
     {
-      "text": "0 Kopien des SMN1-Gens, 2 Kopien des SMN2-Gens - krankheitsursächlich. Bestätigt die vorherige klinische Diagnose."
+      "text": "Homozygot für F508del (c.1521_1523delCTT) im CFTR-Gen. Schwerer Phänotyp zu erwarten."
     }
   ]
 }

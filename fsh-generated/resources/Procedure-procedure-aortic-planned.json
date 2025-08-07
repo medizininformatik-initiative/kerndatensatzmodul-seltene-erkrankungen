@@ -1,0 +1,45 @@
+{
+  "resourceType": "Procedure",
+  "id": "procedure-aortic-planned",
+  "status": "planned",
+  "category": {
+    "coding": [
+      {
+        "code": "387713003",
+        "system": "http://snomed.info/sct",
+        "display": "Surgical procedure"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "5-354.0a",
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "display": "Andere Operationen an Herzklappen: Aortenklappe: Klappenrekonstruktion"
+      },
+      {
+        "code": "119564002",
+        "system": "http://snomed.info/sct",
+        "display": "Aortic root replacement"
+      }
+    ],
+    "text": "Aortenwurzelersatz (David-Operation)"
+  },
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "performedPeriod": {
+    "start": "2025-03-15"
+  },
+  "reasonReference": [
+    {
+      "reference": "Condition/condition-marfan-confirmed"
+    }
+  ],
+  "note": [
+    {
+      "text": "Geplante klappensparende Aortenwurzelersatz-Operation nach David bei progredienter Aortenwurzeldilatation"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "resourceType": "Observation",
+  "id": "failure-to-thrive",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "exam",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "HP:0001508",
+        "system": "http://hpo.jax.org/app/",
+        "display": "Failure to thrive"
+      },
+      {
+        "code": "36440009",
+        "system": "http://snomed.info/sct",
+        "display": "Failure to thrive"
+      }
+    ],
+    "text": "Gedeihstörung"
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-08-10",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "52101004",
+        "system": "http://snomed.info/sct",
+        "display": "Present"
+      }
+    ]
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "A",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display": "Abnormal"
+        }
+      ]
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "29463-7",
+            "system": "http://loinc.org",
+            "display": "Body weight"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 6.5,
+        "code": "kg",
+        "system": "http://unitsofmeasure.org",
+        "unit": "kg"
+      },
+      "interpretation": [
+        {
+          "coding": [
+            {
+              "code": "L",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+              "display": "Low"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "Gewicht <3. Perzentile für Alter"
+    }
+  ]
+}

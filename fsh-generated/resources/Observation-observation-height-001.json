@@ -1,0 +1,68 @@
+{
+  "resourceType": "Observation",
+  "id": "observation-height-001",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "vital-signs",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "8302-2",
+        "system": "http://loinc.org",
+        "display": "Body height"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "effectiveDateTime": "2024-12-15",
+  "valueQuantity": {
+    "value": 213,
+    "code": "cm",
+    "system": "http://unitsofmeasure.org",
+    "unit": "cm"
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "H",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display": "High"
+        }
+      ]
+    }
+  ],
+  "bodySite": {
+    "coding": [
+      {
+        "code": "38266002",
+        "system": "http://snomed.info/sct",
+        "display": "Entire body"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0000098",
+            "system": "http://hpo.jax.org/app/",
+            "display": "Tall stature"
+          }
+        ]
+      },
+      "valueString": "Pathologischer Hochwuchs >99. Perzentile"
+    }
+  ]
+}

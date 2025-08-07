@@ -1,6 +1,6 @@
 {
   "resourceType": "Condition",
-  "id": "condition-sma-confirmed",
+  "id": "example-sma-genetic-diagnosis",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
@@ -33,14 +33,15 @@
       {
         "system": "http://www.orpha.net",
         "code": "83330",
-        "display": "Infantile spinale Muskelatrophie Typ I"
+        "display": "Infantile spinal muscular atrophy type I"
       },
       {
         "system": "http://omim.org",
         "code": "253300",
         "display": "Spinal muscular atrophy, type I"
       }
-    ]
+    ],
+    "text": "Spinale Muskelatrophie Typ 1, genetisch bestätigt"
   },
   "clinicalStatus": {
     "coding": [
@@ -59,18 +60,15 @@
     ]
   },
   "subject": {
-    "reference": "Patient/patient-sma-001"
+    "reference": "Patient/example"
+  },
+  "encounter": {
+    "reference": "Encounter/genetic-consultation"
   },
   "extension": [
     {
       "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/mii-ex-diagnose-feststellungsdatum",
       "valueDateTime": "2024-07-26"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/replaces",
-      "valueReference": {
-        "reference": "Condition/condition-sma-clinical"
-      }
     }
   ],
   "recordedDate": "2024-07-26",
@@ -90,10 +88,7 @@
       ],
       "detail": [
         {
-          "reference": "Observation/variant-smn1-001"
-        },
-        {
-          "reference": "Observation/variant-smn2-001"
+          "reference": "Observation/molgen-variant-smn1-deletion"
         }
       ]
     },
@@ -118,7 +113,7 @@
   ],
   "note": [
     {
-      "text": "0 Kopien des SMN1-Gens, 2 Kopien des SMN2-Gens - krankheitsursächlich. Bestätigt die vorherige klinische Diagnose."
+      "text": "Homozygote Deletion des SMN1-Gens nachgewiesen. 0 Kopien SMN1, 2 Kopien SMN2. Diagnose molekulargenetisch gesichert."
     }
   ]
 }

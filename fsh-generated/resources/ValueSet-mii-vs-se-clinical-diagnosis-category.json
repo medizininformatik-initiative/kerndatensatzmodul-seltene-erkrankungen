@@ -1,0 +1,62 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ClinicalDiagnosisCategoryVS",
+  "id": "mii-vs-se-clinical-diagnosis-category",
+  "title": "MII VS SE Clinical Diagnosis Category",
+  "description": "Value set for categorizing clinical diagnoses of rare diseases",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-se-clinical-diagnosis-category",
+  "version": "2026.0.0-ballot",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "439401001",
+            "display": "Diagnosis"
+          },
+          {
+            "code": "363358000",
+            "display": "Clinical finding"
+          },
+          {
+            "code": "64572001",
+            "display": "Disease"
+          },
+          {
+            "code": "609328004",
+            "display": "Allergic disposition"
+          },
+          {
+            "code": "85828009",
+            "display": "Autoimmune disease"
+          },
+          {
+            "code": "47367009",
+            "display": "Syndrome"
+          },
+          {
+            "code": "381406004",
+            "display": "Congenital disorder"
+          },
+          {
+            "code": "84757009",
+            "display": "Rare disease"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "resourceType": "Observation",
+  "id": "aortic-root-dilatation",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "imaging",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "HP:0002616",
+        "system": "http://hpo.jax.org/app/",
+        "display": "Aortic root aneurysm"
+      },
+      {
+        "code": "60234000",
+        "system": "http://snomed.info/sct",
+        "display": "Aortic root dilatation"
+      }
+    ],
+    "text": "Aortenwurzeldilatation"
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-12-15",
+  "valueQuantity": {
+    "value": 48,
+    "code": "mm",
+    "system": "http://unitsofmeasure.org",
+    "unit": "mm"
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "H",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display": "High"
+        }
+      ]
+    }
+  ],
+  "referenceRange": [
+    {
+      "high": {
+        "value": 40,
+        "unit": "mm"
+      }
+    }
+  ],
+  "method": {
+    "coding": [
+      {
+        "code": "40701008",
+        "system": "http://snomed.info/sct",
+        "display": "Echocardiography"
+      }
+    ]
+  }
+}
