@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "mii-ig-seltene-erkrankungen-v2026-de",
   "language": "de-DE",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de",
   "version": "2026.0.0-ballot",
   "name": "MIIIGModulSelteneErkrankungen",
   "title": "MII IG Seltene Erkrankungen (DE)",
@@ -38,8 +38,8 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.molgen",
-      "version": "2025.0.x",
-      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen-v2025-DE",
+      "version": "2026.0.0-alpha",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.molgen/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.molgen",
       "id": "de_medizininformatikinitiative_kerndatensatz_molgen"
     },
     {
@@ -71,6 +71,38 @@
     "resource": [
       {
         "reference": {
+          "reference": "Observation/observation-alt-001"
+        },
+        "name": "ALT Labor - Post-therapeutisch",
+        "description": "ALT Wert nach Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-ambulant-001"
+        },
+        "name": "Ambulante Erstvorstellung",
+        "description": "Erstvorstellung im SMA-Zentrum",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-nachsorge-001"
+        },
+        "name": "Ambulante Nachsorge",
+        "description": "Erster Nachsorgetermin nach Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-ast-001"
+        },
+        "name": "AST Labor - Post-therapeutisch",
+        "description": "AST Wert nach Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/hairiness-profile"
         },
         "name": "Example Patient Profile",
@@ -79,11 +111,11 @@
       },
       {
         "reference": {
-          "reference": "FamilyMemberHistory/ExampleHistoryAnamnesis"
+          "reference": "FamilyMemberHistory/family-history-001"
         },
-        "name": "ExampleHistoryAnamnesis",
-        "description": "Example Patient Family Anamnesis",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
+        "name": "Familienanamnese - Urgroßmutter mit Muskelerkrankung",
+        "description": "Urgroßmutter mit unbekannter Muskelerkrankung",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-familienanamnese"
       },
       {
         "reference": {
@@ -95,90 +127,138 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-se-empfehlung-status-begruendung"
+          "reference": "Procedure/procedure-gentherapy-001"
         },
-        "name": "MII CS SE Empfehlung Status Begründung",
-        "description": "Begründung bei fehlender Empfehlung",
+        "name": "Gentherapie Verabreichung",
+        "description": "Verabreichung des Gentherapeutikums für SMA",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-se-hpo-phenotypic-observation-codes"
+        },
+        "name": "HPO Phenotypic Observation Codes",
+        "description": "Human Phenotype Ontology codes for phenotypic observations",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-se-empfehlung-evidenzgraduierung"
+          "reference": "ValueSet/mii-vs-se-hpo-severity-values"
         },
-        "name": "MII EX SE Empfehlung Evidenzgraduierung",
-        "description": "Evidenzgraduierung der (einzelnen) Empfehlung",
+        "name": "HPO Severity Values",
+        "description": "Codes for describing severity of phenotypic abnormalities",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-se-empfehlung-prioritaet"
+          "reference": "Observation/mii-exa-se-hpo-assessment"
         },
-        "name": "MII EX SE Empfehlung Priorität",
-        "description": "Priorität der (einzelnen) Empfehlung",
+        "name": "HPO Symptom Observation Example",
+        "description": "Example of an HPO-based phenotypic observation for intellectual disability.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-hpo-assessment"
+      },
+      {
+        "reference": {
+          "reference": "ClinicalImpression/clinical-impression-erstvorstellung"
+        },
+        "name": "Klinische Beurteilung - Erstvorstellung",
+        "description": "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ClinicalImpression/clinical-impression-nachsorge"
+        },
+        "name": "Klinische Beurteilung - Nachsorge",
+        "description": "Nachsorgeuntersuchung nach Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-se-symptom-condition"
+        },
+        "name": "MII Example SE Symptom Condition",
+        "description": "Example of a symptom condition in the context of rare diseases using HPO codes",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-symptom-condition"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-lm-se"
+        },
+        "name": "MII LM SE",
+        "description": "MII LogicalModel Modul Seltene Erkraknungen",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-se-empfehlung-publikation"
+          "reference": "StructureDefinition/mii-pr-se-familienanamnese"
         },
-        "name": "MII EX SE Empfehlung Publikation",
-        "description": "Verweis auf Publikation der (einzelnen) Empfehlung",
+        "name": "MII PR SE Familienanamnese",
+        "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-lm-onko"
+          "reference": "StructureDefinition/mii-pr-se-clinical-impression"
         },
-        "name": "MII LM Onkologie",
-        "description": "MII LogicalModel Modul Onkologie",
+        "name": "MII Profile SE Clinical Impression",
+        "description": "Profile for clinical impressions in the context of rare diseases. This profile captures clinical assessments and suspected diagnoses based on phenotypic findings and symptoms.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-molgen-familienanamnese"
+          "reference": "StructureDefinition/mii-pr-se-diagnosis"
         },
-        "name": "MII PR MolGen Familienanamnese",
-        "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen.",
+        "name": "MII Profile SE Diagnosis",
+        "description": "Profile for rare disease diagnoses based on the MII diagnosis profile. This profile extends the core MII diagnosis functionality with rare disease-specific constraints and requirements.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-studieneinschluss-anfrage"
+          "reference": "StructureDefinition/mii-pr-se-hpo-assessment"
         },
-        "name": "MII PR SE Studieneinschluss Anfrage",
-        "description": "Anfrage zum Studieneinschluss",
+        "name": "MII Profile SE HPO Assessment",
+        "description": "Profile for HPO-based phenotypic observations in the context of rare diseases. This profile uses the Human Phenotype Ontology (HPO) to describe clinical symptoms and phenotypic abnormalities.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-therapieempfehlung-kombination"
+          "reference": "StructureDefinition/mii-pr-se-symptom-condition"
         },
-        "name": "MII PR SE Therapieempfehlung Kombinationstherapie",
-        "description": "Therapieempfehlung für eine medikamentöse Kombinationstherapie",
+        "name": "MII Profile SE Symptom Condition",
+        "description": "Profile for symptom-based conditions in the context of rare diseases. This profile captures symptomatic conditions with temporal characteristics, complementing the HPO Assessment Observation profile.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-therapieempfehlung"
+          "reference": "FamilyMemberHistory/mii-exa-se-familienanamnese"
         },
-        "name": "MII PR SE Therapieempfehlung Systemische Therapie",
-        "description": "Therapieempfehlung für eine medikamentöse Systemische Therapie",
+        "name": "mii-exa-se-familienanamnese",
+        "description": "Example Patient Family Anamnesis",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-familienanamnese"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-screening-001"
+        },
+        "name": "Neugeborenenscreening",
+        "description": "Neugeborenenscreening mit SMA-Verdacht",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ext-se-onset-age"
+        },
+        "name": "Onset Age Extension",
+        "description": "Extension to capture the age at onset of a condition. This backports the onsetAge functionality from FHIR R5 to R4.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-therapieplan"
+          "reference": "StructureDefinition/mii-ext-se-phenotypic-pattern"
         },
-        "name": "MII PR SE Therapieplan",
-        "description": "Therapieplan",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-se-empfehlung-status-begruendung"
-        },
-        "name": "MII VS SE Empfehlung Status Begründung",
-        "description": "ValueSet für Begründung bei fehlender Empfehlung",
+        "name": "Phenotypic Pattern Extension",
+        "description": "Extension to link syndrome diagnoses to characteristic phenotypic patterns or symptom clusters",
         "exampleBoolean": false
       },
       {
@@ -191,6 +271,14 @@
       },
       {
         "reference": {
+          "reference": "Condition/mii-exa-se-diagnosis"
+        },
+        "name": "Rare Disease Diagnosis Example",
+        "description": "Example of a rare disease diagnosis using ORPHA codes for Marfan syndrome.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
+      },
+      {
+        "reference": {
           "reference": "ValueSet/2.16.840.1.113883.3.1937.777.30.11.68--20240620133122"
         },
         "name": "Skin phototype finding",
@@ -199,11 +287,139 @@
       },
       {
         "reference": {
-          "reference": "CarePlan/mii-exa-se-therapieplan"
+          "reference": "Bundle/bundle-sma-complete"
         },
-        "name": "Therapieplan Example",
-        "description": "Example of a Therapieplan for a patient.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-therapieplan"
+        "name": "SMA Fallbeispiel - Vollständiges Transaction Bundle",
+        "description": "Transaction Bundle mit allen Ressourcen für den SMA Fall inkl. Diagnoseverlauf",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-sma-clinical"
+        },
+        "name": "SMA Klinische Diagnose",
+        "description": "Klinische Diagnose SMA Typ 1 bei Erstvorstellung",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-sma-confirmed"
+        },
+        "name": "SMA Molekulargenetisch bestätigt",
+        "description": "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-sma-screening"
+        },
+        "name": "SMA Neugeborenenscreening Ergebnis",
+        "description": "Positives SMA-Screening beim Neugeborenenscreening",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "name": "SMA Patient - Neugeborenes Mädchen",
+        "description": "Neugeborenes Mädchen mit bestätigter SMA Typ 1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-sma-suspected"
+        },
+        "name": "SMA Verdacht - Neugeborenenscreening",
+        "description": "Verdacht auf SMA beim Neugeborenenscreening",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Observation/variant-smn1-001"
+        },
+        "name": "SMN1 Gen - Homozygote Deletion",
+        "description": "0 Kopien des SMN1-Gens nachgewiesen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/variant-smn2-001"
+        },
+        "name": "SMN2 Gen - Kopienanzahl",
+        "description": "2 Kopien des SMN2-Gens nachgewiesen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-stationaer-001"
+        },
+        "name": "Stationärer Aufenthalt zur Gentherapie",
+        "description": "Stationäre Aufnahme für Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ext-se-syndrome-category"
+        },
+        "name": "Syndrome Category Extension",
+        "description": "Extension to categorize syndrome types for rare diseases (genetic, metabolic, developmental, etc.)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-se-syndrome-category"
+        },
+        "name": "Syndrome Category Value Set",
+        "description": "Categories for classifying syndrome types in rare diseases",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-se-syndrome-diagnosis"
+        },
+        "name": "Syndrome Diagnosis Example",
+        "description": "Example of a syndrome diagnosis for CHARGE syndrome with phenotypic patterns and syndrome categorization.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-plt-001"
+        },
+        "name": "Thrombozytenzahl - Post-therapeutisch",
+        "description": "Thrombozytenzahl nach Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-troponin-003"
+        },
+        "name": "Troponin T hs - 01.08.2024",
+        "description": "Troponin T hochsensitiv nach Therapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-troponin-004"
+        },
+        "name": "Troponin T hs - 12.08.2024",
+        "description": "Troponin T hochsensitiv bei Nachsorge",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-troponin-001"
+        },
+        "name": "Troponin T hs - 22.07.2024",
+        "description": "Troponin T hochsensitiv Baseline",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-troponin-002"
+        },
+        "name": "Troponin T hs - 28.07.2024",
+        "description": "Troponin T hochsensitiv vor Therapie",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -227,7 +443,7 @@
         },
         "name": "Waist-to-Hip Ratio Example",
         "description": "Example of a Waist-to-Hip Ratio observation for a patient.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene-erkrankungen/StructureDefinition/mii-pr-se-waist-to-hip-ratio"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-waist-to-hip-ratio"
       },
       {
         "reference": {

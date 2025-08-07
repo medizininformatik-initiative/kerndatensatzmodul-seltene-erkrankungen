@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "HPOPhenotypicObservationCodes",
+  "id": "mii-vs-se-hpo-phenotypic-observation-codes",
+  "title": "HPO Phenotypic Observation Codes",
+  "description": "Human Phenotype Ontology codes for phenotypic observations",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-se-hpo-phenotypic-observation-codes",
+  "compose": {
+    "include": [
+      {
+        "system": "http://human-phenotype-ontology.org"
+      }
+    ]
+  }
+}

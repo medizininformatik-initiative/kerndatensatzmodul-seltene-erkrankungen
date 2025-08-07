@@ -1,0 +1,48 @@
+{
+  "resourceType": "Procedure",
+  "id": "procedure-gentherapy-001",
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "code": "277132007",
+        "system": "http://snomed.info/sct",
+        "display": "Therapeutic procedure"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "6-00d.0",
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "display": "Gentherapie"
+      },
+      {
+        "code": "MLU3LU3EVV",
+        "system": "http://fdasis.nlm.nih.gov",
+        "display": "Onasemnogene abeparvovec"
+      },
+      {
+        "code": "787135004",
+        "system": "http://snomed.info/sct",
+        "display": "Gene therapy"
+      }
+    ],
+    "text": "Gentherapie mit Onasemnogene abeparvovec (Zolgensma)"
+  },
+  "subject": {
+    "reference": "Patient/patient-sma-001"
+  },
+  "performedDateTime": "2024-07-29",
+  "reasonReference": [
+    {
+      "reference": "Condition/condition-sma-confirmed"
+    }
+  ],
+  "note": [
+    {
+      "text": "Gentherapeutikum ohne Komplikationen verabreicht, vorherige Gabe von Prednisolon"
+    }
+  ]
+}

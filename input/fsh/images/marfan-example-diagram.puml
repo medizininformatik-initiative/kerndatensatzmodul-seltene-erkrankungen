@@ -1,0 +1,140 @@
+@startuml Marfan-Example
+!theme plain
+
+title SE (Seltene Erkrankungen) Resource Hierarchy\nMarfan Syndrome Example with Multiple Symptoms & Timepoints
+
+' Top Level - Syndrome
+package "Syndrome Level" {
+  object "Marfan Syndrome" as marfan <<Condition>> {
+    id: marfan-syndrome-001
+    code: HP:0001519 "Connective tissue disorder"
+    category: syndrome
+    clinicalStatus: active
+    onsetAge: 12 years
+    recordedDate: 2024-01-15
+  }
+}
+
+' Mid Level - Symptoms
+package "Symptom Level" {
+  object "Muscle Weakness" as weakness <<Condition>> {
+    id: muscle-weakness-001
+    code: HP:0001324 "Muscle weakness"
+    category: symptom
+    severity: HP:0012825 "Mild"
+    onsetAge: 15 years
+    clinicalStatus: active
+    recordedDate: 2024-02-10
+  }
+  
+  object "Joint Hypermobility" as joint <<Condition>> {
+    id: joint-hypermobility-001
+    code: HP:0001382 "Joint hypermobility"
+    category: symptom
+    severity: HP:0012826 "Moderate"
+    onsetAge: 8 years
+    clinicalStatus: active
+    recordedDate: 2024-01-20
+  }
+  
+  object "Aortic Dilatation" as aortic <<Condition>> {
+    id: aortic-dilatation-001
+    code: HP:0002616 "Aortic root dilatation"
+    category: symptom
+    severity: HP:0012848 "Severe"
+    onsetAge: 18 years
+    clinicalStatus: active
+    recordedDate: 2024-03-05
+  }
+}
+
+' Low Level - Observations at different timepoints
+package "Observation Level" {
+  object "Grip Strength T1" as grip1 <<Observation>> {
+    id: grip-strength-2023-06
+    code: HP:0001324 "Muscle weakness"
+    effectiveDateTime: 2023-06-15
+    valueBoolean: true
+    status: final
+    method: "Manual muscle testing"
+  }
+  
+  object "Grip Strength T2" as grip2 <<Observation>> {
+    id: grip-strength-2024-02
+    code: HP:0001324 "Muscle weakness" 
+    effectiveDateTime: 2024-02-20
+    valueCodeableConcept: HP:0012825 "Mild"
+    status: final
+    method: "Dynamometry"
+  }
+  
+  object "Joint ROM Assessment" as rom1 <<Observation>> {
+    id: joint-rom-2023-12
+    code: HP:0001382 "Joint hypermobility"
+    effectiveDateTime: 2023-12-10
+    valueCodeableConcept: HP:0012826 "Moderate"
+    status: final
+    method: "Beighton score"
+  }
+  
+  object "Joint ROM Follow-up" as rom2 <<Observation>> {
+    id: joint-rom-2024-06
+    code: HP:0001382 "Joint hypermobility"
+    effectiveDateTime: 2024-06-15
+    valueCodeableConcept: HP:0012826 "Moderate"
+    status: final
+    method: "Beighton score"
+  }
+  
+  object "Echo T1" as echo1 <<Observation>> {
+    id: echo-2024-01
+    code: HP:0002616 "Aortic root dilatation"
+    effectiveDateTime: 2024-01-25
+    valueCodeableConcept: HP:0012825 "Mild"
+    status: final
+    method: "Echocardiography"
+  }
+  
+  object "Echo T2" as echo2 <<Observation>> {
+    id: echo-2024-07
+    code: HP:0002616 "Aortic root dilatation"
+    effectiveDateTime: 2024-07-10
+    valueCodeableConcept: HP:0012848 "Severe"
+    status: final
+    method: "Echocardiography"
+  }
+}
+
+' Define relationships via evidence.detail
+marfan ||--o weakness : "evidence.detail"
+marfan ||--o joint : "evidence.detail"
+marfan ||--o aortic : "evidence.detail"
+
+weakness ||--o grip1 : "evidence.detail"
+weakness ||--o grip2 : "evidence.detail"
+
+joint ||--o rom1 : "evidence.detail"
+joint ||--o rom2 : "evidence.detail"
+
+aortic ||--o echo1 : "evidence.detail"
+aortic ||--o echo2 : "evidence.detail"
+
+' Add temporal flow annotations
+note top of grip1 : **T1: Jun 2023**\nInitial assessment
+note top of grip2 : **T2: Feb 2024**\nProgression noted
+
+note top of rom1 : **T1: Dec 2023**\nBaseline measurement
+note top of rom2 : **T2: Jun 2024**\nStable condition
+
+note top of echo1 : **T1: Jan 2024**\nMild dilatation
+note top of echo2 : **T2: Jul 2024**\n**Progression to severe**
+
+' Legend
+legend bottom
+  **Temporal Pattern:**
+  Multiple observations track symptom progression over time
+  Evidence hierarchy: Syndrome → Symptoms → Observations
+  Different timepoints show disease evolution
+end legend
+
+@enduml

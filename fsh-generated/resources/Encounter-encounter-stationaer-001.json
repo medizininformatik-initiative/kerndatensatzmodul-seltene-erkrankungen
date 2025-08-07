@@ -1,0 +1,44 @@
+{
+  "resourceType": "Encounter",
+  "id": "encounter-stationaer-001",
+  "status": "finished",
+  "class": {
+    "code": "IMP",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "display": "inpatient encounter"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "32485007",
+          "system": "http://snomed.info/sct",
+          "display": "Hospital admission"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/patient-sma-001"
+  },
+  "period": {
+    "start": "2024-07-29",
+    "end": "2024-07-30"
+  },
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/condition-sma-confirmed"
+      },
+      "use": {
+        "coding": [
+          {
+            "code": "CC",
+            "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+            "display": "Chief complaint"
+          }
+        ]
+      }
+    }
+  ]
+}

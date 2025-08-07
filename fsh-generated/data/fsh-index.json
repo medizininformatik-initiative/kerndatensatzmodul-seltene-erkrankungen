@@ -1,27 +1,131 @@
 [
   {
-    "outputFile": "CarePlan-mii-exa-se-therapieplan.json",
-    "fshName": "mii-exa-se-therapieplan",
+    "outputFile": "Bundle-bundle-sma-complete.json",
+    "fshName": "bundle-sma-complete",
     "fshType": "Instance",
-    "fshFile": "mii-pr-se-therapieplan.fsh",
-    "startLine": 93,
-    "endLine": 106
+    "fshFile": "sma-transaction-bundle.fsh",
+    "startLine": 3,
+    "endLine": 129
   },
   {
-    "outputFile": "CodeSystem-mii-cs-se-empfehlung-status-begruendung.json",
-    "fshName": "MII_CS_SE_Empfehlung_StatusBegruendung",
-    "fshType": "CodeSystem",
-    "fshFile": "mii-cs-se-empfehlung-status-begruendung.fsh",
-    "startLine": 1,
-    "endLine": 5
+    "outputFile": "ClinicalImpression-clinical-impression-erstvorstellung.json",
+    "fshName": "clinical-impression-erstvorstellung",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 272,
+    "endLine": 294
   },
   {
-    "outputFile": "FamilyMemberHistory-ExampleHistoryAnamnesis.json",
-    "fshName": "ExampleHistoryAnamnesis",
+    "outputFile": "ClinicalImpression-clinical-impression-nachsorge.json",
+    "fshName": "clinical-impression-nachsorge",
     "fshType": "Instance",
-    "fshFile": "mii-ex-se-familienanamnese.fsh",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 297,
+    "endLine": 320
+  },
+  {
+    "outputFile": "Condition-condition-sma-clinical.json",
+    "fshName": "condition-sma-clinical",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 35,
+    "endLine": 53
+  },
+  {
+    "outputFile": "Condition-condition-sma-confirmed.json",
+    "fshName": "condition-sma-confirmed",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 56,
+    "endLine": 77
+  },
+  {
+    "outputFile": "Condition-condition-sma-suspected.json",
+    "fshName": "condition-sma-suspected",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 15,
+    "endLine": 32
+  },
+  {
+    "outputFile": "Condition-mii-exa-se-diagnosis.json",
+    "fshName": "mii-exa-se-diagnosis",
+    "fshType": "Instance",
+    "fshFile": "mii-exa-se-diagnosis.fsh",
     "startLine": 1,
-    "endLine": 21
+    "endLine": 23
+  },
+  {
+    "outputFile": "Condition-mii-exa-se-symptom-condition.json",
+    "fshName": "mii-exa-se-symptom-condition",
+    "fshType": "Instance",
+    "fshFile": "mii-exa-se-symptom-condition.fsh",
+    "startLine": 1,
+    "endLine": 45
+  },
+  {
+    "outputFile": "Condition-mii-exa-se-syndrome-diagnosis.json",
+    "fshName": "mii-exa-se-syndrome-diagnosis",
+    "fshType": "Instance",
+    "fshFile": "mii-exa-se-syndrome-diagnosis.fsh",
+    "startLine": 1,
+    "endLine": 44
+  },
+  {
+    "outputFile": "Encounter-encounter-ambulant-001.json",
+    "fshName": "encounter-ambulant-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 336,
+    "endLine": 348
+  },
+  {
+    "outputFile": "Encounter-encounter-nachsorge-001.json",
+    "fshName": "encounter-nachsorge-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 364,
+    "endLine": 375
+  },
+  {
+    "outputFile": "Encounter-encounter-screening-001.json",
+    "fshName": "encounter-screening-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 323,
+    "endLine": 334
+  },
+  {
+    "outputFile": "Encounter-encounter-stationaer-001.json",
+    "fshName": "encounter-stationaer-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 350,
+    "endLine": 362
+  },
+  {
+    "outputFile": "FamilyMemberHistory-family-history-001.json",
+    "fshName": "family-history-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 80,
+    "endLine": 91
+  },
+  {
+    "outputFile": "FamilyMemberHistory-mii-exa-se-familienanamnese.json",
+    "fshName": "mii-exa-se-familienanamnese",
+    "fshType": "Instance",
+    "fshFile": "mii-exa-se-familienanamnese.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Observation-mii-exa-se-hpo-assessment.json",
+    "fshName": "mii-exa-se-hpo-assessment",
+    "fshType": "Instance",
+    "fshFile": "mii-pr-se-hpo-assessment.fsh",
+    "startLine": 67,
+    "endLine": 77
   },
   {
     "outputFile": "Observation-mii-exa-se-waist-to-hip-ratio.json",
@@ -30,6 +134,102 @@
     "fshFile": "mii-pr-se-waist-to-hip-ratio.fsh",
     "startLine": 18,
     "endLine": 24
+  },
+  {
+    "outputFile": "Observation-observation-alt-001.json",
+    "fshName": "observation-alt-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 176,
+    "endLine": 187
+  },
+  {
+    "outputFile": "Observation-observation-ast-001.json",
+    "fshName": "observation-ast-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 190,
+    "endLine": 201
+  },
+  {
+    "outputFile": "Observation-observation-plt-001.json",
+    "fshName": "observation-plt-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 204,
+    "endLine": 215
+  },
+  {
+    "outputFile": "Observation-observation-sma-screening.json",
+    "fshName": "observation-sma-screening",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 94,
+    "endLine": 114
+  },
+  {
+    "outputFile": "Observation-observation-troponin-001.json",
+    "fshName": "observation-troponin-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 218,
+    "endLine": 229
+  },
+  {
+    "outputFile": "Observation-observation-troponin-002.json",
+    "fshName": "observation-troponin-002",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 231,
+    "endLine": 242
+  },
+  {
+    "outputFile": "Observation-observation-troponin-003.json",
+    "fshName": "observation-troponin-003",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 244,
+    "endLine": 255
+  },
+  {
+    "outputFile": "Observation-observation-troponin-004.json",
+    "fshName": "observation-troponin-004",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 257,
+    "endLine": 269
+  },
+  {
+    "outputFile": "Observation-variant-smn1-001.json",
+    "fshName": "variant-smn1-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 117,
+    "endLine": 138
+  },
+  {
+    "outputFile": "Observation-variant-smn2-001.json",
+    "fshName": "variant-smn2-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 141,
+    "endLine": 156
+  },
+  {
+    "outputFile": "Patient-patient-sma-001.json",
+    "fshName": "patient-sma-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 4,
+    "endLine": 12
+  },
+  {
+    "outputFile": "Procedure-procedure-gentherapy-001.json",
+    "fshName": "procedure-gentherapy-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 159,
+    "endLine": 173
   },
   {
     "outputFile": "StructureDefinition-ProfileObservationHauttyp.json",
@@ -56,76 +256,76 @@
     "endLine": 16
   },
   {
-    "outputFile": "StructureDefinition-mii-ex-se-empfehlung-evidenzgraduierung.json",
-    "fshName": "MII_EX_SE_Empfehlung_Evidenzgraduierung",
+    "outputFile": "StructureDefinition-mii-ext-se-onset-age.json",
+    "fshName": "OnsetAge",
     "fshType": "Extension",
-    "fshFile": "mii-ex-se-empfehlung-evidenzgraduierung.fsh",
+    "fshFile": "extensions\\ext-onset-age.fsh",
     "startLine": 1,
-    "endLine": 31
+    "endLine": 26
   },
   {
-    "outputFile": "StructureDefinition-mii-ex-se-empfehlung-prioritaet.json",
-    "fshName": "MII_EX_SE_Empfehlung_Prioritaet",
+    "outputFile": "StructureDefinition-mii-ext-se-phenotypic-pattern.json",
+    "fshName": "PhenotypicPattern",
     "fshType": "Extension",
-    "fshFile": "mii-ex-se-empfehlung-prioritaet.fsh",
+    "fshFile": "extensions\\ext-phenotypic-pattern.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-mii-ext-se-syndrome-category.json",
+    "fshName": "SyndromeCategory",
+    "fshType": "Extension",
+    "fshFile": "extensions\\ext-syndrome-category.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-mii-lm-se.json",
+    "fshName": "MII_LM_SE",
+    "fshType": "Logical",
+    "fshFile": "mii-lm-se.fsh",
+    "startLine": 1,
+    "endLine": 61
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-se-clinical-impression.json",
+    "fshName": "MII_PR_SE_ClinicalImpression",
+    "fshType": "Profile",
+    "fshFile": "mii-pr-se-clinical-impression.fsh",
+    "startLine": 1,
+    "endLine": 98
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-se-diagnosis.json",
+    "fshName": "MII_PR_SE_Diagnose",
+    "fshType": "Profile",
+    "fshFile": "mii-pr-se-diagnosis.fsh",
+    "startLine": 1,
+    "endLine": 126
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-se-familienanamnese.json",
+    "fshName": "MII_PR_SE_Familienanamnese",
+    "fshType": "Profile",
+    "fshFile": "mii-pr-se-familienanamnese.fsh",
     "startLine": 1,
     "endLine": 14
   },
   {
-    "outputFile": "StructureDefinition-mii-ex-se-empfehlung-publikation.json",
-    "fshName": "MII_EX_SE_Empfehlung_Publikation",
-    "fshType": "Extension",
-    "fshFile": "mii-ex-se-empfehlung-publikation.fsh",
-    "startLine": 1,
-    "endLine": 22
-  },
-  {
-    "outputFile": "StructureDefinition-mii-lm-onko.json",
-    "fshName": "MII_LM_Onko",
-    "fshType": "Logical",
-    "fshFile": "mii-lm-onko.fsh",
-    "startLine": 1,
-    "endLine": 123
-  },
-  {
-    "outputFile": "StructureDefinition-mii-pr-molgen-familienanamnese.json",
-    "fshName": "MII_PR_MolGen_Familienanamnese",
+    "outputFile": "StructureDefinition-mii-pr-se-hpo-assessment.json",
+    "fshName": "MII_PR_SE_HPO_Assessment",
     "fshType": "Profile",
-    "fshFile": "mii-pr-se-familienanamnese.fsh",
-    "startLine": 11,
-    "endLine": 124
+    "fshFile": "mii-pr-se-hpo-assessment.fsh",
+    "startLine": 1,
+    "endLine": 48
   },
   {
-    "outputFile": "StructureDefinition-mii-pr-se-studieneinschluss-anfrage.json",
-    "fshName": "MII_PR_SE_Studieneinschluss_Anfrage",
+    "outputFile": "StructureDefinition-mii-pr-se-symptom-condition.json",
+    "fshName": "MII_PR_SE_Symptom_Condition",
     "fshType": "Profile",
-    "fshFile": "mii-pr-se-studieneinschluss-anfrage.fsh",
+    "fshFile": "mii-pr-se-symptom-condition.fsh",
     "startLine": 1,
-    "endLine": 51
-  },
-  {
-    "outputFile": "StructureDefinition-mii-pr-se-therapieempfehlung-kombination.json",
-    "fshName": "MII_PR_SE_Therapieempfehlung_Kombination",
-    "fshType": "Profile",
-    "fshFile": "mii-pr-se-therapieempfehlung-kombination.fsh",
-    "startLine": 1,
-    "endLine": 40
-  },
-  {
-    "outputFile": "StructureDefinition-mii-pr-se-therapieempfehlung.json",
-    "fshName": "MII_PR_SE_Therapieempfehlung",
-    "fshType": "Profile",
-    "fshFile": "mii-pr-se-therapieempfehlung.fsh",
-    "startLine": 1,
-    "endLine": 33
-  },
-  {
-    "outputFile": "StructureDefinition-mii-pr-se-therapieplan.json",
-    "fshName": "MII_PR_SE_Therapieplan",
-    "fshType": "Profile",
-    "fshFile": "mii-pr-se-therapieplan.fsh",
-    "startLine": 1,
-    "endLine": 84
+    "endLine": 87
   },
   {
     "outputFile": "StructureDefinition-mii-pr-se-waist-to-hip-ratio.json",
@@ -152,12 +352,28 @@
     "endLine": 27
   },
   {
-    "outputFile": "ValueSet-mii-vs-se-empfehlung-status-begruendung.json",
-    "fshName": "MII_VS_SE_Empfehlung_StatusBegruendung",
+    "outputFile": "ValueSet-mii-vs-se-hpo-phenotypic-observation-codes.json",
+    "fshName": "HPOPhenotypicObservationCodes",
     "fshType": "ValueSet",
-    "fshFile": "mii-vs-se-empfehlung-status-begruendung.fsh",
-    "startLine": 1,
-    "endLine": 5
+    "fshFile": "mii-pr-se-hpo-assessment.fsh",
+    "startLine": 50,
+    "endLine": 55
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-se-hpo-severity-values.json",
+    "fshName": "HPOSeverityValues",
+    "fshType": "ValueSet",
+    "fshFile": "mii-pr-se-hpo-assessment.fsh",
+    "startLine": 57,
+    "endLine": 65
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-se-syndrome-category.json",
+    "fshName": "SyndromeCategoryVS",
+    "fshType": "ValueSet",
+    "fshFile": "extensions\\ext-syndrome-category.fsh",
+    "startLine": 17,
+    "endLine": 27
   },
   {
     "outputFile": "ValueSet-von-se-betroffen-vs.json",

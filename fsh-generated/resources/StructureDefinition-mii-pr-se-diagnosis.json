@@ -1,0 +1,257 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-se-diagnosis",
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/spdx-license",
+            "code": "CC-BY-4.0",
+            "display": "Creative Commons Attribution 4.0 International"
+          }
+        ]
+      }
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis",
+  "version": "2026.0.0-ballot",
+  "name": "MII_PR_SE_Diagnose",
+  "title": "MII Profile SE Diagnosis",
+  "status": "draft",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Profile for rare disease diagnoses based on the MII diagnosis profile. This profile extends the core MII diagnosis functionality with rare disease-specific constraints and requirements.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Condition",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Condition.extension:syndromeCategory",
+        "path": "Condition.extension",
+        "sliceName": "syndromeCategory",
+        "short": "Syndromkategorie",
+        "definition": "Spezifische Kategorisierung für Syndromtypen (genetisch, metabolisch, entwicklungsbedingt, etc.)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-se-syndrome-category"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.extension:phenotypicPattern",
+        "path": "Condition.extension",
+        "sliceName": "phenotypicPattern",
+        "short": "Phänotypisches Muster",
+        "definition": "Verknüpfung zu charakteristischen Symptommustern oder Phänotyp-Clustern des Syndroms",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-se-phenotypic-pattern"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.identifier",
+        "path": "Condition.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.clinicalStatus",
+        "path": "Condition.clinicalStatus",
+        "short": "Klinischer Status der Diagnose",
+        "definition": "Der klinische Status der Diagnose (aktiv, inaktiv, aufgelöst)",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-clinical"
+        }
+      },
+      {
+        "id": "Condition.verificationStatus",
+        "path": "Condition.verificationStatus",
+        "short": "Verifikationsstatus der Diagnose",
+        "definition": "Grad der Sicherheit der Diagnose (bestätigt, vermutet, ausgeschlossen)",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status"
+        }
+      },
+      {
+        "id": "Condition.category",
+        "path": "Condition.category",
+        "short": "Kategorie der Diagnose/des Syndroms - Fokus auf seltene Erkrankungen",
+        "definition": "Kategoriecodes, die die Diagnose oder das Syndrom klassifizieren, mit besonderem Fokus auf seltene Erkrankungen und Syndrome",
+        "comment": "Verwenden Sie spezifische Kategorien für: seltene Erkrankungen, Syndrome, genetische Störungen, angeborene Anomalien",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.severity",
+        "path": "Condition.severity",
+        "short": "Schweregrad der Erkrankung",
+        "definition": "Bewertung des Schweregrads der seltenen Erkrankung",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code",
+        "path": "Condition.code",
+        "short": "Diagnose-/Syndromcode - ORPHA, OMIM, SNOMED CT für seltene Erkrankungen",
+        "definition": "Code zur Identifikation der Diagnose oder des Syndroms, vorzugsweise unter Verwendung von ORPHA (Orphanet), OMIM (Online Mendelian Inheritance in Man) oder SNOMED CT Codes",
+        "comment": "Für Syndrome: ORPHA-Codes bevorzugt. Für genetische Syndrome: OMIM-Codes. Für allgemeine medizinische Begriffe: SNOMED CT"
+      },
+      {
+        "id": "Condition.bodySite",
+        "path": "Condition.bodySite",
+        "short": "Anatomische Lokalisation der Erkrankung",
+        "definition": "Die anatomische Lokalisation, die von der seltenen Erkrankung betroffen ist"
+      },
+      {
+        "id": "Condition.subject",
+        "path": "Condition.subject",
+        "short": "Patient mit der seltenen Erkrankung",
+        "definition": "Referenz auf den Patienten, der die seltene Erkrankung hat",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Condition.encounter",
+        "path": "Condition.encounter",
+        "short": "Kontakt, bei dem die Diagnose gestellt wurde",
+        "definition": "Gesundheitskontakt, bei dem die Diagnose gestellt wurde"
+      },
+      {
+        "id": "Condition.onset[x]",
+        "path": "Condition.onset[x]",
+        "short": "Beginn der Erkrankung",
+        "definition": "Geschätztes oder tatsächliches Datum, Zeitraum oder zeitliche Beschreibung des Erkrankungsbeginns"
+      },
+      {
+        "id": "Condition.abatement[x]",
+        "path": "Condition.abatement[x]",
+        "short": "Auflösung der Erkrankung",
+        "definition": "Datum, Zeitraum oder zeitliche Beschreibung, wann die Erkrankung abgeklungen ist oder in Remission ging",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.recordedDate",
+        "path": "Condition.recordedDate",
+        "short": "Datum der Dokumentation",
+        "definition": "Datum, an dem die Diagnose dokumentiert wurde"
+      },
+      {
+        "id": "Condition.recorder",
+        "path": "Condition.recorder",
+        "short": "Wer die Diagnose dokumentiert hat",
+        "definition": "Medizinische Fachkraft, die die Diagnose dokumentiert hat",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.asserter",
+        "path": "Condition.asserter",
+        "short": "Person, die die Diagnose stellt",
+        "definition": "Medizinische Fachkraft, die die Diagnose gestellt hat",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.stage",
+        "path": "Condition.stage",
+        "short": "Stadium oder Progression der Erkrankung",
+        "definition": "Stadium der seltenen Erkrankung und deren Progression",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.stage.summary",
+        "path": "Condition.stage.summary",
+        "short": "Stadiumzusammenfassung"
+      },
+      {
+        "id": "Condition.stage.assessment",
+        "path": "Condition.stage.assessment",
+        "short": "Bewertung des Stadiums",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Condition.evidence",
+        "path": "Condition.evidence",
+        "short": "Unterstützende Evidenz für die Diagnose",
+        "definition": "Evidenz, die die Diagnose stützt, einschließlich klinischer Befunde und Laborergebnisse",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.evidence.code",
+        "path": "Condition.evidence.code",
+        "short": "Art der Evidenz"
+      },
+      {
+        "id": "Condition.evidence.detail",
+        "path": "Condition.evidence.detail",
+        "short": "Unterstützende Beobachtungen, Dokumente oder Symptome",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+              "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
+              "http://hl7.org/fhir/StructureDefinition/Condition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Condition.note",
+        "path": "Condition.note",
+        "short": "Zusätzliche Anmerkungen zur Diagnose",
+        "definition": "Zusätzliche Beschreibung der Diagnose, die in anderen Feldern nicht erfasst ist"
+      }
+    ]
+  }
+}

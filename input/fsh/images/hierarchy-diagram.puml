@@ -1,0 +1,88 @@
+@startuml SE-Hierarchy
+!theme plain
+
+title SE (Seltene Erkrankungen) Resource Hierarchy\nConnected via evidence.detail
+
+' Define the three levels
+package "Top Level" {
+  class Syndrom <<Condition>> {
+    + id: string
+    + code: CodeableConcept (HPO)
+    + category: syndrome
+    + clinicalStatus: active|inactive|resolved
+    + onset[x]: dateTime|Age|Period
+    + evidence.detail: Reference(Symptom)
+    --
+    **Syndrome-level condition**
+    Complex multi-symptom disorder
+  }
+}
+
+package "Mid Level" {
+  class Symptom <<Condition>> {
+    + id: string
+    + code: CodeableConcept (HPO)
+    + category: symptom
+    + clinicalStatus: active|inactive|resolved
+    + severity: mild|moderate|severe
+    + onset[x]: dateTime|Age|Period
+    + evidence.detail: Reference(Observation)
+    --
+    **Individual symptom condition**
+    Single phenotypic manifestation
+  }
+}
+
+package "Low Level" {
+  class Observation <<Observation>> {
+    + id: string
+    + code: CodeableConcept (HPO)
+    + status: final|preliminary
+    + value[x]: boolean|CodeableConcept
+    + effective[x]: dateTime|Period
+    + method: CodeableConcept
+    --
+    **Clinical observation**
+    Specific measurement/assessment
+  }
+}
+
+' Define the relationships
+Syndrom ||--o{ Symptom : "evidence.detail"
+Symptom ||--o{ Observation : "evidence.detail"
+
+' Add notes
+note right of Syndrom
+  **Example:**
+  Marfan Syndrome
+  (HP:0001519)
+  
+  Complex genetic disorder
+  with multiple symptoms
+end note
+
+note right of Symptom
+  **Example:**
+  Muscle weakness
+  (HP:0001324)
+  
+  Individual symptom
+  with temporal aspects
+end note
+
+note right of Observation
+  **Example:**
+  HPO Assessment
+  
+  Specific clinical
+  measurement or finding
+end note
+
+' Add legend
+legend bottom
+  **Relationship Pattern:**
+  evidence.detail creates hierarchical links
+  from higher-level conditions to supporting evidence
+end legend
+
+@enduml
