@@ -1,4 +1,4 @@
-Profile:     MIIProfileSEClinicalImpression
+Profile:     MII_PR_SE_ClinicalImpression
 Id:          mii-pr-se-clinical-impression
 Parent:      ClinicalImpression
 Title:       "MII Profile SE Clinical Impression"

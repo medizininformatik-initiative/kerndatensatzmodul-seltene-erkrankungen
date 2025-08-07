@@ -1,5 +1,53 @@
 [
   {
+    "outputFile": "Bundle-bundle-sma-complete.json",
+    "fshName": "bundle-sma-complete",
+    "fshType": "Instance",
+    "fshFile": "sma-transaction-bundle.fsh",
+    "startLine": 3,
+    "endLine": 129
+  },
+  {
+    "outputFile": "ClinicalImpression-clinical-impression-erstvorstellung.json",
+    "fshName": "clinical-impression-erstvorstellung",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 272,
+    "endLine": 294
+  },
+  {
+    "outputFile": "ClinicalImpression-clinical-impression-nachsorge.json",
+    "fshName": "clinical-impression-nachsorge",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 297,
+    "endLine": 320
+  },
+  {
+    "outputFile": "Condition-condition-sma-clinical.json",
+    "fshName": "condition-sma-clinical",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 35,
+    "endLine": 53
+  },
+  {
+    "outputFile": "Condition-condition-sma-confirmed.json",
+    "fshName": "condition-sma-confirmed",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 56,
+    "endLine": 77
+  },
+  {
+    "outputFile": "Condition-condition-sma-suspected.json",
+    "fshName": "condition-sma-suspected",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 15,
+    "endLine": 32
+  },
+  {
     "outputFile": "Condition-mii-exa-se-diagnosis.json",
     "fshName": "mii-exa-se-diagnosis",
     "fshType": "Instance",
@@ -24,6 +72,46 @@
     "endLine": 44
   },
   {
+    "outputFile": "Encounter-encounter-ambulant-001.json",
+    "fshName": "encounter-ambulant-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 336,
+    "endLine": 348
+  },
+  {
+    "outputFile": "Encounter-encounter-nachsorge-001.json",
+    "fshName": "encounter-nachsorge-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 364,
+    "endLine": 375
+  },
+  {
+    "outputFile": "Encounter-encounter-screening-001.json",
+    "fshName": "encounter-screening-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 323,
+    "endLine": 334
+  },
+  {
+    "outputFile": "Encounter-encounter-stationaer-001.json",
+    "fshName": "encounter-stationaer-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 350,
+    "endLine": 362
+  },
+  {
+    "outputFile": "FamilyMemberHistory-family-history-001.json",
+    "fshName": "family-history-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 80,
+    "endLine": 91
+  },
+  {
     "outputFile": "FamilyMemberHistory-mii-exa-se-familienanamnese.json",
     "fshName": "mii-exa-se-familienanamnese",
     "fshType": "Instance",
@@ -46,6 +134,102 @@
     "fshFile": "WaistToHipRatio.fsh",
     "startLine": 18,
     "endLine": 24
+  },
+  {
+    "outputFile": "Observation-observation-alt-001.json",
+    "fshName": "observation-alt-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 176,
+    "endLine": 187
+  },
+  {
+    "outputFile": "Observation-observation-ast-001.json",
+    "fshName": "observation-ast-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 190,
+    "endLine": 201
+  },
+  {
+    "outputFile": "Observation-observation-plt-001.json",
+    "fshName": "observation-plt-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 204,
+    "endLine": 215
+  },
+  {
+    "outputFile": "Observation-observation-sma-screening.json",
+    "fshName": "observation-sma-screening",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 94,
+    "endLine": 114
+  },
+  {
+    "outputFile": "Observation-observation-troponin-001.json",
+    "fshName": "observation-troponin-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 218,
+    "endLine": 229
+  },
+  {
+    "outputFile": "Observation-observation-troponin-002.json",
+    "fshName": "observation-troponin-002",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 231,
+    "endLine": 242
+  },
+  {
+    "outputFile": "Observation-observation-troponin-003.json",
+    "fshName": "observation-troponin-003",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 244,
+    "endLine": 255
+  },
+  {
+    "outputFile": "Observation-observation-troponin-004.json",
+    "fshName": "observation-troponin-004",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 257,
+    "endLine": 269
+  },
+  {
+    "outputFile": "Observation-variant-smn1-001.json",
+    "fshName": "variant-smn1-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 117,
+    "endLine": 138
+  },
+  {
+    "outputFile": "Observation-variant-smn2-001.json",
+    "fshName": "variant-smn2-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 141,
+    "endLine": 156
+  },
+  {
+    "outputFile": "Patient-patient-sma-001.json",
+    "fshName": "patient-sma-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 4,
+    "endLine": 12
+  },
+  {
+    "outputFile": "Procedure-procedure-gentherapy-001.json",
+    "fshName": "procedure-gentherapy-001",
+    "fshType": "Instance",
+    "fshFile": "sma-example-resources.fsh",
+    "startLine": 159,
+    "endLine": 173
   },
   {
     "outputFile": "StructureDefinition-ProfileObservationHauttyp.json",
@@ -105,7 +289,7 @@
   },
   {
     "outputFile": "StructureDefinition-mii-pr-se-clinical-impression.json",
-    "fshName": "MIIProfileSEClinicalImpression",
+    "fshName": "MII_PR_SE_ClinicalImpression",
     "fshType": "Profile",
     "fshFile": "mii-pr-se-clinical-impression.fsh",
     "startLine": 1,
@@ -124,8 +308,8 @@
     "fshName": "MII_PR_SE_Familienanamnese",
     "fshType": "Profile",
     "fshFile": "mii-pr-se-familienanamnese.fsh",
-    "startLine": 12,
-    "endLine": 25
+    "startLine": 1,
+    "endLine": 14
   },
   {
     "outputFile": "StructureDefinition-mii-pr-se-hpo-assessment.json",

@@ -65,6 +65,38 @@
     "resource": [
       {
         "reference": {
+          "reference": "Observation/observation-alt-001"
+        },
+        "name": "ALT Labor - Post-therapeutisch",
+        "description": "ALT Wert nach Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-ambulant-001"
+        },
+        "name": "Ambulante Erstvorstellung",
+        "description": "Erstvorstellung im SMA-Zentrum",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-nachsorge-001"
+        },
+        "name": "Ambulante Nachsorge",
+        "description": "Erster Nachsorgetermin nach Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-ast-001"
+        },
+        "name": "AST Labor - Post-therapeutisch",
+        "description": "AST Wert nach Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/hairiness-profile"
         },
         "name": "Example Patient Profile",
@@ -73,11 +105,27 @@
       },
       {
         "reference": {
+          "reference": "FamilyMemberHistory/family-history-001"
+        },
+        "name": "Familienanamnese - Urgroßmutter mit Muskelerkrankung",
+        "description": "Urgroßmutter mit unbekannter Muskelerkrankung",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-familienanamnese"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/fastingstatus-profile"
         },
         "name": "Fasting status of the patient",
         "description": "Describes whether the patient is currently in fasted state.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Procedure/procedure-gentherapy-001"
+        },
+        "name": "Gentherapie Verabreichung",
+        "description": "Verabreichung des Gentherapeutikums für SMA",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -102,6 +150,22 @@
         "name": "HPO Symptom Observation Example",
         "description": "Example of an HPO-based phenotypic observation for intellectual disability.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-hpo-assessment"
+      },
+      {
+        "reference": {
+          "reference": "ClinicalImpression/clinical-impression-erstvorstellung"
+        },
+        "name": "Klinische Beurteilung - Erstvorstellung",
+        "description": "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ClinicalImpression/clinical-impression-nachsorge"
+        },
+        "name": "Klinische Beurteilung - Nachsorge",
+        "description": "Nachsorgeuntersuchung nach Gentherapie",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -169,6 +233,14 @@
       },
       {
         "reference": {
+          "reference": "Encounter/encounter-screening-001"
+        },
+        "name": "Neugeborenenscreening",
+        "description": "Neugeborenenscreening mit SMA-Verdacht",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-ext-se-onset-age"
         },
         "name": "Onset Age Extension",
@@ -209,6 +281,78 @@
       },
       {
         "reference": {
+          "reference": "Bundle/bundle-sma-complete"
+        },
+        "name": "SMA Fallbeispiel - Vollständiges Transaction Bundle",
+        "description": "Transaction Bundle mit allen Ressourcen für den SMA Fall inkl. Diagnoseverlauf",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-sma-clinical"
+        },
+        "name": "SMA Klinische Diagnose",
+        "description": "Klinische Diagnose SMA Typ 1 bei Erstvorstellung",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-sma-confirmed"
+        },
+        "name": "SMA Molekulargenetisch bestätigt",
+        "description": "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-sma-screening"
+        },
+        "name": "SMA Neugeborenenscreening Ergebnis",
+        "description": "Positives SMA-Screening beim Neugeborenenscreening",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "name": "SMA Patient - Neugeborenes Mädchen",
+        "description": "Neugeborenes Mädchen mit bestätigter SMA Typ 1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-sma-suspected"
+        },
+        "name": "SMA Verdacht - Neugeborenenscreening",
+        "description": "Verdacht auf SMA beim Neugeborenenscreening",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Observation/variant-smn1-001"
+        },
+        "name": "SMN1 Gen - Homozygote Deletion",
+        "description": "0 Kopien des SMN1-Gens nachgewiesen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/variant-smn2-001"
+        },
+        "name": "SMN2 Gen - Kopienanzahl",
+        "description": "2 Kopien des SMN2-Gens nachgewiesen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-stationaer-001"
+        },
+        "name": "Stationärer Aufenthalt zur Gentherapie",
+        "description": "Stationäre Aufnahme für Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-ext-se-syndrome-category"
         },
         "name": "Syndrome Category Extension",
@@ -230,6 +374,46 @@
         "name": "Syndrome Diagnosis Example",
         "description": "Example of a syndrome diagnosis for CHARGE syndrome with phenotypic patterns and syndrome categorization.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-plt-001"
+        },
+        "name": "Thrombozytenzahl - Post-therapeutisch",
+        "description": "Thrombozytenzahl nach Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-troponin-003"
+        },
+        "name": "Troponin T hs - 01.08.2024",
+        "description": "Troponin T hochsensitiv nach Therapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-troponin-004"
+        },
+        "name": "Troponin T hs - 12.08.2024",
+        "description": "Troponin T hochsensitiv bei Nachsorge",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-troponin-001"
+        },
+        "name": "Troponin T hs - 22.07.2024",
+        "description": "Troponin T hochsensitiv Baseline",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-troponin-002"
+        },
+        "name": "Troponin T hs - 28.07.2024",
+        "description": "Troponin T hochsensitiv vor Therapie",
+        "exampleBoolean": true
       },
       {
         "reference": {
