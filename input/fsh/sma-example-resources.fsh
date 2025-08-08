@@ -13,7 +13,7 @@ Description: "Neugeborenes Mädchen mit bestätigter SMA Typ 1"
 
 // SMA Diagnosis - Suspected (from Newborn Screening)
 Instance: condition-sma-suspected
-InstanceOf: MII_PR_SE_Diagnose
+InstanceOf: MII_PR_SE_ClinicalDiagnosis
 Usage: #example
 Title: "SMA Verdacht - Neugeborenenscreening"
 Description: "Verdacht auf SMA beim Neugeborenenscreening"
@@ -21,7 +21,8 @@ Description: "Verdacht auf SMA beim Neugeborenenscreening"
 * verificationStatus = $condition-ver-status#unconfirmed
 * category = $condition-category#encounter-diagnosis
 * code.text = "Verdacht auf Spinale Muskelatrophie"
-* code.coding[+] = $SCT#80854005 "Werdnig-Hoffmann disease"
+* code.coding[sct] = $SCT#80854005 "Werdnig-Hoffmann disease"
+* code.coding[hpo] = http://hpo.jax.org/app/#HP:0003813 "Motor neuron disease"
 * subject = Reference(patient-sma-001)
 * extension[+].url = $mii-ex-diagnose-feststellungsdatum
 * extension[=].valueDateTime = "2024-07-18"
@@ -33,47 +34,53 @@ Description: "Verdacht auf SMA beim Neugeborenenscreening"
 
 // SMA Diagnosis - Clinical (Initial Documentation)
 Instance: condition-sma-clinical
-InstanceOf: MII_PR_SE_Diagnose
+InstanceOf: MII_PR_SE_ClinicalDiagnosis
 Usage: #example
 Title: "SMA Klinische Diagnose"
 Description: "Klinische Diagnose SMA Typ 1 bei Erstvorstellung"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#provisional
 * category = $condition-category#encounter-diagnosis
-* code.coding[+] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]"
-* code.coding[+] = http://www.orpha.net#83330 "Infantile spinale Muskelatrophie Typ I"
-* code.coding[+] = $SCT#80854005 "Werdnig-Hoffmann disease"
+* code.coding[icd10-gm] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]"
+* code.coding[icd10-gm].version = "2024"
+* code.coding[orphanet] = http://www.orpha.net#83330 "Infantile spinale Muskelatrophie Typ I"
+* code.coding[sct] = $SCT#80854005 "Werdnig-Hoffmann disease"
+* code.coding[hpo] = http://hpo.jax.org/app/#HP:0003813 "Motor neuron disease"
 * subject = Reference(patient-sma-001)
 * extension[+].url = $mii-ex-diagnose-feststellungsdatum
 * extension[=].valueDateTime = "2024-07-22"
 * recordedDate = "2024-07-22"
 * encounter = Reference(encounter-ambulant-001)
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/replaces"
-* extension[=].valueReference = Reference(condition-sma-suspected)
+* extension[=].valueReference = Reference(Condition/condition-sma-suspected)
 * note.text = "Klinisch diagnostiziert basierend auf Screening-Verdacht, Molekulargenetik ausstehend"
 
 // SMA Diagnosis - Molecularly Confirmed
 Instance: condition-sma-confirmed
-InstanceOf: MII_PR_SE_Diagnose
+InstanceOf: MII_PR_SE_GeneticDiagnosis
 Usage: #example
 Title: "SMA Molekulargenetisch bestätigt"
 Description: "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* category = $condition-category#encounter-diagnosis
-* code.coding[+] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]"
-* code.coding[+] = http://www.orpha.net#83330 "Infantile spinale Muskelatrophie Typ I"
-* code.coding[+] = $SCT#80854005 "Werdnig-Hoffmann disease"
+* category = $SCT#782964007 "Genetic disease"
+* code.coding[icd10-gm] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]"
+* code.coding[icd10-gm].version = "2024"
+* code.coding[orphanet] = http://www.orpha.net#83330 "Infantile spinale Muskelatrophie Typ I"
+* code.coding[sct] = $SCT#80854005 "Werdnig-Hoffmann disease"
+* code.coding[omim] = http://omim.org#253300 "Spinal muscular atrophy, type I"
 * subject = Reference(patient-sma-001)
 * extension[+].url = $mii-ex-diagnose-feststellungsdatum
 * extension[=].valueDateTime = "2024-07-26"  // Date of molecular confirmation
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/replaces"
-* extension[=].valueReference = Reference(condition-sma-clinical)
+* extension[=].valueReference = Reference(Condition/condition-sma-clinical)
 * recordedDate = "2024-07-26"
 * onsetDateTime = "2024-07-01"  // Birth/neonatal onset
-* evidence[+].code.text = "Molekulargenetischer Nachweis"
-* evidence[=].detail[+] = Reference(variant-smn1-001)
-* evidence[=].detail[+] = Reference(variant-smn2-001)
+* evidence[+].code = $SCT#410545006 "Genetic finding"
+* evidence[=].detail[+] = Reference(Observation/variant-smn1-001)
+* evidence[=].detail[+] = Reference(Observation/variant-smn2-001)
+* evidence[+].code = $SCT#405824009 "Genetic test finding"
+* evidence[=].detail = Reference(DiagnosticReport/molgen-diagnostic-implication-sma)
 * note.text = "0 Kopien des SMN1-Gens, 2 Kopien des SMN2-Gens - krankheitsursächlich. Bestätigt die vorherige klinische Diagnose."
 
 // Family History - Great-grandmother with unknown muscle disease
@@ -169,7 +176,7 @@ Description: "Verabreichung des Gentherapeutikums für SMA"
 * code.text = "Gentherapie mit Onasemnogene abeparvovec (Zolgensma)"
 * subject = Reference(patient-sma-001)
 * performedDateTime = "2024-07-29"
-* reasonReference = Reference(condition-sma-confirmed)
+* reasonReference = Reference(Condition/condition-sma-confirmed)
 * note.text = "Gentherapeutikum ohne Komplikationen verabreicht, vorherige Gabe von Prednisolon"
 
 // Laboratory Observations - ALT
@@ -288,7 +295,7 @@ Description: "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum"
 * investigation[+].code.text = "Molekulargenetische Diagnostik"
 * investigation[=].item[+] = Reference(variant-smn1-001)
 * investigation[=].item[+] = Reference(variant-smn2-001)
-* problem[+] = Reference(condition-sma-clinical)
+* problem[+] = Reference(Condition/condition-sma-clinical)
 * prognosisCodeableConcept[+] = $SCT#67334001 "Guarded prognosis"
 * note[+].text = "Klinische Untersuchung gemäß SMA-Diagnoseprotokoll. Blutentnahme für Genetik veranlasst."
 * note[+].text = "Klinisches Bild vereinbar mit SMA Typ 1. Molekulargenetische Bestätigung ausstehend. Eltern über Therapieoptionen informiert."
@@ -314,7 +321,7 @@ Description: "Nachsorgeuntersuchung nach Gentherapie"
 * finding[=].basis = "ALT und AST normwertig"
 * finding[+].itemCodeableConcept = $SCT#165555003 "Platelet count normal"
 * finding[=].basis = "Thrombozytenzahl normwertig"
-* problem[+] = Reference(condition-sma-confirmed)
+* problem[+] = Reference(Condition/condition-sma-confirmed)
 * prognosisCodeableConcept[+] = $SCT#170969009 "Prognosis guarded"
 * note[+].text = "Standardisierte Nachsorgeuntersuchung nach Gentherapie gemäß Zentrumsprotokoll"
 * note[+].text = "Troponin-Erhöhung präexistent, nicht therapieassoziiert. Gentherapie gut vertragen. Weiterführung der Prednisolon-Therapie. Nächste Kontrolle in 4 Wochen."
@@ -344,7 +351,7 @@ Description: "Erstvorstellung im SMA-Zentrum"
 * subject = Reference(patient-sma-001)
 * period.start = "2024-07-22"
 * period.end = "2024-07-22"
-* diagnosis.condition = Reference(condition-sma-clinical)
+* diagnosis.condition = Reference(Condition/condition-sma-clinical)
 * diagnosis.use = http://terminology.hl7.org/CodeSystem/diagnosis-role#AD "Admission diagnosis"
 
 Instance: encounter-stationaer-001
@@ -358,7 +365,7 @@ Description: "Stationäre Aufnahme für Gentherapie"
 * subject = Reference(patient-sma-001)
 * period.start = "2024-07-29"
 * period.end = "2024-07-30"
-* diagnosis.condition = Reference(condition-sma-confirmed)
+* diagnosis.condition = Reference(Condition/condition-sma-confirmed)
 * diagnosis.use = http://terminology.hl7.org/CodeSystem/diagnosis-role#CC "Chief complaint"
 
 Instance: encounter-nachsorge-001
@@ -372,4 +379,5 @@ Description: "Erster Nachsorgetermin nach Gentherapie"
 * subject = Reference(patient-sma-001)
 * period.start = "2024-08-12"
 * period.end = "2024-08-12"
-* diagnosis.condition = Reference(condition-sma-confirmed)
+* diagnosis.condition = Reference(Condition/condition-sma-confirmed)
+

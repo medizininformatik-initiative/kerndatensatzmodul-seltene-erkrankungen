@@ -3,7 +3,32 @@
   "id": "condition-sma-clinical",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "code": "G12.0",
+        "display": "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]",
+        "version": "2024"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "80854005",
+        "display": "Werdnig-Hoffmann disease"
+      },
+      {
+        "system": "http://www.orpha.net",
+        "code": "83330",
+        "display": "Infantile spinale Muskelatrophie Typ I"
+      },
+      {
+        "system": "http://hpo.jax.org/app/",
+        "code": "HP:0003813",
+        "display": "Motor neuron disease"
+      }
     ]
   },
   "clinicalStatus": {
@@ -32,25 +57,6 @@
       ]
     }
   ],
-  "code": {
-    "coding": [
-      {
-        "code": "G12.0",
-        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-        "display": "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]"
-      },
-      {
-        "code": "83330",
-        "system": "http://www.orpha.net",
-        "display": "Infantile spinale Muskelatrophie Typ I"
-      },
-      {
-        "code": "80854005",
-        "system": "http://snomed.info/sct",
-        "display": "Werdnig-Hoffmann disease"
-      }
-    ]
-  },
   "subject": {
     "reference": "Patient/patient-sma-001"
   },

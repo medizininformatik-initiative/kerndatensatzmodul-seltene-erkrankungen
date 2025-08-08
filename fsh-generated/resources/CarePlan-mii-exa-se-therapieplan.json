@@ -15,6 +15,9 @@
   "intent": "proposal",
   "activity": [
     {
+      "reference": {
+        "reference": "MedicationRequest/example-therapieempfehlung"
+      },
       "detail": {
         "status": "created",
         "statusReason": {
@@ -28,7 +31,7 @@
     },
     {
       "reference": {
-        "reference": "MII_PR_SE_Studieneinschlussempfehlung"
+        "reference": "ServiceRequest/example-studieneinschluss"
       }
     }
   ]

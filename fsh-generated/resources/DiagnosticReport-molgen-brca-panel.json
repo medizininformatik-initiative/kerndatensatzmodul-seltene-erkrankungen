@@ -1,0 +1,46 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "molgen-brca-panel",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "GEN",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "display": "Genetics"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "94050-9",
+        "system": "http://loinc.org",
+        "display": "BRCA1 and BRCA2 genes panel"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-11-01",
+  "result": [
+    {
+      "reference": "Observation/molgen-variant-brca1-pathogenic"
+    }
+  ],
+  "conclusion": "Pathogene Variante c.68_69del (p.Glu23Valfs*17) in BRCA1 nachgewiesen. Diese Frameshift-Mutation führt zu einem vorzeitigen Stopcodon. Erhöhtes Risiko für Mamma- und Ovarialkarzinom. Lebenszeitrisiko Mammakarzinom: 60-72%, Ovarialkarzinom: 40-44%.",
+  "conclusionCode": [
+    {
+      "coding": [
+        {
+          "code": "604370",
+          "system": "http://omim.org",
+          "display": "Breast-ovarian cancer, familial, 1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "resourceType": "Encounter",
+  "id": "encounter-surgery-planned",
+  "status": "planned",
+  "class": {
+    "code": "IMP",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "display": "inpatient encounter"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "305565006",
+          "system": "http://snomed.info/sct",
+          "display": "Admission to cardiac surgery department"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "period": {
+    "start": "2025-03-15"
+  },
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/condition-marfan-confirmed"
+      },
+      "use": {
+        "coding": [
+          {
+            "code": "CC",
+            "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+            "display": "Chief complaint"
+          }
+        ]
+      }
+    }
+  ],
+  "reasonCode": [
+    {
+      "text": "Elektive Aortenwurzelersatz-Operation bei Marfan-Syndrom"
+    }
+  ]
+}

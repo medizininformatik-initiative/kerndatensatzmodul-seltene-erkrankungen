@@ -1,0 +1,95 @@
+{
+  "resourceType": "Condition",
+  "id": "condition-cataract",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "code": "H26.9",
+        "display": "Katarakt, nicht näher bezeichnet",
+        "version": "2024"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "193570009",
+        "display": "Cataract"
+      },
+      {
+        "system": "http://hpo.jax.org/app/",
+        "code": "HP:0000518",
+        "display": "Cataract"
+      }
+    ],
+    "text": "Katarakt bilateral"
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "resolved",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "confirmed",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "encounter-diagnosis",
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/mii-ex-diagnose-feststellungsdatum",
+      "valueDateTime": "2024-10-15"
+    }
+  ],
+  "recordedDate": "2024-10-15",
+  "encounter": {
+    "reference": "Encounter/encounter-ophthalmology"
+  },
+  "abatementDateTime": "2024-11-12",
+  "evidence": [
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "HP:0000518",
+              "system": "http://hpo.jax.org/app/",
+              "display": "Cataract"
+            }
+          ]
+        }
+      ],
+      "detail": [
+        {
+          "reference": "Observation/symptom-cataract"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "Katarakt bilateral, operativ versorgt"
+    }
+  ]
+}

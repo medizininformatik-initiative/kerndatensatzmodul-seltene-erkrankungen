@@ -3,7 +3,43 @@
   "id": "condition-sma-confirmed",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "782964007",
+          "system": "http://snomed.info/sct",
+          "display": "Genetic disease"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "code": "G12.0",
+        "display": "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]",
+        "version": "2024"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "80854005",
+        "display": "Werdnig-Hoffmann disease"
+      },
+      {
+        "system": "http://www.orpha.net",
+        "code": "83330",
+        "display": "Infantile spinale Muskelatrophie Typ I"
+      },
+      {
+        "system": "http://omim.org",
+        "code": "253300",
+        "display": "Spinal muscular atrophy, type I"
+      }
     ]
   },
   "clinicalStatus": {
@@ -19,35 +55,6 @@
       {
         "code": "confirmed",
         "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
-      }
-    ]
-  },
-  "category": [
-    {
-      "coding": [
-        {
-          "code": "encounter-diagnosis",
-          "system": "http://terminology.hl7.org/CodeSystem/condition-category"
-        }
-      ]
-    }
-  ],
-  "code": {
-    "coding": [
-      {
-        "code": "G12.0",
-        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-        "display": "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]"
-      },
-      {
-        "code": "83330",
-        "system": "http://www.orpha.net",
-        "display": "Infantile spinale Muskelatrophie Typ I"
-      },
-      {
-        "code": "80854005",
-        "system": "http://snomed.info/sct",
-        "display": "Werdnig-Hoffmann disease"
       }
     ]
   },
@@ -72,7 +79,13 @@
     {
       "code": [
         {
-          "text": "Molekulargenetischer Nachweis"
+          "coding": [
+            {
+              "code": "410545006",
+              "system": "http://snomed.info/sct",
+              "display": "Genetic finding"
+            }
+          ]
         }
       ],
       "detail": [
@@ -81,6 +94,24 @@
         },
         {
           "reference": "Observation/variant-smn2-001"
+        }
+      ]
+    },
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "405824009",
+              "system": "http://snomed.info/sct",
+              "display": "Genetic test finding"
+            }
+          ]
+        }
+      ],
+      "detail": [
+        {
+          "reference": "DiagnosticReport/molgen-diagnostic-implication-sma"
         }
       ]
     }

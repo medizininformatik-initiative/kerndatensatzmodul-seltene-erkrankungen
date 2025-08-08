@@ -1,0 +1,93 @@
+{
+  "resourceType": "Condition",
+  "id": "example-dmd-excluded-bmd-confirmed",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "782964007",
+          "system": "http://snomed.info/sct",
+          "display": "Genetic disease"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "code": "G71.0",
+        "display": "Muskeldystrophie",
+        "version": "2024"
+      },
+      {
+        "system": "http://www.orpha.net",
+        "code": "98896",
+        "display": "Duchenne muscular dystrophy"
+      },
+      {
+        "system": "http://omim.org",
+        "code": "310200",
+        "display": "Duchenne muscular dystrophy"
+      }
+    ],
+    "text": "Duchenne-Muskeldystrophie (ausgeschlossen)"
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "inactive",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "refuted",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/mii-ex-diagnose-feststellungsdatum",
+      "valueDateTime": "2024-09-15"
+    }
+  ],
+  "recordedDate": "2024-09-15",
+  "abatementDateTime": "2024-09-15",
+  "evidence": [
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "410545006",
+              "system": "http://snomed.info/sct",
+              "display": "Genetic finding"
+            }
+          ]
+        }
+      ],
+      "detail": [
+        {
+          "reference": "Observation/molgen-dmd-in-frame-deletion"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "In-frame Deletion Exon 45-47 im DMD-Gen nachgewiesen. Vereinbar mit Becker-Muskeldystrophie, NICHT Duchenne. Duchenne-Muskeldystrophie ausgeschlossen."
+    }
+  ]
+}
