@@ -9,12 +9,15 @@ inkl. Mapping
 
 Profile -> Marco
 
-Untersuchung -> Clinical Impression
 
-Diagnose - Changes? Orpha 1..1
+- BMI 
+- MS in allen Feldern 
+Therapieplan : CarePlan (Marco, aktuelle Profile im molekularen Tumorboard Repo, von CarePlan direkt erben, von Careplan auf Therapie verweisen )
+Therapieempfehlung (entweder als Teil von CarePlan oder als MedicationRequest/ServiceRequest)
+Durchgeführte Therapie (Procedure, Therapiearten, ... Medikationstherapie als MedikationStatement, nichtmedikamentös als Procedure)
 
-- HipWaistRatio (Done, Erklärtext fehlt noch)
 
+Thomas 
 MII_Symptom Observation
  - HPO-Untersuchung -> Klinische Symptome Phänotyp Observation (Thomas)
 
@@ -24,30 +27,20 @@ MII_Symptom Condition
 -> "Syndrom"-Profil 
 
 
-MolGenVariante - Datenfelder? 
--> HGVS+Referenzgenom MS
-
-Therapieplan : CarePlan (Marco, aktuelle Profile im molekularen Tumorboard Repo, von CarePlan direkt erben, von Careplan auf Therapie verweisen )
-Therapieempfehlung (entweder als Teil von CarePlan oder als MedicationRequest/ServiceRequest)
-Durchgeführte Therapie (Procedure, Therapiearten, ... Medikationstherapie als MedikationStatement, nichtmedikamentös als Procedure)
-
-Datenmodell Seltene Erkrankungen
-
-// formal nicht Pflicht, aber ohne ist das Modul nicht zu benutzen Komplexe Ausmodellieriung einer Krankheitsbilds mit relevanten Datenelementen
 
 Datenmodell am Beispiel 
 
-evtl SMA Beispiel -> Steffen
+
+Steffen
 
 Komplexes Fallbeispiel 
 - Anwendungsszenario als Freitext
 - Anwendungsszenario als FHIR
 
 IG Texte
+- Modellvorhaben text, Aufräumen 2. Fallbesipiel, Index-Seiten mit Modulverantwortlichen
 
 
-Technische Bereitstellung
--> Capability Statement
--> Search Parameter
-...
+
+
 
