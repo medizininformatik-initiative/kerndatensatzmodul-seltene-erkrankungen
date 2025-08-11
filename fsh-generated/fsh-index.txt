@@ -1,6 +1,5 @@
 Output File                                                          Name                                      Type        FSH File                                      Lines
 Bundle-bundle-marfan-complete.json                                   bundle-marfan-complete                    Instance    marfan-transaction-bundle.fsh                 3 - 124
-Bundle-bundle-sma-complete.json                                      bundle-sma-complete                       Instance    sma-transaction-bundle.fsh                    3 - 129
 CarePlan-mii-exa-se-therapieplan.json                                mii-exa-se-therapieplan                   Instance    mii-pr-se-therapieplan.fsh                    93 - 106
 ClinicalImpression-clinical-impression-cardiology.json               clinical-impression-cardiology            Instance    marfan-example-resources.fsh                  292 - 321
 ClinicalImpression-clinical-impression-erstvorstellung.json          clinical-impression-erstvorstellung       Instance    sma-example-resources.fsh                     279 - 301
@@ -40,8 +39,6 @@ Encounter-encounter-ophthalmology.json                               encounter-o
 Encounter-encounter-screening-001.json                               encounter-screening-001                   Instance    sma-example-resources.fsh                     330 - 341
 Encounter-encounter-stationaer-001.json                              encounter-stationaer-001                  Instance    sma-example-resources.fsh                     357 - 369
 Encounter-encounter-surgery-planned.json                             encounter-surgery-planned                 Instance    marfan-example-resources.fsh                  368 - 380
-FamilyMemberHistory-family-history-001.json                          family-history-001                        Instance    sma-example-resources.fsh                     87 - 98
-FamilyMemberHistory-mii-exa-se-familienanamnese.json                 mii-exa-se-familienanamnese               Instance    mii-exa-se-familienanamnese.fsh               1 - 20
 MedicationStatement-medication-losartan.json                         medication-losartan                       Instance    marfan-example-resources.fsh                  271 - 289
 Observation-anteverted-nares.json                                    anteverted-nares                          Instance    hpo-observation-examples.fsh                  100 - 113
 Observation-aortic-root-dilatation.json                              aortic-root-dilatation                    Instance    hpo-observation-examples.fsh                  8 - 24
@@ -52,6 +49,7 @@ Observation-failure-to-thrive.json                                   failure-to-
 Observation-hypertelorism.json                                       hypertelorism                             Instance    hpo-observation-examples.fsh                  81 - 98
 Observation-lens-dislocation.json                                    lens-dislocation                          Instance    hpo-observation-examples.fsh                  26 - 40
 Observation-lymphedema.json                                          lymphedema                                Instance    hpo-observation-examples.fsh                  135 - 150
+Observation-mii-exa-se-bodymassindex.json                            mii-exa-se-bodymassindex                  Instance    mii-pr-se-bodymassindex.fsh                   18 - 24
 Observation-mii-exa-se-hpo-assessment.json                           mii-exa-se-hpo-assessment                 Instance    mii-pr-se-hpo-assessment.fsh                  67 - 77
 Observation-mii-exa-se-waist-to-hip-ratio.json                       mii-exa-se-waist-to-hip-ratio             Instance    mii-pr-se-waist-to-hip-ratio.fsh              18 - 24
 Observation-molgen-smn1-normal-copies.json                           molgen-smn1-normal-copies                 Instance    excluded-diagnosis-examples.fsh               183 - 199
@@ -97,17 +95,16 @@ StructureDefinition-mii-ex-se-empfehlung-publikation.json            MII_EX_SE_E
 StructureDefinition-mii-ex-se-genetic-basis.json                     GeneticBasis                              Extension   mii-ex-se-diagnosis-extensions.fsh            36 - 49
 StructureDefinition-mii-ex-se-inheritance-pattern.json               InheritancePattern                        Extension   mii-ex-se-diagnosis-extensions.fsh            20 - 33
 StructureDefinition-mii-ex-se-penetrance.json                        Penetrance                                Extension   mii-ex-se-diagnosis-extensions.fsh            52 - 68
-StructureDefinition-mii-ext-se-onset-age.json                        OnsetAge                                  Extension   extensions\ext-onset-age.fsh                  1 - 26
-StructureDefinition-mii-ext-se-phenotypic-pattern.json               PhenotypicPattern                         Extension   extensions\ext-phenotypic-pattern.fsh         1 - 15
-StructureDefinition-mii-ext-se-syndrome-category.json                SyndromeCategory                          Extension   extensions\ext-syndrome-category.fsh          1 - 15
+StructureDefinition-mii-ext-se-onset-age.json                        OnsetAge                                  Extension   extensions/ext-onset-age.fsh                  1 - 26
+StructureDefinition-mii-ext-se-phenotypic-pattern.json               PhenotypicPattern                         Extension   extensions/ext-phenotypic-pattern.fsh         1 - 15
+StructureDefinition-mii-ext-se-syndrome-category.json                SyndromeCategory                          Extension   extensions/ext-syndrome-category.fsh          1 - 15
 StructureDefinition-mii-lm-se.json                                   MII_LM_SE                                 Logical     mii-lm-se.fsh                                 1 - 61
+StructureDefinition-mii-pr-se-bodymassindex.json                     MII_PR_SE_Bodymassindex                   Profile     mii-pr-se-bodymassindex.fsh                   1 - 15
 StructureDefinition-mii-pr-se-clinical-diagnosis.json                MII_PR_SE_ClinicalDiagnosis               Profile     mii-pr-se-clinical-diagnosis.fsh              2 - 62
 StructureDefinition-mii-pr-se-clinical-impression.json               MII_PR_SE_ClinicalImpression              Profile     mii-pr-se-clinical-impression.fsh             1 - 98
 StructureDefinition-mii-pr-se-diagnosis.json                         MII_PR_SE_Diagnose                        Profile     mii-pr-se-diagnosis.fsh                       1 - 126
-StructureDefinition-mii-pr-se-familienanamnese.json                  MII_PR_SE_Familienanamnese                Profile     mii-pr-se-familienanamnese.fsh                1 - 14
 StructureDefinition-mii-pr-se-genetic-diagnosis.json                 MII_PR_SE_GeneticDiagnosis                Profile     mii-pr-se-genetic-diagnosis.fsh               2 - 77
 StructureDefinition-mii-pr-se-hpo-assessment.json                    MII_PR_SE_HPO_Assessment                  Profile     mii-pr-se-hpo-assessment.fsh                  1 - 48
-StructureDefinition-mii-pr-se-studie.json                            MII_PR_SE_Studie                          Profile     mii-pr-se-studie.fsh                          1 - 12
 StructureDefinition-mii-pr-se-studieneinschluss-anfrage.json         MII_PR_SE_Studieneinschluss_Anfrage       Profile     mii-pr-se-studieneinschluss-anfrage.fsh       1 - 51
 StructureDefinition-mii-pr-se-symptom-condition.json                 MII_PR_SE_Symptom_Condition               Profile     mii-pr-se-symptom-condition.fsh               1 - 87
 StructureDefinition-mii-pr-se-therapieempfehlung-kombination.json    MII_PR_SE_Therapieempfehlung_Kombination  Profile     mii-pr-se-therapieempfehlung-kombination.fsh  1 - 40
@@ -124,5 +121,5 @@ ValueSet-mii-vs-se-hpo-inheritance-pattern.json                      HPOInherita
 ValueSet-mii-vs-se-hpo-phenotypic-observation-codes.json             HPOPhenotypicObservationCodes             ValueSet    mii-pr-se-hpo-assessment.fsh                  50 - 55
 ValueSet-mii-vs-se-hpo-severity-values.json                          HPOSeverityValues                         ValueSet    mii-pr-se-hpo-assessment.fsh                  57 - 65
 ValueSet-mii-vs-se-penetrance.json                                   PenetranceValueSet                        ValueSet    mii-vs-se-diagnosis-valuesets.fsh             89 - 100
-ValueSet-mii-vs-se-syndrome-category.json                            SyndromeCategoryVS                        ValueSet    extensions\ext-syndrome-category.fsh          17 - 27
+ValueSet-mii-vs-se-syndrome-category.json                            SyndromeCategoryVS                        ValueSet    extensions/ext-syndrome-category.fsh          17 - 27
 ValueSet-von-se-betroffen-vs.json                                    VonSEBetroffenVS                          ValueSet    von-se-betroffen-valueset.fsh                 1 - 7

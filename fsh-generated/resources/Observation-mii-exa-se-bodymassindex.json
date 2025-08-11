@@ -1,0 +1,22 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-se-bodymassindex",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-bodymassindex"
+    ]
+  },
+  "status": "draft",
+  "code": {
+    "coding": [
+      {
+        "code": "39156-5",
+        "system": "http://loinc.org",
+        "display": "Body mass index"
+      }
+    ]
+  },
+  "valueQuantity": {
+    "value": 22.5
+  }
+}

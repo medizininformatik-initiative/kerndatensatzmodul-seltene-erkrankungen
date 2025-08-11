@@ -8,14 +8,6 @@
     "endLine": 124
   },
   {
-    "outputFile": "Bundle-bundle-sma-complete.json",
-    "fshName": "bundle-sma-complete",
-    "fshType": "Instance",
-    "fshFile": "sma-transaction-bundle.fsh",
-    "startLine": 3,
-    "endLine": 129
-  },
-  {
     "outputFile": "CarePlan-mii-exa-se-therapieplan.json",
     "fshName": "mii-exa-se-therapieplan",
     "fshType": "Instance",
@@ -328,22 +320,6 @@
     "endLine": 380
   },
   {
-    "outputFile": "FamilyMemberHistory-family-history-001.json",
-    "fshName": "family-history-001",
-    "fshType": "Instance",
-    "fshFile": "sma-example-resources.fsh",
-    "startLine": 87,
-    "endLine": 98
-  },
-  {
-    "outputFile": "FamilyMemberHistory-mii-exa-se-familienanamnese.json",
-    "fshName": "mii-exa-se-familienanamnese",
-    "fshType": "Instance",
-    "fshFile": "mii-exa-se-familienanamnese.fsh",
-    "startLine": 1,
-    "endLine": 20
-  },
-  {
     "outputFile": "MedicationStatement-medication-losartan.json",
     "fshName": "medication-losartan",
     "fshType": "Instance",
@@ -422,6 +398,14 @@
     "fshFile": "hpo-observation-examples.fsh",
     "startLine": 135,
     "endLine": 150
+  },
+  {
+    "outputFile": "Observation-mii-exa-se-bodymassindex.json",
+    "fshName": "mii-exa-se-bodymassindex",
+    "fshType": "Instance",
+    "fshFile": "mii-pr-se-bodymassindex.fsh",
+    "startLine": 18,
+    "endLine": 24
   },
   {
     "outputFile": "Observation-mii-exa-se-hpo-assessment.json",
@@ -787,7 +771,7 @@
     "outputFile": "StructureDefinition-mii-ext-se-onset-age.json",
     "fshName": "OnsetAge",
     "fshType": "Extension",
-    "fshFile": "extensions\\ext-onset-age.fsh",
+    "fshFile": "extensions/ext-onset-age.fsh",
     "startLine": 1,
     "endLine": 26
   },
@@ -795,7 +779,7 @@
     "outputFile": "StructureDefinition-mii-ext-se-phenotypic-pattern.json",
     "fshName": "PhenotypicPattern",
     "fshType": "Extension",
-    "fshFile": "extensions\\ext-phenotypic-pattern.fsh",
+    "fshFile": "extensions/ext-phenotypic-pattern.fsh",
     "startLine": 1,
     "endLine": 15
   },
@@ -803,7 +787,7 @@
     "outputFile": "StructureDefinition-mii-ext-se-syndrome-category.json",
     "fshName": "SyndromeCategory",
     "fshType": "Extension",
-    "fshFile": "extensions\\ext-syndrome-category.fsh",
+    "fshFile": "extensions/ext-syndrome-category.fsh",
     "startLine": 1,
     "endLine": 15
   },
@@ -814,6 +798,14 @@
     "fshFile": "mii-lm-se.fsh",
     "startLine": 1,
     "endLine": 61
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-se-bodymassindex.json",
+    "fshName": "MII_PR_SE_Bodymassindex",
+    "fshType": "Profile",
+    "fshFile": "mii-pr-se-bodymassindex.fsh",
+    "startLine": 1,
+    "endLine": 15
   },
   {
     "outputFile": "StructureDefinition-mii-pr-se-clinical-diagnosis.json",
@@ -840,14 +832,6 @@
     "endLine": 126
   },
   {
-    "outputFile": "StructureDefinition-mii-pr-se-familienanamnese.json",
-    "fshName": "MII_PR_SE_Familienanamnese",
-    "fshType": "Profile",
-    "fshFile": "mii-pr-se-familienanamnese.fsh",
-    "startLine": 1,
-    "endLine": 14
-  },
-  {
     "outputFile": "StructureDefinition-mii-pr-se-genetic-diagnosis.json",
     "fshName": "MII_PR_SE_GeneticDiagnosis",
     "fshType": "Profile",
@@ -862,14 +846,6 @@
     "fshFile": "mii-pr-se-hpo-assessment.fsh",
     "startLine": 1,
     "endLine": 48
-  },
-  {
-    "outputFile": "StructureDefinition-mii-pr-se-studie.json",
-    "fshName": "MII_PR_SE_Studie",
-    "fshType": "Profile",
-    "fshFile": "mii-pr-se-studie.fsh",
-    "startLine": 1,
-    "endLine": 12
   },
   {
     "outputFile": "StructureDefinition-mii-pr-se-studieneinschluss-anfrage.json",
@@ -1003,7 +979,7 @@
     "outputFile": "ValueSet-mii-vs-se-syndrome-category.json",
     "fshName": "SyndromeCategoryVS",
     "fshType": "ValueSet",
-    "fshFile": "extensions\\ext-syndrome-category.fsh",
+    "fshFile": "extensions/ext-syndrome-category.fsh",
     "startLine": 17,
     "endLine": 27
   },
