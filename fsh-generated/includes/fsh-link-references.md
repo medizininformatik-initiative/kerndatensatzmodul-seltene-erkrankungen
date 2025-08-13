@@ -26,6 +26,7 @@
 [observation-echo-mv]: Observation-observation-echo-mv.html
 [example-eds-excluded-clinical]: Condition-example-eds-excluded-clinical.html
 [MIIProfileSEBehaarung]: StructureDefinition-hairiness-profile.html
+[family-history-001]: FamilyMemberHistory-family-history-001.html
 [FastingStatus]: StructureDefinition-fastingstatus-profile.html
 [failure-to-thrive]: Observation-failure-to-thrive.html
 [procedure-gentherapy-001]: Procedure-procedure-gentherapy-001.html
@@ -66,7 +67,9 @@
 [mii-exa-se-symptom-condition]: Condition-mii-exa-se-symptom-condition.html
 [MII_LM_SE]: StructureDefinition-mii-lm-se.html
 [MII_PR_SE_ClinicalDiagnosis]: StructureDefinition-mii-pr-se-clinical-diagnosis.html
+[MII_PR_SE_Familienanamnese]: StructureDefinition-mii-pr-se-familienanamnese.html
 [MII_PR_SE_GeneticDiagnosis]: StructureDefinition-mii-pr-se-genetic-diagnosis.html
+[MII_PR_SE_Studie]: StructureDefinition-mii-pr-se-studie.html
 [MII_PR_SE_Studieneinschluss_Anfrage]: StructureDefinition-mii-pr-se-studieneinschluss-anfrage.html
 [MII_PR_SE_Therapieempfehlung_Kombination]: StructureDefinition-mii-pr-se-therapieempfehlung-kombination.html
 [MII_PR_SE_Therapieempfehlung]: StructureDefinition-mii-pr-se-therapieempfehlung.html
@@ -81,6 +84,7 @@
 [HPOAgeOfOnsetValueSet]: ValueSet-mii-vs-se-hpo-age-of-onset.html
 [HPOInheritancePatternValueSet]: ValueSet-mii-vs-se-hpo-inheritance-pattern.html
 [PenetranceValueSet]: ValueSet-mii-vs-se-penetrance.html
+[mii-exa-se-familienanamnese]: FamilyMemberHistory-mii-exa-se-familienanamnese.html
 [symptom-mitral-regurg]: Observation-symptom-mitral-regurg.html
 [example-cf-genetic]: Condition-example-cf-genetic.html
 [example-cf-clinical]: Condition-example-cf-clinical.html
@@ -95,6 +99,7 @@
 [SkinPhototypeFinding]: ValueSet-2.16.840.1.113883.3.1937.777.30.11.68--20240620133122.html
 [example-sma-excluded-genetic]: Condition-example-sma-excluded-genetic.html
 [molgen-diagnostic-implication-sma]: DiagnosticReport-molgen-diagnostic-implication-sma.html
+[bundle-sma-complete]: Bundle-bundle-sma-complete.html
 [molgen-sma-negative]: DiagnosticReport-molgen-sma-negative.html
 [condition-sma-clinical]: Condition-condition-sma-clinical.html
 [condition-sma-confirmed]: Condition-condition-sma-confirmed.html

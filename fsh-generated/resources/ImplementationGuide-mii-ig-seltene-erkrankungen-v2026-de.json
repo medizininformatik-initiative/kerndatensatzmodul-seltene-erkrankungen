@@ -295,6 +295,14 @@
       },
       {
         "reference": {
+          "reference": "FamilyMemberHistory/family-history-001"
+        },
+        "name": "Familienanamnese - Urgroßmutter mit Muskelerkrankung",
+        "description": "Urgroßmutter mit unbekannter Muskelerkrankung",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-familienanamnese"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/fastingstatus-profile"
         },
         "name": "Fasting status of the patient",
@@ -615,10 +623,26 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-se-familienanamnese"
+        },
+        "name": "MII PR SE Familienanamnese",
+        "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-se-genetic-diagnosis"
         },
         "name": "MII PR SE Genetic Diagnosis",
         "description": "Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and links to MolGen variant/diagnostic implication resources. This profile is used when a rare disease diagnosis has been confirmed through genetic testing.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-se-studie"
+        },
+        "name": "MII PR SE Studie",
+        "description": "SE Studie",
         "exampleBoolean": false
       },
       {
@@ -735,6 +759,14 @@
       },
       {
         "reference": {
+          "reference": "FamilyMemberHistory/mii-exa-se-familienanamnese"
+        },
+        "name": "mii-exa-se-familienanamnese",
+        "description": "Example Patient Family Anamnesis",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-familienanamnese"
+      },
+      {
+        "reference": {
           "reference": "Observation/symptom-mitral-regurg"
         },
         "name": "Mitralklappeninsuffizienz",
@@ -843,6 +875,14 @@
         },
         "name": "SMA Diagnostische Implikation - MolGen",
         "description": "Diagnostischer Bericht zur SMA-Genetik",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/bundle-sma-complete"
+        },
+        "name": "SMA Fallbeispiel - Vollständiges Transaction Bundle",
+        "description": "Transaction Bundle mit allen Ressourcen für den SMA Fall inkl. Diagnoseverlauf",
         "exampleBoolean": true
       },
       {

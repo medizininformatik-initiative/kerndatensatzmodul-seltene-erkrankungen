@@ -1,0 +1,64 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-se-familienanamnese",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-familienanamnese",
+  "version": "2026.0.0-ballot",
+  "name": "MII_PR_SE_Familienanamnese",
+  "title": "MII PR SE Familienanamnese",
+  "status": "draft",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "FamilyMemberHistory",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "FamilyMemberHistory.extension",
+        "path": "FamilyMemberHistory.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "FamilyMemberHistory.extension:vonSEBetroffen",
+        "path": "FamilyMemberHistory.extension",
+        "sliceName": "vonSEBetroffen",
+        "short": "Gibt an, ob das Familienmitglied von der gleichen seltenen Erkrankung betroffen ist",
+        "definition": "Extension zur Angabe, ob ein Familienmitglied von der gleichen seltenen Erkrankung betroffen ist wie der Patient",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-se-betroffen"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

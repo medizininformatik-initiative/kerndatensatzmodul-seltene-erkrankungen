@@ -1,5 +1,6 @@
 Output File                                                          Name                                      Type        FSH File                                      Lines
 Bundle-bundle-marfan-complete.json                                   bundle-marfan-complete                    Instance    marfan-transaction-bundle.fsh                 3 - 124
+Bundle-bundle-sma-complete.json                                      bundle-sma-complete                       Instance    sma-transaction-bundle.fsh                    3 - 129
 CarePlan-mii-exa-se-therapieplan.json                                mii-exa-se-therapieplan                   Instance    mii-pr-se-therapieplan.fsh                    93 - 106
 ClinicalImpression-clinical-impression-cardiology.json               clinical-impression-cardiology            Instance    marfan-example-resources.fsh                  292 - 321
 ClinicalImpression-clinical-impression-erstvorstellung.json          clinical-impression-erstvorstellung       Instance    sma-example-resources.fsh                     279 - 301
@@ -39,6 +40,8 @@ Encounter-encounter-ophthalmology.json                               encounter-o
 Encounter-encounter-screening-001.json                               encounter-screening-001                   Instance    sma-example-resources.fsh                     330 - 341
 Encounter-encounter-stationaer-001.json                              encounter-stationaer-001                  Instance    sma-example-resources.fsh                     357 - 369
 Encounter-encounter-surgery-planned.json                             encounter-surgery-planned                 Instance    marfan-example-resources.fsh                  368 - 380
+FamilyMemberHistory-family-history-001.json                          family-history-001                        Instance    sma-example-resources.fsh                     87 - 98
+FamilyMemberHistory-mii-exa-se-familienanamnese.json                 mii-exa-se-familienanamnese               Instance    mii-exa-se-familienanamnese.fsh               1 - 20
 MedicationStatement-medication-losartan.json                         medication-losartan                       Instance    marfan-example-resources.fsh                  271 - 289
 Observation-anteverted-nares.json                                    anteverted-nares                          Instance    hpo-observation-examples.fsh                  100 - 113
 Observation-aortic-root-dilatation.json                              aortic-root-dilatation                    Instance    hpo-observation-examples.fsh                  8 - 24
@@ -103,8 +106,10 @@ StructureDefinition-mii-pr-se-bodymassindex.json                     MII_PR_SE_B
 StructureDefinition-mii-pr-se-clinical-diagnosis.json                MII_PR_SE_ClinicalDiagnosis               Profile     mii-pr-se-clinical-diagnosis.fsh              2 - 62
 StructureDefinition-mii-pr-se-clinical-impression.json               MII_PR_SE_ClinicalImpression              Profile     mii-pr-se-clinical-impression.fsh             1 - 98
 StructureDefinition-mii-pr-se-diagnosis.json                         MII_PR_SE_Diagnose                        Profile     mii-pr-se-diagnosis.fsh                       1 - 126
+StructureDefinition-mii-pr-se-familienanamnese.json                  MII_PR_SE_Familienanamnese                Profile     mii-pr-se-familienanamnese.fsh                1 - 14
 StructureDefinition-mii-pr-se-genetic-diagnosis.json                 MII_PR_SE_GeneticDiagnosis                Profile     mii-pr-se-genetic-diagnosis.fsh               2 - 77
 StructureDefinition-mii-pr-se-hpo-assessment.json                    MII_PR_SE_HPO_Assessment                  Profile     mii-pr-se-hpo-assessment.fsh                  1 - 48
+StructureDefinition-mii-pr-se-studie.json                            MII_PR_SE_Studie                          Profile     mii-pr-se-studie.fsh                          1 - 12
 StructureDefinition-mii-pr-se-studieneinschluss-anfrage.json         MII_PR_SE_Studieneinschluss_Anfrage       Profile     mii-pr-se-studieneinschluss-anfrage.fsh       1 - 51
 StructureDefinition-mii-pr-se-symptom-condition.json                 MII_PR_SE_Symptom_Condition               Profile     mii-pr-se-symptom-condition.fsh               1 - 87
 StructureDefinition-mii-pr-se-therapieempfehlung-kombination.json    MII_PR_SE_Therapieempfehlung_Kombination  Profile     mii-pr-se-therapieempfehlung-kombination.fsh  1 - 40
