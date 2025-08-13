@@ -21,6 +21,26 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category.coding.system",
+        "path": "Observation.category.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
+      },
+      {
+        "id": "Observation.category.coding.code",
+        "path": "Observation.category.coding.code",
+        "fixedCode": "vital-signs"
+      },
+      {
+        "id": "Observation.category.coding.display",
+        "path": "Observation.category.coding.display",
+        "patternString": "Vital Signs"
+      },
+      {
         "id": "Observation.code",
         "path": "Observation.code",
         "patternCodeableConcept": {
@@ -28,7 +48,7 @@
             {
               "code": "39156-5",
               "system": "http://loinc.org",
-              "display": "Body mass index"
+              "display": "Body mass index (BMI) [Ratio]"
             }
           ]
         }
@@ -36,33 +56,48 @@
       {
         "id": "Observation.subject",
         "path": "Observation.subject",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.encounter",
-        "path": "Observation.encounter",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.value[x]",
-        "path": "Observation.value[x]",
-        "min": 1,
         "type": [
           {
-            "code": "Quantity"
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
           }
         ],
         "mustSupport": true
       },
       {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x].unit",
+        "path": "Observation.value[x].unit",
+        "fixedString": "kg/m2"
+      },
+      {
         "id": "Observation.value[x].system",
         "path": "Observation.value[x].system",
-        "patternUri": "http://unitsofmeasure.org"
+        "fixedUri": "http://unitsofmeasure.org"
       },
       {
         "id": "Observation.value[x].code",
         "path": "Observation.value[x].code",
-        "patternCode": "1"
+        "fixedCode": "kg/m2"
       }
     ]
   }

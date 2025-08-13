@@ -4,15 +4,24 @@ Parent:      Observation
 Title:       "Body Mass Index (BMI) of the patient"
 Description: "Describes the Body Mass Index (BMI) of the patient."
 
-* code = http://loinc.org#39156-5 "Body mass index"
-* subject MS
 * status MS
 * status = #draft
-* encounter MS
-* value[x] 1..1 MS
+
+* category MS
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category" (exactly)
+* category.coding.code = #vital-signs (exactly)
+* category.coding.display = "Vital Signs"
+
+* code = http://loinc.org#39156-5 "Body mass index (BMI) [Ratio]"
+
+* subject MS
+* subject only Reference(Patient)
+
+* effective[x] only dateTime
 * value[x] only Quantity
-* valueQuantity.system = $UCUM 
-* valueQuantity.code = #1
+* valueQuantity.unit = "kg/m2" (exactly)
+* valueQuantity.system = $UCUM (exactly)
+* valueQuantity.code = #kg/m2 (exactly)
 
 
 Instance: mii-exa-se-bodymassindex
@@ -21,4 +30,5 @@ Usage: #example
 Title: "Body Mass Index (BMI) Example"
 Description: "Example of a Body Mass Index (BMI) observation for a patient."
 * valueQuantity.value = 22.5
+* effectiveDateTime = "1980-08-08"
 * status = #draft
