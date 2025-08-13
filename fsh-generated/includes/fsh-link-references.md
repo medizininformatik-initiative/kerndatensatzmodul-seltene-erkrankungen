@@ -10,6 +10,8 @@
 [observation-ast-001]: Observation-observation-ast-001.html
 [encounter-ophthalmology]: Encounter-encounter-ophthalmology.html
 [observation-leg-asymmetry]: Observation-observation-leg-asymmetry.html
+[mii-exa-se-bodymassindex]: Observation-mii-exa-se-bodymassindex.html
+[MII_PR_SE_Bodymassindex]: StructureDefinition-mii-pr-se-bodymassindex.html
 [molgen-variant-brca1-pathogenic]: Observation-molgen-variant-brca1-pathogenic.html
 [molgen-brca-panel]: DiagnosticReport-molgen-brca-panel.html
 [molgen-cf-diagnostic]: DiagnosticReport-molgen-cf-diagnostic.html

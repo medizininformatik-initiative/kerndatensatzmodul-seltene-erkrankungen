@@ -167,6 +167,22 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-se-bodymassindex"
+        },
+        "name": "Body Mass Index (BMI) Example",
+        "description": "Example of a Body Mass Index (BMI) observation for a patient.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-bodymassindex"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-se-bodymassindex"
+        },
+        "name": "Body Mass Index (BMI) of the patient",
+        "description": "Describes the Body Mass Index (BMI) of the patient.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Observation/molgen-variant-brca1-pathogenic"
         },
         "name": "BRCA1 Pathogene Variante - MolGen",

@@ -13,6 +13,7 @@ Description: "Therapieempfehlung für eine medikamentöse Systemische Therapie"
     completed: Abgeschlossen oder abgebrochen (Patient verstorben)"
 
 // TODO Constrain intent to proposal and option? (Option is needed for RequestGroup)
+* intent 1..1 MS
 * intent ^short = "proposal | option"
 * intent ^definition = "Da nur Empfehlungen abgegeben werden, wird hier typischerweise 'proposal' stehen. Es sei denn,
         diese Therapieempfehlung ist Teil einer RequestGroup (z.B. Kombinationstherapie). In dem Fall muss hier 'option' stehen."

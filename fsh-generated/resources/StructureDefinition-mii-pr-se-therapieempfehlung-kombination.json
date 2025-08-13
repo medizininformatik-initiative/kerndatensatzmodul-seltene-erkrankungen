@@ -85,13 +85,13 @@
         "id": "RequestGroup.status",
         "path": "RequestGroup.status",
         "definition": "Status der Umsetzung der Therapieempfehlung",
-        "comment": "\r\n    draft: Nicht umgesetzt, \r\n    active: In Umsetzung, \r\n    completed: Abgeschlossen oder abgebrochen (Patient verstorben)"
+        "comment": "\n    draft: Nicht umgesetzt, \n    active: In Umsetzung, \n    completed: Abgeschlossen oder abgebrochen (Patient verstorben)"
       },
       {
         "id": "RequestGroup.intent",
         "path": "RequestGroup.intent",
         "short": "proposal | option",
-        "definition": "Da nur Empfehlungen abgegeben werden, wird hier typischerweise 'proposal' stehen. Es sei denn,\r\ndiese Therapieempfehlung ist selbst nochmal Teil einer RequestGroup. In dem Fall muss hier 'option' stehen.",
+        "definition": "Da nur Empfehlungen abgegeben werden, wird hier typischerweise 'proposal' stehen. Es sei denn,\ndiese Therapieempfehlung ist selbst nochmal Teil einer RequestGroup. In dem Fall muss hier 'option' stehen.",
         "mustSupport": true
       },
       {
