@@ -6,7 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 
 ## {{page-title}}
 
-Dieses Profil beschreibt eine klinische Studie im Kontext seltener Erkrankungen. Es ermöglicht die strukturierte Erfassung von Studieninformationen, einschließlich Studien-ID, Status, Zeitraum und anderen relevanten Details für die Forschung bei seltenen Erkrankungen.
+Dieses Profil beschreibt eine klinische Studie im Kontext seltener Erkrankungen. Es ermöglicht die strukturierte Erfassung von Studieninformationen, einschließlich Studien-ID, Status, Zeitraum und anderen relevanten Details für die Forschung bei seltenen Erkrankungen. Es ist angelehnt an die MTB-Implementierung (Molekulares Tumorboard).
 
 @```
 from 

@@ -6,7 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 
 ## {{page-title}}
 
-Dieses Profil beschreibt eine Anfrage für den Einschluss eines Patienten mit seltener Erkrankung in eine klinische Studie. Es ermöglicht die strukturierte Erfassung von Studienanfragen und deren Status im Rahmen der Versorgung und Forschung bei seltenen Erkrankungen.
+Dieses Profil beschreibt eine Anfrage für den Einschluss eines Patienten mit seltener Erkrankung in eine klinische Studie. Es ermöglicht die strukturierte Erfassung von Studienanfragen und deren Status im Rahmen der Versorgung und Forschung bei seltenen Erkrankungen. Es ist angelehnt an die MTB-Implementierung (Molekulares Tumorboard).
 
 @```
 from 

@@ -6,8 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 
 ## {{page-title}}
 
-Dieses Profil beschreibt eine Histologie-Grading im Rahmen in der Onkologie.
-Dabei wird insbesondere die morphologische Dedifferenzierung des Gewebes bewertet.
+Dieses Profil beschreibt die Waist-To-Hip-Ratio eines Patienten. Das Profil ist nicht spezifisch für Seltene Erkrankungen, wurde aber bisher nicht implementiert.
 
 
 

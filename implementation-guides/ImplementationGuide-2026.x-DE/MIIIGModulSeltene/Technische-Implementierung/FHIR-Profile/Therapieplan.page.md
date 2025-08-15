@@ -6,7 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 
 ## {{page-title}}
 
-Dieses Profil beschreibt einen Therapieplan für Patienten mit Seltenen Erkrankungen.
+Dieses Profil beschreibt einen Therapieplan für Patienten mit Seltenen Erkrankungen, entsprechend der Vorgabe aus dem Modellvorhaben Genomsequenzierung. Es ist angelehnt an die MTB-Implementierung (Molekulares Tumorboard).
 
 
 

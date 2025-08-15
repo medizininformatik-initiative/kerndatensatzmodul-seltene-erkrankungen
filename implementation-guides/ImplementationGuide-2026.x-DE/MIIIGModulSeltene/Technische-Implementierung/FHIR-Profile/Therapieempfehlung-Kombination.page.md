@@ -6,7 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 
 ## {{page-title}}
 
-Dieses Profil beschreibt eine kombinierte Therapieempfehlung für Patienten mit seltenen Erkrankungen. Es ermöglicht die strukturierte Erfassung von Therapieempfehlungen, die mehrere koordinierte Behandlungsansätze umfassen und gemeinsam angewendet werden sollen.
+Dieses Profil beschreibt eine kombinierte Therapieempfehlung für Patienten mit seltenen Erkrankungen. Es ermöglicht die strukturierte Erfassung von Therapieempfehlungen, die mehrere koordinierte Behandlungsansätze umfassen und gemeinsam angewendet werden sollen. Es ist angelehnt an die MTB-Implementierung (Molekulares Tumorboard).
 
 @```
 from 

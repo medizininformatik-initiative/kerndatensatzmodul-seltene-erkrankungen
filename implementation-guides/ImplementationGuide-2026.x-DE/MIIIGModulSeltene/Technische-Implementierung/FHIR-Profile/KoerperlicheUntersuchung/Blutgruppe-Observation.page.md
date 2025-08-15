@@ -6,7 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 
 ## {{page-title}}
 
-Dieses Profil beschreibt die Erfassung der Blutgruppe (AB0 und Rhesusfaktor) im Kontext seltener Erkrankungen. Die Blutgruppe kann für bestimmte seltene Erkrankungen relevante Informationen liefern und ist Teil der Basisdiagnostik.
+Dieses Profil beschreibt die Erfassung der Blutgruppe (AB0 und Rhesusfaktor) im Kontext seltener Erkrankungen. Die Blutgruppe kann für bestimmte seltene Erkrankungen relevante Informationen liefern und ist Teil der Basisdiagnostik. Das Profil ist nicht spezifisch für Seltene Erkrankungen, wurde aber bisher nicht implementiert.
 
 @```
 from 
