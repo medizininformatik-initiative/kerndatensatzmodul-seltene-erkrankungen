@@ -33,7 +33,7 @@ Description: "Profile for clinical impressions in the context of rare diseases. 
 * summary MS // string of the results
 * finding MS
 // finding for clinical diagnosis
-* 
+
 * supportingInfo MS
 * note MS
 
