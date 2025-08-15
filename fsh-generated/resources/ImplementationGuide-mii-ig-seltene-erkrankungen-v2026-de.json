@@ -287,27 +287,11 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/hairiness-profile"
-        },
-        "name": "Example Patient Profile",
-        "description": "Example of a profile of Patient",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "FamilyMemberHistory/family-history-001"
         },
         "name": "Familienanamnese - Urgroßmutter mit Muskelerkrankung",
         "description": "Urgroßmutter mit unbekannter Muskelerkrankung",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-familienanamnese"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/fastingstatus-profile"
-        },
-        "name": "Fasting status of the patient",
-        "description": "Describes whether the patient is currently in fasted state.",
-        "exampleBoolean": false
       },
       {
         "reference": {
@@ -615,6 +599,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-se-blutgruppe"
+        },
+        "name": "MII PR SE Blutgruppe",
+        "description": "Observation-Profil für die Erfassung der Blutgruppe (AB0 und Rhesusfaktor) im Kontext seltener Erkrankungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-se-clinical-diagnosis"
         },
         "name": "MII PR SE Clinical Diagnosis",
@@ -687,14 +679,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-diagnosis"
-        },
-        "name": "MII Profile SE Diagnosis",
-        "description": "Profile for rare disease diagnoses based on the MII diagnosis profile. This profile extends the core MII diagnosis functionality with rare disease-specific constraints and requirements.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/mii-pr-se-hpo-assessment"
         },
         "name": "MII Profile SE HPO Assessment",
@@ -707,6 +691,14 @@
         },
         "name": "MII Profile SE Symptom Condition",
         "description": "Profile for symptom-based conditions in the context of rare diseases. This profile captures symptomatic conditions with temporal characteristics, complementing the HPO Assessment Observation profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-se-blutgruppe"
+        },
+        "name": "MII VS SE Blutgruppe",
+        "description": "ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List für 882-1",
         "exampleBoolean": false
       },
       {
@@ -831,35 +823,11 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/ProfileObservationHauttyp"
-        },
-        "name": "Profile - Observation - Hauttyp",
-        "description": "Dieses Profil beschreibt einen Hauttyp in der Medizininformatik-Initiative.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "Condition/mii-exa-se-diagnosis"
-        },
-        "name": "Rare Disease Diagnosis Example",
-        "description": "Example of a rare disease diagnosis using ORPHA codes for Marfan syndrome.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
-      },
-      {
-        "reference": {
           "reference": "Observation/recurrent-respiratory-infections"
         },
         "name": "Rezidivierende Atemwegsinfekte - HPO-kodiert",
         "description": "Häufige respiratorische Infektionen bei CF",
         "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/2.16.840.1.113883.3.1937.777.30.11.68--20240620133122"
-        },
-        "name": "Skin phototype finding",
-        "description": "Skin phototype finding",
-        "exampleBoolean": false
       },
       {
         "reference": {
@@ -999,14 +967,6 @@
       },
       {
         "reference": {
-          "reference": "Condition/mii-exa-se-syndrome-diagnosis"
-        },
-        "name": "Syndrome Diagnosis Example",
-        "description": "Example of a syndrome diagnosis for CHARGE syndrome with phenotypic patterns and syndrome categorization.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis"
-      },
-      {
-        "reference": {
           "reference": "CarePlan/mii-exa-se-therapieplan"
         },
         "name": "Therapieplan Example",
@@ -1083,22 +1043,6 @@
         },
         "name": "VonSEBetroffen",
         "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-se-waist-to-hip-ratio"
-        },
-        "name": "Waist-to-Hip Ratio Example",
-        "description": "Example of a Waist-to-Hip Ratio observation for a patient.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-waist-to-hip-ratio"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-se-waist-to-hip-ratio"
-        },
-        "name": "Waist-to-Hip Ratio of the patient",
-        "description": "Describes the Waist-to-Hip Ratio of the patient.",
         "exampleBoolean": false
       }
     ],

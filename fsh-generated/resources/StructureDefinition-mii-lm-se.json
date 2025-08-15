@@ -19,6 +19,12 @@
   ],
   "description": "MII LogicalModel Modul Seltene Erkraknungen",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "FHIR",
+      "name": "SE LogicalModel FHIR Mapping"
+    }
+  ],
   "kind": "logical",
   "abstract": false,
   "type": "https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/LogicalModel/SE",
@@ -43,6 +49,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition | Observation | ClinicalImpression"
+          }
         ]
       },
       {
@@ -55,6 +67,12 @@
         "type": [
           {
             "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ClinicalImpression.effectiveDateTime"
           }
         ]
       },
@@ -69,6 +87,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ClinicalImpression.reasonCode"
+          }
         ]
       },
       {
@@ -81,6 +105,12 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://purl.obolibrary.org/obo/hp.owl')) | Condition.where(code.coding.exists(system='http://purl.obolibrary.org/obo/hp.owl'))"
           }
         ]
       },
@@ -95,6 +125,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code | Condition.code"
+          }
         ]
       },
       {
@@ -107,6 +143,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.interpretation | Condition.verificationStatus"
           }
         ]
       },
@@ -121,6 +163,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code.coding.version | Condition.code.coding.version"
+          }
         ]
       },
       {
@@ -133,6 +181,12 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.onset[x] | Observation.effective[x]"
           }
         ]
       },
@@ -147,6 +201,12 @@
           {
             "code": "dateTime"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.onsetDateTime | Condition.onsetPeriod | Observation.effectivePeriod"
+          }
         ]
       },
       {
@@ -159,6 +219,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-ext-se-onset-age').valueCodeableConcept"
           }
         ]
       },
@@ -173,6 +239,12 @@
           {
             "code": "integer"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.onsetAge | Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-ext-se-onset-age').valueAge"
+          }
         ]
       },
       {
@@ -185,6 +257,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-ext-se-phenotypic-pattern').valueCodeableConcept | Observation.interpretation"
           }
         ]
       },
@@ -199,6 +277,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.where(category.coding.exists(code='clinical'))"
+          }
         ]
       },
       {
@@ -211,6 +295,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-ext-se-onset-age').valueCodeableConcept"
           }
         ]
       },
@@ -225,6 +315,12 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate').valueDateTime"
+          }
         ]
       },
       {
@@ -237,6 +333,12 @@
         "type": [
           {
             "code": "integer"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.onsetAge"
           }
         ]
       },
@@ -251,6 +353,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.where(category.coding.exists(code='genetic'))"
+          }
         ]
       },
       {
@@ -263,6 +371,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-ext-se-onset-age').valueCodeableConcept"
           }
         ]
       },
@@ -277,11 +391,17 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate').valueDateTime"
+          }
         ]
       },
       {
-        "id": "SE.AnamneseUndDiagnostik.GenetischeDiagnose.AlterKlinischeDia",
-        "path": "SE.AnamneseUndDiagnostik.GenetischeDiagnose.AlterKlinischeDia",
+        "id": "SE.AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
+        "path": "SE.AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
         "short": "Alter bei genetischer SE-Diagnose",
         "definition": "Alter, in dem die genetische SE-Diagnose gestellt wurde.",
         "min": 0,
@@ -289,6 +409,12 @@
         "type": [
           {
             "code": "integer"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.onsetAge"
           }
         ]
       },
@@ -303,6 +429,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-ex-se-penetrance').valueCodeableConcept"
+          }
         ]
       },
       {
@@ -315,6 +447,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.method"
           }
         ]
       },
@@ -329,6 +467,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation"
+          }
         ]
       },
       {
@@ -341,6 +485,12 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='39156-5'))"
           }
         ]
       },
@@ -355,6 +505,12 @@
           {
             "code": "decimal"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity.value"
+          }
         ]
       },
       {
@@ -367,6 +523,12 @@
         "type": [
           {
             "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
           }
         ]
       },
@@ -381,6 +543,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='882-1')).valueCodeableConcept"
+          }
         ]
       },
       {
@@ -393,6 +561,12 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Patient"
           }
         ]
       },
@@ -407,6 +581,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Patient.deceased[x]"
+          }
         ]
       },
       {
@@ -419,6 +599,12 @@
         "type": [
           {
             "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Patient.deceasedDateTime"
           }
         ]
       },
@@ -433,6 +619,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate')"
+          }
         ]
       },
       {
@@ -445,6 +637,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.where(category.coding.exists(code='cause-of-death')).code"
           }
         ]
       },
@@ -459,6 +657,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory"
+          }
         ]
       },
       {
@@ -471,6 +675,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory.relationship"
           }
         ]
       },
@@ -485,6 +695,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory.sex"
+          }
         ]
       },
       {
@@ -497,6 +713,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory.condition.code"
           }
         ]
       },
@@ -511,6 +733,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory.condition.code"
+          }
         ]
       },
       {
@@ -523,6 +751,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-ex-se-penetrance').valueCodeableConcept"
           }
         ]
       },
@@ -537,6 +771,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory.deceasedBoolean"
+          }
         ]
       },
       {
@@ -549,6 +789,12 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan | MedicationRequest | ResearchStudy"
           }
         ]
       },
@@ -563,6 +809,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "MedicationRequest | ServiceRequest"
+          }
         ]
       },
       {
@@ -575,6 +827,12 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "MedicationRequest.extension"
           }
         ]
       },
@@ -589,6 +847,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "MedicationRequest.extension.where(url='http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal').valueBoolean"
+          }
         ]
       },
       {
@@ -601,6 +865,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "MedicationRequest.medicationCodeableConcept"
           }
         ]
       },
@@ -615,6 +885,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure | MedicationStatement"
+          }
         ]
       },
       {
@@ -627,6 +903,12 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ResearchStudy | ServiceRequest.where(code.coding.exists(code='study-enrollment'))"
           }
         ]
       },
@@ -641,6 +923,12 @@
           {
             "code": "Identifier"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ResearchStudy.identifier"
+          }
         ]
       },
       {
@@ -653,6 +941,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ResearchStudy.status"
           }
         ]
       },
@@ -670,6 +964,12 @@
               "http://hl7.org/fhir/StructureDefinition/organization-period"
             ]
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ResearchStudy.period"
+          }
         ]
       },
       {
@@ -682,6 +982,12 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan"
           }
         ]
       },
@@ -696,6 +1002,12 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan.period.start"
+          }
         ]
       },
       {
@@ -709,6 +1021,12 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan.period.end"
+          }
         ]
       },
       {
@@ -721,6 +1039,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan.activity.outcomeCodeableConcept"
           }
         ]
       }

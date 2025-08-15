@@ -25,9 +25,7 @@
 [observation-echo-aortic]: Observation-observation-echo-aortic.html
 [observation-echo-mv]: Observation-observation-echo-mv.html
 [example-eds-excluded-clinical]: Condition-example-eds-excluded-clinical.html
-[MIIProfileSEBehaarung]: StructureDefinition-hairiness-profile.html
 [family-history-001]: FamilyMemberHistory-family-history-001.html
-[FastingStatus]: StructureDefinition-fastingstatus-profile.html
 [failure-to-thrive]: Observation-failure-to-thrive.html
 [procedure-gentherapy-001]: Procedure-procedure-gentherapy-001.html
 [procedure-aortic-planned]: Procedure-procedure-aortic-planned.html
@@ -66,6 +64,7 @@
 [Penetrance]: StructureDefinition-mii-ex-se-penetrance.html
 [mii-exa-se-symptom-condition]: Condition-mii-exa-se-symptom-condition.html
 [MII_LM_SE]: StructureDefinition-mii-lm-se.html
+[MII_PR_SE_Blutgruppe]: StructureDefinition-mii-pr-se-blutgruppe.html
 [MII_PR_SE_ClinicalDiagnosis]: StructureDefinition-mii-pr-se-clinical-diagnosis.html
 [MII_PR_SE_Familienanamnese]: StructureDefinition-mii-pr-se-familienanamnese.html
 [MII_PR_SE_GeneticDiagnosis]: StructureDefinition-mii-pr-se-genetic-diagnosis.html
@@ -75,9 +74,9 @@
 [MII_PR_SE_Therapieempfehlung]: StructureDefinition-mii-pr-se-therapieempfehlung.html
 [MII_PR_SE_Therapieplan]: StructureDefinition-mii-pr-se-therapieplan.html
 [MII_PR_SE_ClinicalImpression]: StructureDefinition-mii-pr-se-clinical-impression.html
-[MII_PR_SE_Diagnose]: StructureDefinition-mii-pr-se-diagnosis.html
 [MII_PR_SE_HPO_Assessment]: StructureDefinition-mii-pr-se-hpo-assessment.html
 [MII_PR_SE_Symptom_Condition]: StructureDefinition-mii-pr-se-symptom-condition.html
+[MII_VS_SE_Blutgruppe]: ValueSet-mii-vs-se-blutgruppe.html
 [ClinicalDiagnosisCategoryVS]: ValueSet-mii-vs-se-clinical-diagnosis-category.html
 [MII_VS_SE_Empfehlung_StatusBegruendung]: ValueSet-mii-vs-se-empfehlung-status-begruendung.html
 [GeneticBasisValueSet]: ValueSet-mii-vs-se-genetic-basis.html
@@ -93,10 +92,7 @@
 [example-noonan-clinical-diagnosis]: Condition-example-noonan-clinical-diagnosis.html
 [OnsetAge]: StructureDefinition-mii-ext-se-onset-age.html
 [PhenotypicPattern]: StructureDefinition-mii-ext-se-phenotypic-pattern.html
-[ProfileObservationHauttyp]: StructureDefinition-ProfileObservationHauttyp.html
-[mii-exa-se-diagnosis]: Condition-mii-exa-se-diagnosis.html
 [recurrent-respiratory-infections]: Observation-recurrent-respiratory-infections.html
-[SkinPhototypeFinding]: ValueSet-2.16.840.1.113883.3.1937.777.30.11.68--20240620133122.html
 [example-sma-excluded-genetic]: Condition-example-sma-excluded-genetic.html
 [molgen-diagnostic-implication-sma]: DiagnosticReport-molgen-diagnostic-implication-sma.html
 [bundle-sma-complete]: Bundle-bundle-sma-complete.html
@@ -114,7 +110,6 @@
 [encounter-stationaer-001]: Encounter-encounter-stationaer-001.html
 [SyndromeCategory]: StructureDefinition-mii-ext-se-syndrome-category.html
 [SyndromeCategoryVS]: ValueSet-mii-vs-se-syndrome-category.html
-[mii-exa-se-syndrome-diagnosis]: Condition-mii-exa-se-syndrome-diagnosis.html
 [mii-exa-se-therapieplan]: CarePlan-mii-exa-se-therapieplan.html
 [symptom-chest-pain]: Observation-symptom-chest-pain.html
 [observation-plt-001]: Observation-observation-plt-001.html
@@ -125,5 +120,3 @@
 [vsd]: Observation-vsd.html
 [VonSEBetroffenVS]: ValueSet-von-se-betroffen-vs.html
 [VonSEBetroffen]: StructureDefinition-von-se-betroffen.html
-[mii-exa-se-waist-to-hip-ratio]: Observation-mii-exa-se-waist-to-hip-ratio.html
-[MII_PR_SE_Waist_To_Hip_Ratio]: StructureDefinition-mii-pr-se-waist-to-hip-ratio.html

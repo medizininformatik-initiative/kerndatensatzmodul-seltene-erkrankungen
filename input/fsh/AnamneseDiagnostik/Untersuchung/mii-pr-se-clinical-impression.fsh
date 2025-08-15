@@ -12,21 +12,28 @@ Description: "Profile for clinical impressions in the context of rare diseases. 
 * id MS
 * meta MS
 * identifier MS
-* status MS
+* status MS 
+// Status wird vsl immer nachdokumentiert als completed
+
 * code MS
+// need code for rare disease exam?
 * description MS
 * subject MS
-* encounter MS
+* subject 1..1
+* subject only Reference(Patient)
+* encounter 0..1 MS
+
 * effective[x] MS
 * date MS
-* assessor MS
 * problem MS
+
 * investigation MS
-* protocol MS
-* summary MS
+* investigation.code MS
+// Slicing for Labor / MolGen / Körperliche Untesuchung / Phänotypisierung etc. 
+* summary MS // string of the results
 * finding MS
-* prognosisCodeableConcept MS
-* prognosisReference MS
+// finding for clinical diagnosis
+* 
 * supportingInfo MS
 * note MS
 
@@ -78,11 +85,6 @@ Description: "Profile for clinical impressions in the context of rare diseases. 
 * finding.itemReference ^short = "Referenz auf klinischen Befund"
 * finding.basis ^short = "Grundlage für den Befund"
 
-// Prognosis constraints
-* prognosisCodeableConcept ^short = "Kodierte Prognose"
-* prognosisCodeableConcept ^definition = "Kodierte Beurteilung der Prognose"
-* prognosisReference only Reference(RiskAssessment)
-* prognosisReference ^short = "Referenz auf detaillierte Prognose"
 
 // Supporting info constraints
 * supportingInfo only Reference(Observation or Condition or DiagnosticReport or DocumentReference)
