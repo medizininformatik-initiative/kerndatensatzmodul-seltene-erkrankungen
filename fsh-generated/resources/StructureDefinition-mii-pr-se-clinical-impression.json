@@ -104,14 +104,6 @@
         "path": "ClinicalImpression.problem",
         "short": "Relevante Probleme/Erkrankungen",
         "definition": "Eine Liste der relevanten Probleme/Erkrankungen für diesen Patienten, die die klinische Beurteilung beeinflussen können",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Condition"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
