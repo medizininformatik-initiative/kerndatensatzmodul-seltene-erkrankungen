@@ -19,6 +19,20 @@
   ],
   "description": "MII LogicalModel Modul Seltene Erkraknungen",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "FHIR",
+      "name": "SE LogicalModel FHIR Mapping"
+    },
+    {
+      "identity": "NARSE",
+      "name": "SE LogicalModel NARSE Mapping"
+    },
+    {
+      "identity": "ERDRICDS",
+      "name": "SE LogicalModel ERDRI CDS Mapping"
+    }
+  ],
   "kind": "logical",
   "abstract": false,
   "type": "https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/LogicalModel/SE",
@@ -43,6 +57,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": ""
+          }
         ]
       },
       {
@@ -55,6 +75,20 @@
         "type": [
           {
             "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": ""
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -95,6 +129,20 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": ""
+          },
+          {
+            "identity": "NARSE",
+            "map": "AnamneseUndDiagnostik.Phänotyp:HPOTerm"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nur beim nicht diagnostiziertem Fall unter Diagnose.NichtDiagnostizierterFall"
+          }
         ]
       },
       {
@@ -107,6 +155,20 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": ""
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -121,6 +183,20 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": ""
+          },
+          {
+            "identity": "NARSE",
+            "map": "Katalog mit vorhanden unter AnamneseUndDiagnostik.Phänotyp:HPOTerm"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -133,6 +209,12 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
           }
         ]
       },
@@ -147,6 +229,20 @@
           {
             "code": "dateTime"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Krankheitsverlauf.AlterBeiKrankheitsbeginn unter Datum(TT/MM/JJJJ) "
+          }
         ]
       },
       {
@@ -159,6 +255,20 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Ähnlich zu AlterBeiErstenSymptomen:AuswahlDerAltersangabe; allerdings anderes ValueSet"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Krankheitsverlauf.AlterBeiKrankheitsbeginn; aber anderes ValueSet"
           }
         ]
       },
@@ -173,6 +283,20 @@
           {
             "code": "integer"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "AnamneseUndDiagnostik.AlterBeiErstenSymptomen:Alter "
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -185,6 +309,20 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -199,6 +337,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          }
         ]
       },
       {
@@ -211,6 +355,20 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Ähnlich zu AnamneseUndDiagnostikAlterBeiDiagnose:AuswahlDerAltersangabe; allerdings anderes ValueSet"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Ähnlich zu Krankheitsverlauf.AlterBeiDiagnose; allerdings anderes ValueSet"
           }
         ]
       },
@@ -225,6 +383,20 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Krankheitsverlauf.AlterBeiDiagnose unter Datum(TT/MM/JJJJ)"
+          }
         ]
       },
       {
@@ -237,6 +409,20 @@
         "type": [
           {
             "code": "integer"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "AnamneseUndDiagnostik.AlterBeiDiagnose:Alter"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -251,6 +437,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          }
         ]
       },
       {
@@ -263,6 +455,20 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Ähnlich zu AnamneseUndDiagnostikAlterBeiDiagnose:AuswahlDerAltersangabe; allerdings anderes ValueSet und nicht auf genetische Diagnose beschränkt"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Ähnlich zu Krankheitsverlauf.AlterBeiDiagnose; allerdings anderes ValueSet und nicht auf genetische Diagnose beschränkt"
           }
         ]
       },
@@ -277,11 +483,25 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Krankheitsverlauf.AlterBeiDiagnose unter Datum(TT/MM/JJJJ), aber nicht auf genetische Diagnose beschränkt"
+          }
         ]
       },
       {
-        "id": "SE.AnamneseUndDiagnostik.GenetischeDiagnose.AlterKlinischeDia",
-        "path": "SE.AnamneseUndDiagnostik.GenetischeDiagnose.AlterKlinischeDia",
+        "id": "SE.AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
+        "path": "SE.AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
         "short": "Alter bei genetischer SE-Diagnose",
         "definition": "Alter, in dem die genetische SE-Diagnose gestellt wurde.",
         "min": 0,
@@ -289,6 +509,20 @@
         "type": [
           {
             "code": "integer"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Kann zu AnamneseUndDiagnostik.AlterBeiDiagnose:Alter zugeordnet werden; im NARSE jedoch nicht auf genetische Diagnose beschränkt"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -303,6 +537,20 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -315,6 +563,20 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "AnamneseUndDiagnostik.Diagnosestellung"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -329,6 +591,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          }
         ]
       },
       {
@@ -341,6 +609,16 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -355,6 +633,20 @@
           {
             "code": "decimal"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -367,6 +659,20 @@
         "type": [
           {
             "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -381,6 +687,20 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -393,6 +713,12 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
           }
         ]
       },
@@ -407,6 +733,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": ""
+          }
         ]
       },
       {
@@ -419,6 +751,20 @@
         "type": [
           {
             "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht direkt vorhanden, wird im NARSE nur durch PersönlicherUndFamiliärerHintergrund.Sterbealter abgebildet."
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Patientenstatus.Todeszeitpunkt"
           }
         ]
       },
@@ -433,6 +779,20 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "PersönlicherUndFamiliärerHintergrund.AnSeVerstorben "
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -445,6 +805,20 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "PersönlicherUndFamiliärerHintergrund.AndereTodesursache "
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -459,6 +833,16 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "PersönlicherUndFamiliärerHintergrund"
+          }
         ]
       },
       {
@@ -471,6 +855,20 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "PersönlicherUndFamiliärerHintergrund.BetroffeneFamilienangehörige:Verwandtschaftsbeziehung"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -485,6 +883,20 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -497,6 +909,20 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "PersönlicherUndFamiliärerHintergrund.BetroffeneFamilienangehörige:SelteneErkrankung"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -511,6 +937,20 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -523,6 +963,20 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -537,6 +991,20 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "PersönlicherUndFamiliärerHintergrund.BetroffeneFamilienangehörigeVerstorben?"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -549,6 +1017,16 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "AnamneseUndDiagnostik"
           }
         ]
       },
@@ -563,6 +1041,20 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -575,6 +1067,16 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -589,6 +1091,20 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -601,6 +1117,20 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -615,6 +1145,20 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "AnamneseUndDiagnostik.Therapiestatus"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -627,6 +1171,16 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -641,6 +1195,20 @@
           {
             "code": "Identifier"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -653,6 +1221,20 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -670,6 +1252,20 @@
               "http://hl7.org/fhir/StructureDefinition/organization-period"
             ]
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -682,6 +1278,16 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -696,6 +1302,20 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -709,6 +1329,20 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          }
         ]
       },
       {
@@ -721,6 +1355,20 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": " "
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
           }
         ]
       }
