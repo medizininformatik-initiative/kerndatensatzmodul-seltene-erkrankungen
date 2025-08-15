@@ -1,20 +1,18 @@
 ---
 parent: 
-topic: Specimen
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-waist-to-hip-ratio
+topic: Observation
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-blutgruppe
 ---
 
 ## {{page-title}}
 
-Dieses Profil beschreibt die Waist-To-Hip-Ratio eines Patienten. Das Profil ist nicht spezifisch für Seltene Erkrankungen, wurde aber bisher nicht implementiert.
-
-
+Dieses Profil beschreibt die Erfassung der Blutgruppe (AB0 und Rhesusfaktor) im Kontext seltener Erkrankungen. Die Blutgruppe kann für bestimmte seltene Erkrankungen relevante Informationen liefern und ist Teil der Basisdiagnostik. Das Profil ist nicht spezifisch für Seltene Erkrankungen, wurde aber bisher nicht implementiert.
 
 @```
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-waist-to-hip-ratio' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-blutgruppe' 
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
@@ -28,7 +26,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-waist-to-hip-ratio'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-blutgruppe'
         select
 	        Beschreibung: description
         with
@@ -38,7 +36,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-waist-to-hip-ratio' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-blutgruppe' 
         for 
             differential.element 
             where 
@@ -57,8 +55,8 @@ Mapping Datensatz zu FHIR
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Onkologie'
-    for differential.element where id.contains('Grading') 
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneErkrankungen'
+    for differential.element where id.contains('Blutgruppe') 
     select 
         Datensatz: short,
         Erklaerung: definition, 
@@ -68,24 +66,9 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
-
-@```
-from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading'  
-    for differential.element
-    where mapping.identity='oBDS'
-    select 
-        oBDS: mapping.map,
-        Definition: mapping.comment,
-        FHIR: path
-```
-
----
-
 **Suchparameter**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch in Kombination:
 
 1. Der Suchparameter ```_id``` MUSS unterstützt werden:
 
@@ -99,7 +82,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Beispiele:
     
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading```
+    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-blutgruppe```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -115,7 +98,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Beispiele:
 
-    ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005```
+    ```GET [base]/Observation?code=http://loinc.org|882-1```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
 
@@ -127,23 +110,7 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
-6. Der Suchparameter "focus" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?focus=Condition/example```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "focus" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-
-7. Der Suchparameter "encounter" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?encounter=Encounter/example```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-
-8. Der Suchparameter "date" MUSS unterstützt werden:
+6. Der Suchparameter "date" MUSS unterstützt werden:
 
     Beispiele:
 
@@ -151,16 +118,8 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
 
-9. Der Suchparameter "derived-from" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?derived-from=Observation/example```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-
 **Beispiele**
 
-{{json:mii-exa-se-waist-to-hip-ratio}}
+{{json:mii-exa-se-blutgruppe}}
 
 ---

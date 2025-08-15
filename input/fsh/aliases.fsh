@@ -33,3 +33,6 @@ Alias: $diagnoses-sct = https://www.medizininformatik-initiative.de/fhir/core/mo
 // MII Diagnose extensions
 Alias: $mii-ex-diagnose-feststellungsdatum = https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/mii-ex-diagnose-feststellungsdatum
 Alias: $MII_PR_Diagnose_Condition = https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose
+
+// FHIR observation related code systems
+Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category

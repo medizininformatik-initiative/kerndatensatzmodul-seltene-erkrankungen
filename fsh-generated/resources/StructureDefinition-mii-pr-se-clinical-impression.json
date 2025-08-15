@@ -100,15 +100,18 @@
         "mustSupport": true
       },
       {
-        "id": "ClinicalImpression.assessor",
-        "path": "ClinicalImpression.assessor",
-        "mustSupport": true
-      },
-      {
         "id": "ClinicalImpression.problem",
         "path": "ClinicalImpression.problem",
         "short": "Relevante Probleme/Erkrankungen",
         "definition": "Eine Liste der relevanten Probleme/Erkrankungen für diesen Patienten, die die klinische Beurteilung beeinflussen können",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Condition"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -120,7 +123,8 @@
       {
         "id": "ClinicalImpression.investigation.code",
         "path": "ClinicalImpression.investigation.code",
-        "short": "Art der Untersuchung"
+        "short": "Art der Untersuchung",
+        "mustSupport": true
       },
       {
         "id": "ClinicalImpression.investigation.item",
@@ -138,11 +142,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "ClinicalImpression.protocol",
-        "path": "ClinicalImpression.protocol",
-        "mustSupport": true
       },
       {
         "id": "ClinicalImpression.summary",
@@ -184,19 +183,6 @@
         "id": "ClinicalImpression.finding.basis",
         "path": "ClinicalImpression.finding.basis",
         "short": "Grundlage für den Befund"
-      },
-      {
-        "id": "ClinicalImpression.prognosisCodeableConcept",
-        "path": "ClinicalImpression.prognosisCodeableConcept",
-        "short": "Kodierte Prognose",
-        "definition": "Kodierte Beurteilung der Prognose",
-        "mustSupport": true
-      },
-      {
-        "id": "ClinicalImpression.prognosisReference",
-        "path": "ClinicalImpression.prognosisReference",
-        "short": "Referenz auf detaillierte Prognose",
-        "mustSupport": true
       },
       {
         "id": "ClinicalImpression.supportingInfo",

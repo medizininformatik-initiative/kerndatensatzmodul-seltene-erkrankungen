@@ -6,9 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 
 ## {{page-title}}
 
-Dieses Profil beschreibt eine Histologie-Grading im Rahmen in der Onkologie.
-Dabei wird insbesondere die morphologische Dedifferenzierung des Gewebes bewertet.
-
+Dieses Profil beschreibt den BodyMassIndex eines Patienten und wird unter anderem für muskoskelletale und metabolische Erkrankungen benötigt. Das Profil ist nicht spezifisch für Seltene Erkrankungen, wurde aber bisher nicht implementiert.
 
 
 @```
