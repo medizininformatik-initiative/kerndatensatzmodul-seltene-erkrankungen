@@ -5,7 +5,7 @@
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-transaction-bundle.fsh",
     "startLine": 3,
-    "endLine": 124
+    "endLine": 140
   },
   {
     "outputFile": "Bundle-bundle-sma-complete.json",
@@ -28,15 +28,15 @@
     "fshName": "clinical-impression-cardiology",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 292,
-    "endLine": 321
+    "startLine": 358,
+    "endLine": 391
   },
   {
     "outputFile": "ClinicalImpression-clinical-impression-erstvorstellung.json",
     "fshName": "clinical-impression-erstvorstellung",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 279,
+    "startLine": 278,
     "endLine": 301
   },
   {
@@ -45,7 +45,7 @@
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
     "startLine": 304,
-    "endLine": 327
+    "endLine": 328
   },
   {
     "outputFile": "CodeSystem-mii-cs-se-empfehlung-status-begruendung.json",
@@ -60,16 +60,32 @@
     "fshName": "condition-cataract",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 49,
-    "endLine": 70
+    "startLine": 115,
+    "endLine": 136
   },
   {
-    "outputFile": "Condition-condition-marfan-confirmed.json",
-    "fshName": "condition-marfan-confirmed",
+    "outputFile": "Condition-condition-marfan-clinical.json",
+    "fshName": "condition-marfan-clinical",
+    "fshType": "Instance",
+    "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
+    "startLine": 35,
+    "endLine": 66
+  },
+  {
+    "outputFile": "Condition-condition-marfan-genetic.json",
+    "fshName": "condition-marfan-genetic",
+    "fshType": "Instance",
+    "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
+    "startLine": 69,
+    "endLine": 89
+  },
+  {
+    "outputFile": "Condition-condition-marfan-suspected.json",
+    "fshName": "condition-marfan-suspected",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
     "startLine": 15,
-    "endLine": 46
+    "endLine": 32
   },
   {
     "outputFile": "Condition-condition-sma-clinical.json",
@@ -77,15 +93,15 @@
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
     "startLine": 36,
-    "endLine": 56
+    "endLine": 57
   },
   {
-    "outputFile": "Condition-condition-sma-confirmed.json",
-    "fshName": "condition-sma-confirmed",
+    "outputFile": "Condition-condition-sma-genetic.json",
+    "fshName": "condition-sma-genetic",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 59,
-    "endLine": 84
+    "startLine": 60,
+    "endLine": 83
   },
   {
     "outputFile": "Condition-condition-sma-suspected.json",
@@ -252,72 +268,72 @@
     "fshName": "encounter-ambulant-001",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 343,
-    "endLine": 355
+    "startLine": 344,
+    "endLine": 356
   },
   {
     "outputFile": "Encounter-encounter-cardiology.json",
     "fshName": "encounter-cardiology",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 352,
-    "endLine": 366
+    "startLine": 422,
+    "endLine": 436
   },
   {
     "outputFile": "Encounter-encounter-cataract-surgery.json",
     "fshName": "encounter-cataract-surgery",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 338,
-    "endLine": 350
+    "startLine": 408,
+    "endLine": 420
   },
   {
     "outputFile": "Encounter-encounter-nachsorge-001.json",
     "fshName": "encounter-nachsorge-001",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 371,
-    "endLine": 382
+    "startLine": 372,
+    "endLine": 383
   },
   {
     "outputFile": "Encounter-encounter-ophthalmology.json",
     "fshName": "encounter-ophthalmology",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 324,
-    "endLine": 336
+    "startLine": 394,
+    "endLine": 406
   },
   {
     "outputFile": "Encounter-encounter-screening-001.json",
     "fshName": "encounter-screening-001",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 330,
-    "endLine": 341
+    "startLine": 331,
+    "endLine": 342
   },
   {
     "outputFile": "Encounter-encounter-stationaer-001.json",
     "fshName": "encounter-stationaer-001",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 357,
-    "endLine": 369
+    "startLine": 358,
+    "endLine": 370
   },
   {
     "outputFile": "Encounter-encounter-surgery-planned.json",
     "fshName": "encounter-surgery-planned",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 368,
-    "endLine": 380
+    "startLine": 438,
+    "endLine": 450
   },
   {
     "outputFile": "FamilyMemberHistory-family-history-001.json",
     "fshName": "family-history-001",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 87,
-    "endLine": 98
+    "startLine": 86,
+    "endLine": 97
   },
   {
     "outputFile": "FamilyMemberHistory-mii-exa-se-familienanamnese.json",
@@ -332,8 +348,8 @@
     "fshName": "medication-losartan",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 271,
-    "endLine": 289
+    "startLine": 337,
+    "endLine": 355
   },
   {
     "outputFile": "Observation-anteverted-nares.json",
@@ -468,104 +484,104 @@
     "fshName": "observation-alt-001",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 183,
-    "endLine": 194
+    "startLine": 182,
+    "endLine": 193
   },
   {
     "outputFile": "Observation-observation-ast-001.json",
     "fshName": "observation-ast-001",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 197,
-    "endLine": 208
+    "startLine": 196,
+    "endLine": 207
   },
   {
     "outputFile": "Observation-observation-echo-aortic.json",
     "fshName": "observation-echo-aortic",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 193,
-    "endLine": 205
+    "startLine": 259,
+    "endLine": 271
   },
   {
     "outputFile": "Observation-observation-echo-av.json",
     "fshName": "observation-echo-av",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 208,
-    "endLine": 220
+    "startLine": 274,
+    "endLine": 286
   },
   {
     "outputFile": "Observation-observation-echo-mv.json",
     "fshName": "observation-echo-mv",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 223,
-    "endLine": 235
+    "startLine": 289,
+    "endLine": 301
   },
   {
     "outputFile": "Observation-observation-height-001.json",
     "fshName": "observation-height-001",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 73,
-    "endLine": 87
+    "startLine": 139,
+    "endLine": 153
   },
   {
     "outputFile": "Observation-observation-leg-asymmetry.json",
     "fshName": "observation-leg-asymmetry",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 90,
-    "endLine": 104
+    "startLine": 156,
+    "endLine": 170
   },
   {
     "outputFile": "Observation-observation-plt-001.json",
     "fshName": "observation-plt-001",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 211,
-    "endLine": 222
+    "startLine": 210,
+    "endLine": 221
   },
   {
     "outputFile": "Observation-observation-sma-screening.json",
     "fshName": "observation-sma-screening",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 101,
-    "endLine": 121
+    "startLine": 100,
+    "endLine": 120
   },
   {
     "outputFile": "Observation-observation-troponin-001.json",
     "fshName": "observation-troponin-001",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 225,
-    "endLine": 236
+    "startLine": 224,
+    "endLine": 235
   },
   {
     "outputFile": "Observation-observation-troponin-002.json",
     "fshName": "observation-troponin-002",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 238,
-    "endLine": 249
+    "startLine": 237,
+    "endLine": 248
   },
   {
     "outputFile": "Observation-observation-troponin-003.json",
     "fshName": "observation-troponin-003",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 251,
-    "endLine": 262
+    "startLine": 250,
+    "endLine": 261
   },
   {
     "outputFile": "Observation-observation-troponin-004.json",
     "fshName": "observation-troponin-004",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 264,
-    "endLine": 276
+    "startLine": 263,
+    "endLine": 275
   },
   {
     "outputFile": "Observation-recurrent-respiratory-infections.json",
@@ -580,40 +596,40 @@
     "fshName": "symptom-aortic-regurg",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 159,
-    "endLine": 173
+    "startLine": 225,
+    "endLine": 239
   },
   {
     "outputFile": "Observation-symptom-aortic-root.json",
     "fshName": "symptom-aortic-root",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 140,
-    "endLine": 156
+    "startLine": 206,
+    "endLine": 222
   },
   {
     "outputFile": "Observation-symptom-cataract.json",
     "fshName": "symptom-cataract",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 123,
-    "endLine": 137
+    "startLine": 189,
+    "endLine": 203
   },
   {
     "outputFile": "Observation-symptom-chest-pain.json",
     "fshName": "symptom-chest-pain",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 107,
-    "endLine": 120
+    "startLine": 173,
+    "endLine": 186
   },
   {
     "outputFile": "Observation-symptom-mitral-regurg.json",
     "fshName": "symptom-mitral-regurg",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 176,
-    "endLine": 190
+    "startLine": 242,
+    "endLine": 256
   },
   {
     "outputFile": "Observation-tall-stature.json",
@@ -624,20 +640,28 @@
     "endLine": 56
   },
   {
+    "outputFile": "Observation-variant-fbn1-001.json",
+    "fshName": "variant-fbn1-001",
+    "fshType": "Instance",
+    "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
+    "startLine": 92,
+    "endLine": 112
+  },
+  {
     "outputFile": "Observation-variant-smn1-001.json",
     "fshName": "variant-smn1-001",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 124,
-    "endLine": 145
+    "startLine": 123,
+    "endLine": 144
   },
   {
     "outputFile": "Observation-variant-smn2-001.json",
     "fshName": "variant-smn2-001",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 148,
-    "endLine": 163
+    "startLine": 147,
+    "endLine": 162
   },
   {
     "outputFile": "Observation-vsd.json",
@@ -668,24 +692,24 @@
     "fshName": "procedure-aortic-planned",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 255,
-    "endLine": 268
+    "startLine": 321,
+    "endLine": 334
   },
   {
     "outputFile": "Procedure-procedure-cataract-surgery.json",
     "fshName": "procedure-cataract-surgery",
     "fshType": "Instance",
     "fshFile": "Beispiel_Marfan\\marfan-example-resources.fsh",
-    "startLine": 238,
-    "endLine": 252
+    "startLine": 304,
+    "endLine": 318
   },
   {
     "outputFile": "Procedure-procedure-gentherapy-001.json",
     "fshName": "procedure-gentherapy-001",
     "fshType": "Instance",
     "fshFile": "Beispiel_SMA\\sma-example-resources.fsh",
-    "startLine": 166,
-    "endLine": 180
+    "startLine": 165,
+    "endLine": 179
   },
   {
     "outputFile": "StructureDefinition-mii-ex-se-age-of-onset.json",

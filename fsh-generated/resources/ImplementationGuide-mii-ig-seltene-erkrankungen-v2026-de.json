@@ -295,6 +295,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/variant-fbn1-001"
+        },
+        "name": "FBN1 Gen - Pathogene Mutation",
+        "description": "Pathogene FBN1-Mutation bei Marfan-Syndrom",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Observation/failure-to-thrive"
         },
         "name": "Gedeihstörung - HPO-kodiert",
@@ -479,11 +487,11 @@
       },
       {
         "reference": {
-          "reference": "Condition/condition-marfan-confirmed"
+          "reference": "Condition/condition-marfan-genetic"
         },
-        "name": "Marfan-Syndrom - Bestätigt",
-        "description": "Klinisch bestätigtes Marfan-Syndrom",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+        "name": "Marfan-Syndrom - Genetische Diagnose",
+        "description": "Genetisch bestätigtes Marfan-Syndrom mit FBN1-Mutation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
       },
       {
         "reference": {
@@ -499,6 +507,22 @@
         },
         "name": "Marfan-Syndrom - Klinische Diagnose",
         "description": "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend auf phänotypischen Merkmalen",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-marfan-clinical"
+        },
+        "name": "Marfan-Syndrom - Klinische Diagnose",
+        "description": "Klinisch bestätigtes Marfan-Syndrom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-marfan-suspected"
+        },
+        "name": "Marfan-Syndrom - Verdacht",
+        "description": "Verdacht auf Marfan-Syndrom",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
       },
       {
@@ -863,19 +887,19 @@
       },
       {
         "reference": {
+          "reference": "Condition/condition-sma-genetic"
+        },
+        "name": "SMA Genetische Diagnose",
+        "description": "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
+      },
+      {
+        "reference": {
           "reference": "Condition/condition-sma-clinical"
         },
         "name": "SMA Klinische Diagnose",
         "description": "Klinische Diagnose SMA Typ 1 bei Erstvorstellung",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
-      },
-      {
-        "reference": {
-          "reference": "Condition/condition-sma-confirmed"
-        },
-        "name": "SMA Molekulargenetisch bestätigt",
-        "description": "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
       },
       {
         "reference": {

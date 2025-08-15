@@ -1,6 +1,6 @@
 {
   "resourceType": "Condition",
-  "id": "condition-sma-confirmed",
+  "id": "condition-marfan-genetic",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
@@ -21,26 +21,27 @@
     "coding": [
       {
         "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-        "code": "G12.0",
-        "display": "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]",
+        "code": "Q87.4",
+        "display": "Marfan-Syndrom",
         "version": "2024"
       },
       {
         "system": "http://snomed.info/sct",
-        "code": "80854005",
-        "display": "Werdnig-Hoffmann disease"
+        "code": "19346006",
+        "display": "Marfan syndrome"
       },
       {
         "system": "http://www.orpha.net",
-        "code": "83330",
-        "display": "Infantile spinale Muskelatrophie Typ I"
+        "code": "558",
+        "display": "Marfan syndrome"
       },
       {
         "system": "http://omim.org",
-        "code": "253300",
-        "display": "Spinal muscular atrophy, type I"
+        "code": "154700",
+        "display": "Marfan syndrome"
       }
-    ]
+    ],
+    "text": "Marfan-Syndrom - genetisch bestätigt"
   },
   "clinicalStatus": {
     "coding": [
@@ -59,22 +60,15 @@
     ]
   },
   "subject": {
-    "reference": "Patient/patient-sma-001"
+    "reference": "Patient/patient-marfan-001"
   },
   "extension": [
     {
       "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/mii-ex-diagnose-feststellungsdatum",
-      "valueDateTime": "2024-07-26"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/replaces",
-      "valueReference": {
-        "reference": "Condition/condition-sma-clinical"
-      }
+      "valueDateTime": "2024-12-20"
     }
   ],
-  "recordedDate": "2024-07-26",
-  "onsetDateTime": "2024-07-01",
+  "recordedDate": "2024-12-20",
   "evidence": [
     {
       "code": [
@@ -90,35 +84,14 @@
       ],
       "detail": [
         {
-          "reference": "Observation/variant-smn1-001"
-        },
-        {
-          "reference": "Observation/variant-smn2-001"
-        }
-      ]
-    },
-    {
-      "code": [
-        {
-          "coding": [
-            {
-              "code": "405824009",
-              "system": "http://snomed.info/sct",
-              "display": "Genetic test finding"
-            }
-          ]
-        }
-      ],
-      "detail": [
-        {
-          "reference": "DiagnosticReport/molgen-diagnostic-implication-sma"
+          "reference": "Observation/variant-fbn1-001"
         }
       ]
     }
   ],
   "note": [
     {
-      "text": "0 Kopien des SMN1-Gens, 2 Kopien des SMN2-Gens - krankheitsursächlich. Bestätigt die vorherige klinische Diagnose."
+      "text": "FBN1-Mutation c.3217G>A (p.Gly1073Arg) nachgewiesen, krankheitsursächlich. Genetische Diagnose existiert parallel zur klinischen Diagnose."
     }
   ]
 }

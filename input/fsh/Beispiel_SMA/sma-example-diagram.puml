@@ -37,6 +37,35 @@ skinparam class {
     BackgroundColor<<FamilyHistory>> LIGHTBLUE
     BorderColor<<FamilyHistory>> LIGHTBLUE
     FontColor<<FamilyHistory>> white
+    
+    BackgroundColor<<ClinicalImpression>> YELLOW
+    BorderColor<<ClinicalImpression>> YELLOW
+    FontColor<<ClinicalImpression>> black
+}
+
+' Layout hint - force left positioning
+together {
+    class "condition-sma-suspected" <<Condition>> {
+        **Verdacht auf SMA**
+        clinicalStatus: active
+        verificationStatus: provisional
+        Feststellung: 18.07.2024
+        Quelle: Neugeborenenscreening
+    }
+    
+    class "clinical-impression-001" <<ClinicalImpression>> {
+        **Klinische Beurteilung SMA**
+        Status: completed
+        Datum: 26.07.2024
+        Zusammenfassung: Bestätigte SMA Typ 1
+        mit klinischen und genetischen Befunden
+    }
+    
+    class "encounter-screening-001" <<Encounter>> {
+        **Neugeborenenscreening**
+        Datum: 18.07.2024
+        Typ: Screening
+    }
 }
 
 ' Patient at the center
@@ -46,29 +75,27 @@ class "patient-sma-001" <<Patient>> {
     ID: SMA-2024-001
 }
 
-' Diagnosis progression (left side)
-class "condition-sma-suspected" <<Condition>> {
-    **Verdacht auf SMA**
-    Status: unconfirmed
-    Feststellung: 18.07.2024
-    Quelle: Neugeborenenscreening
-}
-
+' Confirmed Diagnoses
 class "condition-sma-clinical" <<Condition>> {
     **Klinische Diagnose SMA Typ 1**
-    Status: provisional
+    Category: clinical
+    clinicalStatus: active
+    verificationStatus: confirmed
     ICD-10: G12.0
     Orpha: 83330
     Feststellung: 22.07.2024
+    Onset: Neonatal
 }
 
-class "condition-sma-confirmed" <<Condition>> {
-    **Bestätigte SMA Typ 1**
-    Status: confirmed
+class "condition-sma-genetic" <<Condition>> {
+    **Genetische Diagnose SMA Typ 1**
+    Category: genetic
+    clinicalStatus: active
+    verificationStatus: confirmed
     ICD-10: G12.0
     Orpha: 83330
     Feststellung: 26.07.2024
-    Onset: Neonatal
+    SMN1: homozygote Deletion
 }
 
 ' Genetic findings (top)
@@ -102,13 +129,7 @@ class "family-history-001" <<FamilyHistory>> {
     Datum: 22.07.2024
 }
 
-' Encounters (bottom)
-class "encounter-screening-001" <<Encounter>> {
-    **Neugeborenenscreening**
-    Datum: 18.07.2024
-    Typ: Screening
-}
-
+' Other Encounters (bottom)
 class "encounter-ambulant-001" <<Encounter>> {
     **Erstvorstellung**
     Datum: 22.07.2024
@@ -144,10 +165,17 @@ class "observation-liver-plt" <<Observation>> {
     Datum: 29.07.2024
 }
 
+' Layout positioning - force left-to-right flow and vertical arrangement
+"condition-sma-suspected" -[hidden]down-> "clinical-impression-001"
+"clinical-impression-001" -[hidden]down-> "encounter-screening-001"
+"condition-sma-suspected" -[hidden]right-> "patient-sma-001"
+"clinical-impression-001" -[hidden]right-> "patient-sma-001"
+
 ' Relationships - Patient at center
 "patient-sma-001" <-- "condition-sma-suspected" : subject
 "patient-sma-001" <-- "condition-sma-clinical" : subject
-"patient-sma-001" <-- "condition-sma-confirmed" : subject
+"patient-sma-001" <-- "condition-sma-genetic" : subject
+"patient-sma-001" <-- "clinical-impression-001" : subject
 "patient-sma-001" <-- "variant-smn1-001" : subject
 "patient-sma-001" <-- "variant-smn2-001" : subject
 "patient-sma-001" <-- "procedure-gentherapy-001" : subject
@@ -155,22 +183,36 @@ class "observation-liver-plt" <<Observation>> {
 "patient-sma-001" <-- "observation-troponin-series" : subject
 "patient-sma-001" <-- "observation-liver-plt" : subject
 
-' Diagnosis progression chain
-"condition-sma-suspected" <-- "condition-sma-clinical" : stage.assessment
-"condition-sma-clinical" <-- "condition-sma-confirmed" : stage.assessment
+' ClinicalImpression reason and results
+"clinical-impression-001" --> "condition-sma-suspected" : reasonReference
+"clinical-impression-001" --> "condition-sma-clinical" : finding (result)
+"clinical-impression-001" --> "condition-sma-genetic" : finding (result)
+
+' ClinicalImpression investigations
+"clinical-impression-001" --> "variant-smn1-001" : investigation
+"clinical-impression-001" --> "variant-smn2-001" : investigation
+"clinical-impression-001" --> "observation-troponin-series" : investigation
+"clinical-impression-001" --> "family-history-001" : investigation
+
+' Parallel diagnoses - both exist simultaneously
+"condition-sma-suspected" ..> "condition-sma-clinical" : leads to
+"condition-sma-suspected" ..> "condition-sma-genetic" : leads to
 
 ' Evidence links
-"condition-sma-confirmed" --> "variant-smn1-001" : evidence
-"condition-sma-confirmed" --> "variant-smn2-001" : evidence
+"condition-sma-genetic" --> "variant-smn1-001" : evidence
+"condition-sma-genetic" --> "variant-smn2-001" : evidence
+"condition-sma-clinical" --> "observation-troponin-series" : evidence
 
-' Procedure reason
-"procedure-gentherapy-001" --> "condition-sma-confirmed" : reasonReference
+' Procedure reasons - both diagnoses support treatment
+"procedure-gentherapy-001" --> "condition-sma-clinical" : reasonReference
+"procedure-gentherapy-001" --> "condition-sma-genetic" : reasonReference
 
 ' Encounter diagnosis links
 "encounter-screening-001" ..> "condition-sma-suspected" : identifies
 "encounter-ambulant-001" --> "condition-sma-clinical" : diagnosis
-"encounter-stationaer-001" --> "condition-sma-confirmed" : diagnosis
-"encounter-nachsorge-001" --> "condition-sma-confirmed" : diagnosis
+"encounter-stationaer-001" --> "condition-sma-genetic" : diagnosis
+"encounter-nachsorge-001" --> "condition-sma-clinical" : diagnosis
+"encounter-nachsorge-001" --> "condition-sma-genetic" : diagnosis
 
 ' Encounter patient links
 "patient-sma-001" <-- "encounter-screening-001" : subject
@@ -183,10 +225,13 @@ class "observation-liver-plt" <<Observation>> {
 
 ' Timeline annotation
 note right of "condition-sma-suspected"
-  **Diagnose-Verlauf:**
+  **Parallele Diagnosen:**
   1. Verdacht (18.07)
-  2. Klinisch (22.07)
-  3. Bestätigt (26.07)
+  2. Klinische Diagnose (22.07)
+  3. Genetische Diagnose (26.07)
+  
+  Beide Diagnosen existieren
+  parallel und ergänzen sich
 end note
 
 note left of "observation-troponin-series"
@@ -195,15 +240,14 @@ note left of "observation-troponin-series"
 end note
 
 legend bottom center
-|= Legende |
-| <color:white,back:DARKBLUE>Patient</color> | Zentrale Patientenressource |
-| <color:white,back:RED>Condition</color> | Diagnosen mit Verlauf |
-| <color:white,back:GREEN>Observation</color> | Labor & Genetik |
-| <color:white,back:PURPLE>Procedure</color> | Gentherapie |
-| <color:white,back:ORANGE>Encounter</color> | Kontakte |
-| <color:white,back:LIGHTBLUE>FamilyHistory</color> | Familienanamnese |
-| → | Referenz |
-| ⋯> | Assoziiation |
+|Color|Type|Beschreibung|
+|<#1e3a5f>|Patient|Zentrale Patientenressource|
+|<#dc2626>|Condition|Parallele Diagnosen (Klinisch & Genetisch)|
+|<#facc15>|ClinicalImpression|Klinische Beurteilung|
+|<#0d9488>|Observation|Labor & Genetik|
+|<#7c3aed>|Procedure|Gentherapie|
+|<#ea580c>|Encounter|Kontakte|
+|<#4a86e8>|FamilyHistory|Familienanamnese|
 endlegend
 
 @enduml

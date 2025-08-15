@@ -26,6 +26,7 @@
 [observation-echo-mv]: Observation-observation-echo-mv.html
 [example-eds-excluded-clinical]: Condition-example-eds-excluded-clinical.html
 [family-history-001]: FamilyMemberHistory-family-history-001.html
+[variant-fbn1-001]: Observation-variant-fbn1-001.html
 [failure-to-thrive]: Observation-failure-to-thrive.html
 [procedure-gentherapy-001]: Procedure-procedure-gentherapy-001.html
 [procedure-aortic-planned]: Procedure-procedure-aortic-planned.html
@@ -49,9 +50,11 @@
 [medication-losartan]: MedicationStatement-medication-losartan.html
 [lymphedema]: Observation-lymphedema.html
 [patient-marfan-001]: Patient-patient-marfan-001.html
-[condition-marfan-confirmed]: Condition-condition-marfan-confirmed.html
+[condition-marfan-genetic]: Condition-condition-marfan-genetic.html
 [example-marfan-excluded-clinical]: Condition-example-marfan-excluded-clinical.html
 [example-marfan-clinical-diagnosis]: Condition-example-marfan-clinical-diagnosis.html
+[condition-marfan-clinical]: Condition-condition-marfan-clinical.html
+[condition-marfan-suspected]: Condition-condition-marfan-suspected.html
 [bundle-marfan-complete]: Bundle-bundle-marfan-complete.html
 [example-metabolic-myopathy-excluded]: Condition-example-metabolic-myopathy-excluded.html
 [MII_CS_SE_Empfehlung_StatusBegruendung]: CodeSystem-mii-cs-se-empfehlung-status-begruendung.html
@@ -97,8 +100,8 @@
 [molgen-diagnostic-implication-sma]: DiagnosticReport-molgen-diagnostic-implication-sma.html
 [bundle-sma-complete]: Bundle-bundle-sma-complete.html
 [molgen-sma-negative]: DiagnosticReport-molgen-sma-negative.html
+[condition-sma-genetic]: Condition-condition-sma-genetic.html
 [condition-sma-clinical]: Condition-condition-sma-clinical.html
-[condition-sma-confirmed]: Condition-condition-sma-confirmed.html
 [observation-sma-screening]: Observation-observation-sma-screening.html
 [patient-sma-001]: Patient-patient-sma-001.html
 [example-sma-genetic-diagnosis]: Condition-example-sma-genetic-diagnosis.html

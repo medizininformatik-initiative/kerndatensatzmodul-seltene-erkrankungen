@@ -14,9 +14,19 @@ Description: "Transaction Bundle mit allen Ressourcen für den Marfan-Syndrom Fa
 * entry[=].request.method = #POST
 * entry[=].request.url = "Patient"
 
-// Main Diagnoses
-* entry[+].fullUrl = "urn:uuid:condition-marfan-confirmed"
-* entry[=].resource = condition-marfan-confirmed
+// Main Diagnoses - Three stages
+* entry[+].fullUrl = "urn:uuid:condition-marfan-suspected"
+* entry[=].resource = condition-marfan-suspected
+* entry[=].request.method = #POST
+* entry[=].request.url = "Condition"
+
+* entry[+].fullUrl = "urn:uuid:condition-marfan-clinical"
+* entry[=].resource = condition-marfan-clinical
+* entry[=].request.method = #POST
+* entry[=].request.url = "Condition"
+
+* entry[+].fullUrl = "urn:uuid:condition-marfan-genetic"
+* entry[=].resource = condition-marfan-genetic
 * entry[=].request.method = #POST
 * entry[=].request.url = "Condition"
 
@@ -63,6 +73,12 @@ Description: "Transaction Bundle mit allen Ressourcen für den Marfan-Syndrom Fa
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
+// Genetic Variant
+* entry[+].fullUrl = "urn:uuid:variant-fbn1-001"
+* entry[=].resource = variant-fbn1-001
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
+
 // Echocardiography Observations
 * entry[+].fullUrl = "urn:uuid:observation-echo-aortic"
 * entry[=].resource = observation-echo-aortic
@@ -97,8 +113,8 @@ Description: "Transaction Bundle mit allen Ressourcen für den Marfan-Syndrom Fa
 * entry[=].request.url = "MedicationStatement"
 
 // Clinical Impression
-* entry[+].fullUrl = "urn:uuid:clinical-impression-cardiology"
-* entry[=].resource = clinical-impression-cardiology
+* entry[+].fullUrl = "urn:uuid:clinical-impression-se-assessment"
+* entry[=].resource = clinical-impression-se-assessment
 * entry[=].request.method = #POST
 * entry[=].request.url = "ClinicalImpression"
 

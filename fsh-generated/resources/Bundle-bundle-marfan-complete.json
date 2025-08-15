@@ -24,10 +24,88 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:condition-marfan-confirmed",
+      "fullUrl": "urn:uuid:condition-marfan-suspected",
       "resource": {
         "resourceType": "Condition",
-        "id": "condition-marfan-confirmed",
+        "id": "condition-marfan-suspected",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+              "code": "Q87.4",
+              "display": "Marfan-Syndrom",
+              "version": "2024"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "19346006",
+              "display": "Marfan syndrome"
+            },
+            {
+              "system": "http://www.orpha.net",
+              "code": "558",
+              "display": "Marfan syndrome"
+            }
+          ],
+          "text": "Verdacht auf Marfan-Syndrom"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "provisional",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "encounter-diagnosis",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/patient-marfan-001"
+        },
+        "extension": [
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/mii-ex-diagnose-feststellungsdatum",
+            "valueDateTime": "2024-12-10"
+          }
+        ],
+        "recordedDate": "2024-12-10",
+        "note": [
+          {
+            "text": "Verdacht auf Marfan-Syndrom aufgrund klinischer Präsentation"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-marfan-clinical",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-marfan-clinical",
         "meta": {
           "profile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
@@ -211,6 +289,110 @@
         "note": [
           {
             "text": "Marfan-Syndrom klinisch diagnostiziert basierend auf kardialen Befunden, Skelettmerkmalen und ophthalmologischer Manifestation"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-marfan-genetic",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-marfan-genetic",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "782964007",
+                "system": "http://snomed.info/sct",
+                "display": "Genetic disease"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+              "code": "Q87.4",
+              "display": "Marfan-Syndrom",
+              "version": "2024"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "19346006",
+              "display": "Marfan syndrome"
+            },
+            {
+              "system": "http://www.orpha.net",
+              "code": "558",
+              "display": "Marfan syndrome"
+            },
+            {
+              "system": "http://omim.org",
+              "code": "154700",
+              "display": "Marfan syndrome"
+            }
+          ],
+          "text": "Marfan-Syndrom - genetisch bestätigt"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-marfan-001"
+        },
+        "extension": [
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/mii-ex-diagnose-feststellungsdatum",
+            "valueDateTime": "2024-12-20"
+          }
+        ],
+        "recordedDate": "2024-12-20",
+        "evidence": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "code": "410545006",
+                    "system": "http://snomed.info/sct",
+                    "display": "Genetic finding"
+                  }
+                ]
+              }
+            ],
+            "detail": [
+              {
+                "reference": "Observation/variant-fbn1-001"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "FBN1-Mutation c.3217G>A (p.Gly1073Arg) nachgewiesen, krankheitsursächlich. Genetische Diagnose existiert parallel zur klinischen Diagnose."
           }
         ]
       },
@@ -797,6 +979,136 @@
       }
     },
     {
+      "fullUrl": "urn:uuid:variant-fbn1-001",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "variant-fbn1-001",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "55233-1",
+              "system": "http://loinc.org",
+              "display": "Genetic variant assessment"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-marfan-001"
+        },
+        "effectiveDateTime": "2024-12-20",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "10828004",
+              "system": "http://snomed.info/sct",
+              "display": "Positive"
+            }
+          ]
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "48018-6",
+                  "system": "http://loinc.org",
+                  "display": "Gene studied [ID]"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "2200",
+                  "system": "http://www.genenames.org/geneId",
+                  "display": "FBN1"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "48004-6",
+                  "system": "http://loinc.org",
+                  "display": "DNA change (c.HGVS)"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "text": "c.3217G>A"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "48005-3",
+                  "system": "http://loinc.org",
+                  "display": "Amino acid change (pHGVS)"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "text": "p.Gly1073Arg"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "53037-8",
+                  "system": "http://loinc.org",
+                  "display": "Genetic variant clinical significance"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA6668-3",
+                  "system": "http://loinc.org",
+                  "display": "Pathogenic"
+                }
+              ]
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "POS",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "display": "Positive"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Pathogene FBN1-Mutation, krankheitsursächlich für Marfan-Syndrom"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
       "fullUrl": "urn:uuid:observation-echo-aortic",
       "resource": {
         "resourceType": "Observation",
@@ -1064,7 +1376,7 @@
         },
         "reasonReference": [
           {
-            "reference": "Condition/condition-marfan-confirmed"
+            "reference": "Condition/condition-marfan-clinical"
           }
         ],
         "note": [
@@ -1105,7 +1417,7 @@
         "effectiveDateTime": "2024-12-15",
         "reasonReference": [
           {
-            "reference": "Condition/condition-marfan-confirmed"
+            "reference": "Condition/condition-marfan-clinical"
           }
         ],
         "dosage": [
@@ -1168,7 +1480,28 @@
           "reference": "Practitioner/example"
         },
         "summary": "19-jähriger Patient mit klinischen Zeichen eines Marfan-Syndroms. Aortenwurzeldilatation (48mm), AKI Grad II, MKI Grad I. Skelettale Merkmale (Hochwuchs 2,13m, Beinlängendifferenz) und ophthalmologische Manifestation (Z.n. Katarakt-OP) unterstützen die Diagnose.",
+        "problem": [
+          {
+            "reference": "Condition/condition-marfan-suspected"
+          },
+          {
+            "reference": "Condition/condition-marfan-clinical"
+          },
+          {
+            "reference": "Condition/condition-marfan-genetic"
+          }
+        ],
         "finding": [
+          {
+            "itemReference": {
+              "reference": "Condition/condition-marfan-clinical"
+            }
+          },
+          {
+            "itemReference": {
+              "reference": "Condition/condition-marfan-genetic"
+            }
+          },
           {
             "itemCodeableConcept": {
               "coding": [
@@ -1256,11 +1589,6 @@
                 "reference": "Observation/observation-echo-mv"
               }
             ]
-          }
-        ],
-        "problem": [
-          {
-            "reference": "Condition/condition-marfan-confirmed"
           }
         ],
         "prognosisCodeableConcept": [
@@ -1422,7 +1750,7 @@
         "diagnosis": [
           {
             "condition": {
-              "reference": "Condition/condition-marfan-confirmed"
+              "reference": "Condition/condition-marfan-clinical"
             },
             "use": {
               "coding": [
@@ -1484,7 +1812,7 @@
         "diagnosis": [
           {
             "condition": {
-              "reference": "Condition/condition-marfan-confirmed"
+              "reference": "Condition/condition-marfan-clinical"
             },
             "use": {
               "coding": [
