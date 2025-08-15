@@ -75,46 +75,97 @@ InstanceOf: MII_PR_SE_GeneticDiagnosis
 * extension[penetrance].valueCodeableConcept = http://hpo.jax.org/app/#HP:0025169 "Complete penetrance"
 ```
 
-## Diagnose-Verlauf modellieren
+## Paralleles Diagnosemodell
 
-Bei vielen seltenen Erkrankungen durchläuft die Diagnose mehrere Stadien:
+Bei seltenen Erkrankungen existieren klinische und genetische Diagnosen **parallel** zueinander:
 
 ### 1. Verdachtsdiagnose (Screening/Initial)
 ```fsh
-* verificationStatus = #unconfirmed
+* verificationStatus = #provisional
 * category = #encounter-diagnosis
 ```
 
 ### 2. Klinische Diagnose
 ```fsh
-* verificationStatus = #provisional
-* extension[replaces].valueReference = Reference(verdachts-diagnose)
+* verificationStatus = #confirmed
+* category[clinical] = "clinical"
 ```
 
-### 3. Genetisch bestätigte Diagnose
+### 3. Genetische Diagnose (parallel zur klinischen)
 ```fsh
 * verificationStatus = #confirmed
-* extension[replaces].valueReference = Reference(klinische-diagnose)
+* category[genetic] = $SCT#782964007 "Genetic disease"
 ```
+
+**Wichtig:** Die genetische Diagnose ersetzt NICHT die klinische Diagnose. Beide existieren parallel und ergänzen sich gegenseitig.
 
 ## Entscheidungsbaum
 
-```mermaid
-graph TD
-    A[Seltene Erkrankung vermutet] --> B{Diagnose basiert auf?}
-    B -->|Phänotyp/Klinik| C[MII_PR_SE_ClinicalDiagnosis]
-    B -->|Genetischer Nachweis| D[MII_PR_SE_GeneticDiagnosis]
-    
-    C --> E[HPO-Codes hinzufügen]
-    C --> F[HPO-kodierte Symptome verlinken]
-    
-    D --> G[OMIM-Code hinzufügen]
-    D --> H[MolGen-Variante verlinken]
-    D --> I[Diagnostische Implikation verlinken]
-    
-    F --> J[Status: provisional]
-    H --> K[Status: confirmed]
-    I --> K
+```plantuml
+@startuml
+!define YELLOW #facc15
+!define RED #dc2626
+!define GREEN #0d9488
+!define BLUE #4a86e8
+
+skinparam backgroundColor #f8f9fa
+skinparam roundcorner 10
+skinparam ArrowColor #666666
+skinparam ArrowThickness 2
+
+skinparam activity {
+    BackgroundColor<<suspected>> #fff2cc
+    BorderColor<<suspected>> #d6b656
+    BackgroundColor<<clinical>> RED
+    FontColor<<clinical>> white
+    BackgroundColor<<genetic>> RED
+    FontColor<<genetic>> white
+    BackgroundColor<<impression>> YELLOW
+    BorderColor<<impression>> #d4a017
+}
+
+(*) --> "Seltene Erkrankung vermutet" <<suspected>>
+
+"Seltene Erkrankung vermutet" --> "ClinicalImpression erstellen" <<impression>>
+
+"ClinicalImpression erstellen" --> "Untersuchungen durchführen"
+
+"Untersuchungen durchführen" --> "Phänotypische Analyse"
+"Untersuchungen durchführen" --> "Genetische Analyse"
+
+"Phänotypische Analyse" --> "MII_PR_SE_ClinicalDiagnosis" <<clinical>>
+"Genetische Analyse" --> "MII_PR_SE_GeneticDiagnosis" <<genetic>>
+
+"MII_PR_SE_ClinicalDiagnosis" --> "HPO-Codes hinzufügen"
+"MII_PR_SE_ClinicalDiagnosis" --> "HPO-Symptome verlinken"
+"HPO-Codes hinzufügen" --> "Status: confirmed"
+"HPO-Symptome verlinken" --> "Status: confirmed"
+
+"MII_PR_SE_GeneticDiagnosis" --> "OMIM-Code hinzufügen"
+"MII_PR_SE_GeneticDiagnosis" --> "MolGen-Variante verlinken"
+"MII_PR_SE_GeneticDiagnosis" --> "Diagnostische Implikation"
+"OMIM-Code hinzufügen" --> "Status: confirmed"
+"MolGen-Variante verlinken" --> "Status: confirmed"
+"Diagnostische Implikation" --> "Status: confirmed"
+
+"ClinicalImpression erstellen" ..> "problem: Verdachtsdiagnose" : referenziert
+"ClinicalImpression erstellen" ..> "finding: Klinische Diagnose" : referenziert
+"ClinicalImpression erstellen" ..> "finding: Genetische Diagnose" : referenziert
+
+note right of "ClinicalImpression erstellen"
+  **ClinicalImpression verbindet:**
+  - problem → Verdachtsdiagnose
+  - finding → Klinische Diagnose
+  - finding → Genetische Diagnose
+  - investigation → Untersuchungen
+end note
+
+note bottom
+  **Wichtig:** Klinische und genetische Diagnose
+  existieren **parallel** und ergänzen sich gegenseitig
+end note
+
+@enduml
 ```
 
 ## Praktische Hinweise
@@ -126,17 +177,29 @@ graph TD
 | Neugeborenenscreening positiv | ClinicalDiagnosis | unconfirmed |
 | Klinisch eindeutiges Syndrom | ClinicalDiagnosis | provisional |
 | Genetisch bestätigt | GeneticDiagnosis | confirmed |
-| Klinisch + genetisch bestätigt | Beide Profile | confirmed |
+| Klinisch + genetisch bestätigt | **Beide Profile parallel** | confirmed |
 | **Ausgeschlossene Diagnose** | Entsprechendes Profil | **refuted** |
 | Differentialdiagnose | ClinicalDiagnosis | differential |
 
-### Verlinkung zwischen Diagnosen
+### Verlinkung zwischen Diagnosen mittels ClinicalImpression
 
-Wenn sowohl eine klinische als auch eine genetische Diagnose existiert:
+Die **ClinicalImpression** verbindet die verschiedenen Diagnosestadien:
 
-1. Erste Ressource: Klinische Diagnose
-2. Zweite Ressource: Genetische Diagnose mit `replaces` Extension zur klinischen Diagnose
-3. Beide Ressourcen bleiben erhalten für vollständige Dokumentation
+1. **problem**: Verweis auf die Verdachtsdiagnose (Grund der Untersuchung)
+2. **finding**: Verweise auf die bestätigten Diagnosen (klinisch UND genetisch)
+3. **investigation**: Verweise auf durchgeführte Untersuchungen
+
+```fsh
+Instance: clinical-impression-se
+InstanceOf: ClinicalImpression
+* problem[+] = Reference(condition-verdacht)  // Ausgangspunkt
+* finding[+].itemReference = Reference(condition-klinisch)  // Ergebnis
+* finding[+].itemReference = Reference(condition-genetisch) // Ergebnis
+* investigation[+].item = Reference(observation-hpo-symptom)
+* investigation[+].item = Reference(observation-genetic-variant)
+```
+
+Beide Diagnosen bleiben als eigenständige Ressourcen erhalten und dokumentieren verschiedene Aspekte derselben Erkrankung.
 
 ### Evidence-Verlinkung
 
