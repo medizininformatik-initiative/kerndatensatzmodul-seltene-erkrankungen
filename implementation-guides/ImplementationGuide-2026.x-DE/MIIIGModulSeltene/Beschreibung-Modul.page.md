@@ -2,7 +2,7 @@
 
 ### Einleitung
 
-Obwohl geschätzt wird, dass von Seltenen Erkrankungen (SE) in Deutschland rund 4 Millionen Menschen (5 % der Bevölkerung) betroffen sind, gelten die davon Betroffenen als die Waisenkinder der Medizin und der MII. Daher fordert das Nationale Aktionsbündnis für Menschen mit Seltenen Erkrankungen (NAMSE), dass die Digitalisierung der Krankenversorgungs‐ und Gesundheitssysteme dieser großen Bevölkerungsgruppe in besonderem Maße zu Gute kommen muss.
+Obwohl geschätzt wird, dass von **Seltenen Erkrankungen (SE)** in Deutschland rund 4 Millionen Menschen (5 % der Bevölkerung) betroffen sind, gelten die davon Betroffenen als die Waisenkinder der Medizin und der MII. Daher fordert das Nationale Aktionsbündnis für Menschen mit Seltenen Erkrankungen (NAMSE), dass die Digitalisierung der Krankenversorgungs‐ und Gesundheitssysteme dieser großen Bevölkerungsgruppe in besonderem Maße zu Gute kommen muss.
 
 Die große Herausforderung bei den SE ergibt sich aus der Vielzahl sehr verschiedener „Störungen“ und „Subtypen von Störungen“ (von bis zu 10.000 ist die Rede) mit jeweils nur kleinen Fallzahlen je „Störung“.
 
