@@ -1,8 +1,7 @@
 
 ## Datensätze inkl. Beschreibungen
 
-Der Datensatz basiert auf dem ERDRI-CDS, den Datenelementen des NARSE und den Datenelementen des MV GenomSQ
-
+Der Datensatz basiert auf weiteren Datenmodellen
 
 
 
