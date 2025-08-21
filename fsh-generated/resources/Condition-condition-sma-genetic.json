@@ -1,11 +1,22 @@
 {
   "resourceType": "Condition",
-  "id": "condition-sma-clinical",
+  "id": "condition-sma-genetic",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
     ]
   },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "782964007",
+          "system": "http://snomed.info/sct",
+          "display": "Genetic disease"
+        }
+      ]
+    }
+  ],
   "code": {
     "coding": [
       {
@@ -25,9 +36,9 @@
         "display": "Infantile spinale Muskelatrophie Typ I"
       },
       {
-        "system": "http://hpo.jax.org/app/",
-        "code": "HP:0003813",
-        "display": "Motor neuron disease"
+        "system": "http://omim.org",
+        "code": "253300",
+        "display": "Spinal muscular atrophy, type I"
       }
     ]
   },
@@ -47,47 +58,61 @@
       }
     ]
   },
-  "category": [
-    {
-      "coding": [
-        {
-          "code": "encounter-diagnosis",
-          "system": "http://terminology.hl7.org/CodeSystem/condition-category"
-        }
-      ]
-    }
-  ],
   "subject": {
     "reference": "Patient/patient-sma-001"
   },
   "extension": [
     {
       "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/mii-ex-diagnose-feststellungsdatum",
-      "valueDateTime": "2024-07-22"
+      "valueDateTime": "2024-07-26"
     }
   ],
-  "recordedDate": "2024-07-22",
-  "encounter": {
-    "reference": "Encounter/encounter-ambulant-001"
-  },
+  "recordedDate": "2024-07-26",
   "onsetDateTime": "2024-07-01",
   "evidence": [
     {
       "code": [
         {
-          "text": "Klinische Präsentation"
+          "coding": [
+            {
+              "code": "410545006",
+              "system": "http://snomed.info/sct",
+              "display": "Genetic finding"
+            }
+          ]
         }
       ],
       "detail": [
         {
-          "reference": "Observation/observation-troponin-001"
+          "reference": "Observation/variant-smn1-001"
+        },
+        {
+          "reference": "Observation/variant-smn2-001"
+        }
+      ]
+    },
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "405824009",
+              "system": "http://snomed.info/sct",
+              "display": "Genetic test finding"
+            }
+          ]
+        }
+      ],
+      "detail": [
+        {
+          "reference": "DiagnosticReport/molgen-diagnostic-implication-sma"
         }
       ]
     }
   ],
   "note": [
     {
-      "text": "Klinische Diagnose basierend auf typischer Präsentation: Neonatale Hypotonie, fehlende Muskeleigenreflexe, erhöhtes Troponin"
+      "text": "0 Kopien des SMN1-Gens, 2 Kopien des SMN2-Gens - krankheitsursächlich. Genetische Diagnose existiert parallel zur klinischen Diagnose."
     }
   ]
 }

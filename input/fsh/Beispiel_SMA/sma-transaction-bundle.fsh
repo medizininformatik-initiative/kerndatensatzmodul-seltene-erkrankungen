@@ -25,8 +25,8 @@ Description: "Transaction Bundle mit allen Ressourcen für den SMA Fall inkl. Di
 * entry[=].request.method = #POST
 * entry[=].request.url = "Condition"
 
-* entry[+].fullUrl = "urn:uuid:condition-sma-confirmed"
-* entry[=].resource = condition-sma-confirmed
+* entry[+].fullUrl = "urn:uuid:condition-sma-genetic"
+* entry[=].resource = condition-sma-genetic
 * entry[=].request.method = #POST
 * entry[=].request.url = "Condition"
 

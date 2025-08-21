@@ -14,7 +14,28 @@
     "reference": "Practitioner/example"
   },
   "summary": "19-jähriger Patient mit klinischen Zeichen eines Marfan-Syndroms. Aortenwurzeldilatation (48mm), AKI Grad II, MKI Grad I. Skelettale Merkmale (Hochwuchs 2,13m, Beinlängendifferenz) und ophthalmologische Manifestation (Z.n. Katarakt-OP) unterstützen die Diagnose.",
+  "problem": [
+    {
+      "reference": "Condition/condition-marfan-suspected"
+    },
+    {
+      "reference": "Condition/condition-marfan-clinical"
+    },
+    {
+      "reference": "Condition/condition-marfan-genetic"
+    }
+  ],
   "finding": [
+    {
+      "itemReference": {
+        "reference": "Condition/condition-marfan-clinical"
+      }
+    },
+    {
+      "itemReference": {
+        "reference": "Condition/condition-marfan-genetic"
+      }
+    },
     {
       "itemCodeableConcept": {
         "coding": [
@@ -102,11 +123,6 @@
           "reference": "Observation/observation-echo-mv"
         }
       ]
-    }
-  ],
-  "problem": [
-    {
-      "reference": "Condition/condition-marfan-confirmed"
     }
   ],
   "prognosisCodeableConcept": [

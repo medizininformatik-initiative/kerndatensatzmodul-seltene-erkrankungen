@@ -14,18 +14,21 @@
     "reference": "Practitioner/example"
   },
   "summary": "Neugeborenes mit V.a. SMA aus Neugeborenenscreening. Familienanamnese zeigt unklare Muskelerkrankung der Urgroßmutter. Troponin T bereits erhöht (92 ng/l).",
+  "problem": [
+    {
+      "reference": "Condition/condition-sma-suspected"
+    }
+  ],
   "finding": [
     {
-      "itemCodeableConcept": {
-        "coding": [
-          {
-            "code": "160303001",
-            "system": "http://snomed.info/sct",
-            "display": "Family history of disorder"
-          }
-        ]
-      },
-      "basis": "Urgroßmutter mit unbekannter Muskelerkrankung"
+      "itemReference": {
+        "reference": "Condition/condition-sma-clinical"
+      }
+    },
+    {
+      "itemReference": {
+        "reference": "Condition/condition-sma-genetic"
+      }
     },
     {
       "itemCodeableConcept": {
@@ -45,21 +48,23 @@
   "investigation": [
     {
       "code": {
-        "text": "Molekulargenetische Diagnostik"
+        "text": "Familienanamnese"
       },
       "item": [
         {
-          "reference": "Observation/variant-smn1-001"
-        },
-        {
-          "reference": "Observation/variant-smn2-001"
+          "reference": "FamilyMemberHistory/family-history-001"
         }
       ]
-    }
-  ],
-  "problem": [
+    },
     {
-      "reference": "Condition/condition-sma-clinical"
+      "code": {
+        "text": "Labordiagnostik"
+      },
+      "item": [
+        {
+          "reference": "Observation/observation-troponin-001"
+        }
+      ]
     }
   ],
   "prognosisCodeableConcept": [

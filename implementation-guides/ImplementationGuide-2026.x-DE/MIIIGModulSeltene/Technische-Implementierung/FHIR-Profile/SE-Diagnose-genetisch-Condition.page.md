@@ -1,13 +1,13 @@
 ---
 parent: 
-topic: Specimen
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis
+topic: Condition
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis
 ---
 
 ## {{page-title}}
 
-Dieses Profil beschreibt eine Histologie-Grading im Rahmen in der Sell.
-Dabei wird insbesondere die morphologische Dedifferenzierung des Gewebes bewertet.
+Dieses Profil beschreibt eine genetisch bestätigte Diagnose einer seltenen Erkrankung.
+Es wird verwendet, wenn die Diagnose durch molekulargenetische Untersuchung bestätigt wurde.
 
 
 
@@ -15,7 +15,7 @@ Dabei wird insbesondere die morphologische Dedifferenzierung des Gewebes bewerte
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis' 
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
@@ -29,7 +29,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis'
         select
 	        Beschreibung: description
         with
@@ -39,7 +39,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis' 
         for 
             differential.element 
             where 
@@ -58,8 +58,8 @@ Mapping Datensatz zu FHIR
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Onkologie'
-    for differential.element where id.contains('Grading') 
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SE'
+    for differential.element where id.contains('GenetischeDiagnose') 
     select 
         Datensatz: short,
         Erklaerung: definition, 
@@ -69,15 +69,15 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+Mapping Kerndatensatz Seltene Erkrankungen zu FHIR
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading'  
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis'  
     for differential.element
-    where mapping.identity='oBDS'
+    where mapping.identity='SE'
     select 
-        oBDS: mapping.map,
+        SE: mapping.map,
         Definition: mapping.comment,
         FHIR: path
 ```
@@ -92,7 +92,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele: 
 
-    ```GET [base]/Observation?_id=1234```
+    ```GET [base]/Condition?_id=1234```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -100,7 +100,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
     
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading```
+    ```GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -108,7 +108,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
 
-    ```GET [base]/Observation?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory```
+    ```GET [base]/Condition?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
 
@@ -116,7 +116,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
 
-    ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005```
+    ```GET [base]/Condition?code=http://fhir.de/CodeSystem/sct|184305005```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
 
@@ -124,7 +124,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
 
-    ```GET [base]/Observation?subject=Patient/example```
+    ```GET [base]/Condition?subject=Patient/example```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
@@ -132,7 +132,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
 
-    ```GET [base]/Observation?focus=Condition/example```
+    ```GET [base]/Condition?focus=Condition/example```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "focus" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
@@ -140,7 +140,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
 
-    ```GET [base]/Observation?encounter=Encounter/example```
+    ```GET [base]/Condition?encounter=Encounter/example```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
@@ -148,7 +148,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
 
-    ```GET [base]/Observation?date=2024-02-08```
+    ```GET [base]/Condition?date=2024-02-08```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
 
@@ -156,12 +156,12 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
 
-    ```GET [base]/Observation?derived-from=Observation/example```
+    ```GET [base]/Condition?derived-from=Observation/example```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
 **Beispiele**
 
-{{json:mii-exa-se-diagnosis}}
+{{json:mii-exa-se-genetic-diagnosis}}
 
 ---

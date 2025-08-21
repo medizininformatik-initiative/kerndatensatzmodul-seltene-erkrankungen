@@ -1,0 +1,123 @@
+{
+  "resourceType": "Observation",
+  "id": "variant-fbn1-001",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "55233-1",
+        "system": "http://loinc.org",
+        "display": "Genetic variant assessment"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "effectiveDateTime": "2024-12-20",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "10828004",
+        "system": "http://snomed.info/sct",
+        "display": "Positive"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "48018-6",
+            "system": "http://loinc.org",
+            "display": "Gene studied [ID]"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "2200",
+            "system": "http://www.genenames.org/geneId",
+            "display": "FBN1"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "48004-6",
+            "system": "http://loinc.org",
+            "display": "DNA change (c.HGVS)"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "text": "c.3217G>A"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "48005-3",
+            "system": "http://loinc.org",
+            "display": "Amino acid change (pHGVS)"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "text": "p.Gly1073Arg"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "53037-8",
+            "system": "http://loinc.org",
+            "display": "Genetic variant clinical significance"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "LA6668-3",
+            "system": "http://loinc.org",
+            "display": "Pathogenic"
+          }
+        ]
+      }
+    }
+  ],
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "POS",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display": "Positive"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "Pathogene FBN1-Mutation, krankheitsursächlich für Marfan-Syndrom"
+    }
+  ]
+}

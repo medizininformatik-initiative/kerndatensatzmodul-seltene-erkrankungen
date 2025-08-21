@@ -11,11 +11,31 @@ Description: "19-jähriger männlicher Patient mit bestätigtem Marfan-Syndrom"
 * gender = #male
 * birthDate = "2005-01-01"  // Approximated - 19 years old in 2024
 
-// Marfan Syndrome Diagnosis - Confirmed
-Instance: condition-marfan-confirmed
+// Marfan Syndrome Diagnosis - Suspected
+Instance: condition-marfan-suspected
 InstanceOf: MII_PR_SE_ClinicalDiagnosis
 Usage: #example
-Title: "Marfan-Syndrom - Bestätigt"
+Title: "Marfan-Syndrom - Verdacht"
+Description: "Verdacht auf Marfan-Syndrom"
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#provisional
+* category = $condition-category#encounter-diagnosis
+* code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
+* code.coding[icd10-gm].version = "2024"
+* code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
+* code.coding[sct] = $SCT#19346006 "Marfan syndrome"
+* code.text = "Verdacht auf Marfan-Syndrom"
+* subject = Reference(patient-marfan-001)
+* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[=].valueDateTime = "2024-12-10"
+* recordedDate = "2024-12-10"
+* note.text = "Verdacht auf Marfan-Syndrom aufgrund klinischer Präsentation"
+
+// Marfan Syndrome Diagnosis - Clinical
+Instance: condition-marfan-clinical
+InstanceOf: MII_PR_SE_ClinicalDiagnosis
+Usage: #example
+Title: "Marfan-Syndrom - Klinische Diagnose"
 Description: "Klinisch bestätigtes Marfan-Syndrom"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
@@ -44,6 +64,52 @@ Description: "Klinisch bestätigtes Marfan-Syndrom"
 * evidence[+].code.coding = http://hpo.jax.org/app/#HP:0100749 "Chest pain"
 * evidence[=].detail = Reference(Observation/symptom-chest-pain)
 * note.text = "Marfan-Syndrom klinisch diagnostiziert basierend auf kardialen Befunden, Skelettmerkmalen und ophthalmologischer Manifestation"
+
+// Marfan Syndrome Diagnosis - Genetic
+Instance: condition-marfan-genetic
+InstanceOf: MII_PR_SE_GeneticDiagnosis
+Usage: #example
+Title: "Marfan-Syndrom - Genetische Diagnose"
+Description: "Genetisch bestätigtes Marfan-Syndrom mit FBN1-Mutation"
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
+* category = $SCT#782964007 "Genetic disease"
+* code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
+* code.coding[icd10-gm].version = "2024"
+* code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
+* code.coding[sct] = $SCT#19346006 "Marfan syndrome"
+* code.coding[omim] = http://omim.org#154700 "Marfan syndrome"
+* code.text = "Marfan-Syndrom - genetisch bestätigt"
+* subject = Reference(patient-marfan-001)
+* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[=].valueDateTime = "2024-12-20"
+* recordedDate = "2024-12-20"
+* evidence[+].code = $SCT#410545006 "Genetic finding"
+* evidence[=].detail = Reference(Observation/variant-fbn1-001)
+* note.text = "FBN1-Mutation c.3217G>A (p.Gly1073Arg) nachgewiesen, krankheitsursächlich. Genetische Diagnose existiert parallel zur klinischen Diagnose."
+
+// FBN1 Gene Mutation
+Instance: variant-fbn1-001
+InstanceOf: Observation
+Usage: #example
+Title: "FBN1 Gen - Pathogene Mutation"
+Description: "Pathogene FBN1-Mutation bei Marfan-Syndrom"
+* status = #final
+* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
+* code = $LNC#55233-1 "Genetic variant assessment"
+* subject = Reference(patient-marfan-001)
+* effectiveDateTime = "2024-12-20"
+* valueCodeableConcept = $SCT#10828004 "Positive"
+* component[+].code = $LNC#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept.coding[+] = http://www.genenames.org/geneId#2200 "FBN1"
+* component[+].code = $LNC#48004-6 "DNA change (c.HGVS)"
+* component[=].valueCodeableConcept.text = "c.3217G>A"
+* component[+].code = $LNC#48005-3 "Amino acid change (pHGVS)"
+* component[=].valueCodeableConcept.text = "p.Gly1073Arg"
+* component[+].code = $LNC#53037-8 "Genetic variant clinical significance"
+* component[=].valueCodeableConcept = $LNC#LA6668-3 "Pathogenic"
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#POS "Positive"
+* note.text = "Pathogene FBN1-Mutation, krankheitsursächlich für Marfan-Syndrom"
 
 // Cataract Diagnosis
 Instance: condition-cataract
@@ -264,7 +330,7 @@ Description: "Geplante David-Operation (Valve-sparing root replacement)"
 * code.text = "Aortenwurzelersatz (David-Operation)"
 * subject = Reference(patient-marfan-001)
 * performedPeriod.start = "2025-03-15"
-* reasonReference = Reference(Condition/condition-marfan-confirmed)
+* reasonReference = Reference(Condition/condition-marfan-clinical)
 * note.text = "Geplante klappensparende Aortenwurzelersatz-Operation nach David bei progredienter Aortenwurzeldilatation"
 
 // Medication Statement - Losartan
@@ -279,7 +345,7 @@ Description: "Losartan zur Progressionshemmung der Aortenwurzeldilatation"
 * medicationCodeableConcept.text = "Losartan 50mg"
 * subject = Reference(patient-marfan-001)
 * effectiveDateTime = "2024-12-15"
-* reasonReference = Reference(Condition/condition-marfan-confirmed)
+* reasonReference = Reference(Condition/condition-marfan-clinical)
 * dosage.text = "50mg einmal täglich"
 * dosage.route = $SCT#26643006 "Oral route"
 * dosage.doseAndRate.doseQuantity = 50 'mg' "mg"
@@ -288,19 +354,22 @@ Description: "Losartan zur Progressionshemmung der Aortenwurzeldilatation"
 * dosage.timing.repeat.periodUnit = #d
 * note.text = "Zur Progressionshemmung der Aortenwurzeldilatation bei Marfan-Syndrom"
 
-// Clinical Impression - Cardiology
-Instance: clinical-impression-cardiology
+// Clinical Impression - Cardiology Referral from SE
+Instance: clinical-impression-se-assessment
 InstanceOf: ClinicalImpression
 Usage: #example
-Title: "Kardiologische Beurteilung"
-Description: "Kardiologische Erstbeurteilung bei V.a. Marfan-Syndrom"
+Title: "Konsultation ZSE bei V.a. Marfan-Syndrom"
+Description: "Konsultation im Zentrum für Seltene Erkrankungen mit kardiologischer Mitbeurteilung bei V.a. Marfan-Syndrom"
 * status = #completed
 * subject = Reference(patient-marfan-001)
 * encounter = Reference(encounter-cardiology)
 * effectiveDateTime = "2024-12-15"
 * date = "2024-12-15"
 * assessor = Reference(Practitioner/example)
-* summary = "19-jähriger Patient mit klinischen Zeichen eines Marfan-Syndroms. Aortenwurzeldilatation (48mm), AKI Grad II, MKI Grad I. Skelettale Merkmale (Hochwuchs 2,13m, Beinlängendifferenz) und ophthalmologische Manifestation (Z.n. Katarakt-OP) unterstützen die Diagnose."
+* summary = "19-jähriger Patient mit Z.n. Katarakt-OP im ZSE vorstellig. Kardiologische Mitbeurteilung zeigt: Aortenwurzeldilatation (48mm), AKI Grad II, MKI Grad I. Skelettale Merkmale (Hochwuchs 2,13m, Beinlängendifferenz) bestätigen Marfan-Syndrom. Klinische und genetische Diagnose gesichert."
+* problem[+] = Reference(condition-marfan-suspected)  // Reason for assessment (suspected diagnosis)
+* finding[+].itemReference = Reference(condition-marfan-clinical)  // Clinical diagnosis as finding
+* finding[+].itemReference = Reference(condition-marfan-genetic)  // Genetic diagnosis as finding
 * finding[+].itemCodeableConcept = $SCT#249364003 "Aortic root dilatation"
 * finding[=].itemReference = Reference(symptom-aortic-root)
 * finding[+].itemCodeableConcept = $SCT#60573004 "Aortic valve regurgitation"
@@ -315,10 +384,11 @@ Description: "Kardiologische Erstbeurteilung bei V.a. Marfan-Syndrom"
 * investigation[=].item[+] = Reference(observation-echo-aortic)
 * investigation[=].item[+] = Reference(observation-echo-av)
 * investigation[=].item[+] = Reference(observation-echo-mv)
-* problem[+] = Reference(Condition/condition-marfan-confirmed)
+* problem[+] = Reference(Condition/condition-marfan-clinical)
+* problem[+] = Reference(Condition/condition-marfan-genetic)
 * prognosisCodeableConcept[+] = $SCT#170969009 "Prognosis guarded"
-* note[+].text = "Marfan-Syndrom klinisch gesichert. OP-Indikation für Aortenwurzelersatz gestellt. Medikamentöse Therapie mit Losartan eingeleitet."
-* note[+].text = "Regelmäßige kardiologische Kontrollen alle 6 Monate empfohlen. Genetische Beratung für Familienplanung empfohlen."
+* note[+].text = "Katarakt in jungem Alter war Anlass für ZSE-Konsultation. Marfan-Syndrom klinisch und genetisch (FBN1-Mutation) bestätigt. OP-Indikation für Aortenwurzelersatz durch Kardiologie gestellt. Medikamentöse Therapie mit Losartan eingeleitet."
+* note[+].text = "Multidisziplinäre Betreuung im ZSE etabliert. Regelmäßige kardiologische Kontrollen alle 6 Monate. Genetische Beratung für Familienplanung empfohlen."
 
 // Encounters
 Instance: encounter-ophthalmology
@@ -360,7 +430,7 @@ Description: "Ambulante kardiologische Erstvorstellung bei Thoraxschmerzen"
 * subject = Reference(patient-marfan-001)
 * period.start = "2024-12-15"
 * period.end = "2024-12-15"
-* diagnosis.condition = Reference(Condition/condition-marfan-confirmed)
+* diagnosis.condition = Reference(Condition/condition-marfan-clinical)
 * diagnosis.use = http://terminology.hl7.org/CodeSystem/diagnosis-role#AD "Admission diagnosis"
 * reasonCode.coding = $SCT#29857009 "Chest pain"
 * reasonCode.text = "Thoraxschmerzen bei V.a. Marfan-Syndrom"
@@ -375,6 +445,6 @@ Description: "Geplanter stationärer Aufenthalt für Aortenwurzelersatz"
 * type = $SCT#305565006 "Admission to cardiac surgery department"
 * subject = Reference(patient-marfan-001)
 * period.start = "2025-03-15"
-* diagnosis.condition = Reference(Condition/condition-marfan-confirmed)
+* diagnosis.condition = Reference(Condition/condition-marfan-clinical)
 * diagnosis.use = http://terminology.hl7.org/CodeSystem/diagnosis-role#CC "Chief complaint"
 * reasonCode.text = "Elektive Aortenwurzelersatz-Operation bei Marfan-Syndrom"

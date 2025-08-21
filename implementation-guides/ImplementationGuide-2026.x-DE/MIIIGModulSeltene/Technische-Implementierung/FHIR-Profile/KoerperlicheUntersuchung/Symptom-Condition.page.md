@@ -1,21 +1,19 @@
 ---
 parent: 
-topic: Specimen
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis
+topic: Condition
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-symptom-condition
 ---
 
 ## {{page-title}}
 
-Dieses Profil beschreibt eine Histologie-Grading im Rahmen in der Sell.
-Dabei wird insbesondere die morphologische Dedifferenzierung des Gewebes bewertet.
-
-
+Dieses Profil beschreibt symptombasierte Zustände im Kontext seltener Erkrankungen.
+Es erfasst symptomatische Conditions mit zeitlichen Merkmalen und ergänzt das HPO Assessment Observation Profil.
 
 @```
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-symptom-condition' 
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
@@ -29,7 +27,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-symptom-condition'
         select
 	        Beschreibung: description
         with
@@ -39,7 +37,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-diagnosis' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-symptom-condition' 
         for 
             differential.element 
             where 
@@ -54,32 +52,35 @@ select
 
 ---
 
+### Verwendung
+
+Das Symptom-Condition Profil wird verwendet für:
+- Dokumentation von Symptomen als eigenständige Conditions
+- Erfassung zeitlicher Verläufe von Symptomen
+- Verknüpfung mit HPO-kodierten Beobachtungen
+- Darstellung von Symptom-Clustern bei seltenen Erkrankungen
+
+### Abgrenzung zu anderen Profilen
+
+| Profil | Verwendung |
+|--------|------------|
+| **Symptom-Condition** | Symptome als eigenständige Zustände mit Verlauf |
+| **HPO Assessment** | Einzelne phänotypische Beobachtungen |
+| **Clinical Diagnosis** | Bestätigte klinische Diagnosen |
+| **Genetic Diagnosis** | Genetisch bestätigte Diagnosen |
+
+---
+
 Mapping Datensatz zu FHIR
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Onkologie'
-    for differential.element where id.contains('Grading') 
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SE'
+    for differential.element where id.contains('Symptom') 
     select 
         Datensatz: short,
         Erklaerung: definition, 
         FHIR: mapping[0].map 
-
-```
-
----
-
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
-
-@```
-from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading'  
-    for differential.element
-    where mapping.identity='oBDS'
-    select 
-        oBDS: mapping.map,
-        Definition: mapping.comment,
-        FHIR: path
 ```
 
 ---
@@ -92,7 +93,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele: 
 
-    ```GET [base]/Observation?_id=1234```
+    ```GET [base]/Condition?_id=1234```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -100,7 +101,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
     
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading```
+    ```GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-symptom-condition```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -108,7 +109,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
 
-    ```GET [base]/Observation?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory```
+    ```GET [base]/Condition?category=http://snomed.info/sct|418799008```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
 
@@ -116,7 +117,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
 
-    ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005```
+    ```GET [base]/Condition?code=http://hpo.jax.org/app/|HP:0001324```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
 
@@ -124,44 +125,36 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
 
-    ```GET [base]/Observation?subject=Patient/example```
+    ```GET [base]/Condition?subject=Patient/example```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
-6. Der Suchparameter "focus" MUSS unterstützt werden:
+6. Der Suchparameter "onset-date" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?focus=Condition/example```
+    ```GET [base]/Condition?onset-date=2024-02-08```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "focus" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Anwendungshinweise: Weitere Informationen zur Suche nach "onset-date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
 
-7. Der Suchparameter "encounter" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?encounter=Encounter/example```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-
-8. Der Suchparameter "date" MUSS unterstützt werden:
+7. Der Suchparameter "severity" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?date=2024-02-08```
+    ```GET [base]/Condition?severity=http://hpo.jax.org/app/|HP:0012828```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
+    Anwendungshinweise: Weitere Informationen zur Suche nach "severity" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
 
-9. Der Suchparameter "derived-from" MUSS unterstützt werden:
+8. Der Suchparameter "evidence" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?derived-from=Observation/example```
+    ```GET [base]/Condition?evidence=Observation/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Anwendungshinweise: Weitere Informationen zur Suche nach "evidence" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
 **Beispiele**
 
-{{json:mii-exa-se-syndrome-diagnosis}}
+{{json:mii-exa-se-symptom-condition}}
 
 ---

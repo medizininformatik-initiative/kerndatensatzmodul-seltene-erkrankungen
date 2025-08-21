@@ -1,140 +1,256 @@
-@startuml Marfan-Example
-!theme plain
+@startuml Marfan_Case_Resources_Diagram
+!define DARKBLUE #1e3a5f
+!define LIGHTBLUE #4a86e8
+!define GREEN #0d9488
+!define ORANGE #ea580c
+!define PURPLE #7c3aed
+!define RED #dc2626
+!define YELLOW #facc15
+!define PINK #ec4899
 
-title SE (Seltene Erkrankungen) Resource Hierarchy\nMarfan Syndrome Example with Multiple Symptoms & Timepoints
+skinparam backgroundColor #f8f9fa
+skinparam roundcorner 10
+skinparam shadowing true
+skinparam ArrowColor #666666
+skinparam ArrowThickness 2
 
-' Top Level - Syndrome
-package "Syndrome Level" {
-  object "Marfan Syndrome" as marfan <<Condition>> {
-    id: marfan-syndrome-001
-    code: HP:0001519 "Connective tissue disorder"
-    category: syndrome
-    clinicalStatus: active
-    onsetAge: 12 years
-    recordedDate: 2024-01-15
-  }
+skinparam class {
+    BackgroundColor<<Patient>> DARKBLUE
+    BorderColor<<Patient>> DARKBLUE
+    FontColor<<Patient>> white
+    
+    BackgroundColor<<Condition>> RED
+    BorderColor<<Condition>> RED
+    FontColor<<Condition>> white
+    
+    BackgroundColor<<Observation>> GREEN
+    BorderColor<<Observation>> GREEN
+    FontColor<<Observation>> white
+    
+    BackgroundColor<<Procedure>> PURPLE
+    BorderColor<<Procedure>> PURPLE
+    FontColor<<Procedure>> white
+    
+    BackgroundColor<<Encounter>> ORANGE
+    BorderColor<<Encounter>> ORANGE
+    FontColor<<Encounter>> white
+    
+    BackgroundColor<<Medication>> PINK
+    BorderColor<<Medication>> PINK
+    FontColor<<Medication>> white
+    
+    BackgroundColor<<ClinicalImpression>> YELLOW
+    BorderColor<<ClinicalImpression>> YELLOW
+    FontColor<<ClinicalImpression>> black
 }
 
-' Mid Level - Symptoms
-package "Symptom Level" {
-  object "Muscle Weakness" as weakness <<Condition>> {
-    id: muscle-weakness-001
-    code: HP:0001324 "Muscle weakness"
-    category: symptom
-    severity: HP:0012825 "Mild"
-    onsetAge: 15 years
-    clinicalStatus: active
-    recordedDate: 2024-02-10
-  }
-  
-  object "Joint Hypermobility" as joint <<Condition>> {
-    id: joint-hypermobility-001
-    code: HP:0001382 "Joint hypermobility"
-    category: symptom
-    severity: HP:0012826 "Moderate"
-    onsetAge: 8 years
-    clinicalStatus: active
-    recordedDate: 2024-01-20
-  }
-  
-  object "Aortic Dilatation" as aortic <<Condition>> {
-    id: aortic-dilatation-001
-    code: HP:0002616 "Aortic root dilatation"
-    category: symptom
-    severity: HP:0012848 "Severe"
-    onsetAge: 18 years
-    clinicalStatus: active
-    recordedDate: 2024-03-05
-  }
+' Layout hint - force left positioning
+together {
+    class "condition-cataract" <<Condition>> {
+        **Katarakt bilateral**
+        Status: resolved
+        ICD-10: H26.9
+        Erstdiagnose: 15.10.2024
+        Z.n. OP: 12.11.2024
+        → Anlass für ZSE-Vorstellung
+    }
+    
+    class "condition-marfan-suspected" <<Condition>> {
+        **Verdacht auf Marfan-Syndrom**
+        clinicalStatus: active
+        verificationStatus: provisional
+        ICD-10: Q87.4
+        Feststellung: 10.12.2024
+        Quelle: ZSE
+    }
+    
+    class "clinical-impression-001" <<ClinicalImpression>> {
+        **Konsultation ZSE**
+        Status: completed
+        Datum: 20.12.2024
+        Zusammenfassung: Bestätigtes Marfan
+        mit klinischen und genetischen Befunden
+    }
+    
+    class "encounter-cardiology" <<Encounter>> {
+        **Kardiologische Erstvorstellung**
+        Datum: 15.12.2024
+        Typ: Ambulant
+    }
 }
 
-' Low Level - Observations at different timepoints
-package "Observation Level" {
-  object "Grip Strength T1" as grip1 <<Observation>> {
-    id: grip-strength-2023-06
-    code: HP:0001324 "Muscle weakness"
-    effectiveDateTime: 2023-06-15
-    valueBoolean: true
-    status: final
-    method: "Manual muscle testing"
-  }
-  
-  object "Grip Strength T2" as grip2 <<Observation>> {
-    id: grip-strength-2024-02
-    code: HP:0001324 "Muscle weakness" 
-    effectiveDateTime: 2024-02-20
-    valueCodeableConcept: HP:0012825 "Mild"
-    status: final
-    method: "Dynamometry"
-  }
-  
-  object "Joint ROM Assessment" as rom1 <<Observation>> {
-    id: joint-rom-2023-12
-    code: HP:0001382 "Joint hypermobility"
-    effectiveDateTime: 2023-12-10
-    valueCodeableConcept: HP:0012826 "Moderate"
-    status: final
-    method: "Beighton score"
-  }
-  
-  object "Joint ROM Follow-up" as rom2 <<Observation>> {
-    id: joint-rom-2024-06
-    code: HP:0001382 "Joint hypermobility"
-    effectiveDateTime: 2024-06-15
-    valueCodeableConcept: HP:0012826 "Moderate"
-    status: final
-    method: "Beighton score"
-  }
-  
-  object "Echo T1" as echo1 <<Observation>> {
-    id: echo-2024-01
-    code: HP:0002616 "Aortic root dilatation"
-    effectiveDateTime: 2024-01-25
-    valueCodeableConcept: HP:0012825 "Mild"
-    status: final
-    method: "Echocardiography"
-  }
-  
-  object "Echo T2" as echo2 <<Observation>> {
-    id: echo-2024-07
-    code: HP:0002616 "Aortic root dilatation"
-    effectiveDateTime: 2024-07-10
-    valueCodeableConcept: HP:0012848 "Severe"
-    status: final
-    method: "Echocardiography"
-  }
+' Patient at the center
+class "patient-marfan-001" <<Patient>> {
+    19-jähriger Mann
+    Geburt: ~2005
+    ID: MRF-2024-001
+    Größe: 2,13m
 }
 
-' Define relationships via evidence.detail
-marfan ||--o weakness : "evidence.detail"
-marfan ||--o joint : "evidence.detail"
-marfan ||--o aortic : "evidence.detail"
+' Confirmed Diagnoses
+class "condition-marfan-clinical" <<Condition>> {
+    **Klinische Diagnose Marfan**
+    Category: clinical
+    clinicalStatus: active
+    verificationStatus: confirmed
+    ICD-10: Q87.4
+    Orpha: 558
+    Feststellung: 15.12.2024
+}
 
-weakness ||--o grip1 : "evidence.detail"
-weakness ||--o grip2 : "evidence.detail"
+class "condition-marfan-genetic" <<Condition>> {
+    **Genetische Diagnose Marfan**
+    Category: genetic
+    clinicalStatus: active
+    verificationStatus: confirmed
+    ICD-10: Q87.4
+    Orpha: 558
+    Feststellung: 20.12.2024
+    FBN1: homozygote Mutation
+}
 
-joint ||--o rom1 : "evidence.detail"
-joint ||--o rom2 : "evidence.detail"
+' Genetic findings (top)
+class "variant-fbn1-001" <<Observation>> {
+    **FBN1 Mutation**
+    c.3217G>A (p.Gly1073Arg)
+    Status: Pathologisch
+    Datum: 20.12.2024
+}
 
-aortic ||--o echo1 : "evidence.detail"
-aortic ||--o echo2 : "evidence.detail"
+' Treatments (right)
+class "procedure-aortic-planned" <<Procedure>> {
+    **Aortenwurzelersatz**
+    OPS: 5-354.0a
+    Datum: 15.03.2025
+    David-Operation
+}
 
-' Add temporal flow annotations
-note top of grip1 : **T1: Jun 2023**\nInitial assessment
-note top of grip2 : **T2: Feb 2024**\nProgression noted
+class "medication-losartan" <<Medication>> {
+    **Losartan**
+    50mg 1x täglich
+    Start: 15.12.2024
+}
 
-note top of rom1 : **T1: Dec 2023**\nBaseline measurement
-note top of rom2 : **T2: Jun 2024**\nStable condition
+' Cardiac observations (bottom right)
+class "observation-aortic-series" <<Observation>> {
+    **Kardiologische Befunde**
+    Aortenwurzel: 48mm ↑
+    AKI: Grad II
+    MKI: Grad I
+    Thoraxschmerzen
+}
 
-note top of echo1 : **T1: Jan 2024**\nMild dilatation
-note top of echo2 : **T2: Jul 2024**\n**Progression to severe**
+' Skeletal observations (bottom left)
+class "observation-skeletal" <<Observation>> {
+    **Skelettale Merkmale**
+    Körpergröße: 2,13m
+    Beinlängendifferenz
+    Datum: 15.12.2024
+}
 
-' Legend
-legend bottom
-  **Temporal Pattern:**
-  Multiple observations track symptom progression over time
-  Evidence hierarchy: Syndrome → Symptoms → Observations
-  Different timepoints show disease evolution
-end legend
+
+' Other Encounters (bottom)
+class "encounter-ophthalmology" <<Encounter>> {
+    **Augenärztliche Konsultation**
+    Datum: 15.10.2024
+    Typ: Ambulant
+}
+
+class "encounter-surgery-planned" <<Encounter>> {
+    **Geplante Herzchirurgie**
+    Datum: 15.03.2025
+    Typ: Stationär
+}
+
+' Layout positioning with hidden arrows
+"condition-cataract" -[hidden]down-> "condition-marfan-suspected"
+"condition-marfan-suspected" -[hidden]down-> "clinical-impression-001"
+"clinical-impression-001" -[hidden]down-> "encounter-cardiology"
+"condition-cataract" -[hidden]right-> "patient-marfan-001"
+"condition-marfan-suspected" -[hidden]right-> "patient-marfan-001"
+"clinical-impression-001" -[hidden]right-> "patient-marfan-001"
+
+' Relationships - Patient at center
+"patient-marfan-001" <-- "condition-marfan-suspected" : subject
+"patient-marfan-001" <-- "condition-marfan-clinical" : subject
+"patient-marfan-001" <-- "condition-marfan-genetic" : subject
+"patient-marfan-001" <-- "clinical-impression-001" : subject
+"patient-marfan-001" <-- "variant-fbn1-001" : subject
+"patient-marfan-001" <-- "procedure-aortic-planned" : subject
+"patient-marfan-001" <-- "medication-losartan" : subject
+"patient-marfan-001" <-- "observation-aortic-series" : subject
+"patient-marfan-001" <-- "observation-skeletal" : subject
+"patient-marfan-001" <-- "condition-cataract" : subject
+
+' Cataract as trigger
+"condition-cataract" ..> "condition-marfan-suspected" : triggers evaluation
+
+' ClinicalImpression reason and results
+"clinical-impression-001" --> "condition-marfan-suspected" : problem
+"clinical-impression-001" --> "condition-marfan-clinical" : finding
+"clinical-impression-001" --> "condition-marfan-genetic" : finding
+"clinical-impression-001" --> "condition-cataract" : supportingInfo
+
+' ClinicalImpression investigations
+"clinical-impression-001" --> "variant-fbn1-001" : investigation
+"clinical-impression-001" --> "observation-aortic-series" : investigation
+"clinical-impression-001" --> "observation-skeletal" : investigation
+
+' Parallel diagnoses - both exist simultaneously
+"condition-marfan-suspected" ..> "condition-marfan-clinical" : leads to
+"condition-marfan-suspected" ..> "condition-marfan-genetic" : leads to
+
+' Evidence links
+"condition-marfan-genetic" --> "variant-fbn1-001" : evidence
+"condition-marfan-clinical" --> "observation-aortic-series" : evidence
+"condition-marfan-clinical" --> "observation-skeletal" : evidence
+
+' Procedure reasons
+"procedure-aortic-planned" --> "condition-marfan-clinical" : reasonReference
+"procedure-aortic-planned" --> "condition-marfan-genetic" : reasonReference
+
+' Medication reason
+"medication-losartan" --> "condition-marfan-clinical" : reasonReference
+
+' Encounter diagnosis links
+"encounter-cardiology" --> "condition-marfan-clinical" : diagnosis
+"encounter-ophthalmology" --> "condition-cataract" : diagnosis
+"encounter-surgery-planned" --> "condition-marfan-genetic" : diagnosis
+
+' Encounter patient links
+"patient-marfan-001" <-- "encounter-cardiology" : subject
+"patient-marfan-001" <-- "encounter-ophthalmology" : subject
+"patient-marfan-001" <-- "encounter-surgery-planned" : subject
+
+' ClinicalImpression encounter
+"clinical-impression-001" --> "encounter-cardiology" : encounter
+
+' Timeline annotation
+note right of "condition-cataract"
+  **Zeitlicher Verlauf:**
+  1. Katarakt (15.10) → ZSE-Vorstellung
+  2. Verdacht Marfan (10.12)
+  3. Klinische Diagnose (15.12)
+  4. Genetische Diagnose (20.12)
+  
+  Katarakt war Anlass für
+  weiterführende Diagnostik
+end note
+
+note left of "observation-aortic-series"
+  **Kardiale Manifestation**
+  bestätigt Marfan-Syndrom
+end note
+
+legend bottom center
+|Color|Type|Beschreibung|
+|<#1e3a5f>|Patient|Zentrale Patientenressource|
+|<#dc2626>|Condition|Diagnosen (Katarakt → Marfan)|
+|<#facc15>|ClinicalImpression|ZSE-Konsultation|
+|<#0d9488>|Observation|Befunde & Genetik|
+|<#7c3aed>|Procedure|Operationen|
+|<#ea580c>|Encounter|Kontakte|
+|<#ec4899>|Medication|Medikation|
+endlegend
 
 @enduml

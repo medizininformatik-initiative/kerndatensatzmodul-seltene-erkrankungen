@@ -32,14 +32,14 @@ Description: "Verdacht auf SMA beim Neugeborenenscreening"
 * evidence[=].detail = Reference(observation-sma-screening)
 * note.text = "Verdacht beim Neugeborenenscreening gestellt - SMN1 Exon 7 nicht nachweisbar"
 
-// SMA Diagnosis - Clinical (Initial Documentation)
+// SMA Diagnosis - Clinical (Confirmed after initial assessment)
 Instance: condition-sma-clinical
 InstanceOf: MII_PR_SE_ClinicalDiagnosis
 Usage: #example
 Title: "SMA Klinische Diagnose"
 Description: "Klinische Diagnose SMA Typ 1 bei Erstvorstellung"
 * clinicalStatus = $condition-clinical#active
-* verificationStatus = $condition-ver-status#provisional
+* verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#encounter-diagnosis
 * code.coding[icd10-gm] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]"
 * code.coding[icd10-gm].version = "2024"
@@ -51,15 +51,16 @@ Description: "Klinische Diagnose SMA Typ 1 bei Erstvorstellung"
 * extension[=].valueDateTime = "2024-07-22"
 * recordedDate = "2024-07-22"
 * encounter = Reference(encounter-ambulant-001)
-* extension[+].url = "http://hl7.org/fhir/StructureDefinition/replaces"
-* extension[=].valueReference = Reference(Condition/condition-sma-suspected)
-* note.text = "Klinisch diagnostiziert basierend auf Screening-Verdacht, Molekulargenetik ausstehend"
+* onsetDateTime = "2024-07-01"  // Birth/neonatal onset
+* evidence[+].code.text = "Klinische Präsentation"
+* evidence[=].detail = Reference(observation-troponin-001)
+* note.text = "Klinische Diagnose basierend auf typischer Präsentation: Neonatale Hypotonie, fehlende Muskeleigenreflexe, erhöhtes Troponin"
 
-// SMA Diagnosis - Molecularly Confirmed
-Instance: condition-sma-confirmed
+// SMA Diagnosis - Genetic (Parallel diagnosis)
+Instance: condition-sma-genetic
 InstanceOf: MII_PR_SE_GeneticDiagnosis
 Usage: #example
-Title: "SMA Molekulargenetisch bestätigt"
+Title: "SMA Genetische Diagnose"
 Description: "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
@@ -72,8 +73,6 @@ Description: "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion"
 * subject = Reference(patient-sma-001)
 * extension[+].url = $mii-ex-diagnose-feststellungsdatum
 * extension[=].valueDateTime = "2024-07-26"  // Date of molecular confirmation
-* extension[+].url = "http://hl7.org/fhir/StructureDefinition/replaces"
-* extension[=].valueReference = Reference(Condition/condition-sma-clinical)
 * recordedDate = "2024-07-26"
 * onsetDateTime = "2024-07-01"  // Birth/neonatal onset
 * evidence[+].code = $SCT#410545006 "Genetic finding"
@@ -81,7 +80,7 @@ Description: "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion"
 * evidence[=].detail[+] = Reference(Observation/variant-smn2-001)
 * evidence[+].code = $SCT#405824009 "Genetic test finding"
 * evidence[=].detail = Reference(DiagnosticReport/molgen-diagnostic-implication-sma)
-* note.text = "0 Kopien des SMN1-Gens, 2 Kopien des SMN2-Gens - krankheitsursächlich. Bestätigt die vorherige klinische Diagnose."
+* note.text = "0 Kopien des SMN1-Gens, 2 Kopien des SMN2-Gens - krankheitsursächlich. Genetische Diagnose existiert parallel zur klinischen Diagnose."
 
 // Family History - Great-grandmother with unknown muscle disease
 Instance: family-history-001
@@ -176,7 +175,7 @@ Description: "Verabreichung des Gentherapeutikums für SMA"
 * code.text = "Gentherapie mit Onasemnogene abeparvovec (Zolgensma)"
 * subject = Reference(patient-sma-001)
 * performedDateTime = "2024-07-29"
-* reasonReference = Reference(Condition/condition-sma-confirmed)
+* reasonReference = Reference(Condition/condition-sma-genetic)
 * note.text = "Gentherapeutikum ohne Komplikationen verabreicht, vorherige Gabe von Prednisolon"
 
 // Laboratory Observations - ALT
@@ -288,14 +287,15 @@ Description: "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum"
 * date = "2024-07-22"
 * assessor = Reference(Practitioner/example)
 * summary = "Neugeborenes mit V.a. SMA aus Neugeborenenscreening. Familienanamnese zeigt unklare Muskelerkrankung der Urgroßmutter. Troponin T bereits erhöht (92 ng/l)."
-* finding[+].itemCodeableConcept = $SCT#160303001 "Family history of disorder"
-* finding[=].basis = "Urgroßmutter mit unbekannter Muskelerkrankung"
+* problem[+] = Reference(condition-sma-suspected)  // Reason for assessment (suspected diagnosis)
+* finding[+].itemReference = Reference(condition-sma-clinical)  // Clinical diagnosis as finding
+* finding[+].itemReference = Reference(condition-sma-genetic)  // Genetic diagnosis as finding
 * finding[+].itemCodeableConcept = $SCT#442753009 "Troponin T above reference range"
 * finding[=].itemReference = Reference(observation-troponin-001)
-* investigation[+].code.text = "Molekulargenetische Diagnostik"
-* investigation[=].item[+] = Reference(variant-smn1-001)
-* investigation[=].item[+] = Reference(variant-smn2-001)
-* problem[+] = Reference(Condition/condition-sma-clinical)
+* investigation[+].code.text = "Familienanamnese"
+* investigation[=].item = Reference(family-history-001)
+* investigation[+].code.text = "Labordiagnostik"
+* investigation[=].item = Reference(observation-troponin-001)
 * prognosisCodeableConcept[+] = $SCT#67334001 "Guarded prognosis"
 * note[+].text = "Klinische Untersuchung gemäß SMA-Diagnoseprotokoll. Blutentnahme für Genetik veranlasst."
 * note[+].text = "Klinisches Bild vereinbar mit SMA Typ 1. Molekulargenetische Bestätigung ausstehend. Eltern über Therapieoptionen informiert."
@@ -321,7 +321,8 @@ Description: "Nachsorgeuntersuchung nach Gentherapie"
 * finding[=].basis = "ALT und AST normwertig"
 * finding[+].itemCodeableConcept = $SCT#165555003 "Platelet count normal"
 * finding[=].basis = "Thrombozytenzahl normwertig"
-* problem[+] = Reference(Condition/condition-sma-confirmed)
+* problem[+] = Reference(Condition/condition-sma-clinical)
+* problem[+] = Reference(Condition/condition-sma-genetic)
 * prognosisCodeableConcept[+] = $SCT#170969009 "Prognosis guarded"
 * note[+].text = "Standardisierte Nachsorgeuntersuchung nach Gentherapie gemäß Zentrumsprotokoll"
 * note[+].text = "Troponin-Erhöhung präexistent, nicht therapieassoziiert. Gentherapie gut vertragen. Weiterführung der Prednisolon-Therapie. Nächste Kontrolle in 4 Wochen."
@@ -365,7 +366,7 @@ Description: "Stationäre Aufnahme für Gentherapie"
 * subject = Reference(patient-sma-001)
 * period.start = "2024-07-29"
 * period.end = "2024-07-30"
-* diagnosis.condition = Reference(Condition/condition-sma-confirmed)
+* diagnosis.condition = Reference(Condition/condition-sma-genetic)
 * diagnosis.use = http://terminology.hl7.org/CodeSystem/diagnosis-role#CC "Chief complaint"
 
 Instance: encounter-nachsorge-001
@@ -379,5 +380,5 @@ Description: "Erster Nachsorgetermin nach Gentherapie"
 * subject = Reference(patient-sma-001)
 * period.start = "2024-08-12"
 * period.end = "2024-08-12"
-* diagnosis.condition = Reference(Condition/condition-sma-confirmed)
+* diagnosis.condition = Reference(Condition/condition-sma-genetic)
 
