@@ -4,13 +4,14 @@
 
 Obwohl geschätzt wird, dass von **Seltenen Erkrankungen (SE)** in Deutschland rund 4 Millionen Menschen (5 % der Bevölkerung) betroffen sind, gelten die davon Betroffenen als die Waisenkinder der Medizin und der MII. Daher fordert das Nationale Aktionsbündnis für Menschen mit Seltenen Erkrankungen (NAMSE), dass die Digitalisierung der Krankenversorgungs‐ und Gesundheitssysteme dieser großen Bevölkerungsgruppe in besonderem Maße zu Gute kommen muss.
 
-Die große Herausforderung bei den SE ergibt sich aus der Vielzahl sehr verschiedener „Störungen“ und „Subtypen von Störungen“ (von bis zu 10.000 ist die Rede) mit jeweils nur kleinen Fallzahlen je „Störung“.
+Die große Herausforderung bei den SE ergibt sich aus der Vielzahl sehr verschiedener *„Störungen“* und *„Subtypen von Störungen“* (von bis zu 10.000 ist die Rede) mit jeweils nur kleinen Fallzahlen je *„Störung“*.
 
-* Eine Erkrankung gilt in der Europäischen Union als „Selten“ , wenn von ihr weniger als 1 unter 2.000 Einwohnern betroffen sind – also maximal 40.000 Personen in Deutschland.
-* Als „Ultraselten“ gelten Erkrankungen, wenn weniger als 1 unter 50.000 Personen betroffen sind.
+* Eine Erkrankung gilt in der Europäischen Union als **„Selten“** , wenn von ihr weniger als **1 unter 2.000** Einwohnern betroffen sind – also maximal 40.000 Personen in Deutschland.
+* Als **„Ultraselten“** gelten Erkrankungen, wenn weniger als 1 unter 50.000 Personen betroffen sind.
 
 Regelmäßig ergeben sich bei SE – insbesondere bei Ultraseltenen – vor der Feststellung der eigentlichen Diagnose jahrelange diagnostische Ungewissheiten, die auch Fehlbehandlungen mit sich bringen. Aber auch nach der Feststellung der Diagnose kann nur für rund 5 % der Patient:innen eine gezielte Therapie angeboten werden, weswegen weitere koordinierte Forschung für die verstreut versorgten kleinen Gruppen besonders wichtig ist.
 
+--
 
 ##### Der einheitliche, standardisierte, EU‐konforme und MII‐KDS‐konforme MBDS‐SE.de soll:
 * An den Klinischen Arbeitsplätzen, wo er als Teil der Versorgungsdokumentation erhoben wird, für die lokale Unterstützung der Versorgung zur Verfügung stehen,
