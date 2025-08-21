@@ -1463,10 +1463,10 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:clinical-impression-cardiology",
+      "fullUrl": "urn:uuid:clinical-impression-se-assessment",
       "resource": {
         "resourceType": "ClinicalImpression",
-        "id": "clinical-impression-cardiology",
+        "id": "clinical-impression-se-assessment",
         "status": "completed",
         "subject": {
           "reference": "Patient/patient-marfan-001"
@@ -1479,7 +1479,7 @@
         "assessor": {
           "reference": "Practitioner/example"
         },
-        "summary": "19-jähriger Patient mit klinischen Zeichen eines Marfan-Syndroms. Aortenwurzeldilatation (48mm), AKI Grad II, MKI Grad I. Skelettale Merkmale (Hochwuchs 2,13m, Beinlängendifferenz) und ophthalmologische Manifestation (Z.n. Katarakt-OP) unterstützen die Diagnose.",
+        "summary": "19-jähriger Patient mit Z.n. Katarakt-OP im ZSE vorstellig. Kardiologische Mitbeurteilung zeigt: Aortenwurzeldilatation (48mm), AKI Grad II, MKI Grad I. Skelettale Merkmale (Hochwuchs 2,13m, Beinlängendifferenz) bestätigen Marfan-Syndrom. Klinische und genetische Diagnose gesichert.",
         "problem": [
           {
             "reference": "Condition/condition-marfan-suspected"
@@ -1604,10 +1604,10 @@
         ],
         "note": [
           {
-            "text": "Marfan-Syndrom klinisch gesichert. OP-Indikation für Aortenwurzelersatz gestellt. Medikamentöse Therapie mit Losartan eingeleitet."
+            "text": "Katarakt in jungem Alter war Anlass für ZSE-Konsultation. Marfan-Syndrom klinisch und genetisch (FBN1-Mutation) bestätigt. OP-Indikation für Aortenwurzelersatz durch Kardiologie gestellt. Medikamentöse Therapie mit Losartan eingeleitet."
           },
           {
-            "text": "Regelmäßige kardiologische Kontrollen alle 6 Monate empfohlen. Genetische Beratung für Familienplanung empfohlen."
+            "text": "Multidisziplinäre Betreuung im ZSE etabliert. Regelmäßige kardiologische Kontrollen alle 6 Monate. Genetische Beratung für Familienplanung empfohlen."
           }
         ]
       },

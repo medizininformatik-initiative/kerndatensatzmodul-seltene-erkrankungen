@@ -37,7 +37,6 @@
 [HPOSeverityValues]: ValueSet-mii-vs-se-hpo-severity-values.html
 [mii-exa-se-hpo-assessment]: Observation-mii-exa-se-hpo-assessment.html
 [hypertelorism]: Observation-hypertelorism.html
-[clinical-impression-cardiology]: ClinicalImpression-clinical-impression-cardiology.html
 [encounter-cardiology]: Encounter-encounter-cardiology.html
 [condition-cataract]: Condition-condition-cataract.html
 [symptom-cataract]: Observation-symptom-cataract.html
@@ -45,6 +44,7 @@
 [encounter-cataract-surgery]: Encounter-encounter-cataract-surgery.html
 [clinical-impression-erstvorstellung]: ClinicalImpression-clinical-impression-erstvorstellung.html
 [clinical-impression-nachsorge]: ClinicalImpression-clinical-impression-nachsorge.html
+[clinical-impression-se-assessment]: ClinicalImpression-clinical-impression-se-assessment.html
 [observation-height-001]: Observation-observation-height-001.html
 [lens-dislocation]: Observation-lens-dislocation.html
 [medication-losartan]: MedicationStatement-medication-losartan.html
@@ -57,6 +57,7 @@
 [condition-marfan-suspected]: Condition-condition-marfan-suspected.html
 [bundle-marfan-complete]: Bundle-bundle-marfan-complete.html
 [example-metabolic-myopathy-excluded]: Condition-example-metabolic-myopathy-excluded.html
+[mii-cps-se-capabilitystatement]: CapabilityStatement-mii-cps-se-capabilitystatement.html
 [MII_CS_SE_Empfehlung_StatusBegruendung]: CodeSystem-mii-cs-se-empfehlung-status-begruendung.html
 [AgeOfOnset]: StructureDefinition-mii-ex-se-age-of-onset.html
 [MII_EX_SE_Empfehlung_Evidenzgraduierung]: StructureDefinition-mii-ex-se-empfehlung-evidenzgraduierung.html

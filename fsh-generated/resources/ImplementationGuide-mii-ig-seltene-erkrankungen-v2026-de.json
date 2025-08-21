@@ -383,14 +383,6 @@
       },
       {
         "reference": {
-          "reference": "ClinicalImpression/clinical-impression-cardiology"
-        },
-        "name": "Kardiologische Beurteilung",
-        "description": "Kardiologische Erstbeurteilung bei V.a. Marfan-Syndrom",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
           "reference": "Encounter/encounter-cardiology"
         },
         "name": "Kardiologische Erstvorstellung",
@@ -443,6 +435,14 @@
         },
         "name": "Klinische Beurteilung - Nachsorge",
         "description": "Nachsorgeuntersuchung nach Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ClinicalImpression/clinical-impression-se-assessment"
+        },
+        "name": "Konsultation ZSE bei V.a. Marfan-Syndrom",
+        "description": "Konsultation im Zentrum für Seltene Erkrankungen mit kardiologischer Mitbeurteilung bei V.a. Marfan-Syndrom",
         "exampleBoolean": true
       },
       {
@@ -540,6 +540,14 @@
         "name": "Metabolische Myopathie - Ausgeschlossen",
         "description": "Metabolische Myopathie als Differentialdiagnose ausgeschlossen",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/mii-cps-se-capabilitystatement"
+        },
+        "name": "MII CPS Seltene Erkrankungen CapabilityStatement",
+        "description": "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Seltene Erkrankungen der Medizininformatik Initiative zu implementieren.",
+        "exampleBoolean": false
       },
       {
         "reference": {

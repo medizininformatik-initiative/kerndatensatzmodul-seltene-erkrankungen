@@ -81,13 +81,13 @@
         "path": "MedicationRequest.status",
         "short": "active | on-hold | cancelled | completed | entered-in-error | stopped | draft | unknown",
         "definition": "Status der Umsetzung der Therapieempfehlung",
-        "comment": "\n    draft: Nicht umgesetzt, \n    active: In Umsetzung, \n    completed: Abgeschlossen oder abgebrochen (Patient verstorben)"
+        "comment": "\r\n    draft: Nicht umgesetzt, \r\n    active: In Umsetzung, \r\n    completed: Abgeschlossen oder abgebrochen (Patient verstorben)"
       },
       {
         "id": "MedicationRequest.intent",
         "path": "MedicationRequest.intent",
         "short": "proposal | option",
-        "definition": "Da nur Empfehlungen abgegeben werden, wird hier typischerweise 'proposal' stehen. Es sei denn,\n        diese Therapieempfehlung ist Teil einer RequestGroup (z.B. Kombinationstherapie). In dem Fall muss hier 'option' stehen."
+        "definition": "Da nur Empfehlungen abgegeben werden, wird hier typischerweise 'proposal' stehen. Es sei denn,\r\n        diese Therapieempfehlung ist Teil einer RequestGroup (z.B. Kombinationstherapie). In dem Fall muss hier 'option' stehen."
       },
       {
         "id": "MedicationRequest.reasonReference",
