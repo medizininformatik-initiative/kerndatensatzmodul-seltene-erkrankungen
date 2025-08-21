@@ -233,3 +233,60 @@ Source: MII_LM_SE
     * EnddatumTherapie -> "Nicht vorhanden"
     * GrundEndeTherapie -> "Nicht vorhanden"
 
+
+Mapping: SE-vomLogicalModelzumModellvorhabenGenomsequenzierung
+Id: ModellvorhabenGenomsequenzierung
+Title: "SE LogicalModel ModellvorhabenGenomsequenzierung Mapping"
+Source: MII_LM_SE
+* AnamneseUndDiagnostik
+  * Untersuchungsdatum -> "Nicht direkt vorhanden; gibt nur Daten für vergangene Diagnostik, Proben, etc."
+  * Phaenotypisierung
+    * HPOTerm -> "diagnosisRd.phenotypes[].code+text oder followUpRd.phenotypes[].code (Angabe mit code, text, system und display) "
+    * HPOStatus -> "Nicht vorhanden"
+    * HPOVersion -> "Angabe unter system bei phenotypes[].code"
+    * ZeitraumSymptom 
+      * ZeitraumSymptom -> "diagnosisRd.symptomOnsetDate (Monat und Jahr des Beginns des ersten aufgetretenen HPO-kodierten Symptoms) "
+      * Lebensphase -> "Nicht vorhanden"
+      * AlterSymptom -> "Nicht vorhanden"
+    * VerlaufSymptom -> "followUpRd.phenotypes[].change (anderes ValueSet: newlyAdded, improved, degraded, noLongerObserved,unchanged)"
+  * KlinischeDiagnose 
+    * ZeitpunktKlinischeDia -> "Nicht vorhanden"
+    * FeststellungsdatumKlinischeDia -> "Nicht direkt bei RareDiseasesCase; jedoch allgemein: mainDiagnosis.date oder additionalDiagnoses[].date (Datum der Hauptdiagnose im ISO 8601 Format JJJJ-MM-TT. Wenn Tag unbekannt -> 15. des Monats)"
+    * AlterKlinischeDia -> "Nicht vorhanden"
+  * GenetischeDiagnose
+    * ZeitpunktGenDia -> "Nicht vorhanden"
+    * FeststellungsdatumGenDia -> "Nicht direkt bei RareDiseasesCase; jedoch allgemein: mainDiagnosis.date oder additionalDiagnoses[].date (Datum der Hauptdiagnose im ISO 8601 Format JJJJ-MM-TT. Wenn Tag unbekannt -> 15. des Monats), aber nicht auf genetische Diagnose beschränkt"
+    * AlterGenDia -> "Nicht vorhanden"
+  * GenDiaFehlendePenetranz -> "Nicht vorhanden"
+  * MethodeDiagnosestellung -> "Nicht vorhanden"
+* Messbefunde 
+  * BMI -> "Nicht vorhanden"
+    * BMI -> "Nicht vorhanden"
+    * DatumBMI -> "Nicht vorhanden"
+  * Blutgruppe -> "Nicht vorhanden"
+* PersoenlicheInfosIndexpatient
+  * Tod 
+    * Sterbedatum -> "followUpRd.deathDate (Sterbemonat und Sterbejahr, Datum"
+    * AnSEVerstorben -> "Nicht vorhanden"
+    * AndereTodesursache -> "Nicht vorhanden"
+* Familienanamnese 
+  * Verwandtschaftsverhaeltnis -> "Nicht vorhanden"
+  * Geschlecht -> "Nicht vorhanden"
+  * GleicheSE -> "Nicht vorhanden"
+  * AndereSE -> "Nicht vorhanden"
+  * Penetranz -> "Nicht vorhanden"
+  * FamilienmitgliedVerstorben -> "Nicht vorhanden"
+* TherapieForschung 
+  * Therapieempfehlung -> "Nicht identisch RareDiseasesPlan.recommendedTherapies.strategy (Anderes ValueSet: systemicMedication, targetedMedication, preventionMedication, geneTherapy, prophylactic, earlyDetection, combination, nutrition, other); Angabe unter recommendedTherapies.strategyOther möglich"
+  * OffLabel
+    * OffLabelGabe -> "Nicht identisch, aber unter recommendedSystemicTherapies.type (offLabel) möglich"
+    * OffLabelMedikament -> "Nicht identisch, aber unter recommendedSystemicTherapies.substances[].code/.version möglich"
+  * DurchgefuehrteTherapie -> "recommendedSystemicTherapies.therapeuticStrategy (Anderes ValueSet)"
+  * Studie 
+    * StudienID -> "Nur Empfehlung, nicht tatsächliche Studie recommendedStudies.identifier und recommendedStudies.id"
+    * StudienStatus -> "recommendedStudies.name"
+    * Studienzeitraum -> "Nicht vorhanden"
+  * Therapie 
+    * StartdatumTherapie -> "therapies.therapyStartDate (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase (Startdatum der fallrelevante,systemische Vortherapie))"
+    * EnddatumTherapie -> "therapies.therapyEndDate (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase (Enddatum der fallrelevante,systemische Vortherapie))"
+    * GrundEndeTherapie -> "therapies.terminationReasonOBDS (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase; ValueSet: E = reguläres Ende; R = reguläres Ende mit Dosisreduktion; W = reguläres Ende mit Substanzwechsel; A = Abbruch wegen Nebenwirkungen; P = Abbruch wegen Progress; S = Abbruch aus sonstigen Gründen; V= Patient verweigert weitere Therapie ;T= Patient verstorben; U = unbekannt)"

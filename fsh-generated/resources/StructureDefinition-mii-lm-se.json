@@ -31,6 +31,10 @@
     {
       "identity": "ERDRICDS",
       "name": "SE LogicalModel ERDRI CDS Mapping"
+    },
+    {
+      "identity": "ModellvorhabenGenomsequenzierung",
+      "name": "SE LogicalModel ModellvorhabenGenomsequenzierung Mapping"
     }
   ],
   "kind": "logical",
@@ -89,6 +93,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht direkt vorhanden; gibt nur Daten für vergangene Diagnostik, Proben, etc."
           }
         ]
       },
@@ -154,6 +162,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nur beim nicht diagnostiziertem Fall unter Diagnose.NichtDiagnostizierterFall"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "diagnosisRd.phenotypes[].code+text oder followUpRd.phenotypes[].code (Angabe mit code, text, system und display) "
           }
         ]
       },
@@ -180,6 +192,10 @@
           },
           {
             "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
             "map": "Nicht vorhanden"
           }
         ]
@@ -208,6 +224,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Angabe unter system bei phenotypes[].code"
           }
         ]
       },
@@ -254,6 +274,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Krankheitsverlauf.AlterBeiKrankheitsbeginn unter Datum(TT/MM/JJJJ) "
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "diagnosisRd.symptomOnsetDate (Monat und Jahr des Beginns des ersten aufgetretenen HPO-kodierten Symptoms) "
           }
         ]
       },
@@ -281,6 +305,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Krankheitsverlauf.AlterBeiKrankheitsbeginn; aber anderes ValueSet"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -307,6 +335,10 @@
           },
           {
             "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
             "map": "Nicht vorhanden"
           }
         ]
@@ -335,6 +367,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "followUpRd.phenotypes[].change (anderes ValueSet: newlyAdded, improved, degraded, noLongerObserved,unchanged)"
           }
         ]
       },
@@ -381,6 +417,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Ähnlich zu Krankheitsverlauf.AlterBeiDiagnose; allerdings anderes ValueSet"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -408,6 +448,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Krankheitsverlauf.AlterBeiDiagnose unter Datum(TT/MM/JJJJ)"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht direkt bei RareDiseasesCase; jedoch allgemein: mainDiagnosis.date oder additionalDiagnoses[].date (Datum der Hauptdiagnose im ISO 8601 Format JJJJ-MM-TT. Wenn Tag unbekannt -> 15. des Monats)"
           }
         ]
       },
@@ -434,6 +478,10 @@
           },
           {
             "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
             "map": "Nicht vorhanden"
           }
         ]
@@ -481,6 +529,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Ähnlich zu Krankheitsverlauf.AlterBeiDiagnose; allerdings anderes ValueSet und nicht auf genetische Diagnose beschränkt"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -508,6 +560,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Krankheitsverlauf.AlterBeiDiagnose unter Datum(TT/MM/JJJJ), aber nicht auf genetische Diagnose beschränkt"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht direkt bei RareDiseasesCase; jedoch allgemein: mainDiagnosis.date oder additionalDiagnoses[].date (Datum der Hauptdiagnose im ISO 8601 Format JJJJ-MM-TT. Wenn Tag unbekannt -> 15. des Monats), aber nicht auf genetische Diagnose beschränkt"
           }
         ]
       },
@@ -534,6 +590,10 @@
           },
           {
             "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
             "map": "Nicht vorhanden"
           }
         ]
@@ -562,6 +622,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -588,6 +652,10 @@
           },
           {
             "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
             "map": "Nicht vorhanden"
           }
         ]
@@ -631,6 +699,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -657,6 +729,10 @@
           },
           {
             "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
             "map": "Nicht vorhanden"
           }
         ]
@@ -685,6 +761,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -711,6 +791,10 @@
           },
           {
             "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
             "map": "Nicht vorhanden"
           }
         ]
@@ -777,6 +861,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Patientenstatus.Todeszeitpunkt"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "followUpRd.deathDate (Sterbemonat und Sterbejahr, Datum"
           }
         ]
       },
@@ -804,6 +892,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -830,6 +922,10 @@
           },
           {
             "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
             "map": "Nicht vorhanden"
           }
         ]
@@ -881,6 +977,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -907,6 +1007,10 @@
           },
           {
             "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
             "map": "Nicht vorhanden"
           }
         ]
@@ -935,6 +1039,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -961,6 +1069,10 @@
           },
           {
             "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
             "map": "Nicht vorhanden"
           }
         ]
@@ -989,6 +1101,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -1015,6 +1131,10 @@
           },
           {
             "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
             "map": "Nicht vorhanden"
           }
         ]
@@ -1066,6 +1186,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht identisch RareDiseasesPlan.recommendedTherapies.strategy (Anderes ValueSet: systemicMedication, targetedMedication, preventionMedication, geneTherapy, prophylactic, earlyDetection, combination, nutrition, other); Angabe unter recommendedTherapies.strategyOther möglich"
           }
         ]
       },
@@ -1116,6 +1240,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht identisch, aber unter recommendedSystemicTherapies.type (offLabel) möglich"
           }
         ]
       },
@@ -1143,6 +1271,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht identisch, aber unter recommendedSystemicTherapies.substances[].code/.version möglich"
           }
         ]
       },
@@ -1170,6 +1302,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "recommendedSystemicTherapies.therapeuticStrategy (Anderes ValueSet)"
           }
         ]
       },
@@ -1220,6 +1356,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nur Empfehlung, nicht tatsächliche Studie recommendedStudies.identifier und recommendedStudies.id"
           }
         ]
       },
@@ -1247,6 +1387,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "recommendedStudies.name"
           }
         ]
       },
@@ -1276,6 +1420,10 @@
           },
           {
             "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
             "map": "Nicht vorhanden"
           }
         ]
@@ -1327,6 +1475,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "therapies.therapyStartDate (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase (Startdatum der fallrelevante,systemische Vortherapie))"
           }
         ]
       },
@@ -1354,6 +1506,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "therapies.therapyEndDate (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase (Enddatum der fallrelevante,systemische Vortherapie))"
           }
         ]
       },
@@ -1381,6 +1537,10 @@
           {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "therapies.terminationReasonOBDS (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase; ValueSet: E = reguläres Ende; R = reguläres Ende mit Dosisreduktion; W = reguläres Ende mit Substanzwechsel; A = Abbruch wegen Nebenwirkungen; P = Abbruch wegen Progress; S = Abbruch aus sonstigen Gründen; V= Patient verweigert weitere Therapie ;T= Patient verstorben; U = unbekannt)"
           }
         ]
       }
