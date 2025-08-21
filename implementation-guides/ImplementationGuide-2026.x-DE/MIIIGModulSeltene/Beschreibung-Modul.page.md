@@ -11,7 +11,7 @@ Die große Herausforderung bei den SE ergibt sich aus der Vielzahl sehr verschie
 
 Regelmäßig ergeben sich bei SE – insbesondere bei Ultraseltenen – vor der Feststellung der eigentlichen Diagnose jahrelange diagnostische Ungewissheiten, die auch Fehlbehandlungen mit sich bringen. Aber auch nach der Feststellung der Diagnose kann nur für rund 5 % der Patient:innen eine gezielte Therapie angeboten werden, weswegen weitere koordinierte Forschung für die verstreut versorgten kleinen Gruppen besonders wichtig ist.
 
---
+---
 
 ##### Der einheitliche, standardisierte, EU‐konforme und MII‐KDS‐konforme MBDS‐SE.de soll:
 * An den Klinischen Arbeitsplätzen, wo er als Teil der Versorgungsdokumentation erhoben wird, für die lokale Unterstützung der Versorgung zur Verfügung stehen,
