@@ -1,9 +1,6 @@
 
 ## Datensätze inkl. Beschreibungen
 
-Der Datensatz basiert auf dem HIER TEXT einfpgen. 
-
-
 
 
 {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/LogicalModel/SE}} 

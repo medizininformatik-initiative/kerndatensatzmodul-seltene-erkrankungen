@@ -1163,37 +1163,6 @@
         ]
       },
       {
-        "id": "SE.TherapieForschung.Therapieempfehlung",
-        "path": "SE.TherapieForschung.Therapieempfehlung",
-        "short": "Art der Therapieempfehlung",
-        "definition": "Gibt an, welche Therapieempfehlung vorliegt.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "MedicationRequest | ServiceRequest"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht identisch RareDiseasesPlan.recommendedTherapies.strategy (Anderes ValueSet: systemicMedication, targetedMedication, preventionMedication, geneTherapy, prophylactic, earlyDetection, combination, nutrition, other); Angabe unter recommendedTherapies.strategyOther möglich"
-          }
-        ]
-      },
-      {
         "id": "SE.TherapieForschung.OffLabel",
         "path": "SE.TherapieForschung.OffLabel",
         "short": "Off-Label-Gabe",
@@ -1275,37 +1244,6 @@
           {
             "identity": "ModellvorhabenGenomsequenzierung",
             "map": "Nicht identisch, aber unter recommendedSystemicTherapies.substances[].code/.version möglich"
-          }
-        ]
-      },
-      {
-        "id": "SE.TherapieForschung.DurchgefuehrteTherapie",
-        "path": "SE.TherapieForschung.DurchgefuehrteTherapie",
-        "short": "Durchgefuehrte Therapie",
-        "definition": "Tatsaechlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention).",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Procedure | MedicationStatement"
-          },
-          {
-            "identity": "NARSE",
-            "map": "AnamneseUndDiagnostik.Therapiestatus"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "recommendedSystemicTherapies.therapeuticStrategy (Anderes ValueSet)"
           }
         ]
       },
@@ -1448,6 +1386,68 @@
           {
             "identity": "NARSE",
             "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "SE.TherapieForschung.Therapie.Therapieempfehlung",
+        "path": "SE.TherapieForschung.Therapie.Therapieempfehlung",
+        "short": "Art der Therapieempfehlung",
+        "definition": "Gibt an, welche Therapieempfehlung vorliegt.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "MedicationRequest | ServiceRequest"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht identisch RareDiseasesPlan.recommendedTherapies.strategy (Anderes ValueSet: systemicMedication, targetedMedication, preventionMedication, geneTherapy, prophylactic, earlyDetection, combination, nutrition, other); Angabe unter recommendedTherapies.strategyOther möglich"
+          }
+        ]
+      },
+      {
+        "id": "SE.TherapieForschung.Therapie.DurchgefuehrteTherapie",
+        "path": "SE.TherapieForschung.Therapie.DurchgefuehrteTherapie",
+        "short": "Durchgefuehrte Therapie",
+        "definition": "Tatsaechlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention).",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure | MedicationStatement"
+          },
+          {
+            "identity": "NARSE",
+            "map": "AnamneseUndDiagnostik.Therapiestatus"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "recommendedSystemicTherapies.therapeuticStrategy (Anderes ValueSet)"
           }
         ]
       },
