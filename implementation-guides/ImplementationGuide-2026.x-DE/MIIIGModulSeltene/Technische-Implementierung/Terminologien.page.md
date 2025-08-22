@@ -10,4 +10,4 @@ Auch **FHIR** (Fast Healthcare Interoperable Resources) integriert HPO, um klini
 
 # OMIM <a href="https://www.omim.org" target="_blank">(Online Mendelian Inheritance in Man)</a> 
 
-OMIM ist eine frei zugängliche medizinische Online-Datenbank, die menschliche Gene und die mit ihnen verbundenen genetisch bedingten Erkrankungen katalogisiert. Sie enthält detaillierte Informationen zu Genen, Mutationen, klinischen Symptomen, Erbgängen und den molekulargenetischen Grundlagen. OMIM dient als zentrale Ressource für die genetische Forschung und Diagnostik, indem sie Zusammenhänge zwischen Genotyp und Phänotyp aufzeigt und regelmäßig aktualisiert wird.
+**OMIM**ist eine frei zugängliche medizinische Online-Datenbank, die menschliche Gene und die mit ihnen verbundenen genetisch bedingten Erkrankungen katalogisiert. Sie enthält detaillierte Informationen zu Genen, Mutationen, klinischen Symptomen, Erbgängen und den molekulargenetischen Grundlagen. OMIM dient als zentrale Ressource für die genetische Forschung und Diagnostik, indem sie Zusammenhänge zwischen Genotyp und Phänotyp aufzeigt und regelmäßig aktualisiert wird.
