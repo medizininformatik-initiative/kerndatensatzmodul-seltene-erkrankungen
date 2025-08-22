@@ -234,6 +234,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 
 Das Bild ist <a href="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/bcc9730e716312f23097767ab6d26c285a1245c8/implementation-guides/ImplementationGuide-2026.x-DE/Images/Marfan_Case_Resources_Diagram.svg" target="_blank">hier</a> in zoombarer Form abrufbar.
 
+
 ### Zeitlicher Verlauf
 
 <plantuml>
