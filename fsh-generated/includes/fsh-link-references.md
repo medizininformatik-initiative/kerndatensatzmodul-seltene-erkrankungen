@@ -72,6 +72,7 @@
 [MII_PR_SE_ClinicalDiagnosis]: StructureDefinition-mii-pr-se-clinical-diagnosis.html
 [MII_PR_SE_Familienanamnese]: StructureDefinition-mii-pr-se-familienanamnese.html
 [MII_PR_SE_GeneticDiagnosis]: StructureDefinition-mii-pr-se-genetic-diagnosis.html
+[MII_PR_SE_Studie]: StructureDefinition-mii-pr-se-studie.html
 [MII_PR_SE_Studieneinschluss_Anfrage]: StructureDefinition-mii-pr-se-studieneinschluss-anfrage.html
 [MII_PR_SE_Therapieempfehlung_Kombination]: StructureDefinition-mii-pr-se-therapieempfehlung-kombination.html
 [MII_PR_SE_Therapieempfehlung]: StructureDefinition-mii-pr-se-therapieempfehlung.html
