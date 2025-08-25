@@ -1,10 +1,34 @@
 ## {{page-title}}
 
 
+## Einreichung von Kommentaren
 
-Inwieweit wird Empfehlungen hier benötigt
+Kommentare können eingereicht werden über:
+1. GitHub Issues im Projekt-Repository
+2. Direkte Kommunikation an die Modulverantwortlichen
+3. Diskussion in den MII-Arbeitsgruppen
 
-ModellVorhaben 
+
+## Zeitplan
+
+- **Kommentierungsfrist**: 20.10.2025
+- **Konsolidierung**: [Einzutragen]
+- **Sprechstundentermine**: 25.9. 9:30-10:30 Uhr und 12.9. 13-14 Uhr
+- **Finale Version**: 2026.0.0
+
+## Kontakt
+
+Modulverantwortliche:
+* Josef Schepers, josef.schepers@bih-charite.de
+* Michele Zoch, michele.zoch@ukdd.de
+* Martin Bartow, martin.bartow@tmf-ev.de
+
+Technische Fragen:
+* Thomas Debertshäuser, BIH, thomas.debertshaeuser@charite.de
+* Miriam Hübner, BIH, miriam-rebecca.huebner@charite.de
+* Steffen Sander, BIH, steffen.sander@charite.de
+* Marco Scharschmidt, BIH, marco.schaarschmidt@charite.de
+
 
 # Kommentierung zur Version 2026.0.0-ballot
 
@@ -135,6 +159,11 @@ Genetische Diagnose:
 - Studienmedikation und Compassionate Use
 - Gentherapien (wie Zolgensma im SMA-Beispiel)
 
+### Fragestellung
+**Inwieweit werden Therapieempfehlungen hier benötigt?**
+
+-> Herkunft aus MVGenomSQ  
+
 ## 8. Verlaufsdokumentation
 
 ### Fragestellung
@@ -148,12 +177,6 @@ Genetische Diagnose:
 
 
 
-## Einreichung von Kommentaren
-
-Kommentare können eingereicht werden über:
-1. GitHub Issues im Projekt-Repository
-2. Direkte Kommunikation an die Modulverantwortlichen
-3. Diskussion in den MII-Arbeitsgruppen
 
 ---
 
@@ -175,16 +198,3 @@ Kommentare können eingereicht werden über:
 3. Familienscreening: Targeted Testing → ???
 ```
 
-## Zeitplan
-
-- **Kommentierungsfrist**: [Einzutragen]
-- **Konsolidierung**: [Einzutragen]
-- **Finale Version**: 2026.0.0
-
-## Kontakt
-
-Modulverantwortliche:
-- [Kontaktdaten einzufügen]
-
-Technische Fragen:
-- [Kontaktdaten einzufügen]

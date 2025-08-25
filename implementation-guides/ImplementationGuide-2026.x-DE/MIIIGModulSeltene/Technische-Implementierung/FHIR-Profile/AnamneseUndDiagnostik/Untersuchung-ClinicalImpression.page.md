@@ -6,8 +6,8 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 
 ## {{page-title}}
 
-Dieses Profil beschreibt eine Histologie-Grading im Rahmen in der Onkologie.
-Dabei wird insbesondere die morphologische Dedifferenzierung des Gewebes bewertet.
+Dieses Profil beschreibt die klinische Bewertung und Dokumentation interdisziplinärer Untersuchungen im Rahmen der Diagnostik seltener Erkrankungen.
+Es ermöglicht die strukturierte Erfassung klinischer Eindrücke, Befunde und Behandlungsempfehlungen.
 
 
 
@@ -51,21 +51,6 @@ select
   <tab title="JSON">{{json}}</tab>
   <tab title="Link">{{link}}</tab>
 </tabs>
-
----
-
-Mapping Datensatz zu FHIR
-
-@```
-from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Onkologie'
-    for differential.element where id.contains('Grading') 
-    select 
-        Datensatz: short,
-        Erklaerung: definition, 
-        FHIR: mapping[0].map 
-
-```
 
 ---
 

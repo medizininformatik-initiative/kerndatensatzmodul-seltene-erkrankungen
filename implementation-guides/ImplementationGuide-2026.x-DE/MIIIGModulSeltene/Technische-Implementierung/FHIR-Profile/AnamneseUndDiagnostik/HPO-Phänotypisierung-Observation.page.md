@@ -6,8 +6,8 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 
 ## {{page-title}}
 
-Dieses Profil beschreibt eine Histologie-Grading im Rahmen in der Sell.
-Dabei wird insbesondere die morphologische Dedifferenzierung des Gewebes bewertet.
+Dieses Profil beschreibt die Phänotypisierung gemäß Human Phenotype Ontology (HPO) im Rahmen der Diagnostik seltener Erkrankungen.
+Es ermöglicht die strukturierte Erfassung phänotypischer Abnormalitäten und klinischer Merkmale.
 
 
 
@@ -54,36 +54,6 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR
-
-@```
-from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Onkologie'
-    for differential.element where id.contains('Grading') 
-    select 
-        Datensatz: short,
-        Erklaerung: definition, 
-        FHIR: mapping[0].map 
-
-```
-
----
-
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
-
-@```
-from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading'  
-    for differential.element
-    where mapping.identity='oBDS'
-    select 
-        oBDS: mapping.map,
-        Definition: mapping.comment,
-        FHIR: path
-```
-
----
-
 **Suchparameter**
 
 Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch in Kombination:
@@ -100,7 +70,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
     
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading```
+    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-hpo-assessment```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -116,7 +86,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
 
-    ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005```
+    ```GET [base]/Observation?code=http://loinc.org|79716-7```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
 

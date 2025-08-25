@@ -1,8 +1,6 @@
 
 ## Datensätze inkl. Beschreibungen
 
-Der Datensatz basiert auf weiteren Datenmodellen
-
 
 
 {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/LogicalModel/SE}} 

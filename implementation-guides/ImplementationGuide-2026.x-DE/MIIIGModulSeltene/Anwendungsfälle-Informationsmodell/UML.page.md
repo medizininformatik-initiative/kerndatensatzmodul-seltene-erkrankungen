@@ -10,5 +10,4 @@
 
 &nbsp;
 
-
-Das Bild ist unter https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/refs/heads/dev/information-model/MII_Datenmodell_Seltene_Erkrankungen_logisch.svg (Link schick machen!  in zoombarer Form abrufbar. 
+Das Bild ist <a href="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/refs/heads/dev/information-model/MII_Datenmodell_Seltene_Erkrankungen_logisch.svg" target="_blank">hier</a> in zoombarer Form abrufbar.
