@@ -6,7 +6,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 
 ## {{page-title}}
 
-Dieses Profil beschreibt eine Therapieempfehlung für Patienten mit Seltenen Erkrankungen und ist angelehnt an die MTB-Implementierung (Molekulares Tumorboard).
+Dieses Profil beschreibt eine Therapieempfehlung für Patienten mit Seltenen Erkrankungen und ist angelehnt an die MTB-Implementierung (Molekulares Tumorboard). Eine Therapieempfehlung beschreibt eine spezifische Maßnahme oder Strategie. Sie kann eigenständig vorliegen oder referenziert einem Therapieplan zugeordnet werden.
 
 
 

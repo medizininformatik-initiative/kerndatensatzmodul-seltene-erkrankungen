@@ -19,6 +19,9 @@ Für eine umfassende Beschreibung Seltener Erkrankungen sind neben den im SE-Mod
  
 Zugleich soll das Modul SE als Anleitung zu einer einheitlichen, semantisch interoperablen, standardisierten **EU-konformen SE-Dokumentation** an Klinischen Arbeitsplätzen dienen, was sich auch in dem Synonym **„Deutscher Minimalbasisdatensatz für Seltene Erkrankungen (MBDS-SE.de)“** ausdrückt, wodurch die semantische Nähe zum französischen „Set de données minimal national maladies rares **(SDM-MR.fr)**“ und zum Set of Common Data Elements der Europäischen ERN-Register  **(ERDRI CDS.eu)**“ angezeigt wird.
 
+
+--- 
+
 Die gemäß Modul SE an klinischen Arbeitsplätzen erhobenen und in Datenintegrationszentren aufbereiteten Daten sollen:
 * An den *Klinischen Arbeitsplätzen*, wo sie als Teil der *Versorgungsdokumentation* erhoben werden, für die lokale Unterstützung der Versorgung zur Verfügung stehen,
 * Als Erweiterungsmodul „Seltene Erkrankungen“ des <a href="https://www.medizininformatik-initiative.de/de/der-kerndatensatz-der-medizininformatik-initiative" target="_blank">MII KDS</a> über die *Datenintegrationszentren* in der MII und im NUM für **Verteilte und Zentrale Auswertungen** zur Verfügung stehen,
@@ -27,3 +30,5 @@ Die gemäß Modul SE an klinischen Arbeitsplätzen erhobenen und in Datenintegra
 * Als *MBDS‐SE.de* nach europäischem und französischem Vorbild den Ausgangskern der Gestaltung von erkrankungsgruppen‐ und erkrankungsspezifischen Dokumentationen im Sinne eines *Föderierten NARSE‐Netzes Nationalen Gesundheitsdatenraumes* für Seltene Erkrankungen (einschließlich der DIZ der Universitätsklinika) bilden,
 * Als MBDS‐SE.de in *Betroffenen‐geführten Dokumentationen* aufgenommen werden, um diese mit anderen Dokumentationen im Gesundheitsdatenraumes für SE im Föderierten NARSE‐Netz verknüpfen zu können,
 * Über das <a href="https://forschen-fuer-gesundheit.de/" target="_blank">Forschungsdatenportal für Gesundheit (FDPG)</a> von MII/NUM, die Virtuelle Plattform der <a href="https://vp.ejprarediseases.org/" target="_blank">Virtuelle Plattform der European Rare Disease Research Alliance (ERDERA)</a> und weitere bei den Datenhaltern akkreditierte Plattformen die **Vernetzung von Betroffenen** fördern, das **Finden von Patient:innen für Forschungsprojekte** unterstützen und die **Berücksichtigung** der Seltenen Erkrankungen in der deutschen und europäischen **Gesundheitsberichterstattung voranbringen**.
+
+---
