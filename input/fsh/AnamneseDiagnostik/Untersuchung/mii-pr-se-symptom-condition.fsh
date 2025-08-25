@@ -48,10 +48,45 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 * category ^definition = "Kategoriecodes, die die Erkrankung klassifizieren, mit besonderem Fokus auf symptombezogene Kategorien"
 
 // Code constraints - using HPO for symptom coding
-* code 1..1
+* code 1..1 
 * code from mii-vs-se-hpo-phenotypic-observation-codes (extensible)
 * code ^short = "HPO-basierter Symptom-Erkrankungs-Code"
 * code ^definition = "Code zur Identifikation der Symptom-Erkrankung, vorzugsweise unter Verwendung von Human Phenotype Ontology (HPO) Codes"
+* code.coding MS 
+* code.coding ^slicing.discriminator.type = #pattern
+* code.coding ^slicing.discriminator.path = "$this"
+* code.coding ^slicing.rules = #open
+* code.coding ^slicing.description = "Slicing für verschiedene Codesysteme zur Symptom-Codierung"
+* code.coding ^slicing.ordered = false
+* code.coding contains 
+    hpoCoding 0..1 MS and 
+    snomedCoding 0..1 MS and 
+    icd10GMCoding 0..1 MS
+
+// HPO Coding slice with pattern
+* code.coding[hpoCoding] ^short = "HPO Code für das Symptom"
+* code.coding[hpoCoding] ^definition = "Human Phenotype Ontology Code zur Beschreibung des phänotypischen Symptoms"
+* code.coding[hpoCoding] ^patternCoding.system = "http://purl.obolibrary.org/obo/hp.owl"
+* code.coding[hpoCoding].system 1..1
+* code.coding[hpoCoding].code 1..1
+* code.coding[hpoCoding].display MS
+
+// SNOMED CT Coding slice with pattern
+* code.coding[snomedCoding] ^short = "SNOMED CT Code für das Symptom"
+* code.coding[snomedCoding] ^definition = "SNOMED CT Code zur klinischen Beschreibung des Symptoms"
+* code.coding[snomedCoding] ^patternCoding.system = "http://snomed.info/sct"
+* code.coding[snomedCoding].system 1..1
+* code.coding[snomedCoding].code 1..1
+* code.coding[snomedCoding].display MS
+
+// ICD-10-GM Coding slice with pattern
+* code.coding[icd10GMCoding] ^short = "ICD-10-GM Code für das Symptom"
+* code.coding[icd10GMCoding] ^definition = "ICD-10 German Modification Code für die Symptom-Klassifikation"
+* code.coding[icd10GMCoding] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+* code.coding[icd10GMCoding].system 1..1
+* code.coding[icd10GMCoding].code 1..1
+* code.coding[icd10GMCoding].display MS
+
 
 // Severity constraints
 * severity from mii-vs-se-hpo-severity-values (extensible)

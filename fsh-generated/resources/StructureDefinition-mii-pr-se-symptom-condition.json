@@ -93,6 +93,106 @@
         }
       },
       {
+        "id": "Condition.code.coding",
+        "path": "Condition.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "description": "Slicing für verschiedene Codesysteme zur Symptom-Codierung",
+          "ordered": false
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:hpoCoding",
+        "path": "Condition.code.coding",
+        "sliceName": "hpoCoding",
+        "short": "HPO Code für das Symptom",
+        "definition": "Human Phenotype Ontology Code zur Beschreibung des phänotypischen Symptoms",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://purl.obolibrary.org/obo/hp.owl"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:hpoCoding.system",
+        "path": "Condition.code.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Condition.code.coding:hpoCoding.code",
+        "path": "Condition.code.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Condition.code.coding:hpoCoding.display",
+        "path": "Condition.code.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:snomedCoding",
+        "path": "Condition.code.coding",
+        "sliceName": "snomedCoding",
+        "short": "SNOMED CT Code für das Symptom",
+        "definition": "SNOMED CT Code zur klinischen Beschreibung des Symptoms",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:snomedCoding.system",
+        "path": "Condition.code.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Condition.code.coding:snomedCoding.code",
+        "path": "Condition.code.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Condition.code.coding:snomedCoding.display",
+        "path": "Condition.code.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:icd10GMCoding",
+        "path": "Condition.code.coding",
+        "sliceName": "icd10GMCoding",
+        "short": "ICD-10-GM Code für das Symptom",
+        "definition": "ICD-10 German Modification Code für die Symptom-Klassifikation",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:icd10GMCoding.system",
+        "path": "Condition.code.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Condition.code.coding:icd10GMCoding.code",
+        "path": "Condition.code.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Condition.code.coding:icd10GMCoding.display",
+        "path": "Condition.code.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "Condition.bodySite",
         "path": "Condition.bodySite",
         "short": "Anatomische Lokalisation des Symptoms",
