@@ -56,6 +56,7 @@ Anmerkungen und Kritik wird in Form von 'Issues' im [GitHub-Projekt](https://git
 * Miriam Hübner, Berlin Institute of Health (Charité) 
 * Steffen Sander, Berlin Institute of Health (Charité) 
 * Marco Scharschmidt, Berlin Institute of Health (Charité)
+* Josef Schepers, Berlin Institute of Health (Charité)
 
 ## Copyright-Hinweis, Nutzungshinweise
 Copyright © 2019+: TMF e. V., Charlottenstraße 42, 10117 Berlin
