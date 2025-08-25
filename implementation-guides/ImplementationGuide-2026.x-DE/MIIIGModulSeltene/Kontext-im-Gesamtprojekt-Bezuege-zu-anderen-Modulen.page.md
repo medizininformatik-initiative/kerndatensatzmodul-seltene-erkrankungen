@@ -29,6 +29,7 @@ Wie auf der UML-Seite gezeigt, ist das mit folgenden anderen Modulen zu verwende
 
 Für die nahtlose Integration mit bestehenden Registersystemen und Zielspezifikationen im Bereich Seltene Erkrankungen sind folgende Entwicklungen geplant:
 
+
 #### ConceptMaps und StructureMaps
 
 **Technische Mappings zu:**
@@ -44,6 +45,10 @@ Für die nahtlose Integration mit bestehenden Registersystemen und Zielspezifika
 - **NARSE**: Nationales Register für Seltene Erkrankungen
   - Harmonisierung der Terminologien zwischen NARSE und MII
   - Unterstützung von Qualitätssicherungsmetriken
+
+  **SDMMR**:Set de Données Minimal Maladies Rares
+  - Harmonisierung nach französischem Vorbild. 
+  - In Frankreich ist der *„verbundene Modus / mode connecté“* die präferierte Strategie des Gesundheitsministeriums.
 
 Die Implementierung erfolgt über:
 - **ConceptMaps** für terminologische Übersetzungen

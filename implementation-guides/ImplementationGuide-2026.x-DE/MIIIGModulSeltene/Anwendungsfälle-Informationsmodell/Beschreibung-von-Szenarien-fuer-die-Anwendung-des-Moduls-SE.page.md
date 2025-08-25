@@ -1,8 +1,14 @@
 ## {{page-title}}
 
+
+
+
+
+
 Im vorliegenden IG wird daraus abgeleitet, nach europäischem Datensatz (<a href="https://eu-rd-platform.jrc.ec.europa.eu/sites/default/files/CDS/JRC-2018-00192-00-00-DE-TRA-00-Final.pdf" target="_blank">CDS-ERDRI.eu</a>) und französischen Datensatz (<a href="https://www.bndmr.fr/les-donnees-collectees/le-set-de-donnees-minimal/" target="_blank">SDM-MR.fr</a>) Vorbild in möglichst vielen Einrichtungen, an möglichst vielen klnischen Arbeitsplätzen für möglichst viele Betroffene von Seltenen Erkrankungen sowie durch Betroffene in eigener Regie die Dokumentation einheitlicher, interoperabler Minimalbasisdatensätze anzustreben.
 
-Diese Minimalbasisdatensätze sollen sowohl lokal als auch übergreifend gemeinsam datenschutzkonform möglichst vielfältig genutzt werden können. Darauf dürfen mit Orientierung an der Gliederung der **Europäischen Referenznetzwerke für Seltene und Komplexe Erkrankungen** (ERN) spezifischere, differenziertere Dokumentationen aufbauen. Die Erhebung und Nutzung soll in ausgewählten Anwendungsszenarien gestaltet und erprobt werden.
+Diese Minimalbasisdatensätze sollen sowohl lokal als auch übergreifend gemeinsam datenschutzkonform möglichst vielfältig genutzt werden können. Darauf dürfen mit Orientierung an der Gliederung der **Europäischen Referenznetzwerke für Seltene und Komplexe Erkrankungen (ERN)** spezifischere, differenziertere Dokumentationen aufbauen. Die Erhebung und Nutzung soll in ausgewählten Anwendungsszenarien gestaltet und erprobt werden.
+
 
 ### Anwendungsszenario der Behandlung einer Seltenen Erkrankung am Beispiel der Spinalen Muskelatrophie (SMA)
 
