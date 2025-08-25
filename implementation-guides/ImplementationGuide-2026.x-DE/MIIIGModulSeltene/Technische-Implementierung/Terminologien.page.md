@@ -4,6 +4,8 @@
 
 **HPO** wird zur präzisen und hierarchischen **Beschreibung klinischer Phänotypen und Symptome** beim Menschen genutzt. Die Ontologie umfasst strukturierte Begriffe (sogenannte „Terms”) für phänotypische Merkmale und ermöglicht die computergestützte Auswertung sowie den Vergleich von Patienten- oder Krankheitsdaten. HPO kommt insbesondere bei der Diagnostik Seltener Erkrankungen, in der Forschung und beim Austausch zwischen medizinischen Datenbanken zum Einsatz.
 
+Nneben **HPO** werden weitere internationale Standards genutzt, wie z. B. für Conditions SNOMED CT. Außerdem ist die Erfassung mittels der gesetzlich vorgeschriebenen Klassifikation ICD-10-GM möglich.
+
 Auch **FHIR** (Fast Healthcare Interoperable Resources) integriert HPO, um klinische Phänotypen standardisiert und interoperabel zwischen Softwaresystemen zu übertragen. Details zur Nutzung der HPO-Terminologie innerhalb von FHIR sind z. B. bei HL7 zu finden, inklusive Beispielen und Spezifikationen:
 - FHIR-HPO-Terminologie: [HL7 HPO NamingSystem](https://terminology.hl7.org/5.2.0/NamingSystem-HPO.html)
 - FHIR-HPO Codesystem: [HL7 FHIR HPO CodeSystem](https://build.fhir.org/ig/HL7/UTG/CodeSystem-HPO.html)
