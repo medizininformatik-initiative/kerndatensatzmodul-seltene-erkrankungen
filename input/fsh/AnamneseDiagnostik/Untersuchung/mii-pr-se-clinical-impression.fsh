@@ -73,14 +73,15 @@ Description: "Profile for clinical impressions in the context of rare diseases. 
 
 // Investigation constraints
 * investigation ^short = "Eine oder mehrere Untersuchungsserien"
-* investigation.code ^short = "Art der Untersuchung"
+* investigation.code ^short = "Art der Untersuchung, die im Rahmen der Beurteilung durchgeführt wurde"
 * investigation.item only Reference(Observation or QuestionnaireResponse or FamilyMemberHistory or DiagnosticReport or RiskAssessment)
-* investigation.item ^short = "Unterstützende Evidenz"
+* investigation.item ^short = "Unters"
 
-// Finding constraints - HPO-based findings
-* finding ^short = "Klinische Befunde, die die Beurteilung stützen"
+// Finding constraints - 
+* finding ^short = "Klinische Befunde der Untersuchung"
+* finding ^definition = "Klinische Befunde, die auf Basis der Untersuchungen festgestellt wurden"
 * finding.itemCodeableConcept from mii-vs-se-hpo-phenotypic-observation-codes (extensible)
-* finding.itemCodeableConcept ^short = "HPO-basierter klinischer Befund"
+* finding.itemCodeableConcept ^short = "Klinischer Befund"
 * finding.itemReference only Reference(Condition or Observation)
 * finding.itemReference ^short = "Referenz auf klinischen Befund"
 * finding.basis ^short = "Grundlage für den Befund"

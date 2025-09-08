@@ -115,13 +115,13 @@
       {
         "id": "ClinicalImpression.investigation.code",
         "path": "ClinicalImpression.investigation.code",
-        "short": "Art der Untersuchung",
+        "short": "Art der Untersuchung, die im Rahmen der Beurteilung durchgeführt wurde",
         "mustSupport": true
       },
       {
         "id": "ClinicalImpression.investigation.item",
         "path": "ClinicalImpression.investigation.item",
-        "short": "Unterstützende Evidenz",
+        "short": "Unters",
         "type": [
           {
             "code": "Reference",
@@ -145,13 +145,14 @@
       {
         "id": "ClinicalImpression.finding",
         "path": "ClinicalImpression.finding",
-        "short": "Klinische Befunde, die die Beurteilung stützen",
+        "short": "Klinische Befunde der Untersuchung",
+        "definition": "Klinische Befunde, die auf Basis der Untersuchungen festgestellt wurden",
         "mustSupport": true
       },
       {
         "id": "ClinicalImpression.finding.itemCodeableConcept",
         "path": "ClinicalImpression.finding.itemCodeableConcept",
-        "short": "HPO-basierter klinischer Befund",
+        "short": "Klinischer Befund",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-se-hpo-phenotypic-observation-codes"
