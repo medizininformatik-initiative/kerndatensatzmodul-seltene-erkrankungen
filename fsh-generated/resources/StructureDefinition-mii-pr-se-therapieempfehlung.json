@@ -90,6 +90,52 @@
         "definition": "Da nur Empfehlungen abgegeben werden, wird hier typischerweise 'proposal' stehen. Es sei denn,\r\n        diese Therapieempfehlung ist Teil einer RequestGroup (z.B. Kombinationstherapie). In dem Fall muss hier 'option' stehen."
       },
       {
+        "id": "MedicationRequest.category",
+        "path": "MedicationRequest.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "description": "Slice für Therapiestrategie-Kategorisierung aus Modellvorhaben GenomSeq"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.category:MVGenomSeqTherapieStrategie",
+        "path": "MedicationRequest.category",
+        "sliceName": "MVGenomSeqTherapieStrategie",
+        "short": "Modellvorhaben GenomSeq Therapiestrategie-Typ (Medikamentös)",
+        "definition": "Kategorisierung der medikamentösen Therapieempfehlung nach Modellvorhaben GenomSeq Strategietyp",
+        "comment": "Dieses Feld ist spezifisch für die Integration mit Modellvorhaben GenomSeq. Es ermöglicht die Kategorisierung gemäß RareDiseasesPlan.recommendedTherapies.strategy. Nur für medikamentöse Strategien: systemic-medication, targeted-medication, prevention-medication, gene-therapy, combination.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-se-therapieempfehlung-strategie-medikamentoes"
+        }
+      },
+      {
+        "id": "MedicationRequest.category:MVGenomSeqTherapieStrategie.coding",
+        "path": "MedicationRequest.category.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.category:MVGenomSeqTherapieStrategie.coding.system",
+        "path": "MedicationRequest.category.coding.system",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.category:MVGenomSeqTherapieStrategie.coding.code",
+        "path": "MedicationRequest.category.coding.code",
+        "min": 1
+      },
+      {
         "id": "MedicationRequest.reasonReference",
         "path": "MedicationRequest.reasonReference",
         "slicing": {

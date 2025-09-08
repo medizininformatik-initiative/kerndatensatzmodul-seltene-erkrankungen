@@ -21,6 +21,21 @@ Description: "Therapieempfehlung für eine medikamentöse Systemische Therapie"
 * medication[x] 1..1 MS
 * medicationReference only Reference(MII_PR_Medikation_Medication) // + Medication (restricted by parent profile to profile only)
 
+// Category slice for therapy strategy type (specific for Modellvorhaben GenomSeq)
+* category MS
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^slicing.description = "Slice für Therapiestrategie-Kategorisierung aus Modellvorhaben GenomSeq"
+* category contains MVGenomSeqTherapieStrategie 0..1 MS
+* category[MVGenomSeqTherapieStrategie] from MII_VS_SE_TherapieempfehlungStrategieMedikamentoes (required)
+* category[MVGenomSeqTherapieStrategie] ^short = "Modellvorhaben GenomSeq Therapiestrategie-Typ (Medikamentös)"
+* category[MVGenomSeqTherapieStrategie] ^definition = "Kategorisierung der medikamentösen Therapieempfehlung nach Modellvorhaben GenomSeq Strategietyp"
+* category[MVGenomSeqTherapieStrategie] ^comment = "Dieses Feld ist spezifisch für die Integration mit Modellvorhaben GenomSeq. Es ermöglicht die Kategorisierung gemäß RareDiseasesPlan.recommendedTherapies.strategy. Nur für medikamentöse Strategien: systemic-medication, targeted-medication, prevention-medication, gene-therapy, combination."
+* category[MVGenomSeqTherapieStrategie].coding 1..1
+* category[MVGenomSeqTherapieStrategie].coding.system 1..
+* category[MVGenomSeqTherapieStrategie].coding.code 1..
+
 * reasonReference 0..* MS
 * reasonReference ^slicing.discriminator.type = #profile
 * reasonReference ^slicing.discriminator.path = "$this.resolve()"

@@ -1,0 +1,52 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "example-nutrition-therapy-recommendation",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung-nicht-medikamentoes"
+    ]
+  },
+  "intent": "proposal",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "61310001",
+        "display": "Nutrition therapy"
+      }
+    ],
+    "text": "Phenylalaninreduzierte Diät bei Phenylketonurie"
+  },
+  "status": "active",
+  "priority": "routine",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "nutrition",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-se-therapieempfehlung-strategie",
+          "display": "Ernährungstherapie"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "occurrencePeriod": {
+    "start": "2024-01-01"
+  },
+  "requester": {
+    "reference": "Practitioner/example"
+  },
+  "reasonReference": [
+    {
+      "reference": "Condition/pku-diagnosis"
+    }
+  ],
+  "note": [
+    {
+      "text": "Lebenslange phenylalaninarme Diät erforderlich, regelmäßige Kontrolle der Phe-Spiegel"
+    }
+  ]
+}

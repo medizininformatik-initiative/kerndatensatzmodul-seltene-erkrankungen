@@ -1,0 +1,49 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "example-early-detection-recommendation",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung-nicht-medikamentoes"
+    ]
+  },
+  "intent": "proposal",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "410453003",
+        "display": "Screening for disorder"
+      }
+    ],
+    "text": "Jährliche kardiologische Kontrolle bei Marfan-Syndrom"
+  },
+  "status": "draft",
+  "priority": "routine",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "early-detection",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-se-therapieempfehlung-strategie",
+          "display": "Früherkennung"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "requester": {
+    "reference": "Practitioner/example"
+  },
+  "reasonReference": [
+    {
+      "reference": "Condition/marfan-diagnosis"
+    }
+  ],
+  "note": [
+    {
+      "text": "Jährliche Echokardiographie zur Früherkennung von Aortenwurzeldilatation empfohlen"
+    }
+  ]
+}

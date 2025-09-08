@@ -167,6 +167,22 @@
       },
       {
         "reference": {
+          "reference": "ServiceRequest/example-nutrition-therapy-recommendation"
+        },
+        "name": "Beispiel Ernährungstherapie-Empfehlung",
+        "description": "Beispiel einer Ernährungstherapie-Empfehlung bei metabolischer Erkrankung",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung-nicht-medikamentoes"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/example-early-detection-recommendation"
+        },
+        "name": "Beispiel Früherkennungsprogramm-Empfehlung",
+        "description": "Beispiel einer Empfehlung für regelmäßige Früherkennungsuntersuchungen",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung-nicht-medikamentoes"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-se-bodymassindex"
         },
         "name": "Body Mass Index (BMI) Example",
@@ -559,6 +575,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-se-therapieempfehlung-strategie"
+        },
+        "name": "MII CS SE Therapieempfehlung Strategie",
+        "description": "Strategietypen für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-ex-se-age-of-onset"
         },
         "name": "MII EX SE Age of Onset",
@@ -687,6 +711,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-se-therapieempfehlung-nicht-medikamentoes"
+        },
+        "name": "MII PR SE Therapieempfehlung Nicht-Medikamentös",
+        "description": "Therapieempfehlung für nicht-medikamentöse Interventionen bei seltenen Erkrankungen (z.B. Ernährungstherapie, Gentherapie, Prophylaxe, Früherkennung)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-se-therapieempfehlung"
         },
         "name": "MII PR SE Therapieempfehlung Systemische Therapie",
@@ -779,6 +811,30 @@
         },
         "name": "MII VS SE Penetrance",
         "description": "Value set for qualitative descriptions of genetic penetrance",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-se-therapieempfehlung-strategie"
+        },
+        "name": "MII VS SE Therapieempfehlung Strategie",
+        "description": "ValueSet für Strategietypen von Therapieempfehlungen bei seltenen Erkrankungen (Modellvorhaben GenomSeq)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-se-therapieempfehlung-strategie-medikamentoes"
+        },
+        "name": "MII VS SE Therapieempfehlung Strategie - Medikamentös",
+        "description": "ValueSet für medikamentöse Therapiestrategien (für MedicationRequest Profile) - Verwendet für MedicationRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-se-therapieempfehlung-strategie-nicht-medikamentoes"
+        },
+        "name": "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
+        "description": "ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profile) - Verwendet für ServiceRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq",
         "exampleBoolean": false
       },
       {
