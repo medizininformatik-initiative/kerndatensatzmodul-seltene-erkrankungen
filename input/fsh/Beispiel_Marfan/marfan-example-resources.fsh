@@ -26,7 +26,7 @@ Description: "Verdacht auf Marfan-Syndrom"
 * code.coding[sct] = $SCT#19346006 "Marfan syndrome"
 * code.text = "Verdacht auf Marfan-Syndrom"
 * subject = Reference(patient-marfan-001)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-12-10"
 * recordedDate = "2024-12-10"
 * note.text = "Verdacht auf Marfan-Syndrom aufgrund klinischer Präsentation"
@@ -47,7 +47,7 @@ Description: "Klinisch bestätigtes Marfan-Syndrom"
 * code.coding[hpo] = http://human-phenotype-ontology.org#HP:0008138 "Marfan syndrome"
 * code.text = "Marfan-Syndrom"
 * subject = Reference(patient-marfan-001)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-12-15"
 * recordedDate = "2024-12-15"
 * encounter = Reference(encounter-cardiology)
@@ -81,10 +81,10 @@ Description: "Genetisch bestätigtes Marfan-Syndrom mit FBN1-Mutation"
 * code.coding[omim] = http://omim.org#154700 "Marfan syndrome"
 * code.text = "Marfan-Syndrom - genetisch bestätigt"
 * subject = Reference(patient-marfan-001)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-12-20"
 * recordedDate = "2024-12-20"
-* evidence[+].code = $SCT#410545006 "Genetic finding"
+* evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/variant-fbn1-001)
 * note.text = "FBN1-Mutation c.3217G>A (p.Gly1073Arg) nachgewiesen, krankheitsursächlich. Genetische Diagnose existiert parallel zur klinischen Diagnose."
 
@@ -96,17 +96,17 @@ Title: "FBN1 Gen - Pathogene Mutation"
 Description: "Pathogene FBN1-Mutation bei Marfan-Syndrom"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
-* code = $LNC#55233-1 "Genetic variant assessment"
+* code = $LNC#55233-1 "Genetic analysis master panel"
 * subject = Reference(patient-marfan-001)
 * effectiveDateTime = "2024-12-20"
 * valueCodeableConcept = $SCT#10828004 "Positive"
 * component[+].code = $LNC#48018-6 "Gene studied [ID]"
-* component[=].valueCodeableConcept.coding[+] = http://www.genenames.org/geneId#2200 "FBN1"
+* component[=].valueCodeableConcept.coding[+] = http://www.genenames.org/geneId#3603 "FBN1"
 * component[+].code = $LNC#48004-6 "DNA change (c.HGVS)"
 * component[=].valueCodeableConcept.text = "c.3217G>A"
 * component[+].code = $LNC#48005-3 "Amino acid change (pHGVS)"
 * component[=].valueCodeableConcept.text = "p.Gly1073Arg"
-* component[+].code = $LNC#53037-8 "Genetic variant clinical significance"
+* component[+].code = $LNC#53037-8 "Genetic variation clinical significance [Imp]"
 * component[=].valueCodeableConcept = $LNC#LA6668-3 "Pathogenic"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#POS "Positive"
 * note.text = "Pathogene FBN1-Mutation, krankheitsursächlich für Marfan-Syndrom"
@@ -126,7 +126,7 @@ Description: "Beidseitige Katarakt bei Marfan-Syndrom"
 * code.coding[hpo] = http://human-phenotype-ontology.org#HP:0000518 "Cataract"
 * code.text = "Katarakt bilateral"
 * subject = Reference(patient-marfan-001)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-10-15"
 * recordedDate = "2024-10-15"
 * encounter = Reference(encounter-ophthalmology)
@@ -160,12 +160,12 @@ Title: "Beinlängendifferenz"
 Description: "Beinlängendifferenz mit rechts verkürztem Bein"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
-* code = $SCT#271902003 "Leg length discrepancy"
+* code = $SCT#707738004 "Leg length discrepancy"
 * subject = Reference(patient-marfan-001)
 * effectiveDateTime = "2024-12-15"
 * valueCodeableConcept = $SCT#7771000 "Left"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
-* bodySite = $SCT#30021000 "Lower limb structure"
+* bodySite = $SCT#30021000 "Lower leg structure"
 * component[+].code = http://human-phenotype-ontology.org#HP:0100559 "Lower limb asymmetry"
 * component[=].valueString = "Rechtes Bein verkürzt"
 
@@ -182,7 +182,7 @@ Description: "Akute Thoraxschmerzen als Präsentationssymptom"
 * code.text = "Thoraxschmerzen"
 * subject = Reference(patient-marfan-001)
 * effectiveDateTime = "2024-12-15"
-* valueCodeableConcept = $SCT#255212004 "Present"
+* valueCodeableConcept = $SCT#52101004 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
 
 // Symptom - Cataract
@@ -200,7 +200,7 @@ Description: "Beidseitige Katarakt als ophthalmologische Manifestation"
 * effectiveDateTime = "2024-10-15"
 * valueCodeableConcept = $SCT#51440002 "Bilateral"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
-* bodySite = $SCT#81745001 "Eye region structure"
+* bodySite = $SCT#81745001 "Eye structure"
 
 // Cardiac Finding - Aortic Root Dilatation
 Instance: symptom-aortic-root
@@ -230,12 +230,12 @@ Description: "Moderate Aortenklappeninsuffizienz Grad II"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#imaging
 * code.coding[+] = http://human-phenotype-ontology.org#HP:0001659 "Aortic regurgitation"
-* code.coding[+] = $SCT#60573004 "Aortic valve regurgitation"
+* code.coding[+] = $SCT#60234000 "Aortic valve regurgitation"
 * code.text = "Aortenklappeninsuffizienz"
 * subject = Reference(patient-marfan-001)
 * effectiveDateTime = "2024-12-15"
-* valueCodeableConcept.coding = $SCT#6736007 "Moderate"
-* valueCodeableConcept.text = "Grad II"
+* valueCodeableConcept.coding = $SCT#838545002 "Moderate aortic valve regurgitation"
+* valueCodeableConcept.text = "Aortenklappeninsuffizienz Grad II"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
 
 // Cardiac Finding - Mitral Regurgitation
@@ -251,8 +251,8 @@ Description: "Milde Mitralklappeninsuffizienz Grad I"
 * code.text = "Mitralklappeninsuffizienz"
 * subject = Reference(patient-marfan-001)
 * effectiveDateTime = "2024-12-15"
-* valueCodeableConcept.coding = $SCT#255604002 "Mild"
-* valueCodeableConcept.text = "Grad I"
+* valueCodeableConcept.coding = $SCT#838451005 "Mild mitral valve regurgitation"
+* valueCodeableConcept.text = "Mitralklappeninsuffizienz Grad I"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
 
 // Echocardiography - Aortic Root Measurement
@@ -308,8 +308,8 @@ Title: "Katarakt-Operation"
 Description: "Phakoemulsifikation mit Intraokularlinsenimplantation"
 * status = #completed
 * category = http://snomed.info/sct#387713003 "Surgical procedure"
-* code.coding[+] = http://fhir.de/CodeSystem/bfarm/ops#5-144.5a "Extrakapsuläre Extraktion der Linse [ECCE]: Phakoemulsifikation: Mit Einführung einer kapselfixierten Hinterkammerlinse, monofokale Intraokularlinse"
-* code.coding[+] = $SCT#54885007 "Phacoemulsification of cataract with intraocular lens implantation"
+* code.coding[+] = http://fhir.de/CodeSystem/bfarm/ops#5-144.5a "Extrakapsuläre Extraktion der Linse [ECCE]: Linsenkernverflüssigung [Phakoemulsifikation] über kornealen Zugang: Mit Einführung einer kapselfixierten Hinterkammerlinse, monofokale Intraokularlinse"
+* code.coding[+] = $SCT#54885007 "Extraction of cataract"
 * code.text = "Phakoemulsifikation mit IOL-Implantation"
 * subject = Reference(patient-marfan-001)
 * performedDateTime = "2024-11-12"
@@ -323,10 +323,10 @@ InstanceOf: Procedure
 Usage: #example
 Title: "Geplante Aortenwurzelersatz-Operation"
 Description: "Geplante David-Operation (Valve-sparing root replacement)"
-* status = #planned
+* status = #preparation
 * category = http://snomed.info/sct#387713003 "Surgical procedure"
-* code.coding[+] = http://fhir.de/CodeSystem/bfarm/ops#5-354.0a "Andere Operationen an Herzklappen: Aortenklappe: Klappenrekonstruktion"
-* code.coding[+] = $SCT#119564002 "Aortic root replacement"
+* code.coding[+] = http://fhir.de/CodeSystem/bfarm/ops#5-354.0a "Andere Operationen an Herzklappen: Aortenklappe: Rekonstruktion der Aortenwurzel mit Implantation einer Gefäßprothese nach David"
+* code.coding[+] = $SCT#428179006 "Replacement of aortic root"
 * code.text = "Aortenwurzelersatz (David-Operation)"
 * subject = Reference(patient-marfan-001)
 * performedPeriod.start = "2025-03-15"
@@ -340,8 +340,8 @@ Usage: #example
 Title: "Losartan Therapie"
 Description: "Losartan zur Progressionshemmung der Aortenwurzeldilatation"
 * status = #active
-* medicationCodeableConcept.coding[+] = http://www.whocc.no/atc#C09CA01 "Losartan"
-* medicationCodeableConcept.coding[+] = $SCT#387069000 "Losartan"
+* medicationCodeableConcept.coding[+] = $ATC_DE#C09CA01 "Losartan"
+* medicationCodeableConcept.coding[+] = $SCT#373567002 "Losartan"
 * medicationCodeableConcept.text = "Losartan 50mg"
 * subject = Reference(patient-marfan-001)
 * effectiveDateTime = "2024-12-15"
@@ -370,15 +370,15 @@ Description: "Konsultation im Zentrum für Seltene Erkrankungen mit kardiologisc
 * problem[+] = Reference(condition-marfan-suspected)  // Reason for assessment (suspected diagnosis)
 * finding[+].itemReference = Reference(condition-marfan-clinical)  // Clinical diagnosis as finding
 * finding[+].itemReference = Reference(condition-marfan-genetic)  // Genetic diagnosis as finding
-* finding[+].itemCodeableConcept = $SCT#249364003 "Aortic root dilatation"
+* finding[+].itemCodeableConcept = $SCT#251036003 "Aortic root dilatation"
 * finding[=].itemReference = Reference(symptom-aortic-root)
-* finding[+].itemCodeableConcept = $SCT#60573004 "Aortic valve regurgitation"
+* finding[+].itemCodeableConcept = $SCT#60234000 "Aortic valve regurgitation"
 * finding[=].itemReference = Reference(symptom-aortic-regurg)
 * finding[+].itemCodeableConcept = $SCT#48724000 "Mitral valve regurgitation"
 * finding[=].itemReference = Reference(symptom-mitral-regurg)
-* finding[+].itemCodeableConcept = $SCT#249620005 "Tall stature"
+* finding[+].itemCodeableConcept = $SCT#248328003 "Tall stature"
 * finding[=].itemReference = Reference(observation-height-001)
-* finding[+].itemCodeableConcept = $SCT#271902003 "Leg length discrepancy"
+* finding[+].itemCodeableConcept = $SCT#707738004 "Leg length discrepancy"
 * finding[=].itemReference = Reference(observation-leg-asymmetry)
 * investigation[+].code.text = "Echokardiographie"
 * investigation[=].item[+] = Reference(observation-echo-aortic)
@@ -386,7 +386,7 @@ Description: "Konsultation im Zentrum für Seltene Erkrankungen mit kardiologisc
 * investigation[=].item[+] = Reference(observation-echo-mv)
 * problem[+] = Reference(Condition/condition-marfan-clinical)
 * problem[+] = Reference(Condition/condition-marfan-genetic)
-* prognosisCodeableConcept[+] = $SCT#170969009 "Prognosis guarded"
+* prognosisCodeableConcept[+] = $SCT#67334001 "Guarded prognosis"
 * note[+].text = "Katarakt in jungem Alter war Anlass für ZSE-Konsultation. Marfan-Syndrom klinisch und genetisch (FBN1-Mutation) bestätigt. OP-Indikation für Aortenwurzelersatz durch Kardiologie gestellt. Medikamentöse Therapie mit Losartan eingeleitet."
 * note[+].text = "Multidisziplinäre Betreuung im ZSE etabliert. Regelmäßige kardiologische Kontrollen alle 6 Monate. Genetische Beratung für Familienplanung empfohlen."
 
@@ -440,9 +440,9 @@ InstanceOf: Encounter
 Usage: #example
 Title: "Geplante Herzchirurgie"
 Description: "Geplanter stationärer Aufenthalt für Aortenwurzelersatz"
-* status = #planned
+* status = #preparation
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
-* type = $SCT#305565006 "Admission to cardiac surgery department"
+* type = $SCT#305357000 "Admission to cardiology department"
 * subject = Reference(patient-marfan-001)
 * period.start = "2025-03-15"
 * diagnosis.condition = Reference(Condition/condition-marfan-clinical)

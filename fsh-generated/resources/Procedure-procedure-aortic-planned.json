@@ -1,7 +1,7 @@
 {
   "resourceType": "Procedure",
   "id": "procedure-aortic-planned",
-  "status": "planned",
+  "status": "preparation",
   "category": {
     "coding": [
       {
@@ -16,12 +16,12 @@
       {
         "code": "5-354.0a",
         "system": "http://fhir.de/CodeSystem/bfarm/ops",
-        "display": "Andere Operationen an Herzklappen: Aortenklappe: Klappenrekonstruktion"
+        "display": "Andere Operationen an Herzklappen: Aortenklappe: Rekonstruktion der Aortenwurzel mit Implantation einer Gefäßprothese nach David"
       },
       {
-        "code": "119564002",
+        "code": "428179006",
         "system": "http://snomed.info/sct",
-        "display": "Aortic root replacement"
+        "display": "Replacement of aortic root"
       }
     ],
     "text": "Aortenwurzelersatz (David-Operation)"

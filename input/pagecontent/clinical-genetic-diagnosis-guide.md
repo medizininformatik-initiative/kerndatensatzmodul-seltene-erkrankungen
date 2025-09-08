@@ -67,7 +67,7 @@ InstanceOf: MII_PR_SE_GeneticDiagnosis
 * code.coding[icd10-gm] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie, Typ I"
 * code.coding[orphanet] = http://www.orpha.net#83330 "SMA type 1"
 * code.coding[omim] = http://omim.org#253300 "Spinal muscular atrophy, type I"
-* evidence[+].code = $SCT#410545006 "Genetic finding"
+* evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(variant-smn1-deletion)  // MolGen Variante
 * evidence[+].detail = Reference(diagnostic-report-sma)   // MolGen DiagnostischeImplikation
 * extension[geneticBasis].valueCodeableConcept = $SCT#264530000 "Single gene disorder"
@@ -260,7 +260,7 @@ InstanceOf: MII_PR_SE_GeneticDiagnosis
 * category[genetic] = $SCT#782964007 "Genetic disease"
 * code.coding[orphanet] = http://www.orpha.net#83330 "SMA"
 * code.coding[omim] = http://omim.org#253300 "SMA type I"
-* evidence[+].code = $SCT#410545006 "Genetic finding"
+* evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(molgen-smn1-normal)
 * note.text = "SMN1-Gen normal (2 Kopien). SMA ausgeschlossen."
 ```

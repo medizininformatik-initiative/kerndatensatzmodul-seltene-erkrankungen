@@ -24,7 +24,7 @@ Description: "Verdacht auf SMA beim Neugeborenenscreening"
 * code.coding[sct] = $SCT#80854005 "Werdnig-Hoffmann disease"
 * code.coding[hpo] = http://human-phenotype-ontology.org#HP:0003813 "Motor neuron disease"
 * subject = Reference(patient-sma-001)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-07-18"
 * recordedDate = "2024-07-18"
 * encounter = Reference(encounter-screening-001)
@@ -47,7 +47,7 @@ Description: "Klinische Diagnose SMA Typ 1 bei Erstvorstellung"
 * code.coding[sct] = $SCT#80854005 "Werdnig-Hoffmann disease"
 * code.coding[hpo] = http://human-phenotype-ontology.org#HP:0003813 "Motor neuron disease"
 * subject = Reference(patient-sma-001)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-07-22"
 * recordedDate = "2024-07-22"
 * encounter = Reference(encounter-ambulant-001)
@@ -71,11 +71,11 @@ Description: "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion"
 * code.coding[sct] = $SCT#80854005 "Werdnig-Hoffmann disease"
 * code.coding[omim] = http://omim.org#253300 "Spinal muscular atrophy, type I"
 * subject = Reference(patient-sma-001)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-07-26"  // Date of molecular confirmation
 * recordedDate = "2024-07-26"
 * onsetDateTime = "2024-07-01"  // Birth/neonatal onset
-* evidence[+].code = $SCT#410545006 "Genetic finding"
+* evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail[+] = Reference(Observation/variant-smn1-001)
 * evidence[=].detail[+] = Reference(Observation/variant-smn2-001)
 * evidence[+].code = $SCT#405824009 "Genetic test finding"
@@ -127,7 +127,7 @@ Title: "SMN1 Gen - Homozygote Deletion"
 Description: "0 Kopien des SMN1-Gens nachgewiesen"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
-* code = $LNC#55233-1 "Genetic variant assessment"
+* code = $LNC#55233-1 "Genetic analysis master panel"
 * subject = Reference(patient-sma-001)
 * effectiveDateTime = "2024-07-26"
 * valueCodeableConcept = $SCT#10828004 "Positive"
@@ -151,7 +151,7 @@ Title: "SMN2 Gen - Kopienanzahl"
 Description: "2 Kopien des SMN2-Gens nachgewiesen"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
-* code = $LNC#55233-1 "Genetic variant assessment"
+* code = $LNC#55233-1 "Genetic analysis master panel"
 * subject = Reference(patient-sma-001)
 * effectiveDateTime = "2024-07-26"
 * component[+].code = $LNC#48018-6 "Gene studied [ID]"
@@ -323,7 +323,7 @@ Description: "Nachsorgeuntersuchung nach Gentherapie"
 * finding[=].basis = "Thrombozytenzahl normwertig"
 * problem[+] = Reference(Condition/condition-sma-clinical)
 * problem[+] = Reference(Condition/condition-sma-genetic)
-* prognosisCodeableConcept[+] = $SCT#170969009 "Prognosis guarded"
+* prognosisCodeableConcept[+] = $SCT#67334001 "Guarded prognosis"
 * note[+].text = "Standardisierte Nachsorgeuntersuchung nach Gentherapie gemäß Zentrumsprotokoll"
 * note[+].text = "Troponin-Erhöhung präexistent, nicht therapieassoziiert. Gentherapie gut vertragen. Weiterführung der Prednisolon-Therapie. Nächste Kontrolle in 4 Wochen."
 

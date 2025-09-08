@@ -22,7 +22,7 @@ Description: "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend a
 * code.text = "Marfan-Syndrom, klinisch diagnostiziert"
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/cardiology-consultation)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-12-15"
 * recordedDate = "2024-12-15"
 // Evidence linking to HPO-coded observations
@@ -58,7 +58,7 @@ Description: "Beispiel einer klinischen Diagnose des Noonan-Syndroms"
 * code.coding[hpo][+] = http://human-phenotype-ontology.org#HP:0001631 "Noonan syndrome"
 * code.text = "Noonan-Syndrom"
 * subject = Reference(Patient/example)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-10-20"
 * recordedDate = "2024-10-20"
 // Phenotypic evidence
@@ -94,12 +94,12 @@ Description: "Beispiel einer genetisch bestätigten Diagnose der spinalen Muskel
 * code.text = "Spinale Muskelatrophie Typ 1, genetisch bestätigt"
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/genetic-consultation)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-07-26"
 * recordedDate = "2024-07-26"
 * onsetDateTime = "2024-07-01"  // Neonatal onset
 // Genetic evidence linking to MolGen resources
-* evidence[+].code = $SCT#410545006 "Genetic finding"
+* evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/molgen-variant-smn1-deletion) // MolGen Variante
 * evidence[+].code = $SCT#405824009 "Genetic test finding"
 * evidence[=].detail = Reference(DiagnosticReport/molgen-diagnostic-implication-sma) // MolGen DiagnostischeImplikation
@@ -123,11 +123,11 @@ Description: "Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie"
 * code.coding[omim][+] = http://omim.org#310200 "Duchenne muscular dystrophy"
 * code.text = "Duchenne-Muskeldystrophie"
 * subject = Reference(Patient/example)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-09-15"
 * recordedDate = "2024-09-15"
 // Link to MolGen resources
-* evidence[+].code = $SCT#410545006 "Genetic finding"
+* evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/molgen-variant-dmd-deletion-exon45-47)
 * evidence[+].code = $SCT#405824009 "Genetic test finding"
 * evidence[=].detail = Reference(DiagnosticReport/molgen-diagnostic-dmd)
@@ -150,11 +150,11 @@ Description: "Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom"
 * code.coding[omim][+] = http://omim.org#604370 "Breast-ovarian cancer, familial, 1"
 * code.text = "Hereditäres Mamma- und Ovarialkarzinom-Syndrom (BRCA1)"
 * subject = Reference(Patient/example)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-11-01"
 * recordedDate = "2024-11-01"
 // Genetic evidence
-* evidence[+].code = $SCT#410545006 "Genetic finding"
+* evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/molgen-variant-brca1-pathogenic)
 * evidence[+].code = $SCT#405824009 "Genetic test finding"
 * evidence[=].detail = Reference(DiagnosticReport/molgen-brca-panel)
@@ -180,7 +180,7 @@ Description: "Initiale klinische Verdachtsdiagnose Mukoviszidose"
 * code.coding[orphanet] = http://www.orpha.net#586 "Cystic fibrosis"
 * code.coding[hpo][+] = http://human-phenotype-ontology.org#HP:0100730 "Cystic fibrosis"
 * subject = Reference(Patient/example)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-08-10"
 * recordedDate = "2024-08-10"
 // Clinical evidence
@@ -206,14 +206,14 @@ Description: "Genetisch bestätigte Mukoviszidose"
 * code.coding[sct] = $SCT#190905008 "Cystic fibrosis"
 * code.coding[omim][+] = http://omim.org#219700 "Cystic fibrosis"
 * subject = Reference(Patient/example)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-08-25"
 * recordedDate = "2024-08-25"
 // Reference to previous clinical diagnosis
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/replaces"
 * extension[=].valueReference = Reference(example-cf-clinical)
 // Genetic evidence
-* evidence[+].code = $SCT#410545006 "Genetic finding"
+* evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/molgen-variant-cftr-f508del-homozygous)
 * evidence[+].code = $SCT#405824009 "Genetic test finding"
 * evidence[=].detail = Reference(DiagnosticReport/molgen-cf-diagnostic)

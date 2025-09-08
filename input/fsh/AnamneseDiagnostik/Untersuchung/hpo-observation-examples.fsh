@@ -37,7 +37,7 @@ Description: "Ectopia lentis bei Marfan-Syndrom"
 * effectiveDateTime = "2024-10-15"
 * valueCodeableConcept = $SCT#52101004 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
-* bodySite = $SCT#81745001 "Eye region structure"
+* bodySite = $SCT#81745001 "Eye structure"
 
 Instance: tall-stature
 InstanceOf: Observation
@@ -146,7 +146,7 @@ Description: "Peripheres Lymphödem"
 * effectiveDateTime = "2024-10-20"
 * valueCodeableConcept = $SCT#52101004 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
-* bodySite = $SCT#30021000 "Lower limb structure"
+* bodySite = $SCT#30021000 "Lower leg structure"
 * note.text = "Beidseitiges Lymphödem der unteren Extremitäten"
 
 // ============================================

@@ -21,7 +21,7 @@ Description: "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose"
 * code.text = "Marfan-Syndrom (ausgeschlossen)"
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/cardiology-consultation)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-12-15"
 * recordedDate = "2024-12-15"
 * abatementDateTime = "2024-12-15"  // When it was ruled out
@@ -46,7 +46,7 @@ Description: "Differentialdiagnose EDS ausgeschlossen"
 * code.coding[orphanet] = http://www.orpha.net#98249 "Ehlers-Danlos syndrome"
 * code.text = "Ehlers-Danlos-Syndrom (ausgeschlossen)"
 * subject = Reference(Patient/example)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-11-20"
 * recordedDate = "2024-11-20"
 * abatementDateTime = "2024-11-20"
@@ -71,12 +71,12 @@ Description: "Spinale Muskelatrophie genetisch ausgeschlossen"
 * code.coding[omim] = http://omim.org#253300 "Spinal muscular atrophy, type I"
 * code.text = "Spinale Muskelatrophie (genetisch ausgeschlossen)"
 * subject = Reference(Patient/example)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-07-26"
 * recordedDate = "2024-07-26"
 * abatementDateTime = "2024-07-26"
 // Genetic evidence showing normal results
-* evidence[+].code = $SCT#410545006 "Genetic finding"
+* evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/molgen-smn1-normal-copies)
 * evidence[+].code = $SCT#405824009 "Genetic test finding"
 * evidence[=].detail = Reference(DiagnosticReport/molgen-sma-negative)
@@ -97,11 +97,11 @@ Description: "Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muske
 * code.coding[omim] = http://omim.org#310200 "Duchenne muscular dystrophy"
 * code.text = "Duchenne-Muskeldystrophie (ausgeschlossen)"
 * subject = Reference(Patient/example)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-09-15"
 * recordedDate = "2024-09-15"
 * abatementDateTime = "2024-09-15"
-* evidence[+].code = $SCT#410545006 "Genetic finding"
+* evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/molgen-dmd-in-frame-deletion)
 * note.text = "In-frame Deletion Exon 45-47 im DMD-Gen nachgewiesen. Vereinbar mit Becker-Muskeldystrophie, NICHT Duchenne. Duchenne-Muskeldystrophie ausgeschlossen."
 
@@ -120,14 +120,14 @@ Description: "CF nach auffälligem Neugeborenenscreening genetisch ausgeschlosse
 * code.coding[omim] = http://omim.org#219700 "Cystic fibrosis"
 * code.text = "Mukoviszidose (ausgeschlossen)"
 * subject = Reference(Patient/example)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-08-25"
 * recordedDate = "2024-08-25"
 * abatementDateTime = "2024-08-25"
 // Link to previous suspected diagnosis
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/replaces"
 * extension[=].valueReference = Reference(Condition/cf-suspected-screening)
-* evidence[+].code = $SCT#410545006 "Genetic finding"
+* evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/molgen-cftr-heterozygous-carrier)
 * note.text = "Heterozygoter Anlageträger für F508del. Zweite Mutation ausgeschlossen. IRT-Erhöhung im Screening war transient. Mukoviszidose ausgeschlossen."
 
@@ -149,7 +149,7 @@ Description: "Metabolische Myopathie als Differentialdiagnose ausgeschlossen"
 * code.coding[orphanet] = http://www.orpha.net#206966 "Metabolic myopathy"
 * code.text = "Metabolische Myopathie (ausgeschlossen)"
 * subject = Reference(Patient/example)
-* extension[+].url = $mii-ex-diagnose-feststellungsdatum
+* extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-10-01"
 * recordedDate = "2024-10-01"
 * abatementDateTime = "2024-10-01"

@@ -53,7 +53,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 2. **Beinlängendifferenz**:
    - **HPO**: HP:0100559 "Lower limb asymmetry"
    - **Beschreibung**: Rechtes Bein verkürzt
-   - **SNOMED CT**: 271902003 "Leg length discrepancy"
+   - **SNOMED CT**: 707738004 "Leg length discrepancy"
 
 #### Kardiovaskuläre Manifestationen
 1. **Thoraxschmerzen**:
@@ -68,7 +68,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 
 3. **Aortenklappeninsuffizienz**:
    - **HPO**: HP:0001659 "Aortic regurgitation"
-   - **SNOMED CT**: 60573004 "Aortic valve regurgitation"
+   - **SNOMED CT**: 60234000 "Aortic valve regurgitation"
    - **Schweregrad**: Grad II (moderat)
 
 4. **Mitralklappeninsuffizienz**:

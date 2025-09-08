@@ -79,7 +79,7 @@
         },
         "extension": [
           {
-            "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/mii-ex-diagnose-feststellungsdatum",
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
             "valueDateTime": "2024-07-18"
           }
         ],
@@ -178,7 +178,7 @@
         },
         "extension": [
           {
-            "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/mii-ex-diagnose-feststellungsdatum",
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
             "valueDateTime": "2024-07-22"
           }
         ],
@@ -279,7 +279,7 @@
         },
         "extension": [
           {
-            "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/mii-ex-diagnose-feststellungsdatum",
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
             "valueDateTime": "2024-07-26"
           }
         ],
@@ -291,7 +291,7 @@
               {
                 "coding": [
                   {
-                    "code": "410545006",
+                    "code": "106221001",
                     "system": "http://snomed.info/sct",
                     "display": "Genetic finding"
                   }
@@ -520,7 +520,7 @@
             {
               "code": "55233-1",
               "system": "http://loinc.org",
-              "display": "Genetic variant assessment"
+              "display": "Genetic analysis master panel"
             }
           ]
         },
@@ -645,7 +645,7 @@
             {
               "code": "55233-1",
               "system": "http://loinc.org",
-              "display": "Genetic variant assessment"
+              "display": "Genetic analysis master panel"
             }
           ]
         },
@@ -1290,9 +1290,9 @@
           {
             "coding": [
               {
-                "code": "170969009",
+                "code": "67334001",
                 "system": "http://snomed.info/sct",
-                "display": "Prognosis guarded"
+                "display": "Guarded prognosis"
               }
             ]
           }

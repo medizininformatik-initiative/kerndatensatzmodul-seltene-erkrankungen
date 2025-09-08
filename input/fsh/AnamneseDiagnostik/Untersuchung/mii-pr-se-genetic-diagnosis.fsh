@@ -60,7 +60,7 @@ Description: "Profile for genetically confirmed diagnosis of rare diseases with 
 * evidence.code.coding ^slicing.rules = #open
 * evidence.code.coding contains
     geneticEvidence 0..1 MS
-* evidence.code.coding[geneticEvidence] = $SCT#410545006 "Genetic finding"
+* evidence.code.coding[geneticEvidence] = $SCT#106221001 "Genetic finding"
 * evidence.code.coding[geneticEvidence] ^short = "Indicates genetic evidence"
 
 // Evidence details must reference MolGen resources
