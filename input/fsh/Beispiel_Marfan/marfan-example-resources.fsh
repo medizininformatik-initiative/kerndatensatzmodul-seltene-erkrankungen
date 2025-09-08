@@ -365,7 +365,7 @@ Description: "Konsultation im Zentrum für Seltene Erkrankungen mit kardiologisc
 * encounter = Reference(encounter-cardiology)
 * effectiveDateTime = "2024-12-15"
 * date = "2024-12-15"
-* assessor = Reference(Practitioner/example)
+// * assessor = Reference(Practitioner/example) // Optional field, not required in MII
 * summary = "19-jähriger Patient mit Z.n. Katarakt-OP im ZSE vorstellig. Kardiologische Mitbeurteilung zeigt: Aortenwurzeldilatation (48mm), AKI Grad II, MKI Grad I. Skelettale Merkmale (Hochwuchs 2,13m, Beinlängendifferenz) bestätigen Marfan-Syndrom. Klinische und genetische Diagnose gesichert."
 * problem[+] = Reference(condition-marfan-suspected)  // Reason for assessment (suspected diagnosis)
 * finding[+].itemReference = Reference(condition-marfan-clinical)  // Clinical diagnosis as finding

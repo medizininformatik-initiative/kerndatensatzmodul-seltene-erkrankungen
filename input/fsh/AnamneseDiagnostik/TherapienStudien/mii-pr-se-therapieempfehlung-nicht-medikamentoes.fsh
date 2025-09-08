@@ -116,17 +116,39 @@ Description: "Beispiel einer Empfehlung für regelmäßige Früherkennungsunters
 * category[MVGenomSeqTherapieStrategie].coding = MII_CS_SE_TherapieempfehlungStrategie#early-detection "Früherkennung"
 * code.coding[snomed] = $SCT#410453003 "Screening for disorder"
 * code.text = "Jährliche kardiologische Kontrolle bei Marfan-Syndrom"
-* subject = Reference(Patient/example)
-* requester = Reference(Practitioner/example)
-* reasonReference = Reference(Condition/marfan-diagnosis)
+* subject = Reference(Patient/patient-marfan-001)
+// * requester = Reference(Practitioner/example) // Optional field, not required in MII
+* reasonReference = Reference(Condition/condition-marfan-clinical)
 * note.text = "Jährliche Echokardiographie zur Früherkennung von Aortenwurzeldilatation empfohlen"
+
+// PKU Condition Example for Nutrition Therapy
+Instance: condition-pku-diagnosis
+InstanceOf: MII_PR_SE_GeneticDiagnosis
+Usage: #example
+Title: "Phenylketonurie - Genetische Diagnose"
+Description: "Genetisch bestätigte Phenylketonurie (PKU)"
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
+* category = $SCT#782964007 "Genetic disease"
+* code.coding[icd10-gm] = $ICD10GM#E70.0 "Klassische Phenylketonurie"
+* code.coding[icd10-gm].version = "2024"
+* code.coding[orphanet] = http://www.orpha.net#716 "Phenylketonuria"
+* code.coding[sct] = $SCT#7573000 "Classical phenylketonuria"
+* code.coding[omim] = http://omim.org#261600 "Phenylketonuria"
+* code.text = "Phenylketonurie"
+* subject = Reference(Patient/example)
+* recordedDate = "2024-01-01"
+* evidence[+].code.coding = $LNC#81247-9 "Master HL7 genetic variant reporting panel"
+* evidence[=].code.text = "PAH-Gen Mutation c.1222C>T (p.R408W)"
+* evidence[=].detail = Reference(Observation/pku-genetic-variant)
+* note.text = "Klassische PKU mit PAH-Gen Mutation c.1222C>T, erfordert lebenslange phenylalaninarme Diät"
 
 // Example Instance for Nutrition Therapy
 Instance: example-nutrition-therapy-recommendation
 InstanceOf: MII_PR_SE_TherapieempfehlungNichtMedikamentoes
 Usage: #example
 Title: "Beispiel Ernährungstherapie-Empfehlung"
-Description: "Beispiel einer Ernährungstherapie-Empfehlung bei metabolischer Erkrankung"
+Description: "Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie"
 * status = #active
 * intent = #proposal
 * priority = #routine
@@ -135,6 +157,6 @@ Description: "Beispiel einer Ernährungstherapie-Empfehlung bei metabolischer Er
 * code.text = "Phenylalaninreduzierte Diät bei Phenylketonurie"
 * subject = Reference(Patient/example)
 * occurrencePeriod.start = "2024-01-01"
-* requester = Reference(Practitioner/example)
-* reasonReference = Reference(Condition/pku-diagnosis)
+// * requester = Reference(Practitioner/example) // Optional field, not required in MII
+* reasonReference = Reference(Condition/condition-pku-diagnosis)
 * note.text = "Lebenslange phenylalaninarme Diät erforderlich, regelmäßige Kontrolle der Phe-Spiegel"

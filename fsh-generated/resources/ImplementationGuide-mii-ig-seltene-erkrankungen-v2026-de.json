@@ -170,7 +170,7 @@
           "reference": "ServiceRequest/example-nutrition-therapy-recommendation"
         },
         "name": "Beispiel Ernährungstherapie-Empfehlung",
-        "description": "Beispiel einer Ernährungstherapie-Empfehlung bei metabolischer Erkrankung",
+        "description": "Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung-nicht-medikamentoes"
       },
       {
@@ -180,6 +180,14 @@
         "name": "Beispiel Früherkennungsprogramm-Empfehlung",
         "description": "Beispiel einer Empfehlung für regelmäßige Früherkennungsuntersuchungen",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung-nicht-medikamentoes"
+      },
+      {
+        "reference": {
+          "reference": "Patient/example"
+        },
+        "name": "Beispielpatient",
+        "description": "Generischer Beispielpatient für Testzwecke",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -908,6 +916,14 @@
         "name": "Phenotypic Pattern Extension",
         "description": "Extension to link syndrome diagnoses to characteristic phenotypic patterns or symptom clusters",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-pku-diagnosis"
+        },
+        "name": "Phenylketonurie - Genetische Diagnose",
+        "description": "Genetisch bestätigte Phenylketonurie (PKU)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
       },
       {
         "reference": {

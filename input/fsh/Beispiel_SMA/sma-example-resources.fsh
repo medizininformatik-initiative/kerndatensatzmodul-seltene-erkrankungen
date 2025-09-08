@@ -285,7 +285,7 @@ Description: "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum"
 * encounter = Reference(encounter-ambulant-001)
 * effectiveDateTime = "2024-07-22"
 * date = "2024-07-22"
-* assessor = Reference(Practitioner/example)
+// * assessor = Reference(Practitioner/example) // Optional field, not required in MII
 * summary = "Neugeborenes mit V.a. SMA aus Neugeborenenscreening. Familienanamnese zeigt unklare Muskelerkrankung der Urgroßmutter. Troponin T bereits erhöht (92 ng/l)."
 * problem[+] = Reference(condition-sma-suspected)  // Reason for assessment (suspected diagnosis)
 * finding[+].itemReference = Reference(condition-sma-clinical)  // Clinical diagnosis as finding
@@ -311,7 +311,7 @@ Description: "Nachsorgeuntersuchung nach Gentherapie"
 * encounter = Reference(encounter-nachsorge-001)
 * effectiveDateTime = "2024-08-12"
 * date = "2024-08-12"
-* assessor = Reference(Practitioner/example)
+// * assessor = Reference(Practitioner/example) // Optional field, not required in MII
 * previous = Reference(clinical-impression-erstvorstellung)
 * summary = "Erste Nachsorge 14 Tage nach Gentherapie. Klinisch stabil. Troponin T weiter erhöht (106 ng/l), war jedoch bereits prätherapeutisch erhöht."
 * finding[+].itemCodeableConcept = $SCT#442753009 "Troponin T above reference range"
