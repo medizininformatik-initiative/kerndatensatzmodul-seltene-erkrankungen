@@ -21,8 +21,8 @@ Description: "Verdacht auf SMA beim Neugeborenenscreening"
 * verificationStatus = $condition-ver-status#unconfirmed
 * category = $condition-category#encounter-diagnosis
 * code.text = "Verdacht auf Spinale Muskelatrophie"
-* code.coding[sct] = $SCT#80854005 "Werdnig-Hoffmann disease"
-* code.coding[hpo] = http://human-phenotype-ontology.org#HP:0003813 "Motor neuron disease"
+* code.coding[sct] = $SCT#64383006 "Werdnig-Hoffmann disease"
+* code.coding[hpo] = http://human-phenotype-ontology.org#HP:0007373 "Motor neuron atrophy"
 * subject = Reference(patient-sma-001)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-07-18"
@@ -43,9 +43,9 @@ Description: "Klinische Diagnose SMA Typ 1 bei Erstvorstellung"
 * category = $condition-category#encounter-diagnosis
 * code.coding[icd10-gm] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]"
 * code.coding[icd10-gm].version = "2024"
-* code.coding[orphanet] = http://www.orpha.net#83330 "Infantile spinale Muskelatrophie Typ I"
-* code.coding[sct] = $SCT#80854005 "Werdnig-Hoffmann disease"
-* code.coding[hpo] = http://human-phenotype-ontology.org#HP:0003813 "Motor neuron disease"
+* code.coding[orphanet] = http://www.orpha.net#83330 "Proximal spinal muscular atrophy type 1"
+* code.coding[sct] = $SCT#64383006 "Werdnig-Hoffmann disease"
+* code.coding[hpo] = http://human-phenotype-ontology.org#HP:0007373 "Motor neuron atrophy"
 * subject = Reference(patient-sma-001)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-07-22"
@@ -67,8 +67,8 @@ Description: "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion"
 * category = $SCT#782964007 "Genetic disease"
 * code.coding[icd10-gm] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]"
 * code.coding[icd10-gm].version = "2024"
-* code.coding[orphanet] = http://www.orpha.net#83330 "Infantile spinale Muskelatrophie Typ I"
-* code.coding[sct] = $SCT#80854005 "Werdnig-Hoffmann disease"
+* code.coding[orphanet] = http://www.orpha.net#83330 "Proximal spinal muscular atrophy type 1"
+* code.coding[sct] = $SCT#64383006 "Werdnig-Hoffmann disease"
 * code.coding[omim] = http://omim.org#253300 "Spinal muscular atrophy, type I"
 * subject = Reference(patient-sma-001)
 * extension[+].url = $condition-assertedDate
@@ -91,10 +91,10 @@ Description: "Urgroßmutter mit unbekannter Muskelerkrankung"
 * status = #completed
 * patient = Reference(patient-sma-001)
 * date = "2024-07-22"
-* relationship = $SCT#113158007 "Great grandmother"
+* relationship = $SCT#78652007 "Great grandmother"
 * condition[+].code.coding[+] = $SCT#129565002 "Disorder of muscle"
 * condition[=].code.text = "Unbekannte Muskelerkrankung"
-* extension[vonSEBetroffen].valueCodeableConcept.coding = $ExpandedYesNoIndicator#ASKU "Unbekannt"
+* extension[vonSEBetroffen].valueCodeableConcept.coding = $ExpandedYesNoIndicator#ASKU "asked but unknown"
 
 // SMA Newborn Screening Result
 Instance: observation-sma-screening

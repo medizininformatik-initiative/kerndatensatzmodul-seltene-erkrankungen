@@ -88,8 +88,8 @@ Description: "Beispiel einer genetisch bestätigten Diagnose der spinalen Muskel
 // Multiple coding systems including OMIM
 * code.coding[icd10-gm] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]"
 * code.coding[icd10-gm].version = "2024"
-* code.coding[orphanet] = http://www.orpha.net#83330 "Infantile spinal muscular atrophy type I"
-* code.coding[sct] = $SCT#80854005 "Werdnig-Hoffmann disease"
+* code.coding[orphanet] = http://www.orpha.net#83330 "Proximal spinal muscular atrophy type 1"
+* code.coding[sct] = $SCT#64383006 "Werdnig-Hoffmann disease"
 * code.coding[omim][+] = http://omim.org#253300 "Spinal muscular atrophy, type I"
 * code.text = "Spinale Muskelatrophie Typ 1, genetisch bestätigt"
 * subject = Reference(Patient/example)
