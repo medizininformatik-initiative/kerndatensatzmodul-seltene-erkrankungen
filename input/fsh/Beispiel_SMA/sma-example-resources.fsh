@@ -22,7 +22,7 @@ Description: "Verdacht auf SMA beim Neugeborenenscreening"
 * category = $condition-category#encounter-diagnosis
 * code.text = "Verdacht auf Spinale Muskelatrophie"
 * code.coding[sct] = $SCT#80854005 "Werdnig-Hoffmann disease"
-* code.coding[hpo] = http://hpo.jax.org/app/#HP:0003813 "Motor neuron disease"
+* code.coding[hpo] = http://human-phenotype-ontology.org#HP:0003813 "Motor neuron disease"
 * subject = Reference(patient-sma-001)
 * extension[+].url = $mii-ex-diagnose-feststellungsdatum
 * extension[=].valueDateTime = "2024-07-18"
@@ -45,7 +45,7 @@ Description: "Klinische Diagnose SMA Typ 1 bei Erstvorstellung"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#83330 "Infantile spinale Muskelatrophie Typ I"
 * code.coding[sct] = $SCT#80854005 "Werdnig-Hoffmann disease"
-* code.coding[hpo] = http://hpo.jax.org/app/#HP:0003813 "Motor neuron disease"
+* code.coding[hpo] = http://human-phenotype-ontology.org#HP:0003813 "Motor neuron disease"
 * subject = Reference(patient-sma-001)
 * extension[+].url = $mii-ex-diagnose-feststellungsdatum
 * extension[=].valueDateTime = "2024-07-22"

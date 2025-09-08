@@ -44,24 +44,24 @@ Description: "Klinisch bestätigtes Marfan-Syndrom"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
 * code.coding[sct] = $SCT#19346006 "Marfan syndrome"
-* code.coding[hpo] = http://hpo.jax.org/app/#HP:0008138 "Marfan syndrome"
+* code.coding[hpo] = http://human-phenotype-ontology.org#HP:0008138 "Marfan syndrome"
 * code.text = "Marfan-Syndrom"
 * subject = Reference(patient-marfan-001)
 * extension[+].url = $mii-ex-diagnose-feststellungsdatum
 * extension[=].valueDateTime = "2024-12-15"
 * recordedDate = "2024-12-15"
 * encounter = Reference(encounter-cardiology)
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0002616 "Aortic root aneurysm"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0002616 "Aortic root aneurysm"
 * evidence[=].detail = Reference(Observation/symptom-aortic-root)
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0001659 "Aortic regurgitation"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0001659 "Aortic regurgitation"
 * evidence[=].detail = Reference(Observation/symptom-aortic-regurg)
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0001653 "Mitral regurgitation"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0001653 "Mitral regurgitation"
 * evidence[=].detail = Reference(Observation/symptom-mitral-regurg)
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0000098 "Tall stature"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0000098 "Tall stature"
 * evidence[=].detail = Reference(Observation/observation-height-001)
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0100559 "Lower limb asymmetry"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0100559 "Lower limb asymmetry"
 * evidence[=].detail = Reference(Observation/observation-leg-asymmetry)
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0100749 "Chest pain"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0100749 "Chest pain"
 * evidence[=].detail = Reference(Observation/symptom-chest-pain)
 * note.text = "Marfan-Syndrom klinisch diagnostiziert basierend auf kardialen Befunden, Skelettmerkmalen und ophthalmologischer Manifestation"
 
@@ -123,7 +123,7 @@ Description: "Beidseitige Katarakt bei Marfan-Syndrom"
 * code.coding[icd10-gm] = $ICD10GM#H26.9 "Katarakt, nicht näher bezeichnet"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[sct] = $SCT#193570009 "Cataract"
-* code.coding[hpo] = http://hpo.jax.org/app/#HP:0000518 "Cataract"
+* code.coding[hpo] = http://human-phenotype-ontology.org#HP:0000518 "Cataract"
 * code.text = "Katarakt bilateral"
 * subject = Reference(patient-marfan-001)
 * extension[+].url = $mii-ex-diagnose-feststellungsdatum
@@ -131,7 +131,7 @@ Description: "Beidseitige Katarakt bei Marfan-Syndrom"
 * recordedDate = "2024-10-15"
 * encounter = Reference(encounter-ophthalmology)
 * abatementDateTime = "2024-11-12"  // Resolved after surgery
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0000518 "Cataract"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0000518 "Cataract"
 * evidence[=].detail = Reference(Observation/symptom-cataract)
 * note.text = "Katarakt bilateral, operativ versorgt"
 
@@ -149,7 +149,7 @@ Description: "Pathologisch erhöhte Körpergröße bei Marfan-Syndrom"
 * valueQuantity = 213 'cm' "cm"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H "High"
 * bodySite = $SCT#38266002 "Entire body"
-* component[+].code = http://hpo.jax.org/app/#HP:0000098 "Tall stature"
+* component[+].code = http://human-phenotype-ontology.org#HP:0000098 "Tall stature"
 * component[=].valueString = "Pathologischer Hochwuchs >99. Perzentile"
 
 // Phenotypic Observations - Leg Length Discrepancy
@@ -166,7 +166,7 @@ Description: "Beinlängendifferenz mit rechts verkürztem Bein"
 * valueCodeableConcept = $SCT#7771000 "Left"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
 * bodySite = $SCT#30021000 "Lower limb structure"
-* component[+].code = http://hpo.jax.org/app/#HP:0100559 "Lower limb asymmetry"
+* component[+].code = http://human-phenotype-ontology.org#HP:0100559 "Lower limb asymmetry"
 * component[=].valueString = "Rechtes Bein verkürzt"
 
 // Symptom - Chest Pain
@@ -177,7 +177,7 @@ Title: "Thoraxschmerzen"
 Description: "Akute Thoraxschmerzen als Präsentationssymptom"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
-* code.coding[+] = http://hpo.jax.org/app/#HP:0100749 "Chest pain"
+* code.coding[+] = http://human-phenotype-ontology.org#HP:0100749 "Chest pain"
 * code.coding[+] = $SCT#29857009 "Chest pain"
 * code.text = "Thoraxschmerzen"
 * subject = Reference(patient-marfan-001)
@@ -193,7 +193,7 @@ Title: "Katarakt bilateral"
 Description: "Beidseitige Katarakt als ophthalmologische Manifestation"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
-* code.coding[+] = http://hpo.jax.org/app/#HP:0000518 "Cataract"
+* code.coding[+] = http://human-phenotype-ontology.org#HP:0000518 "Cataract"
 * code.coding[+] = $SCT#193570009 "Cataract"
 * code.text = "Katarakt bilateral"
 * subject = Reference(patient-marfan-001)
@@ -210,7 +210,7 @@ Title: "Aortenwurzeldilatation"
 Description: "Pathologisch erweiterte Aortenwurzel"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#imaging
-* code.coding[+] = http://hpo.jax.org/app/#HP:0002616 "Aortic root aneurysm"
+* code.coding[+] = http://human-phenotype-ontology.org#HP:0002616 "Aortic root aneurysm"
 * code.coding[+] = $SCT#60234000 "Aortic root dilatation"
 * code.text = "Aortenwurzeldilatation"
 * subject = Reference(patient-marfan-001)
@@ -229,7 +229,7 @@ Title: "Aortenklappeninsuffizienz"
 Description: "Moderate Aortenklappeninsuffizienz Grad II"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#imaging
-* code.coding[+] = http://hpo.jax.org/app/#HP:0001659 "Aortic regurgitation"
+* code.coding[+] = http://human-phenotype-ontology.org#HP:0001659 "Aortic regurgitation"
 * code.coding[+] = $SCT#60573004 "Aortic valve regurgitation"
 * code.text = "Aortenklappeninsuffizienz"
 * subject = Reference(patient-marfan-001)
@@ -246,7 +246,7 @@ Title: "Mitralklappeninsuffizienz"
 Description: "Milde Mitralklappeninsuffizienz Grad I"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#imaging
-* code.coding[+] = http://hpo.jax.org/app/#HP:0001653 "Mitral regurgitation"
+* code.coding[+] = http://human-phenotype-ontology.org#HP:0001653 "Mitral regurgitation"
 * code.coding[+] = $SCT#48724000 "Mitral valve regurgitation"
 * code.text = "Mitralklappeninsuffizienz"
 * subject = Reference(patient-marfan-001)

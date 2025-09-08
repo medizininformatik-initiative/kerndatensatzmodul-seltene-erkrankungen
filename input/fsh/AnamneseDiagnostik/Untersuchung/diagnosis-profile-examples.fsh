@@ -18,7 +18,7 @@ Description: "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend a
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
 * code.coding[sct] = $SCT#19346006 "Marfan syndrome"
-* code.coding[hpo][+] = http://hpo.jax.org/app/#HP:0008138 "Marfan syndrome"
+* code.coding[hpo][+] = http://human-phenotype-ontology.org#HP:0008138 "Marfan syndrome"
 * code.text = "Marfan-Syndrom, klinisch diagnostiziert"
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/cardiology-consultation)
@@ -26,16 +26,16 @@ Description: "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend a
 * extension[=].valueDateTime = "2024-12-15"
 * recordedDate = "2024-12-15"
 // Evidence linking to HPO-coded observations
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0002616 "Aortic root aneurysm"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0002616 "Aortic root aneurysm"
 * evidence[=].code.text = "Aortenwurzeldilatation"
 * evidence[=].detail = Reference(Observation/aortic-root-dilatation)
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0001083 "Ectopia lentis"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0001083 "Ectopia lentis"
 * evidence[=].code.text = "Linsenluxation"
 * evidence[=].detail = Reference(Observation/lens-dislocation)
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0000098 "Tall stature"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0000098 "Tall stature"
 * evidence[=].code.text = "Hochwuchs"
 * evidence[=].detail = Reference(Observation/tall-stature)
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0001166 "Arachnodactyly"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0001166 "Arachnodactyly"
 * evidence[=].code.text = "Arachnodaktylie"
 * evidence[=].detail = Reference(Observation/arachnodactyly)
 // Extensions
@@ -55,20 +55,20 @@ Description: "Beispiel einer klinischen Diagnose des Noonan-Syndroms"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#648 "Noonan syndrome"
 * code.coding[sct] = $SCT#268621008 "Noonan syndrome"
-* code.coding[hpo][+] = http://hpo.jax.org/app/#HP:0001631 "Noonan syndrome"
+* code.coding[hpo][+] = http://human-phenotype-ontology.org#HP:0001631 "Noonan syndrome"
 * code.text = "Noonan-Syndrom"
 * subject = Reference(Patient/example)
 * extension[+].url = $mii-ex-diagnose-feststellungsdatum
 * extension[=].valueDateTime = "2024-10-20"
 * recordedDate = "2024-10-20"
 // Phenotypic evidence
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0000316 "Hypertelorism"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0000316 "Hypertelorism"
 * evidence[=].detail = Reference(Observation/hypertelorism)
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0000463 "Anteverted nares"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0000463 "Anteverted nares"
 * evidence[=].detail = Reference(Observation/anteverted-nares)
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0001629 "Ventricular septal defect"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0001629 "Ventricular septal defect"
 * evidence[=].detail = Reference(Observation/vsd)
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0001004 "Lymphedema"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0001004 "Lymphedema"
 * evidence[=].detail = Reference(Observation/lymphedema)
 // Extensions for age of onset and inheritance pattern would go here if defined in profile
 
@@ -178,17 +178,17 @@ Description: "Initiale klinische Verdachtsdiagnose Mukoviszidose"
 * code.coding[icd10-gm] = $ICD10GM#E84.9 "Zystische Fibrose, nicht näher bezeichnet"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#586 "Cystic fibrosis"
-* code.coding[hpo][+] = http://hpo.jax.org/app/#HP:0100730 "Cystic fibrosis"
+* code.coding[hpo][+] = http://human-phenotype-ontology.org#HP:0100730 "Cystic fibrosis"
 * subject = Reference(Patient/example)
 * extension[+].url = $mii-ex-diagnose-feststellungsdatum
 * extension[=].valueDateTime = "2024-08-10"
 * recordedDate = "2024-08-10"
 // Clinical evidence
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0002099 "Asthma"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0002099 "Asthma"
 * evidence[=].detail = Reference(Observation/recurrent-respiratory-infections)
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0002028 "Chronic diarrhea"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0002028 "Chronic diarrhea"
 * evidence[=].detail = Reference(Observation/chronic-diarrhea)
-* evidence[+].code.coding = http://hpo.jax.org/app/#HP:0001508 "Failure to thrive"
+* evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0001508 "Failure to thrive"
 * evidence[=].detail = Reference(Observation/failure-to-thrive)
 // Age of onset extension would go here if defined in profile
 * note.text = "Schweißtest positiv (Chlorid 85 mmol/l). Klinisches Bild vereinbar mit CF. Genetische Testung veranlasst."

@@ -15,6 +15,20 @@
   "differential": {
     "element": [
       {
+        "id": "ServiceRequest.extension",
+        "path": "ServiceRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
         "id": "ServiceRequest.extension:statusReason",
         "path": "ServiceRequest.extension",
         "sliceName": "statusReason",
@@ -75,7 +89,7 @@
         "id": "ServiceRequest.status",
         "path": "ServiceRequest.status",
         "definition": "Status des Studieneinschlusses",
-        "comment": "\n    draft: Nicht umgesetzt, \n    active: In Umsetzung, \n    completed: Abgeschlossen oder abgebrochen (Patient verstorben)",
+        "comment": "\r\n    draft: Nicht umgesetzt, \r\n    active: In Umsetzung, \r\n    completed: Abgeschlossen oder abgebrochen (Patient verstorben)",
         "mustSupport": true
       },
       {

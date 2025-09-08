@@ -37,7 +37,7 @@ Description: "Profile for clinical diagnosis of rare diseases with HPO phenotype
 * code.coding contains
     hpo 0..* MS
 * code.coding[hpo] from mii-vs-se-hpo-phenotypic-observation-codes (required)
-* code.coding[hpo] ^patternCoding.system = "http://hpo.jax.org/app/"
+* code.coding[hpo] ^patternCoding.system = "http://human-phenotype-ontology.org"
 * code.coding[hpo] ^short = "HPO Phenotype code"
 * code.coding[hpo] ^definition = "Human Phenotype Ontology code describing the phenotypic manifestation of the rare disease"
 * code.coding[hpo].system 1.. MS

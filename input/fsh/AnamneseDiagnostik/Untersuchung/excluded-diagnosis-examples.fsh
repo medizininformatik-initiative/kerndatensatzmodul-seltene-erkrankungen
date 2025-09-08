@@ -17,7 +17,7 @@ Description: "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose"
 * code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
-* code.coding[hpo] = http://hpo.jax.org/app/#HP:0008138 "Marfan syndrome"
+* code.coding[hpo] = http://human-phenotype-ontology.org#HP:0008138 "Marfan syndrome"
 * code.text = "Marfan-Syndrom (ausgeschlossen)"
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/cardiology-consultation)

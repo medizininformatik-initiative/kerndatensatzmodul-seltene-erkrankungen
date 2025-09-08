@@ -27,19 +27,19 @@ Description: "Value set containing HPO terms for age of onset of diseases"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
-* include codes from system http://hpo.jax.org/app/ where concept is-a #HP:0003674 "Onset"
+* include codes from system http://human-phenotype-ontology.org where concept is-a #HP:0003674 "Onset"
 // Common age of onset codes
-* http://hpo.jax.org/app/#HP:0003577 "Congenital onset"
-* http://hpo.jax.org/app/#HP:0003593 "Infantile onset"
-* http://hpo.jax.org/app/#HP:0011463 "Childhood onset"
-* http://hpo.jax.org/app/#HP:0003621 "Juvenile onset"
-* http://hpo.jax.org/app/#HP:0003581 "Adult onset"
-* http://hpo.jax.org/app/#HP:0003584 "Late onset"
-* http://hpo.jax.org/app/#HP:0011462 "Young adult onset"
-* http://hpo.jax.org/app/#HP:0025708 "Middle age onset"
-* http://hpo.jax.org/app/#HP:0003596 "Neonatal onset"
-* http://hpo.jax.org/app/#HP:0034198 "Fetal onset"
-* http://hpo.jax.org/app/#HP:0034199 "Embryonal onset"
+* http://human-phenotype-ontology.org#HP:0003577 "Congenital onset"
+* http://human-phenotype-ontology.org#HP:0003593 "Infantile onset"
+* http://human-phenotype-ontology.org#HP:0011463 "Childhood onset"
+* http://human-phenotype-ontology.org#HP:0003621 "Juvenile onset"
+* http://human-phenotype-ontology.org#HP:0003581 "Adult onset"
+* http://human-phenotype-ontology.org#HP:0003584 "Late onset"
+* http://human-phenotype-ontology.org#HP:0011462 "Young adult onset"
+* http://human-phenotype-ontology.org#HP:0025708 "Middle age onset"
+* http://human-phenotype-ontology.org#HP:0003596 "Neonatal onset"
+* http://human-phenotype-ontology.org#HP:0034198 "Fetal onset"
+* http://human-phenotype-ontology.org#HP:0034199 "Embryonal onset"
 
 // HPO Inheritance Pattern Value Set
 ValueSet: HPOInheritancePatternValueSet
@@ -50,21 +50,21 @@ Description: "Value set containing HPO terms for modes of inheritance"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
-* include codes from system http://hpo.jax.org/app/ where concept is-a #HP:0000005 "Mode of inheritance"
+* include codes from system http://human-phenotype-ontology.org where concept is-a #HP:0000005 "Mode of inheritance"
 // Common inheritance patterns
-* http://hpo.jax.org/app/#HP:0000006 "Autosomal dominant inheritance"
-* http://hpo.jax.org/app/#HP:0000007 "Autosomal recessive inheritance"
-* http://hpo.jax.org/app/#HP:0001417 "X-linked inheritance"
-* http://hpo.jax.org/app/#HP:0001419 "X-linked recessive inheritance"
-* http://hpo.jax.org/app/#HP:0001423 "X-linked dominant inheritance"
-* http://hpo.jax.org/app/#HP:0001427 "Mitochondrial inheritance"
-* http://hpo.jax.org/app/#HP:0001428 "Somatic mutation"
-* http://hpo.jax.org/app/#HP:0003745 "Sporadic"
-* http://hpo.jax.org/app/#HP:0010983 "Oligogenic"
-* http://hpo.jax.org/app/#HP:0010982 "Polygenic"
-* http://hpo.jax.org/app/#HP:0001426 "Multifactorial inheritance"
-* http://hpo.jax.org/app/#HP:0012275 "Autosomal dominant inheritance with maternal imprinting"
-* http://hpo.jax.org/app/#HP:0012274 "Autosomal dominant inheritance with paternal imprinting"
+* http://human-phenotype-ontology.org#HP:0000006 "Autosomal dominant inheritance"
+* http://human-phenotype-ontology.org#HP:0000007 "Autosomal recessive inheritance"
+* http://human-phenotype-ontology.org#HP:0001417 "X-linked inheritance"
+* http://human-phenotype-ontology.org#HP:0001419 "X-linked recessive inheritance"
+* http://human-phenotype-ontology.org#HP:0001423 "X-linked dominant inheritance"
+* http://human-phenotype-ontology.org#HP:0001427 "Mitochondrial inheritance"
+* http://human-phenotype-ontology.org#HP:0001428 "Somatic mutation"
+* http://human-phenotype-ontology.org#HP:0003745 "Sporadic"
+* http://human-phenotype-ontology.org#HP:0010983 "Oligogenic"
+* http://human-phenotype-ontology.org#HP:0010982 "Polygenic"
+* http://human-phenotype-ontology.org#HP:0001426 "Multifactorial inheritance"
+* http://human-phenotype-ontology.org#HP:0012275 "Autosomal dominant inheritance with maternal imprinting"
+* http://human-phenotype-ontology.org#HP:0012274 "Autosomal dominant inheritance with paternal imprinting"
 
 // Genetic Basis Value Set
 ValueSet: GeneticBasisValueSet
@@ -94,7 +94,7 @@ Description: "Value set for qualitative descriptions of genetic penetrance"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
-* http://hpo.jax.org/app/#HP:0003829 "Incomplete penetrance"
-* http://hpo.jax.org/app/#HP:0003828 "Variable penetrance"
-* http://hpo.jax.org/app/#HP:0025169 "Complete penetrance"
-* http://hpo.jax.org/app/#HP:0003831 "Age-dependent penetrance"
+* http://human-phenotype-ontology.org#HP:0003829 "Incomplete penetrance"
+* http://human-phenotype-ontology.org#HP:0003828 "Variable penetrance"
+* http://human-phenotype-ontology.org#HP:0025169 "Complete penetrance"
+* http://human-phenotype-ontology.org#HP:0003831 "Age-dependent penetrance"
