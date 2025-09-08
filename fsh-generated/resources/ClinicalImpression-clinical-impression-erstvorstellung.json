@@ -1,6 +1,11 @@
 {
   "resourceType": "ClinicalImpression",
   "id": "clinical-impression-erstvorstellung",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-impression"
+    ]
+  },
   "status": "completed",
   "subject": {
     "reference": "Patient/patient-sma-001"

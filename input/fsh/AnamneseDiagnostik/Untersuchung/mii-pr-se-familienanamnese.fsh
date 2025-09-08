@@ -12,7 +12,15 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * extension contains VonSEBetroffen named vonSEBetroffen 1..1 MS
 * extension[vonSEBetroffen] ^short = "Gibt an, ob das Familienmitglied von der gleichen seltenen Erkrankung betroffen ist"
 * extension[vonSEBetroffen] ^definition = "Extension zur Angabe, ob ein Familienmitglied von der gleichen seltenen Erkrankung betroffen ist wie der Patient"
-
+* status MS
+* patient MS
+* date MS
+* relationship MS
+* sex MS
+* reasonCode MS
+* condition MS
+* born[x] 0..1 MS
+* deceased[x] 0..1 MS
 /*
 Profile: MII_PR_MolGen_Familienanamnese
 Parent: FamilyMemberHistory

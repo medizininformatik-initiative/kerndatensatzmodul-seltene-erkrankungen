@@ -5,7 +5,6 @@ Title:       "Body Mass Index (BMI) of the patient"
 Description: "Describes the Body Mass Index (BMI) of the patient."
 
 * status MS
-* status = #draft
 
 * category MS
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category" (exactly)
@@ -29,6 +28,15 @@ InstanceOf: MII_PR_SE_Bodymassindex
 Usage: #example
 Title: "Body Mass Index (BMI) Example"
 Description: "Example of a Body Mass Index (BMI) observation for a patient."
+* status = #final
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* category.coding.display = "Vital Signs"
+* code = http://loinc.org#39156-5 "Body mass index (BMI) [Ratio]"
+* subject = Reference(Patient/example)
+* subject.display = "Example Patient"
+* effectiveDateTime = "2024-08-08T10:00:00+02:00"
 * valueQuantity.value = 22.5
-* effectiveDateTime = "1980-08-08"
-* status = #draft
+* valueQuantity.unit = "kg/m2"
+* valueQuantity.system = $UCUM
+* valueQuantity.code = #kg/m2

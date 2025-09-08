@@ -17,7 +17,6 @@ Description: "Profile for HPO-based phenotypic observations in the context of ra
 * subject ^short = "Patient mit der phänotypischen Anomalie"
 
 * status MS
-* status = #final
 
 * encounter MS
 * encounter ^short = "Gesundheitskontakt, bei dem der Phänotyp beobachtet wurde"

@@ -11,7 +11,7 @@
         "id": "patient-sma-001",
         "identifier": [
           {
-            "system": "http://example.org/patient-id",
+            "system": "https://www.medizininformatik-initiative.de/fhir/sid/patient-id",
             "value": "SMA-2024-001"
           }
         ],
@@ -1121,6 +1121,11 @@
       "resource": {
         "resourceType": "ClinicalImpression",
         "id": "clinical-impression-erstvorstellung",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-impression"
+          ]
+        },
         "status": "completed",
         "subject": {
           "reference": "Patient/patient-sma-001"
@@ -1217,6 +1222,11 @@
       "resource": {
         "resourceType": "ClinicalImpression",
         "id": "clinical-impression-nachsorge",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-impression"
+          ]
+        },
         "status": "completed",
         "subject": {
           "reference": "Patient/patient-sma-001"

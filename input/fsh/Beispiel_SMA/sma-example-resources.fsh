@@ -6,7 +6,7 @@ InstanceOf: Patient
 Usage: #example
 Title: "SMA Patient - Neugeborenes Mädchen"
 Description: "Neugeborenes Mädchen mit bestätigter SMA Typ 1"
-* identifier.system = "http://example.org/patient-id"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/patient-id"
 * identifier.value = "SMA-2024-001"
 * gender = #female
 * birthDate = "2024-07-01"  // Approximated - born in early July 2024
@@ -276,7 +276,7 @@ Description: "Troponin T hochsensitiv bei Nachsorge"
 
 // Clinical Impression - Erstvorstellung
 Instance: clinical-impression-erstvorstellung
-InstanceOf: ClinicalImpression
+InstanceOf: MII_PR_SE_ClinicalImpression
 Usage: #example
 Title: "Klinische Beurteilung - Erstvorstellung"
 Description: "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum"
@@ -302,7 +302,7 @@ Description: "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum"
 
 // Clinical Impression - Nachsorge
 Instance: clinical-impression-nachsorge
-InstanceOf: ClinicalImpression
+InstanceOf: MII_PR_SE_ClinicalImpression
 Usage: #example
 Title: "Klinische Beurteilung - Nachsorge"
 Description: "Nachsorgeuntersuchung nach Gentherapie"

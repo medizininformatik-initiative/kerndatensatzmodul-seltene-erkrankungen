@@ -6,7 +6,7 @@ InstanceOf: Patient
 Usage: #example
 Title: "Marfan Patient - 19-jähriger Mann"
 Description: "19-jähriger männlicher Patient mit bestätigtem Marfan-Syndrom"
-* identifier.system = "http://example.org/patient-id"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/patient-id"
 * identifier.value = "MRF-2024-001"
 * gender = #male
 * birthDate = "2005-01-01"  // Approximated - 19 years old in 2024
@@ -356,7 +356,7 @@ Description: "Losartan zur Progressionshemmung der Aortenwurzeldilatation"
 
 // Clinical Impression - Cardiology Referral from SE
 Instance: clinical-impression-se-assessment
-InstanceOf: ClinicalImpression
+InstanceOf: MII_PR_SE_ClinicalImpression
 Usage: #example
 Title: "Konsultation ZSE bei V.a. Marfan-Syndrom"
 Description: "Konsultation im Zentrum für Seltene Erkrankungen mit kardiologischer Mitbeurteilung bei V.a. Marfan-Syndrom"

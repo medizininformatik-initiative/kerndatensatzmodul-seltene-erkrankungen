@@ -1,6 +1,11 @@
 {
   "resourceType": "ClinicalImpression",
   "id": "clinical-impression-se-assessment",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-impression"
+    ]
+  },
   "status": "completed",
   "subject": {
     "reference": "Patient/patient-marfan-001"
