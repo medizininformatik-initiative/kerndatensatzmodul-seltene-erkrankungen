@@ -1,8 +1,14 @@
 ## {{page-title}}
 
+> **Hinweis zum BfArM Terminologieserver:** Die nachfolgend beschriebenen Kodesysteme ICD-10-GM, Orpha und Alpha-ID-SE können über den [Terminologieserver des BfArM](https://www.bfarm.de/DE/Kodiersysteme/Terminologieserver/_node.html) abgerufen und in FHIR-basierten Systemen genutzt werden. Der Server stellt diese Terminologien als FHIR-konforme CodeSystem- und ValueSet-Ressourcen zur Verfügung.
+
 # ICD-10-GM <a href="https://www.bfarm.de/DE/Kodiersysteme/Klassifikationen/ICD/ICD-10-GM/_node.html" target="_blank">(Internationale statistische Klassifikation der Krankheiten und verwandter Gesundheitsprobleme - German Modification)</a>
 
 **ICD-10-GM** ist die deutsche Modifikation der internationalen Diagnosenklassifikation ICD-10 der WHO. Sie dient als gesetzlich vorgeschriebene Klassifikation zur Verschlüsselung von Diagnosen in der ambulanten und stationären Versorgung in Deutschland. Die ICD-10-GM wird jährlich vom BfArM (Bundesinstitut für Arzneimittel und Medizinprodukte) aktualisiert und an die Bedürfnisse des deutschen Gesundheitswesens angepasst. Für Seltene Erkrankungen enthält die ICD-10-GM spezifische Codes, wobei viele seltene Erkrankungen unter Sammelcodes gruppiert werden (z.B. Q87.4 für Marfan-Syndrom).
+
+**BfArM-Ressourcen:**
+- [ICD-10-GM Übersicht](https://www.bfarm.de/DE/Kodiersysteme/Klassifikationen/ICD/ICD-10-GM/_node.html)
+- [ICD-10-GM Download](https://www.bfarm.de/DE/Kodiersysteme/Klassifikationen/ICD/ICD-10-GM/Download/_node.html)
 
 # Orpha <a href="https://www.orpha.net" target="_blank">(Orphanet Nomenklatur der Seltenen Krankheiten)</a>
 
@@ -11,6 +17,10 @@
 Beispiele:
 - Orpha:558 - Marfan-Syndrom
 - Orpha:83330 - Spinale Muskelatrophie Typ 1
+
+**BfArM-Ressourcen:**
+- [Orpha-Kodiersystem beim BfArM](https://www.bfarm.de/DE/Kodiersysteme/Kooperationen-und-Projekte/Orphanet/_node.html)
+- [Orphanet Deutschland](https://www.orpha.net/consor/cgi-bin/index.php?lng=DE)
 
 # Alpha-ID-SE <a href="https://www.bfarm.de/DE/Kodiersysteme/Terminologien/Alpha-ID-SE/_node.html" target="_blank">(Alpha-ID für Seltene Erkrankungen)</a>
 
@@ -21,6 +31,11 @@ Die Alpha-ID-SE wird insbesondere in folgenden Bereichen eingesetzt:
 - Register für Seltene Erkrankungen
 - Medizininformatik-Initiative
 - Versorgungsforschung
+
+**BfArM-Ressourcen:**
+- [Alpha-ID-SE Übersicht](https://www.bfarm.de/DE/Kodiersysteme/Terminologien/Alpha-ID-SE/_node.html)
+- [Alpha-ID-SE Download](https://www.bfarm.de/DE/Kodiersysteme/Terminologien/Alpha-ID-SE/Download/_node.html)
+- [Alpha-ID Terminologie](https://www.bfarm.de/DE/Kodiersysteme/Terminologien/Alpha-ID/_node.html)
 
 # HPO <a href="https://hpo.jax.org" target="_blank">(Human Phenotype Ontology)</a> 
 
