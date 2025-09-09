@@ -222,13 +222,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 
 ### Gesamtübersicht aller Ressourcen und Beziehungen
 
-<style>
-      img {
-      max-width:100%;
-      height: auto;
-      }
-</style>
-<img decoding="async" src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/bcc9730e716312f23097767ab6d26c285a1245c8/implementation-guides/ImplementationGuide-2026.x-DE/Images/Marfan_Case_Resources_Diagram.svg" alt="Marfan" title="Marfan">
+<img style="width:100%; height:auto;" decoding="async" src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/bcc9730e716312f23097767ab6d26c285a1245c8/implementation-guides/ImplementationGuide-2026.x-DE/Images/Marfan_Case_Resources_Diagram.svg" alt="Marfan" title="Marfan">
 
 &nbsp;
 
