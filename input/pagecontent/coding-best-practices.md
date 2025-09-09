@@ -61,8 +61,8 @@ Instance: marfan-clinical-focused
 InstanceOf: MII_PR_SE_ClinicalDiagnosis
 * code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
 * code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
-* code.coding[hpo] = http://hpo.jax.org/app/#HP:0008138 "Marfan syndrome"
-// OMIM weggelassen - keine genetische Bestätigung
+* code.coding[omim] = http://omim.org#154700 "Marfan syndrome"
+// OMIM für genetische Kodierung verwendet
 ```
 
 #### Genetische Diagnose (ICD-10-GM optional)
@@ -94,9 +94,8 @@ InstanceOf: Condition
 * code.coding[1] = http://www.orpha.net#558 "Marfan syndrome"
 * code.coding[2] = $SCT#19346006 "Marfan syndrome"
 * code.coding[3] = http://omim.org#154700 "Marfan syndrome"
-* code.coding[4] = http://hpo.jax.org/app/#HP:0008138 "Marfan syndrome"
-* code.coding[5] = $UMLS#C0024796 "Marfan Syndrome"
-* code.coding[6] = $MeSH#D008382 "Marfan Syndrome"
+* code.coding[4] = $UMLS#C0024796 "Marfan Syndrome"
+* code.coding[5] = $MeSH#D008382 "Marfan Syndrome"
 // Zu viele redundante Codes!
 ```
 

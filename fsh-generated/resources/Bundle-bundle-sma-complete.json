@@ -314,7 +314,7 @@
                   {
                     "code": "405824009",
                     "system": "http://snomed.info/sct",
-                    "display": "Genetic test finding"
+                    "display": "Genetic test"
                   }
                 ]
               }
@@ -720,7 +720,7 @@
             {
               "code": "788110002",
               "system": "http://snomed.info/sct",
-              "display": "Gene therapy"
+              "display": "Onasemnogene abeparvovec"
             }
           ],
           "text": "Gentherapie mit Onasemnogene abeparvovec (Zolgensma)"
@@ -1151,9 +1151,9 @@
             "itemCodeableConcept": {
               "coding": [
                 {
-                  "code": "442753009",
+                  "code": "1363512008",
                   "system": "http://snomed.info/sct",
-                  "display": "Troponin T above reference range"
+                  "display": "Troponin above reference range"
                 }
               ]
             },
@@ -1237,9 +1237,9 @@
             "itemCodeableConcept": {
               "coding": [
                 {
-                  "code": "442753009",
+                  "code": "1363512008",
                   "system": "http://snomed.info/sct",
-                  "display": "Troponin T above reference range"
+                  "display": "Troponin above reference range"
                 }
               ]
             },
@@ -1252,13 +1252,25 @@
             "itemCodeableConcept": {
               "coding": [
                 {
-                  "code": "409613000",
+                  "code": "166645004",
                   "system": "http://snomed.info/sct",
-                  "display": "Aminotransferase normal"
+                  "display": "Alanine aminotransferase level within reference range"
                 }
               ]
             },
-            "basis": "ALT und AST normwertig"
+            "basis": "ALT normwertig"
+          },
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "code": "166667003",
+                  "system": "http://snomed.info/sct",
+                  "display": "Aspartate aminotransferase/serum glutamic oxaloacetic transaminase level within reference range"
+                }
+              ]
+            },
+            "basis": "AST normwertig"
           },
           {
             "itemCodeableConcept": {
@@ -1321,9 +1333,9 @@
           {
             "coding": [
               {
-                "code": "171228006",
+                "code": "60151004",
                 "system": "http://snomed.info/sct",
-                "display": "Newborn screening"
+                "display": "Neonatal screening (procedure)"
               }
             ]
           }

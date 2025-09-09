@@ -32,7 +32,7 @@ InstanceOf: MII_PR_SE_ClinicalDiagnosis
 * category[clinical] = $SCT#47367009 "Syndrome"
 * code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
 * code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
-* code.coding[hpo] = http://hpo.jax.org/app/#HP:0008138 "Marfan syndrome"
+* code.coding[omim] = http://omim.org#154700 "Marfan syndrome"
 * evidence[+].detail = Reference(observation-aortic-dilatation)  // HPO: HP:0002616
 * evidence[+].detail = Reference(observation-lens-dislocation)   // HPO: HP:0001083
 * evidence[+].detail = Reference(observation-tall-stature)       // HPO: HP:0000098

@@ -78,7 +78,7 @@ Description: "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion"
 * evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail[+] = Reference(Observation/variant-smn1-001)
 * evidence[=].detail[+] = Reference(Observation/variant-smn2-001)
-* evidence[+].code = $SCT#405824009 "Genetic test finding"
+* evidence[+].code = $SCT#405824009 "Genetic test"
 * evidence[=].detail = Reference(DiagnosticReport/molgen-diagnostic-implication-sma)
 * note.text = "0 Kopien des SMN1-Gens, 2 Kopien des SMN2-Gens - krankheitsursächlich. Genetische Diagnose existiert parallel zur klinischen Diagnose."
 
@@ -171,7 +171,7 @@ Description: "Verabreichung des Gentherapeutikums für SMA"
 * status = #completed
 * category = http://snomed.info/sct#277132007 "Therapeutic procedure"
 * code.coding[+] = http://fdasis.nlm.nih.gov#MLU3LU3EVV "ONASEMNOGENE ABEPARVOVEC"
-* code.coding[+] = $SCT#788110002  "Gene therapy"
+* code.coding[+] = $SCT#788110002  "Onasemnogene abeparvovec"
 * code.text = "Gentherapie mit Onasemnogene abeparvovec (Zolgensma)"
 * subject = Reference(patient-sma-001)
 * performedDateTime = "2024-07-29"
@@ -290,7 +290,7 @@ Description: "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum"
 * problem[+] = Reference(condition-sma-suspected)  // Reason for assessment (suspected diagnosis)
 * finding[+].itemReference = Reference(condition-sma-clinical)  // Clinical diagnosis as finding
 * finding[+].itemReference = Reference(condition-sma-genetic)  // Genetic diagnosis as finding
-* finding[+].itemCodeableConcept = $SCT#442753009 "Troponin T above reference range"
+* finding[+].itemCodeableConcept = $SCT#1363512008 "Troponin above reference range"
 * finding[=].itemReference = Reference(observation-troponin-001)
 * investigation[+].code.text = "Familienanamnese"
 * investigation[=].item = Reference(family-history-001)
@@ -314,11 +314,13 @@ Description: "Nachsorgeuntersuchung nach Gentherapie"
 // * assessor = Reference(Practitioner/example) // Optional field, not required in MII
 * previous = Reference(clinical-impression-erstvorstellung)
 * summary = "Erste Nachsorge 14 Tage nach Gentherapie. Klinisch stabil. Troponin T weiter erhöht (106 ng/l), war jedoch bereits prätherapeutisch erhöht."
-* finding[+].itemCodeableConcept = $SCT#442753009 "Troponin T above reference range"
+* finding[+].itemCodeableConcept = $SCT#1363512008 "Troponin above reference range"
 * finding[=].itemReference = Reference(observation-troponin-004)
 * finding[=].basis = "Troponin-Verlauf: 22.07: 92 ng/l, 28.07: 58 ng/l, 01.08: 57 ng/l, 12.08: 106 ng/l"
-* finding[+].itemCodeableConcept = $SCT#409613000 "Aminotransferase normal"
-* finding[=].basis = "ALT und AST normwertig"
+* finding[+].itemCodeableConcept = $SCT#166645004 "Alanine aminotransferase level within reference range"
+* finding[=].basis = "ALT normwertig"
+* finding[+].itemCodeableConcept = $SCT#166667003 "Aspartate aminotransferase/serum glutamic oxaloacetic transaminase level within reference range"
+* finding[=].basis = "AST normwertig"
 * finding[+].itemCodeableConcept = $SCT#165555003 "Platelet count normal"
 * finding[=].basis = "Thrombozytenzahl normwertig"
 * problem[+] = Reference(Condition/condition-sma-clinical)
@@ -335,7 +337,7 @@ Title: "Neugeborenenscreening"
 Description: "Neugeborenenscreening mit SMA-Verdacht"
 * status = #finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
-* type = $SCT#171228006 "Newborn screening"
+* type = $SCT#60151004 "Neonatal screening (procedure)"
 * subject = Reference(patient-sma-001)
 * period.start = "2024-07-18"
 * period.end = "2024-07-18"

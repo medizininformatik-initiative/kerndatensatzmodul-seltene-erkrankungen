@@ -24,9 +24,9 @@
       "itemCodeableConcept": {
         "coding": [
           {
-            "code": "442753009",
+            "code": "1363512008",
             "system": "http://snomed.info/sct",
-            "display": "Troponin T above reference range"
+            "display": "Troponin above reference range"
           }
         ]
       },
@@ -39,13 +39,25 @@
       "itemCodeableConcept": {
         "coding": [
           {
-            "code": "409613000",
+            "code": "166645004",
             "system": "http://snomed.info/sct",
-            "display": "Aminotransferase normal"
+            "display": "Alanine aminotransferase level within reference range"
           }
         ]
       },
-      "basis": "ALT und AST normwertig"
+      "basis": "ALT normwertig"
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "166667003",
+            "system": "http://snomed.info/sct",
+            "display": "Aspartate aminotransferase/serum glutamic oxaloacetic transaminase level within reference range"
+          }
+        ]
+      },
+      "basis": "AST normwertig"
     },
     {
       "itemCodeableConcept": {

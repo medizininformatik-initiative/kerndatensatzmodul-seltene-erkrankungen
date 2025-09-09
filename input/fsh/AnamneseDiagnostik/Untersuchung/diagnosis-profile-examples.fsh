@@ -18,7 +18,7 @@ Description: "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend a
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
 * code.coding[sct] = $SCT#19346006 "Marfan syndrome"
-* code.coding[hpo][+] = http://human-phenotype-ontology.org#HP:0008138 "Marfan syndrome"
+* code.coding[omim][+] = http://omim.org#154700 "Marfan syndrome"
 * code.text = "Marfan-Syndrom, klinisch diagnostiziert"
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/cardiology-consultation)
@@ -101,7 +101,7 @@ Description: "Beispiel einer genetisch bestätigten Diagnose der spinalen Muskel
 // Genetic evidence linking to MolGen resources
 * evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/molgen-variant-smn1-deletion) // MolGen Variante
-* evidence[+].code = $SCT#405824009 "Genetic test finding"
+* evidence[+].code = $SCT#405824009 "Genetic test"
 * evidence[=].detail = Reference(DiagnosticReport/molgen-diagnostic-implication-sma) // MolGen DiagnostischeImplikation
 // Extensions for genetic information
 // Genetic extensions would go here if defined in profile
@@ -129,7 +129,7 @@ Description: "Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie"
 // Link to MolGen resources
 * evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/molgen-variant-dmd-deletion-exon45-47)
-* evidence[+].code = $SCT#405824009 "Genetic test finding"
+* evidence[+].code = $SCT#405824009 "Genetic test"
 * evidence[=].detail = Reference(DiagnosticReport/molgen-diagnostic-dmd)
 // Genetic characteristics
 // Genetic extensions would go here if defined in profile
@@ -156,7 +156,7 @@ Description: "Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom"
 // Genetic evidence
 * evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/molgen-variant-brca1-pathogenic)
-* evidence[+].code = $SCT#405824009 "Genetic test finding"
+* evidence[+].code = $SCT#405824009 "Genetic test"
 * evidence[=].detail = Reference(DiagnosticReport/molgen-brca-panel)
 // Genetic details
 // Genetic extensions would go here if defined in profile
@@ -215,7 +215,7 @@ Description: "Genetisch bestätigte Mukoviszidose"
 // Genetic evidence
 * evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/molgen-variant-cftr-f508del-homozygous)
-* evidence[+].code = $SCT#405824009 "Genetic test finding"
+* evidence[+].code = $SCT#405824009 "Genetic test"
 * evidence[=].detail = Reference(DiagnosticReport/molgen-cf-diagnostic)
 // Genetic characteristics
 // Genetic extensions would go here if defined in profile

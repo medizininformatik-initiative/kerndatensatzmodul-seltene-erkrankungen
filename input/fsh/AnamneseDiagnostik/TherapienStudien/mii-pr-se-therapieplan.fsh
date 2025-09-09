@@ -101,6 +101,4 @@ Description: "Example of a Therapieplan for a patient."
 * subject = Reference(Patient/example-patient)
 * intent = #proposal
 * activity[MII_PR_SE_Therapieempfehlung].reference = Reference(MedicationRequest/example-therapieempfehlung)
-* activity[MII_PR_SE_Therapieempfehlung].detail.status = #created
-* activity[MII_PR_SE_Therapieempfehlung].detail.statusReason = #empfehlung
 * activity[Studieneinschlussempfehlung].reference = Reference(ServiceRequest/example-studieneinschluss)

@@ -17,7 +17,7 @@ Description: "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose"
 * code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
-* code.coding[hpo] = http://human-phenotype-ontology.org#HP:0008138 "Marfan syndrome"
+* code.coding[omim] = http://omim.org#154700 "Marfan syndrome"
 * code.text = "Marfan-Syndrom (ausgeschlossen)"
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/cardiology-consultation)
@@ -78,7 +78,7 @@ Description: "Spinale Muskelatrophie genetisch ausgeschlossen"
 // Genetic evidence showing normal results
 * evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/molgen-smn1-normal-copies)
-* evidence[+].code = $SCT#405824009 "Genetic test finding"
+* evidence[+].code = $SCT#405824009 "Genetic test"
 * evidence[=].detail = Reference(DiagnosticReport/molgen-sma-negative)
 * note.text = "SMN1-Gen: 2 Kopien nachgewiesen (Normalbefund). SMN2-Gen: 2 Kopien. SMA genetisch ausgeschlossen."
 

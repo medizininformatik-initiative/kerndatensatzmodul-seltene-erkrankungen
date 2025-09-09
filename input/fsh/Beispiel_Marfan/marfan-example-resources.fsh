@@ -44,7 +44,7 @@ Description: "Klinisch bestätigtes Marfan-Syndrom"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
 * code.coding[sct] = $SCT#19346006 "Marfan syndrome"
-* code.coding[hpo] = http://human-phenotype-ontology.org#HP:0008138 "Marfan syndrome"
+* code.coding[omim] = http://omim.org#154700 "Marfan syndrome"
 * code.text = "Marfan-Syndrom"
 * subject = Reference(patient-marfan-001)
 * extension[+].url = $condition-assertedDate
