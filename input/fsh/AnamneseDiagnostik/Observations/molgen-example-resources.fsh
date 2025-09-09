@@ -34,7 +34,7 @@ Usage: #example
 Title: "SMA Diagnostische Implikation - MolGen"
 Description: "Diagnostischer Bericht zur SMA-Genetik"
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#GEN "Genetics"
+* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * code = $LNC#51969-4 "Genetic analysis report"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-07-26"
@@ -76,7 +76,7 @@ Usage: #example
 Title: "DMD Diagnostische Implikation"
 Description: "Diagnostischer Bericht Duchenne-Muskeldystrophie"
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#GEN "Genetics"
+* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * code = $LNC#51969-4 "Genetic analysis report"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-09-15"
@@ -120,8 +120,8 @@ Usage: #example
 Title: "BRCA1/2 Panel - Diagnostische Implikation"
 Description: "Hereditäres Karzinom-Panel"
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#GEN "Genetics"
-* code = $LNC#94050-9 "BRCA1 and BRCA2 genes panel"
+* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
+* code = $LNC#81247-9 "Master HL7 genetic variant reporting panel"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-11-01"
 * result[+] = Reference(molgen-variant-brca1-pathogenic)
@@ -164,7 +164,7 @@ Usage: #example
 Title: "CF Diagnostische Implikation - MolGen"
 Description: "Mukoviszidose genetischer Befund"
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#GEN "Genetics"
+* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * code = $LNC#51969-4 "Genetic analysis report"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-08-25"

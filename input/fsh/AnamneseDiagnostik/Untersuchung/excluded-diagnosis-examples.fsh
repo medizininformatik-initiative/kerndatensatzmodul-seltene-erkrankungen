@@ -203,7 +203,7 @@ Usage: #example
 Title: "SMA Genetik - Negativbefund"
 Description: "Genetischer Test schließt SMA aus"
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#GEN "Genetics"
+* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * code = $LNC#51969-4 "Genetic analysis report"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-07-26"
