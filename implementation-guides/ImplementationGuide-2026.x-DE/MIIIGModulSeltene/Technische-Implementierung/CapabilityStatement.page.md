@@ -1,6 +1,10 @@
-## CapabilityStatement
+## {{page-title}}
 
-Das [CapabilityStatement](https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata) definiert die erwarteten Fähigkeiten eines konformen Systems zur Implementierung des Kerndatensatzmoduls Seltene Erkrankungen der Medizininformatik-Initiative.
+Das CapabilityStatement definiert die erwarteten Fähigkeiten eines konformen Systems zur Implementierung des Kerndatensatzmoduls Seltene Erkrankungen der Medizininformatik-Initiative.
+
+Canonical: ```https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata```
+
+[Link Simplifier Profil Übersicht](https://simplifier.net/resolve?canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata&fhirVersion=R4&scope=de.medizininformatikinitiative.kerndatensatz.seltene@2026.0.0-ballot)
 
 Es beschreibt die verpflichtenden Interaktionen, die ein konformes System unterstützen MUSS, einschließlich:
 
@@ -43,6 +47,4 @@ Systeme, die Konformität zu diesem Modul beanspruchen, MÜSSEN:
 
 ### Vollständiges CapabilityStatement
 
-Das vollständige CapabilityStatement mit allen technischen Details kann hier eingesehen werden:
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata, buttons}}
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata}}
