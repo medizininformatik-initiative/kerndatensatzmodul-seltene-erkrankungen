@@ -143,9 +143,9 @@ Description: "Metabolische Myopathie als Differentialdiagnose ausgeschlossen"
 * clinicalStatus = $condition-clinical#inactive
 * verificationStatus = $condition-ver-status#refuted
 * category = $condition-category#encounter-diagnosis
-* code.coding[icd10-gm] = $ICD10GM#G71.3 "Mitochondriale Myopathie"
+* code.coding[icd10-gm] = $ICD10GM#G71.3 "Mitochondriale Myopathie, anderenorts nicht klassifiziert"
 * code.coding[icd10-gm].version = "2024"
-* code.coding[orphanet] = http://www.orpha.net#206966 "Metabolic myopathy"
+* code.coding[orphanet] = http://www.orpha.net#206966 "Mitochondrial myopathy"
 * code.text = "Metabolische Myopathie (ausgeschlossen)"
 * subject = Reference(Patient/example)
 * extension[+].url = $condition-assertedDate

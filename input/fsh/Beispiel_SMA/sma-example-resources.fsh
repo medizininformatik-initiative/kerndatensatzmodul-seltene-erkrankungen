@@ -132,7 +132,7 @@ Description: "0 Kopien des SMN1-Gens nachgewiesen"
 * effectiveDateTime = "2024-07-26"
 * valueCodeableConcept = $SCT#10828004 "Positive"
 * component[+].code = $LNC#48018-6 "Gene studied [ID]"
-* component[=].valueCodeableConcept.coding[+] = http://www.genenames.org/geneId#11117 "SMN1"
+* component[=].valueCodeableConcept.coding[+] = http://www.genenames.org/geneId#HGNC:11117 "SMN1"
 * component[+].code = $LNC#62374-4 "Human reference sequence assembly version"
 * component[=].valueCodeableConcept.text = "GRCh38"
 * component[+].code = $LNC#53034-5

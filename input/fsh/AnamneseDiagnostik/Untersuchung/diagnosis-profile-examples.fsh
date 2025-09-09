@@ -54,8 +54,7 @@ Description: "Beispiel einer klinischen Diagnose des Noonan-Syndroms"
 * code.coding[icd10-gm] = $ICD10GM#Q87.1 "Angeborene Fehlbildungssyndrome, die vorwiegend mit Kleinwuchs einhergehen"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#648 "Noonan syndrome"
-* code.coding[sct] = $SCT#268621008 "Noonan syndrome"
-* code.coding[hpo][+] = http://human-phenotype-ontology.org#HP:0001631 "Noonan syndrome"
+* code.coding[sct] = $SCT#205824006 "Noonan syndrome"
 * code.text = "Noonan-Syndrom"
 * subject = Reference(Patient/example)
 * extension[+].url = $condition-assertedDate
@@ -146,7 +145,7 @@ Description: "Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom"
 * code.coding[icd10-gm] = $ICD10GM#Z80.3 "Bösartige Neubildung der Brustdrüse [Mamma] in der Familienanamnese"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#145 "Hereditary breast and/or ovarian cancer syndrome"
-* code.coding[sct] = $SCT#718220008 "Hereditary breast and/or ovarian cancer syndrome"
+* code.coding[sct] = $SCT#718220008 "Hereditary breast and ovarian cancer syndrome"
 * code.coding[+] = http://omim.org#604370 "Breast-ovarian cancer, familial, 1"
 * code.text = "Hereditäres Mamma- und Ovarialkarzinom-Syndrom (BRCA1)"
 * subject = Reference(Patient/example)
