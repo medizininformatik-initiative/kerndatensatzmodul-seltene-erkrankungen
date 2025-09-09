@@ -119,6 +119,49 @@
         }
       },
       {
+        "id": "Observation.interpretation",
+        "path": "Observation.interpretation",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "Interpretation und Änderungsstatus des HPO-Phänotyps",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation:hl7Interpretation",
+        "path": "Observation.interpretation",
+        "sliceName": "hl7Interpretation",
+        "short": "HL7 Standard-Interpretation",
+        "definition": "Standard HL7 Interpretation codes (z.B. High, Low, Normal)",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+        }
+      },
+      {
+        "id": "Observation.interpretation:changeStatus",
+        "path": "Observation.interpretation",
+        "sliceName": "changeStatus",
+        "short": "Änderungsstatus des HPO-Phänotyps",
+        "definition": "Dokumentiert Änderungen des Phänotyps über Zeit gemäß Modellvorhaben Genomsequenzierung",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-change-status"
+        }
+      },
+      {
         "id": "Observation.note",
         "path": "Observation.note",
         "short": "Zusätzliche klinische Anmerkungen zum Phänotyp",

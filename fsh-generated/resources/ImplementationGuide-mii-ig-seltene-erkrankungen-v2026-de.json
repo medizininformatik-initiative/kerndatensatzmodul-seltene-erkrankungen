@@ -199,6 +199,14 @@
       },
       {
         "reference": {
+          "reference": "Patient/mii-exa-seltene-patient-tod-durch-seltene-erkrankung"
+        },
+        "name": "Beispiel Patient verstorben an seltener Erkrankung",
+        "description": "Beispiel eines Patienten, der an einer seltenen Erkrankung verstorben ist",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Patient/example"
         },
         "name": "Beispielpatient",
@@ -388,6 +396,14 @@
         "name": "Hochwuchs - HPO-kodiert",
         "description": "Pathologisch erhöhte Körpergröße",
         "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-hpo-assessment-change-status"
+        },
+        "name": "HPO Assessment mit Änderungsstatus",
+        "description": "Beispiel einer HPO-Beobachtung mit dokumentiertem Änderungsstatus",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
         "reference": {
@@ -607,6 +623,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-seltene-hpo-change-status"
+        },
+        "name": "MII CS Seltene Erkrankungen HPO Change Status",
+        "description": "CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-seltene-narse-therapietyp"
         },
         "name": "MII CS Seltene Erkrankungen NARSE Therapietyp",
@@ -667,6 +691,14 @@
         },
         "name": "MII EX SE Penetrance",
         "description": "Extension to capture the penetrance of genetic variants associated with a rare disease",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-seltene-tod-durch-seltene-erkrankung"
+        },
+        "name": "MII EX Seltene Erkrankungen Tod durch Seltene Erkrankung",
+        "description": "Extension zur Dokumentation, ob der Tod des Patienten durch eine seltene Erkrankung verursacht wurde",
         "exampleBoolean": false
       },
       {
@@ -875,6 +907,14 @@
         },
         "name": "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
         "description": "ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profile) - Verwendet für ServiceRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-hpo-change-status"
+        },
+        "name": "MII VS Seltene Erkrankungen HPO Change Status",
+        "description": "ValueSet für Änderungsstatus von HPO-Phänotypen gemäß Modellvorhaben Genomsequenzierung",
         "exampleBoolean": false
       },
       {

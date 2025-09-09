@@ -1,0 +1,82 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MII_CS_Seltene_HPO_ChangeStatus",
+  "id": "mii-cs-seltene-hpo-change-status",
+  "title": "MII CS Seltene Erkrankungen HPO Change Status",
+  "description": "CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status",
+  "concept": [
+    {
+      "code": "newly-added",
+      "display": "Newly Added",
+      "designation": [
+        {
+          "language": "de-DE",
+          "value": "Neu hinzugefügt"
+        }
+      ],
+      "definition": "Phänotyp wurde neu beobachtet/diagnostiziert"
+    },
+    {
+      "code": "improved",
+      "display": "Improved",
+      "designation": [
+        {
+          "language": "de-DE",
+          "value": "Verbessert"
+        }
+      ],
+      "definition": "Phänotyp hat sich verbessert"
+    },
+    {
+      "code": "degraded",
+      "display": "Degraded",
+      "designation": [
+        {
+          "language": "de-DE",
+          "value": "Verschlechtert"
+        }
+      ],
+      "definition": "Phänotyp hat sich verschlechtert"
+    },
+    {
+      "code": "no-longer-observed",
+      "display": "No Longer Observed",
+      "designation": [
+        {
+          "language": "de-DE",
+          "value": "Nicht mehr beobachtet"
+        }
+      ],
+      "definition": "Phänotyp wird nicht mehr beobachtet/ist verschwunden"
+    },
+    {
+      "code": "unchanged",
+      "display": "Unchanged",
+      "designation": [
+        {
+          "language": "de-DE",
+          "value": "Unverändert"
+        }
+      ],
+      "definition": "Phänotyp ist unverändert geblieben"
+    }
+  ],
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2026.0.0-ballot",
+  "experimental": false,
+  "caseSensitive": true,
+  "count": 5
+}

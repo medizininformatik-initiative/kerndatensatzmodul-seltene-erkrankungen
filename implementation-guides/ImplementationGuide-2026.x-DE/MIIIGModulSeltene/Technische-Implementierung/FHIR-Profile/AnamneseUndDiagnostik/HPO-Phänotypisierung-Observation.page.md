@@ -9,6 +9,36 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 Dieses Profil beschreibt die Phänotypisierung gemäß Human Phenotype Ontology (HPO) im Rahmen der Diagnostik seltener Erkrankungen.
 Es ermöglicht die strukturierte Erfassung phänotypischer Abnormalitäten und klinischer Merkmale.
 
+### Änderungsstatus von HPO-Phänotypen
+
+Gemäß den Vorgaben des Modellvorhabens Genomsequenzierung unterstützt dieses Profil die Dokumentation von Änderungen bei HPO-Phänotypen über Zeit. Dies erfolgt über das `interpretation` Element mit einem speziellen Slice für den Änderungsstatus.
+
+#### CodeSystem für HPO-Änderungsstatus
+
+Das folgende CodeSystem definiert die möglichen Änderungszustände eines HPO-Phänotyps:
+
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status}}
+
+#### ValueSet für HPO-Änderungsstatus
+
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-change-status}}
+
+#### Verwendung
+
+Der Änderungsstatus wird im `interpretation[changeStatus]` Slice dokumentiert:
+
+```json
+{
+  "interpretation": [{
+    "coding": [{
+      "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status",
+      "code": "improved",
+      "display": "Improved"
+    }]
+  }]
+}
+```
+
 
 
 @```
@@ -132,6 +162,12 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
 **Beispiele**
 
-{{json:mii-exa-seltene-familienanamnese}}
+### Beispiel: HPO-Assessment mit Änderungsstatus
+
+{{json:mii-exa-seltene-hpo-assessment-change-status}}
+
+### Beispiel: Basis HPO-Assessment
+
+{{json:mii-exa-seltene-hpo-assessment}}
 
 ---

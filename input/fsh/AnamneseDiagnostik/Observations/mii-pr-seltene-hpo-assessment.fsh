@@ -46,6 +46,24 @@ Description: "Profile for HPO-based phenotypic observations in the context of ra
 * derivedFrom MS
 * derivedFrom ^short = "Verwandte Beobachtungen oder Bewertungen"
 
+* interpretation MS
+* interpretation ^slicing.discriminator.type = #pattern
+* interpretation ^slicing.discriminator.path = "$this"
+* interpretation ^slicing.rules = #open
+* interpretation ^short = "Interpretation und Änderungsstatus des HPO-Phänotyps"
+
+* interpretation contains
+    hl7Interpretation 0..* MS and
+    changeStatus 0..1 MS
+
+* interpretation[hl7Interpretation] from http://hl7.org/fhir/ValueSet/observation-interpretation (required)
+* interpretation[hl7Interpretation] ^short = "HL7 Standard-Interpretation"
+* interpretation[hl7Interpretation] ^definition = "Standard HL7 Interpretation codes (z.B. High, Low, Normal)"
+
+* interpretation[changeStatus] from MII_VS_Seltene_HPO_ChangeStatus (required)
+* interpretation[changeStatus] ^short = "Änderungsstatus des HPO-Phänotyps"
+* interpretation[changeStatus] ^definition = "Dokumentiert Änderungen des Phänotyps über Zeit gemäß Modellvorhaben Genomsequenzierung"
+
 ValueSet: HPOPhenotypicObservationCodes
 Id: mii-vs-seltene-hpo-phenotypic-observation-codes
 Title: "HPO Phenotypic Observation Codes"
