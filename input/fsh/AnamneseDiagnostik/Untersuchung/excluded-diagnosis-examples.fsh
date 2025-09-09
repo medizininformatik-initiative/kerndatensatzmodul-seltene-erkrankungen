@@ -189,12 +189,12 @@ Description: "2 Kopien SMN1 - schließt SMA aus"
 * code = $LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-07-26"
-* valueCodeableConcept = $SCT#280413001 "Normal"
+* valueCodeableConcept = $SCT#280413001 "Normal result"
 * component[+].code = $LNC#48018-6 "Gene studied [ID]"
 * component[=].valueCodeableConcept.coding = http://www.genenames.org/geneId#HGNC:11117 "SMN1"
 * component[+].code.text = "Copy Number"
 * component[=].valueInteger = 2
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal result"
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
 * note.text = "Normale Kopienanzahl des SMN1-Gens. SMA ausgeschlossen."
 
 Instance: molgen-sma-negative
