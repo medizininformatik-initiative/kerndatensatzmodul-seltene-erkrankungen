@@ -66,9 +66,7 @@ select
 
 #### Kodierung von Medikamenten
 - Verwendung von **ATC-Codes** für die Klassifikation
-- **PZN** (Pharmazentralnummer) für spezifische Präparate in Deutschland
-- **UNII-Codes** für Wirkstoffe (insbesondere bei Gentherapien)
-- **INN** (International Nonproprietary Names) für internationale Kompatibilität
+- **UNII-Codes** für neuere Wirkstoffe (insbesondere bei Studien)
 
 #### Status und Intent
 - `status`: Typischerweise "draft" für Empfehlungen, "active" nach Genehmigung
@@ -77,6 +75,7 @@ select
 #### Dosierung
 - Strukturierte Dosisangaben mit `dosageInstruction`
 - Unterstützung für komplexe Schemata (z.B. Titration, zyklische Gabe)
+- Für die korrekte Angabe der Dosierung sind die Vorgaben der [Spezifikation Medikation IG DE](https://build.fhir.org/ig/hl7germany/medication-dosage-ig/index.html) zu beachten
 
 #### Begründung
 - Verknüpfung zur Diagnose über `reasonReference`

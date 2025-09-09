@@ -44,8 +44,8 @@ Description: "Therapieplan"
 // Non-medication therapy recommendations
 * activity contains NichtMedikamentoesTherapie 0..* MS
 * activity[NichtMedikamentoesTherapie] ^short = "Nicht-medikamentöse Therapieempfehlung"
-* activity[NichtMedikamentoesTherapie] ^definition = "Therapieempfehlung für nicht-medikamentöse Interventionen (Ernährungstherapie, Prophylaxe, Früherkennung, andere)"
-* activity[NichtMedikamentoesTherapie] ^comment = "Referenziert ServiceRequest-basierte Profile für alle nicht-medikamentösen Therapien"
+* activity[NichtMedikamentoesTherapie] ^definition = "Therapieempfehlung für nicht-medikamentöse Interventionen (Ernährungstherapie, Prophylaxe, Früherkennung, humangenetische Beratung, andere)"
+* activity[NichtMedikamentoesTherapie] ^comment = "Referenziert ServiceRequest-basierte Profile für alle nicht-medikamentösen Therapien einschließlich humangenetischer Beratung"
 * activity[NichtMedikamentoesTherapie].reference 0..1 MS
 * activity[NichtMedikamentoesTherapie].reference only Reference(
     MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes or
@@ -53,15 +53,6 @@ Description: "Therapieplan"
 )
 * activity[NichtMedikamentoesTherapie].detail MS // NOTE: Kardinalität min = 1 aus Elternprofil geerbt
 * activity[NichtMedikamentoesTherapie].detail.statusReason from MII_VS_Seltene_Empfehlung_StatusBegruendung (required)
-
-// Human genetic counseling
-* activity contains HumangenetischeBeratung 0..1 MS
-* activity[HumangenetischeBeratung] ^short = "Empfehlung Human-genetische Beratung"
-* activity[HumangenetischeBeratung] ^definition = "Auftrag zur (erneuten) Human-genetischen Beratung"
-* activity[HumangenetischeBeratung].reference 1..1 MS
-* activity[HumangenetischeBeratung].reference only Reference(ServiceRequest)
-// NOTE: Specific profile for genetic counseling can be added when available
-//* activity[HumangenetischeBeratung].reference only Reference(MII_PR_Seltene_Humangenetische_Beratung_Auftrag)
 
 // Study inclusion recommendations
 * activity contains Studieneinschlussempfehlung 0..* MS
@@ -74,17 +65,15 @@ Description: "Therapieplan"
 
 // Implementation Notes:
 // - Medication therapy: MedicationRequest-based profiles for systemic, targeted, preventive, gene therapy
-// - Non-medication therapy: ServiceRequest-based profiles for nutrition, prophylaxis, early detection
+// - Non-medication therapy: ServiceRequest-based profiles for nutrition, prophylaxis, early detection, genetic counseling
 // - Study inclusion: ServiceRequest-based profile for clinical trial referrals
-// - Genetic counseling: ServiceRequest-based profile for genetic consultation requests
 // 
 // When implemented:
 // - Medication therapy -> MedicationStatement/MedicationAdministration
-// - Non-medication therapy -> Procedure/Observation
+// - Non-medication therapy -> Procedure/Observation/DiagnosticReport/ClinicalImpression
 // - Study inclusion -> Consent/ResearchSubject
-// - Genetic counseling -> DiagnosticReport/ClinicalImpression
 
-
+* supportingInfo 0..* MS
 * supportingInfo ^slicing.discriminator.type = #type
 * supportingInfo ^slicing.discriminator.path = "$this"
 * supportingInfo ^slicing.rules = #open
