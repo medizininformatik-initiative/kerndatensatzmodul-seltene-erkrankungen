@@ -1,5 +1,5 @@
 Extension: PhenotypicPattern
-Id: mii-ext-se-phenotypic-pattern
+Id: mii-ext-seltene-phenotypic-pattern
 Title: "Phenotypic Pattern Extension"
 Description: "Extension to link syndrome diagnoses to characteristic phenotypic patterns or symptom clusters"
 Context: Condition

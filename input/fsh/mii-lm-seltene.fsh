@@ -1,11 +1,11 @@
 Logical: MII_LM_SE
 Parent: Element
-Id: mii-lm-se
+Id: mii-lm-seltene
 Title: "MII LM SE"
 Description: "MII LogicalModel Modul Seltene Erkraknungen"
 * insert Publisher
 * insert PR_CS_VS_Version
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/LogicalModel/SE"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
 * AnamneseUndDiagnostik 0..* BackboneElement "Diagnose"
   * Untersuchungsdatum 0..1 date "Untersuchungsdatum" "Datum der durchgeführten Untersuchung eines SE-Patienten."
   * Untersuchungsanlass 0..1 code "Untersuchungsanlass" "Grund fuer den Besuch des SE-Patienten."
@@ -73,18 +73,18 @@ Source: MII_LM_SE
     * HPOVersion -> "Observation.code.coding.version | Condition.code.coding.version"
     * ZeitraumSymptom -> "Condition.onset[x] | Observation.effective[x]"
       * ZeitraumSymptom -> "Condition.onsetDateTime | Condition.onsetPeriod | Observation.effectivePeriod"
-      * Lebensphase -> "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-ext-se-onset-age').valueCodeableConcept"
-      * AlterSymptom -> "Condition.onsetAge | Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-ext-se-onset-age').valueAge"
-    * VerlaufSymptom -> "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-ext-se-phenotypic-pattern').valueCodeableConcept | Observation.interpretation"
+      * Lebensphase -> "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-onset-age').valueCodeableConcept"
+      * AlterSymptom -> "Condition.onsetAge | Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-onset-age').valueAge"
+    * VerlaufSymptom -> "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-phenotypic-pattern').valueCodeableConcept | Observation.interpretation"
   * KlinischeDiagnose -> "Condition.where(category.coding.exists(code='clinical'))"
-    * ZeitpunktKlinischeDia -> "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-ext-se-onset-age').valueCodeableConcept"
+    * ZeitpunktKlinischeDia -> "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-onset-age').valueCodeableConcept"
     * FeststellungsdatumKlinischeDia -> "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate').valueDateTime"
     * AlterKlinischeDia -> "Condition.onsetAge"
   * GenetischeDiagnose -> "Condition.where(category.coding.exists(code='genetic'))"
-    * ZeitpunktGenDia -> "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-ext-se-onset-age').valueCodeableConcept"
+    * ZeitpunktGenDia -> "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-onset-age').valueCodeableConcept"
     * FeststellungsdatumGenDia -> "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate').valueDateTime"
     * AlterGenDia -> "Condition.onsetAge"
-  * GenDiaFehlendePenetranz -> "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-ex-se-penetrance').valueCodeableConcept"
+  * GenDiaFehlendePenetranz -> "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance').valueCodeableConcept"
   * MethodeDiagnosestellung -> "Observation.method"
 * Messbefunde -> "Observation"
   * BMI -> "Observation.where(code.coding.exists(system='http://loinc.org' and code='39156-5'))"
@@ -101,7 +101,7 @@ Source: MII_LM_SE
   * Geschlecht -> "FamilyMemberHistory.sex"
   * GleicheSE -> "FamilyMemberHistory.condition.code"
   * AndereSE -> "FamilyMemberHistory.condition.code"
-  * Penetranz -> "FamilyMemberHistory.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-se/StructureDefinition/mii-ex-se-penetrance').valueCodeableConcept"
+  * Penetranz -> "FamilyMemberHistory.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance').valueCodeableConcept"
   * FamilienmitgliedVerstorben -> "FamilyMemberHistory.deceasedBoolean"
 * TherapieForschung -> "CarePlan | MedicationRequest | ResearchStudy"
   * OffLabel -> "MedicationRequest.extension"

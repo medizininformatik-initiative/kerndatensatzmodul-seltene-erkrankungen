@@ -1,5 +1,5 @@
-Profile:     MII_PR_SE_ClinicalImpression
-Id:          mii-pr-se-clinical-impression
+Profile:     MII_PR_Seltene_ClinicalImpression
+Id:          mii-pr-seltene-clinical-impression
 Parent:      ClinicalImpression
 Title:       "MII Profile SE Clinical Impression"
 Description: "Profile for clinical impressions in the context of rare diseases. This profile captures clinical assessments and suspected diagnoses based on phenotypic findings and symptoms."
@@ -80,7 +80,7 @@ Description: "Profile for clinical impressions in the context of rare diseases. 
 // Finding constraints - 
 * finding ^short = "Klinische Befunde der Untersuchung"
 * finding ^definition = "Klinische Befunde, die auf Basis der Untersuchungen festgestellt wurden"
-* finding.itemCodeableConcept from mii-vs-se-hpo-phenotypic-observation-codes (extensible)
+* finding.itemCodeableConcept from mii-vs-seltene-hpo-phenotypic-observation-codes (extensible)
 * finding.itemCodeableConcept ^short = "Klinischer Befund"
 * finding.itemReference only Reference(Condition or Observation)
 * finding.itemReference ^short = "Referenz auf klinischen Befund"

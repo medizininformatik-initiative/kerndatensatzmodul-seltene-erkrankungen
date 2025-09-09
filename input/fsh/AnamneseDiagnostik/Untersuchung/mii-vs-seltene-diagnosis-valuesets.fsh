@@ -2,10 +2,10 @@
 
 // Clinical Diagnosis Category Value Set
 ValueSet: ClinicalDiagnosisCategoryVS
-Id: mii-vs-se-clinical-diagnosis-category
+Id: mii-vs-seltene-clinical-diagnosis-category
 Title: "MII VS SE Clinical Diagnosis Category"
 Description: "Value set for categorizing clinical diagnoses of rare diseases"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-se-clinical-diagnosis-category"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
@@ -20,10 +20,10 @@ Description: "Value set for categorizing clinical diagnoses of rare diseases"
 
 // HPO Age of Onset Value Set
 ValueSet: HPOAgeOfOnsetValueSet
-Id: mii-vs-se-hpo-age-of-onset
+Id: mii-vs-seltene-hpo-age-of-onset
 Title: "MII VS SE HPO Age of Onset"
 Description: "Value set containing HPO terms for age of onset of diseases"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-se-hpo-age-of-onset"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-age-of-onset"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
@@ -43,10 +43,10 @@ Description: "Value set containing HPO terms for age of onset of diseases"
 
 // HPO Inheritance Pattern Value Set
 ValueSet: HPOInheritancePatternValueSet
-Id: mii-vs-se-hpo-inheritance-pattern
+Id: mii-vs-seltene-hpo-inheritance-pattern
 Title: "MII VS SE HPO Inheritance Pattern"
 Description: "Value set containing HPO terms for modes of inheritance"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-se-hpo-inheritance-pattern"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-inheritance-pattern"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
@@ -68,10 +68,10 @@ Description: "Value set containing HPO terms for modes of inheritance"
 
 // Genetic Basis Value Set
 ValueSet: GeneticBasisValueSet
-Id: mii-vs-se-genetic-basis
+Id: mii-vs-seltene-genetic-basis
 Title: "MII VS SE Genetic Basis"
 Description: "Value set for types of genetic basis of rare diseases"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-se-genetic-basis"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-genetic-basis"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
@@ -87,10 +87,10 @@ Description: "Value set for types of genetic basis of rare diseases"
 
 // Penetrance Value Set
 ValueSet: PenetranceValueSet
-Id: mii-vs-se-penetrance
+Id: mii-vs-seltene-penetrance
 Title: "MII VS SE Penetrance"
 Description: "Value set for qualitative descriptions of genetic penetrance"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-se-penetrance"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-penetrance"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft

@@ -6,7 +6,7 @@
 
 // Example 1: Marfan Syndrome - Clinical Diagnosis
 Instance: example-marfan-clinical-diagnosis
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
+InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Marfan-Syndrom - Klinische Diagnose"
 Description: "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend auf phänotypischen Merkmalen"
@@ -44,7 +44,7 @@ Description: "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend a
 
 // Example 2: Noonan Syndrome - Clinical Diagnosis
 Instance: example-noonan-clinical-diagnosis
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
+InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Noonan-Syndrom - Klinische Diagnose"
 Description: "Beispiel einer klinischen Diagnose des Noonan-Syndroms"
@@ -78,7 +78,7 @@ Description: "Beispiel einer klinischen Diagnose des Noonan-Syndroms"
 
 // Example 3: SMA Type 1 - Genetic Diagnosis
 Instance: example-sma-genetic-diagnosis
-InstanceOf: MII_PR_SE_GeneticDiagnosis
+InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "SMA Typ 1 - Genetisch bestätigte Diagnose"
 Description: "Beispiel einer genetisch bestätigten Diagnose der spinalen Muskelatrophie Typ 1"
@@ -109,7 +109,7 @@ Description: "Beispiel einer genetisch bestätigten Diagnose der spinalen Muskel
 
 // Example 4: Duchenne Muscular Dystrophy - Genetic Diagnosis
 Instance: example-dmd-genetic-diagnosis
-InstanceOf: MII_PR_SE_GeneticDiagnosis
+InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Duchenne-Muskeldystrophie - Genetisch bestätigt"
 Description: "Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie"
@@ -137,7 +137,7 @@ Description: "Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie"
 
 // Example 5: BRCA1-associated Breast Cancer - Genetic Diagnosis
 Instance: example-brca1-genetic-diagnosis
-InstanceOf: MII_PR_SE_GeneticDiagnosis
+InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Hereditäres Mamma- und Ovarialkarzinom-Syndrom"
 Description: "Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom"
@@ -168,7 +168,7 @@ Description: "Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom"
 
 // Example 6: CF - Clinical to Genetic Diagnosis Progression
 Instance: example-cf-clinical
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
+InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Mukoviszidose - Klinischer Verdacht"
 Description: "Initiale klinische Verdachtsdiagnose Mukoviszidose"
@@ -194,7 +194,7 @@ Description: "Initiale klinische Verdachtsdiagnose Mukoviszidose"
 * note.text = "Schweißtest positiv (Chlorid 85 mmol/l). Klinisches Bild vereinbar mit CF. Genetische Testung veranlasst."
 
 Instance: example-cf-genetic
-InstanceOf: MII_PR_SE_GeneticDiagnosis
+InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Mukoviszidose - Genetisch bestätigt"
 Description: "Genetisch bestätigte Mukoviszidose"

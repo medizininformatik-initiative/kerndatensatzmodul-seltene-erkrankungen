@@ -1,5 +1,5 @@
-Profile:     MII_PR_SE_Blutgruppe
-Id:          mii-pr-se-blutgruppe
+Profile:     MII_PR_Seltene_Blutgruppe
+Id:          mii-pr-seltene-blutgruppe
 Parent:      Observation
 Title:       "MII PR SE Blutgruppe"
 Description: "Observation-Profil für die Erfassung der Blutgruppe (AB0 und Rhesusfaktor) im Kontext seltener Erkrankungen"
@@ -44,15 +44,15 @@ Description: "Observation-Profil für die Erfassung der Blutgruppe (AB0 und Rhes
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
 * valueCodeableConcept.coding MS
-* valueCodeableConcept.coding from MII_VS_SE_Blutgruppe (required)
+* valueCodeableConcept.coding from MII_VS_Seltene_Blutgruppe (required)
 * valueCodeableConcept.coding ^slicing.discriminator.type = #pattern
 * valueCodeableConcept.coding ^slicing.discriminator.path = "$this"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains 
     loinc 0..1 MS and
     snomed 0..1 MS
-* valueCodeableConcept.coding[loinc] from MII_VS_SE_Blutgruppe (required)
+* valueCodeableConcept.coding[loinc] from MII_VS_Seltene_Blutgruppe (required)
 * valueCodeableConcept.coding[loinc].system = "http://loinc.org"
-* valueCodeableConcept.coding[snomed] from MII_VS_SE_Blutgruppe (required)
+* valueCodeableConcept.coding[snomed] from MII_VS_Seltene_Blutgruppe (required)
 * valueCodeableConcept.coding[snomed].system = "http://snomed.info/sct"
 * valueCodeableConcept.text MS

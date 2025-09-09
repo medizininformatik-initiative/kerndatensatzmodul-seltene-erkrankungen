@@ -1,5 +1,5 @@
 Extension: SyndromeCategory
-Id: mii-ext-se-syndrome-category
+Id: mii-ext-seltene-syndrome-category
 Title: "Syndrome Category Extension"
 Description: "Extension to categorize syndrome types for rare diseases (genetic, metabolic, developmental, etc.)"
 Context: Condition
@@ -15,7 +15,7 @@ Context: Condition
 * value[x] from SyndromeCategoryVS (extensible)
 
 ValueSet: SyndromeCategoryVS
-Id: mii-vs-se-syndrome-category
+Id: mii-vs-seltene-syndrome-category
 Title: "Syndrome Category Value Set"
 Description: "Categories for classifying syndrome types in rare diseases"
 * ^status = #draft

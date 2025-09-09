@@ -1,6 +1,6 @@
-Profile: MII_PR_SE_Studieneinschluss_Anfrage
+Profile: MII_PR_Seltene_Studieneinschluss_Anfrage
 Parent: ServiceRequest
-Id: mii-pr-se-studieneinschluss-anfrage
+Id: mii-pr-seltene-studieneinschluss-anfrage
 Title: "MII PR SE Studieneinschluss Anfrage"
 Description: "Anfrage zum Studieneinschluss"
 
@@ -41,11 +41,11 @@ Description: "Anfrage zum Studieneinschluss"
 
 * supportingInfo contains Studie 0..* MS
 * supportingInfo[Studie] only Reference(
-    MII_PR_SE_Studie or
+    MII_PR_Seltene_Studie or
     MII_PR_Studie_Studie or
     ResearchStudy
 )
 
 * extension contains
-    MII_EX_SE_Empfehlung_Prioritaet named Prioritaet 0..1 MS and
-    MII_EX_SE_Empfehlung_Publikation named Publikation 0..* MS
+    MII_EX_Seltene_Empfehlung_Prioritaet named Prioritaet 0..1 MS and
+    MII_EX_Seltene_Empfehlung_Publikation named Publikation 0..* MS

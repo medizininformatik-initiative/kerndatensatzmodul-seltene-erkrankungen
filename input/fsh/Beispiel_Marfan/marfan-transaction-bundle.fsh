@@ -114,7 +114,7 @@ Description: "Transaction Bundle mit allen Ressourcen für den Marfan-Syndrom Fa
 
 // Clinical Impression
 * entry[+].fullUrl = "urn:uuid:35d41288-207b-4be7-967a-d92e295d1c75"
-* entry[=].resource = clinical-impression-se-assessment
+* entry[=].resource = clinical-impression-seltene-assessment
 * entry[=].request.method = #POST
 * entry[=].request.url = "ClinicalImpression"
 

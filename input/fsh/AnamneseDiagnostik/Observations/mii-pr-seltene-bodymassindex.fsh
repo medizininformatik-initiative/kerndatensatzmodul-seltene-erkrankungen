@@ -1,5 +1,5 @@
-Profile:     MII_PR_SE_Bodymassindex
-Id:          mii-pr-se-bodymassindex
+Profile:     MII_PR_Seltene_Bodymassindex
+Id:          mii-pr-seltene-bodymassindex
 Parent:      Observation
 Title:       "Body Mass Index (BMI) of the patient"
 Description: "Describes the Body Mass Index (BMI) of the patient."
@@ -23,8 +23,8 @@ Description: "Describes the Body Mass Index (BMI) of the patient."
 * valueQuantity.code = #kg/m2 (exactly)
 
 
-Instance: mii-exa-se-bodymassindex
-InstanceOf: MII_PR_SE_Bodymassindex
+Instance: mii-exa-seltene-bodymassindex
+InstanceOf: MII_PR_Seltene_Bodymassindex
 Usage: #example
 Title: "Body Mass Index (BMI) Example"
 Description: "Example of a Body Mass Index (BMI) observation for a patient."

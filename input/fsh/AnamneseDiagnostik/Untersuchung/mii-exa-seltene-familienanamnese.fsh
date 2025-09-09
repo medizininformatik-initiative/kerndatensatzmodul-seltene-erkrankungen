@@ -1,5 +1,5 @@
-Instance: mii-exa-se-familienanamnese
-InstanceOf: MII_PR_SE_Familienanamnese
+Instance: mii-exa-seltene-familienanamnese
+InstanceOf: MII_PR_Seltene_Familienanamnese
 Description: "Example Patient Family Anamnesis"
 Usage: #example
 

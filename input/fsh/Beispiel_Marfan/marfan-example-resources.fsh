@@ -13,7 +13,7 @@ Description: "19-jähriger männlicher Patient mit bestätigtem Marfan-Syndrom"
 
 // Marfan Syndrome Diagnosis - Suspected
 Instance: condition-marfan-suspected
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
+InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Marfan-Syndrom - Verdacht"
 Description: "Verdacht auf Marfan-Syndrom"
@@ -33,7 +33,7 @@ Description: "Verdacht auf Marfan-Syndrom"
 
 // Marfan Syndrome Diagnosis - Clinical
 Instance: condition-marfan-clinical
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
+InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Marfan-Syndrom - Klinische Diagnose"
 Description: "Klinisch bestätigtes Marfan-Syndrom"
@@ -67,7 +67,7 @@ Description: "Klinisch bestätigtes Marfan-Syndrom"
 
 // Marfan Syndrome Diagnosis - Genetic
 Instance: condition-marfan-genetic
-InstanceOf: MII_PR_SE_GeneticDiagnosis
+InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Marfan-Syndrom - Genetische Diagnose"
 Description: "Genetisch bestätigtes Marfan-Syndrom mit FBN1-Mutation"
@@ -113,7 +113,7 @@ Description: "Pathogene FBN1-Mutation bei Marfan-Syndrom"
 
 // Cataract Diagnosis
 Instance: condition-cataract
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
+InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Katarakt bilateral"
 Description: "Beidseitige Katarakt bei Marfan-Syndrom"
@@ -355,8 +355,8 @@ Description: "Losartan zur Progressionshemmung der Aortenwurzeldilatation"
 * note.text = "Zur Progressionshemmung der Aortenwurzeldilatation bei Marfan-Syndrom"
 
 // Clinical Impression - Cardiology Referral from SE
-Instance: clinical-impression-se-assessment
-InstanceOf: MII_PR_SE_ClinicalImpression
+Instance: clinical-impression-seltene-assessment
+InstanceOf: MII_PR_Seltene_ClinicalImpression
 Usage: #example
 Title: "Konsultation ZSE bei V.a. Marfan-Syndrom"
 Description: "Konsultation im Zentrum für Seltene Erkrankungen mit kardiologischer Mitbeurteilung bei V.a. Marfan-Syndrom"

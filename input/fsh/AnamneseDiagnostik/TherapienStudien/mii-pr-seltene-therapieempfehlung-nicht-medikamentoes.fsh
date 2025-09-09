@@ -1,9 +1,9 @@
 // ServiceRequest Profile for Non-Medication Therapy Recommendations
 // Covers: nutrition, gene therapy, prophylactic measures, early detection, etc.
 
-Profile: MII_PR_SE_TherapieempfehlungNichtMedikamentoes
+Profile: MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes
 Parent: ServiceRequest
-Id: mii-pr-se-therapieempfehlung-nicht-medikamentoes
+Id: mii-pr-seltene-therapieempfehlung-nicht-medikamentoes
 Title: "MII PR SE Therapieempfehlung Nicht-Medikamentös"
 Description: "Therapieempfehlung für nicht-medikamentöse Interventionen bei seltenen Erkrankungen (z.B. Ernährungstherapie, Gentherapie, Prophylaxe, Früherkennung)"
 * insert PR_CS_VS_Version
@@ -32,7 +32,7 @@ Description: "Therapieempfehlung für nicht-medikamentöse Interventionen bei se
 * category ^slicing.rules = #open
 * category ^slicing.description = "Slice für Therapiestrategie-Kategorisierung aus Modellvorhaben GenomSeq"
 * category contains MVGenomSeqTherapieStrategie 0..1 MS
-* category[MVGenomSeqTherapieStrategie] from MII_VS_SE_TherapieempfehlungStrategieNichtMedikamentoes (required)
+* category[MVGenomSeqTherapieStrategie] from MII_VS_Seltene_TherapieempfehlungStrategieNichtMedikamentoes (required)
 * category[MVGenomSeqTherapieStrategie] ^short = "Modellvorhaben GenomSeq Therapiestrategie-Typ (Nicht-Medikamentös)"
 * category[MVGenomSeqTherapieStrategie] ^definition = "Kategorisierung der nicht-medikamentösen Therapieempfehlung nach Modellvorhaben GenomSeq"
 * category[MVGenomSeqTherapieStrategie] ^comment = "Dieses Feld ist spezifisch für die Integration mit Modellvorhaben GenomSeq. Es ermöglicht die Kategorisierung gemäß RareDiseasesPlan.recommendedTherapies.strategy. Nur für nicht-medikamentöse Strategien: prophylactic, early-detection, nutrition, other."
@@ -100,20 +100,20 @@ Description: "Therapieempfehlung für nicht-medikamentöse Interventionen bei se
 
 // Extensions from MV GenomSeq alignment
 * extension contains
-    MII_EX_SE_Empfehlung_Prioritaet named Prioritaet 0..1 MS and
-    MII_EX_SE_Empfehlung_Evidenzgraduierung named Evidenzgraduierung 0..1 MS and
-    MII_EX_SE_Empfehlung_Publikation named Publikation 0..* MS
+    MII_EX_Seltene_Empfehlung_Prioritaet named Prioritaet 0..1 MS and
+    MII_EX_Seltene_Empfehlung_Evidenzgraduierung named Evidenzgraduierung 0..1 MS and
+    MII_EX_Seltene_Empfehlung_Publikation named Publikation 0..* MS
 
 // Example Instance for Early Detection Program
 Instance: example-early-detection-recommendation
-InstanceOf: MII_PR_SE_TherapieempfehlungNichtMedikamentoes
+InstanceOf: MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes
 Usage: #example
 Title: "Beispiel Früherkennungsprogramm-Empfehlung"
 Description: "Beispiel einer Empfehlung für regelmäßige Früherkennungsuntersuchungen"
 * status = #draft
 * intent = #proposal
 * priority = #routine
-* category[MVGenomSeqTherapieStrategie].coding = MII_CS_SE_TherapieempfehlungStrategie#early-detection "Früherkennung"
+* category[MVGenomSeqTherapieStrategie].coding = MII_CS_Seltene_TherapieempfehlungStrategie#early-detection "Früherkennung"
 * code.coding[snomed] = $SCT#312851005 "Screening for disorder"
 * code.text = "Jährliche kardiologische Kontrolle bei Marfan-Syndrom"
 * subject = Reference(Patient/patient-marfan-001)
@@ -123,7 +123,7 @@ Description: "Beispiel einer Empfehlung für regelmäßige Früherkennungsunters
 
 // PKU Condition Example for Nutrition Therapy
 Instance: condition-pku-diagnosis
-InstanceOf: MII_PR_SE_GeneticDiagnosis
+InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Phenylketonurie - Genetische Diagnose"
 Description: "Genetisch bestätigte Phenylketonurie (PKU)"
@@ -145,14 +145,14 @@ Description: "Genetisch bestätigte Phenylketonurie (PKU)"
 
 // Example Instance for Nutrition Therapy
 Instance: example-nutrition-therapy-recommendation
-InstanceOf: MII_PR_SE_TherapieempfehlungNichtMedikamentoes
+InstanceOf: MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes
 Usage: #example
 Title: "Beispiel Ernährungstherapie-Empfehlung"
 Description: "Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie"
 * status = #active
 * intent = #proposal
 * priority = #routine
-* category[MVGenomSeqTherapieStrategie].coding = MII_CS_SE_TherapieempfehlungStrategie#nutrition "Ernährungstherapie"
+* category[MVGenomSeqTherapieStrategie].coding = MII_CS_Seltene_TherapieempfehlungStrategie#nutrition "Ernährungstherapie"
 * code.coding[snomed] = $SCT#61310001 "Nutrition education"
 * code.text = "Phenylalaninreduzierte Diät bei Phenylketonurie"
 * subject = Reference(Patient/example)

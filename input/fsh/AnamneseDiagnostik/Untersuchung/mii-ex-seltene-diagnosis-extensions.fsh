@@ -2,10 +2,10 @@
 
 // Age of Onset Extension
 Extension: AgeOfOnset
-Id: mii-ex-se-age-of-onset
+Id: mii-ex-seltene-age-of-onset
 Title: "MII EX SE Age of Onset"
 Description: "Extension to capture the age of onset of a rare disease using structured HPO age of onset terms"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-se-age-of-onset"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-age-of-onset"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
@@ -18,10 +18,10 @@ Description: "Extension to capture the age of onset of a rare disease using stru
 
 // Inheritance Pattern Extension
 Extension: InheritancePattern
-Id: mii-ex-se-inheritance-pattern
+Id: mii-ex-seltene-inheritance-pattern
 Title: "MII EX SE Inheritance Pattern"
 Description: "Extension to capture the mode of inheritance of a rare disease"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-se-inheritance-pattern"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-inheritance-pattern"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
@@ -34,10 +34,10 @@ Description: "Extension to capture the mode of inheritance of a rare disease"
 
 // Genetic Basis Extension
 Extension: GeneticBasis
-Id: mii-ex-se-genetic-basis
+Id: mii-ex-seltene-genetic-basis
 Title: "MII EX SE Genetic Basis"
 Description: "Extension to describe the genetic basis of a rare disease"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-se-genetic-basis"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-genetic-basis"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
@@ -50,10 +50,10 @@ Description: "Extension to describe the genetic basis of a rare disease"
 
 // Penetrance Extension
 Extension: Penetrance
-Id: mii-ex-se-penetrance
+Id: mii-ex-seltene-penetrance
 Title: "MII EX SE Penetrance"
 Description: "Extension to capture the penetrance of genetic variants associated with a rare disease"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-se-penetrance"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft

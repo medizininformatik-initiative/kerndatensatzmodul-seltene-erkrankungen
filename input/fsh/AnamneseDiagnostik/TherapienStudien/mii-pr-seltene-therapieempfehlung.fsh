@@ -1,6 +1,6 @@
-Profile: MII_PR_SE_Therapieempfehlung
+Profile: MII_PR_Seltene_Therapieempfehlung
 Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest
-Id: mii-pr-se-therapieempfehlung
+Id: mii-pr-seltene-therapieempfehlung
 Title: "MII PR SE Therapieempfehlung Systemische Therapie"
 Description: "Therapieempfehlung für eine medikamentöse Systemische Therapie"
 
@@ -28,7 +28,7 @@ Description: "Therapieempfehlung für eine medikamentöse Systemische Therapie"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Slice für Therapiestrategie-Kategorisierung aus Modellvorhaben GenomSeq"
 * category contains MVGenomSeqTherapieStrategie 0..1 MS
-* category[MVGenomSeqTherapieStrategie] from MII_VS_SE_TherapieempfehlungStrategieMedikamentoes (required)
+* category[MVGenomSeqTherapieStrategie] from MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes (required)
 * category[MVGenomSeqTherapieStrategie] ^short = "Modellvorhaben GenomSeq Therapiestrategie-Typ (Medikamentös)"
 * category[MVGenomSeqTherapieStrategie] ^definition = "Kategorisierung der medikamentösen Therapieempfehlung nach Modellvorhaben GenomSeq Strategietyp"
 * category[MVGenomSeqTherapieStrategie] ^comment = "Dieses Feld ist spezifisch für die Integration mit Modellvorhaben GenomSeq. Es ermöglicht die Kategorisierung gemäß RareDiseasesPlan.recommendedTherapies.strategy. Nur für medikamentöse Strategien: systemic-medication, targeted-medication, prevention-medication, gene-therapy, combination."
@@ -44,7 +44,7 @@ Description: "Therapieempfehlung für eine medikamentöse Systemische Therapie"
 * reasonReference ^slicing.ordered = false
 
 * extension contains
-    MII_EX_SE_Empfehlung_Prioritaet named Prioritaet 0..1 MS and
-    MII_EX_SE_Empfehlung_Evidenzgraduierung named Evidenzgraduierung 0..1 MS and
-    MII_EX_SE_Empfehlung_Publikation named Publikation 0..* MS
+    MII_EX_Seltene_Empfehlung_Prioritaet named Prioritaet 0..1 MS and
+    MII_EX_Seltene_Empfehlung_Evidenzgraduierung named Evidenzgraduierung 0..1 MS and
+    MII_EX_Seltene_Empfehlung_Publikation named Publikation 0..* MS
 

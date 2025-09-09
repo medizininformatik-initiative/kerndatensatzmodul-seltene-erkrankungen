@@ -1,5 +1,5 @@
-Profile:     MII_PR_SE_HPO_Assessment
-Id:          mii-pr-se-hpo-assessment
+Profile:     MII_PR_Seltene_HPO_Assessment
+Id:          mii-pr-seltene-hpo-assessment
 Parent:      Observation
 Title:       "MII Profile SE HPO Assessment"
 Description: "Profile for HPO-based phenotypic observations in the context of rare diseases. This profile uses the Human Phenotype Ontology (HPO) to describe clinical symptoms and phenotypic abnormalities."
@@ -8,7 +8,7 @@ Description: "Profile for HPO-based phenotypic observations in the context of ra
 * ^status = #draft
 
 * code MS
-* code from mii-vs-se-hpo-phenotypic-observation-codes (extensible)
+* code from mii-vs-seltene-hpo-phenotypic-observation-codes (extensible)
 * code ^short = "HPO-phänotypischer Beobachtungscode"
 * code ^definition = "Code aus der Human Phenotype Ontology zur Beschreibung der phänotypischen Anomalie"
 
@@ -29,7 +29,7 @@ Description: "Profile for HPO-based phenotypic observations in the context of ra
 * value[x] only CodeableConcept or boolean
 * value[x] ^short = "Vorhandensein, Abwesenheit oder Schweregrad des Phänotyps"
 
-* valueCodeableConcept from mii-vs-se-hpo-severity-values (extensible)
+* valueCodeableConcept from mii-vs-seltene-hpo-severity-values (extensible)
 * valueCodeableConcept ^short = "Schweregrad oder Ausprägung der phänotypischen Anomalie"
 
 * bodySite MS
@@ -47,14 +47,14 @@ Description: "Profile for HPO-based phenotypic observations in the context of ra
 * derivedFrom ^short = "Verwandte Beobachtungen oder Bewertungen"
 
 ValueSet: HPOPhenotypicObservationCodes
-Id: mii-vs-se-hpo-phenotypic-observation-codes
+Id: mii-vs-seltene-hpo-phenotypic-observation-codes
 Title: "HPO Phenotypic Observation Codes"
 Description: "Human Phenotype Ontology codes for phenotypic observations"
 * ^status = #draft
 * codes from system $HPO
 
 ValueSet: HPOSeverityValues
-Id: mii-vs-se-hpo-severity-values
+Id: mii-vs-seltene-hpo-severity-values
 Title: "HPO Severity Values"
 Description: "Codes for describing severity of phenotypic abnormalities"
 * ^status = #draft
@@ -63,8 +63,8 @@ Description: "Codes for describing severity of phenotypic abnormalities"
 * $HPO#HP:0012826 "Moderate"
 * $HPO#HP:0040281 "Normal"
 
-Instance: mii-exa-se-hpo-assessment
-InstanceOf: MII_PR_SE_HPO_Assessment
+Instance: mii-exa-seltene-hpo-assessment
+InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "HPO Symptom Observation Example"
 Description: "Example of an HPO-based phenotypic observation for intellectual disability."

@@ -1,6 +1,6 @@
-Profile: MII_PR_SE_Therapieempfehlung_Kombination
+Profile: MII_PR_Seltene_Therapieempfehlung_Kombination
 Parent: RequestGroup
-Id: mii-pr-se-therapieempfehlung-kombination
+Id: mii-pr-seltene-therapieempfehlung-kombination
 Title: "MII PR SE Therapieempfehlung Kombinationstherapie"
 Description: "Therapieempfehlung für eine medikamentöse Kombinationstherapie"
 
@@ -31,10 +31,10 @@ diese Therapieempfehlung ist selbst nochmal Teil einer RequestGroup. In dem Fall
 
 * action 1..* MS
   * resource 1..1 MS
-  * resource only Reference(MII_PR_SE_Therapieempfehlung or MedicationRequest)
+  * resource only Reference(MII_PR_Seltene_Therapieempfehlung or MedicationRequest)
   * action 0..0 // When we enforce a resource, sub-actions are disallowed by the constraint rqg-1 anyway.
 
 * extension contains
-    MII_EX_SE_Empfehlung_Prioritaet named Prioritaet 0..1 MS and
-    MII_EX_SE_Empfehlung_Evidenzgraduierung named Evidenzgraduierung 0..1 MS and
-    MII_EX_SE_Empfehlung_Publikation named Publikation 0..* MS
+    MII_EX_Seltene_Empfehlung_Prioritaet named Prioritaet 0..1 MS and
+    MII_EX_Seltene_Empfehlung_Evidenzgraduierung named Evidenzgraduierung 0..1 MS and
+    MII_EX_Seltene_Empfehlung_Publikation named Publikation 0..* MS

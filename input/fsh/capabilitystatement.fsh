@@ -30,7 +30,7 @@ RuleSet: SupportSearchParam (name, canonical, type, expectation)
 * rest.resource[=].searchParam[=].extension[0].url = $exp
 * rest.resource[=].searchParam[=].extension[0].valueCode = {expectation}
 
-Instance: mii-cps-se-capabilitystatement
+Instance: mii-cps-seltene-capabilitystatement
 InstanceOf: CapabilityStatement
 Usage: #definition
 * insert SP_Publisher
@@ -55,9 +55,9 @@ Usage: #definition
 // Condition requirements - Diagnoses
 * insert SupportResource(Condition, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/Condition, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis|2026.0.0-ballot, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis|2026.0.0-ballot, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-symptom-condition|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition|2026.0.0-ballot, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -75,7 +75,7 @@ Usage: #definition
 // ClinicalImpression requirements
 * insert SupportResource(ClinicalImpression, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/ClinicalImpression, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-impression|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2026.0.0-ballot, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -89,10 +89,10 @@ Usage: #definition
 // Observation requirements
 * insert SupportResource(Observation, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/Observation, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-hpo-assessment|2026.0.0-ballot, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-bodymassindex|2026.0.0-ballot, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-blutgruppe|2026.0.0-ballot, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-waist-to-hip-ratio|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-blutgruppe|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-waist-to-hip-ratio|2026.0.0-ballot, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -134,7 +134,7 @@ Usage: #definition
 // ResearchStudy requirements
 * insert SupportResource(ResearchStudy, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/ResearchStudy, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-studie|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studie|2026.0.0-ballot, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -147,8 +147,8 @@ Usage: #definition
 // ServiceRequest requirements (for Studieneinschluss-Anfrage and non-medication therapies)
 * insert SupportResource(ServiceRequest, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/ServiceRequest, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-studieneinschluss-anfrage|2026.0.0-ballot, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung-nicht-medikamentoes|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2026.0.0-ballot, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -161,8 +161,8 @@ Usage: #definition
 // MedicationRequest requirements (for therapy recommendations)
 * insert SupportResource(MedicationRequest, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/MedicationRequest, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung|2026.0.0-ballot, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung-kombination|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-kombination|2026.0.0-ballot, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -197,7 +197,7 @@ Usage: #definition
 // CarePlan requirements (for Therapieplan)
 * insert SupportResource(CarePlan, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/CarePlan, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieplan|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan|2026.0.0-ballot, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -210,7 +210,7 @@ Usage: #definition
 // FamilyMemberHistory requirements
 * insert SupportResource(FamilyMemberHistory, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-familienanamnese|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese|2026.0.0-ballot, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)

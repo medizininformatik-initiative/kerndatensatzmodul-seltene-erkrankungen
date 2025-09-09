@@ -1,10 +1,10 @@
 // Clinical Diagnosis Profile for Rare Diseases with HPO phenotype codes
-Profile: MII_PR_SE_ClinicalDiagnosis
+Profile: MII_PR_Seltene_ClinicalDiagnosis
 Parent: MII_PR_Diagnose_Condition
-Id: mii-pr-se-clinical-diagnosis
+Id: mii-pr-seltene-clinical-diagnosis
 Title: "MII PR SE Clinical Diagnosis"
 Description: "Profile for clinical diagnosis of rare diseases with HPO phenotype codes. This profile is used for clinically diagnosed rare diseases based on phenotypic presentation."
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
@@ -36,7 +36,7 @@ Description: "Profile for clinical diagnosis of rare diseases with HPO phenotype
 * code.coding ^slicing.rules = #open
 * code.coding contains
     hpo 0..* MS
-* code.coding[hpo] from mii-vs-se-hpo-phenotypic-observation-codes (required)
+* code.coding[hpo] from mii-vs-seltene-hpo-phenotypic-observation-codes (required)
 * code.coding[hpo] ^patternCoding.system = "http://human-phenotype-ontology.org"
 * code.coding[hpo] ^short = "HPO Phenotype code"
 * code.coding[hpo] ^definition = "Human Phenotype Ontology code describing the phenotypic manifestation of the rare disease"
@@ -50,7 +50,7 @@ Description: "Profile for clinical diagnosis of rare diseases with HPO phenotype
 // Evidence should reference Observations with HPO-coded symptoms
 * evidence.code MS
 * evidence.code ^short = "Manifestation/symptom supporting the diagnosis"
-* evidence.code.coding from mii-vs-se-hpo-phenotypic-observation-codes (extensible)
+* evidence.code.coding from mii-vs-seltene-hpo-phenotypic-observation-codes (extensible)
 * evidence.detail MS
 * evidence.detail ^short = "Reference to Observation resources containing HPO-coded symptoms"
 * evidence.detail only Reference(Observation)

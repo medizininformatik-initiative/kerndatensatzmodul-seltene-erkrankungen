@@ -1,5 +1,5 @@
-Instance: mii-exa-se-symptom-condition
-InstanceOf: MII_PR_SE_Symptom_Condition
+Instance: mii-exa-seltene-symptom-condition
+InstanceOf: MII_PR_Seltene_Symptom_Condition
 Usage: #example
 Title: "MII Example SE Symptom Condition"
 Description: "Example of a symptom condition in the context of rare diseases using HPO codes"
@@ -39,7 +39,7 @@ Description: "Example of a symptom condition in the context of rare diseases usi
 
 // Evidence supporting the condition
 * evidence.code = $HPO#HP:0001324 "Muscle weakness"
-* evidence.detail = Reference(Observation/mii-exa-se-hpo-assessment)
+* evidence.detail = Reference(Observation/mii-exa-seltene-hpo-assessment)
 
 // Additional notes
 * note.text = "Patient reports progressive muscle weakness affecting daily activities, particularly climbing stairs and lifting objects. Symptom has been gradually worsening over the past 2 years."

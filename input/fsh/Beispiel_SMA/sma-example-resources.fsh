@@ -13,7 +13,7 @@ Description: "Neugeborenes Mädchen mit bestätigter SMA Typ 1"
 
 // SMA Diagnosis - Suspected (from Newborn Screening)
 Instance: condition-sma-suspected
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
+InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "SMA Verdacht - Neugeborenenscreening"
 Description: "Verdacht auf SMA beim Neugeborenenscreening"
@@ -34,7 +34,7 @@ Description: "Verdacht auf SMA beim Neugeborenenscreening"
 
 // SMA Diagnosis - Clinical (Confirmed after initial assessment)
 Instance: condition-sma-clinical
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
+InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "SMA Klinische Diagnose"
 Description: "Klinische Diagnose SMA Typ 1 bei Erstvorstellung"
@@ -58,7 +58,7 @@ Description: "Klinische Diagnose SMA Typ 1 bei Erstvorstellung"
 
 // SMA Diagnosis - Genetic (Parallel diagnosis)
 Instance: condition-sma-genetic
-InstanceOf: MII_PR_SE_GeneticDiagnosis
+InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "SMA Genetische Diagnose"
 Description: "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion"
@@ -84,7 +84,7 @@ Description: "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion"
 
 // Family History - Great-grandmother with unknown muscle disease
 Instance: family-history-001
-InstanceOf: MII_PR_SE_Familienanamnese
+InstanceOf: MII_PR_Seltene_Familienanamnese
 Usage: #example
 Title: "Familienanamnese - Urgroßmutter mit Muskelerkrankung"
 Description: "Urgroßmutter mit unbekannter Muskelerkrankung"
@@ -276,7 +276,7 @@ Description: "Troponin T hochsensitiv bei Nachsorge"
 
 // Clinical Impression - Erstvorstellung
 Instance: clinical-impression-erstvorstellung
-InstanceOf: MII_PR_SE_ClinicalImpression
+InstanceOf: MII_PR_Seltene_ClinicalImpression
 Usage: #example
 Title: "Klinische Beurteilung - Erstvorstellung"
 Description: "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum"
@@ -302,7 +302,7 @@ Description: "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum"
 
 // Clinical Impression - Nachsorge
 Instance: clinical-impression-nachsorge
-InstanceOf: MII_PR_SE_ClinicalImpression
+InstanceOf: MII_PR_Seltene_ClinicalImpression
 Usage: #example
 Title: "Klinische Beurteilung - Nachsorge"
 Description: "Nachsorgeuntersuchung nach Gentherapie"

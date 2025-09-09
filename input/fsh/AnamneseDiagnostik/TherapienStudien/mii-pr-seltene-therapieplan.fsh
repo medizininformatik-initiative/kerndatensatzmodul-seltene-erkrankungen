@@ -1,6 +1,6 @@
-Profile: MII_PR_SE_Therapieplan
+Profile: MII_PR_Seltene_Therapieplan
 Parent: CarePlan
-Id: mii-pr-se-therapieplan
+Id: mii-pr-seltene-therapieplan
 Title: "MII PR SE Therapieplan"
 Description: "Therapieplan"
 
@@ -26,20 +26,20 @@ Description: "Therapieplan"
 * activity ^slicing.description = "Slice für Empfehlung zum weiteren Vorgehen auf Basis des referenzierten Ressourcentyps"
 * activity ^slicing.ordered = false
 
-* activity contains MII_PR_SE_Therapieempfehlung 0..* MS
-* activity[MII_PR_SE_Therapieempfehlung] ^short = "Therapieempfehlung Systemische Therapie"
-* activity[MII_PR_SE_Therapieempfehlung] ^definition = "Therapieempfehlung für eine medikamentöse Systemische Therapie"
-* activity[MII_PR_SE_Therapieempfehlung] ^comment = "Kann keine Therapieempfehlung für eine Systemische Therapie gegeben werden, muss dies als Begründung unter `detail.statusReason` angegeben werden"
-* activity[MII_PR_SE_Therapieempfehlung].reference 0..1 MS
-* activity[MII_PR_SE_Therapieempfehlung].reference only Reference(
-    MII_PR_SE_Therapieempfehlung or
-    MII_PR_SE_Therapieempfehlung_Kombination or
+* activity contains MII_PR_Seltene_Therapieempfehlung 0..* MS
+* activity[MII_PR_Seltene_Therapieempfehlung] ^short = "Therapieempfehlung Systemische Therapie"
+* activity[MII_PR_Seltene_Therapieempfehlung] ^definition = "Therapieempfehlung für eine medikamentöse Systemische Therapie"
+* activity[MII_PR_Seltene_Therapieempfehlung] ^comment = "Kann keine Therapieempfehlung für eine Systemische Therapie gegeben werden, muss dies als Begründung unter `detail.statusReason` angegeben werden"
+* activity[MII_PR_Seltene_Therapieempfehlung].reference 0..1 MS
+* activity[MII_PR_Seltene_Therapieempfehlung].reference only Reference(
+    MII_PR_Seltene_Therapieempfehlung or
+    MII_PR_Seltene_Therapieempfehlung_Kombination or
     MedicationRequest or
     RequestGroup
 )
 
-* activity[MII_PR_SE_Therapieempfehlung].detail MS // NOTE: Kartinalität min = 1 aus Elterprofil geerbet
-* activity[MII_PR_SE_Therapieempfehlung].detail.statusReason from MII_VS_SE_Empfehlung_StatusBegruendung (required)
+* activity[MII_PR_Seltene_Therapieempfehlung].detail MS // NOTE: Kartinalität min = 1 aus Elterprofil geerbet
+* activity[MII_PR_Seltene_Therapieempfehlung].detail.statusReason from MII_VS_Seltene_Empfehlung_StatusBegruendung (required)
 
 * activity contains HumangenetischeBeratung 0..1 MS
 * activity[HumangenetischeBeratung] ^short = "Empfehlung Human-genetische Beratung"
@@ -63,7 +63,7 @@ Description: "Therapieplan"
 * activity[Studieneinschlussempfehlung] ^short = "Studieneinschlussempfehlung"
 * activity[Studieneinschlussempfehlung] ^definition = "Anfrage zum Studieneinschluss"
 * activity[Studieneinschlussempfehlung].reference 1..1 MS
-* activity[Studieneinschlussempfehlung].reference only Reference(MII_PR_SE_Studieneinschluss_Anfrage)
+* activity[Studieneinschlussempfehlung].reference only Reference(MII_PR_Seltene_Studieneinschluss_Anfrage)
 
 // Siehe Konversion R5 nach R4: https://build.fhir.org/ig/HL7/fhir-cross-version/StructureMap-CarePlan5to4.html
 
@@ -90,8 +90,8 @@ Description: "Therapieplan"
 * supportingInfo[Behandlungsepisode] only Reference(MII_PR_MTB_Behandlungsepisode or ClinicalImpression)
 */
 
-Instance: mii-exa-se-therapieplan
-InstanceOf: MII_PR_SE_Therapieplan
+Instance: mii-exa-seltene-therapieplan
+InstanceOf: MII_PR_Seltene_Therapieplan
 Usage: #example
 Title: "Therapieplan Example"
 Description: "Example of a Therapieplan for a patient."
@@ -100,5 +100,5 @@ Description: "Example of a Therapieplan for a patient."
 * description = "Therapieplan für den Patienten"
 * subject = Reference(Patient/example-patient)
 * intent = #proposal
-* activity[MII_PR_SE_Therapieempfehlung].reference = Reference(MedicationRequest/example-therapieempfehlung)
+* activity[MII_PR_Seltene_Therapieempfehlung].reference = Reference(MedicationRequest/example-therapieempfehlung)
 * activity[Studieneinschlussempfehlung].reference = Reference(ServiceRequest/example-studieneinschluss)

@@ -1,5 +1,5 @@
-ValueSet: MII_VS_SE_Empfehlung_StatusBegruendung
-Id: mii-vs-se-empfehlung-status-begruendung
+ValueSet: MII_VS_Seltene_Empfehlung_StatusBegruendung
+Id: mii-vs-seltene-empfehlung-status-begruendung
 Title: "MII VS SE Empfehlung Status Begründung"
 Description: "ValueSet für Begründung bei fehlender Empfehlung"
-* include codes from system MII_CS_SE_Empfehlung_StatusBegruendung
+* include codes from system MII_CS_Seltene_Empfehlung_StatusBegruendung

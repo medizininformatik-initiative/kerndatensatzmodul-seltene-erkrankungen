@@ -1,5 +1,5 @@
-Extension: MII_EX_SE_Empfehlung_Prioritaet
-Id: mii-ex-se-empfehlung-prioritaet
+Extension: MII_EX_Seltene_Empfehlung_Prioritaet
+Id: mii-ex-seltene-empfehlung-prioritaet
 Context: MedicationRequest, RequestGroup, ServiceRequest
 Title: "MII EX SE Empfehlung Priorität"
 Description: "Priorität der (einzelnen) Empfehlung"

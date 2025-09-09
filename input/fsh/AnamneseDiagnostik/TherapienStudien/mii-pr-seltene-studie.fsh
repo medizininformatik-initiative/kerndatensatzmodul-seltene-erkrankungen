@@ -1,6 +1,6 @@
-Profile: MII_PR_SE_Studie
+Profile: MII_PR_Seltene_Studie
 Parent: MII_PR_Studie_Studie
-Id: mii-pr-se-studie
+Id: mii-pr-seltene-studie
 Title: "MII PR SE Studie"
 Description: "SE Studie"
 
@@ -13,7 +13,7 @@ Description: "SE Studie"
 
 /*
 * identifier contains NCT 0..1
-* identifier[NCT].system = $mii-ns-se-nct
+* identifier[NCT].system = $mii-ns-seltene-nct
 * identifier[NCT].value 1..1 MS
 */
 

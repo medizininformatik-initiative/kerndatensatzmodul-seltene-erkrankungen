@@ -1,5 +1,5 @@
-Extension: MII_EX_SE_Empfehlung_Publikation
-Id: mii-ex-se-empfehlung-publikation
+Extension: MII_EX_Seltene_Empfehlung_Publikation
+Id: mii-ex-seltene-empfehlung-publikation
 Context: MedicationRequest, RequestGroup, ServiceRequest
 Title: "MII EX SE Empfehlung Publikation"
 Description: "Verweis auf Publikation der (einzelnen) Empfehlung"

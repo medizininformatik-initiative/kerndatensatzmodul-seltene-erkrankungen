@@ -1,5 +1,5 @@
-Profile:     MII_PR_SE_Symptom_Condition
-Id:          mii-pr-se-symptom-condition
+Profile:     MII_PR_Seltene_Symptom_Condition
+Id:          mii-pr-seltene-symptom-condition
 Parent:      Condition
 Title:       "MII Profile SE Symptom Condition"
 Description: "Profile for symptom-based conditions in the context of rare diseases. This profile captures symptomatic conditions with temporal characteristics, complementing the HPO Assessment Observation profile."
@@ -49,7 +49,7 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 
 // Code constraints - using HPO for symptom coding
 * code 1..1 
-* code from mii-vs-se-hpo-phenotypic-observation-codes (extensible)
+* code from mii-vs-seltene-hpo-phenotypic-observation-codes (extensible)
 * code ^short = "HPO-basierter Symptom-Erkrankungs-Code"
 * code ^definition = "Code zur Identifikation der Symptom-Erkrankung, vorzugsweise unter Verwendung von Human Phenotype Ontology (HPO) Codes"
 * code.coding MS 
@@ -89,7 +89,7 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 
 
 // Severity constraints
-* severity from mii-vs-se-hpo-severity-values (extensible)
+* severity from mii-vs-seltene-hpo-severity-values (extensible)
 * severity ^short = "Schweregrad der Symptom-Erkrankung"
 * severity ^definition = "Schweregradbewertung der Symptom-Erkrankung unter Verwendung von HPO-Schweregrad-Werten"
 
@@ -104,13 +104,13 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 
 // Evidence constraints
 * evidence ^short = "Unterstützende Evidenz für die Symptom-Erkrankung"
-* evidence.code from mii-vs-se-hpo-phenotypic-observation-codes (extensible)
+* evidence.code from mii-vs-seltene-hpo-phenotypic-observation-codes (extensible)
 * evidence.detail only Reference(Observation or DocumentReference or DiagnosticReport)
 * evidence.detail ^short = "Unterstützende Beobachtungen oder Dokumente"
 
 // Stage constraints for syndrome progression
 * stage ^short = "Stadium oder Progression der Symptom-Erkrankung"
-* stage.summary from mii-vs-se-hpo-severity-values (extensible)
+* stage.summary from mii-vs-seltene-hpo-severity-values (extensible)
 * stage.assessment only Reference(Observation or DiagnosticReport)
 
 // Body site constraints

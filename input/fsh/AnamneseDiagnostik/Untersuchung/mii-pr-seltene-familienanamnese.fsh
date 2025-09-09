@@ -1,9 +1,9 @@
-Profile: MII_PR_SE_Familienanamnese
+Profile: MII_PR_Seltene_Familienanamnese
 Parent: https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese
-Id: mii-pr-se-familienanamnese
+Id: mii-pr-seltene-familienanamnese
 Title: "MII PR SE Familienanamnese"
 Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil."
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-familienanamnese"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft

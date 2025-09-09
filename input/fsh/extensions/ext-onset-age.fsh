@@ -1,5 +1,5 @@
 Extension: OnsetAge
-Id: mii-ext-se-onset-age
+Id: mii-ext-seltene-onset-age
 Title: "Onset Age Extension"
 Description: "Extension to capture the age at onset of a condition. This backports the onsetAge functionality from FHIR R5 to R4."
 Context: Condition.onset[x]

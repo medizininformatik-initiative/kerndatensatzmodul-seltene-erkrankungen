@@ -7,7 +7,7 @@
 
 // Example 1: Marfan Syndrome - Clinically Excluded
 Instance: example-marfan-excluded-clinical
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
+InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Marfan-Syndrom - Klinisch ausgeschlossen"
 Description: "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose"
@@ -34,7 +34,7 @@ Description: "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose"
 
 // Example 2: Ehlers-Danlos Syndrome - Clinically Excluded
 Instance: example-eds-excluded-clinical
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
+InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Ehlers-Danlos-Syndrom - Ausgeschlossen"
 Description: "Differentialdiagnose EDS ausgeschlossen"
@@ -60,7 +60,7 @@ Description: "Differentialdiagnose EDS ausgeschlossen"
 
 // Example 3: SMA - Genetically Excluded
 Instance: example-sma-excluded-genetic
-InstanceOf: MII_PR_SE_GeneticDiagnosis
+InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "SMA - Genetisch ausgeschlossen"
 Description: "Spinale Muskelatrophie genetisch ausgeschlossen"
@@ -84,7 +84,7 @@ Description: "Spinale Muskelatrophie genetisch ausgeschlossen"
 
 // Example 4: Duchenne MD - Genetically Excluded, Becker MD confirmed instead
 Instance: example-dmd-excluded-bmd-confirmed
-InstanceOf: MII_PR_SE_GeneticDiagnosis
+InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Duchenne ausgeschlossen - Becker bestätigt"
 Description: "Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muskeldystrophie"
@@ -107,7 +107,7 @@ Description: "Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muske
 
 // Example 5: Cystic Fibrosis - Excluded after positive screening
 Instance: example-cf-excluded-after-screening
-InstanceOf: MII_PR_SE_GeneticDiagnosis
+InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Mukoviszidose - Nach positivem Screening ausgeschlossen"
 Description: "CF nach auffälligem Neugeborenenscreening genetisch ausgeschlossen"
@@ -136,7 +136,7 @@ Description: "CF nach auffälligem Neugeborenenscreening genetisch ausgeschlosse
 
 // Example 6: Multiple Excluded Differential Diagnoses
 Instance: example-metabolic-myopathy-excluded
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
+InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Metabolische Myopathie - Ausgeschlossen"
 Description: "Metabolische Myopathie als Differentialdiagnose ausgeschlossen"
