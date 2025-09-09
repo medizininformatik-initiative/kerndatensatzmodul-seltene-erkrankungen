@@ -67,18 +67,18 @@
         "mustSupport": true
       },
       {
-        "id": "CarePlan.activity:MII_PR_Seltene_Therapieempfehlung",
+        "id": "CarePlan.activity:MedikamentoesTherapie",
         "path": "CarePlan.activity",
-        "sliceName": "MII_PR_Seltene_Therapieempfehlung",
-        "short": "Therapieempfehlung Systemische Therapie",
-        "definition": "Therapieempfehlung für eine medikamentöse Systemische Therapie",
-        "comment": "Kann keine Therapieempfehlung für eine Systemische Therapie gegeben werden, muss dies als Begründung unter `detail.statusReason` angegeben werden",
+        "sliceName": "MedikamentoesTherapie",
+        "short": "Medikamentöse Therapieempfehlung",
+        "definition": "Therapieempfehlung für eine medikamentöse Therapie (Systemtherapie, gezielte Therapie, Präventivmedikation, Gentherapie, Kombinationstherapie)",
+        "comment": "Referenziert MedicationRequest-basierte Profile für alle medikamentösen Therapien",
         "min": 0,
         "max": "*",
         "mustSupport": true
       },
       {
-        "id": "CarePlan.activity:MII_PR_Seltene_Therapieempfehlung.reference",
+        "id": "CarePlan.activity:MedikamentoesTherapie.reference",
         "path": "CarePlan.activity.reference",
         "type": [
           {
@@ -94,12 +94,50 @@
         "mustSupport": true
       },
       {
-        "id": "CarePlan.activity:MII_PR_Seltene_Therapieempfehlung.detail",
+        "id": "CarePlan.activity:MedikamentoesTherapie.detail",
         "path": "CarePlan.activity.detail",
         "mustSupport": true
       },
       {
-        "id": "CarePlan.activity:MII_PR_Seltene_Therapieempfehlung.detail.statusReason",
+        "id": "CarePlan.activity:MedikamentoesTherapie.detail.statusReason",
+        "path": "CarePlan.activity.detail.statusReason",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-empfehlung-status-begruendung"
+        }
+      },
+      {
+        "id": "CarePlan.activity:NichtMedikamentoesTherapie",
+        "path": "CarePlan.activity",
+        "sliceName": "NichtMedikamentoesTherapie",
+        "short": "Nicht-medikamentöse Therapieempfehlung",
+        "definition": "Therapieempfehlung für nicht-medikamentöse Interventionen (Ernährungstherapie, Prophylaxe, Früherkennung, andere)",
+        "comment": "Referenziert ServiceRequest-basierte Profile für alle nicht-medikamentösen Therapien",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:NichtMedikamentoesTherapie.reference",
+        "path": "CarePlan.activity.reference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes",
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:NichtMedikamentoesTherapie.detail",
+        "path": "CarePlan.activity.detail",
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:NichtMedikamentoesTherapie.detail.statusReason",
         "path": "CarePlan.activity.detail.statusReason",
         "binding": {
           "strength": "required",
@@ -120,38 +158,14 @@
         "id": "CarePlan.activity:HumangenetischeBeratung.reference",
         "path": "CarePlan.activity.reference",
         "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "CarePlan.activity:HistologieEvaluation",
-        "path": "CarePlan.activity",
-        "sliceName": "HistologieEvaluation",
-        "short": "Empfehlung Histologie-Evaluation",
-        "definition": "Auftrag zur (erneuten) Histologie-Evaluation",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "CarePlan.activity:HistologieEvaluation.reference",
-        "path": "CarePlan.activity.reference",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "CarePlan.activity:Biopsie",
-        "path": "CarePlan.activity",
-        "sliceName": "Biopsie",
-        "short": "Empfehlung Biopsie",
-        "definition": "Auftrag zur (erneuten) Biopsie",
-        "min": 0,
-        "max": "*",
-        "mustSupport": true
-      },
-      {
-        "id": "CarePlan.activity:Biopsie.reference",
-        "path": "CarePlan.activity.reference",
-        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {

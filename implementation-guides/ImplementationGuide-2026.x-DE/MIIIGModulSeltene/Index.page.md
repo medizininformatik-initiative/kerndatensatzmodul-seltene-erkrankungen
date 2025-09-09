@@ -17,19 +17,21 @@ Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR-Prof
 
 | Veröffentlichung   |   |
 |---------|---|
-| Datum   | 31.08.2025 |
-| Version | 2025.0.1        |
-| Status  | Draft       |
+| Datum   | 10.09.2025 |
+| Version | 2026.0.0-ballot        |
+| Status  | Ballot       |
 | Realm   | DE          | 
 
 ## Inhaltsverzeichnis
 
 {{index:root}}
 ## Impressum
-Dieser Leitfaden ist im Rahmen der Medizininformatik Initative erstellt wurden und unterliegt per Governance Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V..
+Dieser Leitfaden ist im Rahmen der Medizininformatik Initiative erstellt worden und unterliegt per Governance-Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V.
 
 ## Ansprechpartner
-* Josef Schepers, Berlin Institute of Health (Charité) 
+* Josef Schepers, Berlin Institute of Health (Charité) - Modulsprecher
+* Michele Zoch, Uniklinik Dresden - Modulsprecher
+* Martin Bartos, Klinikum Chemnitz - Modulsprecher
 * Thomas Debertshäuser, Berlin Institute of Health (Charité)
 * Miriam Hübner, Berlin Institute of Health (Charité) 
 * Steffen Sander, Berlin Institute of Health (Charité) 
@@ -37,19 +39,17 @@ Dieser Leitfaden ist im Rahmen der Medizininformatik Initative erstellt wurden u
 * Claudia Finis, Berlin Institute of Health (Charité)
 * Stefanie Rudolph, Berlin Institute of Health (Charité)
 * Christine Mundlos, ACHSE e.V.
-* Michele Zoch, Uniklinik Dresden
 * Clemens Hentrich, Uniklinik Dresden
 * Jessica Vasseur, Uniklinik Frankfurt am Main
 * Susanne Vorhagen, Uniklinik Köln
 * Romina Blasini, Uniklinik Gießen
 * Patrik Bovio, Uniklinik Freiburg
-* Martin Bartos, Klinikum Chemnitz
 * Karoline Buckow, TMF – Technologie- und Methodenplattform für die vernetzte medizinische Forschung e.V.
 * Franziska Klepka, TMF – Technologie- und Methodenplattform für die vernetzte medizinische Forschung e.V.
 
 Fragen zu der vorliegenden Publikation können jederzeit unter [chat.fhir.org](https://chat.fhir.org) im Stream 'german/mi-initiative' gestellt werden.
 
-Anmerkungen und Kritik wird in Form von 'Issues' im [GitHub-Projekt](https://github.com/medizininformatik-initiative/kerndatensatzmodul-se/issues) stets gern entgegengenommen: .
+Anmerkungen und Kritik werden in Form von 'Issues' im [GitHub-Projekt](https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/issues) stets gern entgegengenommen.
 
 ## Autoren (in alphabetischer Reihenfolge)
 * Thomas Debertshäuser, Berlin Institute of Health (Charité)

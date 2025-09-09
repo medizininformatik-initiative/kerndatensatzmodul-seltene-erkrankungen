@@ -26,39 +26,44 @@ Description: "Therapieplan"
 * activity ^slicing.description = "Slice für Empfehlung zum weiteren Vorgehen auf Basis des referenzierten Ressourcentyps"
 * activity ^slicing.ordered = false
 
-* activity contains MII_PR_Seltene_Therapieempfehlung 0..* MS
-* activity[MII_PR_Seltene_Therapieempfehlung] ^short = "Therapieempfehlung Systemische Therapie"
-* activity[MII_PR_Seltene_Therapieempfehlung] ^definition = "Therapieempfehlung für eine medikamentöse Systemische Therapie"
-* activity[MII_PR_Seltene_Therapieempfehlung] ^comment = "Kann keine Therapieempfehlung für eine Systemische Therapie gegeben werden, muss dies als Begründung unter `detail.statusReason` angegeben werden"
-* activity[MII_PR_Seltene_Therapieempfehlung].reference 0..1 MS
-* activity[MII_PR_Seltene_Therapieempfehlung].reference only Reference(
+// Medication-based therapy recommendations
+* activity contains MedikamentoesTherapie 0..* MS
+* activity[MedikamentoesTherapie] ^short = "Medikamentöse Therapieempfehlung"
+* activity[MedikamentoesTherapie] ^definition = "Therapieempfehlung für eine medikamentöse Therapie (Systemtherapie, gezielte Therapie, Präventivmedikation, Gentherapie, Kombinationstherapie)"
+* activity[MedikamentoesTherapie] ^comment = "Referenziert MedicationRequest-basierte Profile für alle medikamentösen Therapien"
+* activity[MedikamentoesTherapie].reference 0..1 MS
+* activity[MedikamentoesTherapie].reference only Reference(
     MII_PR_Seltene_Therapieempfehlung or
     MII_PR_Seltene_Therapieempfehlung_Kombination or
     MedicationRequest or
     RequestGroup
 )
+* activity[MedikamentoesTherapie].detail MS // NOTE: Kardinalität min = 1 aus Elternprofil geerbt
+* activity[MedikamentoesTherapie].detail.statusReason from MII_VS_Seltene_Empfehlung_StatusBegruendung (required)
 
-* activity[MII_PR_Seltene_Therapieempfehlung].detail MS // NOTE: Kartinalität min = 1 aus Elterprofil geerbet
-* activity[MII_PR_Seltene_Therapieempfehlung].detail.statusReason from MII_VS_Seltene_Empfehlung_StatusBegruendung (required)
+// Non-medication therapy recommendations
+* activity contains NichtMedikamentoesTherapie 0..* MS
+* activity[NichtMedikamentoesTherapie] ^short = "Nicht-medikamentöse Therapieempfehlung"
+* activity[NichtMedikamentoesTherapie] ^definition = "Therapieempfehlung für nicht-medikamentöse Interventionen (Ernährungstherapie, Prophylaxe, Früherkennung, andere)"
+* activity[NichtMedikamentoesTherapie] ^comment = "Referenziert ServiceRequest-basierte Profile für alle nicht-medikamentösen Therapien"
+* activity[NichtMedikamentoesTherapie].reference 0..1 MS
+* activity[NichtMedikamentoesTherapie].reference only Reference(
+    MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes or
+    ServiceRequest
+)
+* activity[NichtMedikamentoesTherapie].detail MS // NOTE: Kardinalität min = 1 aus Elternprofil geerbt
+* activity[NichtMedikamentoesTherapie].detail.statusReason from MII_VS_Seltene_Empfehlung_StatusBegruendung (required)
 
+// Human genetic counseling
 * activity contains HumangenetischeBeratung 0..1 MS
 * activity[HumangenetischeBeratung] ^short = "Empfehlung Human-genetische Beratung"
 * activity[HumangenetischeBeratung] ^definition = "Auftrag zur (erneuten) Human-genetischen Beratung"
 * activity[HumangenetischeBeratung].reference 1..1 MS
-//* activity[HumangenetischeBeratung].reference only Reference(MII_PR_MTB_Humangenetische_Beratung_Auftrag)
+* activity[HumangenetischeBeratung].reference only Reference(ServiceRequest)
+// NOTE: Specific profile for genetic counseling can be added when available
+//* activity[HumangenetischeBeratung].reference only Reference(MII_PR_Seltene_Humangenetische_Beratung_Auftrag)
 
-* activity contains HistologieEvaluation 0..1 MS
-* activity[HistologieEvaluation] ^short = "Empfehlung Histologie-Evaluation"
-* activity[HistologieEvaluation] ^definition = "Auftrag zur (erneuten) Histologie-Evaluation"
-* activity[HistologieEvaluation].reference 1..1 MS
-//* activity[HistologieEvaluation].reference only Reference(MII_PR_MTB_Histologie_Evaluation_Auftrag)
-
-* activity contains Biopsie 0..* MS
-* activity[Biopsie] ^short = "Empfehlung Biopsie"
-* activity[Biopsie] ^definition = "Auftrag zur (erneuten) Biopsie"
-* activity[Biopsie].reference 1..1 MS
-//* activity[Biopsie].reference only Reference(MII_PR_MTB_Biopsie_Auftrag)
-
+// Study inclusion recommendations
 * activity contains Studieneinschlussempfehlung 0..* MS
 * activity[Studieneinschlussempfehlung] ^short = "Studieneinschlussempfehlung"
 * activity[Studieneinschlussempfehlung] ^definition = "Anfrage zum Studieneinschluss"
@@ -67,14 +72,17 @@ Description: "Therapieplan"
 
 // Siehe Konversion R5 nach R4: https://build.fhir.org/ig/HL7/fhir-cross-version/StructureMap-CarePlan5to4.html
 
-
-// TODO: Allgemeine Ressourcen vs. konkrete Profile besprechen
-// NOTE: Umgesetzte "Therapieempfehlung" -> Procedure, MedicationStatement
-// NOTE: Umgesetzte "HumangenetischeBeratung" -> DiagnosticReport, Observation
-// NOTE: Umgesetzte "HistologieEvaluation" -> DiagnosticReport, Observation
-// NOTE: Umgesetzte "Biopsie" -> DiagnosticReport, Observation
-// NOTE: Umgesetzte "Studieneinschlussempfehlung" -> MedicationStatement, Consent
-// NOTE: Umgesetzte begleitende Maßnahmen, z.B. Monitoring -> Procedure
+// Implementation Notes:
+// - Medication therapy: MedicationRequest-based profiles for systemic, targeted, preventive, gene therapy
+// - Non-medication therapy: ServiceRequest-based profiles for nutrition, prophylaxis, early detection
+// - Study inclusion: ServiceRequest-based profile for clinical trial referrals
+// - Genetic counseling: ServiceRequest-based profile for genetic consultation requests
+// 
+// When implemented:
+// - Medication therapy -> MedicationStatement/MedicationAdministration
+// - Non-medication therapy -> Procedure/Observation
+// - Study inclusion -> Consent/ResearchSubject
+// - Genetic counseling -> DiagnosticReport/ClinicalImpression
 
 
 * supportingInfo ^slicing.discriminator.type = #type
@@ -100,5 +108,6 @@ Description: "Example of a Therapieplan for a patient."
 * description = "Therapieplan für den Patienten"
 * subject = Reference(Patient/example-patient)
 * intent = #proposal
-* activity[MII_PR_Seltene_Therapieempfehlung].reference = Reference(MedicationRequest/example-therapieempfehlung)
+* activity[MedikamentoesTherapie].reference = Reference(MedicationRequest/example-therapieempfehlung)
+* activity[NichtMedikamentoesTherapie].reference = Reference(ServiceRequest/example-nichtmed-therapie)
 * activity[Studieneinschlussempfehlung].reference = Reference(ServiceRequest/example-studieneinschluss)

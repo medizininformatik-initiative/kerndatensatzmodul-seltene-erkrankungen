@@ -1,6 +1,6 @@
 ## CapabilityStatement
 
-Das [CapabilityStatement](https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/mii-cps-seltene-capabilitystatement) definiert die erwarteten Fähigkeiten eines konformen Systems zur Implementierung des Kerndatensatzmoduls Seltene Erkrankungen der Medizininformatik-Initiative.
+Das [CapabilityStatement](https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata) definiert die erwarteten Fähigkeiten eines konformen Systems zur Implementierung des Kerndatensatzmoduls Seltene Erkrankungen der Medizininformatik-Initiative.
 
 Es beschreibt die verpflichtenden Interaktionen, die ein konformes System unterstützen MUSS, einschließlich:
 
@@ -45,4 +45,4 @@ Systeme, die Konformität zu diesem Modul beanspruchen, MÜSSEN:
 
 Das vollständige CapabilityStatement mit allen technischen Details kann hier eingesehen werden:
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/mii-cps-seltene-capabilitystatement, buttons}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata, buttons}}

@@ -150,13 +150,13 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 
 ### Verwendete Profile
 - **Patient**: MII KDS Patient
-- **Diagnose**: MII PR SE Diagnose
-- **Symptom/Phänotyp**: MII PR SE Symptom
+- **Diagnose**: MII PR Seltene Diagnose
+- **Symptom/Phänotyp**: MII PR Seltene Symptom
 - **Prozedur**: MII PR Prozedur
 - **MedicationStatement**: MII PR Medikation MedicationStatement
 - **Observation**: MII PR Labor Observation
 - **Encounter**: MII PR Encounter
-- **ClinicalImpression**: MII PR SE ClinicalImpression
+- **ClinicalImpression**: MII PR Seltene ClinicalImpression
 
 ### Ressourcen-Übersicht
 
@@ -433,9 +433,13 @@ endlegend
 
 ## Implementierung
 
-Die vollständigen FHIR-Ressourcen sind in folgenden Dateien definiert:
-- **Einzelressourcen**: [`input/fsh/marfan-example-resources.fsh`](../fsh/marfan-example-resources.fsh)
-- **Transaction Bundle**: [`input/fsh/marfan-transaction-bundle.fsh`](../fsh/marfan-transaction-bundle.fsh)
+**Status**: Die FHIR-Ressourcen für dieses Fallbeispiel befinden sich derzeit in der Entwicklung.
+
+Die vollständigen FHIR-Ressourcen werden in folgenden Dateien implementiert (geplant):
+- **Einzelressourcen**: `input/fsh/marfan-example-resources.fsh`
+- **Transaction Bundle**: `input/fsh/marfan-transaction-bundle.fsh`
+
+Dieses Dokument stellt die semantischen Annotationen und das konzeptuelle Mapping dar. Die technische Implementierung in FSH erfolgt in einer zukünftigen Version.
 
 
 

@@ -121,9 +121,9 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 
 ### Verwendete Profile
 - **Patient**: MII KDS Patient
-- **Diagnose**: MII PR SE Diagnose
+- **Diagnose**: MII PR Seltene Diagnose
 - **Molekulargenetik**: MII PR MolGen Variante
-- **Familienanamnese**: MII PR SE Familienanamnese
+- **Familienanamnese**: MII PR Seltene Familienanamnese
 - **Laborwerte**: MII PR Labor Observation
 - **Prozedur**: MII PR Prozedur
 - **Encounter**: MII PR Encounter
