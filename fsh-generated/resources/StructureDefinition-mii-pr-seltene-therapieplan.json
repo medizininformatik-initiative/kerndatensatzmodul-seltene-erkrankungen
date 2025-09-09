@@ -1,0 +1,183 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-seltene-therapieplan",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan",
+  "name": "MII_PR_Seltene_Therapieplan",
+  "title": "MII PR SE Therapieplan",
+  "status": "draft",
+  "description": "Therapieplan",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "CarePlan",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CarePlan",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "CarePlan.status",
+        "path": "CarePlan.status",
+        "definition": "Status der Umsetzung des beschlossenen Therapieplans",
+        "comment": "\n    active: Empfehlung bzw. Therapieoption in Umsetzung (Regelfall), \n    revoked: Fall ist abgeschlossen, \n    completed: Alle Empfehlungen bzw. Therapieoptionen ausgeschöpft oder Patient verstorben"
+      },
+      {
+        "id": "CarePlan.description",
+        "path": "CarePlan.description",
+        "short": "Protokollauszug",
+        "definition": "Protokollauszug aus dem Beschluss",
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.created",
+        "path": "CarePlan.created",
+        "short": "Erstellungsdatum",
+        "definition": "Erstellungsdatum des Therapieplans",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.supportingInfo",
+        "path": "CarePlan.supportingInfo",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "description": "Slice für weitere Informationen",
+          "ordered": false
+        }
+      },
+      {
+        "id": "CarePlan.activity",
+        "path": "CarePlan.activity",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "reference.resolve()"
+            }
+          ],
+          "rules": "open",
+          "description": "Slice für Empfehlung zum weiteren Vorgehen auf Basis des referenzierten Ressourcentyps",
+          "ordered": false
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:MII_PR_Seltene_Therapieempfehlung",
+        "path": "CarePlan.activity",
+        "sliceName": "MII_PR_Seltene_Therapieempfehlung",
+        "short": "Therapieempfehlung Systemische Therapie",
+        "definition": "Therapieempfehlung für eine medikamentöse Systemische Therapie",
+        "comment": "Kann keine Therapieempfehlung für eine Systemische Therapie gegeben werden, muss dies als Begründung unter `detail.statusReason` angegeben werden",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:MII_PR_Seltene_Therapieempfehlung.reference",
+        "path": "CarePlan.activity.reference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung",
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-kombination",
+              "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+              "http://hl7.org/fhir/StructureDefinition/RequestGroup"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:MII_PR_Seltene_Therapieempfehlung.detail",
+        "path": "CarePlan.activity.detail",
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:MII_PR_Seltene_Therapieempfehlung.detail.statusReason",
+        "path": "CarePlan.activity.detail.statusReason",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-empfehlung-status-begruendung"
+        }
+      },
+      {
+        "id": "CarePlan.activity:HumangenetischeBeratung",
+        "path": "CarePlan.activity",
+        "sliceName": "HumangenetischeBeratung",
+        "short": "Empfehlung Human-genetische Beratung",
+        "definition": "Auftrag zur (erneuten) Human-genetischen Beratung",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:HumangenetischeBeratung.reference",
+        "path": "CarePlan.activity.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:HistologieEvaluation",
+        "path": "CarePlan.activity",
+        "sliceName": "HistologieEvaluation",
+        "short": "Empfehlung Histologie-Evaluation",
+        "definition": "Auftrag zur (erneuten) Histologie-Evaluation",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:HistologieEvaluation.reference",
+        "path": "CarePlan.activity.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:Biopsie",
+        "path": "CarePlan.activity",
+        "sliceName": "Biopsie",
+        "short": "Empfehlung Biopsie",
+        "definition": "Auftrag zur (erneuten) Biopsie",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:Biopsie.reference",
+        "path": "CarePlan.activity.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:Studieneinschlussempfehlung",
+        "path": "CarePlan.activity",
+        "sliceName": "Studieneinschlussempfehlung",
+        "short": "Studieneinschlussempfehlung",
+        "definition": "Anfrage zum Studieneinschluss",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "CarePlan.activity:Studieneinschlussempfehlung.reference",
+        "path": "CarePlan.activity.reference",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

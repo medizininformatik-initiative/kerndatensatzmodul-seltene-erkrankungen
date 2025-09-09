@@ -1,0 +1,102 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-ex-seltene-empfehlung-prioritaet",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-prioritaet",
+  "name": "MII_EX_Seltene_Empfehlung_Prioritaet",
+  "title": "MII EX SE Empfehlung Priorität",
+  "status": "draft",
+  "description": "Priorität der (einzelnen) Empfehlung",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "MedicationRequest",
+      "type": "element"
+    },
+    {
+      "expression": "RequestGroup",
+      "type": "element"
+    },
+    {
+      "expression": "ServiceRequest",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "MII EX SE Empfehlung Priorität",
+        "definition": "Priorität der (einzelnen) Empfehlung"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-prioritaet"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Priorität",
+        "definition": "Priorität dieser Empfehlung",
+        "comment": "Wert 1 entspricht der höchsten Priorität, alle weiteren eine jeweils niedrigere Priorität",
+        "min": 1,
+        "type": [
+          {
+            "code": "decimal"
+          },
+          {
+            "code": "positiveInt"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x]:valueDecimal",
+        "path": "Extension.value[x]",
+        "sliceName": "valueDecimal",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x]:valuePositiveInt",
+        "path": "Extension.value[x]",
+        "sliceName": "valuePositiveInt",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "positiveInt"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

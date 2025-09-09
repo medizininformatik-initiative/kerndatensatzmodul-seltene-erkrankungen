@@ -1,0 +1,66 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "GeneticBasisValueSet",
+  "id": "mii-vs-seltene-genetic-basis",
+  "title": "MII VS SE Genetic Basis",
+  "description": "Value set for types of genetic basis of rare diseases",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-genetic-basis",
+  "version": "2026.0.0-ballot",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "409709004",
+            "display": "Chromosomal disorder"
+          },
+          {
+            "code": "264530000",
+            "display": "Single gene disorder"
+          },
+          {
+            "code": "16402000",
+            "display": "Mitochondrial disorder"
+          },
+          {
+            "code": "268298002",
+            "display": "Polygenic disorder"
+          },
+          {
+            "code": "429962007",
+            "display": "Disorder due to copy number variation"
+          },
+          {
+            "code": "718211000119104",
+            "display": "Disorder due to trinucleotide repeat expansion"
+          },
+          {
+            "code": "416010008",
+            "display": "Disorder due to uniparental disomy"
+          },
+          {
+            "code": "429252008",
+            "display": "Disorder due to genomic imprinting"
+          },
+          {
+            "code": "363235000",
+            "display": "Multifactorial disorder"
+          }
+        ]
+      }
+    ]
+  }
+}

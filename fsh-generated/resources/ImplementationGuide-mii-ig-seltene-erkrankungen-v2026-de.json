@@ -171,7 +171,7 @@
         },
         "name": "Beispiel Ernährungstherapie-Empfehlung",
         "description": "Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung-nicht-medikamentoes"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"
       },
       {
         "reference": {
@@ -179,7 +179,7 @@
         },
         "name": "Beispiel Früherkennungsprogramm-Empfehlung",
         "description": "Beispiel einer Empfehlung für regelmäßige Früherkennungsuntersuchungen",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung-nicht-medikamentoes"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"
       },
       {
         "reference": {
@@ -191,15 +191,15 @@
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-se-bodymassindex"
+          "reference": "Observation/mii-exa-seltene-bodymassindex"
         },
         "name": "Body Mass Index (BMI) Example",
         "description": "Example of a Body Mass Index (BMI) observation for a patient.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-bodymassindex"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex"
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-bodymassindex"
+          "reference": "StructureDefinition/mii-pr-seltene-bodymassindex"
         },
         "name": "Body Mass Index (BMI) of the patient",
         "description": "Describes the Body Mass Index (BMI) of the patient.",
@@ -267,7 +267,7 @@
         },
         "name": "Duchenne ausgeschlossen - Becker bestätigt",
         "description": "Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muskeldystrophie",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
       },
       {
         "reference": {
@@ -275,7 +275,7 @@
         },
         "name": "Duchenne-Muskeldystrophie - Genetisch bestätigt",
         "description": "Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
       },
       {
         "reference": {
@@ -307,7 +307,7 @@
         },
         "name": "Ehlers-Danlos-Syndrom - Ausgeschlossen",
         "description": "Differentialdiagnose EDS ausgeschlossen",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
       },
       {
         "reference": {
@@ -315,7 +315,7 @@
         },
         "name": "Familienanamnese - Urgroßmutter mit Muskelerkrankung",
         "description": "Urgroßmutter mit unbekannter Muskelerkrankung",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-familienanamnese"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese"
       },
       {
         "reference": {
@@ -363,7 +363,7 @@
         },
         "name": "Hereditäres Mamma- und Ovarialkarzinom-Syndrom",
         "description": "Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
       },
       {
         "reference": {
@@ -375,7 +375,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-se-hpo-phenotypic-observation-codes"
+          "reference": "ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes"
         },
         "name": "HPO Phenotypic Observation Codes",
         "description": "Human Phenotype Ontology codes for phenotypic observations",
@@ -383,7 +383,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-se-hpo-severity-values"
+          "reference": "ValueSet/mii-vs-seltene-hpo-severity-values"
         },
         "name": "HPO Severity Values",
         "description": "Codes for describing severity of phenotypic abnormalities",
@@ -391,11 +391,11 @@
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-se-hpo-assessment"
+          "reference": "Observation/mii-exa-seltene-hpo-assessment"
         },
         "name": "HPO Symptom Observation Example",
         "description": "Example of an HPO-based phenotypic observation for intellectual disability.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-hpo-assessment"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
         "reference": {
@@ -419,7 +419,7 @@
         },
         "name": "Katarakt bilateral",
         "description": "Beidseitige Katarakt bei Marfan-Syndrom",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
       },
       {
         "reference": {
@@ -451,7 +451,7 @@
         },
         "name": "Klinische Beurteilung - Erstvorstellung",
         "description": "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-impression"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression"
       },
       {
         "reference": {
@@ -459,15 +459,15 @@
         },
         "name": "Klinische Beurteilung - Nachsorge",
         "description": "Nachsorgeuntersuchung nach Gentherapie",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-impression"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression"
       },
       {
         "reference": {
-          "reference": "ClinicalImpression/clinical-impression-se-assessment"
+          "reference": "ClinicalImpression/clinical-impression-seltene-assessment"
         },
         "name": "Konsultation ZSE bei V.a. Marfan-Syndrom",
         "description": "Konsultation im Zentrum für Seltene Erkrankungen mit kardiologischer Mitbeurteilung bei V.a. Marfan-Syndrom",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-impression"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression"
       },
       {
         "reference": {
@@ -515,7 +515,7 @@
         },
         "name": "Marfan-Syndrom - Genetische Diagnose",
         "description": "Genetisch bestätigtes Marfan-Syndrom mit FBN1-Mutation",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
       },
       {
         "reference": {
@@ -523,7 +523,7 @@
         },
         "name": "Marfan-Syndrom - Klinisch ausgeschlossen",
         "description": "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
       },
       {
         "reference": {
@@ -531,7 +531,7 @@
         },
         "name": "Marfan-Syndrom - Klinische Diagnose",
         "description": "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend auf phänotypischen Merkmalen",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
       },
       {
         "reference": {
@@ -539,7 +539,7 @@
         },
         "name": "Marfan-Syndrom - Klinische Diagnose",
         "description": "Klinisch bestätigtes Marfan-Syndrom",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
       },
       {
         "reference": {
@@ -547,7 +547,7 @@
         },
         "name": "Marfan-Syndrom - Verdacht",
         "description": "Verdacht auf Marfan-Syndrom",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
       },
       {
         "reference": {
@@ -563,11 +563,11 @@
         },
         "name": "Metabolische Myopathie - Ausgeschlossen",
         "description": "Metabolische Myopathie als Differentialdiagnose ausgeschlossen",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
       },
       {
         "reference": {
-          "reference": "CapabilityStatement/mii-cps-se-capabilitystatement"
+          "reference": "CapabilityStatement/mii-cps-seltene-capabilitystatement"
         },
         "name": "MII CPS Seltene Erkrankungen CapabilityStatement",
         "description": "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Seltene Erkrankungen der Medizininformatik Initiative zu implementieren.",
@@ -575,7 +575,7 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-se-empfehlung-status-begruendung"
+          "reference": "CodeSystem/mii-cs-seltene-empfehlung-status-begruendung"
         },
         "name": "MII CS SE Empfehlung Status Begründung",
         "description": "Begründung bei fehlender Empfehlung",
@@ -583,7 +583,7 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-se-therapieempfehlung-strategie"
+          "reference": "CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"
         },
         "name": "MII CS SE Therapieempfehlung Strategie",
         "description": "Strategietypen für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq",
@@ -591,7 +591,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-se-age-of-onset"
+          "reference": "StructureDefinition/mii-ex-seltene-age-of-onset"
         },
         "name": "MII EX SE Age of Onset",
         "description": "Extension to capture the age of onset of a rare disease using structured HPO age of onset terms",
@@ -599,7 +599,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-se-empfehlung-evidenzgraduierung"
+          "reference": "StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung"
         },
         "name": "MII EX SE Empfehlung Evidenzgraduierung",
         "description": "Evidenzgraduierung der (einzelnen) Empfehlung",
@@ -607,7 +607,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-se-empfehlung-prioritaet"
+          "reference": "StructureDefinition/mii-ex-seltene-empfehlung-prioritaet"
         },
         "name": "MII EX SE Empfehlung Priorität",
         "description": "Priorität der (einzelnen) Empfehlung",
@@ -615,7 +615,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-se-empfehlung-publikation"
+          "reference": "StructureDefinition/mii-ex-seltene-empfehlung-publikation"
         },
         "name": "MII EX SE Empfehlung Publikation",
         "description": "Verweis auf Publikation der (einzelnen) Empfehlung",
@@ -623,7 +623,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-se-genetic-basis"
+          "reference": "StructureDefinition/mii-ex-seltene-genetic-basis"
         },
         "name": "MII EX SE Genetic Basis",
         "description": "Extension to describe the genetic basis of a rare disease",
@@ -631,7 +631,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-se-inheritance-pattern"
+          "reference": "StructureDefinition/mii-ex-seltene-inheritance-pattern"
         },
         "name": "MII EX SE Inheritance Pattern",
         "description": "Extension to capture the mode of inheritance of a rare disease",
@@ -639,7 +639,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-se-penetrance"
+          "reference": "StructureDefinition/mii-ex-seltene-penetrance"
         },
         "name": "MII EX SE Penetrance",
         "description": "Extension to capture the penetrance of genetic variants associated with a rare disease",
@@ -647,15 +647,15 @@
       },
       {
         "reference": {
-          "reference": "Condition/mii-exa-se-symptom-condition"
+          "reference": "Condition/mii-exa-seltene-symptom-condition"
         },
         "name": "MII Example SE Symptom Condition",
         "description": "Example of a symptom condition in the context of rare diseases using HPO codes",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-symptom-condition"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition"
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-lm-se"
+          "reference": "StructureDefinition/mii-lm-seltene"
         },
         "name": "MII LM SE",
         "description": "MII LogicalModel Modul Seltene Erkraknungen",
@@ -663,7 +663,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-blutgruppe"
+          "reference": "StructureDefinition/mii-pr-seltene-blutgruppe"
         },
         "name": "MII PR SE Blutgruppe",
         "description": "Observation-Profil für die Erfassung der Blutgruppe (AB0 und Rhesusfaktor) im Kontext seltener Erkrankungen",
@@ -671,7 +671,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-clinical-diagnosis"
+          "reference": "StructureDefinition/mii-pr-seltene-clinical-diagnosis"
         },
         "name": "MII PR SE Clinical Diagnosis",
         "description": "Profile for clinical diagnosis of rare diseases with HPO phenotype codes. This profile is used for clinically diagnosed rare diseases based on phenotypic presentation.",
@@ -679,7 +679,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-familienanamnese"
+          "reference": "StructureDefinition/mii-pr-seltene-familienanamnese"
         },
         "name": "MII PR SE Familienanamnese",
         "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil.",
@@ -687,7 +687,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-genetic-diagnosis"
+          "reference": "StructureDefinition/mii-pr-seltene-genetic-diagnosis"
         },
         "name": "MII PR SE Genetic Diagnosis",
         "description": "Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and links to MolGen variant/diagnostic implication resources. This profile is used when a rare disease diagnosis has been confirmed through genetic testing.",
@@ -695,7 +695,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-studie"
+          "reference": "StructureDefinition/mii-pr-seltene-studie"
         },
         "name": "MII PR SE Studie",
         "description": "SE Studie",
@@ -703,7 +703,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-studieneinschluss-anfrage"
+          "reference": "StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage"
         },
         "name": "MII PR SE Studieneinschluss Anfrage",
         "description": "Anfrage zum Studieneinschluss",
@@ -711,7 +711,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-therapieempfehlung-kombination"
+          "reference": "StructureDefinition/mii-pr-seltene-therapieempfehlung-kombination"
         },
         "name": "MII PR SE Therapieempfehlung Kombinationstherapie",
         "description": "Therapieempfehlung für eine medikamentöse Kombinationstherapie",
@@ -719,7 +719,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-therapieempfehlung-nicht-medikamentoes"
+          "reference": "StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"
         },
         "name": "MII PR SE Therapieempfehlung Nicht-Medikamentös",
         "description": "Therapieempfehlung für nicht-medikamentöse Interventionen bei seltenen Erkrankungen (z.B. Ernährungstherapie, Gentherapie, Prophylaxe, Früherkennung)",
@@ -727,7 +727,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-therapieempfehlung"
+          "reference": "StructureDefinition/mii-pr-seltene-therapieempfehlung"
         },
         "name": "MII PR SE Therapieempfehlung Systemische Therapie",
         "description": "Therapieempfehlung für eine medikamentöse Systemische Therapie",
@@ -735,7 +735,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-therapieplan"
+          "reference": "StructureDefinition/mii-pr-seltene-therapieplan"
         },
         "name": "MII PR SE Therapieplan",
         "description": "Therapieplan",
@@ -743,7 +743,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-clinical-impression"
+          "reference": "StructureDefinition/mii-pr-seltene-clinical-impression"
         },
         "name": "MII Profile SE Clinical Impression",
         "description": "Profile for clinical impressions in the context of rare diseases. This profile captures clinical assessments and suspected diagnoses based on phenotypic findings and symptoms.",
@@ -751,7 +751,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-hpo-assessment"
+          "reference": "StructureDefinition/mii-pr-seltene-hpo-assessment"
         },
         "name": "MII Profile SE HPO Assessment",
         "description": "Profile for HPO-based phenotypic observations in the context of rare diseases. This profile uses the Human Phenotype Ontology (HPO) to describe clinical symptoms and phenotypic abnormalities.",
@@ -759,7 +759,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-se-symptom-condition"
+          "reference": "StructureDefinition/mii-pr-seltene-symptom-condition"
         },
         "name": "MII Profile SE Symptom Condition",
         "description": "Profile for symptom-based conditions in the context of rare diseases. This profile captures symptomatic conditions with temporal characteristics, complementing the HPO Assessment Observation profile.",
@@ -767,7 +767,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-se-blutgruppe"
+          "reference": "ValueSet/mii-vs-seltene-blutgruppe"
         },
         "name": "MII VS SE Blutgruppe",
         "description": "ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List für 882-1",
@@ -775,7 +775,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-se-clinical-diagnosis-category"
+          "reference": "ValueSet/mii-vs-seltene-clinical-diagnosis-category"
         },
         "name": "MII VS SE Clinical Diagnosis Category",
         "description": "Value set for categorizing clinical diagnoses of rare diseases",
@@ -783,7 +783,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-se-empfehlung-status-begruendung"
+          "reference": "ValueSet/mii-vs-seltene-empfehlung-status-begruendung"
         },
         "name": "MII VS SE Empfehlung Status Begründung",
         "description": "ValueSet für Begründung bei fehlender Empfehlung",
@@ -791,7 +791,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-se-genetic-basis"
+          "reference": "ValueSet/mii-vs-seltene-genetic-basis"
         },
         "name": "MII VS SE Genetic Basis",
         "description": "Value set for types of genetic basis of rare diseases",
@@ -799,7 +799,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-se-hpo-age-of-onset"
+          "reference": "ValueSet/mii-vs-seltene-hpo-age-of-onset"
         },
         "name": "MII VS SE HPO Age of Onset",
         "description": "Value set containing HPO terms for age of onset of diseases",
@@ -807,7 +807,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-se-hpo-inheritance-pattern"
+          "reference": "ValueSet/mii-vs-seltene-hpo-inheritance-pattern"
         },
         "name": "MII VS SE HPO Inheritance Pattern",
         "description": "Value set containing HPO terms for modes of inheritance",
@@ -815,7 +815,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-se-penetrance"
+          "reference": "ValueSet/mii-vs-seltene-penetrance"
         },
         "name": "MII VS SE Penetrance",
         "description": "Value set for qualitative descriptions of genetic penetrance",
@@ -823,7 +823,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-se-therapieempfehlung-strategie"
+          "reference": "ValueSet/mii-vs-seltene-therapieempfehlung-strategie"
         },
         "name": "MII VS SE Therapieempfehlung Strategie",
         "description": "ValueSet für Strategietypen von Therapieempfehlungen bei seltenen Erkrankungen (Modellvorhaben GenomSeq)",
@@ -831,7 +831,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-se-therapieempfehlung-strategie-medikamentoes"
+          "reference": "ValueSet/mii-vs-seltene-therapieempfehlung-strategie-medikamentoes"
         },
         "name": "MII VS SE Therapieempfehlung Strategie - Medikamentös",
         "description": "ValueSet für medikamentöse Therapiestrategien (für MedicationRequest Profile) - Verwendet für MedicationRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq",
@@ -839,7 +839,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-se-therapieempfehlung-strategie-nicht-medikamentoes"
+          "reference": "ValueSet/mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes"
         },
         "name": "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
         "description": "ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profile) - Verwendet für ServiceRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq",
@@ -847,11 +847,11 @@
       },
       {
         "reference": {
-          "reference": "FamilyMemberHistory/mii-exa-se-familienanamnese"
+          "reference": "FamilyMemberHistory/mii-exa-seltene-familienanamnese"
         },
-        "name": "mii-exa-se-familienanamnese",
+        "name": "mii-exa-seltene-familienanamnese",
         "description": "Example Patient Family Anamnesis",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-familienanamnese"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese"
       },
       {
         "reference": {
@@ -867,7 +867,7 @@
         },
         "name": "Mukoviszidose - Genetisch bestätigt",
         "description": "Genetisch bestätigte Mukoviszidose",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
       },
       {
         "reference": {
@@ -875,7 +875,7 @@
         },
         "name": "Mukoviszidose - Klinischer Verdacht",
         "description": "Initiale klinische Verdachtsdiagnose Mukoviszidose",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
       },
       {
         "reference": {
@@ -883,7 +883,7 @@
         },
         "name": "Mukoviszidose - Nach positivem Screening ausgeschlossen",
         "description": "CF nach auffälligem Neugeborenenscreening genetisch ausgeschlossen",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
       },
       {
         "reference": {
@@ -899,11 +899,11 @@
         },
         "name": "Noonan-Syndrom - Klinische Diagnose",
         "description": "Beispiel einer klinischen Diagnose des Noonan-Syndroms",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ext-se-onset-age"
+          "reference": "StructureDefinition/mii-ext-seltene-onset-age"
         },
         "name": "Onset Age Extension",
         "description": "Extension to capture the age at onset of a condition. This backports the onsetAge functionality from FHIR R5 to R4.",
@@ -911,7 +911,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ext-se-phenotypic-pattern"
+          "reference": "StructureDefinition/mii-ext-seltene-phenotypic-pattern"
         },
         "name": "Phenotypic Pattern Extension",
         "description": "Extension to link syndrome diagnoses to characteristic phenotypic patterns or symptom clusters",
@@ -923,7 +923,7 @@
         },
         "name": "Phenylketonurie - Genetische Diagnose",
         "description": "Genetisch bestätigte Phenylketonurie (PKU)",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
       },
       {
         "reference": {
@@ -939,7 +939,7 @@
         },
         "name": "SMA - Genetisch ausgeschlossen",
         "description": "Spinale Muskelatrophie genetisch ausgeschlossen",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
       },
       {
         "reference": {
@@ -971,7 +971,7 @@
         },
         "name": "SMA Genetische Diagnose",
         "description": "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
       },
       {
         "reference": {
@@ -979,7 +979,7 @@
         },
         "name": "SMA Klinische Diagnose",
         "description": "Klinische Diagnose SMA Typ 1 bei Erstvorstellung",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
       },
       {
         "reference": {
@@ -1003,7 +1003,7 @@
         },
         "name": "SMA Typ 1 - Genetisch bestätigte Diagnose",
         "description": "Beispiel einer genetisch bestätigten Diagnose der spinalen Muskelatrophie Typ 1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-genetic-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
       },
       {
         "reference": {
@@ -1011,7 +1011,7 @@
         },
         "name": "SMA Verdacht - Neugeborenenscreening",
         "description": "Verdacht auf SMA beim Neugeborenenscreening",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-diagnosis"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
       },
       {
         "reference": {
@@ -1055,7 +1055,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ext-se-syndrome-category"
+          "reference": "StructureDefinition/mii-ext-seltene-syndrome-category"
         },
         "name": "Syndrome Category Extension",
         "description": "Extension to categorize syndrome types for rare diseases (genetic, metabolic, developmental, etc.)",
@@ -1063,7 +1063,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-se-syndrome-category"
+          "reference": "ValueSet/mii-vs-seltene-syndrome-category"
         },
         "name": "Syndrome Category Value Set",
         "description": "Categories for classifying syndrome types in rare diseases",
@@ -1071,11 +1071,11 @@
       },
       {
         "reference": {
-          "reference": "CarePlan/mii-exa-se-therapieplan"
+          "reference": "CarePlan/mii-exa-seltene-therapieplan"
         },
         "name": "Therapieplan Example",
         "description": "Example of a Therapieplan for a patient.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieplan"
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan"
       },
       {
         "reference": {
@@ -1135,7 +1135,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/von-se-betroffen-vs"
+          "reference": "ValueSet/von-seltene-betroffen-vs"
         },
         "name": "Von SE betroffen Value Set",
         "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
@@ -1143,7 +1143,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/von-se-betroffen"
+          "reference": "StructureDefinition/von-seltene-betroffen"
         },
         "name": "VonSEBetroffen",
         "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",

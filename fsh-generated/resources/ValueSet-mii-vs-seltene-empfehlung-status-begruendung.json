@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Seltene_Empfehlung_StatusBegruendung",
+  "id": "mii-vs-seltene-empfehlung-status-begruendung",
+  "title": "MII VS SE Empfehlung Status Begründung",
+  "description": "ValueSet für Begründung bei fehlender Empfehlung",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-empfehlung-status-begruendung",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-empfehlung-status-begruendung"
+      }
+    ]
+  }
+}

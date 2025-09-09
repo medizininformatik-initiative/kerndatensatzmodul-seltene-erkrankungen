@@ -1,0 +1,92 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "HPOInheritancePatternValueSet",
+  "id": "mii-vs-seltene-hpo-inheritance-pattern",
+  "title": "MII VS SE HPO Inheritance Pattern",
+  "description": "Value set containing HPO terms for modes of inheritance",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-inheritance-pattern",
+  "version": "2026.0.0-ballot",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://human-phenotype-ontology.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "HP:0000005"
+          }
+        ]
+      },
+      {
+        "system": "http://human-phenotype-ontology.org",
+        "concept": [
+          {
+            "code": "HP:0000006",
+            "display": "Autosomal dominant inheritance"
+          },
+          {
+            "code": "HP:0000007",
+            "display": "Autosomal recessive inheritance"
+          },
+          {
+            "code": "HP:0001417",
+            "display": "X-linked inheritance"
+          },
+          {
+            "code": "HP:0001419",
+            "display": "X-linked recessive inheritance"
+          },
+          {
+            "code": "HP:0001423",
+            "display": "X-linked dominant inheritance"
+          },
+          {
+            "code": "HP:0001427",
+            "display": "Mitochondrial inheritance"
+          },
+          {
+            "code": "HP:0001428",
+            "display": "Somatic mutation"
+          },
+          {
+            "code": "HP:0003745",
+            "display": "Sporadic"
+          },
+          {
+            "code": "HP:0010983",
+            "display": "Oligogenic"
+          },
+          {
+            "code": "HP:0010982",
+            "display": "Polygenic"
+          },
+          {
+            "code": "HP:0001426",
+            "display": "Multifactorial inheritance"
+          },
+          {
+            "code": "HP:0012275",
+            "display": "Autosomal dominant inheritance with maternal imprinting"
+          },
+          {
+            "code": "HP:0012274",
+            "display": "Autosomal dominant inheritance with paternal imprinting"
+          }
+        ]
+      }
+    ]
+  }
+}
