@@ -426,7 +426,7 @@ Title: "Kardiologische Erstvorstellung"
 Description: "Ambulante kardiologische Erstvorstellung bei Thoraxschmerzen"
 * status = #finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
-* type = $SCT#185316007 "Cardiology consultation"
+* type = $SCT#185228002 "Seen in cardiac clinic (finding)"
 * subject = Reference(patient-marfan-001)
 * period.start = "2024-12-15"
 * period.end = "2024-12-15"
@@ -440,7 +440,7 @@ InstanceOf: Encounter
 Usage: #example
 Title: "Geplante Herzchirurgie"
 Description: "Geplanter stationärer Aufenthalt für Aortenwurzelersatz"
-* status = #preparation
+* status = #planned
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
 * type = $SCT#305357000 "Admission to cardiology department"
 * subject = Reference(patient-marfan-001)
