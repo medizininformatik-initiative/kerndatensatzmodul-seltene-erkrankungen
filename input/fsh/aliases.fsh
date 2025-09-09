@@ -31,8 +31,9 @@ Alias: $alpha-id = http://fhir.de/ValueSet/bfarm/alpha-id
 Alias: $diagnoses-sct = https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct
 
 // MII Diagnose extensions
-// Standard FHIR extension for condition asserted date
+// Standard FHIR extensions for conditions
 Alias: $condition-assertedDate = http://hl7.org/fhir/StructureDefinition/condition-assertedDate
+Alias: $condition-ruledOut = http://hl7.org/fhir/StructureDefinition/condition-ruledOut
 Alias: $MII_PR_Diagnose_Condition = https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose
 
 // FHIR observation related code systems

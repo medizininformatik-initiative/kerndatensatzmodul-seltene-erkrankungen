@@ -20,9 +20,9 @@
   "code": {
     "coding": [
       {
-        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-        "code": "E84.0",
-        "display": "Zystische Fibrose mit Lungenmanifestationen",
+        "system": "http://omim.org",
+        "code": "219700",
+        "display": "Cystic fibrosis",
         "version": "2024"
       },
       {
@@ -33,11 +33,6 @@
       {
         "system": "http://www.orpha.net",
         "code": "586",
-        "display": "Cystic fibrosis"
-      },
-      {
-        "system": "http://omim.org",
-        "code": "219700",
         "display": "Cystic fibrosis"
       }
     ]
@@ -65,15 +60,14 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
       "valueDateTime": "2024-08-25"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/replaces",
-      "valueReference": {
-        "reference": "Condition/example-cf-clinical"
-      }
     }
   ],
   "recordedDate": "2024-08-25",
+  "note": [
+    {
+      "text": "Homozygot für F508del (c.1521_1523delCTT) im CFTR-Gen. Schwerer Phänotyp zu erwarten."
+    }
+  ],
   "evidence": [
     {
       "code": [
@@ -110,11 +104,6 @@
           "reference": "DiagnosticReport/molgen-cf-diagnostic"
         }
       ]
-    }
-  ],
-  "note": [
-    {
-      "text": "Homozygot für F508del (c.1521_1523delCTT) im CFTR-Gen. Schwerer Phänotyp zu erwarten."
     }
   ]
 }
