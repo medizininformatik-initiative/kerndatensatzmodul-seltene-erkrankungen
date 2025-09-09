@@ -17,7 +17,7 @@ Description: "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose"
 * code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
-* code.coding[omim] = http://omim.org#154700 "Marfan syndrome"
+* code.coding[+] = http://omim.org#154700 "Marfan syndrome"
 * code.text = "Marfan-Syndrom (ausgeschlossen)"
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/cardiology-consultation)
@@ -68,7 +68,7 @@ Description: "Spinale Muskelatrophie genetisch ausgeschlossen"
 * verificationStatus = $condition-ver-status#refuted
 * category = $SCT#782964007 "Genetic disease"
 * code.coding[orphanet] = http://www.orpha.net#83330 "Spinal muscular atrophy"
-* code.coding[omim] = http://omim.org#253300 "Spinal muscular atrophy, type I"
+* code.coding[+] = http://omim.org#253300 "Spinal muscular atrophy, type I"
 * code.text = "Spinale Muskelatrophie (genetisch ausgeschlossen)"
 * subject = Reference(Patient/example)
 * extension[+].url = $condition-assertedDate
@@ -94,7 +94,7 @@ Description: "Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muske
 * code.coding[icd10-gm] = $ICD10GM#G71.0 "Muskeldystrophie"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#98896 "Duchenne muscular dystrophy"
-* code.coding[omim] = http://omim.org#310200 "Duchenne muscular dystrophy"
+* code.coding[+] = http://omim.org#310200 "Duchenne muscular dystrophy"
 * code.text = "Duchenne-Muskeldystrophie (ausgeschlossen)"
 * subject = Reference(Patient/example)
 * extension[+].url = $condition-assertedDate
@@ -114,19 +114,18 @@ Description: "CF nach auffälligem Neugeborenenscreening genetisch ausgeschlosse
 * clinicalStatus = $condition-clinical#inactive
 * verificationStatus = $condition-ver-status#refuted
 * category = $SCT#782964007 "Genetic disease"
-* code.coding[icd10-gm] = $ICD10GM#E84.9 "Zystische Fibrose"
+* code.coding[icd10-gm] = $ICD10GM#E84.9 "Zystische Fibrose, nicht näher bezeichnet"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#586 "Cystic fibrosis"
-* code.coding[omim] = http://omim.org#219700 "Cystic fibrosis"
+* code.coding[+] = http://omim.org#219700 "Cystic fibrosis"
 * code.text = "Mukoviszidose (ausgeschlossen)"
 * subject = Reference(Patient/example)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-08-25"
 * recordedDate = "2024-08-25"
 * abatementDateTime = "2024-08-25"
-// Link to previous suspected diagnosis
-* extension[+].url = "http://hl7.org/fhir/StructureDefinition/replaces"
-* extension[=].valueReference = Reference(Condition/cf-suspected-screening)
+// Note: This rules out the previous suspected diagnosis
+* note[+].text = "Ausschluss der vorherigen Verdachtsdiagnose (cf-suspected-screening)"
 * evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/molgen-cftr-heterozygous-carrier)
 * note.text = "Heterozygoter Anlageträger für F508del. Zweite Mutation ausgeschlossen. IRT-Erhöhung im Screening war transient. Mukoviszidose ausgeschlossen."

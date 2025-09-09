@@ -134,7 +134,7 @@ Description: "Genetisch bestätigte Phenylketonurie (PKU)"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#716 "Phenylketonuria"
 * code.coding[sct] = $SCT#7573000 "Classical phenylketonuria"
-* code.coding[omim] = http://omim.org#261600 "Phenylketonuria"
+* code.coding[+] = http://omim.org#261600 "Phenylketonuria"
 * code.text = "Phenylketonurie"
 * subject = Reference(Patient/example)
 * recordedDate = "2024-01-01"

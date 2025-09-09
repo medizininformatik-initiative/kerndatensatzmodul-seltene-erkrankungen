@@ -18,7 +18,7 @@ Description: "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend a
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
 * code.coding[sct] = $SCT#19346006 "Marfan syndrome"
-* code.coding[omim][+] = http://omim.org#154700 "Marfan syndrome"
+* code.coding[+] = http://omim.org#154700 "Marfan syndrome"
 * code.text = "Marfan-Syndrom, klinisch diagnostiziert"
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/cardiology-consultation)
@@ -90,7 +90,7 @@ Description: "Beispiel einer genetisch bestätigten Diagnose der spinalen Muskel
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#83330 "Proximal spinal muscular atrophy type 1"
 * code.coding[sct] = $SCT#64383006 "Werdnig-Hoffmann disease"
-* code.coding[omim][+] = http://omim.org#253300 "Spinal muscular atrophy, type I"
+* code.coding[+] = http://omim.org#253300 "Spinal muscular atrophy, type I"
 * code.text = "Spinale Muskelatrophie Typ 1, genetisch bestätigt"
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/genetic-consultation)
@@ -120,7 +120,7 @@ Description: "Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#98896 "Duchenne muscular dystrophy"
 * code.coding[sct] = $SCT#76670001 "Duchenne muscular dystrophy"
-* code.coding[omim][+] = http://omim.org#310200 "Duchenne muscular dystrophy"
+* code.coding[+] = http://omim.org#310200 "Duchenne muscular dystrophy"
 * code.text = "Duchenne-Muskeldystrophie"
 * subject = Reference(Patient/example)
 * extension[+].url = $condition-assertedDate
@@ -145,9 +145,9 @@ Description: "Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom"
 * verificationStatus = $condition-ver-status#confirmed
 * code.coding[icd10-gm] = $ICD10GM#Z80.3 "Bösartige Neubildung der Brustdrüse [Mamma] in der Familienanamnese"
 * code.coding[icd10-gm].version = "2024"
-* code.coding[orphanet] = http://www.orpha.net#145 "Hereditary breast and ovarian cancer syndrome"
-* code.coding[sct] = $SCT#718220008 "Hereditary breast and ovarian cancer syndrome"
-* code.coding[omim][+] = http://omim.org#604370 "Breast-ovarian cancer, familial, 1"
+* code.coding[orphanet] = http://www.orpha.net#145 "Hereditary breast and/or ovarian cancer syndrome"
+* code.coding[sct] = $SCT#718220008 "Hereditary breast and/or ovarian cancer syndrome"
+* code.coding[+] = http://omim.org#604370 "Breast-ovarian cancer, familial, 1"
 * code.text = "Hereditäres Mamma- und Ovarialkarzinom-Syndrom (BRCA1)"
 * subject = Reference(Patient/example)
 * extension[+].url = $condition-assertedDate
@@ -178,7 +178,7 @@ Description: "Initiale klinische Verdachtsdiagnose Mukoviszidose"
 * code.coding[icd10-gm] = $ICD10GM#E84.9 "Zystische Fibrose, nicht näher bezeichnet"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#586 "Cystic fibrosis"
-* code.coding[hpo][+] = http://human-phenotype-ontology.org#HP:0100730 "Cystic fibrosis"
+* code.coding[+] = http://omim.org#219700 "Cystic fibrosis"
 * subject = Reference(Patient/example)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-08-10"
@@ -204,14 +204,13 @@ Description: "Genetisch bestätigte Mukoviszidose"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#586 "Cystic fibrosis"
 * code.coding[sct] = $SCT#190905008 "Cystic fibrosis"
-* code.coding[omim][+] = http://omim.org#219700 "Cystic fibrosis"
+* code.coding[+] = http://omim.org#219700 "Cystic fibrosis"
 * subject = Reference(Patient/example)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-08-25"
 * recordedDate = "2024-08-25"
-// Reference to previous clinical diagnosis
-* extension[+].url = "http://hl7.org/fhir/StructureDefinition/replaces"
-* extension[=].valueReference = Reference(example-cf-clinical)
+// Note: Genetic diagnosis confirms the previous clinical diagnosis
+* note[+].text = "Genetische Bestätigung der vorherigen klinischen Diagnose (example-cf-clinical)"
 // Genetic evidence
 * evidence[+].code = $SCT#106221001 "Genetic finding"
 * evidence[=].detail = Reference(Observation/molgen-variant-cftr-f508del-homozygous)

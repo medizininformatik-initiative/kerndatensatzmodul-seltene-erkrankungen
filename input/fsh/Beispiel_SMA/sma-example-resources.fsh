@@ -69,7 +69,7 @@ Description: "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#83330 "Proximal spinal muscular atrophy type 1"
 * code.coding[sct] = $SCT#64383006 "Werdnig-Hoffmann disease"
-* code.coding[omim] = http://omim.org#253300 "Spinal muscular atrophy, type I"
+* code.coding[+] = http://omim.org#253300 "Spinal muscular atrophy, type I"
 * subject = Reference(patient-sma-001)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-07-26"  // Date of molecular confirmation
