@@ -10,7 +10,7 @@ Description: "Example of a symptom condition in the context of rare diseases usi
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
 
 // Category - symptom condition
-* category = $condition-category#problem-list-item "Problem-list-item"
+* category = $condition-category#problem-list-item "Problem List Item"
 
 // HPO code for a specific symptom (example: Muscle weakness)
 * code = $HPO#HP:0001324 "Muscle weakness"
@@ -34,7 +34,7 @@ Description: "Example of a symptom condition in the context of rare diseases usi
 * recordedDate = "2024-01-15"
 
 // Body site (if applicable)
-* bodySite = $SCT#91775009 "Skeletal muscle structure"
+* bodySite = $SCT#127954009 "Skeletal muscle structure"
 * bodySite.text = "Skeletal muscle"
 
 // Evidence supporting the condition
