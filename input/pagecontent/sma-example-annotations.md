@@ -83,7 +83,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 ### Prozeduren
 1. **Gentherapie**:
    - **OPS-Code**: 6-00d.0
-   - **SNOMED CT**: 787135004 (Gene therapy)
+   - **SNOMED CT**: 788110002  (Gene therapy)
    - **Datum**: 29.07.2024
    - **Medikament**: Onasemnogene abeparvovec (Zolgensma)
    - **UNII**: MLU3LU3EVV

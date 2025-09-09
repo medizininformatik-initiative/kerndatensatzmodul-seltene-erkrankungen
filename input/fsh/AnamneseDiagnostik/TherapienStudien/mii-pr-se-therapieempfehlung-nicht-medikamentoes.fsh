@@ -114,7 +114,7 @@ Description: "Beispiel einer Empfehlung für regelmäßige Früherkennungsunters
 * intent = #proposal
 * priority = #routine
 * category[MVGenomSeqTherapieStrategie].coding = MII_CS_SE_TherapieempfehlungStrategie#early-detection "Früherkennung"
-* code.coding[snomed] = $SCT#410453003 "Screening for disorder"
+* code.coding[snomed] = $SCT#312851005 "Screening for disorder"
 * code.text = "Jährliche kardiologische Kontrolle bei Marfan-Syndrom"
 * subject = Reference(Patient/patient-marfan-001)
 // * requester = Reference(Practitioner/example) // Optional field, not required in MII
@@ -153,7 +153,7 @@ Description: "Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie"
 * intent = #proposal
 * priority = #routine
 * category[MVGenomSeqTherapieStrategie].coding = MII_CS_SE_TherapieempfehlungStrategie#nutrition "Ernährungstherapie"
-* code.coding[snomed] = $SCT#61310001 "Nutrition therapy"
+* code.coding[snomed] = $SCT#61310001 "Nutrition education"
 * code.text = "Phenylalaninreduzierte Diät bei Phenylketonurie"
 * subject = Reference(Patient/example)
 * occurrencePeriod.start = "2024-01-01"

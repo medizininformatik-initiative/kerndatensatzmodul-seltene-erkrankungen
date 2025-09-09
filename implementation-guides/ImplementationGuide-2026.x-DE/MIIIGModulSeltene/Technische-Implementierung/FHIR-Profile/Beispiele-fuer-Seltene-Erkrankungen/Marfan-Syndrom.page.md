@@ -63,7 +63,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 
 2. **Aortenwurzeldilatation**:
    - **HPO**: HP:0002616 "Aortic root aneurysm"
-   - **SNOMED CT**: 60234000 "Aortic root dilatation"
+   - **SNOMED CT**: 251036003 "Aortic root dilatation"
    - **Messwert**: 48 mm (pathologisch erweitert)
 
 3. **Aortenklappeninsuffizienz**:

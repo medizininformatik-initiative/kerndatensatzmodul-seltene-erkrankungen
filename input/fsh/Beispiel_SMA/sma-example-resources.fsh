@@ -135,7 +135,8 @@ Description: "0 Kopien des SMN1-Gens nachgewiesen"
 * component[=].valueCodeableConcept.coding[+] = http://www.genenames.org/geneId#11117 "SMN1"
 * component[+].code = $LNC#62374-4 "Human reference sequence assembly version"
 * component[=].valueCodeableConcept.text = "GRCh38"
-* component[+].code = $LNC#82121-5 "Allelic state"
+* component[+].code = $LNC#53034-5
+ "Allelic state"
 * component[=].valueCodeableConcept = $LNC#LA6705-3 "Homozygous"
 * component[+].code.text = "Copy Number"
 * component[=].valueQuantity.value = 0
@@ -155,7 +156,7 @@ Description: "2 Kopien des SMN2-Gens nachgewiesen"
 * subject = Reference(patient-sma-001)
 * effectiveDateTime = "2024-07-26"
 * component[+].code = $LNC#48018-6 "Gene studied [ID]"
-* component[=].valueCodeableConcept.coding[+] = http://www.genenames.org/geneId#11118 "SMN2"
+* component[=].valueCodeableConcept.coding[+] = http://www.genenames.org/geneId#HGNC:11118 "SMN2"
 * component[+].code.text = "Copy Number"
 * component[=].valueQuantity.value = 2
 * component[=].valueQuantity.unit = "copies"
@@ -169,9 +170,8 @@ Title: "Gentherapie Verabreichung"
 Description: "Verabreichung des Gentherapeutikums für SMA"
 * status = #completed
 * category = http://snomed.info/sct#277132007 "Therapeutic procedure"
-* code.coding[+] = http://fhir.de/CodeSystem/bfarm/ops#6-00d.0 "Gentherapie"
-* code.coding[+] = http://fdasis.nlm.nih.gov#MLU3LU3EVV "Onasemnogene abeparvovec"
-* code.coding[+] = $SCT#787135004 "Gene therapy"
+* code.coding[+] = http://fdasis.nlm.nih.gov#MLU3LU3EVV "ONASEMNOGENE ABEPARVOVEC"
+* code.coding[+] = $SCT#788110002  "Gene therapy"
 * code.text = "Gentherapie mit Onasemnogene abeparvovec (Zolgensma)"
 * subject = Reference(patient-sma-001)
 * performedDateTime = "2024-07-29"

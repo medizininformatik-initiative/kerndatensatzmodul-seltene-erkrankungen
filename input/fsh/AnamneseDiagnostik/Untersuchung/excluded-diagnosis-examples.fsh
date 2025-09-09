@@ -195,7 +195,7 @@ Description: "2 Kopien SMN1 - schließt SMA aus"
 * component[=].valueCodeableConcept.coding = http://www.genenames.org/geneId#HGNC:11117 "SMN1"
 * component[+].code.text = "Copy Number"
 * component[=].valueInteger = 2
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal result"
 * note.text = "Normale Kopienanzahl des SMN1-Gens. SMA ausgeschlossen."
 
 Instance: molgen-sma-negative
@@ -210,4 +210,4 @@ Description: "Genetischer Test schließt SMA aus"
 * effectiveDateTime = "2024-07-26"
 * result[+] = Reference(molgen-smn1-normal-copies)
 * conclusion = "SMN1-Gen: 2 Kopien (Normalbefund). SMN2-Gen: 2 Kopien. Spinale Muskelatrophie ausgeschlossen."
-* conclusionCode = $SCT#280413001 "Normal"
+* conclusionCode = $SCT#280413001 "Normal result"

@@ -101,7 +101,7 @@ Description: "Pathogene FBN1-Mutation bei Marfan-Syndrom"
 * effectiveDateTime = "2024-12-20"
 * valueCodeableConcept = $SCT#10828004 "Positive"
 * component[+].code = $LNC#48018-6 "Gene studied [ID]"
-* component[=].valueCodeableConcept.coding[+] = http://www.genenames.org/geneId#3603 "FBN1"
+* component[=].valueCodeableConcept.coding[+] = http://www.genenames.org/geneId#HGNC:3603 "FBN1"
 * component[+].code = $LNC#48004-6 "DNA change (c.HGVS)"
 * component[=].valueCodeableConcept.text = "c.3217G>A"
 * component[+].code = $LNC#48005-3 "Amino acid change (pHGVS)"
@@ -148,7 +148,7 @@ Description: "Pathologisch erhöhte Körpergröße bei Marfan-Syndrom"
 * effectiveDateTime = "2024-12-15"
 * valueQuantity = 213 'cm' "cm"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H "High"
-* bodySite = $SCT#38266002 "Entire body"
+* bodySite = $SCT#38266002 "Entire body as a whole"
 * component[+].code = http://human-phenotype-ontology.org#HP:0000098 "Tall stature"
 * component[=].valueString = "Pathologischer Hochwuchs >99. Perzentile"
 
@@ -211,7 +211,7 @@ Description: "Pathologisch erweiterte Aortenwurzel"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#imaging
 * code.coding[+] = http://human-phenotype-ontology.org#HP:0002616 "Aortic root aneurysm"
-* code.coding[+] = $SCT#60234000 "Aortic root dilatation"
+* code.coding[+] = $SCT#251036003 "Aortic root dilatation"
 * code.text = "Aortenwurzeldilatation"
 * subject = Reference(patient-marfan-001)
 * effectiveDateTime = "2024-12-15"
@@ -263,7 +263,7 @@ Title: "Echokardiographie - Aortenwurzeldurchmesser"
 Description: "Aortenwurzeldurchmesser in der Echokardiographie"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#imaging
-* code = $LNC#79992-2 "Aortic root diameter by US"
+* code = $LNC#78176-5 "Aorta root Diameter by US 2D"
 * subject = Reference(patient-marfan-001)
 * effectiveDateTime = "2024-12-15"
 * valueQuantity = 48 'mm' "mm"
@@ -278,7 +278,7 @@ Title: "Echokardiographie - Aortenklappeninsuffizienz"
 Description: "Beurteilung der Aortenklappeninsuffizienz"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#imaging
-* code = $LNC#80140-5 "Aortic valve regurgitation severity by US"
+* code = $LNC#18112-3 "Aortic valve Regurgitation degree by US.doppler"
 * subject = Reference(patient-marfan-001)
 * effectiveDateTime = "2024-12-15"
 * valueCodeableConcept.text = "Grad II"
@@ -293,7 +293,7 @@ Title: "Echokardiographie - Mitralklappeninsuffizienz"
 Description: "Beurteilung der Mitralklappeninsuffizienz"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#imaging
-* code = $LNC#80186-8 "Mitral valve regurgitation severity by US"
+* code = $LNC#18113-1 "Mitral valve Regurgitation degree by US.doppler"
 * subject = Reference(patient-marfan-001)
 * effectiveDateTime = "2024-12-15"
 * valueCodeableConcept.text = "Grad I"

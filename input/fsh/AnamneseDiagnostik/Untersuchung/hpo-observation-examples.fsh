@@ -13,7 +13,7 @@ Description: "Echokardiographisch nachgewiesene Aortenwurzeldilatation"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#imaging
 * code.coding[+] = http://human-phenotype-ontology.org#HP:0002616 "Aortic root aneurysm"
-* code.coding[+] = $SCT#60234000 "Aortic root dilatation"
+* code.coding[+] = $SCT#251036003 "Aortic root dilatation"
 * code.text = "Aortenwurzeldilatation"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-12-15"
@@ -31,7 +31,7 @@ Description: "Ectopia lentis bei Marfan-Syndrom"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
 * code.coding[+] = http://human-phenotype-ontology.org#HP:0001083 "Ectopia lentis"
-* code.coding[+] = $SCT#22736004 "Dislocation of lens"
+* code.coding[+] = $SCT#65814009 "Partial dislocation of lens"
 * code.text = "Linsenluxation"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-10-15"
@@ -63,7 +63,7 @@ Description: "Spinnenfingrigkeit bei Marfan-Syndrom"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
 * code.coding[+] = http://human-phenotype-ontology.org#HP:0001166 "Arachnodactyly"
-* code.coding[+] = $SCT#205033002 "Arachnodactyly"
+* code.coding[+] = $SCT#62250003 "Arachnodactyly"
 * code.text = "Arachnodaktylie"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-12-15"
@@ -140,7 +140,7 @@ Description: "Peripheres Lymphödem"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
 * code.coding[+] = http://human-phenotype-ontology.org#HP:0001004 "Lymphedema"
-* code.coding[+] = $SCT#30213000 "Lymphedema"
+* code.coding[+] = $SCT#234097001 "Lymphedema"
 * code.text = "Lymphödem"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-10-20"
@@ -161,7 +161,7 @@ Description: "Häufige respiratorische Infektionen bei CF"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
 * code.coding[+] = http://human-phenotype-ontology.org#HP:0002099 "Asthma"
-* code.coding[+] = $SCT#195967001 "Recurrent respiratory infections"
+* code.coding[+] = $SCT#195708003 "Recurrent upper respiratory tract infection"
 * code.text = "Rezidivierende Atemwegsinfektionen"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-08-10"
@@ -196,7 +196,7 @@ Description: "Mangelhafte Gewichtszunahme"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
 * code.coding[+] = http://human-phenotype-ontology.org#HP:0001508 "Failure to thrive"
-* code.coding[+] = $SCT#36440009 "Failure to thrive"
+* code.coding[+] = $SCT#54840006 "Failure to thrive"
 * code.text = "Gedeihstörung"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-08-10"
