@@ -1,15 +1,20 @@
 ---
 parent: 
-topic: Specimen
+topic: FamilyMemberHistory
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese
 ---
 
 ## {{page-title}}
 
-Dieses Profil beschreibt eine Histologie-Grading im Rahmen in der Sell.
-Dabei wird insbesondere die morphologische Dedifferenzierung des Gewebes bewertet.
+Dieses Profil beschreibt die Familienanamnese im Kontext Seltener Erkrankungen. Es ermöglicht die strukturierte Erfassung von Erkrankungen bei Familienmitgliedern, insbesondere mit Fokus auf genetische und erbliche Komponenten seltener Erkrankungen.
 
+### Klinische Bedeutung
 
+Die Familienanamnese ist bei seltenen Erkrankungen von besonderer Bedeutung, da viele dieser Erkrankungen eine genetische Komponente aufweisen. Die strukturierte Erfassung ermöglicht:
+- Identifikation familiärer Häufungen
+- Einschätzung des Vererbungsmusters
+- Risikostratifizierung für Angehörige
+- Planung genetischer Beratung und Testung
 
 @```
 from 
@@ -39,7 +44,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition mii-pr-seltene-familienanamnese' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese' 
         for 
             differential.element 
             where 
@@ -54,33 +59,32 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR
+### Mapping Logisches Datenmodell zu FHIR
+
+Das folgende Mapping zeigt die Elemente der Familienanamnese aus dem logischen Datenmodell für Seltene Erkrankungen:
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Onkologie'
-    for differential.element where id.contains('Grading') 
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene'
+    for differential.element 
+    where path contains 'Familienanamnese'
     select 
-        Datensatz: short,
-        Erklaerung: definition, 
-        FHIR: mapping[0].map 
-
+        Element: path,
+        Beschreibung: definition
 ```
 
----
+### Zuordnung zu FHIR-Elementen
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+Die Elemente des logischen Datenmodells werden wie folgt auf das FamilyMemberHistory-Profil abgebildet:
 
-@```
-from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading'  
-    for differential.element
-    where mapping.identity='oBDS'
-    select 
-        oBDS: mapping.map,
-        Definition: mapping.comment,
-        FHIR: path
-```
+| Logisches Datenmodell | FHIR-Pfad | Erläuterung |
+|----------------------|-----------|-------------|
+| Familienanamnese.Verwandtschaftsverhaeltnis | FamilyMemberHistory.relationship | Biologisches Verwandtschaftsverhältnis zum Indexpatienten |
+| Familienanamnese.Geschlecht | FamilyMemberHistory.sex | Geschlecht des Familienmitglieds |
+| Familienanamnese.GleicheSE | FamilyMemberHistory.condition.code | Wenn Code identisch mit Indexpatient-Diagnose |
+| Familienanamnese.AndereSE | FamilyMemberHistory.condition.code | Wenn Code unterschiedlich zur Indexpatient-Diagnose |
+| Familienanamnese.Penetranz | FamilyMemberHistory.extension:penetranz | Extension für fehlende klinische Penetranz |
+| Familienanamnese.FamilienmitgliedVerstorben | FamilyMemberHistory.deceased[x] | Vitalstatus des Familienmitglieds |
 
 ---
 
@@ -92,7 +96,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele: 
 
-    ```GET [base]/Observation?_id=1234```
+    ```GET [base]/FamilyMemberHistory?_id=1234```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -100,68 +104,44 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
     
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading```
+    ```GET [base]/FamilyMemberHistory?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
 
-3. Der Suchparameter "category" MUSS unterstützt werden:
+3. Der Suchparameter "patient" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory```
+    ```GET [base]/FamilyMemberHistory?patient=Patient/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+    Anwendungshinweise: Weitere Informationen zur Suche nach "patient" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
-4. Der Suchparameter "code" MUSS unterstützt werden:
+4. Der Suchparameter "status" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005```
+    ```GET [base]/FamilyMemberHistory?status=completed```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "status" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+
+5. Der Suchparameter "relationship" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/FamilyMemberHistory?relationship=http://terminology.hl7.org/CodeSystem/v3-RoleCode|FTH```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "relationship" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+
+6. Der Suchparameter "code" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/FamilyMemberHistory?code=http://www.orpha.net|558```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
 
-5. Der Suchparameter "subject" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?subject=Patient/example```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-
-6. Der Suchparameter "focus" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?focus=Condition/example```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "focus" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-
-7. Der Suchparameter "encounter" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?encounter=Encounter/example```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-
-8. Der Suchparameter "date" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?date=2024-02-08```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
-
-9. Der Suchparameter "derived-from" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?derived-from=Observation/example```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-
 **Beispiele**
 
-{{json:ExampleHistoryAnamnesis}}
+{{json:mii-exa-seltene-familienanamnese}}
 
 ---
