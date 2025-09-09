@@ -1,0 +1,85 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MII_CS_Seltene_NARSE_Therapietyp",
+  "id": "mii-cs-seltene-narse-therapietyp",
+  "title": "MII CS Seltene Erkrankungen NARSE Therapietyp",
+  "description": "CodeSystem für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp",
+  "concept": [
+    {
+      "code": "keine",
+      "display": "Keine",
+      "definition": "Keine Therapie"
+    },
+    {
+      "code": "pharmakotherapie",
+      "display": "Pharmakotherapie",
+      "definition": "Medikamentöse Therapie mit konventionellen Arzneimitteln"
+    },
+    {
+      "code": "gentherapie",
+      "display": "Gentherapie",
+      "definition": "Therapie mit genetisch veränderten Zellen oder direkter Genmodifikation"
+    },
+    {
+      "code": "mrna-therapie",
+      "display": "mRNA Therapie",
+      "definition": "Therapie mit mRNA-basierten Therapeutika"
+    },
+    {
+      "code": "antikoerpertherapie",
+      "display": "Antikörpertherapie",
+      "definition": "Therapie mit monoklonalen oder polyklonalen Antikörpern"
+    },
+    {
+      "code": "cart-zelltherapie",
+      "display": "CAR-T-Zelltherapie",
+      "definition": "Chimäre Antigenrezeptor-T-Zelltherapie"
+    },
+    {
+      "code": "stammzelltransplantation",
+      "display": "Stammzelltransplantation",
+      "definition": "Hämatopoetische Stammzelltransplantation (autolog oder allogen)"
+    },
+    {
+      "code": "stoffwechseltherapie",
+      "display": "Stoffwechseltherapie",
+      "definition": "Therapie zur Korrektur von Stoffwechselstörungen (z.B. Enzymersatztherapie, Substratreduktion)"
+    },
+    {
+      "code": "sonstiges",
+      "display": "Sonstiges",
+      "definition": "Andere Therapieform, nicht näher spezifiziert"
+    },
+    {
+      "code": "unbekannt",
+      "display": "Unbekannt",
+      "definition": "Therapietyp ist nicht bekannt"
+    }
+  ],
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2026.0.0-ballot",
+  "experimental": false,
+  "caseSensitive": true,
+  "property": [
+    {
+      "code": "status",
+      "uri": "http://hl7.org/fhir/concept-properties#status",
+      "description": "Status of the concept",
+      "type": "code"
+    }
+  ],
+  "count": 10
+}

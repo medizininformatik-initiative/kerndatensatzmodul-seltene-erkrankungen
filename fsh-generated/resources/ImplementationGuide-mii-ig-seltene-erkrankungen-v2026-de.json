@@ -183,6 +183,22 @@
       },
       {
         "reference": {
+          "reference": "Procedure/mii-exa-seltene-narse-gentherapie-sma"
+        },
+        "name": "Beispiel NARSE Gentherapie bei SMA",
+        "description": "Beispiel einer durchgeführten Gentherapie bei Spinaler Muskelatrophie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-seltene-narse-stoffwechseltherapie-pompe"
+        },
+        "name": "Beispiel NARSE Stoffwechseltherapie bei Morbus Pompe",
+        "description": "Beispiel einer durchgeführten Enzymersatztherapie bei Morbus Pompe",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt"
+      },
+      {
+        "reference": {
           "reference": "Patient/example"
         },
         "name": "Beispielpatient",
@@ -591,6 +607,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-seltene-narse-therapietyp"
+        },
+        "name": "MII CS Seltene Erkrankungen NARSE Therapietyp",
+        "description": "CodeSystem für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-ex-seltene-age-of-onset"
         },
         "name": "MII EX SE Age of Onset",
@@ -743,6 +767,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt"
+        },
+        "name": "MII PR Seltene Erkrankungen Therapie Durchgeführt",
+        "description": "Minimales Profil zur Dokumentation durchgeführter Therapien bei Seltenen Erkrankungen gemäß NARSE-Klassifikation. Dieses Profil erfasst Therapien unabhängig vom Durchführungsort (ambulant, stationär, außerhalb des Krankenhauses).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-seltene-clinical-impression"
         },
         "name": "MII Profile SE Clinical Impression",
@@ -843,6 +875,14 @@
         },
         "name": "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
         "description": "ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profile) - Verwendet für ServiceRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-narse-therapietyp"
+        },
+        "name": "MII VS Seltene Erkrankungen NARSE Therapietyp",
+        "description": "ValueSet für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen",
         "exampleBoolean": false
       },
       {
