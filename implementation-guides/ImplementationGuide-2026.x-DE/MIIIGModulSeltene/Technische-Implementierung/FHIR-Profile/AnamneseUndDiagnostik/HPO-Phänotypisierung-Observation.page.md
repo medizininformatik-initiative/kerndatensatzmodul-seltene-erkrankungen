@@ -1,7 +1,7 @@
 ---
 parent: 
 topic: Specimen
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-hpo-assessment
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment
 ---
 
 ## {{page-title}}
@@ -15,7 +15,7 @@ Es ermöglicht die strukturierte Erfassung phänotypischer Abnormalitäten und k
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-hpo-assessment' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment' 
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
@@ -29,7 +29,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-hpo-assessment'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment'
         select
 	        Beschreibung: description
         with
@@ -39,7 +39,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-hpo-assessment' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment' 
         for 
             differential.element 
             where 
@@ -70,7 +70,7 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
     
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-hpo-assessment```
+    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -132,6 +132,6 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
 **Beispiele**
 
-{{json:mii-exa-se-familienanamnese}}
+{{json:mii-exa-seltene-familienanamnese}}
 
 ---

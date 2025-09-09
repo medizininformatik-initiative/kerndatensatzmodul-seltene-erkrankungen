@@ -1,7 +1,7 @@
 ---
 parent: 
 topic: Specimen
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung
 ---
 
 ## {{page-title}}
@@ -14,7 +14,7 @@ Dieses Profil beschreibt eine Therapieempfehlung für Patienten mit Seltenen Erk
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung' 
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
@@ -28,7 +28,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung'
         select
 	        Beschreibung: description
         with
@@ -38,7 +38,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-therapieempfehlung' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung' 
         for 
             differential.element 
             where 
@@ -161,6 +161,6 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
 **Beispiele**
 
-{{json:mii-exa-se-therapieempfehlung}}
+{{json:mii-exa-seltene-therapieempfehlung}}
 
 ---

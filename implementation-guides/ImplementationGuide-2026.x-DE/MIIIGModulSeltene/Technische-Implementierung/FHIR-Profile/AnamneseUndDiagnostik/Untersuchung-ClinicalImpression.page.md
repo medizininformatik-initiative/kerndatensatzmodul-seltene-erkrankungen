@@ -1,7 +1,7 @@
 ---
 parent: 
 topic: Specimen
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-impression
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression
 ---
 
 ## {{page-title}}
@@ -15,7 +15,7 @@ Es ermöglicht die strukturierte Erfassung klinischer Eindrücke, Befunde und Be
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-impression' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression' 
 select 
     Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
@@ -29,7 +29,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-impression'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression'
         select
 	        Beschreibung: description
         with
@@ -39,7 +39,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-se-clinical-impression' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression' 
         for 
             differential.element 
             where 
@@ -147,6 +147,6 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
 **Beispiele**
 
-{{json:mii-exa-se-clinical-impression}}
+{{json:mii-exa-seltene-clinical-impression}}
 
 ---

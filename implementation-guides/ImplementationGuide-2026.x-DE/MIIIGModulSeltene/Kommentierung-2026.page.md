@@ -80,7 +80,7 @@ InstanceOf: Observation
 ## 2. Abgrenzung zwischen Diagnose-Profilen
 
 ### Fragestellung
-**Wann sollte MII_PR_SE_ClinicalDiagnosis vs. MII_PR_SE_GeneticDiagnosis verwendet werden?**
+**Wann sollte MII_PR_Seltene_ClinicalDiagnosis vs. MII_PR_Seltene_GeneticDiagnosis verwendet werden?**
 
 #### Unklare Szenarien
 1. **Klinische Diagnose mit genetischer Bestätigung**: Welches Profil für die finale Diagnose?
