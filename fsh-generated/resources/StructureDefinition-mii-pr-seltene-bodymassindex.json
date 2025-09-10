@@ -7,6 +7,13 @@
   "status": "draft",
   "description": "Describes the Body Mass Index (BMI) of the patient.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "SE-LogicalModel",
+      "name": "Mapping FHIR zu Seltene Erkrankungen Logical Model",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -15,9 +22,27 @@
   "differential": {
     "element": [
       {
+        "id": "Observation",
+        "path": "Observation",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Messbefunde.BMI",
+            "comment": "BMI"
+          }
+        ]
+      },
+      {
         "id": "Observation.status",
         "path": "Observation.status",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Status der Messung",
+            "comment": "Beobachtungsstatus"
+          }
+        ]
       },
       {
         "id": "Observation.category",
@@ -50,7 +75,14 @@
               "display": "Body mass index (BMI) [Ratio]"
             }
           ]
-        }
+        },
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Messbefunde.BMI",
+            "comment": "BMI-Code (LOINC 39156-5)"
+          }
+        ]
       },
       {
         "id": "Observation.subject",
@@ -63,7 +95,14 @@
             ]
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Patient",
+            "comment": "Patient/Indexpatient"
+          }
+        ]
       },
       {
         "id": "Observation.effective[x]",
@@ -71,6 +110,14 @@
         "type": [
           {
             "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Messbefunde.BMI.DatumBMI",
+            "comment": "Datum des BMI"
           }
         ]
       },
@@ -80,6 +127,18 @@
         "type": [
           {
             "code": "Quantity"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].value",
+        "path": "Observation.value[x].value",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Messbefunde.BMI.BMI",
+            "comment": "BMI SE-Patient"
           }
         ]
       },

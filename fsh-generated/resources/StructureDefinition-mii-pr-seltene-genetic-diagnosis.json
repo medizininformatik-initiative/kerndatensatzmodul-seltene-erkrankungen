@@ -33,6 +33,13 @@
   ],
   "description": "Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and links to MolGen variant/diagnostic implication resources. This profile is used when a rare disease diagnosis has been confirmed through genetic testing.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "SE-LogicalModel",
+      "name": "Mapping FHIR zu Seltene Erkrankungen Logical Model",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Condition",
@@ -50,6 +57,54 @@
             "human": "Genetic diagnosis must have at least one evidence.detail referencing a MolGen resource",
             "expression": "evidence.exists() and evidence.detail.exists()",
             "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenetischeDiagnose",
+            "comment": "Genetische Diagnose"
+          }
+        ]
+      },
+      {
+        "id": "Condition.extension:Feststellungsdatum",
+        "path": "Condition.extension",
+        "sliceName": "Feststellungsdatum"
+      },
+      {
+        "id": "Condition.extension:Feststellungsdatum.value[x]",
+        "path": "Condition.extension.value[x]",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+            "comment": "Feststellungsdatum genetische SE-Diagnose"
+          }
+        ]
+      },
+      {
+        "id": "Condition.extension:penetrance",
+        "path": "Condition.extension",
+        "sliceName": "penetrance",
+        "short": "Penetranz der genetischen Variante",
+        "definition": "Angabe zur Penetranz der genetischen Variante bei dieser Erkrankung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenDiaFehlendePenetranz",
+            "comment": "Genetische Diagnose mit fehlender Penetranz"
           }
         ]
       },
@@ -81,6 +136,30 @@
         "mustSupport": true
       },
       {
+        "id": "Condition.code.coding:icd10-gm",
+        "path": "Condition.code.coding",
+        "sliceName": "icd10-gm",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenetischeDiagnose",
+            "comment": "ICD-10-GM Diagnose"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.coding:orphanet",
+        "path": "Condition.code.coding",
+        "sliceName": "orphanet",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenetischeDiagnose",
+            "comment": "Orpha-Code Diagnose"
+          }
+        ]
+      },
+      {
         "id": "Condition.code.coding:omim",
         "path": "Condition.code.coding",
         "sliceName": "omim",
@@ -91,7 +170,14 @@
         "patternCoding": {
           "system": "http://omim.org"
         },
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenetischeDiagnose",
+            "comment": "OMIM-Code Diagnose"
+          }
+        ]
       },
       {
         "id": "Condition.code.coding:omim.system",
@@ -109,6 +195,56 @@
         "id": "Condition.code.coding:omim.display",
         "path": "Condition.code.coding.display",
         "mustSupport": true
+      },
+      {
+        "id": "Condition.subject",
+        "path": "Condition.subject",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Patient",
+            "comment": "Patient/Indexpatient"
+          }
+        ]
+      },
+      {
+        "id": "Condition.encounter",
+        "path": "Condition.encounter",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Untersuchungsdatum",
+            "comment": "Untersuchungsdatum"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]",
+        "path": "Condition.onset[x]",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
+            "comment": "Alter/Zeitpunkt bei genetischer SE-Diagnose"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]:onsetDateTime",
+        "path": "Condition.onset[x]",
+        "sliceName": "onsetDateTime",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+            "comment": "Feststellungsdatum genetische SE-Diagnose"
+          }
+        ]
       },
       {
         "id": "Condition.abatement[x]",
@@ -141,7 +277,14 @@
         "id": "Condition.evidence.code",
         "path": "Condition.evidence.code",
         "short": "Type of genetic evidence",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.MethodeDiagnosestellung",
+            "comment": "Methode der Diagnosestellung"
+          }
+        ]
       },
       {
         "id": "Condition.evidence.code.coding",
@@ -186,7 +329,14 @@
             ]
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Verweis auf MolGen Variante/DiagnostischeImplikation",
+            "comment": "Genetische Befunde"
+          }
+        ]
       }
     ]
   }

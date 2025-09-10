@@ -99,3 +99,22 @@ Description: "Profile for clinical impressions in the context of rare diseases. 
 // Note constraints
 * note ^short = "Zusätzliche Anmerkungen"
 * note ^definition = "Kommentare zur Beurteilung, die anderswo nicht erfasst sind"
+
+// Mapping to Logical Model
+Mapping: FHIR-SE-ClinicalImpression
+Id: SE-LogicalModel
+Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+Source: MII_PR_Seltene_ClinicalImpression
+Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+* -> "AnamneseUndDiagnostik" "Anamnese und Diagnostik"
+* effectiveDateTime -> "AnamneseUndDiagnostik.Untersuchungsdatum" "Untersuchungsdatum"
+* effectivePeriod.start -> "AnamneseUndDiagnostik.Untersuchungsdatum" "Beginn der Untersuchung"
+* effectivePeriod.end -> "AnamneseUndDiagnostik.Untersuchungsdatum" "Ende der Untersuchung"
+* code -> "AnamneseUndDiagnostik.Untersuchungsanlass" "Untersuchungsanlass"
+* problem -> "AnamneseUndDiagnostik.KlinischeDiagnose" "Klinische Diagnose/Verdacht"
+* investigation.code -> "AnamneseUndDiagnostik.MethodeDiagnosestellung" "Methode der Diagnosestellung"
+* investigation.item -> "AnamneseUndDiagnostik.Phaenotypisierung" "Durchgeführte Untersuchungen"
+* finding.itemCodeableConcept -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm" "HPO-Term des Symptoms"
+* finding.itemReference -> "AnamneseUndDiagnostik.Phaenotypisierung" "Verweis auf Phänotypisierung"
+* subject -> "Patient" "Patient/Indexpatient"
+* encounter -> "AnamneseUndDiagnostik.Untersuchungsdatum" "Untersuchungskontakt"

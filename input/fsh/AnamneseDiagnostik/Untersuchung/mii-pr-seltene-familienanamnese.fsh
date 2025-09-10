@@ -19,7 +19,16 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * sex MS
 * reasonCode MS
 * condition MS
+* condition.code MS
+* condition.code.coding 1.. MS
+* condition.onset[x] MS
+* condition.extension contains 
+    mii-ex-seltene-penetrance named penetrance 0..1 MS
+* condition.extension[penetrance] ^short = "Penetranz der genetischen Variante beim Familienmitglied"
+* condition.extension[penetrance] ^definition = "Angabe zur Penetranz der genetischen Variante bei der Erkrankung des Familienmitglieds"
+
 * born[x] 0..1 MS
+* age[x] 0..1 MS
 * deceased[x] 0..1 MS
 /*
 Profile: MII_PR_MolGen_Familienanamnese
@@ -144,3 +153,25 @@ Title: "MII KDS Mapping"
 Source: MII_PR_MolGen_Familienanamnese
 * -> "mide-dataelement-1740" "Krankengeschichte Familie"
 */
+
+// Mapping to Logical Model
+Mapping: FHIR-SE-Familienanamnese
+Id: SE-LogicalModel
+Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+Source: MII_PR_Seltene_Familienanamnese
+Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+* -> "Familienanamnese" "Familienanamnese"
+* relationship -> "Familienanamnese.Verwandtschaftsverhaeltnis" "Verwandtschaftsverhältnis"
+* sex -> "Familienanamnese.Geschlecht" "Geschlecht"
+* extension[vonSEBetroffen] -> "Familienanamnese.GleicheSE" "Gleiche SE"
+* condition.code.coding[icd10-gm] -> "Familienanamnese.AndereSE" "Andere SE (ICD-10-GM)"
+* condition.code.coding[orphanet] -> "Familienanamnese.AndereSE" "Andere SE (Orpha-Code)"
+* condition.code.coding[sct] -> "Familienanamnese.AndereSE" "Andere SE (SNOMED CT)"
+* reasonCode -> "Familienanamnese.AndereSE" "Grund/Erkrankung des Familienmitglieds"
+* condition.extension[penetrance] -> "Familienanamnese.Penetranz" "Penetranz"
+* deceasedBoolean -> "Familienanamnese.FamilienmitgliedVerstorben" "Familienmitglied verstorben"
+* deceasedDate -> "Familienanamnese.FamilienmitgliedVerstorben" "Sterbedatum"
+* deceasedAge -> "Familienanamnese.FamilienmitgliedVerstorben" "Alter bei Tod"
+* condition.onsetAge -> "Alter bei Erkrankungsbeginn" "Alter bei Erkrankung"
+* patient -> "Patient" "Patient/Indexpatient"
+* date -> "Dokumentationsdatum" "Datum der Familienanamnese"

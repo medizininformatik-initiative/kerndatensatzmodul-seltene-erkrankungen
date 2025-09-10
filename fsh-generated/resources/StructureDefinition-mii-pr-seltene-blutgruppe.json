@@ -19,6 +19,13 @@
   ],
   "description": "Observation-Profil für die Erfassung der Blutgruppe (AB0 und Rhesusfaktor) im Kontext seltener Erkrankungen",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "SE-LogicalModel",
+      "name": "Mapping FHIR zu Seltene Erkrankungen Logical Model",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -26,6 +33,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Messbefunde.Blutgruppe",
+            "comment": "Blutgruppe"
+          }
+        ]
+      },
       {
         "id": "Observation.id",
         "path": "Observation.id",
@@ -44,7 +62,14 @@
       {
         "id": "Observation.status",
         "path": "Observation.status",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Status der Messung",
+            "comment": "Beobachtungsstatus"
+          }
+        ]
       },
       {
         "id": "Observation.category",
@@ -81,7 +106,14 @@
         "id": "Observation.code",
         "path": "Observation.code",
         "short": "Blutgruppe Code",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Art der Blutgruppenbestimmung",
+            "comment": "882-1 für AB0+Rh oder 883-9 für nur AB0"
+          }
+        ]
       },
       {
         "id": "Observation.code.coding",
@@ -137,7 +169,14 @@
             ]
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Patient",
+            "comment": "Patient/Indexpatient"
+          }
+        ]
       },
       {
         "id": "Observation.effective[x]",
@@ -173,7 +212,14 @@
             "code": "dateTime"
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Datum der Blutgruppenbestimmung",
+            "comment": "Bestimmungsdatum"
+          }
+        ]
       },
       {
         "id": "Observation.effective[x]:effectivePeriod",
@@ -197,7 +243,14 @@
             "code": "CodeableConcept"
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Messbefunde.Blutgruppe",
+            "comment": "Blutgruppe"
+          }
+        ]
       },
       {
         "id": "Observation.value[x].coding",
@@ -223,7 +276,14 @@
         "sliceName": "loinc",
         "min": 0,
         "max": "1",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Messbefunde.Blutgruppe",
+            "comment": "Blutgruppe (LOINC)"
+          }
+        ]
       },
       {
         "id": "Observation.value[x].coding:loinc.system",
@@ -236,7 +296,14 @@
         "sliceName": "snomed",
         "min": 0,
         "max": "1",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Messbefunde.Blutgruppe",
+            "comment": "Blutgruppe (SNOMED CT)"
+          }
+        ]
       },
       {
         "id": "Observation.value[x].coding:snomed.system",
@@ -246,7 +313,14 @@
       {
         "id": "Observation.value[x].text",
         "path": "Observation.value[x].text",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Messbefunde.Blutgruppe",
+            "comment": "Blutgruppe (Text)"
+          }
+        ]
       }
     ]
   }

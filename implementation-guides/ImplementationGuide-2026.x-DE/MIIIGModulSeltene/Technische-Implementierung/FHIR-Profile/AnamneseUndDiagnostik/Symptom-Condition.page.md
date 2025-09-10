@@ -9,6 +9,27 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 Dieses Profil beschreibt symptombasierte Zustände im Kontext seltener Erkrankungen.
 Es erfasst symptomatische Conditions mit zeitlichen Merkmalen und ergänzt das HPO Assessment Observation Profil.
 
+### Beispiele für kodierte Symptome
+
+Bei der Erfassung von Symptomen seltener Erkrankungen können verschiedene Kodiersysteme verwendet werden:
+
+#### ICD-10-GM Codes
+- **R04.0** (Epistaxis/Nasenbluten) - häufiges Symptom bei Von-Willebrand-Syndrom
+- **S42.3** (Fraktur des Humerusschaftes) - typische pathologische Fraktur bei Osteogenesis imperfecta
+
+#### SNOMED CT Codes für Laborauffälligkeiten
+- **409675001** (Partial thromboplastin time increased) - verlängerte PTT bei Gerinnungsstörungen
+- **166627004** (Serum alkaline phosphatase above reference range) - erhöhte alkalische Phosphatase bei Knochenstoffwechselstörungen
+- **1153490002** (Serum creatine kinase above reference range) - erhöhte CK bei Muskeldystrophien
+
+#### HPO Codes für körperliche Phänotypen
+HPO ist ideal für die präzise Beschreibung körperlicher/phänotypischer Abnormalitäten:
+- **HP:0000978** (Bruising susceptibility) - Neigung zu Hämatomen bei Von-Willebrand-Syndrom
+- **HP:0002659** (Increased susceptibility to fractures) - Frakturneigung bei Osteogenesis imperfecta
+- **HP:0000939** (Osteoporosis) - bei verschiedenen Skelettdysplasien
+- **HP:0003198** (Myopathy) - bei Muskeldystrophien
+- **HP:0001270** (Motor delay) - motorische Entwicklungsverzögerung bei neuromuskulären Erkrankungen
+
 @```
 from 
     StructureDefinition 

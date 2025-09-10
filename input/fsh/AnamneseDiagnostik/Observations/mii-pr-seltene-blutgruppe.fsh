@@ -56,3 +56,19 @@ Description: "Observation-Profil für die Erfassung der Blutgruppe (AB0 und Rhes
 * valueCodeableConcept.coding[snomed] from MII_VS_Seltene_Blutgruppe (required)
 * valueCodeableConcept.coding[snomed].system = "http://snomed.info/sct"
 * valueCodeableConcept.text MS
+
+// Mapping to Logical Model
+Mapping: FHIR-SE-Blutgruppe
+Id: SE-LogicalModel
+Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+Source: MII_PR_Seltene_Blutgruppe
+Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+* -> "Messbefunde.Blutgruppe" "Blutgruppe"
+* valueCodeableConcept -> "Messbefunde.Blutgruppe" "Blutgruppe"
+* valueCodeableConcept.coding[loinc] -> "Messbefunde.Blutgruppe" "Blutgruppe (LOINC)"
+* valueCodeableConcept.coding[snomed] -> "Messbefunde.Blutgruppe" "Blutgruppe (SNOMED CT)"
+* valueCodeableConcept.text -> "Messbefunde.Blutgruppe" "Blutgruppe (Text)"
+* effectiveDateTime -> "Datum der Blutgruppenbestimmung" "Bestimmungsdatum"
+* subject -> "Patient" "Patient/Indexpatient"
+* status -> "Status der Messung" "Beobachtungsstatus"
+* code -> "Art der Blutgruppenbestimmung" "882-1 für AB0+Rh oder 883-9 für nur AB0"

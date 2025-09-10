@@ -121,3 +121,25 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 * note ^short = "Zusätzliche Anmerkungen zur Symptom-Erkrankung"
 * note ^definition = "Zusätzliche Beschreibung der Symptom-Erkrankung, die in anderen Feldern nicht erfasst ist"
 
+// Mapping to Logical Model
+Mapping: FHIR-SE-SymptomCondition
+Id: SE-LogicalModel
+Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+Source: MII_PR_Seltene_Symptom_Condition
+Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+* -> "AnamneseUndDiagnostik.Phaenotypisierung" "Phänotypisierung als Condition"
+* code.coding[hpoCoding] -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm" "HPO-Term des Symptoms"
+* code.coding[snomedCoding] -> "AnamneseUndDiagnostik.Phaenotypisierung" "SNOMED CT Symptom"
+* code.coding[icd10GMCoding] -> "AnamneseUndDiagnostik.Phaenotypisierung" "ICD-10-GM Symptom"
+* severity -> "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom" "Schweregrad/Verlauf"
+* onsetDateTime -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Startdatum des Symptoms"
+* onsetPeriod.start -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Beginn Symptomzeitraum"
+* onsetPeriod.end -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Ende Symptomzeitraum"
+* onsetAge -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom" "Alter bei Symptombeginn"
+* onsetString -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase" "Lebensphase Symptom"
+* abatementDateTime -> "Ende des Symptoms" "Enddatum des Symptoms"
+* evidence.code -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm" "Unterstützende HPO-Symptome"
+* evidence.detail -> "AnamneseUndDiagnostik.Phaenotypisierung" "Verweis auf Beobachtungen"
+* subject -> "Patient" "Patient/Indexpatient"
+* encounter -> "AnamneseUndDiagnostik.Untersuchungsdatum" "Untersuchungskontakt"
+* recordedDate -> "AnamneseUndDiagnostik.Untersuchungsdatum" "Dokumentationsdatum"

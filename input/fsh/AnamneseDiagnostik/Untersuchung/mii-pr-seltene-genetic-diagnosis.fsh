@@ -70,8 +70,11 @@ Description: "Profile for genetically confirmed diagnosis of rare diseases with 
 * evidence.detail only Reference(Observation or DiagnosticReport)
 * evidence.detail ^comment = "Should reference: 1) MII PR MolGen Variante (Observation) for specific variant findings, or 2) MII PR MolGen DiagnostischeImplikation (DiagnosticReport) for comprehensive genetic diagnostic reports"
 
-// Extensions for genetic-specific information would be defined here if needed
-// Currently using standard MII Diagnose extension set
+// Extensions for genetic-specific information
+* extension contains 
+    mii-ex-seltene-penetrance named penetrance 0..1 MS
+* extension[penetrance] ^short = "Penetranz der genetischen Variante"
+* extension[penetrance] ^definition = "Angabe zur Penetranz der genetischen Variante bei dieser Erkrankung"
 
 // Apply invariant to ensure genetic evidence
 * obeys se-genetic-evidence
@@ -80,3 +83,22 @@ Invariant: se-genetic-evidence
 Description: "Genetic diagnosis must have at least one evidence.detail referencing a MolGen resource"
 Expression: "evidence.exists() and evidence.detail.exists()"
 Severity: #error
+
+// Mapping to Logical Model
+Mapping: FHIR-SE-GeneticDiagnosis
+Id: SE-LogicalModel
+Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+Source: MII_PR_Seltene_GeneticDiagnosis
+Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+* -> "AnamneseUndDiagnostik.GenetischeDiagnose" "Genetische Diagnose"
+* code.coding[icd10-gm] -> "AnamneseUndDiagnostik.GenetischeDiagnose" "ICD-10-GM Diagnose"
+* code.coding[orphanet] -> "AnamneseUndDiagnostik.GenetischeDiagnose" "Orpha-Code Diagnose"
+* code.coding[omim] -> "AnamneseUndDiagnostik.GenetischeDiagnose" "OMIM-Code Diagnose"
+* extension[assertedDate].valueDateTime -> "AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia" "Feststellungsdatum genetische SE-Diagnose"
+* onset[x] -> "AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia" "Alter/Zeitpunkt bei genetischer SE-Diagnose"
+* onsetDateTime -> "AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia" "Feststellungsdatum genetische SE-Diagnose"
+* evidence.code -> "AnamneseUndDiagnostik.MethodeDiagnosestellung" "Methode der Diagnosestellung"
+* evidence.detail -> "Verweis auf MolGen Variante/DiagnostischeImplikation" "Genetische Befunde"
+* subject -> "Patient" "Patient/Indexpatient"
+* encounter -> "AnamneseUndDiagnostik.Untersuchungsdatum" "Untersuchungsdatum"
+* extension[penetrance] -> "AnamneseUndDiagnostik.GenDiaFehlendePenetranz" "Genetische Diagnose mit fehlender Penetranz"

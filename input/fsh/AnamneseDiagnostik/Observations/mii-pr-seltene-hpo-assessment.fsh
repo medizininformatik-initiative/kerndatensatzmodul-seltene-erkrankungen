@@ -92,3 +92,22 @@ Description: "Example of an HPO-based phenotypic observation for intellectual di
 * effectiveDateTime = "2024-01-15"
 * valueBoolean = true
 * note.text = "Patient shows signs of mild intellectual disability with learning difficulties in academic settings."
+
+// Mapping to Logical Model
+Mapping: FHIR-SE-HPOAssessment
+Id: SE-LogicalModel
+Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+Source: MII_PR_Seltene_HPO_Assessment
+Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+* -> "AnamneseUndDiagnostik.Phaenotypisierung" "Phänotypisierung"
+* code -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm" "HPO-Term des Symptoms"
+* code.coding.version -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOVersion" "Version HPO-Term"
+* interpretation[changeStatus] -> "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom" "Verlauf Symptom"
+* interpretation[changeStatus].coding.code -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus" "Status HPO-Term"
+* effectiveDateTime -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Startdatum des Symptoms"
+* effectivePeriod.start -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Startdatum des Symptoms"
+* effectivePeriod.end -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Enddatum des Symptoms"
+* method -> "AnamneseUndDiagnostik.MethodeDiagnosestellung" "Methode der Diagnosestellung"
+* subject -> "Patient" "Patient/Indexpatient"
+* encounter -> "AnamneseUndDiagnostik.Untersuchungsdatum" "Untersuchungsdatum"
+* derivedFrom -> "Verweis auf zugrunde liegende Befunde" "Laborbefunde oder Bildgebung"

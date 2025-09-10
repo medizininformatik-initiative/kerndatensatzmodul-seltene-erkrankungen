@@ -16,7 +16,10 @@ Description: "Describes the Body Mass Index (BMI) of the patient."
 * subject MS
 * subject only Reference(Patient)
 
+* effective[x] MS
 * effective[x] only dateTime
+
+* value[x] MS
 * value[x] only Quantity
 * valueQuantity.unit = "kg/m2" (exactly)
 * valueQuantity.system = $UCUM (exactly)
@@ -40,3 +43,16 @@ Description: "Example of a Body Mass Index (BMI) observation for a patient."
 * valueQuantity.unit = "kg/m2"
 * valueQuantity.system = $UCUM
 * valueQuantity.code = #kg/m2
+
+// Mapping to Logical Model
+Mapping: FHIR-SE-BMI
+Id: SE-LogicalModel
+Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+Source: MII_PR_Seltene_Bodymassindex
+Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+* -> "Messbefunde.BMI" "BMI"
+* valueQuantity.value -> "Messbefunde.BMI.BMI" "BMI SE-Patient"
+* effectiveDateTime -> "Messbefunde.BMI.DatumBMI" "Datum des BMI"
+* subject -> "Patient" "Patient/Indexpatient"
+* status -> "Status der Messung" "Beobachtungsstatus"
+* code -> "Messbefunde.BMI" "BMI-Code (LOINC 39156-5)"

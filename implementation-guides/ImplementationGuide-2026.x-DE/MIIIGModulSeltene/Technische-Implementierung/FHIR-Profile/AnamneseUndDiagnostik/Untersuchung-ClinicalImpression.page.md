@@ -9,6 +9,46 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 Dieses Profil beschreibt die klinische Bewertung und Dokumentation interdisziplinärer Untersuchungen im Rahmen der Diagnostik seltener Erkrankungen.
 Es ermöglicht die strukturierte Erfassung klinischer Eindrücke, Befunde und Behandlungsempfehlungen.
 
+### Strukturierung der klinischen Bewertung
+
+Die ClinicalImpression nutzt drei Hauptelemente zur Strukturierung der klinischen Bewertung:
+
+#### **Problem** (`problem`)
+Dokumentiert die **identifizierten Gesundheitsprobleme oder Diagnosen**:
+- Bestätigte Diagnosen (ICD-10-GM, Orpha-Codes)
+- Verdachtsdiagnosen
+- Symptom-Conditions (symptomatische Zustände)
+- Beispiel: "Verdacht auf Osteogenesis imperfecta" oder "Bestätigte Von-Willebrand-Erkrankung"
+
+#### **Investigation** (`investigation`)
+Erfasst **durchgeführte oder geplante Untersuchungen** zur Abklärung:
+- Gruppierung zusammengehöriger Diagnostik
+- Labor-Panels (z.B. Gerinnungsdiagnostik)
+- Bildgebende Verfahren
+- Genetische Tests
+- Beispiel: Investigation mit Code "Basisdiagnostik" enthält Referenzen auf CBC, PTT, Blutungszeit
+
+#### **Finding** (`finding`)
+Dokumentiert **konkrete Befunde und Beobachtungen**:
+- HPO-kodierte phänotypische Merkmale
+- Auffällige Laborwerte
+- Bildgebungsbefunde
+- Klinische Beobachtungen
+- Beispiel: "Erhöhte PTT (409675001)", "Bruising susceptibility (HP:0000978)"
+
+### Verwendungsbeispiel
+
+```
+ClinicalImpression (Erstvorstellung)
+├── problem: Verdacht auf Von-Willebrand-Syndrom
+├── investigation[0]: 
+│   ├── code: "Gerinnungsdiagnostik"
+│   └── item: [PTT-Messung, vWF-Aktivität, Blutungszeit]
+└── finding[0]: Nasenbluten (R04.0)
+└── finding[1]: Hämatom-Neigung (HP:0000978)
+└── finding[2]: PTT verlängert (409675001)
+```
+
 
 
 @```
@@ -54,30 +94,15 @@ select
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
-
-@```
-from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading'  
-    for differential.element
-    where mapping.identity='oBDS'
-    select 
-        oBDS: mapping.map,
-        Definition: mapping.comment,
-        FHIR: path
-```
-
----
-
 **Suchparameter**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch in Kombination:
 
 1. Der Suchparameter ```_id``` MUSS unterstützt werden:
 
     Beispiele: 
 
-    ```GET [base]/Observation?_id=1234```
+    ```GET [base]/ClinicalImpression?_id=1234```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
@@ -85,68 +110,66 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 
     Beispiele:
     
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading```
+    ```GET [base]/ClinicalImpression?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression```
     
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
 
-3. Der Suchparameter "category" MUSS unterstützt werden:
+3. Der Suchparameter "status" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory```
+    ```GET [base]/ClinicalImpression?status=completed```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+    Anwendungshinweise: Weitere Informationen zur Suche nach "status" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
 
-4. Der Suchparameter "code" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
-
-5. Der Suchparameter "subject" MUSS unterstützt werden:
+4. Der Suchparameter "subject" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?subject=Patient/example```
+    ```GET [base]/ClinicalImpression?subject=Patient/example```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
-6. Der Suchparameter "focus" MUSS unterstützt werden:
+5. Der Suchparameter "problem" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?focus=Condition/example```
+    ```GET [base]/ClinicalImpression?problem=Condition/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "focus" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Anwendungshinweise: Weitere Informationen zur Suche nach "problem" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
-7. Der Suchparameter "encounter" MUSS unterstützt werden:
+6. Der Suchparameter "encounter" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?encounter=Encounter/example```
+    ```GET [base]/ClinicalImpression?encounter=Encounter/example```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
-8. Der Suchparameter "date" MUSS unterstützt werden:
+7. Der Suchparameter "date" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?date=2024-02-08```
+    ```GET [base]/ClinicalImpression?date=2024-02-08```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
 
-9. Der Suchparameter "derived-from" MUSS unterstützt werden:
+8. Der Suchparameter "finding-ref" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?derived-from=Observation/example```
+    ```GET [base]/ClinicalImpression?finding-ref=Observation/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Anwendungshinweise: Weitere Informationen zur Suche nach "finding-ref" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
 **Beispiele**
 
-{{json:mii-exa-seltene-clinical-impression}}
+### Beispiel: Klinische Beurteilung bei Erstvorstellung
+
+{{json:clinical-impression-erstvorstellung}}
+
+### Beispiel: Klinische Beurteilung bei Nachsorge
+
+{{json:clinical-impression-nachsorge}}
 
 ---

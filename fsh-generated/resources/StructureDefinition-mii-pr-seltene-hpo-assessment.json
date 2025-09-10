@@ -19,6 +19,13 @@
   ],
   "description": "Profile for HPO-based phenotypic observations in the context of rare diseases. This profile uses the Human Phenotype Ontology (HPO) to describe clinical symptoms and phenotypic abnormalities.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "SE-LogicalModel",
+      "name": "Mapping FHIR zu Seltene Erkrankungen Logical Model",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -26,6 +33,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung",
+            "comment": "Phänotypisierung"
+          }
+        ]
+      },
       {
         "id": "Observation.status",
         "path": "Observation.status",
@@ -40,7 +58,25 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+            "comment": "HPO-Term des Symptoms"
+          }
+        ]
+      },
+      {
+        "id": "Observation.code.coding.version",
+        "path": "Observation.code.coding.version",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOVersion",
+            "comment": "Version HPO-Term"
+          }
+        ]
       },
       {
         "id": "Observation.subject",
@@ -55,17 +91,41 @@
             ]
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Patient",
+            "comment": "Patient/Indexpatient"
+          }
+        ]
       },
       {
         "id": "Observation.encounter",
         "path": "Observation.encounter",
         "short": "Gesundheitskontakt, bei dem der Phänotyp beobachtet wurde",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Untersuchungsdatum",
+            "comment": "Untersuchungsdatum"
+          }
+        ]
       },
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "short": "Zeitpunkt der Phänotyp-Beobachtung oder Beobachtungszeitraum",
         "type": [
           {
@@ -76,6 +136,59 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]:effectiveDateTime",
+        "path": "Observation.effective[x]",
+        "sliceName": "effectiveDateTime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+            "comment": "Startdatum des Symptoms"
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]:effectivePeriod",
+        "path": "Observation.effective[x]",
+        "sliceName": "effectivePeriod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]:effectivePeriod.start",
+        "path": "Observation.effective[x].start",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+            "comment": "Startdatum des Symptoms"
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]:effectivePeriod.end",
+        "path": "Observation.effective[x].end",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+            "comment": "Enddatum des Symptoms"
+          }
+        ]
       },
       {
         "id": "Observation.value[x]",
@@ -159,7 +272,25 @@
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-change-status"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom",
+            "comment": "Verlauf Symptom"
+          }
+        ]
+      },
+      {
+        "id": "Observation.interpretation:changeStatus.coding.code",
+        "path": "Observation.interpretation.coding.code",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
+            "comment": "Status HPO-Term"
+          }
+        ]
       },
       {
         "id": "Observation.note",
@@ -185,13 +316,27 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/ValueSet/observation-methods"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.MethodeDiagnosestellung",
+            "comment": "Methode der Diagnosestellung"
+          }
+        ]
       },
       {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "short": "Verwandte Beobachtungen oder Bewertungen",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Verweis auf zugrunde liegende Befunde",
+            "comment": "Laborbefunde oder Bildgebung"
+          }
+        ]
       }
     ]
   }

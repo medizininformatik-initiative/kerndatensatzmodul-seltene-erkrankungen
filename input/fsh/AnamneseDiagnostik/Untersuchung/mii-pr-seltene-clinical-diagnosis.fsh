@@ -63,3 +63,21 @@ Description: "Profile for clinical diagnosis of rare diseases with HPO phenotype
 
 // Extensions for rare disease specific information would be defined here if needed
 // Currently using standard MII Diagnose extension set
+
+// Mapping to Logical Model
+Mapping: FHIR-SE-ClinicalDiagnosis
+Id: SE-LogicalModel
+Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+Source: MII_PR_Seltene_ClinicalDiagnosis
+Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+* -> "AnamneseUndDiagnostik.KlinischeDiagnose" "Klinische Diagnose"
+* code.coding[icd10-gm] -> "AnamneseUndDiagnostik.KlinischeDiagnose" "ICD-10-GM Diagnose"
+* code.coding[orphanet] -> "AnamneseUndDiagnostik.KlinischeDiagnose" "Orpha-Code Diagnose"
+* code.coding[hpo] -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm" "HPO-Term des Symptoms"
+* extension[assertedDate].valueDateTime -> "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia" "Feststellungsdatum klinische SE-Diagnose"
+* onset[x] -> "AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia" "Alter/Zeitpunkt bei klinischer SE-Diagnose"
+* onsetDateTime -> "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia" "Feststellungsdatum klinische SE-Diagnose"
+* evidence.code -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm" "Unterstützende HPO-Symptome"
+* evidence.detail -> "AnamneseUndDiagnostik.Phaenotypisierung" "Verweis auf Phänotypisierung"
+* subject -> "Patient" "Patient/Indexpatient"
+* encounter -> "AnamneseUndDiagnostik.Untersuchungsdatum" "Untersuchungsdatum"

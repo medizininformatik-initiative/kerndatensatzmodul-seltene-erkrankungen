@@ -10,27 +10,17 @@ Description: "CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen �
 * ^caseSensitive = true
 * ^content = #complete
 
-* #newly-added "Newly Added"
-  * ^designation[0].language = #de-DE
-  * ^designation[=].value = "Neu hinzugefügt"
+* #newly-added "Neu hinzugefügt"
   * ^definition = "Phänotyp wurde neu beobachtet/diagnostiziert"
 
-* #improved "Improved" 
-  * ^designation[0].language = #de-DE
-  * ^designation[=].value = "Verbessert"
+* #improved "Verbessert"
   * ^definition = "Phänotyp hat sich verbessert"
 
-* #degraded "Degraded"
-  * ^designation[0].language = #de-DE
-  * ^designation[=].value = "Verschlechtert"
+* #degraded "Verschlechtert"
   * ^definition = "Phänotyp hat sich verschlechtert"
 
-* #no-longer-observed "No Longer Observed"
-  * ^designation[0].language = #de-DE
-  * ^designation[=].value = "Nicht mehr beobachtet"
+* #no-longer-observed "Nicht mehr beobachtet"
   * ^definition = "Phänotyp wird nicht mehr beobachtet/ist verschwunden"
 
-* #unchanged "Unchanged"
-  * ^designation[0].language = #de-DE
-  * ^designation[=].value = "Unverändert"
+* #unchanged "Unverändert"
   * ^definition = "Phänotyp ist unverändert geblieben"

@@ -19,6 +19,13 @@
   ],
   "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "SE-LogicalModel",
+      "name": "Mapping FHIR zu Seltene Erkrankungen Logical Model",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "FamilyMemberHistory",
@@ -27,8 +34,29 @@
   "differential": {
     "element": [
       {
+        "id": "FamilyMemberHistory",
+        "path": "FamilyMemberHistory",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Familienanamnese",
+            "comment": "Familienanamnese"
+          }
+        ]
+      },
+      {
         "id": "FamilyMemberHistory.extension",
         "path": "FamilyMemberHistory.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "min": 1
       },
       {
@@ -47,7 +75,58 @@
             ]
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Familienanamnese.GleicheSE",
+            "comment": "Gleiche SE"
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.patient",
+        "path": "FamilyMemberHistory.patient",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Patient",
+            "comment": "Patient/Indexpatient"
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.date",
+        "path": "FamilyMemberHistory.date",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Dokumentationsdatum",
+            "comment": "Datum der Familienanamnese"
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.relationship",
+        "path": "FamilyMemberHistory.relationship",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Familienanamnese.Verwandtschaftsverhaeltnis",
+            "comment": "Verwandtschaftsverhältnis"
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.sex",
+        "path": "FamilyMemberHistory.sex",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Familienanamnese.Geschlecht",
+            "comment": "Geschlecht"
+          }
+        ]
       },
       {
         "id": "FamilyMemberHistory.born[x]",
@@ -55,9 +134,201 @@
         "mustSupport": true
       },
       {
+        "id": "FamilyMemberHistory.age[x]",
+        "path": "FamilyMemberHistory.age[x]",
+        "mustSupport": true
+      },
+      {
         "id": "FamilyMemberHistory.deceased[x]",
         "path": "FamilyMemberHistory.deceased[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.deceased[x]:deceasedBoolean",
+        "path": "FamilyMemberHistory.deceased[x]",
+        "sliceName": "deceasedBoolean",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Familienanamnese.FamilienmitgliedVerstorben",
+            "comment": "Familienmitglied verstorben"
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.deceased[x]:deceasedDate",
+        "path": "FamilyMemberHistory.deceased[x]",
+        "sliceName": "deceasedDate",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Familienanamnese.FamilienmitgliedVerstorben",
+            "comment": "Sterbedatum"
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.deceased[x]:deceasedAge",
+        "path": "FamilyMemberHistory.deceased[x]",
+        "sliceName": "deceasedAge",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Age"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Familienanamnese.FamilienmitgliedVerstorben",
+            "comment": "Alter bei Tod"
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode",
+        "path": "FamilyMemberHistory.reasonCode",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Familienanamnese.AndereSE",
+            "comment": "Grund/Erkrankung des Familienmitglieds"
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.condition.extension",
+        "path": "FamilyMemberHistory.condition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "FamilyMemberHistory.condition.extension:penetrance",
+        "path": "FamilyMemberHistory.condition.extension",
+        "sliceName": "penetrance",
+        "short": "Penetranz der genetischen Variante beim Familienmitglied",
+        "definition": "Angabe zur Penetranz der genetischen Variante bei der Erkrankung des Familienmitglieds",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Familienanamnese.Penetranz",
+            "comment": "Penetranz"
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:icd10-gm",
+        "path": "FamilyMemberHistory.condition.code.coding",
+        "sliceName": "icd10-gm",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Familienanamnese.AndereSE",
+            "comment": "Andere SE (ICD-10-GM)"
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:sct",
+        "path": "FamilyMemberHistory.condition.code.coding",
+        "sliceName": "sct",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Familienanamnese.AndereSE",
+            "comment": "Andere SE (SNOMED CT)"
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:orphanet",
+        "path": "FamilyMemberHistory.condition.code.coding",
+        "sliceName": "orphanet",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Familienanamnese.AndereSE",
+            "comment": "Andere SE (Orpha-Code)"
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.condition.onset[x]",
+        "path": "FamilyMemberHistory.condition.onset[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.onset[x]:onsetAge",
+        "path": "FamilyMemberHistory.condition.onset[x]",
+        "sliceName": "onsetAge",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Age"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Alter bei Erkrankungsbeginn",
+            "comment": "Alter bei Erkrankung"
+          }
+        ]
       }
     ]
   }

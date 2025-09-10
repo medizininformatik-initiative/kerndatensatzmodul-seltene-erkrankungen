@@ -19,6 +19,13 @@
   ],
   "description": "Profile for symptom-based conditions in the context of rare diseases. This profile captures symptomatic conditions with temporal characteristics, complementing the HPO Assessment Observation profile.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "SE-LogicalModel",
+      "name": "Mapping FHIR zu Seltene Erkrankungen Logical Model",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Condition",
@@ -26,6 +33,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Condition",
+        "path": "Condition",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung",
+            "comment": "Phänotypisierung als Condition"
+          }
+        ]
+      },
       {
         "id": "Condition.id",
         "path": "Condition.id",
@@ -78,7 +96,14 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity-values"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom",
+            "comment": "Schweregrad/Verlauf"
+          }
+        ]
       },
       {
         "id": "Condition.code",
@@ -119,7 +144,14 @@
         "patternCoding": {
           "system": "http://purl.obolibrary.org/obo/hp.owl"
         },
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+            "comment": "HPO-Term des Symptoms"
+          }
+        ]
       },
       {
         "id": "Condition.code.coding:hpoCoding.system",
@@ -147,7 +179,14 @@
         "patternCoding": {
           "system": "http://snomed.info/sct"
         },
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung",
+            "comment": "SNOMED CT Symptom"
+          }
+        ]
       },
       {
         "id": "Condition.code.coding:snomedCoding.system",
@@ -175,7 +214,14 @@
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
         },
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung",
+            "comment": "ICD-10-GM Symptom"
+          }
+        ]
       },
       {
         "id": "Condition.code.coding:icd10GMCoding.system",
@@ -212,31 +258,182 @@
             ]
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Patient",
+            "comment": "Patient/Indexpatient"
+          }
+        ]
       },
       {
         "id": "Condition.encounter",
         "path": "Condition.encounter",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Untersuchungsdatum",
+            "comment": "Untersuchungskontakt"
+          }
+        ]
       },
       {
         "id": "Condition.onset[x]",
         "path": "Condition.onset[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "short": "Beginn der Symptom-Erkrankung",
         "definition": "Geschätztes oder tatsächliches Datum, Alter, Zeitraum oder zeitliche Beschreibung, wann die Symptom-Erkrankung begann",
         "mustSupport": true
       },
       {
+        "id": "Condition.onset[x]:onsetDateTime",
+        "path": "Condition.onset[x]",
+        "sliceName": "onsetDateTime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+            "comment": "Startdatum des Symptoms"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]:onsetPeriod",
+        "path": "Condition.onset[x]",
+        "sliceName": "onsetPeriod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]:onsetPeriod.start",
+        "path": "Condition.onset[x].start",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+            "comment": "Beginn Symptomzeitraum"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]:onsetPeriod.end",
+        "path": "Condition.onset[x].end",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+            "comment": "Ende Symptomzeitraum"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]:onsetAge",
+        "path": "Condition.onset[x]",
+        "sliceName": "onsetAge",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Age"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom",
+            "comment": "Alter bei Symptombeginn"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]:onsetString",
+        "path": "Condition.onset[x]",
+        "sliceName": "onsetString",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase",
+            "comment": "Lebensphase Symptom"
+          }
+        ]
+      },
+      {
         "id": "Condition.abatement[x]",
         "path": "Condition.abatement[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "short": "Auflösung der Symptom-Erkrankung",
         "definition": "Datum, Alter, Zeitraum oder zeitliche Beschreibung, wann die Symptom-Erkrankung abgeklungen ist oder in Remission ging",
         "mustSupport": true
       },
       {
+        "id": "Condition.abatement[x]:abatementDateTime",
+        "path": "Condition.abatement[x]",
+        "sliceName": "abatementDateTime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Ende des Symptoms",
+            "comment": "Enddatum des Symptoms"
+          }
+        ]
+      },
+      {
         "id": "Condition.recordedDate",
         "path": "Condition.recordedDate",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Untersuchungsdatum",
+            "comment": "Dokumentationsdatum"
+          }
+        ]
       },
       {
         "id": "Condition.stage",
@@ -277,7 +474,14 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+            "comment": "Unterstützende HPO-Symptome"
+          }
+        ]
       },
       {
         "id": "Condition.evidence.detail",
@@ -291,6 +495,13 @@
               "http://hl7.org/fhir/StructureDefinition/DocumentReference",
               "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
             ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung",
+            "comment": "Verweis auf Beobachtungen"
           }
         ]
       },

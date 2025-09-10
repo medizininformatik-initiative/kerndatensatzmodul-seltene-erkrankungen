@@ -9,21 +9,30 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 Dieses Profil beschreibt die Phänotypisierung gemäß Human Phenotype Ontology (HPO) im Rahmen der Diagnostik seltener Erkrankungen.
 Es ermöglicht die strukturierte Erfassung phänotypischer Abnormalitäten und klinischer Merkmale.
 
+### Zeitpunktbezogene Dokumentation
+
+**Wichtig:** Jede HPO-Observation repräsentiert einen **spezifischen Zeitpunkt** der Phänotyp-Bewertung. Da sich Phänotypen im Verlauf einer Erkrankung verändern können, ist es essentiell:
+
+- **Einzelne Beobachtungen** zu dokumentieren mit präzisen Zeitstempeln (`effectiveDateTime`)
+- **Verlaufsänderungen** über das `interpretation[changeStatus]` Element zu erfassen
+- **Parallele Dokumentation** sowohl als Observation (Zeitpunkt) als auch als Symptom-Condition (Zeitraum) zu erwägen
+
+**Hinweis zur Datumserfassung:** Das Datum (`effectiveDateTime`) ist **nicht** Teil der Kerndatensätze, **SOLL** aber wenn möglich erfasst werden, um die zeitliche Nachvollziehbarkeit der Phänotyp-Entwicklung zu gewährleisten.
+
+Diese zeitpunktbezogene Erfassung ermöglicht die Nachvollziehbarkeit der Krankheitsprogression und Therapieeffekte bei seltenen Erkrankungen.
+
+### Verknüpfung mit Evidenz
+
+Das `derivedFrom` Element ermöglicht die Verknüpfung der HPO-Beobachtung mit konkreten klinischen Befunden:
+- **Laborwerte**: Referenz auf auffällige Laborergebnisse (z.B. erhöhte CK-Werte bei Muskeldystrophie)
+- **Bildgebung**: Verweis auf radiologische oder andere bildgebende Befunde
+- **Andere Beobachtungen**: Verknüpfung mit weiteren klinischen Assessments
+
+Diese Referenzierung schafft Transparenz über die Grundlage der phänotypischen Einschätzung.
+
 ### Änderungsstatus von HPO-Phänotypen
 
 Gemäß den Vorgaben des Modellvorhabens Genomsequenzierung unterstützt dieses Profil die Dokumentation von Änderungen bei HPO-Phänotypen über Zeit. Dies erfolgt über das `interpretation` Element mit einem speziellen Slice für den Änderungsstatus.
-
-#### CodeSystem für HPO-Änderungsstatus
-
-Das folgende CodeSystem definiert die möglichen Änderungszustände eines HPO-Phänotyps:
-
-{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status}}
-
-#### ValueSet für HPO-Änderungsstatus
-
-{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-change-status}}
-
-#### Verwendung
 
 Der Änderungsstatus wird im `interpretation[changeStatus]` Slice dokumentiert:
 
@@ -33,11 +42,21 @@ Der Änderungsstatus wird im `interpretation[changeStatus]` Slice dokumentiert:
     "coding": [{
       "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status",
       "code": "improved",
-      "display": "Improved"
+      "display": "Verbessert"
     }]
   }]
 }
 ```
+
+#### Verfügbare Änderungsstatus-Codes
+
+| Code | Anzeige | Beschreibung |
+|------|---------|--------------|
+| newly-added | Neu hinzugefügt | Phänotyp wurde neu beobachtet/diagnostiziert |
+| improved | Verbessert | Phänotyp hat sich verbessert |
+| degraded | Verschlechtert | Phänotyp hat sich verschlechtert |
+| no-longer-observed | Nicht mehr beobachtet | Phänotyp wird nicht mehr beobachtet/ist verschwunden |
+| unchanged | Unverändert | Phänotyp ist unverändert geblieben |
 
 
 

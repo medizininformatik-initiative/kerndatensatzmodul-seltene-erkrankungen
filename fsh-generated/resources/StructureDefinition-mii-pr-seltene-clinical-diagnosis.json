@@ -33,6 +33,13 @@
   ],
   "description": "Profile for clinical diagnosis of rare diseases with HPO phenotype codes. This profile is used for clinically diagnosed rare diseases based on phenotypic presentation.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "SE-LogicalModel",
+      "name": "Mapping FHIR zu Seltene Erkrankungen Logical Model",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Condition",
@@ -40,6 +47,33 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Condition",
+        "path": "Condition",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.KlinischeDiagnose",
+            "comment": "Klinische Diagnose"
+          }
+        ]
+      },
+      {
+        "id": "Condition.extension:Feststellungsdatum",
+        "path": "Condition.extension",
+        "sliceName": "Feststellungsdatum"
+      },
+      {
+        "id": "Condition.extension:Feststellungsdatum.value[x]",
+        "path": "Condition.extension.value[x]",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+            "comment": "Feststellungsdatum klinische SE-Diagnose"
+          }
+        ]
+      },
       {
         "id": "Condition.category",
         "path": "Condition.category",
@@ -50,6 +84,30 @@
         "id": "Condition.severity",
         "path": "Condition.severity",
         "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:icd10-gm",
+        "path": "Condition.code.coding",
+        "sliceName": "icd10-gm",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.KlinischeDiagnose",
+            "comment": "ICD-10-GM Diagnose"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.coding:orphanet",
+        "path": "Condition.code.coding",
+        "sliceName": "orphanet",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.KlinischeDiagnose",
+            "comment": "Orpha-Code Diagnose"
+          }
+        ]
       },
       {
         "id": "Condition.code.coding:hpo",
@@ -67,7 +125,14 @@
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+            "comment": "HPO-Term des Symptoms"
+          }
+        ]
       },
       {
         "id": "Condition.code.coding:hpo.system",
@@ -85,6 +150,56 @@
         "id": "Condition.code.coding:hpo.display",
         "path": "Condition.code.coding.display",
         "mustSupport": true
+      },
+      {
+        "id": "Condition.subject",
+        "path": "Condition.subject",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Patient",
+            "comment": "Patient/Indexpatient"
+          }
+        ]
+      },
+      {
+        "id": "Condition.encounter",
+        "path": "Condition.encounter",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Untersuchungsdatum",
+            "comment": "Untersuchungsdatum"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]",
+        "path": "Condition.onset[x]",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia",
+            "comment": "Alter/Zeitpunkt bei klinischer SE-Diagnose"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]:onsetDateTime",
+        "path": "Condition.onset[x]",
+        "sliceName": "onsetDateTime",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+            "comment": "Feststellungsdatum klinische SE-Diagnose"
+          }
+        ]
       },
       {
         "id": "Condition.abatement[x]",
@@ -127,7 +242,14 @@
         "id": "Condition.evidence.code",
         "path": "Condition.evidence.code",
         "short": "Manifestation/symptom supporting the diagnosis",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+            "comment": "Unterstützende HPO-Symptome"
+          }
+        ]
       },
       {
         "id": "Condition.evidence.code.coding",
@@ -149,7 +271,14 @@
             ]
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung",
+            "comment": "Verweis auf Phänotypisierung"
+          }
+        ]
       }
     ]
   }

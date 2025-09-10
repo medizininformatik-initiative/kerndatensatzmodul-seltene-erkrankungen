@@ -83,7 +83,7 @@ Die Elemente des logischen Datenmodells werden wie folgt auf das FamilyMemberHis
 | Familienanamnese.Geschlecht | FamilyMemberHistory.sex | Geschlecht des Familienmitglieds |
 | Familienanamnese.GleicheSE | FamilyMemberHistory.condition.code | Wenn Code identisch mit Indexpatient-Diagnose |
 | Familienanamnese.AndereSE | FamilyMemberHistory.condition.code | Wenn Code unterschiedlich zur Indexpatient-Diagnose |
-| Familienanamnese.Penetranz | FamilyMemberHistory.extension:penetranz | Extension für fehlende klinische Penetranz |
+| Familienanamnese.Penetranz | FamilyMemberHistory.extension:penetranz | Extension für fehlende klinische Penetranz trotz genetischer Diagnose bei Familienmitgliedern |
 | Familienanamnese.FamilienmitgliedVerstorben | FamilyMemberHistory.deceased[x] | Vitalstatus des Familienmitglieds |
 
 ---
