@@ -49,6 +49,18 @@ Die Implementierung erfolgt über:
 - **StructureMaps** für strukturelle Transformationen zwischen Datenformaten
 - Automatisierte Validierung der Mappings
 
+
+### Ausweitung der "FAIRen" SE-Datenerhebung am Klinischen Arbeitsplatz nach französischem Vorbild
+
+Eine der vier Basen der FAIR-Prinzipien ist die Reusability (R), die Mehrfachnutzung von einmal erhobenen Daten für verschiedene erlaubte Zwecke. Das Kernparadigma der Medizininformatik-Initiative in Deutschland ist die Mehrfachnutzung der an Klinischen Arbeitsplätzen erhobenen Daten. Und wenn bei mehrfach benötigten Daten Lücken identifiziert werden - wie das bei der ORPHA-Kodierung der SE-Diagnosen in Deutschland lange Zeit der Fall war - , darf geprüft werden, inwieweit es gelingt, die (zusätzlichen) Ressourcen für die Erhebung an einem Ort zu fokussieren. Wenn die Arbeitsprozesse es erlauben, können die Klinischen Arbeitsplätze oder die klinischen Patientenakten die richtigen Stellen sein. Als Vorbild kann die Datenerhebung für das Zentralregister für Seltene Erkrankungen (Banque Nationale de Données Maladies Rares, BNDMR) in Frankreich dienen.  
+
+In Frankreich basiert die vorrangige Strategie der Datenerfassung für die mehrfache lokale und übergreifende Datennutzung, der sogenannte Verbundene Modus (mode connecté), auf der Interoperabilität von Krankenhausinformationssystemen (KIS) mit dem Zentralregister BNDMR und seinen Zugängen (siehe [Le mode connecté avec le dossier patient] ("https://www.bndmr.fr/participer/mode-connecte/").  
+"Dieser vom französischen Gesundheitsministerium favorisiert geförderte Verbundene Modus setzt voraus, dass die elektronische Patientenakte (DPI/EPA) oder die Facharztakte zuvor vom Softwarehersteller (oder dem Partnerkrankenhaus) an die Erhebung des nationalen Mindestdatensatzes für Seltene Krankheiten (SDM-MR.fr) angepasst wurde, und zwar gemäß den technischen Spezifikationen, die gemeinsam von der Agentur für Digitale Gesundheit und dem operativen Team des BNDMR veröffentlicht wurden (Komponente für Seltene Krankheiten des nationalen Interoperabilitätsrahmens  Gesundheitsinformationssysteme). Die Implementierung dieses Modus erfolgt in enger Zusammenarbeit mit den Herstellern von Unternehmenssoftware und den Abteilungen für Informationssysteme der Partnerkrankenhäuser (siehe Publishers' Kit).
+Entscheidet sich die Partnerinstitution für die Methode der vernetzten Datenerhebung (mode connecté), sind die Gesundheitsfachpersonen verpflichtet, den Mindestdatensatz SDM-MR.fr direkt in ihre elektronische Patientenakte einzugeben. Sie haben den Vorteil, dass sie nicht viele bereits vorhandene Daten, insbesondere Identitätsdaten, erneut eingeben müssen. Innerhalb des KIS gilt die elektronische Patientenakte (EMR) als zentrales Element des Vertrauens in Bezug auf Patientenidentitäten."  
+
+In Deutschland kann der Verbundene Modus in Klinischen Arbeitsplatzsystemen oder Facharztakten vorrangig für den Deutschen SE-Minimalbasisdatensatz (MBDS-SE.de) im Modul SE des MII KDS so gestaltet werden, dass die beabsichtigt geteilten Daten über die Datenintegrationszentren breit für die Gemeinsame Nutzung im Netzwerk Universitätsmedizin zur Verfügung stehen. Diese Zukunft hat für das wichtigste Element, die Orpha-Kodierung, schon an sehr vielen Standorten und für weitere Merkmale des Moduls SE schon an einigen Standorten begonnen. 
+
+
 ### FHIR Questionnaires für strukturierte Datenerhebung
 
 Zur Vereinfachung der Datenerfassung sind standardisierte FHIR Questionnaires in Entwicklung:
