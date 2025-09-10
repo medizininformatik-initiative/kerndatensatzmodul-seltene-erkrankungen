@@ -1,15 +1,3 @@
-# {{page-title}} 
-
-
-Kerndatensatz Modul Seltene Erkrankungen
-
-
-
-
-
-
-
----
 # Kerndatensatz Erweiterungsmodul Seltene Erkrankungen
 
 Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz Moduls Seltene Erkrankungen der Medizininformatik-Initiative.
