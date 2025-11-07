@@ -19,7 +19,7 @@ package "MII_Datenmodell_Seltene_Erkrankungen" {
   package "MII_Modul_Diagnose" #33CCFF {
     object MII_Diagnose {
       o code: ICD10GM
-      o code: Orphacode
+      o code: ORPHAcodes
       o Alter bei Diagnose
       o Status (Verdacht, gesichert..)
     }
@@ -28,25 +28,27 @@ package "MII_Datenmodell_Seltene_Erkrankungen" {
   package "MII_Modul_Seltene_Erkrankungen" #FFEE22{
     object MII_Diagnose_SE {
       o code: ICD10GM
-      o code: Orphacode
+      o code: ORPHAcodes
     }
     object MII_MolGen_Variante_SE  {
       o code: HGVS
     }
-    object MII_Familienanamnese_SE
-    object Familienmitglied {
+    object MII_Familienanamnese_SE {
       o Verwandtschaftsverhaeltnis
       o Geschlecht
       o gleiche Erkrankung
       o andere Erkrankung
+      o Penetranz
+      o verstorben
     }
     object MII_Symptom_Observation_SE  {
-      o code: Human Phenotype Ontology (HPO)
+      o code: HPO | SNOMED CT | ICD-10 | LOINC
+      o excluded: Merkmal ausgeschlossen (Boolean)
       o value: Presence/Absence
       o date: Datum der Untersuchung
-      o period: Zeitraum der Symptomatik  
+      o period: Zeitraum der Symptomatik
       o startAge: Alter bei Symptombeginn
-      o change: Änderung
+      o change: Änderung (Verlauf)
     }
     object MII_Symptom_Condition_SE
 
@@ -72,6 +74,28 @@ package "MII_Datenmodell_Seltene_Erkrankungen" {
       o Grund_Beendigung
       o off-label
       o Studie
+    }
+    object Koerperliche_Untersuchung_SE {
+      o Körpermaße
+    }
+    object BMI_SE {
+      o Wert (decimal)
+      o Datum
+    }
+    object Kopfumfang_SE {
+      o Wert_cm (decimal)
+      o Datum
+    }
+    object Bauchumfang_SE {
+      o Wert_cm (decimal)
+      o Datum
+    }
+    object Hueftumfang_SE {
+      o Wert_cm (decimal)
+      o Datum
+    }
+    object Blutgruppe_SE {
+      o AB0_Rhesusfaktor
     }
   }
   package "MII_Modul_ICU" #00DD00{
@@ -104,14 +128,19 @@ package "MII_Datenmodell_Seltene_Erkrankungen" {
   MII_Symptom_Observation <|-right- MII_Symptom_Observation_SE
   MII_Symptom_Condition <|-up- MII_Symptom_Condition_SE
 
-  MII_Familienanamnese_SE "1..*" o-- "1..1" Familienmitglied
   Untersuchung "0..*" o-up- "0..1" Laborparameter
   Untersuchung "0..*" o-- "0..*" MII_Diagnose_SE
   Untersuchung "0..*" o-- "0..*" MII_MolGen_Variante_SE
   Untersuchung "0..*" o-- "0..*" MII_Symptom_Observation_SE
   Untersuchung "0..*" o-- "0..*" MII_Familienanamnese_SE
-  Untersuchung "0..*" o-up- "0..*" Koerpergewicht
-  Untersuchung "0..*" o-up- "0..*" Koerpergroeße
+  Untersuchung "0..*" o-- "0..*" Koerperliche_Untersuchung_SE
+  Koerperliche_Untersuchung_SE "0..*" o-up- "0..*" Koerpergewicht
+  Koerperliche_Untersuchung_SE "0..*" o-up- "0..*" Koerpergroeße
+  Koerperliche_Untersuchung_SE "0..*" o-- "0..*" BMI_SE
+  Koerperliche_Untersuchung_SE "0..*" o-- "0..*" Kopfumfang_SE
+  Koerperliche_Untersuchung_SE "0..*" o-- "0..*" Bauchumfang_SE
+  Koerperliche_Untersuchung_SE "0..*" o-- "0..*" Hueftumfang_SE
+  Untersuchung "0..*" o-- "0..1" Blutgruppe_SE
   Untersuchung "0..*" o-- "0..*" MII_Symptom_Condition_SE
   Untersuchung "0..*" o-- "0..*" Therapiestatus  
   Therapiestatus "0..*" o-down- "1..1" Therapieempfehlungen
