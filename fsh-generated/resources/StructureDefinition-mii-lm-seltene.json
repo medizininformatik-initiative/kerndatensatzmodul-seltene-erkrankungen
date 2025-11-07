@@ -134,7 +134,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.where(code.coding.exists(system='http://purl.obolibrary.org/obo/hp.owl')) | Condition.where(code.coding.exists(system='http://purl.obolibrary.org/obo/hp.owl'))"
+            "map": "Observation.where(code.coding.exists(system='http://purl.obolibrary.org/obo/hp.owl')) | Condition.where(code.coding.exists(system='http://purl.obolibrary.org/obo/hp.owl')) | Observation (SNOMED CT, ICD-10, LOINC)"
           }
         ]
       },
@@ -142,7 +142,7 @@
         "id": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
         "path": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
         "short": "HPO-Term des Symptoms",
-        "definition": "Phaenotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology).",
+        "definition": "Phaenotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC).",
         "min": 0,
         "max": "*",
         "type": [
@@ -170,10 +170,29 @@
         ]
       },
       {
+        "id": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded",
+        "path": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded",
+        "short": "HPO-Term ausgeschlossen",
+        "definition": "Gibt an, ob das HPO-Merkmal explizit ausgeschlossen wurde (negated finding). Abgeleitet aus valueCodeableConcept: LOINC LA9634-2 'Absent' = true, LA9633-4 'Present' = false. Folgt HL7 Phenomics IG Muster.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept (true wenn LOINC#LA9634-2 'Absent', false wenn LA9633-4 'Present')"
+          }
+        ]
+      },
+      {
         "id": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
         "path": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
         "short": "Status HPO-Term",
-        "definition": "Aktueller Status des ausgewaehlten HPO-Terms.",
+        "definition": "Status oder Schweregrad des Phaenotyps (Present/Absent/Severity).",
         "min": 0,
         "max": "1",
         "type": [
@@ -184,7 +203,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.interpretation | Condition.verificationStatus"
+            "map": "Observation.valueCodeableConcept (LOINC Present/Absent oder HPO Severity codes) | Condition.verificationStatus"
           },
           {
             "identity": "NARSE",
@@ -661,10 +680,10 @@
         ]
       },
       {
-        "id": "Seltene.Messbefunde",
-        "path": "Seltene.Messbefunde",
-        "short": "Messbefunde",
-        "definition": "Messbefunde",
+        "id": "Seltene.KoerperlicheUntersuchung",
+        "path": "Seltene.KoerperlicheUntersuchung",
+        "short": "Körperliche Untersuchung",
+        "definition": "Körperliche Untersuchung",
         "min": 0,
         "max": "*",
         "type": [
@@ -680,8 +699,186 @@
         ]
       },
       {
-        "id": "Seltene.Messbefunde.BMI",
-        "path": "Seltene.Messbefunde.BMI",
+        "id": "Seltene.KoerperlicheUntersuchung.Koerpergewicht",
+        "path": "Seltene.KoerperlicheUntersuchung.Koerpergewicht",
+        "short": "Körpergewicht",
+        "definition": "Körpergewicht",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='29463-7')) | Profile: https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/Koerpergewicht"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Koerpergewicht.Koerpergewicht",
+        "path": "Seltene.KoerperlicheUntersuchung.Koerpergewicht.Koerpergewicht",
+        "short": "Körpergewicht in kg",
+        "definition": "Körpergewicht des SE-Patienten in kg (aus MII ICU Modul).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity.value"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Koerpergewicht.DatumKoerpergewicht",
+        "path": "Seltene.KoerperlicheUntersuchung.Koerpergewicht.DatumKoerpergewicht",
+        "short": "Datum Körpergewicht",
+        "definition": "Datum der Körpergewichtsmessung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Koerpergroesse",
+        "path": "Seltene.KoerperlicheUntersuchung.Koerpergroesse",
+        "short": "Körpergröße",
+        "definition": "Körpergröße",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='8302-2')) | Profile: https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/Koerpergroesse"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Koerpergroesse.Koerpergroesse",
+        "path": "Seltene.KoerperlicheUntersuchung.Koerpergroesse.Koerpergroesse",
+        "short": "Körpergröße in cm",
+        "definition": "Körpergröße des SE-Patienten in cm (aus MII ICU Modul).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity.value"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Koerpergroesse.DatumKoerpergroesse",
+        "path": "Seltene.KoerperlicheUntersuchung.Koerpergroesse.DatumKoerpergroesse",
+        "short": "Datum Körpergröße",
+        "definition": "Datum der Körpergrößenmessung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.BMI",
+        "path": "Seltene.KoerperlicheUntersuchung.BMI",
         "short": "BMI",
         "definition": "BMI",
         "min": 0,
@@ -707,8 +904,8 @@
         ]
       },
       {
-        "id": "Seltene.Messbefunde.BMI.BMI",
-        "path": "Seltene.Messbefunde.BMI.BMI",
+        "id": "Seltene.KoerperlicheUntersuchung.BMI.BMI",
+        "path": "Seltene.KoerperlicheUntersuchung.BMI.BMI",
         "short": "BMI SE-Patient",
         "definition": "BMI des SE-Patienten.",
         "min": 0,
@@ -738,8 +935,8 @@
         ]
       },
       {
-        "id": "Seltene.Messbefunde.BMI.DatumBMI",
-        "path": "Seltene.Messbefunde.BMI.DatumBMI",
+        "id": "Seltene.KoerperlicheUntersuchung.BMI.DatumBMI",
+        "path": "Seltene.KoerperlicheUntersuchung.BMI.DatumBMI",
         "short": "Datum des BMI",
         "definition": "Datum, an dem der BMI (Body Mass Index) berechnet wurde.",
         "min": 0,
@@ -769,8 +966,275 @@
         ]
       },
       {
-        "id": "Seltene.Messbefunde.Blutgruppe",
-        "path": "Seltene.Messbefunde.Blutgruppe",
+        "id": "Seltene.KoerperlicheUntersuchung.Kopfumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Kopfumfang",
+        "short": "Kopfumfang",
+        "definition": "Kopfumfang",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='9843-4')) | Profile: http://fhir.de/StructureDefinition/observation-de-vitalsign-kopfumfang"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Kopfumfang.Kopfumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Kopfumfang.Kopfumfang",
+        "short": "Kopfumfang in cm",
+        "definition": "Kopfumfang des SE-Patienten in cm.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity.value"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Kopfumfang.DatumKopfumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Kopfumfang.DatumKopfumfang",
+        "short": "Datum Kopfumfang",
+        "definition": "Datum der Kopfumfangsmessung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Bauchumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Bauchumfang",
+        "short": "Bauchumfang",
+        "definition": "Bauchumfang",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='8280-0'))"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Bauchumfang.Bauchumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Bauchumfang.Bauchumfang",
+        "short": "Bauchumfang in cm",
+        "definition": "Bauchumfang des SE-Patienten in cm.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity.value"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Bauchumfang.DatumBauchumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Bauchumfang.DatumBauchumfang",
+        "short": "Datum Bauchumfang",
+        "definition": "Datum der Bauchumfangsmessung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Hueftumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Hueftumfang",
+        "short": "Hüftumfang",
+        "definition": "Hüftumfang",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='62409-8'))"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Hueftumfang.Hueftumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Hueftumfang.Hueftumfang",
+        "short": "Hüftumfang in cm",
+        "definition": "Hüftumfang des SE-Patienten in cm.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity.value"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Hueftumfang.DatumHueftumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Hueftumfang.DatumHueftumfang",
+        "short": "Datum Hüftumfang",
+        "definition": "Datum der Hüftumfangsmessung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Blutgruppe",
+        "path": "Seltene.KoerperlicheUntersuchung.Blutgruppe",
         "short": "Blutgruppe",
         "definition": "Blutgruppe des SE-Patienten (AB0 und Rhesusfaktor).",
         "min": 0,
@@ -903,7 +1367,7 @@
         "id": "Seltene.PersoenlicheInfosIndexpatient.Tod.AndereTodesursache",
         "path": "Seltene.PersoenlicheInfosIndexpatient.Tod.AndereTodesursache",
         "short": "Todesursache",
-        "definition": "Kodierung der Todesursache soweit bekannt (ICD-10-GM, AlphaID, ORPHAcode).",
+        "definition": "Kodierung der Todesursache soweit bekannt (ICD-10-GM, ORPHAcodes).",
         "min": 0,
         "max": "*",
         "type": [
