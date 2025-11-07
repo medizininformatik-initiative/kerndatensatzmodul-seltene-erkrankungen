@@ -42,15 +42,18 @@ package "MII_Datenmodell_Seltene_Erkrankungen" {
       o verstorben
     }
     object MII_Symptom_Observation_SE  {
-      o code: HPO | SNOMED CT | ICD-10 | LOINC
-      o excluded: Merkmal ausgeschlossen (Boolean)
-      o value: Presence/Absence
-      o date: Datum der Untersuchung
-      o period: Zeitraum der Symptomatik
-      o startAge: Alter bei Symptombeginn
+      o code: HPO | SNOMED CT | LOINC
+      o value: Present/Absent (LOINC)
+      o date: effectiveDateTime
       o change: Änderung (Verlauf)
     }
-    object MII_Symptom_Condition_SE
+    object MII_Symptom_Condition_SE {
+      o code: HPO | SNOMED CT | ICD-10-GM
+      o onset: dateTime | Age | Period
+      o abatement: dateTime | Age | Period
+      o severity: Schweregrad
+      o bodySite: Anatomische Lokalisation
+    }
 
     object Untersuchung {
       o Koerperliche_Untersuchung
@@ -134,6 +137,7 @@ package "MII_Datenmodell_Seltene_Erkrankungen" {
   Untersuchung "0..*" o-- "0..*" MII_Symptom_Observation_SE
   Untersuchung "0..*" o-- "0..*" MII_Familienanamnese_SE
   Untersuchung "0..*" o-- "0..*" Koerperliche_Untersuchung_SE
+  MII_Symptom_Observation_SE "0..*" -- "0..*" MII_Symptom_Condition_SE
   Koerperliche_Untersuchung_SE "0..*" o-up- "0..*" Koerpergewicht
   Koerperliche_Untersuchung_SE "0..*" o-up- "0..*" Koerpergroeße
   Koerperliche_Untersuchung_SE "0..*" o-- "0..*" BMI_SE
