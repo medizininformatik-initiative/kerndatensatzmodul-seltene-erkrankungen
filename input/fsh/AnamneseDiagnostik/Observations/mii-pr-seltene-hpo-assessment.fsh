@@ -86,9 +86,9 @@ Description: "Profile for HPO-based phenotypic observations in the context of ra
 * interpretation[hl7Interpretation] ^short = "HL7 Standard-Interpretation"
 * interpretation[hl7Interpretation] ^definition = "Standard HL7 Interpretation codes (z.B. High, Low, Normal)"
 
-* interpretation[changeStatus] from MII_VS_Seltene_HPO_ChangeStatus (required)
-* interpretation[changeStatus] ^short = "Änderungsstatus des HPO-Phänotyps"
-* interpretation[changeStatus] ^definition = "Dokumentiert Änderungen des Phänotyps über Zeit gemäß Modellvorhaben Genomsequenzierung"
+* interpretation[changeStatus] from MII_VS_Seltene_Symptom_ChangeStatus_Combined (required)
+* interpretation[changeStatus] ^short = "Änderungsstatus des Symptoms/Phänotyps"
+* interpretation[changeStatus] ^definition = "Dokumentiert Änderungen des Phänotyps über Zeit gemäß Modellvorhaben Genomsequenzierung. Verwendet SNOMED CT Change Status Codes."
 
 ValueSet: HPOPhenotypicObservationCodes
 Id: mii-vs-seltene-hpo-phenotypic-observation-codes

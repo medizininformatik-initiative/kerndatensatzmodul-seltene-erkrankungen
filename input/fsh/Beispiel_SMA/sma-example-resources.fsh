@@ -94,7 +94,7 @@ Description: "Urgroßmutter mit unbekannter Muskelerkrankung"
 * relationship = $SCT#78652007 "Great grandmother"
 * condition[+].code.coding[+] = $SCT#129565002 "Disorder of muscle"
 * condition[=].code.text = "Unbekannte Muskelerkrankung"
-* extension[vonSEBetroffen].valueCodeableConcept.coding = $ExpandedYesNoIndicator#ASKU "asked but unknown"
+* extension[vonSEBetroffen].valueCodeableConcept.coding = $SCT#261665006 "Unknown"
 
 // SMA Newborn Screening Result
 Instance: observation-sma-screening

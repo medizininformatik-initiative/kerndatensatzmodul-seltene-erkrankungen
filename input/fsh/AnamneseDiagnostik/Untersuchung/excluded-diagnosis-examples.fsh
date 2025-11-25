@@ -169,7 +169,7 @@ Title: "Aortenwurzel - Normalbefund"
 Description: "Normale Aortenwurzel, schließt Marfan aus"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#imaging
-* code = $LNC#79992-2 "Aortic root diameter by US"
+* code = $LNC#78176-5 "Aorta root Diameter by US 2D"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-12-15"
 * valueQuantity = 32 'mm' "mm"

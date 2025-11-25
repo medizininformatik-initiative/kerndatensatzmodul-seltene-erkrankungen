@@ -8,5 +8,5 @@ Description: "Beispiel einer HPO-Beobachtung mit dokumentiertem Änderungsstatus
 * status = #final
 * effectiveDateTime = "2024-11-15"
 * valueBoolean = true
-* interpretation[changeStatus] = MII_CS_Seltene_HPO_ChangeStatus#improved "Improved"
+* interpretation[changeStatus] = MII_CS_Seltene_HPO_ChangeStatus#improved "Verbessert"
 * note.text = "Entwicklungsverzögerung hat sich seit letzter Untersuchung verbessert"

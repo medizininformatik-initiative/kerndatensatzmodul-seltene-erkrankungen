@@ -105,7 +105,6 @@ Description: "Nach oben gerichtete Nasenlöcher"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
 * code.coding[+] = http://human-phenotype-ontology.org#HP:0000463 "Anteverted nares"
-* code.coding[+] = $SCT#249374003 "Anteverted nares"
 * code.text = "Antevertierte Nasenlöcher"
 * subject = Reference(Patient/example)
 * effectiveDateTime = "2024-10-20"

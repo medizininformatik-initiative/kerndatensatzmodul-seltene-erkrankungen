@@ -7,7 +7,7 @@ InstanceOf: Patient
 Usage: #example
 Title: "Beispielpatient"
 Description: "Generischer Beispielpatient für Testzwecke"
-* identifier.system = "http://example.org/patient-id"
+* identifier.system = "http://test-krankenhaus.de/fhir/sid/patienten"
 * identifier.value = "12345"
 * name.family = "Mustermann"
 * name.given = "Max"

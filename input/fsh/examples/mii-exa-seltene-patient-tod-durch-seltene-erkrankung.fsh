@@ -3,8 +3,8 @@ InstanceOf: Patient
 Usage: #example
 Title: "Beispiel Patient verstorben an seltener Erkrankung"
 Description: "Beispiel eines Patienten, der an einer seltenen Erkrankung verstorben ist"
-* identifier.system = "http://example.org/patient-id"
-* identifier.value = "12345"
+* identifier.system = "http://test-krankenhaus.de/fhir/sid/patienten"
+* identifier.value = "67890"
 * name.family = "Mustermann"
 * name.given = "Max"
 * gender = #male
