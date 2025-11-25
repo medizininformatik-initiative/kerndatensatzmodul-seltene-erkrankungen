@@ -25,12 +25,38 @@ Description: "Profile for HPO-based phenotypic observations in the context of ra
 * effective[x] only dateTime or Period
 * effective[x] ^short = "Zeitpunkt der Phänotyp-Beobachtung oder Beobachtungszeitraum"
 
-* value[x] MS
-* value[x] only CodeableConcept or boolean
-* value[x] ^short = "Vorhandensein, Abwesenheit oder Schweregrad des Phänotyps"
+* value[x] 0..0
+* value[x] ^short = "Not used - use component instead"
+* value[x] ^comment = "Following HL7 Phenomics IG pattern, phenotype status and severity are captured in component elements rather than value[x]."
 
-* valueCodeableConcept from mii-vs-seltene-hpo-severity-values (extensible)
-* valueCodeableConcept ^short = "Schweregrad oder Ausprägung der phänotypischen Anomalie"
+// Component: Phenotype Status (Present/Absent)
+* component MS
+* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.path = "code"
+* component ^slicing.rules = #open
+* component ^short = "Phenotype status, severity, and clinical modifiers"
+
+* component contains
+    status 0..1 MS and
+    severity 0..1 MS
+
+* component[status].code = $LOINC#69548-6 "Genetic variant assessment"
+* component[status].code MS
+* component[status].code ^short = "Phenotype status code"
+* component[status].value[x] only CodeableConcept
+* component[status].value[x] MS
+* component[status].valueCodeableConcept from mii-vs-seltene-hpo-presence-status (required)
+* component[status].valueCodeableConcept ^short = "Present or Absent"
+* component[status].valueCodeableConcept ^definition = "LOINC LA9633-4 'Present' for observed phenotypes, LA9634-2 'Absent' for explicitly excluded phenotypes."
+
+* component[severity].code = $HPO#HP:0012824 "Severity"
+* component[severity].code MS
+* component[severity].code ^short = "Severity modifier"
+* component[severity].value[x] only CodeableConcept
+* component[severity].value[x] MS
+* component[severity].valueCodeableConcept from mii-vs-seltene-hpo-severity (extensible)
+* component[severity].valueCodeableConcept ^short = "Severity grade"
+* component[severity].valueCodeableConcept ^definition = "HPO severity codes: Mild, Moderate, Severe, Profound, Borderline"
 
 * bodySite MS
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (extensible)
@@ -71,15 +97,26 @@ Description: "Human Phenotype Ontology codes for phenotypic observations"
 * ^status = #draft
 * codes from system $HPO
 
-ValueSet: HPOSeverityValues
-Id: mii-vs-seltene-hpo-severity-values
-Title: "HPO Severity Values"
-Description: "Codes for describing severity of phenotypic abnormalities"
+ValueSet: HPOPresenceStatus
+Id: mii-vs-seltene-hpo-presence-status
+Title: "HPO Phenotype Presence Status"
+Description: "LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern."
 * ^status = #draft
-* $HPO#HP:0012848 "Severe"
+* ^copyright = "This value set includes content from LOINC which is copyrighted by Regenstrief Institute, Inc."
+* $LOINC#LA9633-4 "Present"
+* $LOINC#LA9634-2 "Absent"
+
+ValueSet: HPOSeverity
+Id: mii-vs-seltene-hpo-severity
+Title: "HPO Severity"
+Description: "HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Phenomics IG component pattern."
+* ^status = #draft
+* ^copyright = "This value set includes content from Human Phenotype Ontology (HPO)."
+* $HPO#HP:0012828 "Severe"
 * $HPO#HP:0012825 "Mild"
 * $HPO#HP:0012826 "Moderate"
-* $HPO#HP:0040281 "Normal"
+* $HPO#HP:0012829 "Profound"
+* $HPO#HP:0012827 "Borderline"
 
 Instance: mii-exa-seltene-hpo-assessment
 InstanceOf: MII_PR_Seltene_HPO_Assessment
@@ -90,8 +127,37 @@ Description: "Example of an HPO-based phenotypic observation for intellectual di
 * subject = Reference(Patient/example-patient)
 * status = #final
 * effectiveDateTime = "2024-01-15"
-* valueBoolean = true
-* note.text = "Patient shows signs of mild intellectual disability with learning difficulties in academic settings."
+* component[status].code = $LOINC#69548-6 "Genetic variant assessment"
+* component[status].valueCodeableConcept = $LOINC#LA9633-4 "Present"
+* note.text = "Patient shows signs of intellectual disability with learning difficulties in academic settings."
+
+Instance: mii-exa-seltene-hpo-assessment-excluded
+InstanceOf: MII_PR_Seltene_HPO_Assessment
+Usage: #example
+Title: "HPO Assessment - Excluded Phenotype"
+Description: "Example of an explicitly excluded phenotype (arachnodactyly ruled out during Marfan syndrome workup)."
+* code = $HPO#HP:0001166 "Arachnodactyly"
+* subject = Reference(Patient/example-patient)
+* status = #final
+* effectiveDateTime = "2024-01-15"
+* component[status].code = $LOINC#69548-6 "Genetic variant assessment"
+* component[status].valueCodeableConcept = $LOINC#LA9634-2 "Absent"
+* note.text = "Arachnodactyly explicitly excluded during clinical examination. Arm span/height ratio within normal limits. Demonstrates HL7 Phenomics IG pattern for excluded phenotypes."
+
+Instance: mii-exa-seltene-hpo-assessment-severity
+InstanceOf: MII_PR_Seltene_HPO_Assessment
+Usage: #example
+Title: "HPO Assessment - Present with Severity"
+Description: "Example of a phenotype with both status (present) and severity grading. Demonstrates HL7 Phenomics IG component pattern."
+* code = $HPO#HP:0001638 "Cardiomyopathy"
+* subject = Reference(Patient/example-patient)
+* status = #final
+* effectiveDateTime = "2024-01-15"
+* component[status].code = $LOINC#69548-6 "Genetic variant assessment"
+* component[status].valueCodeableConcept = $LOINC#LA9633-4 "Present"
+* component[severity].code = $HPO#HP:0012824 "Severity"
+* component[severity].valueCodeableConcept = $HPO#HP:0012826 "Moderate"
+* note.text = "Moderate cardiomyopathy confirmed by echocardiography. Both presence status and severity grade are captured in separate components."
 
 // Mapping to Logical Model
 Mapping: FHIR-SE-HPOAssessment
@@ -102,8 +168,11 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * -> "AnamneseUndDiagnostik.Phaenotypisierung" "Phänotypisierung"
 * code -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm" "HPO-Term des Symptoms"
 * code.coding.version -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOVersion" "Version HPO-Term"
+* component[status].valueCodeableConcept -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded" "HPO-Term ausgeschlossen (true wenn LA9634-2 'Absent', false wenn LA9633-4 'Present')"
+* component[status].valueCodeableConcept -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus" "Status HPO-Term (Present/Absent)"
+* component[severity].valueCodeableConcept -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus" "Schweregrad (Mild/Moderate/Severe/Profound/Borderline)"
 * interpretation[changeStatus] -> "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom" "Verlauf Symptom"
-* interpretation[changeStatus].coding.code -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus" "Status HPO-Term"
+* interpretation[changeStatus].coding.code -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus" "Change Status"
 * effectiveDateTime -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Startdatum des Symptoms"
 * effectivePeriod.start -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Startdatum des Symptoms"
 * effectivePeriod.end -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Enddatum des Symptoms"
