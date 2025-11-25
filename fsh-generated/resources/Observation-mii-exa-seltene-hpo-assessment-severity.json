@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "mii-exa-seltene-hpo-assessment-change-status",
+  "id": "mii-exa-seltene-hpo-assessment-severity",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
@@ -25,37 +25,46 @@
             "display": "Present"
           }
         ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0012824",
+            "system": "http://human-phenotype-ontology.org",
+            "display": "Severity"
+          }
+        ]
       },
-      "interpretation": [
-        {
-          "coding": [
-            {
-              "code": "improved",
-              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status",
-              "display": "Verbessert"
-            }
-          ]
-        }
-      ]
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "HP:0012826",
+            "system": "http://human-phenotype-ontology.org",
+            "display": "Moderate"
+          }
+        ]
+      }
     }
   ],
   "code": {
     "coding": [
       {
-        "code": "HP:0001263",
+        "code": "HP:0001638",
         "system": "http://human-phenotype-ontology.org",
-        "display": "Global developmental delay"
+        "display": "Cardiomyopathy"
       }
     ]
   },
   "subject": {
-    "reference": "Patient/example"
+    "reference": "Patient/example-patient"
   },
   "status": "final",
-  "effectiveDateTime": "2024-11-15",
+  "effectiveDateTime": "2024-01-15",
   "note": [
     {
-      "text": "Entwicklungsverzögerung hat sich seit letzter Untersuchung verbessert"
+      "text": "Moderate cardiomyopathy confirmed by echocardiography. Both presence status and severity grade are captured in separate components."
     }
   ]
 }

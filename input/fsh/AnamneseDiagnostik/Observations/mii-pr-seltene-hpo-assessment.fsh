@@ -40,7 +40,7 @@ Description: "Profile for HPO-based phenotypic observations in the context of ra
     status 0..1 MS and
     severity 0..1 MS
 
-* component[status].code = $LOINC#69548-6 "Genetic variant assessment"
+* component[status].code = $SCT#260411009 "Presence findings"
 * component[status].code MS
 * component[status].code ^short = "Phenotype status code"
 * component[status].value[x] only CodeableConcept
@@ -48,6 +48,10 @@ Description: "Profile for HPO-based phenotypic observations in the context of ra
 * component[status].valueCodeableConcept from mii-vs-seltene-hpo-presence-status (required)
 * component[status].valueCodeableConcept ^short = "Present or Absent"
 * component[status].valueCodeableConcept ^definition = "LOINC LA9633-4 'Present' for observed phenotypes, LA9634-2 'Absent' for explicitly excluded phenotypes."
+* component[status].interpretation MS
+* component[status].interpretation from MII_VS_Seltene_Symptom_ChangeStatus_Combined (required)
+* component[status].interpretation ^short = "Änderungsstatus des Symptoms/Phänotyps über Zeit"
+* component[status].interpretation ^definition = "Dokumentiert Änderungen des Phänotyps über Zeit gemäß Modellvorhaben Genomsequenzierung (MVGenomSeq). Codes: newly-added, improved, degraded, no-longer-observed, unchanged."
 
 * component[severity].code = $HPO#HP:0012824 "Severity"
 * component[severity].code MS
@@ -72,24 +76,6 @@ Description: "Profile for HPO-based phenotypic observations in the context of ra
 * derivedFrom MS
 * derivedFrom ^short = "Verwandte Beobachtungen oder Bewertungen"
 
-* interpretation MS
-* interpretation ^slicing.discriminator.type = #pattern
-* interpretation ^slicing.discriminator.path = "$this"
-* interpretation ^slicing.rules = #open
-* interpretation ^short = "Interpretation und Änderungsstatus des HPO-Phänotyps"
-
-* interpretation contains
-    hl7Interpretation 0..* MS and
-    changeStatus 0..1 MS
-
-* interpretation[hl7Interpretation] from http://hl7.org/fhir/ValueSet/observation-interpretation (required)
-* interpretation[hl7Interpretation] ^short = "HL7 Standard-Interpretation"
-* interpretation[hl7Interpretation] ^definition = "Standard HL7 Interpretation codes (z.B. High, Low, Normal)"
-
-* interpretation[changeStatus] from MII_VS_Seltene_Symptom_ChangeStatus_Combined (required)
-* interpretation[changeStatus] ^short = "Änderungsstatus des Symptoms/Phänotyps"
-* interpretation[changeStatus] ^definition = "Dokumentiert Änderungen des Phänotyps über Zeit gemäß Modellvorhaben Genomsequenzierung. Verwendet SNOMED CT Change Status Codes."
-
 ValueSet: HPOPhenotypicObservationCodes
 Id: mii-vs-seltene-hpo-phenotypic-observation-codes
 Title: "HPO Phenotypic Observation Codes"
@@ -103,8 +89,8 @@ Title: "HPO Phenotype Presence Status"
 Description: "LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern."
 * ^status = #draft
 * ^copyright = "This value set includes content from LOINC which is copyrighted by Regenstrief Institute, Inc."
-* $LOINC#LA9633-4 "Present"
-* $LOINC#LA9634-2 "Absent"
+* $LNC#LA9633-4 "Present"
+* $LNC#LA9634-2 "Absent"
 
 ValueSet: HPOSeverity
 Id: mii-vs-seltene-hpo-severity
@@ -127,8 +113,8 @@ Description: "Example of an HPO-based phenotypic observation for intellectual di
 * subject = Reference(Patient/example-patient)
 * status = #final
 * effectiveDateTime = "2024-01-15"
-* component[status].code = $LOINC#69548-6 "Genetic variant assessment"
-* component[status].valueCodeableConcept = $LOINC#LA9633-4 "Present"
+* component[status].code = $SCT#260411009 "Presence findings"
+* component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
 * note.text = "Patient shows signs of intellectual disability with learning difficulties in academic settings."
 
 Instance: mii-exa-seltene-hpo-assessment-excluded
@@ -140,8 +126,8 @@ Description: "Example of an explicitly excluded phenotype (arachnodactyly ruled 
 * subject = Reference(Patient/example-patient)
 * status = #final
 * effectiveDateTime = "2024-01-15"
-* component[status].code = $LOINC#69548-6 "Genetic variant assessment"
-* component[status].valueCodeableConcept = $LOINC#LA9634-2 "Absent"
+* component[status].code = $SCT#260411009 "Presence findings"
+* component[status].valueCodeableConcept = $LNC#LA9634-2 "Absent"
 * note.text = "Arachnodactyly explicitly excluded during clinical examination. Arm span/height ratio within normal limits. Demonstrates HL7 Phenomics IG pattern for excluded phenotypes."
 
 Instance: mii-exa-seltene-hpo-assessment-severity
@@ -153,8 +139,8 @@ Description: "Example of a phenotype with both status (present) and severity gra
 * subject = Reference(Patient/example-patient)
 * status = #final
 * effectiveDateTime = "2024-01-15"
-* component[status].code = $LOINC#69548-6 "Genetic variant assessment"
-* component[status].valueCodeableConcept = $LOINC#LA9633-4 "Present"
+* component[status].code = $SCT#260411009 "Presence findings"
+* component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
 * component[severity].code = $HPO#HP:0012824 "Severity"
 * component[severity].valueCodeableConcept = $HPO#HP:0012826 "Moderate"
 * note.text = "Moderate cardiomyopathy confirmed by echocardiography. Both presence status and severity grade are captured in separate components."
@@ -171,8 +157,8 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * component[status].valueCodeableConcept -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded" "HPO-Term ausgeschlossen (true wenn LA9634-2 'Absent', false wenn LA9633-4 'Present')"
 * component[status].valueCodeableConcept -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus" "Status HPO-Term (Present/Absent)"
 * component[severity].valueCodeableConcept -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus" "Schweregrad (Mild/Moderate/Severe/Profound/Borderline)"
-* interpretation[changeStatus] -> "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom" "Verlauf Symptom"
-* interpretation[changeStatus].coding.code -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus" "Change Status"
+* component[status].interpretation -> "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom" "Verlauf Symptom"
+* component[status].interpretation.coding.code -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus" "Change Status"
 * effectiveDateTime -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Startdatum des Symptoms"
 * effectivePeriod.start -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Startdatum des Symptoms"
 * effectivePeriod.end -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Enddatum des Symptoms"

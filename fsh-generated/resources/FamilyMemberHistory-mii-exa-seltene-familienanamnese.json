@@ -12,9 +12,9 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "Y",
-            "system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-            "display": "Ja"
+            "code": "373066001",
+            "system": "http://snomed.info/sct",
+            "display": "Yes"
           }
         ]
       }
@@ -25,7 +25,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "65656005",
-        "display": "Natural Mother (person)"
+        "display": "Natural mother"
       }
     ]
   },
@@ -59,7 +59,7 @@
           {
             "code": "H35.8",
             "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-            "version": "2004"
+            "version": "2009"
           }
         ]
       }
@@ -68,9 +68,9 @@
       "code": {
         "coding": [
           {
-            "code": "E11.X",
+            "code": "E11.9",
             "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-            "version": "2004"
+            "version": "2009"
           }
         ]
       }
@@ -81,7 +81,7 @@
           {
             "code": "I21.2",
             "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-            "version": "2004"
+            "version": "2009"
           }
         ]
       },

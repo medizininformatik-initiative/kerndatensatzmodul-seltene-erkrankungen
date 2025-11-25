@@ -399,11 +399,35 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-seltene-hpo-assessment-excluded"
+        },
+        "name": "HPO Assessment - Excluded Phenotype",
+        "description": "Example of an explicitly excluded phenotype (arachnodactyly ruled out during Marfan syndrome workup).",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-hpo-assessment-severity"
+        },
+        "name": "HPO Assessment - Present with Severity",
+        "description": "Example of a phenotype with both status (present) and severity grading. Demonstrates HL7 Phenomics IG component pattern.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-seltene-hpo-assessment-change-status"
         },
         "name": "HPO Assessment mit Änderungsstatus",
         "description": "Beispiel einer HPO-Beobachtung mit dokumentiertem Änderungsstatus",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-hpo-presence-status"
+        },
+        "name": "HPO Phenotype Presence Status",
+        "description": "LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern.",
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -415,10 +439,10 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-seltene-hpo-severity-values"
+          "reference": "ValueSet/mii-vs-seltene-hpo-severity"
         },
-        "name": "HPO Severity Values",
-        "description": "Codes for describing severity of phenotypic abnormalities",
+        "name": "HPO Severity",
+        "description": "HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Phenomics IG component pattern.",
         "exampleBoolean": false
       },
       {
@@ -927,6 +951,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-seltene-symptom-change-status-combined"
+        },
+        "name": "MII VS Seltene Erkrankungen Symptom Change Status (Combined)",
+        "description": "ValueSet zur Dokumentation von Änderungen bei Symptomen/Phänotypen über Zeit. Kombiniert MVGenomSeq-spezifische Codes mit SNOMED CT-Codes für internationale Interoperabilität.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "FamilyMemberHistory/mii-exa-seltene-familienanamnese"
         },
         "name": "mii-exa-seltene-familienanamnese",
@@ -1218,7 +1250,7 @@
           "reference": "ValueSet/von-seltene-betroffen-vs"
         },
         "name": "Von SE betroffen Value Set",
-        "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
+        "description": "ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Verwendet SNOMED CT codes für internationale Interoperabilität.",
         "exampleBoolean": false
       },
       {

@@ -1,23 +1,53 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "VonSEBetroffenVS",
   "id": "von-seltene-betroffen-vs",
   "title": "Von SE betroffen Value Set",
-  "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
+  "description": "ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Verwendet SNOMED CT codes für internationale Interoperabilität.",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/von-seltene-betroffen-vs",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2026.0.0-ballot",
+  "experimental": false,
   "compose": {
     "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "373066001",
+            "display": "Yes"
+          },
+          {
+            "code": "373067005",
+            "display": "No"
+          },
+          {
+            "code": "261665006",
+            "display": "Unknown"
+          }
+        ]
+      },
       {
         "system": "http://terminology.hl7.org/CodeSystem/v2-0532",
         "concept": [
           {
             "code": "Y",
-            "display": "Ja"
+            "display": "Yes"
           },
           {
             "code": "N",
-            "display": "Nein"
+            "display": "No"
           },
           {
             "code": "ASKU",

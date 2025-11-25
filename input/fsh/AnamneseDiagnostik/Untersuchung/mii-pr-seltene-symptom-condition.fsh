@@ -89,7 +89,7 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 
 
 // Severity constraints
-* severity from mii-vs-seltene-hpo-severity-values (extensible)
+* severity from mii-vs-seltene-hpo-severity (extensible)
 * severity ^short = "Schweregrad der Symptom-Erkrankung"
 * severity ^definition = "Schweregradbewertung der Symptom-Erkrankung unter Verwendung von HPO-Schweregrad-Werten"
 
@@ -110,7 +110,7 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 
 // Stage constraints for syndrome progression
 * stage ^short = "Stadium oder Progression der Symptom-Erkrankung"
-* stage.summary from mii-vs-seltene-hpo-severity-values (extensible)
+* stage.summary from mii-vs-seltene-hpo-severity (extensible)
 * stage.assessment only Reference(Observation or DiagnosticReport)
 
 // Body site constraints

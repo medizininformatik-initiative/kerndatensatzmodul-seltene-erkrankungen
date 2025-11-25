@@ -6,6 +6,28 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
     ]
   },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "260411009",
+            "system": "http://snomed.info/sct",
+            "display": "Presence findings"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "LA9633-4",
+            "system": "http://loinc.org",
+            "display": "Present"
+          }
+        ]
+      }
+    }
+  ],
   "code": {
     "coding": [
       {
@@ -20,10 +42,9 @@
   },
   "status": "final",
   "effectiveDateTime": "2024-01-15",
-  "valueBoolean": true,
   "note": [
     {
-      "text": "Patient shows signs of mild intellectual disability with learning difficulties in academic settings."
+      "text": "Patient shows signs of intellectual disability with learning difficulties in academic settings."
     }
   ]
 }

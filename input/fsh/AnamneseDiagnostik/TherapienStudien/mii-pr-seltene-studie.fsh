@@ -1,8 +1,9 @@
 Profile: MII_PR_Seltene_Studie
-Parent: MII_PR_Studie_Studie
+Parent: ResearchStudy
 Id: mii-pr-seltene-studie
 Title: "MII PR SE Studie"
 Description: "SE Studie"
+// Note: Changed parent from MII_PR_Studie_Studie to ResearchStudy due to missing snapshot in dependency package
 
 * identifier 0..* MS
 * identifier ^slicing.discriminator.type = #value

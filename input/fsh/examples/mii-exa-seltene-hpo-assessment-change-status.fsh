@@ -4,9 +4,10 @@ Usage: #example
 Title: "HPO Assessment mit Änderungsstatus"
 Description: "Beispiel einer HPO-Beobachtung mit dokumentiertem Änderungsstatus"
 * code = $HPO#HP:0001263 "Global developmental delay"
-* subject = Reference(Patient/example-patient)
+* subject = Reference(Patient/example)
 * status = #final
 * effectiveDateTime = "2024-11-15"
-* valueBoolean = true
-* interpretation[changeStatus] = MII_CS_Seltene_HPO_ChangeStatus#improved "Verbessert"
+* component[status].code = $SCT#260411009 "Presence findings"
+* component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
+* component[status].interpretation = MII_CS_Seltene_HPO_ChangeStatus#improved "Verbessert"
 * note.text = "Entwicklungsverzögerung hat sich seit letzter Untersuchung verbessert"

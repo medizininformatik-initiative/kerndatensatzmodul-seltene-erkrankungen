@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "HPOPresenceStatus",
+  "id": "mii-vs-seltene-hpo-presence-status",
+  "title": "HPO Phenotype Presence Status",
+  "description": "LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status",
+  "copyright": "This value set includes content from LOINC which is copyrighted by Regenstrief Institute, Inc.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA9633-4",
+            "display": "Present"
+          },
+          {
+            "code": "LA9634-2",
+            "display": "Absent"
+          }
+        ]
+      }
+    ]
+  }
+}
