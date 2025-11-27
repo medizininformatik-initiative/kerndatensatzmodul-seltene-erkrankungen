@@ -6,12 +6,11 @@ Obwohl geschätzt wird, dass von **Seltenen Erkrankungen (SE)** in Deutschland r
 
 Die große Herausforderung bei den SE ergibt sich aus der Vielzahl sehr verschiedener *„Störungen“* und *„Subtypen von Störungen“* (von bis zu 10.000 ist die Rede) mit jeweils nur kleinen Fallzahlen je *„Störung“*.
 
-* Eine Erkrankung gilt in der Europäischen Union als **„Selten“** , wenn von ihr weniger als **1 unter 2.000** Einwohnern betroffen sind – also maximal 40.000 Personen in Deutschland.
-* Als **„Ultraselten“** gelten Erkrankungen, wenn weniger als 1 unter 50.000 Personen betroffen sind.
+* Eine Erkrankung gilt in der Europäischen Union als **„Selten"**, wenn von ihr weniger als **1 unter 2.000** Einwohnern betroffen sind – also maximal 40.000 Personen in Deutschland.
 
 Regelmäßig ergeben sich bei SE – insbesondere bei Ultraseltenen – vor der Feststellung der eigentlichen Diagnose jahrelange diagnostische Ungewissheiten, die auch Fehlbehandlungen mit sich bringen. Aber auch nach der Feststellung der Diagnose kann nur für rund 5 % der Patient:innen eine gezielte Therapie angeboten werden, weswegen weitere koordinierte Forschung für die verstreut versorgten kleinen Gruppen besonders wichtig ist.
 
-Als Anfang der Verbesserungsprozesse darf die Sichtbarmachung der Personen mit SE mittels exakter Kodierung der SE-Diagnosen durch ORPHAcodes aus der Orphanet Rare Disease Ontology (ORDO) angesehen werden. Diese ergänzt die gröbere ICD-Klassifizierung und -Kodierung der Diagnosen für das Segment der SE. Laut Robert Koch-Institut (RKI) und Bundesinstitut für Arzneimittel und Medizinprodukte (BfArM) stärkt die Sichtbarmachung der SE die Möglichkeiten der Diagnostik- und Therapieentwicklung sowie der IT-Unterstützung von Diagnose und Therapiewahl.
+Als Anfang der Verbesserungsprozesse darf die Sichtbarmachung der Personen mit SE mittels exakter Kodierung der SE-Diagnosen durch ORPHAcodes aus der Orphanet-Nomenklatur (Orphanet Nomenclature of Rare Diseases) angesehen werden. Diese ergänzt die gröbere ICD-Klassifizierung und -Kodierung der Diagnosen für das Segment der SE. Laut Robert Koch-Institut (RKI) und Bundesinstitut für Arzneimittel und Medizinprodukte (BfArM) stärkt die Sichtbarmachung der SE die Möglichkeiten der Diagnostik- und Therapieentwicklung sowie der IT-Unterstützung von Diagnose und Therapiewahl.
 
 Die Orpha-Kodierung ist bereits im Modul **DIAGNOSE** als mögliche Ergänzung zur ICD-Kodierung eingerichtet worden. Die Aufnahme in das Modul SE unterstreicht die Bedeutung der exakten Kodierung als Dreh- und Angelpunkt der weiteren SE-Elemente im MII KDS im Allgemeinen und im Modul SE im Besonderen.
 

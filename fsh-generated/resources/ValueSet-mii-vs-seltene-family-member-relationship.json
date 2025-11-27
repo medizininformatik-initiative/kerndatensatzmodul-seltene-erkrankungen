@@ -1,0 +1,40 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Seltene_FamilyMemberRelationship",
+  "id": "mii-vs-seltene-family-member-relationship",
+  "title": "MII VS Seltene Erkrankungen Family Member Relationship",
+  "description": "ValueSet für Verwandtschaftsverhältnisse in der Familienanamnese, erweitert um den Indexpatient selbst (116154003 | Patient |) zur Dokumentation von Tod durch seltene Erkrankung.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-family-member-relationship",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2026.0.0-ballot",
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed"
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "116154003",
+            "display": "Patient"
+          }
+        ]
+      }
+    ]
+  }
+}

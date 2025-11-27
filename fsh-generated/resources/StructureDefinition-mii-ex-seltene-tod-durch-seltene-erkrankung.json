@@ -18,13 +18,13 @@
       ]
     }
   ],
-  "description": "Extension zur Dokumentation, ob der Tod des Patienten durch eine seltene Erkrankung verursacht wurde",
+  "description": "Extension zur Dokumentation, ob der Tod durch eine seltene Erkrankung verursacht wurde. Wird auf FamilyMemberHistory.deceased[x] verwendet, wobei der Indexpatient über relationship = 116154003 | Patient | abgebildet wird.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [
     {
-      "expression": "Patient.deceased[x]",
+      "expression": "FamilyMemberHistory.deceased[x]",
       "type": "element"
     }
   ],
@@ -37,7 +37,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Tod durch seltene Erkrankung",
-        "definition": "Gibt an, ob der Patient an einer seltenen Erkrankung verstorben ist"
+        "definition": "Gibt an, ob die Person (Patient oder Familienmitglied) an einer seltenen Erkrankung verstorben ist"
       },
       {
         "id": "Extension.extension",

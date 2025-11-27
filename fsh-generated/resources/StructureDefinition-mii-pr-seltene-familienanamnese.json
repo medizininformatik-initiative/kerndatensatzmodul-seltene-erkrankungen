@@ -118,6 +118,17 @@
         ]
       },
       {
+        "id": "FamilyMemberHistory.relationship.coding:snomed",
+        "path": "FamilyMemberHistory.relationship.coding",
+        "sliceName": "snomed",
+        "short": "Verwandtschaftsverhältnis inkl. Patient (Indexpatient)",
+        "definition": "SNOMED CT Code für das Verwandtschaftsverhältnis. Enthält zusätzlich 116154003 | Patient | für die Dokumentation des Indexpatienten selbst.",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-family-member-relationship"
+        }
+      },
+      {
         "id": "FamilyMemberHistory.sex",
         "path": "FamilyMemberHistory.sex",
         "mapping": [
@@ -151,6 +162,24 @@
           "ordered": false,
           "rules": "open"
         },
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.deceased[x].extension:todDurchSelteneErkrankung",
+        "path": "FamilyMemberHistory.deceased[x].extension",
+        "sliceName": "todDurchSelteneErkrankung",
+        "short": "Tod durch seltene Erkrankung",
+        "definition": "Extension zur Dokumentation, ob der Tod durch eine seltene Erkrankung verursacht wurde. Wird insbesondere bei relationship = 116154003 | Patient | verwendet, um den Tod des Indexpatienten zu dokumentieren.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-tod-durch-seltene-erkrankung"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -295,6 +324,34 @@
             "comment": "Andere SE (Orpha-Code)"
           }
         ]
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:mondo",
+        "path": "FamilyMemberHistory.condition.code.coding",
+        "sliceName": "mondo",
+        "short": "MONDO Code für die Erkrankung",
+        "definition": "Monarch Disease Ontology (MONDO) Code für internationale Interoperabilität. MONDO harmonisiert SNOMED, ORDO, OMIM und ICD automatisch.",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://purl.obolibrary.org/obo/mondo.owl"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:mondo.system",
+        "path": "FamilyMemberHistory.condition.code.coding.system",
+        "min": 1
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:mondo.code",
+        "path": "FamilyMemberHistory.condition.code.coding.code",
+        "min": 1
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:mondo.display",
+        "path": "FamilyMemberHistory.condition.code.coding.display",
+        "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.condition.onset[x]",

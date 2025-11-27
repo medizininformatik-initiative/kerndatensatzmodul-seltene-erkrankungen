@@ -239,6 +239,41 @@
         "mustSupport": true
       },
       {
+        "id": "Condition.code.coding:mondoCoding",
+        "path": "Condition.code.coding",
+        "sliceName": "mondoCoding",
+        "short": "MONDO Code für das Symptom",
+        "definition": "Monarch Disease Ontology (MONDO) Code für internationale Interoperabilität. MONDO harmonisiert SNOMED, ORDO, OMIM und ICD automatisch und ermöglicht die Integration mit internationalen Projekten wie Phenopackets und GA4GH.",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://purl.obolibrary.org/obo/mondo.owl"
+        },
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung",
+            "comment": "MONDO Symptom (internationale Interoperabilität)"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.coding:mondoCoding.system",
+        "path": "Condition.code.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Condition.code.coding:mondoCoding.code",
+        "path": "Condition.code.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Condition.code.coding:mondoCoding.display",
+        "path": "Condition.code.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "Condition.bodySite",
         "path": "Condition.bodySite",
         "short": "Anatomische Lokalisation des Symptoms",

@@ -463,6 +463,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-seltene-hueftumfang"
+        },
+        "name": "Hüftumfang Beispiel",
+        "description": "Beispiel einer Hüftumfang-Messung bei einem Patienten mit seltener Erkrankung.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hueftumfang"
+      },
+      {
+        "reference": {
           "reference": "Encounter/encounter-cardiology"
         },
         "name": "Kardiologische Erstvorstellung",
@@ -524,6 +532,14 @@
         "name": "Konsultation ZSE bei V.a. Marfan-Syndrom",
         "description": "Konsultation im Zentrum für Seltene Erkrankungen mit kardiologischer Mitbeurteilung bei V.a. Marfan-Syndrom",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-kopfumfang"
+        },
+        "name": "Kopfumfang Beispiel",
+        "description": "Beispiel einer Kopfumfang-Messung bei einem Patienten mit seltener Erkrankung.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang"
       },
       {
         "reference": {
@@ -722,7 +738,7 @@
           "reference": "StructureDefinition/mii-ex-seltene-tod-durch-seltene-erkrankung"
         },
         "name": "MII EX Seltene Erkrankungen Tod durch Seltene Erkrankung",
-        "description": "Extension zur Dokumentation, ob der Tod des Patienten durch eine seltene Erkrankung verursacht wurde",
+        "description": "Extension zur Dokumentation, ob der Tod durch eine seltene Erkrankung verursacht wurde. Wird auf FamilyMemberHistory.deceased[x] verwendet, wobei der Indexpatient über relationship = 116154003 | Patient | abgebildet wird.",
         "exampleBoolean": false
       },
       {
@@ -775,6 +791,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-hueftumfang"
+        },
+        "name": "MII PR SE Hüftumfang",
+        "description": "Profil zur Dokumentation des Hüftumfangs (maximale Gesäßprotuberanz) eines Patienten. Relevant für seltene Erkrankungen mit Auswirkungen auf die Körperproportionen, metabolische Erkrankungen oder Skelettdysplasien.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-kopfumfang"
+        },
+        "name": "MII PR SE Kopfumfang",
+        "description": "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-seltene-studie"
         },
         "name": "MII PR SE Studie",
@@ -787,6 +819,14 @@
         },
         "name": "MII PR SE Studieneinschluss Anfrage",
         "description": "Anfrage zum Studieneinschluss",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-taillenumfang"
+        },
+        "name": "MII PR SE Taillenumfang",
+        "description": "Profil zur Dokumentation des Taillenumfangs (Bauchumfang auf Nabelhöhe) eines Patienten. Relevant für seltene Erkrankungen mit metabolischen Komponenten oder Skelettdysplasien.",
         "exampleBoolean": false
       },
       {
@@ -931,6 +971,14 @@
         },
         "name": "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
         "description": "ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profile) - Verwendet für ServiceRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-family-member-relationship"
+        },
+        "name": "MII VS Seltene Erkrankungen Family Member Relationship",
+        "description": "ValueSet für Verwandtschaftsverhältnisse in der Familienanamnese, erweitert um den Indexpatient selbst (116154003 | Patient |) zur Dokumentation von Tod durch seltene Erkrankung.",
         "exampleBoolean": false
       },
       {
@@ -1180,6 +1228,14 @@
         "name": "Syndrome Category Value Set",
         "description": "Categories for classifying syndrome types in rare diseases",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-taillenumfang"
+        },
+        "name": "Taillenumfang Beispiel",
+        "description": "Beispiel einer Taillenumfang-Messung bei einem Patienten mit seltener Erkrankung.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-taillenumfang"
       },
       {
         "reference": {

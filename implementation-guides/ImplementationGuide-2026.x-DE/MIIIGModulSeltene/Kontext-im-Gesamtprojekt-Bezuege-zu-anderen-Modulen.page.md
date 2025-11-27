@@ -28,7 +28,7 @@ Für die nahtlose Integration mit bestehenden Registersystemen und Zielspezifika
 
 **Technische Mappings zu:**
 - **ERDRI/RD-CODE**: European Rare Disease Registry Infrastructure
-  - Übersetzung zwischen ICD-10-GM und Orpha-Codes
+  - Mapping zwischen ICD-10-GM und ORPHAcodes
   - Mapping von HPO-Termen zu ERDRI-Phänotyp-Kategorien
   
 - **Modellvorhaben Genomsequenzierung SE**: Genommedizin für Seltene Erkrankungen
