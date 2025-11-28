@@ -11,10 +11,10 @@ Usage: #example
 * bornDate = "1954"
 * deceasedDate = "2004"
 * condition[0].code = $ICD10GM#H35.8
-* condition[0].code.coding.version = "2009"
+* condition[0].code.coding.version = "2024"
 * condition[1].code = $ICD10GM#E11.9
-* condition[1].code.coding.version = "2009"
+* condition[1].code.coding.version = "2024"
 * condition[2].code = $ICD10GM#I21.2
-* condition[2].code.coding.version = "2009"
+* condition[2].code.coding.version = "2024"
 * condition[2].contributedToDeath = true
 * extension[vonSEBetroffen].valueCodeableConcept.coding = $SCT#373066001 "Yes"
