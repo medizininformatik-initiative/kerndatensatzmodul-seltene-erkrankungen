@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil.",
+  "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil. Das Profil unterstützt die Dokumentation von Todesfällen durch seltene Erkrankungen über condition.contributedToDeath. Für den Indexpatienten selbst kann relationship.coding[snomed] = 116154003 | Patient | verwendet werden, um den Tod des Patienten durch eine seltene Erkrankung einheitlich zu dokumentieren.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -118,17 +118,6 @@
         ]
       },
       {
-        "id": "FamilyMemberHistory.relationship.coding:snomed",
-        "path": "FamilyMemberHistory.relationship.coding",
-        "sliceName": "snomed",
-        "short": "Verwandtschaftsverhältnis inkl. Patient (Indexpatient)",
-        "definition": "SNOMED CT Code für das Verwandtschaftsverhältnis. Enthält zusätzlich 116154003 | Patient | für die Dokumentation des Indexpatienten selbst.",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-family-member-relationship"
-        }
-      },
-      {
         "id": "FamilyMemberHistory.sex",
         "path": "FamilyMemberHistory.sex",
         "mapping": [
@@ -162,24 +151,6 @@
           "ordered": false,
           "rules": "open"
         },
-        "mustSupport": true
-      },
-      {
-        "id": "FamilyMemberHistory.deceased[x].extension:todDurchSelteneErkrankung",
-        "path": "FamilyMemberHistory.deceased[x].extension",
-        "sliceName": "todDurchSelteneErkrankung",
-        "short": "Tod durch seltene Erkrankung",
-        "definition": "Extension zur Dokumentation, ob der Tod durch eine seltene Erkrankung verursacht wurde. Wird insbesondere bei relationship = 116154003 | Patient | verwendet, um den Tod des Indexpatienten zu dokumentieren.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-tod-durch-seltene-erkrankung"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -352,6 +323,20 @@
         "id": "FamilyMemberHistory.condition.code.coding:mondo.display",
         "path": "FamilyMemberHistory.condition.code.coding.display",
         "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.contributedToDeath",
+        "path": "FamilyMemberHistory.condition.contributedToDeath",
+        "short": "Tod durch diese Erkrankung",
+        "definition": "Gibt an, ob diese Erkrankung zum Tod des Familienmitglieds beigetragen hat. Relevant für die Dokumentation von Todesfällen durch seltene Erkrankungen in der Familie.",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Familienanamnese.TodDurchSE",
+            "comment": "Tod durch seltene Erkrankung"
+          }
+        ]
       },
       {
         "id": "FamilyMemberHistory.condition.onset[x]",

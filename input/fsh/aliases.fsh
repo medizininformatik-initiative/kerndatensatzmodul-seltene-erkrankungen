@@ -8,6 +8,7 @@ Alias: $ATC_DE = http://fhir.de/CodeSystem/bfarm/atc
 Alias: $FHIR-Version = 4.0.1
 Alias: $ExpandedYesNoIndicator = http://terminology.hl7.org/CodeSystem/v2-0532
 Alias: $HPO = http://human-phenotype-ontology.org
+Alias: $MONDO = http://purl.obolibrary.org/obo/mondo.owl
 // FHIR condition related code systems
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status

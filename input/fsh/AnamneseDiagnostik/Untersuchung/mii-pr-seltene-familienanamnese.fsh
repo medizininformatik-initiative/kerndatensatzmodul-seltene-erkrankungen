@@ -2,7 +2,7 @@ Profile: MII_PR_Seltene_Familienanamnese
 Parent: https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese
 Id: mii-pr-seltene-familienanamnese
 Title: "MII PR SE Familienanamnese"
-Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil."
+Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil. Das Profil unterstützt die Dokumentation von Todesfällen durch seltene Erkrankungen über condition.contributedToDeath. Für den Indexpatienten selbst kann relationship.coding[snomed] = 116154003 | Patient | verwendet werden, um den Tod des Patienten durch eine seltene Erkrankung einheitlich zu dokumentieren."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese"
 * insert PR_CS_VS_Version
 * insert Publisher
@@ -15,14 +15,25 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * status MS
 * patient MS
 * date MS
+
 * relationship MS
+
 * sex MS
 * reasonCode MS
 * condition MS
 * condition.code MS
 * condition.code.coding 1.. MS
+// Add MONDO slice for international interoperability (in addition to inherited slices from MolGen)
+* condition.code.coding contains mondo 0..1 MS
+* condition.code.coding[mondo] ^short = "MONDO Code für die Erkrankung"
+* condition.code.coding[mondo] ^definition = "Monarch Disease Ontology (MONDO) Code für internationale Interoperabilität. MONDO harmonisiert SNOMED, ORDO, OMIM und ICD automatisch."
+* condition.code.coding[mondo] ^patternCoding.system = $MONDO
+* condition.code.coding[mondo].system 1..1
+* condition.code.coding[mondo].code 1..1
+* condition.code.coding[mondo].display MS
+
 * condition.onset[x] MS
-* condition.extension contains 
+* condition.extension contains
     mii-ex-seltene-penetrance named penetrance 0..1 MS
 * condition.extension[penetrance] ^short = "Penetranz der genetischen Variante beim Familienmitglied"
 * condition.extension[penetrance] ^definition = "Angabe zur Penetranz der genetischen Variante bei der Erkrankung des Familienmitglieds"
@@ -30,6 +41,11 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * born[x] 0..1 MS
 * age[x] 0..1 MS
 * deceased[x] 0..1 MS
+
+// Use standard FHIR element for death due to condition
+* condition.contributedToDeath MS
+* condition.contributedToDeath ^short = "Tod durch diese Erkrankung"
+* condition.contributedToDeath ^definition = "Gibt an, ob diese Erkrankung zum Tod des Familienmitglieds beigetragen hat. Relevant für die Dokumentation von Todesfällen durch seltene Erkrankungen in der Familie."
 /*
 Profile: MII_PR_MolGen_Familienanamnese
 Parent: FamilyMemberHistory
@@ -172,6 +188,7 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * deceasedBoolean -> "Familienanamnese.FamilienmitgliedVerstorben" "Familienmitglied verstorben"
 * deceasedDate -> "Familienanamnese.FamilienmitgliedVerstorben" "Sterbedatum"
 * deceasedAge -> "Familienanamnese.FamilienmitgliedVerstorben" "Alter bei Tod"
+* condition.contributedToDeath -> "Familienanamnese.TodDurchSE" "Tod durch seltene Erkrankung"
 * condition.onsetAge -> "Alter bei Erkrankungsbeginn" "Alter bei Erkrankung"
 * patient -> "Patient" "Patient/Indexpatient"
 * date -> "Dokumentationsdatum" "Datum der Familienanamnese"

@@ -199,14 +199,6 @@
       },
       {
         "reference": {
-          "reference": "Patient/mii-exa-seltene-patient-tod-durch-seltene-erkrankung"
-        },
-        "name": "Beispiel Patient verstorben an seltener Erkrankung",
-        "description": "Beispiel eines Patienten, der an einer seltenen Erkrankung verstorben ist",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
           "reference": "Patient/example"
         },
         "name": "Beispielpatient",
@@ -735,14 +727,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-seltene-tod-durch-seltene-erkrankung"
-        },
-        "name": "MII EX Seltene Erkrankungen Tod durch Seltene Erkrankung",
-        "description": "Extension zur Dokumentation, ob der Tod durch eine seltene Erkrankung verursacht wurde. Wird auf FamilyMemberHistory.deceased[x] verwendet, wobei der Indexpatient über relationship = 116154003 | Patient | abgebildet wird.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "Condition/mii-exa-seltene-symptom-condition"
         },
         "name": "MII Example SE Symptom Condition",
@@ -778,7 +762,7 @@
           "reference": "StructureDefinition/mii-pr-seltene-familienanamnese"
         },
         "name": "MII PR SE Familienanamnese",
-        "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil.",
+        "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil. Das Profil unterstützt die Dokumentation von Todesfällen durch seltene Erkrankungen über condition.contributedToDeath. Für den Indexpatienten selbst kann relationship.coding[snomed] = 116154003 | Patient | verwendet werden, um den Tod des Patienten durch eine seltene Erkrankung einheitlich zu dokumentieren.",
         "exampleBoolean": false
       },
       {
@@ -971,14 +955,6 @@
         },
         "name": "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
         "description": "ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profile) - Verwendet für ServiceRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-seltene-family-member-relationship"
-        },
-        "name": "MII VS Seltene Erkrankungen Family Member Relationship",
-        "description": "ValueSet für Verwandtschaftsverhältnisse in der Familienanamnese, erweitert um den Indexpatient selbst (116154003 | Patient |) zur Dokumentation von Tod durch seltene Erkrankung.",
         "exampleBoolean": false
       },
       {

@@ -30,6 +30,17 @@ HPO ist ideal für die präzise Beschreibung körperlicher/phänotypischer Abnor
 - **HP:0003198** (Myopathy) - bei Muskeldystrophien
 - **HP:0001270** (Motor delay) - motorische Entwicklungsverzögerung bei neuromuskulären Erkrankungen
 
+#### MONDO Codes (Sekundäre Harmonisierungsontologie)
+
+> **Hinweis:** MONDO ist eine **sekundäre Harmonisierungsontologie** zur Verbesserung der internationalen Interoperabilität. Die primäre Kodierung erfolgt weiterhin über ICD-10-GM, SNOMED CT oder HPO. MONDO-Codes können **optional ergänzend** angegeben werden.
+
+MONDO (Monarch Disease Ontology) harmonisiert verschiedene Klassifikationen (SNOMED CT, Orphanet, OMIM, ICD) und ermöglicht die Integration mit internationalen Standards wie [Phenopackets](https://phenopacket-schema.readthedocs.io/) und GA4GH:
+- **MONDO:0007947** (Marfan syndrome) - entspricht Orpha:558, OMIM:154700
+- **MONDO:0001516** (spinal muscular atrophy) - entspricht Orpha:70
+- **MONDO:0009061** (cystic fibrosis) - entspricht Orpha:586, OMIM:219700
+
+Weitere Informationen zu MONDO finden sich unter [Terminologien]({{pagelink:Terminologien}}).
+
 @```
 from 
     StructureDefinition 

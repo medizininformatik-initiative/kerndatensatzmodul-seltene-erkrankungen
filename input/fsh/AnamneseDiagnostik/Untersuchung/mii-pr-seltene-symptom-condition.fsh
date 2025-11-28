@@ -58,10 +58,11 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 * code.coding ^slicing.rules = #open
 * code.coding ^slicing.description = "Slicing für verschiedene Codesysteme zur Symptom-Codierung"
 * code.coding ^slicing.ordered = false
-* code.coding contains 
-    hpoCoding 0..1 MS and 
-    snomedCoding 0..1 MS and 
-    icd10GMCoding 0..1 MS
+* code.coding contains
+    hpoCoding 0..1 MS and
+    snomedCoding 0..1 MS and
+    icd10GMCoding 0..1 MS and
+    mondoCoding 0..1 MS
 
 // HPO Coding slice with pattern
 * code.coding[hpoCoding] ^short = "HPO Code für das Symptom"
@@ -87,6 +88,13 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 * code.coding[icd10GMCoding].code 1..1
 * code.coding[icd10GMCoding].display MS
 
+// MONDO Coding slice with pattern - for international interoperability
+* code.coding[mondoCoding] ^short = "MONDO Code für das Symptom"
+* code.coding[mondoCoding] ^definition = "Monarch Disease Ontology (MONDO) Code für internationale Interoperabilität. MONDO harmonisiert SNOMED, ORDO, OMIM und ICD automatisch und ermöglicht die Integration mit internationalen Projekten wie Phenopackets und GA4GH."
+* code.coding[mondoCoding] ^patternCoding.system = $MONDO
+* code.coding[mondoCoding].system 1..1
+* code.coding[mondoCoding].code 1..1
+* code.coding[mondoCoding].display MS
 
 // Severity constraints
 * severity from mii-vs-seltene-hpo-severity (extensible)
@@ -131,6 +139,7 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * code.coding[hpoCoding] -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm" "HPO-Term des Symptoms"
 * code.coding[snomedCoding] -> "AnamneseUndDiagnostik.Phaenotypisierung" "SNOMED CT Symptom"
 * code.coding[icd10GMCoding] -> "AnamneseUndDiagnostik.Phaenotypisierung" "ICD-10-GM Symptom"
+* code.coding[mondoCoding] -> "AnamneseUndDiagnostik.Phaenotypisierung" "MONDO Symptom (internationale Interoperabilität)"
 * severity -> "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom" "Schweregrad/Verlauf"
 * onsetDateTime -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Startdatum des Symptoms"
 * onsetPeriod.start -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Beginn Symptomzeitraum"
