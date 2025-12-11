@@ -27,7 +27,7 @@ Diese zeitpunktbezogene Erfassung ermöglicht die Nachvollziehbarkeit der Krankh
 > - **HPO-Observation**: Dokumentiert eine **einzelne Untersuchung/Bewertung** zu einem bestimmten Zeitpunkt (z.B. "Am 15.03.2024 wurde Arachnodaktylie festgestellt")
 > - **Symptom-Condition**: Dokumentiert einen **persistierenden Zustand** über einen Zeitraum (z.B. "Patient hat seit dem Kindesalter Arachnodaktylie")
 
-Ein vollständiges Beispiel dieser Unterscheidung findet sich im **Marfan-Syndrom Beispiel**: {{pagelink:marfan-example-annotations}}
+Ein vollständiges Beispiel dieser Unterscheidung findet sich im **Marfan-Syndrom Beispiel**: {{pagelink:marfan-beispiel}}
 
 Dort wird gezeigt, wie:
 - Einzelne HPO-Beobachtungen bei verschiedenen Untersuchungsterminen erfasst werden
