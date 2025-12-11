@@ -8,6 +8,10 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 
 Dieses Profil beschreibt die Familienanamnese im Kontext Seltener Erkrankungen. Es ermöglicht die strukturierte Erfassung von Erkrankungen bei Familienmitgliedern, insbesondere mit Fokus auf genetische und erbliche Komponenten seltener Erkrankungen.
 
+> **Wichtig:** Für **jedes Familienmitglied** wird eine **separate FamilyMemberHistory-Ressource** erstellt. Ein Familienmitglied kann mehrere Erkrankungen haben, die alle in derselben Ressource unter `condition` dokumentiert werden. Für die Dokumentation des **Todes des Indexpatienten** durch eine seltene Erkrankung kann ebenfalls eine FamilyMemberHistory-Ressource mit `relationship.coding[snomed] = 116154003 | Patient |` erstellt werden (siehe Abschnitt "Für den Indexpatienten" unten).
+
+> **Hinweis:** In Zukunft soll die Familienanamnese über das Modul **Molekulargenetischer Befund (MolGen)** abgedeckt werden. Dieses Profil basiert bereits auf dem MolGen Familienanamnese Profil und gewährleistet damit Kompatibilität.
+
 ### Klinische Bedeutung
 
 Die Familienanamnese ist bei seltenen Erkrankungen von besonderer Bedeutung, da viele dieser Erkrankungen eine genetische Komponente aufweisen. Die strukturierte Erfassung ermöglicht:
