@@ -53,21 +53,6 @@ select
 
 ---
 
-Mapping Datensatz zu FHIR
-
-@```
-from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Onkologie'
-    for differential.element where id.contains('Grading') 
-    select 
-        Datensatz: short,
-        Erklaerung: definition, 
-        FHIR: mapping[0].map 
-
-```
-
----
-
 **Suchparameter**
 
 Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch in Kombination:
