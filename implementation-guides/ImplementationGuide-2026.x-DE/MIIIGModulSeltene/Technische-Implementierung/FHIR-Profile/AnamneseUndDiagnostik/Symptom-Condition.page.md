@@ -101,6 +101,12 @@ Das Symptom-Condition Profil wird verwendet für:
 | **Clinical Diagnosis** | Bestätigte klinische Diagnosen |
 | **Genetic Diagnosis** | Genetisch bestätigte Diagnosen |
 
+> **Wichtig:** Die Unterscheidung zwischen **Symptom-Condition** und **HPO-Observation** ist klinisch bedeutsam:
+> - **Symptom-Condition**: Dokumentiert einen **persistierenden Zustand** über einen Zeitraum (z.B. "Patient hat seit dem Kindesalter Arachnodaktylie")
+> - **HPO-Observation**: Dokumentiert eine **einzelne Untersuchung/Bewertung** zu einem bestimmten Zeitpunkt (z.B. "Am 15.03.2024 wurde Arachnodaktylie festgestellt")
+
+Ein vollständiges Beispiel dieser Unterscheidung findet sich im **Marfan-Syndrom Beispiel**: {{pagelink:marfan-example-annotations}}
+
 ---
 
 Mapping Datensatz zu FHIR

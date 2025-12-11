@@ -21,6 +21,19 @@ Es ermöglicht die strukturierte Erfassung phänotypischer Abnormalitäten und k
 
 Diese zeitpunktbezogene Erfassung ermöglicht die Nachvollziehbarkeit der Krankheitsprogression und Therapieeffekte bei seltenen Erkrankungen.
 
+### Abgrenzung zur Symptom-Condition
+
+> **Wichtig:** Die Unterscheidung zwischen **HPO-Observation** und **Symptom-Condition** ist klinisch bedeutsam:
+> - **HPO-Observation**: Dokumentiert eine **einzelne Untersuchung/Bewertung** zu einem bestimmten Zeitpunkt (z.B. "Am 15.03.2024 wurde Arachnodaktylie festgestellt")
+> - **Symptom-Condition**: Dokumentiert einen **persistierenden Zustand** über einen Zeitraum (z.B. "Patient hat seit dem Kindesalter Arachnodaktylie")
+
+Ein vollständiges Beispiel dieser Unterscheidung findet sich im **Marfan-Syndrom Beispiel**: {{pagelink:marfan-example-annotations}}
+
+Dort wird gezeigt, wie:
+- Einzelne HPO-Beobachtungen bei verschiedenen Untersuchungsterminen erfasst werden
+- Diese Beobachtungen als Evidenz für persistierende Symptom-Conditions dienen
+- Mehrfache Bestätigungen desselben Phänotyps die Diagnosesicherheit erhöhen
+
 ### Verknüpfung mit Evidenz
 
 Das `derivedFrom` Element ermöglicht die Verknüpfung der HPO-Beobachtung mit konkreten klinischen Befunden:
