@@ -73,7 +73,7 @@ Diese Modellierung ermöglicht eine einheitliche Dokumentation von Todesfällen 
 
 ### MONDO Kodierung (Sekundäre Harmonisierungsontologie)
 
-> **Hinweis:** MONDO ist eine **sekundäre Harmonisierungsontologie** und kein primäres Diagnoseziel. Die primäre Kodierung der Familienerkrankung erfolgt über ICD-10-GM, Alpha-ID, SNOMED CT oder Orpha-Codes. MONDO-Codes können **optional ergänzend** in `condition.code.coding[mondo]` angegeben werden.
+> **Hinweis:** MONDO ist eine **sekundäre Harmonisierungsontologie** und kein primäres Diagnoseziel. Die primäre Kodierung der Familienerkrankung erfolgt über ICD-10-GM, Alpha-ID, SNOMED CT oder ORPHAcodes. MONDO-Codes können **optional ergänzend** in `condition.code.coding[mondo]` angegeben werden.
 
 MONDO (Monarch Disease Ontology) harmonisiert verschiedene Klassifikationen und ermöglicht die Integration mit internationalen Standards wie [Phenopackets](https://phenopacket-schema.readthedocs.io/) und GA4GH. Weitere Informationen finden sich unter [Terminologien]({{pagelink:Terminologien}}).
 

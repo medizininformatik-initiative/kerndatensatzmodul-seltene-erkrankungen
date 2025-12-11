@@ -15,7 +15,7 @@ Die ClinicalImpression nutzt drei Hauptelemente zur Strukturierung der klinische
 
 #### **Problem** (`problem`)
 Dokumentiert die **identifizierten Gesundheitsprobleme oder Diagnosen**:
-- Bestätigte Diagnosen (ICD-10-GM, Orpha-Codes)
+- Bestätigte Diagnosen (ICD-10-GM, ORPHAcodes)
 - Verdachtsdiagnosen
 - Symptom-Conditions (symptomatische Zustände)
 - Beispiel: "Verdacht auf Osteogenesis imperfecta" oder "Bestätigte Von-Willebrand-Erkrankung"
