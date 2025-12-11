@@ -655,6 +655,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-seltene-therapieempfehlung-typ"
+        },
+        "name": "MII CS SE Therapieempfehlung Typ",
+        "description": "Therapietyp (kausal vs. symptomatisch) für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-seltene-hpo-change-status"
         },
         "name": "MII CS Seltene Erkrankungen HPO Change Status",
@@ -955,6 +963,14 @@
         },
         "name": "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
         "description": "ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profile) - Verwendet für ServiceRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-therapieempfehlung-typ"
+        },
+        "name": "MII VS SE Therapieempfehlung Typ",
+        "description": "ValueSet für Therapietypen (kausal/symptomatisch) bei seltenen Erkrankungen (Modellvorhaben GenomSeq)",
         "exampleBoolean": false
       },
       {

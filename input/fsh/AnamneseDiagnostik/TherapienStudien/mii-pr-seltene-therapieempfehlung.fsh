@@ -27,7 +27,9 @@ Description: "Therapieempfehlung für eine medikamentöse Systemische Therapie"
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Slice für Therapiestrategie-Kategorisierung aus Modellvorhaben GenomSeq"
-* category contains MVGenomSeqTherapieStrategie 0..1 MS
+* category contains
+    MVGenomSeqTherapieStrategie 0..1 MS and
+    MVGenomSeqTherapieTyp 0..1 MS
 * category[MVGenomSeqTherapieStrategie] from MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes (required)
 * category[MVGenomSeqTherapieStrategie] ^short = "Modellvorhaben GenomSeq Therapiestrategie-Typ (Medikamentös)"
 * category[MVGenomSeqTherapieStrategie] ^definition = "Kategorisierung der medikamentösen Therapieempfehlung nach Modellvorhaben GenomSeq Strategietyp"
@@ -35,6 +37,13 @@ Description: "Therapieempfehlung für eine medikamentöse Systemische Therapie"
 * category[MVGenomSeqTherapieStrategie].coding 1..1
 * category[MVGenomSeqTherapieStrategie].coding.system 1..
 * category[MVGenomSeqTherapieStrategie].coding.code 1..
+* category[MVGenomSeqTherapieTyp] from MII_VS_Seltene_TherapieempfehlungTyp (required)
+* category[MVGenomSeqTherapieTyp] ^short = "Modellvorhaben GenomSeq Therapietyp (Kausal/Symptomatisch)"
+* category[MVGenomSeqTherapieTyp] ^definition = "Kategorisierung der Therapieempfehlung nach Therapietyp (kausal vs. symptomatisch) gemäß Modellvorhaben GenomSeq"
+* category[MVGenomSeqTherapieTyp] ^comment = "Dieses Feld ermöglicht die Unterscheidung, ob die Therapie die zugrundeliegende Ursache der Erkrankung adressiert (kausal) oder Symptome und Manifestationen behandelt (symptomatisch). Entspricht RareDiseasesPlan.recommendedTherapies.therapyType aus MV GenomSeq."
+* category[MVGenomSeqTherapieTyp].coding 1..1
+* category[MVGenomSeqTherapieTyp].coding.system 1..
+* category[MVGenomSeqTherapieTyp].coding.code 1..
 
 * reasonReference 0..* MS
 * reasonReference ^slicing.discriminator.type = #profile
