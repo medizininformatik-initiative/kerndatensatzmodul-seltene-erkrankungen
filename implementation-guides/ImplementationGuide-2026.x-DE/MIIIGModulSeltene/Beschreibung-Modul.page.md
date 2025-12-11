@@ -13,7 +13,7 @@ Regelmäßig ergeben sich bei SE – insbesondere bei Ultraseltenen – vor der 
 
 Als Anfang der Verbesserungsprozesse darf die Sichtbarmachung der Personen mit SE mittels exakter Kodierung der SE-Diagnosen durch ORPHAcodes aus der Orphanet-Nomenklatur (Orphanet Nomenclature of Rare Diseases) angesehen werden. Diese ergänzt die gröbere ICD-Klassifizierung und -Kodierung der Diagnosen für das Segment der SE. Laut Robert Koch-Institut (RKI) und Bundesinstitut für Arzneimittel und Medizinprodukte (BfArM) stärkt die Sichtbarmachung der SE die Möglichkeiten der Diagnostik- und Therapieentwicklung sowie der IT-Unterstützung von Diagnose und Therapiewahl.
 
-Die Orpha-Kodierung ist bereits im Modul **DIAGNOSE** als mögliche Ergänzung zur ICD-Kodierung eingerichtet worden. Die Aufnahme in das Modul SE unterstreicht die Bedeutung der exakten Kodierung als Dreh- und Angelpunkt der weiteren SE-Elemente im MII KDS im Allgemeinen und im Modul SE im Besonderen.
+Die ORPHAcode-Kodierung ist bereits im Modul **DIAGNOSE** als mögliche Ergänzung zur ICD-Kodierung eingerichtet worden. Die Aufnahme in das Modul SE unterstreicht die Bedeutung der exakten Kodierung als Dreh- und Angelpunkt der weiteren SE-Elemente im MII KDS im Allgemeinen und im Modul SE im Besonderen.
 
 ---
 
