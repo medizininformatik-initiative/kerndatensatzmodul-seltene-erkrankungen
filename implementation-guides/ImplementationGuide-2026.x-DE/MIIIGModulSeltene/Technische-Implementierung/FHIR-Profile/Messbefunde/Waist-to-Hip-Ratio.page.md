@@ -68,24 +68,9 @@ where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/
 
 ---
 
-Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
-
-@```
-from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading'  
-    for differential.element
-    where mapping.identity='oBDS'
-    select 
-        oBDS: mapping.map,
-        Definition: mapping.comment,
-        FHIR: path
-```
-
----
-
 **Suchparameter**
 
-Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombination:
+Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch in Kombination:
 
 1. Der Suchparameter ```_id``` MUSS unterstützt werden:
 
