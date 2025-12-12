@@ -57,6 +57,18 @@ Die klare Trennung zwischen medikamentösen und nicht-medikamentösen Therapien 
 3. **Durchführung**: Dokumentation über MedicationStatement/Administration bzw. Procedure
 4. **Monitoring**: Verlaufskontrolle über Observation und DiagnosticReport
 
+### Hintergrund: Modellvorhaben Genomsequenzierung
+
+> **Hinweis:** Die Unterscheidung zwischen **Therapieplan** und **Therapieempfehlung** entstammt den Anforderungen des **Modellvorhabens Genomsequenzierung** für Seltene Erkrankungen.
+
+In der klinischen Praxis bei seltenen Erkrankungen werden Therapieentscheidungen oft in interdisziplinären Fallkonferenzen getroffen:
+
+- **Therapieempfehlungen** dokumentieren die Vorschläge von **Consiliarii** (beratenden Fachärzt:innen) aus der Fallkonferenz. Sie repräsentieren fachliche Empfehlungen, die noch nicht verbindlich umgesetzt wurden.
+
+- **Therapiepläne** dokumentieren die Behandlungsplanung durch die **behandelnden Ärzt:innen**, die unter Berücksichtigung der Empfehlungen einen konkreten Behandlungsplan für den Patienten erstellen.
+
+Diese Trennung ermöglicht eine klare Nachvollziehbarkeit der Entscheidungsfindung: Welche Therapien wurden empfohlen, welche wurden tatsächlich geplant und umgesetzt, und welche Abweichungen gab es zwischen Empfehlung und Umsetzung.
+
 ### Anwendungsbeispiele
 
 #### Marfan-Syndrom

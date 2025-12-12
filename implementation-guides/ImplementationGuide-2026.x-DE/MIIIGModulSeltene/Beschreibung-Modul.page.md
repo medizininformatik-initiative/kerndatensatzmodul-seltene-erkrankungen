@@ -21,10 +21,11 @@ Wie die anderen Implementierungsleitfäden (IG) der Module des MII-KDS soll das 
 
 Für eine umfassende Beschreibung Seltener Erkrankungen sind neben den im SE-Modul adressierten Inhalten weitere Module des MII-KDS relevant, u. a. **Labor**, **Molekulargenetischer Befund** und **PROMs**. Perspektivisch sind zudem weitere Erweiterungsmodule (z. B. **Fallkonferenz im Zentrum für Seltene Erkrankungen (ZSE), Neugeborenenscreening**) sinnvoll. Das vorliegende SE‑Modul ist jedoch bewusst schlank gehalten und fokussiert auf die wiederverwendbare Integration bereits modellierter Datenelemente, um Implementierbarkeit und Interoperabilität zu erleichtern.
  
-Zugleich soll das Modul SE als Anleitung zu einer einheitlichen, semantisch interoperablen, standardisierten **EU-konformen SE-Dokumentation** an Klinischen Arbeitsplätzen dienen, was sich auch in dem Synonym **„Deutscher Minimalbasisdatensatz für Seltene Erkrankungen (MBDS-SE.de)“** ausdrückt, wodurch die semantische Nähe zum französischen „Set de données minimal national maladies rares **(SDM-MR.fr)**“ und zum Set of Common Data Elements der Europäischen ERN-Register  **(ERDRI CDS.eu)**“ angezeigt wird.
+Zugleich soll das Modul SE als Anleitung zu einer einheitlichen, semantisch interoperablen, standardisierten **EU-konformen SE-Dokumentation** an Klinischen Arbeitsplätzen dienen, was sich auch in dem Synonym **„Deutscher Minimalbasisdatensatz für Seltene Erkrankungen (MBDS-SE.de)"** ausdrückt, wodurch die semantische Nähe zum französischen „Set de données minimal national maladies rares **(SDM-MR.fr)**" und zum Set of Common Data Elements der Europäischen ERN-Register  **(ERDRI CDS.eu)**" angezeigt wird.
 
+> **Hinweis zur Datenvollständigkeit:** Das Modul Seltene Erkrankungen modelliert primär diejenigen Datenelemente, die **spezifisch für seltene Erkrankungen** sind. Einige Datenelemente erscheinen zusätzlich, weil sie in anderen MII-Modulen noch nicht spezifiziert waren (z.B. BMI, Blutgruppe). Alle Daten aus anderen Modulen (Person, Labor, Pathologie, Molekulargenetischer Befund, etc.) können von abgeleiteten Forschungsprojekten frei genutzt werden. Die MII-Module sind konzeptionelle Konstrukte zur Datenaufbereitung und haben keine inhärente Bedeutung hinsichtlich der Vollständigkeit – ein Forschungsprojekt zu seltenen Erkrankungen wird typischerweise Daten aus mehreren Modulen kombinieren.
 
---- 
+---
 
 Die gemäß Modul SE an klinischen Arbeitsplätzen erhobenen und in Datenintegrationszentren aufbereiteten Daten sollen:
 * An den *Klinischen Arbeitsplätzen*, wo sie als Teil der *Versorgungsdokumentation* erhoben werden, für die lokale Unterstützung der Versorgung zur Verfügung stehen,
