@@ -29,20 +29,6 @@
   "differential": {
     "element": [
       {
-        "id": "MedicationRequest.extension",
-        "path": "MedicationRequest.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "MedicationRequest.extension:Prioritaet",
         "path": "MedicationRequest.extension",
         "sliceName": "Prioritaet",
