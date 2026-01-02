@@ -92,6 +92,7 @@ InstanceOf: MII_PR_Seltene_Therapieplan
 Usage: #example
 Title: "Therapieplan Example"
 Description: "Example of a Therapieplan for a patient."
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan)
 * status = #draft
 * created = 2023-03-28
 * description = "Therapieplan für den Patienten"

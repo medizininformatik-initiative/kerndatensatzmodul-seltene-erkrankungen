@@ -3,7 +3,7 @@ InstanceOf: MII_PR_Seltene_Symptom_Condition
 Usage: #example
 Title: "MII Example SE Symptom Condition"
 Description: "Example of a symptom condition in the context of rare diseases using HPO codes"
-
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition)
 
 // Clinical and verification status
 * clinicalStatus = $condition-clinical#active "Active"

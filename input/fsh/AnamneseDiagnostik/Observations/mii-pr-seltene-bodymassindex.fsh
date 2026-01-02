@@ -31,6 +31,7 @@ InstanceOf: MII_PR_Seltene_Bodymassindex
 Usage: #example
 Title: "Body Mass Index (BMI) Example"
 Description: "Example of a Body Mass Index (BMI) observation for a patient."
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex)
 * status = #final
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs

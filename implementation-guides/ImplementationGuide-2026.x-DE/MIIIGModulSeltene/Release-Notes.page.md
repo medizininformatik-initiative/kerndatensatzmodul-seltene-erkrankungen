@@ -3,9 +3,33 @@ Auf dieser Seite werden die Unterschiede zwischen den Versionen nachgehalten, be
 
 ---
 
-## Änderungen finale Version v2026.0.0 (noch nicht veröffentlicht)
+## Änderungen Version v2026.0.0-rc.1 (Release Candidate 1)
 
-### Validierung und Qualitätsverbesserungen
+### Neue Funktionen
+
+- `feat` MetaProfile RuleSet für alle Beispiel-Instanzen mit versionierter Profil-URL hinzugefügt
+- `feat` Therapietyp-Kategorie (kausal/symptomatisch) für Therapieempfehlungen hinzugefügt
+
+### Dokumentationsverbesserungen
+
+- `docs` HPO-Phänotypisierung Dokumentation aktualisiert entsprechend HL7 Phenomics IG Pattern (HDB-755, HDB-737)
+- `docs` Klarstellung: Eine FamilyMemberHistory-Ressource pro Familienmitglied (HDB-750)
+- `docs` Seltene Erkrankungen Definitionen im Modulbeschreibung aktualisiert (HDB-757)
+- `docs` Orpha-Kodierung → ORPHAcode-Kodierung Terminologie korrigiert (HDB-764)
+- `docs` HPO vs Symptom Unterscheidung mit Marfan-Beispiel dokumentiert (HDB-738)
+- `docs` Dokumentationsklarstellungen (HDB-741, HDB-739)
+
+### Fehlerbehebungen
+
+- `fix` Inkorrekte oBDS-Mappings aus Therapieplan-Seite entfernt (HDB-751)
+- `fix` Inkorrekte oBDS-Mappings aus Messbefunde-Profilen entfernt (HDB-751)
+- `fix` Tod-durch-SE Extension durch Standard contributedToDeath Element ersetzt
+- `fix` Körpermaße-Profile hinzugefügt und Validierungsfehler behoben
+- `fix` 21 SUSHI-Kompilierungsfehler behoben und HPO-Profil-Design verbessert
+- `fix` 21 Validierungsfehler mit Terminologie- und Beispielkorrekturen behoben
+- `fix` HPO Assessment-Profil nach HL7 Phenomics IG Pattern refaktoriert
+
+### Validierung und Qualitätsverbesserungen (aus Ballot-Feedback)
 
 - `fix` SNOMED CT-basiertes ValueSet für "Von SE betroffen" erstellt mit Codes 373066001 "Yes", 373067005 "No", 261665006 "Unknown". HL7 v2 Codes für Rückwärtskompatibilität beibehalten.
 - `fix` Kombiniertes Symptom Change Status ValueSet erstellt: MVGenomSeq Codes (newly-added, improved, degraded, no-longer-observed, unchanged) mit SNOMED CT Mapping (385425000 Improved, 231877006 Worse, 385630006 Maintained, 2667000 Absent)

@@ -2,7 +2,7 @@ Instance: mii-exa-seltene-familienanamnese
 InstanceOf: MII_PR_Seltene_Familienanamnese
 Description: "Example Patient Family Anamnesis"
 Usage: #example
-
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese)
 * status = #completed
 * patient = Reference(Patient/example)
 * reasonCode = http://www.orpha.net#666

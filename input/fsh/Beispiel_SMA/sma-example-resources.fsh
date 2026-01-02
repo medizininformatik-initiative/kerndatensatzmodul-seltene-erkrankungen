@@ -17,6 +17,7 @@ InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "SMA Verdacht - Neugeborenenscreening"
 Description: "Verdacht auf SMA beim Neugeborenenscreening"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#unconfirmed
 * category = $condition-category#encounter-diagnosis
@@ -38,6 +39,7 @@ InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "SMA Klinische Diagnose"
 Description: "Klinische Diagnose SMA Typ 1 bei Erstvorstellung"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#encounter-diagnosis
@@ -62,6 +64,7 @@ InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "SMA Genetische Diagnose"
 Description: "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $SCT#782964007 "Genetic disease"
@@ -88,6 +91,7 @@ InstanceOf: MII_PR_Seltene_Familienanamnese
 Usage: #example
 Title: "Familienanamnese - Urgroßmutter mit Muskelerkrankung"
 Description: "Urgroßmutter mit unbekannter Muskelerkrankung"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese)
 * status = #completed
 * patient = Reference(patient-sma-001)
 * date = "2024-07-22"
@@ -280,6 +284,7 @@ InstanceOf: MII_PR_Seltene_ClinicalImpression
 Usage: #example
 Title: "Klinische Beurteilung - Erstvorstellung"
 Description: "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression)
 * status = #completed
 * subject = Reference(patient-sma-001)
 * encounter = Reference(encounter-ambulant-001)
@@ -306,6 +311,7 @@ InstanceOf: MII_PR_Seltene_ClinicalImpression
 Usage: #example
 Title: "Klinische Beurteilung - Nachsorge"
 Description: "Nachsorgeuntersuchung nach Gentherapie"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression)
 * status = #completed
 * subject = Reference(patient-sma-001)
 * encounter = Reference(encounter-nachsorge-001)

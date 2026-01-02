@@ -17,6 +17,7 @@ InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Marfan-Syndrom - Verdacht"
 Description: "Verdacht auf Marfan-Syndrom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#provisional
 * category = $condition-category#encounter-diagnosis
@@ -37,6 +38,7 @@ InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Marfan-Syndrom - Klinische Diagnose"
 Description: "Klinisch bestätigtes Marfan-Syndrom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#encounter-diagnosis
@@ -71,6 +73,7 @@ InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Marfan-Syndrom - Genetische Diagnose"
 Description: "Genetisch bestätigtes Marfan-Syndrom mit FBN1-Mutation"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $SCT#782964007 "Genetic disease"
@@ -117,6 +120,7 @@ InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Katarakt bilateral"
 Description: "Beidseitige Katarakt bei Marfan-Syndrom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis)
 * clinicalStatus = $condition-clinical#resolved
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#encounter-diagnosis
@@ -360,6 +364,7 @@ InstanceOf: MII_PR_Seltene_ClinicalImpression
 Usage: #example
 Title: "Konsultation ZSE bei V.a. Marfan-Syndrom"
 Description: "Konsultation im Zentrum für Seltene Erkrankungen mit kardiologischer Mitbeurteilung bei V.a. Marfan-Syndrom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression)
 * status = #completed
 * subject = Reference(patient-marfan-001)
 * encounter = Reference(encounter-cardiology)

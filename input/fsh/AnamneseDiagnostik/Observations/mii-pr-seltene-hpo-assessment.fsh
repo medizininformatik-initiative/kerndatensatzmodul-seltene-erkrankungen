@@ -109,6 +109,7 @@ InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "HPO Symptom Observation Example"
 Description: "Example of an HPO-based phenotypic observation for intellectual disability."
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment)
 * code = $HPO#HP:0001249 "Intellectual disability"
 * subject = Reference(Patient/example-patient)
 * status = #final
@@ -122,6 +123,7 @@ InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "HPO Assessment - Excluded Phenotype"
 Description: "Example of an explicitly excluded phenotype (arachnodactyly ruled out during Marfan syndrome workup)."
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment)
 * code = $HPO#HP:0001166 "Arachnodactyly"
 * subject = Reference(Patient/example-patient)
 * status = #final
@@ -135,6 +137,7 @@ InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "HPO Assessment - Present with Severity"
 Description: "Example of a phenotype with both status (present) and severity grading. Demonstrates HL7 Phenomics IG component pattern."
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment)
 * code = $HPO#HP:0001638 "Cardiomyopathy"
 * subject = Reference(Patient/example-patient)
 * status = #final
