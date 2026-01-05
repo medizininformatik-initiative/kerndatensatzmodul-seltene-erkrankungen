@@ -3,6 +3,7 @@ InstanceOf: MII_PR_Seltene_TherapieDurchgefuehrt
 Usage: #example
 Title: "Beispiel NARSE Stoffwechseltherapie bei Morbus Pompe"
 Description: "Beispiel einer durchgeführten Enzymersatztherapie bei Morbus Pompe"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt)
 * status = #in-progress
 * code.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp"
 * code.coding.code = #stoffwechseltherapie

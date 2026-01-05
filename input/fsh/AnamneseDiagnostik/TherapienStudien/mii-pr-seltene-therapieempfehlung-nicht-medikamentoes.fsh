@@ -119,6 +119,7 @@ InstanceOf: MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes
 Usage: #example
 Title: "Beispiel Früherkennungsprogramm-Empfehlung"
 Description: "Beispiel einer Empfehlung für regelmäßige Früherkennungsuntersuchungen"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes)
 * status = #draft
 * intent = #proposal
 * priority = #routine
@@ -137,6 +138,7 @@ InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Phenylketonurie - Genetische Diagnose"
 Description: "Genetisch bestätigte Phenylketonurie (PKU)"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $SCT#782964007 "Genetic disease"
@@ -159,6 +161,7 @@ InstanceOf: MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes
 Usage: #example
 Title: "Beispiel Ernährungstherapie-Empfehlung"
 Description: "Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes)
 * status = #active
 * intent = #proposal
 * priority = #routine

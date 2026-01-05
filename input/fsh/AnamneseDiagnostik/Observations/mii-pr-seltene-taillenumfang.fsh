@@ -38,6 +38,7 @@ InstanceOf: MII_PR_Seltene_Taillenumfang
 Usage: #example
 Title: "Taillenumfang Beispiel"
 Description: "Beispiel einer Taillenumfang-Messung bei einem Patienten mit seltener Erkrankung."
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-taillenumfang)
 * status = #final
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs

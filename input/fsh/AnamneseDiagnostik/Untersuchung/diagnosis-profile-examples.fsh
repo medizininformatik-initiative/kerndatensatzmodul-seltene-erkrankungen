@@ -10,6 +10,7 @@ InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Marfan-Syndrom - Klinische Diagnose"
 Description: "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend auf phänotypischen Merkmalen"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#provisional
 * category = $condition-category#encounter-diagnosis
@@ -48,6 +49,7 @@ InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Noonan-Syndrom - Klinische Diagnose"
 Description: "Beispiel einer klinischen Diagnose des Noonan-Syndroms"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#provisional
 * category = $condition-category#encounter-diagnosis
@@ -81,6 +83,7 @@ InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "SMA Typ 1 - Genetisch bestätigte Diagnose"
 Description: "Beispiel einer genetisch bestätigten Diagnose der spinalen Muskelatrophie Typ 1"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $SCT#782964007 "Genetic disease"
@@ -112,6 +115,7 @@ InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Duchenne-Muskeldystrophie - Genetisch bestätigt"
 Description: "Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $SCT#782964007 "Genetic disease"
@@ -140,6 +144,7 @@ InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Hereditäres Mamma- und Ovarialkarzinom-Syndrom"
 Description: "Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * code.coding[icd10-gm] = $ICD10GM#Z80.3 "Bösartige Neubildung der Brustdrüse [Mamma] in der Familienanamnese"
@@ -171,6 +176,7 @@ InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Mukoviszidose - Klinischer Verdacht"
 Description: "Initiale klinische Verdachtsdiagnose Mukoviszidose"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#provisional
 * category = $condition-category#encounter-diagnosis
@@ -197,6 +203,7 @@ InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Mukoviszidose - Genetisch bestätigt"
 Description: "Genetisch bestätigte Mukoviszidose"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * code.coding[icd10-gm] = $ICD10GM#E84.0 "Zystische Fibrose mit Lungenmanifestationen"

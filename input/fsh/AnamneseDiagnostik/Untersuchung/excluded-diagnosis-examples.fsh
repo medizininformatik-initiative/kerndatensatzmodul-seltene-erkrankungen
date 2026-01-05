@@ -11,6 +11,7 @@ InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Marfan-Syndrom - Klinisch ausgeschlossen"
 Description: "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis)
 * clinicalStatus = $condition-clinical#inactive
 * verificationStatus = $condition-ver-status#refuted
 * category = $condition-category#encounter-diagnosis  
@@ -38,6 +39,7 @@ InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Ehlers-Danlos-Syndrom - Ausgeschlossen"
 Description: "Differentialdiagnose EDS ausgeschlossen"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis)
 * clinicalStatus = $condition-clinical#inactive
 * verificationStatus = $condition-ver-status#refuted
 * category = $condition-category#encounter-diagnosis
@@ -64,6 +66,7 @@ InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "SMA - Genetisch ausgeschlossen"
 Description: "Spinale Muskelatrophie genetisch ausgeschlossen"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis)
 * clinicalStatus = $condition-clinical#inactive
 * verificationStatus = $condition-ver-status#refuted
 * category = $SCT#782964007 "Genetic disease"
@@ -88,6 +91,7 @@ InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Duchenne ausgeschlossen - Becker bestätigt"
 Description: "Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muskeldystrophie"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis)
 * clinicalStatus = $condition-clinical#inactive
 * verificationStatus = $condition-ver-status#refuted
 * category = $SCT#782964007 "Genetic disease"
@@ -111,6 +115,7 @@ InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Mukoviszidose - Nach positivem Screening ausgeschlossen"
 Description: "CF nach auffälligem Neugeborenenscreening genetisch ausgeschlossen"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis)
 * clinicalStatus = $condition-clinical#inactive
 * verificationStatus = $condition-ver-status#refuted
 * category = $SCT#782964007 "Genetic disease"
@@ -140,6 +145,7 @@ InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Metabolische Myopathie - Ausgeschlossen"
 Description: "Metabolische Myopathie als Differentialdiagnose ausgeschlossen"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis)
 * clinicalStatus = $condition-clinical#inactive
 * verificationStatus = $condition-ver-status#refuted
 * category = $condition-category#encounter-diagnosis
