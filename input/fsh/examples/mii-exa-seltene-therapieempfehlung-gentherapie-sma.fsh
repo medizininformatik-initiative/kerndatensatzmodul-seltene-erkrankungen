@@ -11,7 +11,7 @@ Description: "Beispiel einer medikamentösen Therapieempfehlung für Gentherapie
 * category[MVGenomSeqTherapieTyp].coding = MII_CS_Seltene_TherapieempfehlungTyp#causal "Kausal"
 * medicationCodeableConcept.coding[+].system = "http://fdasis.nlm.nih.gov"
 * medicationCodeableConcept.coding[=].code = #MLU3LU3EVV
-* medicationCodeableConcept.coding[=].display = "Onasemnogene abeparvovec"
+* medicationCodeableConcept.coding[=].display = "ONASEMNOGENE ABEPARVOVEC"
 * medicationCodeableConcept.text = "Zolgensma"
 * subject = Reference(patient-sma-001)
 * reasonReference = Reference(Condition/sma-diagnosis)
@@ -27,7 +27,7 @@ Description: "Beispiel einer medikamentösen Therapieempfehlung für Losartan zu
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung)
 * status = #active
 * intent = #proposal
-* category[MVGenomSeqTherapieStrategie].coding = MII_CS_Seltene_TherapieempfehlungStrategie#prevention-medication "Prophylaktische Medikation"
+* category[MVGenomSeqTherapieStrategie].coding = MII_CS_Seltene_TherapieempfehlungStrategie#prevention-medication "Präventive Medikation"
 * category[MVGenomSeqTherapieTyp].coding = MII_CS_Seltene_TherapieempfehlungTyp#symptomatic "Symptomatisch"
 * medicationCodeableConcept.coding[+].system = $ATC_DE
 * medicationCodeableConcept.coding[=].code = #C09CA01

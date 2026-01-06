@@ -11,9 +11,9 @@ Description: "Beispiel einer nicht-medikamentösen Therapieempfehlung für Aorte
 * category[MVGenomSeqTherapieStrategie].coding = MII_CS_Seltene_TherapieempfehlungStrategie#prophylactic "Prophylaxe"
 * category[MVGenomSeqTherapieTyp].coding = MII_CS_Seltene_TherapieempfehlungTyp#symptomatic "Symptomatisch"
 * code.coding[ops].system = "http://fhir.de/CodeSystem/bfarm/ops"
-* code.coding[ops].code = #5-354.09
-* code.coding[ops].display = "Andere Operationen an Herzklappen: Aortenklappe"
-* code.coding[snomed] = $SCT#232021009 "Aortic root replacement"
+* code.coding[ops].code = #5-354.0a
+* code.coding[ops].display = "Andere Operationen an Herzklappen: Aortenklappe: Rekonstruktion der Aortenwurzel mit Implantation einer Gefäßprothese nach David"
+* code.coding[snomed] = $SCT#428179006 "Replacement of aortic root"
 * code.text = "Composite-Graft-Implantation (David-OP)"
 * subject = Reference(patient-marfan-001)
 * occurrenceDateTime = "2025-03-15"
@@ -34,7 +34,7 @@ Description: "Beispiel einer nicht-medikamentösen Therapieempfehlung für Physi
 * priority = #routine
 * category[MVGenomSeqTherapieStrategie].coding = MII_CS_Seltene_TherapieempfehlungStrategie#other "Sonstige"
 * category[MVGenomSeqTherapieTyp].coding = MII_CS_Seltene_TherapieempfehlungTyp#symptomatic "Symptomatisch"
-* code.coding[snomed] = $SCT#91251008 "Physical therapy"
+* code.coding[snomed] = $SCT#91251008 "Physical therapy procedure"
 * code.text = "Physiotherapie zur Erhaltung der motorischen Funktionen"
 * subject = Reference(patient-sma-001)
 * occurrenceTiming.repeat.frequency = 2
@@ -57,9 +57,9 @@ Description: "Beispiel einer nicht-medikamentösen Therapieempfehlung für genet
 * priority = #routine
 * category[MVGenomSeqTherapieStrategie].coding = MII_CS_Seltene_TherapieempfehlungStrategie#other "Sonstige"
 * category[MVGenomSeqTherapieTyp].coding = MII_CS_Seltene_TherapieempfehlungTyp#symptomatic "Symptomatisch"
-* code.coding[snomed] = $SCT#409063005 "Genetic counseling"
+* code.coding[snomed] = $SCT#409063005 "Counseling"
 * code.text = "Humangenetische Beratung"
 * subject = Reference(Patient/example)
 * authoredOn = "2024-11-01"
-* reasonCode.coding = $SCT#134436002 "Family history of genetic disorder"
+* reasonCode.coding = $SCT#429962007 "Family history of hereditary disease"
 * note.text = "Beratung bezüglich Vererbungsmodus und Wiederholungsrisiko"
