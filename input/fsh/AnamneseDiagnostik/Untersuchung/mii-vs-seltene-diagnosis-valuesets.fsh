@@ -8,7 +8,7 @@ Description: "Value set for categorizing clinical diagnoses of rare diseases"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * $SCT#439401001 "Diagnosis"
 * $SCT#363358000 "Clinical finding"
 * $SCT#64572001 "Disease"
@@ -26,7 +26,7 @@ Description: "Value set containing HPO terms for age of onset of diseases"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-age-of-onset"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * include codes from system http://human-phenotype-ontology.org where concept is-a #HP:0003674 "Onset"
 // Common age of onset codes
 * http://human-phenotype-ontology.org#HP:0003577 "Congenital onset"
@@ -49,7 +49,7 @@ Description: "Value set containing HPO terms for modes of inheritance"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-inheritance-pattern"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * include codes from system http://human-phenotype-ontology.org where concept is-a #HP:0000005 "Mode of inheritance"
 // Common inheritance patterns
 * http://human-phenotype-ontology.org#HP:0000006 "Autosomal dominant inheritance"
@@ -74,7 +74,7 @@ Description: "Value set for types of genetic basis of rare diseases"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-genetic-basis"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * $SCT#409709004 "Chromosomal disorder"
 * $SCT#264530000 "Single gene disorder"
 * $SCT#16402000 "Mitochondrial disorder"
@@ -93,7 +93,7 @@ Description: "Value set for qualitative descriptions of genetic penetrance"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-penetrance"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * http://human-phenotype-ontology.org#HP:0003829 "Incomplete penetrance"
 * http://human-phenotype-ontology.org#HP:0003828 "Variable penetrance"
 * http://human-phenotype-ontology.org#HP:0025169 "Complete penetrance"

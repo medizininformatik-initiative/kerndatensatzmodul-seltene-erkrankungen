@@ -6,7 +6,7 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 // Core elements
 * id MS

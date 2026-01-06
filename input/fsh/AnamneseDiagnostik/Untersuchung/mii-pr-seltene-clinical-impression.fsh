@@ -6,7 +6,7 @@ Description: "Profile for clinical impressions in the context of rare diseases. 
 
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 // Core elements
 * id MS

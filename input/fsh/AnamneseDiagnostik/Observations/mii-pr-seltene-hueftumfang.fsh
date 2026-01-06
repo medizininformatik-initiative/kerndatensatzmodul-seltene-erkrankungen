@@ -6,7 +6,7 @@ Description: "Profil zur Dokumentation des Hüftumfangs (maximale Gesäßprotube
 
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * status MS
 

@@ -6,7 +6,7 @@ Context: Condition
 
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * value[x] only Reference(Observation or Condition)
 * value[x] MS

@@ -8,7 +8,7 @@ Description: "Extension to capture the age of onset of a rare disease using stru
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-age-of-onset"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * ^context[+].type = #element
 * ^context[=].expression = "Condition"
 * value[x] only CodeableConcept
@@ -24,7 +24,7 @@ Description: "Extension to capture the mode of inheritance of a rare disease"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-inheritance-pattern"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * ^context[+].type = #element
 * ^context[=].expression = "Condition"
 * value[x] only CodeableConcept
@@ -40,7 +40,7 @@ Description: "Extension to describe the genetic basis of a rare disease"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-genetic-basis"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * ^context[+].type = #element
 * ^context[=].expression = "Condition"
 * value[x] only CodeableConcept
@@ -56,7 +56,7 @@ Description: "Extension to capture the penetrance of genetic variants associated
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 * ^context[+].type = #element
 * ^context[=].expression = "Condition"
 * value[x] only CodeableConcept or Quantity

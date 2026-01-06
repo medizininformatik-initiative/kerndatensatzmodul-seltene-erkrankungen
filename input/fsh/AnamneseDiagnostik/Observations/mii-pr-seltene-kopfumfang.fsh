@@ -6,7 +6,7 @@ Description: "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines
 
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * status MS
 

@@ -6,7 +6,7 @@ Description: "Profil zur Dokumentation des Taillenumfangs (Bauchumfang auf Nabel
 
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * status MS
 

@@ -6,7 +6,7 @@ Context: Condition.onset[x]
 
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * value[x] only Age
 * value[x] MS

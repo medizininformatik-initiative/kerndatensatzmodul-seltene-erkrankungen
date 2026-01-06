@@ -7,7 +7,7 @@ Description: "Profile for genetically confirmed diagnosis of rare diseases with 
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 // Inherit all constraints from parent Diagnose profile
 * clinicalStatus MS

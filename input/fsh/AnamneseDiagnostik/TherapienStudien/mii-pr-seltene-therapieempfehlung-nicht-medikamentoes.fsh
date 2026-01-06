@@ -8,7 +8,7 @@ Title: "MII PR SE Therapieempfehlung Nicht-Medikamentös"
 Description: "Therapieempfehlung für nicht-medikamentöse Interventionen bei seltenen Erkrankungen (z.B. Ernährungstherapie, Gentherapie, Prophylaxe, Früherkennung)"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 // Core elements
 * status MS

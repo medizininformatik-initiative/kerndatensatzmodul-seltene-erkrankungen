@@ -5,7 +5,7 @@ Title:       "MII Profile SE HPO Assessment"
 Description: "Profile for HPO-based phenotypic observations in the context of rare diseases. This profile uses the Human Phenotype Ontology (HPO) to describe clinical symptoms and phenotypic abnormalities."
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 * code MS
 * code from mii-vs-seltene-hpo-phenotypic-observation-codes (extensible)
@@ -80,14 +80,14 @@ ValueSet: HPOPhenotypicObservationCodes
 Id: mii-vs-seltene-hpo-phenotypic-observation-codes
 Title: "HPO Phenotypic Observation Codes"
 Description: "Human Phenotype Ontology codes for phenotypic observations"
-* ^status = #draft
+* ^status = #active
 * codes from system $HPO
 
 ValueSet: HPOPresenceStatus
 Id: mii-vs-seltene-hpo-presence-status
 Title: "HPO Phenotype Presence Status"
 Description: "LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern."
-* ^status = #draft
+* ^status = #active
 * ^copyright = "This value set includes content from LOINC which is copyrighted by Regenstrief Institute, Inc."
 * $LNC#LA9633-4 "Present"
 * $LNC#LA9634-2 "Absent"
@@ -96,7 +96,7 @@ ValueSet: HPOSeverity
 Id: mii-vs-seltene-hpo-severity
 Title: "HPO Severity"
 Description: "HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Phenomics IG component pattern."
-* ^status = #draft
+* ^status = #active
 * ^copyright = "This value set includes content from Human Phenotype Ontology (HPO)."
 * $HPO#HP:0012828 "Severe"
 * $HPO#HP:0012825 "Mild"

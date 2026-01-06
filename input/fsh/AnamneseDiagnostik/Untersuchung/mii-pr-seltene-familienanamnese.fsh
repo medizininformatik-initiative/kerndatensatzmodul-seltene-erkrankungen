@@ -6,7 +6,7 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #draft
+* ^status = #active
 
 // Add SE-specific extension to the inherited MolGen profile
 * extension contains VonSEBetroffen named vonSEBetroffen 1..1 MS
