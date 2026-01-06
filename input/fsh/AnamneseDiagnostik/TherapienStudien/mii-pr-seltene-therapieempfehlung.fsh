@@ -7,7 +7,6 @@ Description: "Therapieempfehlung für eine medikamentöse Systemische Therapie"
 * insert Publisher
 * ^status = #active
 
-// TODO Constrain status to draft?
 * status ^short = "active | on-hold | cancelled | completed | entered-in-error | stopped | draft | unknown"
 * status ^definition = "Status der Umsetzung der Therapieempfehlung"
 * status ^comment = "
@@ -15,7 +14,6 @@ Description: "Therapieempfehlung für eine medikamentöse Systemische Therapie"
     active: In Umsetzung, 
     completed: Abgeschlossen oder abgebrochen (Patient verstorben)"
 
-// TODO Constrain intent to proposal and option? (Option is needed for RequestGroup)
 * intent 1..1 MS
 * intent ^short = "proposal | option"
 * intent ^definition = "Da nur Empfehlungen abgegeben werden, wird hier typischerweise 'proposal' stehen. Es sei denn,
