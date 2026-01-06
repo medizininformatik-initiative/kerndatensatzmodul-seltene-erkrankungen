@@ -1,0 +1,92 @@
+{
+  "resourceType": "Condition",
+  "id": "condition-marfan-genetic",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2026.0.0"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "782964007",
+          "system": "http://snomed.info/sct",
+          "display": "Genetic disease"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://omim.org",
+        "code": "154700",
+        "display": "Marfan syndrome",
+        "version": "2024"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "19346006",
+        "display": "Marfan syndrome"
+      },
+      {
+        "system": "http://www.orpha.net",
+        "code": "558",
+        "display": "Marfan syndrome"
+      }
+    ],
+    "text": "Marfan-Syndrom - genetisch bestätigt"
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "confirmed",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+      "valueDateTime": "2024-12-20"
+    }
+  ],
+  "recordedDate": "2024-12-20",
+  "evidence": [
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "106221001",
+              "system": "http://snomed.info/sct",
+              "display": "Genetic finding"
+            }
+          ]
+        }
+      ],
+      "detail": [
+        {
+          "reference": "Observation/variant-fbn1-001"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "FBN1-Mutation c.3217G>A (p.Gly1073Arg) nachgewiesen, krankheitsursächlich. Genetische Diagnose existiert parallel zur klinischen Diagnose."
+    }
+  ]
+}

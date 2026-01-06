@@ -1,0 +1,2013 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-lm-seltene",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene",
+  "version": "2026.0.0",
+  "name": "MII_LM_SE",
+  "title": "MII LM SE",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "MII LogicalModel Modul Seltene Erkraknungen",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "FHIR",
+      "name": "SE LogicalModel FHIR Mapping"
+    },
+    {
+      "identity": "NARSE",
+      "name": "SE LogicalModel NARSE Mapping"
+    },
+    {
+      "identity": "ERDRICDS",
+      "name": "SE LogicalModel ERDRI CDS Mapping"
+    },
+    {
+      "identity": "ModellvorhabenGenomsequenzierung",
+      "name": "SE LogicalModel ModellvorhabenGenomsequenzierung Mapping"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Seltene",
+        "path": "Seltene",
+        "short": "MII LM SE",
+        "definition": "MII LogicalModel Modul Seltene Erkraknungen"
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik",
+        "path": "Seltene.AnamneseUndDiagnostik",
+        "short": "Diagnose",
+        "definition": "Diagnose",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition | Observation | ClinicalImpression"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.Untersuchungsdatum",
+        "path": "Seltene.AnamneseUndDiagnostik.Untersuchungsdatum",
+        "short": "Untersuchungsdatum",
+        "definition": "Datum der durchgeführten Untersuchung eines SE-Patienten.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ClinicalImpression.effectiveDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht direkt vorhanden; gibt nur Daten für vergangene Diagnostik, Proben, etc."
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.Untersuchungsanlass",
+        "path": "Seltene.AnamneseUndDiagnostik.Untersuchungsanlass",
+        "short": "Untersuchungsanlass",
+        "definition": "Grund fuer den Besuch des SE-Patienten.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ClinicalImpression.reasonCode"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung",
+        "path": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung",
+        "short": "Phaenotypisierung",
+        "definition": "Phaenotypisierung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://purl.obolibrary.org/obo/hp.owl')) | Condition.where(code.coding.exists(system='http://purl.obolibrary.org/obo/hp.owl')) | Observation (SNOMED CT, ICD-10, LOINC)"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "path": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "short": "HPO-Term des Symptoms",
+        "definition": "Phaenotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC).",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code | Condition.code"
+          },
+          {
+            "identity": "NARSE",
+            "map": "AnamneseUndDiagnostik.Phänotyp:HPOTerm"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nur beim nicht diagnostiziertem Fall unter Diagnose.NichtDiagnostizierterFall"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "diagnosisRd.phenotypes[].code+text oder followUpRd.phenotypes[].code (Angabe mit code, text, system und display) "
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded",
+        "path": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded",
+        "short": "HPO-Term ausgeschlossen",
+        "definition": "Gibt an, ob das HPO-Merkmal explizit ausgeschlossen wurde (negated finding). Abgeleitet aus valueCodeableConcept: LOINC LA9634-2 'Absent' = true, LA9633-4 'Present' = false. Folgt HL7 Phenomics IG Muster.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept (true wenn LOINC#LA9634-2 'Absent', false wenn LA9633-4 'Present')"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
+        "path": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
+        "short": "Status HPO-Term",
+        "definition": "Status oder Schweregrad des Phaenotyps (Present/Absent/Severity).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept (LOINC Present/Absent oder HPO Severity codes) | Condition.verificationStatus"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOVersion",
+        "path": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOVersion",
+        "short": "Version HPO-Term",
+        "definition": "Kennzeichnung der genutzten Version des ausgewaehlten HPO-Terms.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code.coding.version | Condition.code.coding.version"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Katalog mit vorhanden unter AnamneseUndDiagnostik.Phänotyp:HPOTerm"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Angabe unter system bei phenotypes[].code"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom",
+        "path": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom",
+        "short": "Zeitraum des Symptom",
+        "definition": "Zeitraum des Symptom",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.onset[x] | Observation.effective[x]"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+        "path": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+        "short": "Startdatum des Symptoms",
+        "definition": "Startdatum und bei Bedarf Periode der ersten Symptome/Anzeichen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.onsetDateTime | Condition.onsetPeriod | Observation.effectivePeriod"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Krankheitsverlauf.AlterBeiKrankheitsbeginn unter Datum(TT/MM/JJJJ) "
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "diagnosisRd.symptomOnsetDate (Monat und Jahr des Beginns des ersten aufgetretenen HPO-kodierten Symptoms) "
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase",
+        "path": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase",
+        "short": "Lebensphase Symptom",
+        "definition": "Lebensphase, in der das Symptom aufgetreten ist.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-onset-age').valueCodeableConcept"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Ähnlich zu AlterBeiErstenSymptomen:AuswahlDerAltersangabe; allerdings anderes ValueSet"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Krankheitsverlauf.AlterBeiKrankheitsbeginn; aber anderes ValueSet"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom",
+        "path": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom",
+        "short": "Alter Symptom",
+        "definition": "Alter beim Auftreten der ersten Symptome/Anzeichen.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.onsetAge | Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-onset-age').valueAge"
+          },
+          {
+            "identity": "NARSE",
+            "map": "AnamneseUndDiagnostik.AlterBeiErstenSymptomen:Alter "
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom",
+        "path": "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom",
+        "short": "Verlauf Symptom",
+        "definition": "Aenderung des Verlaufs des Symptoms seit der vorherigen Untersuchung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-phenotypic-pattern').valueCodeableConcept | Observation.interpretation"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "followUpRd.phenotypes[].change (anderes ValueSet: newlyAdded, improved, degraded, noLongerObserved,unchanged)"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose",
+        "path": "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose",
+        "short": "Zeitraum der klinischen SE-Diagnose",
+        "definition": "Zeitraum der klinischen SE-Diagnose",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.where(category.coding.exists(code='clinical'))"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.ZeitpunktKlinischeDia",
+        "path": "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.ZeitpunktKlinischeDia",
+        "short": "Zeitpunkt klinische SE-Diagnose",
+        "definition": "Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der klinsichen SE-Diagnose.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-onset-age').valueCodeableConcept"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Ähnlich zu AnamneseUndDiagnostikAlterBeiDiagnose:AuswahlDerAltersangabe; allerdings anderes ValueSet"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Ähnlich zu Krankheitsverlauf.AlterBeiDiagnose; allerdings anderes ValueSet"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+        "path": "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+        "short": "Feststellungsdatum klinische SE-Diagnose",
+        "definition": "Datum, an dem die klinische SE-Diagnose festgestellt wurde.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate').valueDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Krankheitsverlauf.AlterBeiDiagnose unter Datum(TT/MM/JJJJ)"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht direkt bei RareDiseasesCase; jedoch allgemein: mainDiagnosis.date oder additionalDiagnoses[].date (Datum der Hauptdiagnose im ISO 8601 Format JJJJ-MM-TT. Wenn Tag unbekannt -> 15. des Monats)"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia",
+        "path": "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia",
+        "short": "Alter bei klinischer SE-Diagnose",
+        "definition": "Alter, in dem die klinische SE-Diagnose gestellt wurde.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.onsetAge"
+          },
+          {
+            "identity": "NARSE",
+            "map": "AnamneseUndDiagnostik.AlterBeiDiagnose:Alter"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose",
+        "path": "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose",
+        "short": "Zeitraum der genetischen SE-Diagnose",
+        "definition": "Zeitraum der genetischen SE-Diagnose",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.where(category.coding.exists(code='genetic'))"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.ZeitpunktGenDia",
+        "path": "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.ZeitpunktGenDia",
+        "short": "Zeitpunkt genetische SE-Diagnose",
+        "definition": "Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der genetischen SE-Diagnose.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-onset-age').valueCodeableConcept"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Ähnlich zu AnamneseUndDiagnostikAlterBeiDiagnose:AuswahlDerAltersangabe; allerdings anderes ValueSet und nicht auf genetische Diagnose beschränkt"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Ähnlich zu Krankheitsverlauf.AlterBeiDiagnose; allerdings anderes ValueSet und nicht auf genetische Diagnose beschränkt"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+        "path": "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+        "short": "Feststellungsdatum genetische SE-Diagnose",
+        "definition": "Datum, an dem die genetische SE-Diagnose festgestellt wurde.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate').valueDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Krankheitsverlauf.AlterBeiDiagnose unter Datum(TT/MM/JJJJ), aber nicht auf genetische Diagnose beschränkt"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht direkt bei RareDiseasesCase; jedoch allgemein: mainDiagnosis.date oder additionalDiagnoses[].date (Datum der Hauptdiagnose im ISO 8601 Format JJJJ-MM-TT. Wenn Tag unbekannt -> 15. des Monats), aber nicht auf genetische Diagnose beschränkt"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
+        "path": "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
+        "short": "Alter bei genetischer SE-Diagnose",
+        "definition": "Alter, in dem die genetische SE-Diagnose gestellt wurde.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.onsetAge"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Kann zu AnamneseUndDiagnostik.AlterBeiDiagnose:Alter zugeordnet werden; im NARSE jedoch nicht auf genetische Diagnose beschränkt"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.GenDiaFehlendePenetranz",
+        "path": "Seltene.AnamneseUndDiagnostik.GenDiaFehlendePenetranz",
+        "short": "Genetische Diagnose mit fehlender Penetranz",
+        "definition": "Gibt an, ob bei einer genetischen Diagnose die Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) fehlt",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance').valueCodeableConcept"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.AnamneseUndDiagnostik.MethodeDiagnosestellung",
+        "path": "Seltene.AnamneseUndDiagnostik.MethodeDiagnosestellung",
+        "short": "Methode der Diagnosestellung",
+        "definition": "Gibt an, welche Methode zur Diagnosestellung verwendet wurde.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.method"
+          },
+          {
+            "identity": "NARSE",
+            "map": "AnamneseUndDiagnostik.Diagnosestellung"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung",
+        "path": "Seltene.KoerperlicheUntersuchung",
+        "short": "Körperliche Untersuchung",
+        "definition": "Körperliche Untersuchung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Koerpergewicht",
+        "path": "Seltene.KoerperlicheUntersuchung.Koerpergewicht",
+        "short": "Körpergewicht",
+        "definition": "Körpergewicht",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='29463-7')) | Profile: https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/Koerpergewicht"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Koerpergewicht.Koerpergewicht",
+        "path": "Seltene.KoerperlicheUntersuchung.Koerpergewicht.Koerpergewicht",
+        "short": "Körpergewicht in kg",
+        "definition": "Körpergewicht des SE-Patienten in kg (aus MII ICU Modul).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity.value"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Koerpergewicht.DatumKoerpergewicht",
+        "path": "Seltene.KoerperlicheUntersuchung.Koerpergewicht.DatumKoerpergewicht",
+        "short": "Datum Körpergewicht",
+        "definition": "Datum der Körpergewichtsmessung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Koerpergroesse",
+        "path": "Seltene.KoerperlicheUntersuchung.Koerpergroesse",
+        "short": "Körpergröße",
+        "definition": "Körpergröße",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='8302-2')) | Profile: https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/Koerpergroesse"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Koerpergroesse.Koerpergroesse",
+        "path": "Seltene.KoerperlicheUntersuchung.Koerpergroesse.Koerpergroesse",
+        "short": "Körpergröße in cm",
+        "definition": "Körpergröße des SE-Patienten in cm (aus MII ICU Modul).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity.value"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Koerpergroesse.DatumKoerpergroesse",
+        "path": "Seltene.KoerperlicheUntersuchung.Koerpergroesse.DatumKoerpergroesse",
+        "short": "Datum Körpergröße",
+        "definition": "Datum der Körpergrößenmessung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.BMI",
+        "path": "Seltene.KoerperlicheUntersuchung.BMI",
+        "short": "BMI",
+        "definition": "BMI",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='39156-5'))"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.BMI.BMI",
+        "path": "Seltene.KoerperlicheUntersuchung.BMI.BMI",
+        "short": "BMI SE-Patient",
+        "definition": "BMI des SE-Patienten.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity.value"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.BMI.DatumBMI",
+        "path": "Seltene.KoerperlicheUntersuchung.BMI.DatumBMI",
+        "short": "Datum des BMI",
+        "definition": "Datum, an dem der BMI (Body Mass Index) berechnet wurde.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Kopfumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Kopfumfang",
+        "short": "Kopfumfang",
+        "definition": "Kopfumfang",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='9843-4')) | Profile: http://fhir.de/StructureDefinition/observation-de-vitalsign-kopfumfang"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Kopfumfang.Kopfumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Kopfumfang.Kopfumfang",
+        "short": "Kopfumfang in cm",
+        "definition": "Kopfumfang des SE-Patienten in cm.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity.value"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Kopfumfang.DatumKopfumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Kopfumfang.DatumKopfumfang",
+        "short": "Datum Kopfumfang",
+        "definition": "Datum der Kopfumfangsmessung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Bauchumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Bauchumfang",
+        "short": "Bauchumfang",
+        "definition": "Bauchumfang",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='8280-0'))"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Bauchumfang.Bauchumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Bauchumfang.Bauchumfang",
+        "short": "Bauchumfang in cm",
+        "definition": "Bauchumfang des SE-Patienten in cm.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity.value"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Bauchumfang.DatumBauchumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Bauchumfang.DatumBauchumfang",
+        "short": "Datum Bauchumfang",
+        "definition": "Datum der Bauchumfangsmessung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Hueftumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Hueftumfang",
+        "short": "Hüftumfang",
+        "definition": "Hüftumfang",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='62409-8'))"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Hueftumfang.Hueftumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Hueftumfang.Hueftumfang",
+        "short": "Hüftumfang in cm",
+        "definition": "Hüftumfang des SE-Patienten in cm.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity.value"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Hueftumfang.DatumHueftumfang",
+        "path": "Seltene.KoerperlicheUntersuchung.Hueftumfang.DatumHueftumfang",
+        "short": "Datum Hüftumfang",
+        "definition": "Datum der Hüftumfangsmessung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.KoerperlicheUntersuchung.Blutgruppe",
+        "path": "Seltene.KoerperlicheUntersuchung.Blutgruppe",
+        "short": "Blutgruppe",
+        "definition": "Blutgruppe des SE-Patienten (AB0 und Rhesusfaktor).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='882-1')).valueCodeableConcept"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.PersoenlicheInfosIndexpatient",
+        "path": "Seltene.PersoenlicheInfosIndexpatient",
+        "short": "Persoenliche Informationen des Indexpatienten",
+        "definition": "Persoenliche Informationen des Indexpatienten",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Patient"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.PersoenlicheInfosIndexpatient.Tod",
+        "path": "Seltene.PersoenlicheInfosIndexpatient.Tod",
+        "short": "Tod",
+        "definition": "Tod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Patient.deceased[x]"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.PersoenlicheInfosIndexpatient.Tod.Sterbedatum",
+        "path": "Seltene.PersoenlicheInfosIndexpatient.Tod.Sterbedatum",
+        "short": "Sterbedatum",
+        "definition": "Sterbedatum des Indexpatienten.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Patient.deceasedDateTime"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht direkt vorhanden, wird im NARSE nur durch PersönlicherUndFamiliärerHintergrund.Sterbealter abgebildet."
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Patientenstatus.Todeszeitpunkt"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "followUpRd.deathDate (Sterbemonat und Sterbejahr, Datum"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.PersoenlicheInfosIndexpatient.Tod.AnSEVerstorben",
+        "path": "Seltene.PersoenlicheInfosIndexpatient.Tod.AnSEVerstorben",
+        "short": "An der SE verstorben",
+        "definition": "Angabe, ob der Indexpatient an der SE verstorben ist.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate')"
+          },
+          {
+            "identity": "NARSE",
+            "map": "PersönlicherUndFamiliärerHintergrund.AnSeVerstorben "
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.PersoenlicheInfosIndexpatient.Tod.AndereTodesursache",
+        "path": "Seltene.PersoenlicheInfosIndexpatient.Tod.AndereTodesursache",
+        "short": "Todesursache",
+        "definition": "Kodierung der Todesursache soweit bekannt (ICD-10-GM, ORPHAcodes).",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.where(category.coding.exists(code='cause-of-death')).code"
+          },
+          {
+            "identity": "NARSE",
+            "map": "PersönlicherUndFamiliärerHintergrund.AndereTodesursache "
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.Familienanamnese",
+        "path": "Seltene.Familienanamnese",
+        "short": "Familienanamnese",
+        "definition": "Familienanamnese",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory"
+          },
+          {
+            "identity": "NARSE",
+            "map": "PersönlicherUndFamiliärerHintergrund"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.Familienanamnese.Verwandtschaftsverhaeltnis",
+        "path": "Seltene.Familienanamnese.Verwandtschaftsverhaeltnis",
+        "short": "Verwandtschaftsverhaeltnis",
+        "definition": "Biologisches Verwandtschaftsverhaeltnis des Familienmitglieds zum Indexpatienten.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory.relationship"
+          },
+          {
+            "identity": "NARSE",
+            "map": "PersönlicherUndFamiliärerHintergrund.BetroffeneFamilienangehörige:Verwandtschaftsbeziehung"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.Familienanamnese.Geschlecht",
+        "path": "Seltene.Familienanamnese.Geschlecht",
+        "short": "Geschlecht",
+        "definition": "Geschlecht des Familienmitglieds.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory.sex"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.Familienanamnese.GleicheSE",
+        "path": "Seltene.Familienanamnese.GleicheSE",
+        "short": "Gleiche SE",
+        "definition": "Gibt an, ob das Familienmitglied an der gleichen SE leidet wie der Indexpatient.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory.condition.code"
+          },
+          {
+            "identity": "NARSE",
+            "map": "PersönlicherUndFamiliärerHintergrund.BetroffeneFamilienangehörige:SelteneErkrankung"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.Familienanamnese.AndereSE",
+        "path": "Seltene.Familienanamnese.AndereSE",
+        "short": "Andere SE",
+        "definition": "Gibt an, ob das Familienmitglied an einer anderen SE leidet als der Indexpatient.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory.condition.code"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.Familienanamnese.Penetranz",
+        "path": "Seltene.Familienanamnese.Penetranz",
+        "short": "Penetranz",
+        "definition": "Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) die genetische Diagnose vorliegt.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance').valueCodeableConcept"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.Familienanamnese.FamilienmitgliedVerstorben",
+        "path": "Seltene.Familienanamnese.FamilienmitgliedVerstorben",
+        "short": "Familienmitglied verstorben",
+        "definition": "Gibt an, ob das Familienmitglied verstorben ist.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory.deceasedBoolean"
+          },
+          {
+            "identity": "NARSE",
+            "map": "PersönlicherUndFamiliärerHintergrund.BetroffeneFamilienangehörigeVerstorben?"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.TherapieForschung",
+        "path": "Seltene.TherapieForschung",
+        "short": "Therapie und Forschung",
+        "definition": "Therapie und Forschung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan | MedicationRequest | ResearchStudy"
+          },
+          {
+            "identity": "NARSE",
+            "map": "AnamneseUndDiagnostik"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.TherapieForschung.OffLabel",
+        "path": "Seltene.TherapieForschung.OffLabel",
+        "short": "Off-Label-Gabe",
+        "definition": "Off-Label-Gabe",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "MedicationRequest.extension"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.TherapieForschung.OffLabel.OffLabelGabe",
+        "path": "Seltene.TherapieForschung.OffLabel.OffLabelGabe",
+        "short": "Off-Label-Gabe",
+        "definition": "Gibt an, ob eine Off-Label-Gabe vorliegt.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "MedicationRequest.extension.where(url='http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal').valueBoolean"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht identisch, aber unter recommendedSystemicTherapies.type (offLabel) möglich"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.TherapieForschung.OffLabel.OffLabelMedikament",
+        "path": "Seltene.TherapieForschung.OffLabel.OffLabelMedikament",
+        "short": "Off-Label-Medikament",
+        "definition": "Gibt an, welches Medikament Off-Label gegeben wurde.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "MedicationRequest.medicationCodeableConcept"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht identisch, aber unter recommendedSystemicTherapies.substances[].code/.version möglich"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.TherapieForschung.Studie",
+        "path": "Seltene.TherapieForschung.Studie",
+        "short": "Studie",
+        "definition": "Studie",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ResearchStudy | ServiceRequest.where(code.coding.exists(code='study-enrollment'))"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.TherapieForschung.Studie.StudienID",
+        "path": "Seltene.TherapieForschung.Studie.StudienID",
+        "short": "Studien-ID",
+        "definition": "Eindeutige Identifikation der Studie, an der der SE-Patient teilgenommen hat.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ResearchStudy.identifier"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nur Empfehlung, nicht tatsächliche Studie recommendedStudies.identifier und recommendedStudies.id"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.TherapieForschung.Studie.StudienStatus",
+        "path": "Seltene.TherapieForschung.Studie.StudienStatus",
+        "short": "Studienstatus",
+        "definition": "Aktueller Status der Studie, an der der SE-Patient teilgenommen hat (Abgeschlossen, Fortlaufend).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ResearchStudy.status"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "recommendedStudies.name"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.TherapieForschung.Studie.Studienzeitraum",
+        "path": "Seltene.TherapieForschung.Studie.Studienzeitraum",
+        "short": "Studienzeitraum",
+        "definition": "Zeitraum, in dem der SE-Patient an der Studie teilgenommen hat.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/organization-period"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ResearchStudy.period"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.TherapieForschung.Therapie",
+        "path": "Seltene.TherapieForschung.Therapie",
+        "short": "Therapie",
+        "definition": "Therapie",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.TherapieForschung.Therapie.Therapieempfehlung",
+        "path": "Seltene.TherapieForschung.Therapie.Therapieempfehlung",
+        "short": "Eine Therapieempfehlung beschreibt eine spezifische Maßnahme oder Strategie. Sie kann eigenständig vorliegen oder referenziert einem Therapieplan zugeordnet werden. Art der Therapieempfehlung",
+        "definition": "Gibt an, welche Therapieempfehlung vorliegt.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "MedicationRequest | ServiceRequest"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "Nicht identisch RareDiseasesPlan.recommendedTherapies.strategy (Anderes ValueSet: systemicMedication, targetedMedication, preventionMedication, geneTherapy, prophylactic, earlyDetection, combination, nutrition, other); Angabe unter recommendedTherapies.strategyOther möglich"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.TherapieForschung.Therapie.DurchgefuehrteTherapie",
+        "path": "Seltene.TherapieForschung.Therapie.DurchgefuehrteTherapie",
+        "short": "Durchgefuehrte Therapie",
+        "definition": "Tatsaechlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention).",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure | MedicationStatement"
+          },
+          {
+            "identity": "NARSE",
+            "map": "AnamneseUndDiagnostik.Therapiestatus"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "recommendedSystemicTherapies.therapeuticStrategy (Anderes ValueSet)"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.TherapieForschung.Therapie.StartdatumTherapie",
+        "path": "Seltene.TherapieForschung.Therapie.StartdatumTherapie",
+        "short": "Startdatum Therapie",
+        "definition": "Datum, an dem die Therapie begonnen hat.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan.period.start"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "therapies.therapyStartDate (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase (Startdatum der fallrelevante,systemische Vortherapie))"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.TherapieForschung.Therapie.EnddatumTherapie",
+        "path": "Seltene.TherapieForschung.Therapie.EnddatumTherapie",
+        "short": "Enddatum Therapie",
+        "definition": "Datum, an dem die Therapie beendet wurde.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan.period.end"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "therapies.therapyEndDate (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase (Enddatum der fallrelevante,systemische Vortherapie))"
+          }
+        ]
+      },
+      {
+        "id": "Seltene.TherapieForschung.Therapie.GrundEndeTherapie",
+        "path": "Seltene.TherapieForschung.Therapie.GrundEndeTherapie",
+        "short": "Grund Ende Therapie",
+        "definition": "Gibt an, warum die Therapie beendet wurde (z.B. Nebenwirkungen, keine Wirkung).",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "CarePlan.activity.outcomeCodeableConcept"
+          },
+          {
+            "identity": "NARSE",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "therapies.terminationReasonOBDS (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase; ValueSet: E = reguläres Ende; R = reguläres Ende mit Dosisreduktion; W = reguläres Ende mit Substanzwechsel; A = Abbruch wegen Nebenwirkungen; P = Abbruch wegen Progress; S = Abbruch aus sonstigen Gründen; V= Patient verweigert weitere Therapie ;T= Patient verstorben; U = unbekannt)"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Seltene_TherapieempfehlungStrategieNichtMedikamentoes",
+  "id": "mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes",
+  "title": "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
+  "description": "ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profile) - Verwendet für ServiceRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes",
+  "version": "2026.0.0",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
+        "concept": [
+          {
+            "code": "prophylactic",
+            "display": "Prophylaxe"
+          },
+          {
+            "code": "early-detection",
+            "display": "Früherkennung"
+          },
+          {
+            "code": "nutrition",
+            "display": "Ernährungstherapie"
+          },
+          {
+            "code": "other",
+            "display": "Sonstige"
+          }
+        ]
+      }
+    ]
+  }
+}

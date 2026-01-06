@@ -1,0 +1,88 @@
+{
+  "resourceType": "Condition",
+  "id": "example-cf-excluded-after-screening",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2026.0.0"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "782964007",
+          "system": "http://snomed.info/sct",
+          "display": "Genetic disease"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://omim.org",
+        "code": "219700",
+        "display": "Cystic fibrosis",
+        "version": "2024"
+      },
+      {
+        "system": "http://www.orpha.net",
+        "code": "586",
+        "display": "Cystic fibrosis"
+      }
+    ],
+    "text": "Mukoviszidose (ausgeschlossen)"
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "inactive",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "refuted",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+      "valueDateTime": "2024-08-25"
+    }
+  ],
+  "recordedDate": "2024-08-25",
+  "abatementDateTime": "2024-08-25",
+  "note": [
+    {
+      "text": "Heterozygoter Anlageträger für F508del. Zweite Mutation ausgeschlossen. IRT-Erhöhung im Screening war transient. Mukoviszidose ausgeschlossen."
+    }
+  ],
+  "evidence": [
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "106221001",
+              "system": "http://snomed.info/sct",
+              "display": "Genetic finding"
+            }
+          ]
+        }
+      ],
+      "detail": [
+        {
+          "reference": "Observation/molgen-cftr-heterozygous-carrier"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "resourceType": "ClinicalImpression",
+  "id": "clinical-impression-erstvorstellung",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2026.0.0"
+    ]
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/patient-sma-001"
+  },
+  "encounter": {
+    "reference": "Encounter/encounter-ambulant-001"
+  },
+  "effectiveDateTime": "2024-07-22",
+  "date": "2024-07-22",
+  "summary": "Neugeborenes mit V.a. SMA aus Neugeborenenscreening. Familienanamnese zeigt unklare Muskelerkrankung der Urgroßmutter. Troponin T bereits erhöht (92 ng/l).",
+  "problem": [
+    {
+      "reference": "Condition/condition-sma-suspected"
+    }
+  ],
+  "finding": [
+    {
+      "itemReference": {
+        "reference": "Condition/condition-sma-clinical"
+      }
+    },
+    {
+      "itemReference": {
+        "reference": "Condition/condition-sma-genetic"
+      }
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "1363512008",
+            "system": "http://snomed.info/sct",
+            "display": "Troponin above reference range"
+          }
+        ]
+      },
+      "itemReference": {
+        "reference": "Observation/observation-troponin-001"
+      }
+    }
+  ],
+  "investigation": [
+    {
+      "code": {
+        "text": "Familienanamnese"
+      },
+      "item": [
+        {
+          "reference": "FamilyMemberHistory/family-history-001"
+        }
+      ]
+    },
+    {
+      "code": {
+        "text": "Labordiagnostik"
+      },
+      "item": [
+        {
+          "reference": "Observation/observation-troponin-001"
+        }
+      ]
+    }
+  ],
+  "prognosisCodeableConcept": [
+    {
+      "coding": [
+        {
+          "code": "67334001",
+          "system": "http://snomed.info/sct",
+          "display": "Guarded prognosis"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "Klinische Untersuchung gemäß SMA-Diagnoseprotokoll. Blutentnahme für Genetik veranlasst."
+    },
+    {
+      "text": "Klinisches Bild vereinbar mit SMA Typ 1. Molekulargenetische Bestätigung ausstehend. Eltern über Therapieoptionen informiert."
+    }
+  ]
+}

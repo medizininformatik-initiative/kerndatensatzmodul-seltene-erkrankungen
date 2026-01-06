@@ -1,0 +1,36 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MII_CS_Seltene_TherapieempfehlungTyp",
+  "id": "mii-cs-seltene-therapieempfehlung-typ",
+  "title": "MII CS SE Therapieempfehlung Typ",
+  "description": "Therapietyp (kausal vs. symptomatisch) für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
+  "concept": [
+    {
+      "code": "causal",
+      "display": "Kausal",
+      "definition": "Kausale Therapie - adressiert die zugrundeliegende Ursache der Erkrankung"
+    },
+    {
+      "code": "symptomatic",
+      "display": "Symptomatisch",
+      "definition": "Symptomatische Therapie - behandelt Symptome und Manifestationen der Erkrankung"
+    }
+  ],
+  "version": "2026.0.0",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 2
+}

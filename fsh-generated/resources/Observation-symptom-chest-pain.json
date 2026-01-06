@@ -1,0 +1,54 @@
+{
+  "resourceType": "Observation",
+  "id": "symptom-chest-pain",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "exam",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "HP:0100749",
+        "system": "http://human-phenotype-ontology.org",
+        "display": "Chest pain"
+      },
+      {
+        "code": "29857009",
+        "system": "http://snomed.info/sct",
+        "display": "Chest pain"
+      }
+    ],
+    "text": "Thoraxschmerzen"
+  },
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "effectiveDateTime": "2024-12-15",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "52101004",
+        "system": "http://snomed.info/sct",
+        "display": "Present"
+      }
+    ]
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "A",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display": "Abnormal"
+        }
+      ]
+    }
+  ]
+}

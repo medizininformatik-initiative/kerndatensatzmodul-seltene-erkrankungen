@@ -1,0 +1,158 @@
+@startuml "MII_Datenmodell_Seltene_Erkrankungen_logisch"
+skinparam Linetype ortho
+
+title Modulvorschau MII Erweiterungsmodul Seltene Erkrankungen
+package "MII_Datenmodell_Seltene_Erkrankungen" {
+
+  package MII_Person #33CCFF{
+    object MII_Patient {
+      o Geschlecht
+      o Geburtstag/Alter
+
+    }
+    object Vitalstatus  {
+      o Datum
+      o Status
+    }
+
+  }
+  package "MII_Modul_Diagnose" #33CCFF {
+    object MII_Diagnose {
+      o code: ICD10GM
+      o code: ORPHAcodes
+      o Alter bei Diagnose
+      o Status (Verdacht, gesichert..)
+    }
+  }
+ 
+  package "MII_Modul_Seltene_Erkrankungen" #FFEE22{
+    object MII_Diagnose_SE {
+      o code: ICD10GM
+      o code: ORPHAcodes
+    }
+    object MII_MolGen_Variante_SE  {
+      o code: HGVS
+    }
+    object MII_Familienanamnese_SE {
+      o Verwandtschaftsverhaeltnis
+      o Geschlecht
+      o gleiche Erkrankung
+      o andere Erkrankung
+      o Penetranz
+      o verstorben
+    }
+    object MII_Symptom_Observation_SE  {
+      o code: HPO | SNOMED CT | LOINC
+      o value: Present/Absent (LOINC)
+      o date: effectiveDateTime
+      o change: Änderung (Verlauf)
+    }
+    object MII_Symptom_Condition_SE {
+      o code: HPO | SNOMED CT | ICD-10-GM
+      o onset: dateTime | Age | Period
+      o abatement: dateTime | Age | Period
+      o severity: Schweregrad
+      o bodySite: Anatomische Lokalisation
+    }
+
+    object Untersuchung {
+      o Koerperliche_Untersuchung
+      o Diagnostik
+      o Therapiestatus
+      o Datum
+    }
+    object Therapiestatus {
+      o Therapieempfehlungen
+      o Durchgeführte_Therapien
+    }
+    object Therapieempfehlungen{
+      o Therapieart
+      o off-label
+      o Studie
+    }
+    object Durchgeführte_Therapien {
+      o Therapieart
+      o Startdatum
+      o Enddatum
+      o Grund_Beendigung
+      o off-label
+      o Studie
+    }
+    object Koerperliche_Untersuchung_SE {
+      o Körpermaße
+    }
+    object BMI_SE {
+      o Wert (decimal)
+      o Datum
+    }
+    object Kopfumfang_SE {
+      o Wert_cm (decimal)
+      o Datum
+    }
+    object Bauchumfang_SE {
+      o Wert_cm (decimal)
+      o Datum
+    }
+    object Hueftumfang_SE {
+      o Wert_cm (decimal)
+      o Datum
+    }
+    object Blutgruppe_SE {
+      o AB0_Rhesusfaktor
+    }
+  }
+  package "MII_Modul_ICU" #00DD00{
+    object Koerpergewicht
+    object Koerpergroeße
+  }
+  package "MII_Modul_Labor" #00DD00 {
+    object Laborparameter
+  }
+  package "MII_Modul_Studie" #00DD00 {
+    object MII_Studie
+  }
+
+  package "MII_Modul_Molekulargenetischer_Befundbericht" #33CCFF{
+    object MII_MolGen_Variante {
+      o code: HGVS
+    }
+    object MII_MolGen_Familienanamnese
+  }
+   package "MII_Modul_Symptom_klinischer_Phänotyp" #33CCFF{
+    object MII_Symptom_Observation
+    object MII_Symptom_Condition
+  }
+
+
+
+  MII_Diagnose <|-down- MII_Diagnose_SE
+  MII_MolGen_Variante <|-down-- MII_MolGen_Variante_SE
+  MII_MolGen_Familienanamnese <|-up-- MII_Familienanamnese_SE
+  MII_Symptom_Observation <|-right- MII_Symptom_Observation_SE
+  MII_Symptom_Condition <|-up- MII_Symptom_Condition_SE
+
+  Untersuchung "0..*" o-up- "0..1" Laborparameter
+  Untersuchung "0..*" o-- "0..*" MII_Diagnose_SE
+  Untersuchung "0..*" o-- "0..*" MII_MolGen_Variante_SE
+  Untersuchung "0..*" o-- "0..*" MII_Symptom_Observation_SE
+  Untersuchung "0..*" o-- "0..*" MII_Familienanamnese_SE
+  Untersuchung "0..*" o-- "0..*" Koerperliche_Untersuchung_SE
+  MII_Symptom_Observation_SE "0..*" -- "0..*" MII_Symptom_Condition_SE
+  Koerperliche_Untersuchung_SE "0..*" o-up- "0..*" Koerpergewicht
+  Koerperliche_Untersuchung_SE "0..*" o-up- "0..*" Koerpergroeße
+  Koerperliche_Untersuchung_SE "0..*" o-- "0..*" BMI_SE
+  Koerperliche_Untersuchung_SE "0..*" o-- "0..*" Kopfumfang_SE
+  Koerperliche_Untersuchung_SE "0..*" o-- "0..*" Bauchumfang_SE
+  Koerperliche_Untersuchung_SE "0..*" o-- "0..*" Hueftumfang_SE
+  Untersuchung "0..*" o-- "0..1" Blutgruppe_SE
+  Untersuchung "0..*" o-- "0..*" MII_Symptom_Condition_SE
+  Untersuchung "0..*" o-- "0..*" Therapiestatus  
+  Therapiestatus "0..*" o-down- "1..1" Therapieempfehlungen
+  Therapiestatus "0..*" o-down- "1..1" Durchgeführte_Therapien
+  Therapieempfehlungen "0..*" o-down- "0..*" MII_Studie
+  Durchgeführte_Therapien "0..*" o-down- "0..*" MII_Studie
+
+}
+
+
+@enduml

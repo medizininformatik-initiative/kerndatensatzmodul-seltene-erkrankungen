@@ -1,0 +1,389 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-seltene-hpo-assessment",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment",
+  "version": "2026.0.0",
+  "name": "MII_PR_Seltene_HPO_Assessment",
+  "title": "MII Profile SE HPO Assessment",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Profile for HPO-based phenotypic observations in the context of rare diseases. This profile uses the Human Phenotype Ontology (HPO) to describe clinical symptoms and phenotypic abnormalities.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "SE-LogicalModel",
+      "name": "Mapping FHIR zu Seltene Erkrankungen Logical Model",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung",
+            "comment": "Phänotypisierung"
+          }
+        ]
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "HPO-phänotypischer Beobachtungscode",
+        "definition": "Code aus der Human Phenotype Ontology zur Beschreibung der phänotypischen Anomalie",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes"
+        },
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+            "comment": "HPO-Term des Symptoms"
+          }
+        ]
+      },
+      {
+        "id": "Observation.code.coding.version",
+        "path": "Observation.code.coding.version",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOVersion",
+            "comment": "Version HPO-Term"
+          }
+        ]
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "short": "Patient mit der phänotypischen Anomalie",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Patient",
+            "comment": "Patient/Indexpatient"
+          }
+        ]
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "short": "Gesundheitskontakt, bei dem der Phänotyp beobachtet wurde",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Untersuchungsdatum",
+            "comment": "Untersuchungsdatum"
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Zeitpunkt der Phänotyp-Beobachtung oder Beobachtungszeitraum",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]:effectiveDateTime",
+        "path": "Observation.effective[x]",
+        "sliceName": "effectiveDateTime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+            "comment": "Startdatum des Symptoms"
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]:effectivePeriod",
+        "path": "Observation.effective[x]",
+        "sliceName": "effectivePeriod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]:effectivePeriod.start",
+        "path": "Observation.effective[x].start",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+            "comment": "Startdatum des Symptoms"
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]:effectivePeriod.end",
+        "path": "Observation.effective[x].end",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+            "comment": "Enddatum des Symptoms"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "short": "Not used - use component instead",
+        "comment": "Following HL7 Phenomics IG pattern, phenotype status and severity are captured in component elements rather than value[x].",
+        "max": "0"
+      },
+      {
+        "id": "Observation.note",
+        "path": "Observation.note",
+        "short": "Zusätzliche klinische Anmerkungen zum Phänotyp",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "short": "Körperstelle, an der der Phänotyp beobachtet wird",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
+        }
+      },
+      {
+        "id": "Observation.method",
+        "path": "Observation.method",
+        "short": "Methode zur Beobachtung oder Bewertung des Phänotyps",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/ValueSet/observation-methods"
+        },
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.MethodeDiagnosestellung",
+            "comment": "Methode der Diagnosestellung"
+          }
+        ]
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "short": "Verwandte Beobachtungen oder Bewertungen",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Verweis auf zugrunde liegende Befunde",
+            "comment": "Laborbefunde oder Bildgebung"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "code"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "Phenotype status, severity, and clinical modifiers",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:status",
+        "path": "Observation.component",
+        "sliceName": "status",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:status.code",
+        "path": "Observation.component.code",
+        "short": "Phenotype status code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "260411009",
+              "system": "http://snomed.info/sct",
+              "display": "Presence findings"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:status.value[x]",
+        "path": "Observation.component.value[x]",
+        "short": "Present or Absent",
+        "definition": "LOINC LA9633-4 'Present' for observed phenotypes, LA9634-2 'Absent' for explicitly excluded phenotypes.",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status"
+        },
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded",
+            "comment": "HPO-Term ausgeschlossen (true wenn LA9634-2 'Absent', false wenn LA9633-4 'Present')"
+          },
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
+            "comment": "Status HPO-Term (Present/Absent)"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:status.interpretation",
+        "path": "Observation.component.interpretation",
+        "short": "Änderungsstatus des Symptoms/Phänotyps über Zeit",
+        "definition": "Dokumentiert Änderungen des Phänotyps über Zeit gemäß Modellvorhaben Genomsequenzierung (MVGenomSeq). Codes: newly-added, improved, degraded, no-longer-observed, unchanged.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-symptom-change-status-combined"
+        },
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom",
+            "comment": "Verlauf Symptom"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:status.interpretation.coding.code",
+        "path": "Observation.component.interpretation.coding.code",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
+            "comment": "Change Status"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:severity",
+        "path": "Observation.component",
+        "sliceName": "severity",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:severity.code",
+        "path": "Observation.component.code",
+        "short": "Severity modifier",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "HP:0012824",
+              "system": "http://human-phenotype-ontology.org",
+              "display": "Severity"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:severity.value[x]",
+        "path": "Observation.component.value[x]",
+        "short": "Severity grade",
+        "definition": "HPO severity codes: Mild, Moderate, Severe, Profound, Borderline",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity"
+        },
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
+            "comment": "Schweregrad (Mild/Moderate/Severe/Profound/Borderline)"
+          }
+        ]
+      }
+    ]
+  }
+}

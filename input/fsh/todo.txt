@@ -1,0 +1,49 @@
+Logical Model in FHIR 
+inkl. Mapping MII KDS
+inkl. Mapping ERDRI-CDS
+inkl. Mapping NARSE
+inkl. Mapping 
+--> Miriam 
+
+
+
+Profile -> Marco
+
+
+- BMI 
+- MS in allen Feldern 
+Therapieplan : CarePlan (Marco, aktuelle Profile im molekularen Tumorboard Repo, von CarePlan direkt erben, von Careplan auf Therapie verweisen )
+Therapieempfehlung (entweder als Teil von CarePlan oder als MedicationRequest/ServiceRequest)
+Durchgeführte Therapie (Procedure, Therapiearten, ... Medikationstherapie als MedikationStatement, nichtmedikamentös als Procedure)
+
+
+Thomas 
+MII_Symptom Observation
+ - HPO-Untersuchung -> Klinische Symptome Phänotyp Observation (Thomas)
+
+MII_Symptom Condition 
+-> Zeiträume (Alter, startAge, period) 
+-> HPP 
+-> "Syndrom"-Profil 
+
+
+
+Datenmodell am Beispiel 
+
+
+Steffen
+
+Komplexes Fallbeispiel 
+- Anwendungsszenario als Freitext
+- Anwendungsszenario als FHIR
+
+IG Texte
+- Modellvorhaben text, Aufräumen 2. Fallbesipiel, Index-Seiten mit Modulverantwortlichen
+
+
+
+
+
+STILL TO DO
+
+Find good codes for ClinicalImpression.investigation.code -> Labor, MolGen, Körpreloiche Untersuchng, Phänotypisierung (maybe 142599005 Multidisciplinary assessment )

@@ -1,0 +1,71 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MII_CS_Seltene_TherapieempfehlungStrategie",
+  "id": "mii-cs-seltene-therapieempfehlung-strategie",
+  "title": "MII CS SE Therapieempfehlung Strategie",
+  "description": "Strategietypen für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
+  "concept": [
+    {
+      "code": "systemic-medication",
+      "display": "Systemische Medikation",
+      "definition": "Systemische medikamentöse Therapie, die den gesamten Körper betrifft"
+    },
+    {
+      "code": "targeted-medication",
+      "display": "Zielgerichtete Medikation",
+      "definition": "Zielgerichtete medikamentöse Therapie basierend auf molekularen Targets"
+    },
+    {
+      "code": "prevention-medication",
+      "display": "Präventive Medikation",
+      "definition": "Medikamentöse Therapie zur Prävention von Krankheitsmanifestationen"
+    },
+    {
+      "code": "gene-therapy",
+      "display": "Gentherapie",
+      "definition": "Therapeutische Intervention durch Genmodifikation oder Genersatz"
+    },
+    {
+      "code": "prophylactic",
+      "display": "Prophylaxe",
+      "definition": "Vorbeugende Maßnahmen zur Verhinderung von Komplikationen"
+    },
+    {
+      "code": "early-detection",
+      "display": "Früherkennung",
+      "definition": "Maßnahmen zur frühzeitigen Erkennung von Krankheitszeichen"
+    },
+    {
+      "code": "combination",
+      "display": "Kombinationstherapie",
+      "definition": "Kombinierte Anwendung mehrerer Therapieansätze"
+    },
+    {
+      "code": "nutrition",
+      "display": "Ernährungstherapie",
+      "definition": "Therapeutische Intervention durch spezielle Ernährungsmaßnahmen"
+    },
+    {
+      "code": "other",
+      "display": "Sonstige",
+      "definition": "Andere Therapiestrategien, die nicht in die definierten Kategorien fallen"
+    }
+  ],
+  "version": "2026.0.0",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 9
+}

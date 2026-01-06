@@ -1,0 +1,80 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Seltene_Symptom_ChangeStatus_Combined",
+  "id": "mii-vs-seltene-symptom-change-status-combined",
+  "title": "MII VS Seltene Erkrankungen Symptom Change Status (Combined)",
+  "description": "ValueSet zur Dokumentation von Änderungen bei Symptomen/Phänotypen über Zeit. Kombiniert MVGenomSeq-spezifische Codes mit SNOMED CT-Codes für internationale Interoperabilität.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-symptom-change-status-combined",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2026.0.0",
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status",
+        "concept": [
+          {
+            "code": "newly-added",
+            "display": "Neu hinzugefügt"
+          },
+          {
+            "code": "improved",
+            "display": "Verbessert"
+          },
+          {
+            "code": "degraded",
+            "display": "Verschlechtert"
+          },
+          {
+            "code": "no-longer-observed",
+            "display": "Nicht mehr beobachtet"
+          },
+          {
+            "code": "unchanged",
+            "display": "Unverändert"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "385425000",
+            "display": "Improved"
+          },
+          {
+            "code": "231877006",
+            "display": "Worse"
+          },
+          {
+            "code": "385630006",
+            "display": "Maintained"
+          },
+          {
+            "code": "2667000",
+            "display": "Absent"
+          },
+          {
+            "code": "35105006",
+            "display": "Increased"
+          },
+          {
+            "code": "1250004",
+            "display": "Decreased"
+          }
+        ]
+      }
+    ]
+  }
+}

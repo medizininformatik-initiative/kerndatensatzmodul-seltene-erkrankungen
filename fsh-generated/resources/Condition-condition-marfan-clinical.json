@@ -1,0 +1,184 @@
+{
+  "resourceType": "Condition",
+  "id": "condition-marfan-clinical",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2026.0.0"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://omim.org",
+        "code": "154700",
+        "display": "Marfan syndrome",
+        "version": "2024"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "19346006",
+        "display": "Marfan syndrome"
+      },
+      {
+        "system": "http://www.orpha.net",
+        "code": "558",
+        "display": "Marfan syndrome"
+      }
+    ],
+    "text": "Marfan-Syndrom"
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "confirmed",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "encounter-diagnosis",
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+      "valueDateTime": "2024-12-15"
+    }
+  ],
+  "recordedDate": "2024-12-15",
+  "encounter": {
+    "reference": "Encounter/encounter-cardiology"
+  },
+  "evidence": [
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "HP:0002616",
+              "system": "http://human-phenotype-ontology.org",
+              "display": "Aortic root aneurysm"
+            }
+          ]
+        }
+      ],
+      "detail": [
+        {
+          "reference": "Observation/symptom-aortic-root"
+        }
+      ]
+    },
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "HP:0001659",
+              "system": "http://human-phenotype-ontology.org",
+              "display": "Aortic regurgitation"
+            }
+          ]
+        }
+      ],
+      "detail": [
+        {
+          "reference": "Observation/symptom-aortic-regurg"
+        }
+      ]
+    },
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "HP:0001653",
+              "system": "http://human-phenotype-ontology.org",
+              "display": "Mitral regurgitation"
+            }
+          ]
+        }
+      ],
+      "detail": [
+        {
+          "reference": "Observation/symptom-mitral-regurg"
+        }
+      ]
+    },
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "HP:0000098",
+              "system": "http://human-phenotype-ontology.org",
+              "display": "Tall stature"
+            }
+          ]
+        }
+      ],
+      "detail": [
+        {
+          "reference": "Observation/observation-height-001"
+        }
+      ]
+    },
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "HP:0100559",
+              "system": "http://human-phenotype-ontology.org",
+              "display": "Lower limb asymmetry"
+            }
+          ]
+        }
+      ],
+      "detail": [
+        {
+          "reference": "Observation/observation-leg-asymmetry"
+        }
+      ]
+    },
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "HP:0100749",
+              "system": "http://human-phenotype-ontology.org",
+              "display": "Chest pain"
+            }
+          ]
+        }
+      ],
+      "detail": [
+        {
+          "reference": "Observation/symptom-chest-pain"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "Marfan-Syndrom klinisch diagnostiziert basierend auf kardialen Befunden, Skelettmerkmalen und ophthalmologischer Manifestation"
+    }
+  ]
+}

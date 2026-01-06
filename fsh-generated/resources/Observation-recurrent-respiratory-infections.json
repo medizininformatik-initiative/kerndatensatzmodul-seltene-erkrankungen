@@ -1,0 +1,70 @@
+{
+  "resourceType": "Observation",
+  "id": "recurrent-respiratory-infections",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "exam",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "HP:0002099",
+        "system": "http://human-phenotype-ontology.org",
+        "display": "Asthma"
+      },
+      {
+        "code": "195708003",
+        "system": "http://snomed.info/sct",
+        "display": "Recurrent upper respiratory tract infection"
+      }
+    ],
+    "text": "Rezidivierende Atemwegsinfektionen"
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-08-10",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "52101004",
+        "system": "http://snomed.info/sct",
+        "display": "Present"
+      }
+    ]
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "A",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display": "Abnormal"
+        }
+      ]
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "text": "Häufigkeit"
+      },
+      "valueString": ">6 Episoden/Jahr"
+    },
+    {
+      "code": {
+        "text": "Erreger"
+      },
+      "valueCodeableConcept": {
+        "text": "Pseudomonas aeruginosa"
+      }
+    }
+  ]
+}

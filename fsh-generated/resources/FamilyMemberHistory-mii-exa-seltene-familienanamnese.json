@@ -1,0 +1,91 @@
+{
+  "resourceType": "FamilyMemberHistory",
+  "id": "mii-exa-seltene-familienanamnese",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese|2026.0.0"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "373066001",
+            "system": "http://snomed.info/sct",
+            "display": "Yes"
+          }
+        ]
+      }
+    }
+  ],
+  "relationship": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "65656005",
+        "display": "Natural mother"
+      }
+    ]
+  },
+  "status": "completed",
+  "patient": {
+    "reference": "Patient/example"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "666",
+          "system": "http://www.orpha.net"
+        }
+      ]
+    }
+  ],
+  "sex": {
+    "coding": [
+      {
+        "code": "female"
+      }
+    ]
+  },
+  "bornDate": "1954",
+  "deceasedDate": "2004",
+  "condition": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "H35.8",
+            "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+            "version": "2024"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "E11.9",
+            "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+            "version": "2024"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "I21.2",
+            "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+            "version": "2024"
+          }
+        ]
+      },
+      "contributedToDeath": true
+    }
+  ]
+}

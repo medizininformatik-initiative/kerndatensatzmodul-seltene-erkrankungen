@@ -1,0 +1,343 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-seltene-genetic-diagnosis",
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/spdx-license",
+            "code": "CC-BY-4.0",
+            "display": "Creative Commons Attribution 4.0 International"
+          }
+        ]
+      }
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis",
+  "version": "2026.0.0",
+  "name": "MII_PR_Seltene_GeneticDiagnosis",
+  "title": "MII PR SE Genetic Diagnosis",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and links to MolGen variant/diagnostic implication resources. This profile is used when a rare disease diagnosis has been confirmed through genetic testing.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "SE-LogicalModel",
+      "name": "Mapping FHIR zu Seltene Erkrankungen Logical Model",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Condition",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Condition",
+        "path": "Condition",
+        "constraint": [
+          {
+            "key": "se-genetic-evidence",
+            "severity": "error",
+            "human": "Genetic diagnosis must have at least one evidence.detail referencing a MolGen resource",
+            "expression": "evidence.exists() and evidence.detail.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenetischeDiagnose",
+            "comment": "Genetische Diagnose"
+          }
+        ]
+      },
+      {
+        "id": "Condition.extension:Feststellungsdatum",
+        "path": "Condition.extension",
+        "sliceName": "Feststellungsdatum"
+      },
+      {
+        "id": "Condition.extension:Feststellungsdatum.value[x]",
+        "path": "Condition.extension.value[x]",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+            "comment": "Feststellungsdatum genetische SE-Diagnose"
+          }
+        ]
+      },
+      {
+        "id": "Condition.extension:penetrance",
+        "path": "Condition.extension",
+        "sliceName": "penetrance",
+        "short": "Penetranz der genetischen Variante",
+        "definition": "Angabe zur Penetranz der genetischen Variante bei dieser Erkrankung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenDiaFehlendePenetranz",
+            "comment": "Genetische Diagnose mit fehlender Penetranz"
+          }
+        ]
+      },
+      {
+        "id": "Condition.verificationStatus",
+        "path": "Condition.verificationStatus",
+        "comment": "For genetically confirmed diagnoses, verificationStatus should typically be 'confirmed'"
+      },
+      {
+        "id": "Condition.category",
+        "path": "Condition.category",
+        "short": "Kategorisierung als genetische Erkrankung",
+        "definition": "Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "782964007",
+              "system": "http://snomed.info/sct",
+              "display": "Genetic disease"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.severity",
+        "path": "Condition.severity",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:icd10-gm",
+        "path": "Condition.code.coding",
+        "sliceName": "icd10-gm",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenetischeDiagnose",
+            "comment": "ICD-10-GM Diagnose"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.coding:orphanet",
+        "path": "Condition.code.coding",
+        "sliceName": "orphanet",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenetischeDiagnose",
+            "comment": "Orpha-Code Diagnose"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.coding:omim",
+        "path": "Condition.code.coding",
+        "sliceName": "omim",
+        "short": "OMIM disease code",
+        "definition": "Online Mendelian Inheritance in Man (OMIM) code for the genetic disease",
+        "min": 0,
+        "max": "*",
+        "patternCoding": {
+          "system": "http://omim.org"
+        },
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenetischeDiagnose",
+            "comment": "OMIM-Code Diagnose"
+          }
+        ]
+      },
+      {
+        "id": "Condition.code.coding:omim.system",
+        "path": "Condition.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:omim.code",
+        "path": "Condition.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:omim.display",
+        "path": "Condition.code.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.subject",
+        "path": "Condition.subject",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Patient",
+            "comment": "Patient/Indexpatient"
+          }
+        ]
+      },
+      {
+        "id": "Condition.encounter",
+        "path": "Condition.encounter",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.Untersuchungsdatum",
+            "comment": "Untersuchungsdatum"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]",
+        "path": "Condition.onset[x]",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
+            "comment": "Alter/Zeitpunkt bei genetischer SE-Diagnose"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]:onsetDateTime",
+        "path": "Condition.onset[x]",
+        "sliceName": "onsetDateTime",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+            "comment": "Feststellungsdatum genetische SE-Diagnose"
+          }
+        ]
+      },
+      {
+        "id": "Condition.abatement[x]",
+        "path": "Condition.abatement[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.recorder",
+        "path": "Condition.recorder",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.asserter",
+        "path": "Condition.asserter",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.stage",
+        "path": "Condition.stage",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.evidence",
+        "path": "Condition.evidence",
+        "short": "Genetic evidence supporting the diagnosis",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.evidence.code",
+        "path": "Condition.evidence.code",
+        "short": "Type of genetic evidence",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "AnamneseUndDiagnostik.MethodeDiagnosestellung",
+            "comment": "Methode der Diagnosestellung"
+          }
+        ]
+      },
+      {
+        "id": "Condition.evidence.code.coding",
+        "path": "Condition.evidence.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Condition.evidence.code.coding:geneticEvidence",
+        "path": "Condition.evidence.code.coding",
+        "sliceName": "geneticEvidence",
+        "short": "Indicates genetic evidence",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "code": "106221001",
+          "system": "http://snomed.info/sct",
+          "display": "Genetic finding"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.evidence.detail",
+        "path": "Condition.evidence.detail",
+        "short": "Reference to MolGen Variant or Diagnostic Implication",
+        "definition": "Must reference either MII PR MolGen Variante or MII PR MolGen DiagnostischeImplikation resources that contain the genetic findings supporting this diagnosis",
+        "comment": "Should reference: 1) MII PR MolGen Variante (Observation) for specific variant findings, or 2) MII PR MolGen DiagnostischeImplikation (DiagnosticReport) for comprehensive genetic diagnostic reports",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "Verweis auf MolGen Variante/DiagnostischeImplikation",
+            "comment": "Genetische Befunde"
+          }
+        ]
+      }
+    ]
+  }
+}

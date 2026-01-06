@@ -1,0 +1,52 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MII_CS_Seltene_HPO_ChangeStatus",
+  "id": "mii-cs-seltene-hpo-change-status",
+  "title": "MII CS Seltene Erkrankungen HPO Change Status",
+  "description": "CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status",
+  "concept": [
+    {
+      "code": "newly-added",
+      "display": "Neu hinzugefügt",
+      "definition": "Phänotyp wurde neu beobachtet/diagnostiziert"
+    },
+    {
+      "code": "improved",
+      "display": "Verbessert",
+      "definition": "Phänotyp hat sich verbessert"
+    },
+    {
+      "code": "degraded",
+      "display": "Verschlechtert",
+      "definition": "Phänotyp hat sich verschlechtert"
+    },
+    {
+      "code": "no-longer-observed",
+      "display": "Nicht mehr beobachtet",
+      "definition": "Phänotyp wird nicht mehr beobachtet/ist verschwunden"
+    },
+    {
+      "code": "unchanged",
+      "display": "Unverändert",
+      "definition": "Phänotyp ist unverändert geblieben"
+    }
+  ],
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2026.0.0",
+  "experimental": false,
+  "caseSensitive": true,
+  "count": 5
+}

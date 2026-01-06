@@ -1,0 +1,1353 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "mii-ig-seltene-erkrankungen-v2026-de",
+  "language": "de-DE",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de",
+  "version": "2026.0.0",
+  "name": "MIIIGModulSelteneErkrankungen",
+  "title": "MII IG Seltene Erkrankungen (DE)",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "name": "Medizininformatik Initiative",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de/"
+        }
+      ]
+    }
+  ],
+  "packageId": "mii-ig-seltene-erkrankungen-v2026-de",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "de.basisprofil.r4",
+      "version": "1.5.x",
+      "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
+      "id": "de_basisprofil_r4"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
+      "version": "2026.0.x",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta",
+      "id": "de_medizininformatikinitiative_kerndatensatz_meta"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.molgen",
+      "version": "2026.0.x",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.molgen/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.molgen",
+      "id": "de_medizininformatikinitiative_kerndatensatz_molgen"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.icu",
+      "version": "2025.0.x",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.icu/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.icu",
+      "id": "de_medizininformatikinitiative_kerndatensatz_icu"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.studie",
+      "version": "2026.0.0-ballot",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.studie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.studie",
+      "id": "de_medizininformatikinitiative_kerndatensatz_studie"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.base",
+      "version": "2026.0.x",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base",
+      "id": "de_medizininformatikinitiative_kerndatensatz_base"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.medikation",
+      "version": "2026.0.x",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ImplementationGuide/mii-ig-medikation",
+      "id": "de_medizininformatikinitiative_kerndatensatz_medikation"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "Observation/observation-alt-001"
+        },
+        "name": "ALT Labor - Post-therapeutisch",
+        "description": "ALT Wert nach Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-ambulant-001"
+        },
+        "name": "Ambulante Erstvorstellung",
+        "description": "Erstvorstellung im SMA-Zentrum",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-nachsorge-001"
+        },
+        "name": "Ambulante Nachsorge",
+        "description": "Erster Nachsorgetermin nach Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/anteverted-nares"
+        },
+        "name": "Antevertierte Nares - HPO-kodiert",
+        "description": "Nach oben gerichtete Nasenlöcher",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/symptom-aortic-regurg"
+        },
+        "name": "Aortenklappeninsuffizienz",
+        "description": "Moderate Aortenklappeninsuffizienz Grad II",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/aortic-root-normal"
+        },
+        "name": "Aortenwurzel - Normalbefund",
+        "description": "Normale Aortenwurzel, schließt Marfan aus",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/symptom-aortic-root"
+        },
+        "name": "Aortenwurzeldilatation",
+        "description": "Pathologisch erweiterte Aortenwurzel",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/aortic-root-dilatation"
+        },
+        "name": "Aortenwurzeldilatation - HPO-kodiert",
+        "description": "Echokardiographisch nachgewiesene Aortenwurzeldilatation",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/arachnodactyly"
+        },
+        "name": "Arachnodaktylie - HPO-kodiert",
+        "description": "Spinnenfingrigkeit bei Marfan-Syndrom",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-ast-001"
+        },
+        "name": "AST Labor - Post-therapeutisch",
+        "description": "AST Wert nach Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-ophthalmology"
+        },
+        "name": "Augenärztliche Konsultation",
+        "description": "Erstvorstellung beim Augenarzt wegen Katarakt",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-leg-asymmetry"
+        },
+        "name": "Beinlängendifferenz",
+        "description": "Beinlängendifferenz mit rechts verkürztem Bein",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/example-nutrition-therapy-recommendation"
+        },
+        "name": "Beispiel Ernährungstherapie-Empfehlung",
+        "description": "Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/example-early-detection-recommendation"
+        },
+        "name": "Beispiel Früherkennungsprogramm-Empfehlung",
+        "description": "Beispiel einer Empfehlung für regelmäßige Früherkennungsuntersuchungen",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-seltene-narse-gentherapie-sma"
+        },
+        "name": "Beispiel NARSE Gentherapie bei SMA",
+        "description": "Beispiel einer durchgeführten Gentherapie bei Spinaler Muskelatrophie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-seltene-narse-stoffwechseltherapie-pompe"
+        },
+        "name": "Beispiel NARSE Stoffwechseltherapie bei Morbus Pompe",
+        "description": "Beispiel einer durchgeführten Enzymersatztherapie bei Morbus Pompe",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt"
+      },
+      {
+        "reference": {
+          "reference": "Patient/example"
+        },
+        "name": "Beispielpatient",
+        "description": "Generischer Beispielpatient für Testzwecke",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-bodymassindex"
+        },
+        "name": "Body Mass Index (BMI) Example",
+        "description": "Example of a Body Mass Index (BMI) observation for a patient.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-bodymassindex"
+        },
+        "name": "Body Mass Index (BMI) of the patient",
+        "description": "Describes the Body Mass Index (BMI) of the patient.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Observation/molgen-variant-brca1-pathogenic"
+        },
+        "name": "BRCA1 Pathogene Variante - MolGen",
+        "description": "Pathogene BRCA1-Variante",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/molgen-brca-panel"
+        },
+        "name": "BRCA1/2 Panel - Diagnostische Implikation",
+        "description": "Hereditäres Karzinom-Panel",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/molgen-cf-diagnostic"
+        },
+        "name": "CF Diagnostische Implikation - MolGen",
+        "description": "Mukoviszidose genetischer Befund",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/molgen-variant-cftr-f508del-homozygous"
+        },
+        "name": "CFTR F508del Homozygot - MolGen Variante",
+        "description": "Homozygote F508del Mutation bei Mukoviszidose",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/chronic-diarrhea"
+        },
+        "name": "Chronische Diarrhoe - HPO-kodiert",
+        "description": "Chronische Durchfälle bei CF",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/molgen-diagnostic-dmd"
+        },
+        "name": "DMD Diagnostische Implikation",
+        "description": "Diagnostischer Bericht Duchenne-Muskeldystrophie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/molgen-variant-dmd-deletion-exon45-47"
+        },
+        "name": "DMD Exon 45-47 Deletion - MolGen Variante",
+        "description": "Out-of-frame Deletion im DMD-Gen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/example-dmd-excluded-bmd-confirmed"
+        },
+        "name": "Duchenne ausgeschlossen - Becker bestätigt",
+        "description": "Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muskeldystrophie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/example-dmd-genetic-diagnosis"
+        },
+        "name": "Duchenne-Muskeldystrophie - Genetisch bestätigt",
+        "description": "Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-echo-av"
+        },
+        "name": "Echokardiographie - Aortenklappeninsuffizienz",
+        "description": "Beurteilung der Aortenklappeninsuffizienz",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-echo-aortic"
+        },
+        "name": "Echokardiographie - Aortenwurzeldurchmesser",
+        "description": "Aortenwurzeldurchmesser in der Echokardiographie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-echo-mv"
+        },
+        "name": "Echokardiographie - Mitralklappeninsuffizienz",
+        "description": "Beurteilung der Mitralklappeninsuffizienz",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/example-eds-excluded-clinical"
+        },
+        "name": "Ehlers-Danlos-Syndrom - Ausgeschlossen",
+        "description": "Differentialdiagnose EDS ausgeschlossen",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "FamilyMemberHistory/family-history-001"
+        },
+        "name": "Familienanamnese - Urgroßmutter mit Muskelerkrankung",
+        "description": "Urgroßmutter mit unbekannter Muskelerkrankung",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese"
+      },
+      {
+        "reference": {
+          "reference": "Observation/variant-fbn1-001"
+        },
+        "name": "FBN1 Gen - Pathogene Mutation",
+        "description": "Pathogene FBN1-Mutation bei Marfan-Syndrom",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/failure-to-thrive"
+        },
+        "name": "Gedeihstörung - HPO-kodiert",
+        "description": "Mangelhafte Gewichtszunahme",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/procedure-gentherapy-001"
+        },
+        "name": "Gentherapie Verabreichung",
+        "description": "Verabreichung des Gentherapeutikums für SMA",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/procedure-aortic-planned"
+        },
+        "name": "Geplante Aortenwurzelersatz-Operation",
+        "description": "Geplante David-Operation (Valve-sparing root replacement)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-surgery-planned"
+        },
+        "name": "Geplante Herzchirurgie",
+        "description": "Geplanter stationärer Aufenthalt für Aortenwurzelersatz",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/example-brca1-genetic-diagnosis"
+        },
+        "name": "Hereditäres Mamma- und Ovarialkarzinom-Syndrom",
+        "description": "Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Observation/tall-stature"
+        },
+        "name": "Hochwuchs - HPO-kodiert",
+        "description": "Pathologisch erhöhte Körpergröße",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-hpo-assessment-excluded"
+        },
+        "name": "HPO Assessment - Excluded Phenotype",
+        "description": "Example of an explicitly excluded phenotype (arachnodactyly ruled out during Marfan syndrome workup).",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-hpo-assessment-severity"
+        },
+        "name": "HPO Assessment - Present with Severity",
+        "description": "Example of a phenotype with both status (present) and severity grading. Demonstrates HL7 Phenomics IG component pattern.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-hpo-assessment-change-status"
+        },
+        "name": "HPO Assessment mit Änderungsstatus",
+        "description": "Beispiel einer HPO-Beobachtung mit dokumentiertem Änderungsstatus",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-hpo-presence-status"
+        },
+        "name": "HPO Phenotype Presence Status",
+        "description": "LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes"
+        },
+        "name": "HPO Phenotypic Observation Codes",
+        "description": "Human Phenotype Ontology codes for phenotypic observations",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-hpo-severity"
+        },
+        "name": "HPO Severity",
+        "description": "HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Phenomics IG component pattern.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-hpo-assessment"
+        },
+        "name": "HPO Symptom Observation Example",
+        "description": "Example of an HPO-based phenotypic observation for intellectual disability.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/hypertelorism"
+        },
+        "name": "Hypertelorismus - HPO-kodiert",
+        "description": "Vergrößerter Augenabstand",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-hueftumfang"
+        },
+        "name": "Hüftumfang Beispiel",
+        "description": "Beispiel einer Hüftumfang-Messung bei einem Patienten mit seltener Erkrankung.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hueftumfang"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-cardiology"
+        },
+        "name": "Kardiologische Erstvorstellung",
+        "description": "Ambulante kardiologische Erstvorstellung bei Thoraxschmerzen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-cataract"
+        },
+        "name": "Katarakt bilateral",
+        "description": "Beidseitige Katarakt bei Marfan-Syndrom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Observation/symptom-cataract"
+        },
+        "name": "Katarakt bilateral",
+        "description": "Beidseitige Katarakt als ophthalmologische Manifestation",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/procedure-cataract-surgery"
+        },
+        "name": "Katarakt-Operation",
+        "description": "Phakoemulsifikation mit Intraokularlinsenimplantation",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-cataract-surgery"
+        },
+        "name": "Katarakt-Operation Aufenthalt",
+        "description": "Tagesklinischer Aufenthalt für Katarakt-Operation",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ClinicalImpression/clinical-impression-erstvorstellung"
+        },
+        "name": "Klinische Beurteilung - Erstvorstellung",
+        "description": "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression"
+      },
+      {
+        "reference": {
+          "reference": "ClinicalImpression/clinical-impression-nachsorge"
+        },
+        "name": "Klinische Beurteilung - Nachsorge",
+        "description": "Nachsorgeuntersuchung nach Gentherapie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression"
+      },
+      {
+        "reference": {
+          "reference": "ClinicalImpression/clinical-impression-seltene-assessment"
+        },
+        "name": "Konsultation ZSE bei V.a. Marfan-Syndrom",
+        "description": "Konsultation im Zentrum für Seltene Erkrankungen mit kardiologischer Mitbeurteilung bei V.a. Marfan-Syndrom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-kopfumfang"
+        },
+        "name": "Kopfumfang Beispiel",
+        "description": "Beispiel einer Kopfumfang-Messung bei einem Patienten mit seltener Erkrankung.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang"
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-height-001"
+        },
+        "name": "Körpergröße - Hochwuchs",
+        "description": "Pathologisch erhöhte Körpergröße bei Marfan-Syndrom",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/lens-dislocation"
+        },
+        "name": "Linsenluxation - HPO-kodiert",
+        "description": "Ectopia lentis bei Marfan-Syndrom",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/medication-losartan"
+        },
+        "name": "Losartan Therapie",
+        "description": "Losartan zur Progressionshemmung der Aortenwurzeldilatation",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/lymphedema"
+        },
+        "name": "Lymphödem - HPO-kodiert",
+        "description": "Peripheres Lymphödem",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/patient-marfan-001"
+        },
+        "name": "Marfan Patient - 19-jähriger Mann",
+        "description": "19-jähriger männlicher Patient mit bestätigtem Marfan-Syndrom",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-marfan-genetic"
+        },
+        "name": "Marfan-Syndrom - Genetische Diagnose",
+        "description": "Genetisch bestätigtes Marfan-Syndrom mit FBN1-Mutation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/example-marfan-excluded-clinical"
+        },
+        "name": "Marfan-Syndrom - Klinisch ausgeschlossen",
+        "description": "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/example-marfan-clinical-diagnosis"
+        },
+        "name": "Marfan-Syndrom - Klinische Diagnose",
+        "description": "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend auf phänotypischen Merkmalen",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-marfan-clinical"
+        },
+        "name": "Marfan-Syndrom - Klinische Diagnose",
+        "description": "Klinisch bestätigtes Marfan-Syndrom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-marfan-suspected"
+        },
+        "name": "Marfan-Syndrom - Verdacht",
+        "description": "Verdacht auf Marfan-Syndrom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/bundle-marfan-complete"
+        },
+        "name": "Marfan-Syndrom Fallbeispiel - Vollständiges Transaction Bundle",
+        "description": "Transaction Bundle mit allen Ressourcen für den Marfan-Syndrom Fall",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/example-metabolic-myopathy-excluded"
+        },
+        "name": "Metabolische Myopathie - Ausgeschlossen",
+        "description": "Metabolische Myopathie als Differentialdiagnose ausgeschlossen",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/mii-cps-seltene-capabilitystatement"
+        },
+        "name": "MII CPS Seltene Erkrankungen CapabilityStatement",
+        "description": "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Seltene Erkrankungen der Medizininformatik Initiative zu implementieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-seltene-empfehlung-status-begruendung"
+        },
+        "name": "MII CS SE Empfehlung Status Begründung",
+        "description": "Begründung bei fehlender Empfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"
+        },
+        "name": "MII CS SE Therapieempfehlung Strategie",
+        "description": "Strategietypen für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-seltene-therapieempfehlung-typ"
+        },
+        "name": "MII CS SE Therapieempfehlung Typ",
+        "description": "Therapietyp (kausal vs. symptomatisch) für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-seltene-hpo-change-status"
+        },
+        "name": "MII CS Seltene Erkrankungen HPO Change Status",
+        "description": "CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-seltene-narse-therapietyp"
+        },
+        "name": "MII CS Seltene Erkrankungen NARSE Therapietyp",
+        "description": "CodeSystem für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-seltene-age-of-onset"
+        },
+        "name": "MII EX SE Age of Onset",
+        "description": "Extension to capture the age of onset of a rare disease using structured HPO age of onset terms",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung"
+        },
+        "name": "MII EX SE Empfehlung Evidenzgraduierung",
+        "description": "Evidenzgraduierung der (einzelnen) Empfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-seltene-empfehlung-prioritaet"
+        },
+        "name": "MII EX SE Empfehlung Priorität",
+        "description": "Priorität der (einzelnen) Empfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-seltene-empfehlung-publikation"
+        },
+        "name": "MII EX SE Empfehlung Publikation",
+        "description": "Verweis auf Publikation der (einzelnen) Empfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-seltene-genetic-basis"
+        },
+        "name": "MII EX SE Genetic Basis",
+        "description": "Extension to describe the genetic basis of a rare disease",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-seltene-inheritance-pattern"
+        },
+        "name": "MII EX SE Inheritance Pattern",
+        "description": "Extension to capture the mode of inheritance of a rare disease",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-seltene-penetrance"
+        },
+        "name": "MII EX SE Penetrance",
+        "description": "Extension to capture the penetrance of genetic variants associated with a rare disease",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-seltene-symptom-condition"
+        },
+        "name": "MII Example SE Symptom Condition",
+        "description": "Example of a symptom condition in the context of rare diseases using HPO codes",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-lm-seltene"
+        },
+        "name": "MII LM SE",
+        "description": "MII LogicalModel Modul Seltene Erkraknungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-blutgruppe"
+        },
+        "name": "MII PR SE Blutgruppe",
+        "description": "Observation-Profil für die Erfassung der Blutgruppe (AB0 und Rhesusfaktor) im Kontext seltener Erkrankungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-clinical-diagnosis"
+        },
+        "name": "MII PR SE Clinical Diagnosis",
+        "description": "Profile for clinical diagnosis of rare diseases with HPO phenotype codes. This profile is used for clinically diagnosed rare diseases based on phenotypic presentation.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-familienanamnese"
+        },
+        "name": "MII PR SE Familienanamnese",
+        "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil. Für jedes Familienmitglied wird eine separate FamilyMemberHistory-Ressource erstellt. Das Profil unterstützt die Dokumentation von Todesfällen durch seltene Erkrankungen über condition.contributedToDeath. Für den Indexpatienten selbst kann relationship.coding[snomed] = 116154003 | Patient | verwendet werden, um den Tod des Patienten durch eine seltene Erkrankung einheitlich zu dokumentieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-genetic-diagnosis"
+        },
+        "name": "MII PR SE Genetic Diagnosis",
+        "description": "Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and links to MolGen variant/diagnostic implication resources. This profile is used when a rare disease diagnosis has been confirmed through genetic testing.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-hueftumfang"
+        },
+        "name": "MII PR SE Hüftumfang",
+        "description": "Profil zur Dokumentation des Hüftumfangs (maximale Gesäßprotuberanz) eines Patienten. Relevant für seltene Erkrankungen mit Auswirkungen auf die Körperproportionen, metabolische Erkrankungen oder Skelettdysplasien.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-kopfumfang"
+        },
+        "name": "MII PR SE Kopfumfang",
+        "description": "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-studie"
+        },
+        "name": "MII PR SE Studie",
+        "description": "SE Studie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage"
+        },
+        "name": "MII PR SE Studieneinschluss Anfrage",
+        "description": "Anfrage zum Studieneinschluss",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-taillenumfang"
+        },
+        "name": "MII PR SE Taillenumfang",
+        "description": "Profil zur Dokumentation des Taillenumfangs (Bauchumfang auf Nabelhöhe) eines Patienten. Relevant für seltene Erkrankungen mit metabolischen Komponenten oder Skelettdysplasien.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-therapieempfehlung-kombination"
+        },
+        "name": "MII PR SE Therapieempfehlung Kombinationstherapie",
+        "description": "Therapieempfehlung für eine medikamentöse Kombinationstherapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"
+        },
+        "name": "MII PR SE Therapieempfehlung Nicht-Medikamentös",
+        "description": "Therapieempfehlung für nicht-medikamentöse Interventionen bei seltenen Erkrankungen (z.B. Ernährungstherapie, Gentherapie, Prophylaxe, Früherkennung)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-therapieempfehlung"
+        },
+        "name": "MII PR SE Therapieempfehlung Systemische Therapie",
+        "description": "Therapieempfehlung für eine medikamentöse Systemische Therapie",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-therapieplan"
+        },
+        "name": "MII PR SE Therapieplan",
+        "description": "Therapieplan",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt"
+        },
+        "name": "MII PR Seltene Erkrankungen Therapie Durchgeführt",
+        "description": "Minimales Profil zur Dokumentation durchgeführter Therapien bei Seltenen Erkrankungen gemäß NARSE-Klassifikation. Dieses Profil erfasst Therapien unabhängig vom Durchführungsort (ambulant, stationär, außerhalb des Krankenhauses).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-clinical-impression"
+        },
+        "name": "MII Profile SE Clinical Impression",
+        "description": "Profile for clinical impressions in the context of rare diseases. This profile captures clinical assessments and suspected diagnoses based on phenotypic findings and symptoms.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-hpo-assessment"
+        },
+        "name": "MII Profile SE HPO Assessment",
+        "description": "Profile for HPO-based phenotypic observations in the context of rare diseases. This profile uses the Human Phenotype Ontology (HPO) to describe clinical symptoms and phenotypic abnormalities.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-symptom-condition"
+        },
+        "name": "MII Profile SE Symptom Condition",
+        "description": "Profile for symptom-based conditions in the context of rare diseases. This profile captures symptomatic conditions with temporal characteristics, complementing the HPO Assessment Observation profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-blutgruppe"
+        },
+        "name": "MII VS SE Blutgruppe",
+        "description": "ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List für 882-1",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-clinical-diagnosis-category"
+        },
+        "name": "MII VS SE Clinical Diagnosis Category",
+        "description": "Value set for categorizing clinical diagnoses of rare diseases",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-empfehlung-status-begruendung"
+        },
+        "name": "MII VS SE Empfehlung Status Begründung",
+        "description": "ValueSet für Begründung bei fehlender Empfehlung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-genetic-basis"
+        },
+        "name": "MII VS SE Genetic Basis",
+        "description": "Value set for types of genetic basis of rare diseases",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-hpo-age-of-onset"
+        },
+        "name": "MII VS SE HPO Age of Onset",
+        "description": "Value set containing HPO terms for age of onset of diseases",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-hpo-inheritance-pattern"
+        },
+        "name": "MII VS SE HPO Inheritance Pattern",
+        "description": "Value set containing HPO terms for modes of inheritance",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-penetrance"
+        },
+        "name": "MII VS SE Penetrance",
+        "description": "Value set for qualitative descriptions of genetic penetrance",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-therapieempfehlung-strategie"
+        },
+        "name": "MII VS SE Therapieempfehlung Strategie",
+        "description": "ValueSet für Strategietypen von Therapieempfehlungen bei seltenen Erkrankungen (Modellvorhaben GenomSeq)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-therapieempfehlung-strategie-medikamentoes"
+        },
+        "name": "MII VS SE Therapieempfehlung Strategie - Medikamentös",
+        "description": "ValueSet für medikamentöse Therapiestrategien (für MedicationRequest Profile) - Verwendet für MedicationRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes"
+        },
+        "name": "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
+        "description": "ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profile) - Verwendet für ServiceRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-therapieempfehlung-typ"
+        },
+        "name": "MII VS SE Therapieempfehlung Typ",
+        "description": "ValueSet für Therapietypen (kausal/symptomatisch) bei seltenen Erkrankungen (Modellvorhaben GenomSeq)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-hpo-change-status"
+        },
+        "name": "MII VS Seltene Erkrankungen HPO Change Status",
+        "description": "ValueSet für Änderungsstatus von HPO-Phänotypen gemäß Modellvorhaben Genomsequenzierung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-narse-therapietyp"
+        },
+        "name": "MII VS Seltene Erkrankungen NARSE Therapietyp",
+        "description": "ValueSet für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-symptom-change-status-combined"
+        },
+        "name": "MII VS Seltene Erkrankungen Symptom Change Status (Combined)",
+        "description": "ValueSet zur Dokumentation von Änderungen bei Symptomen/Phänotypen über Zeit. Kombiniert MVGenomSeq-spezifische Codes mit SNOMED CT-Codes für internationale Interoperabilität.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "FamilyMemberHistory/mii-exa-seltene-familienanamnese"
+        },
+        "name": "mii-exa-seltene-familienanamnese",
+        "description": "Example Patient Family Anamnesis",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese"
+      },
+      {
+        "reference": {
+          "reference": "Observation/symptom-mitral-regurg"
+        },
+        "name": "Mitralklappeninsuffizienz",
+        "description": "Milde Mitralklappeninsuffizienz Grad I",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/example-cf-genetic"
+        },
+        "name": "Mukoviszidose - Genetisch bestätigt",
+        "description": "Genetisch bestätigte Mukoviszidose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/example-cf-clinical"
+        },
+        "name": "Mukoviszidose - Klinischer Verdacht",
+        "description": "Initiale klinische Verdachtsdiagnose Mukoviszidose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/example-cf-excluded-after-screening"
+        },
+        "name": "Mukoviszidose - Nach positivem Screening ausgeschlossen",
+        "description": "CF nach auffälligem Neugeborenenscreening genetisch ausgeschlossen",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-screening-001"
+        },
+        "name": "Neugeborenenscreening",
+        "description": "Neugeborenenscreening mit SMA-Verdacht",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/example-noonan-clinical-diagnosis"
+        },
+        "name": "Noonan-Syndrom - Klinische Diagnose",
+        "description": "Beispiel einer klinischen Diagnose des Noonan-Syndroms",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ext-seltene-onset-age"
+        },
+        "name": "Onset Age Extension",
+        "description": "Extension to capture the age at onset of a condition. This backports the onsetAge functionality from FHIR R5 to R4.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ext-seltene-phenotypic-pattern"
+        },
+        "name": "Phenotypic Pattern Extension",
+        "description": "Extension to link syndrome diagnoses to characteristic phenotypic patterns or symptom clusters",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-pku-diagnosis"
+        },
+        "name": "Phenylketonurie - Genetische Diagnose",
+        "description": "Genetisch bestätigte Phenylketonurie (PKU)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Observation/recurrent-respiratory-infections"
+        },
+        "name": "Rezidivierende Atemwegsinfekte - HPO-kodiert",
+        "description": "Häufige respiratorische Infektionen bei CF",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/example-sma-excluded-genetic"
+        },
+        "name": "SMA - Genetisch ausgeschlossen",
+        "description": "Spinale Muskelatrophie genetisch ausgeschlossen",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/molgen-diagnostic-implication-sma"
+        },
+        "name": "SMA Diagnostische Implikation - MolGen",
+        "description": "Diagnostischer Bericht zur SMA-Genetik",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/bundle-sma-complete"
+        },
+        "name": "SMA Fallbeispiel - Vollständiges Transaction Bundle",
+        "description": "Transaction Bundle mit allen Ressourcen für den SMA Fall inkl. Diagnoseverlauf",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/molgen-sma-negative"
+        },
+        "name": "SMA Genetik - Negativbefund",
+        "description": "Genetischer Test schließt SMA aus",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-sma-genetic"
+        },
+        "name": "SMA Genetische Diagnose",
+        "description": "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-sma-clinical"
+        },
+        "name": "SMA Klinische Diagnose",
+        "description": "Klinische Diagnose SMA Typ 1 bei Erstvorstellung",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-sma-screening"
+        },
+        "name": "SMA Neugeborenenscreening Ergebnis",
+        "description": "Positives SMA-Screening beim Neugeborenenscreening",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "name": "SMA Patient - Neugeborenes Mädchen",
+        "description": "Neugeborenes Mädchen mit bestätigter SMA Typ 1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/example-sma-genetic-diagnosis"
+        },
+        "name": "SMA Typ 1 - Genetisch bestätigte Diagnose",
+        "description": "Beispiel einer genetisch bestätigten Diagnose der spinalen Muskelatrophie Typ 1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-sma-suspected"
+        },
+        "name": "SMA Verdacht - Neugeborenenscreening",
+        "description": "Verdacht auf SMA beim Neugeborenenscreening",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Observation/molgen-smn1-normal-copies"
+        },
+        "name": "SMN1 - Normale Kopienanzahl",
+        "description": "2 Kopien SMN1 - schließt SMA aus",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/variant-smn1-001"
+        },
+        "name": "SMN1 Gen - Homozygote Deletion",
+        "description": "0 Kopien des SMN1-Gens nachgewiesen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/molgen-variant-smn1-deletion"
+        },
+        "name": "SMN1 Gen Deletion - MolGen Variante",
+        "description": "Homozygote Deletion des SMN1-Gens bei SMA",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/variant-smn2-001"
+        },
+        "name": "SMN2 Gen - Kopienanzahl",
+        "description": "2 Kopien des SMN2-Gens nachgewiesen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounter-stationaer-001"
+        },
+        "name": "Stationärer Aufenthalt zur Gentherapie",
+        "description": "Stationäre Aufnahme für Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ext-seltene-syndrome-category"
+        },
+        "name": "Syndrome Category Extension",
+        "description": "Extension to categorize syndrome types for rare diseases (genetic, metabolic, developmental, etc.)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-syndrome-category"
+        },
+        "name": "Syndrome Category Value Set",
+        "description": "Categories for classifying syndrome types in rare diseases",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-taillenumfang"
+        },
+        "name": "Taillenumfang Beispiel",
+        "description": "Beispiel einer Taillenumfang-Messung bei einem Patienten mit seltener Erkrankung.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-taillenumfang"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-seltene-therapieplan"
+        },
+        "name": "Therapieplan Example",
+        "description": "Example of a Therapieplan for a patient.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan"
+      },
+      {
+        "reference": {
+          "reference": "Observation/symptom-chest-pain"
+        },
+        "name": "Thoraxschmerzen",
+        "description": "Akute Thoraxschmerzen als Präsentationssymptom",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-plt-001"
+        },
+        "name": "Thrombozytenzahl - Post-therapeutisch",
+        "description": "Thrombozytenzahl nach Gentherapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-troponin-003"
+        },
+        "name": "Troponin T hs - 01.08.2024",
+        "description": "Troponin T hochsensitiv nach Therapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-troponin-004"
+        },
+        "name": "Troponin T hs - 12.08.2024",
+        "description": "Troponin T hochsensitiv bei Nachsorge",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-troponin-001"
+        },
+        "name": "Troponin T hs - 22.07.2024",
+        "description": "Troponin T hochsensitiv Baseline",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-troponin-002"
+        },
+        "name": "Troponin T hs - 28.07.2024",
+        "description": "Troponin T hochsensitiv vor Therapie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/vsd"
+        },
+        "name": "Ventrikelseptumdefekt - HPO-kodiert",
+        "description": "Angeborener Ventrikelseptumdefekt",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/von-seltene-betroffen-vs"
+        },
+        "name": "Von SE betroffen Value Set",
+        "description": "ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Verwendet SNOMED CT codes für internationale Interoperabilität.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/von-seltene-betroffen"
+        },
+        "name": "VonSEBetroffen",
+        "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "guidance.html",
+          "title": "Guidance",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "information_model.html",
+              "title": "Information-Model",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "fhir_model.html",
+              "title": "FHIR-Model",
+              "generation": "markdown"
+            }
+          ]
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2022+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      }
+    ]
+  }
+}

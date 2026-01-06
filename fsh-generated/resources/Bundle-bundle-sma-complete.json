@@ -1,0 +1,1501 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-sma-complete",
+  "type": "transaction",
+  "timestamp": "2024-08-12T14:00:00Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:6830d99e-9bbe-48ed-8927-ff28eadc42e0",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-sma-001",
+        "identifier": [
+          {
+            "system": "https://www.medizininformatik-initiative.de/fhir/sid/patient-id",
+            "value": "SMA-2024-001"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "2024-07-01"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:117180a6-0392-47c5-8841-aa5b57d0e47e",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-sma-suspected",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2026.0.0"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "64383006",
+              "display": "Werdnig-Hoffmann disease"
+            },
+            {
+              "system": "http://human-phenotype-ontology.org",
+              "code": "HP:0007373",
+              "display": "Motor neuron atrophy"
+            }
+          ],
+          "text": "Verdacht auf Spinale Muskelatrophie"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "unconfirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "encounter-diagnosis",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2024-07-18"
+          }
+        ],
+        "recordedDate": "2024-07-18",
+        "encounter": {
+          "reference": "Encounter/encounter-screening-001"
+        },
+        "evidence": [
+          {
+            "code": [
+              {
+                "text": "Positives Neugeborenenscreening"
+              }
+            ],
+            "detail": [
+              {
+                "reference": "Observation/observation-sma-screening"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Verdacht beim Neugeborenenscreening gestellt - SMN1 Exon 7 nicht nachweisbar"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7041e5af-feab-4650-af1b-e2051ba0a95a",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-sma-clinical",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2026.0.0"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+              "code": "G12.0",
+              "display": "Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]",
+              "version": "2024"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "64383006",
+              "display": "Werdnig-Hoffmann disease"
+            },
+            {
+              "system": "http://www.orpha.net",
+              "code": "83330",
+              "display": "Proximal spinal muscular atrophy type 1"
+            },
+            {
+              "system": "http://human-phenotype-ontology.org",
+              "code": "HP:0007373",
+              "display": "Motor neuron atrophy"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "encounter-diagnosis",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2024-07-22"
+          }
+        ],
+        "recordedDate": "2024-07-22",
+        "encounter": {
+          "reference": "Encounter/encounter-ambulant-001"
+        },
+        "onsetDateTime": "2024-07-01",
+        "evidence": [
+          {
+            "code": [
+              {
+                "text": "Klinische Präsentation"
+              }
+            ],
+            "detail": [
+              {
+                "reference": "Observation/observation-troponin-001"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Klinische Diagnose basierend auf typischer Präsentation: Neonatale Hypotonie, fehlende Muskeleigenreflexe, erhöhtes Troponin"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9596df71-0f1b-495f-bf1c-16708dc952bf",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-sma-genetic",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2026.0.0"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "782964007",
+                "system": "http://snomed.info/sct",
+                "display": "Genetic disease"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://omim.org",
+              "code": "253300",
+              "display": "Spinal muscular atrophy, type I",
+              "version": "2024"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "64383006",
+              "display": "Werdnig-Hoffmann disease"
+            },
+            {
+              "system": "http://www.orpha.net",
+              "code": "83330",
+              "display": "Proximal spinal muscular atrophy type 1"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2024-07-26"
+          }
+        ],
+        "recordedDate": "2024-07-26",
+        "onsetDateTime": "2024-07-01",
+        "evidence": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "code": "106221001",
+                    "system": "http://snomed.info/sct",
+                    "display": "Genetic finding"
+                  }
+                ]
+              }
+            ],
+            "detail": [
+              {
+                "reference": "Observation/variant-smn1-001"
+              },
+              {
+                "reference": "Observation/variant-smn2-001"
+              }
+            ]
+          },
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "code": "405824009",
+                    "system": "http://snomed.info/sct",
+                    "display": "Genetic test"
+                  }
+                ]
+              }
+            ],
+            "detail": [
+              {
+                "reference": "DiagnosticReport/molgen-diagnostic-implication-sma"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "0 Kopien des SMN1-Gens, 2 Kopien des SMN2-Gens - krankheitsursächlich. Genetische Diagnose existiert parallel zur klinischen Diagnose."
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:00e23000-f21c-470d-8f71-1942f0f72efe",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "id": "family-history-001",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese|2026.0.0"
+          ]
+        },
+        "extension": [
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "261665006",
+                  "system": "http://snomed.info/sct",
+                  "display": "Unknown"
+                }
+              ]
+            }
+          }
+        ],
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "78652007",
+              "display": "Great grandmother"
+            }
+          ]
+        },
+        "status": "completed",
+        "patient": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "date": "2024-07-22",
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "129565002",
+                  "system": "http://snomed.info/sct",
+                  "display": "Disorder of muscle"
+                }
+              ],
+              "text": "Unbekannte Muskelerkrankung"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "FamilyMemberHistory"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:07ff35a6-561b-4a3b-bfc0-be528e6ab5a4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-sma-screening",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "92005-8",
+              "system": "http://loinc.org",
+              "display": "Spinal muscular atrophy newborn screening panel"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "effectiveDateTime": "2024-07-18",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "260373001",
+              "system": "http://snomed.info/sct",
+              "display": "Detected"
+            }
+          ]
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "A",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "display": "Abnormal"
+              }
+            ]
+          }
+        ],
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "92004-1",
+                  "system": "http://loinc.org",
+                  "display": "Spinal muscular atrophy newborn screen interpretation"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "text": "Hinweis auf SMA - SMN1 Exon 7 Deletion nachgewiesen"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "92002-5",
+                  "system": "http://loinc.org",
+                  "display": "SMN1 gene [Cycle Threshold #] in DBS by NAA with probe detection"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 0,
+              "unit": "Ct",
+              "system": "http://unitsofmeasure.org",
+              "code": "1"
+            },
+            "interpretation": [
+              {
+                "coding": [
+                  {
+                    "code": "A",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                    "display": "Abnormal"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Positives SMA-Screening. Konfirmatorische Diagnostik empfohlen."
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:89231fbc-2218-499e-b3f5-c11368975c6e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "variant-smn1-001",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "55233-1",
+              "system": "http://loinc.org",
+              "display": "Genetic analysis master panel"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "effectiveDateTime": "2024-07-26",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "10828004",
+              "system": "http://snomed.info/sct",
+              "display": "Positive"
+            }
+          ]
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "48018-6",
+                  "system": "http://loinc.org",
+                  "display": "Gene studied [ID]"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "HGNC:11117",
+                  "system": "http://www.genenames.org/geneId",
+                  "display": "SMN1"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "62374-4",
+                  "system": "http://loinc.org",
+                  "display": "Human reference sequence assembly version"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "text": "GRCh38"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "53034-5",
+                  "system": "http://loinc.org",
+                  "display": "Allelic state"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA6705-3",
+                  "system": "http://loinc.org",
+                  "display": "Homozygous"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "text": "Copy Number"
+            },
+            "valueQuantity": {
+              "value": 0,
+              "unit": "copies"
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "POS",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "display": "Positive"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Homozygote Deletion des SMN1-Gens, krankheitsursächlich für SMA"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3325c12d-0646-433e-8e46-042168eccf92",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "variant-smn2-001",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "55233-1",
+              "system": "http://loinc.org",
+              "display": "Genetic analysis master panel"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "effectiveDateTime": "2024-07-26",
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "48018-6",
+                  "system": "http://loinc.org",
+                  "display": "Gene studied [ID]"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "HGNC:11118",
+                  "system": "http://www.genenames.org/geneId",
+                  "display": "SMN2"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "text": "Copy Number"
+            },
+            "valueQuantity": {
+              "value": 2,
+              "unit": "copies"
+            }
+          }
+        ],
+        "note": [
+          {
+            "text": "2 Kopien des SMN2-Gens, Modifikator des Phänotyps"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:127dc51a-19ad-44ff-bf75-b1804d232109",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "procedure-gentherapy-001",
+        "status": "completed",
+        "category": {
+          "coding": [
+            {
+              "code": "277132007",
+              "system": "http://snomed.info/sct",
+              "display": "Therapeutic procedure"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "MLU3LU3EVV",
+              "system": "http://fdasis.nlm.nih.gov",
+              "display": "ONASEMNOGENE ABEPARVOVEC"
+            },
+            {
+              "code": "788110002",
+              "system": "http://snomed.info/sct",
+              "display": "Onasemnogene abeparvovec"
+            }
+          ],
+          "text": "Gentherapie mit Onasemnogene abeparvovec (Zolgensma)"
+        },
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "performedDateTime": "2024-07-29",
+        "reasonReference": [
+          {
+            "reference": "Condition/condition-sma-genetic"
+          }
+        ],
+        "note": [
+          {
+            "text": "Gentherapeutikum ohne Komplikationen verabreicht, vorherige Gabe von Prednisolon"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Procedure"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ccdcbdd3-8153-4ef2-8d76-1ee0f681328b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-alt-001",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "1742-6",
+              "system": "http://loinc.org",
+              "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "effectiveDateTime": "2024-07-29",
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "N",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Normwertig post-therapeutisch"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bb92ee35-b577-42a8-bf9a-b51cbe5debae",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-ast-001",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "1920-8",
+              "system": "http://loinc.org",
+              "display": "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "effectiveDateTime": "2024-07-29",
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "N",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Normwertig post-therapeutisch"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:38b52a28-bfa6-451f-8dad-9d0b8a8466bc",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-plt-001",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "777-3",
+              "system": "http://loinc.org",
+              "display": "Platelets [#/volume] in Blood by Automated count"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "effectiveDateTime": "2024-07-29",
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "N",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Normwertig post-therapeutisch"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ab5b69cf-4eae-4aa3-8ce4-5b5eb1a4a46a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-troponin-001",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "6598-7",
+              "system": "http://loinc.org",
+              "display": "Troponin T.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "effectiveDateTime": "2024-07-22",
+        "valueQuantity": {
+          "value": 92,
+          "code": "ng/L",
+          "system": "http://unitsofmeasure.org",
+          "unit": "ng/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:23b8775e-4704-4037-930e-68d1628cf0b8",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-troponin-002",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "6598-7",
+              "system": "http://loinc.org",
+              "display": "Troponin T.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "effectiveDateTime": "2024-07-28",
+        "valueQuantity": {
+          "value": 58,
+          "code": "ng/L",
+          "system": "http://unitsofmeasure.org",
+          "unit": "ng/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7d919637-556d-441d-8145-706eb3543fa3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-troponin-003",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "6598-7",
+              "system": "http://loinc.org",
+              "display": "Troponin T.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "effectiveDateTime": "2024-08-01",
+        "valueQuantity": {
+          "value": 57,
+          "code": "ng/L",
+          "system": "http://unitsofmeasure.org",
+          "unit": "ng/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0ccc9861-03d4-403b-a650-a9f24d64a615",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-troponin-004",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "6598-7",
+              "system": "http://loinc.org",
+              "display": "Troponin T.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "effectiveDateTime": "2024-08-12",
+        "valueQuantity": {
+          "value": 106,
+          "code": "ng/L",
+          "system": "http://unitsofmeasure.org",
+          "unit": "ng/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "display": "High"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Troponin T weiter erhöht, bereits prä-therapeutisch erhöht"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:81c1e902-ea19-4d32-adbf-3ee234509cf6",
+      "resource": {
+        "resourceType": "ClinicalImpression",
+        "id": "clinical-impression-erstvorstellung",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2026.0.0"
+          ]
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-ambulant-001"
+        },
+        "effectiveDateTime": "2024-07-22",
+        "date": "2024-07-22",
+        "summary": "Neugeborenes mit V.a. SMA aus Neugeborenenscreening. Familienanamnese zeigt unklare Muskelerkrankung der Urgroßmutter. Troponin T bereits erhöht (92 ng/l).",
+        "problem": [
+          {
+            "reference": "Condition/condition-sma-suspected"
+          }
+        ],
+        "finding": [
+          {
+            "itemReference": {
+              "reference": "Condition/condition-sma-clinical"
+            }
+          },
+          {
+            "itemReference": {
+              "reference": "Condition/condition-sma-genetic"
+            }
+          },
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "code": "1363512008",
+                  "system": "http://snomed.info/sct",
+                  "display": "Troponin above reference range"
+                }
+              ]
+            },
+            "itemReference": {
+              "reference": "Observation/observation-troponin-001"
+            }
+          }
+        ],
+        "investigation": [
+          {
+            "code": {
+              "text": "Familienanamnese"
+            },
+            "item": [
+              {
+                "reference": "FamilyMemberHistory/family-history-001"
+              }
+            ]
+          },
+          {
+            "code": {
+              "text": "Labordiagnostik"
+            },
+            "item": [
+              {
+                "reference": "Observation/observation-troponin-001"
+              }
+            ]
+          }
+        ],
+        "prognosisCodeableConcept": [
+          {
+            "coding": [
+              {
+                "code": "67334001",
+                "system": "http://snomed.info/sct",
+                "display": "Guarded prognosis"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Klinische Untersuchung gemäß SMA-Diagnoseprotokoll. Blutentnahme für Genetik veranlasst."
+          },
+          {
+            "text": "Klinisches Bild vereinbar mit SMA Typ 1. Molekulargenetische Bestätigung ausstehend. Eltern über Therapieoptionen informiert."
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "ClinicalImpression"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b764f4a2-50c0-4624-ad49-8eb9405aaf9d",
+      "resource": {
+        "resourceType": "ClinicalImpression",
+        "id": "clinical-impression-nachsorge",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2026.0.0"
+          ]
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-nachsorge-001"
+        },
+        "effectiveDateTime": "2024-08-12",
+        "date": "2024-08-12",
+        "previous": {
+          "reference": "ClinicalImpression/clinical-impression-erstvorstellung"
+        },
+        "summary": "Erste Nachsorge 14 Tage nach Gentherapie. Klinisch stabil. Troponin T weiter erhöht (106 ng/l), war jedoch bereits prätherapeutisch erhöht.",
+        "finding": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "code": "1363512008",
+                  "system": "http://snomed.info/sct",
+                  "display": "Troponin above reference range"
+                }
+              ]
+            },
+            "itemReference": {
+              "reference": "Observation/observation-troponin-004"
+            },
+            "basis": "Troponin-Verlauf: 22.07: 92 ng/l, 28.07: 58 ng/l, 01.08: 57 ng/l, 12.08: 106 ng/l"
+          },
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "code": "166645004",
+                  "system": "http://snomed.info/sct",
+                  "display": "Alanine aminotransferase level within reference range"
+                }
+              ]
+            },
+            "basis": "ALT normwertig"
+          },
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "code": "166667003",
+                  "system": "http://snomed.info/sct",
+                  "display": "Aspartate aminotransferase/serum glutamic oxaloacetic transaminase level within reference range"
+                }
+              ]
+            },
+            "basis": "AST normwertig"
+          },
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "code": "165555003",
+                  "system": "http://snomed.info/sct",
+                  "display": "Platelet count normal"
+                }
+              ]
+            },
+            "basis": "Thrombozytenzahl normwertig"
+          }
+        ],
+        "problem": [
+          {
+            "reference": "Condition/condition-sma-clinical"
+          },
+          {
+            "reference": "Condition/condition-sma-genetic"
+          }
+        ],
+        "prognosisCodeableConcept": [
+          {
+            "coding": [
+              {
+                "code": "67334001",
+                "system": "http://snomed.info/sct",
+                "display": "Guarded prognosis"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Standardisierte Nachsorgeuntersuchung nach Gentherapie gemäß Zentrumsprotokoll"
+          },
+          {
+            "text": "Troponin-Erhöhung präexistent, nicht therapieassoziiert. Gentherapie gut vertragen. Weiterführung der Prednisolon-Therapie. Nächste Kontrolle in 4 Wochen."
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "ClinicalImpression"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8320638f-eca2-4586-b173-bd0c49d9ae9d",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-screening-001",
+        "status": "finished",
+        "class": {
+          "code": "AMB",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "60151004",
+                "system": "http://snomed.info/sct",
+                "display": "Neonatal screening (procedure)"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "period": {
+          "start": "2024-07-18",
+          "end": "2024-07-18"
+        },
+        "reasonCode": [
+          {
+            "text": "Neugeborenenscreening"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:98afd481-d1d6-4c2e-9d1c-51c651964e5f",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-ambulant-001",
+        "status": "finished",
+        "class": {
+          "code": "AMB",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "390906007",
+                "system": "http://snomed.info/sct",
+                "display": "Follow-up encounter"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "period": {
+          "start": "2024-07-22",
+          "end": "2024-07-22"
+        },
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/condition-sma-clinical"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                  "display": "Admission diagnosis"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bdb5bd40-064b-4b79-aab6-8d9cc9db4873",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-stationaer-001",
+        "status": "finished",
+        "class": {
+          "code": "IMP",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "display": "inpatient encounter"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "32485007",
+                "system": "http://snomed.info/sct",
+                "display": "Hospital admission"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "period": {
+          "start": "2024-07-29",
+          "end": "2024-07-30"
+        },
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/condition-sma-genetic"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "CC",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                  "display": "Chief complaint"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f8e29cb1-a8a9-4d56-ac0e-65fca096f860",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-nachsorge-001",
+        "status": "finished",
+        "class": {
+          "code": "AMB",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "390906007",
+                "system": "http://snomed.info/sct",
+                "display": "Follow-up encounter"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/patient-sma-001"
+        },
+        "period": {
+          "start": "2024-08-12",
+          "end": "2024-08-12"
+        },
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/condition-sma-genetic"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    }
+  ]
+}

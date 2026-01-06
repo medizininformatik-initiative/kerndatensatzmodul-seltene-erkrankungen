@@ -1,0 +1,133 @@
+{
+  "resourceType": "Observation",
+  "id": "molgen-variant-dmd-deletion-exon45-47",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "69548-6",
+        "system": "http://loinc.org",
+        "display": "Genetic variant assessment"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-09-15",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "10828004",
+        "system": "http://snomed.info/sct",
+        "display": "Positive"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "48018-6",
+            "system": "http://loinc.org",
+            "display": "Gene studied [ID]"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "HGNC:2928",
+            "system": "http://www.genenames.org/geneId",
+            "display": "DMD"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "48002-0",
+            "system": "http://loinc.org",
+            "display": "Genomic source class"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "LA6683-2",
+            "system": "http://loinc.org",
+            "display": "Germline"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "81290-9",
+            "system": "http://loinc.org",
+            "display": "Genomic DNA change (gHGVS)"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "text": "NC_000023.11:g.31774346_31953400del"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "48004-6",
+            "system": "http://loinc.org",
+            "display": "DNA change (c.HGVS)"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "text": "c.6439-?_6912+?del"
+      }
+    },
+    {
+      "code": {
+        "text": "Deleted Exons"
+      },
+      "valueString": "Exons 45-47"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "53037-8",
+            "system": "http://loinc.org",
+            "display": "Genetic variation clinical significance [Imp]"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "LA6668-3",
+            "system": "http://loinc.org",
+            "display": "Pathogenic"
+          }
+        ]
+      }
+    }
+  ]
+}

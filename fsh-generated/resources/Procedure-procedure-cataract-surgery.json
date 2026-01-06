@@ -1,0 +1,46 @@
+{
+  "resourceType": "Procedure",
+  "id": "procedure-cataract-surgery",
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "code": "387713003",
+        "system": "http://snomed.info/sct",
+        "display": "Surgical procedure"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "5-144.5a",
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "display": "Extrakapsuläre Extraktion der Linse [ECCE]: Linsenkernverflüssigung [Phakoemulsifikation] über kornealen Zugang: Mit Einführung einer kapselfixierten Hinterkammerlinse, monofokale Intraokularlinse"
+      },
+      {
+        "code": "54885007",
+        "system": "http://snomed.info/sct",
+        "display": "Extraction of cataract"
+      }
+    ],
+    "text": "Phakoemulsifikation mit IOL-Implantation"
+  },
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "performedDateTime": "2024-11-12",
+  "reasonReference": [
+    {
+      "reference": "Condition/condition-cataract"
+    }
+  ],
+  "outcome": {
+    "text": "Erfolgreiche Linsenimplantation ohne Komplikationen"
+  },
+  "note": [
+    {
+      "text": "Komplikationslose Phakoemulsifikation beider Augen mit Implantation monofokaler Intraokularlinsen"
+    }
+  ]
+}

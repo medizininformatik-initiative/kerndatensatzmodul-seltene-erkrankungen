@@ -1,0 +1,149 @@
+{
+  "resourceType": "ClinicalImpression",
+  "id": "clinical-impression-seltene-assessment",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2026.0.0"
+    ]
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "encounter": {
+    "reference": "Encounter/encounter-cardiology"
+  },
+  "effectiveDateTime": "2024-12-15",
+  "date": "2024-12-15",
+  "summary": "19-jähriger Patient mit Z.n. Katarakt-OP im ZSE vorstellig. Kardiologische Mitbeurteilung zeigt: Aortenwurzeldilatation (48mm), AKI Grad II, MKI Grad I. Skelettale Merkmale (Hochwuchs 2,13m, Beinlängendifferenz) bestätigen Marfan-Syndrom. Klinische und genetische Diagnose gesichert.",
+  "problem": [
+    {
+      "reference": "Condition/condition-marfan-suspected"
+    },
+    {
+      "reference": "Condition/condition-marfan-clinical"
+    },
+    {
+      "reference": "Condition/condition-marfan-genetic"
+    }
+  ],
+  "finding": [
+    {
+      "itemReference": {
+        "reference": "Condition/condition-marfan-clinical"
+      }
+    },
+    {
+      "itemReference": {
+        "reference": "Condition/condition-marfan-genetic"
+      }
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "251036003",
+            "system": "http://snomed.info/sct",
+            "display": "Aortic root dilatation"
+          }
+        ]
+      },
+      "itemReference": {
+        "reference": "Observation/symptom-aortic-root"
+      }
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "60234000",
+            "system": "http://snomed.info/sct",
+            "display": "Aortic valve regurgitation"
+          }
+        ]
+      },
+      "itemReference": {
+        "reference": "Observation/symptom-aortic-regurg"
+      }
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "48724000",
+            "system": "http://snomed.info/sct",
+            "display": "Mitral valve regurgitation"
+          }
+        ]
+      },
+      "itemReference": {
+        "reference": "Observation/symptom-mitral-regurg"
+      }
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "248328003",
+            "system": "http://snomed.info/sct",
+            "display": "Tall stature"
+          }
+        ]
+      },
+      "itemReference": {
+        "reference": "Observation/observation-height-001"
+      }
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "707738004",
+            "system": "http://snomed.info/sct",
+            "display": "Leg length discrepancy"
+          }
+        ]
+      },
+      "itemReference": {
+        "reference": "Observation/observation-leg-asymmetry"
+      }
+    }
+  ],
+  "investigation": [
+    {
+      "code": {
+        "text": "Echokardiographie"
+      },
+      "item": [
+        {
+          "reference": "Observation/observation-echo-aortic"
+        },
+        {
+          "reference": "Observation/observation-echo-av"
+        },
+        {
+          "reference": "Observation/observation-echo-mv"
+        }
+      ]
+    }
+  ],
+  "prognosisCodeableConcept": [
+    {
+      "coding": [
+        {
+          "code": "67334001",
+          "system": "http://snomed.info/sct",
+          "display": "Guarded prognosis"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "Katarakt in jungem Alter war Anlass für ZSE-Konsultation. Marfan-Syndrom klinisch und genetisch (FBN1-Mutation) bestätigt. OP-Indikation für Aortenwurzelersatz durch Kardiologie gestellt. Medikamentöse Therapie mit Losartan eingeleitet."
+    },
+    {
+      "text": "Multidisziplinäre Betreuung im ZSE etabliert. Regelmäßige kardiologische Kontrollen alle 6 Monate. Genetische Beratung für Familienplanung empfohlen."
+    }
+  ]
+}

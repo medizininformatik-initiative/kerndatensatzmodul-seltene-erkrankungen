@@ -1,0 +1,51 @@
+{
+  "resourceType": "FamilyMemberHistory",
+  "id": "family-history-001",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese|2026.0.0"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "261665006",
+            "system": "http://snomed.info/sct",
+            "display": "Unknown"
+          }
+        ]
+      }
+    }
+  ],
+  "relationship": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "78652007",
+        "display": "Great grandmother"
+      }
+    ]
+  },
+  "status": "completed",
+  "patient": {
+    "reference": "Patient/patient-sma-001"
+  },
+  "date": "2024-07-22",
+  "condition": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "129565002",
+            "system": "http://snomed.info/sct",
+            "display": "Disorder of muscle"
+          }
+        ],
+        "text": "Unbekannte Muskelerkrankung"
+      }
+    }
+  ]
+}

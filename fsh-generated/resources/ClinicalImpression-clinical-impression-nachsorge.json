@@ -1,0 +1,102 @@
+{
+  "resourceType": "ClinicalImpression",
+  "id": "clinical-impression-nachsorge",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2026.0.0"
+    ]
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/patient-sma-001"
+  },
+  "encounter": {
+    "reference": "Encounter/encounter-nachsorge-001"
+  },
+  "effectiveDateTime": "2024-08-12",
+  "date": "2024-08-12",
+  "previous": {
+    "reference": "ClinicalImpression/clinical-impression-erstvorstellung"
+  },
+  "summary": "Erste Nachsorge 14 Tage nach Gentherapie. Klinisch stabil. Troponin T weiter erhöht (106 ng/l), war jedoch bereits prätherapeutisch erhöht.",
+  "finding": [
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "1363512008",
+            "system": "http://snomed.info/sct",
+            "display": "Troponin above reference range"
+          }
+        ]
+      },
+      "itemReference": {
+        "reference": "Observation/observation-troponin-004"
+      },
+      "basis": "Troponin-Verlauf: 22.07: 92 ng/l, 28.07: 58 ng/l, 01.08: 57 ng/l, 12.08: 106 ng/l"
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "166645004",
+            "system": "http://snomed.info/sct",
+            "display": "Alanine aminotransferase level within reference range"
+          }
+        ]
+      },
+      "basis": "ALT normwertig"
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "166667003",
+            "system": "http://snomed.info/sct",
+            "display": "Aspartate aminotransferase/serum glutamic oxaloacetic transaminase level within reference range"
+          }
+        ]
+      },
+      "basis": "AST normwertig"
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "165555003",
+            "system": "http://snomed.info/sct",
+            "display": "Platelet count normal"
+          }
+        ]
+      },
+      "basis": "Thrombozytenzahl normwertig"
+    }
+  ],
+  "problem": [
+    {
+      "reference": "Condition/condition-sma-clinical"
+    },
+    {
+      "reference": "Condition/condition-sma-genetic"
+    }
+  ],
+  "prognosisCodeableConcept": [
+    {
+      "coding": [
+        {
+          "code": "67334001",
+          "system": "http://snomed.info/sct",
+          "display": "Guarded prognosis"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "Standardisierte Nachsorgeuntersuchung nach Gentherapie gemäß Zentrumsprotokoll"
+    },
+    {
+      "text": "Troponin-Erhöhung präexistent, nicht therapieassoziiert. Gentherapie gut vertragen. Weiterführung der Prednisolon-Therapie. Nächste Kontrolle in 4 Wochen."
+    }
+  ]
+}

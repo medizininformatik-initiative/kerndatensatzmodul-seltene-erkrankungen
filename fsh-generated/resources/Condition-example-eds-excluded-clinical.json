@@ -1,0 +1,81 @@
+{
+  "resourceType": "Condition",
+  "id": "example-eds-excluded-clinical",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2026.0.0"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "code": "Q79.6",
+        "display": "Ehlers-Danlos-Syndrom",
+        "version": "2024"
+      },
+      {
+        "system": "http://www.orpha.net",
+        "code": "98249",
+        "display": "Ehlers-Danlos syndrome"
+      }
+    ],
+    "text": "Ehlers-Danlos-Syndrom (ausgeschlossen)"
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "inactive",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "refuted",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "encounter-diagnosis",
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+      "valueDateTime": "2024-11-20"
+    }
+  ],
+  "recordedDate": "2024-11-20",
+  "abatementDateTime": "2024-11-20",
+  "evidence": [
+    {
+      "code": [
+        {
+          "text": "Beighton-Score niedrig"
+        }
+      ],
+      "detail": [
+        {
+          "reference": "Observation/beighton-score-low"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "EDS als Differentialdiagnose ausgeschlossen. Beighton-Score 2/9, keine Hauthyperextensibilität, keine atrophen Narben."
+    }
+  ]
+}
