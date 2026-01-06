@@ -3,6 +3,9 @@ Parent: RequestGroup
 Id: mii-pr-seltene-therapieempfehlung-kombination
 Title: "MII PR SE Therapieempfehlung Kombinationstherapie"
 Description: "Therapieempfehlung für eine medikamentöse Kombinationstherapie"
+* insert PR_CS_VS_Version
+* insert Publisher
+* ^status = #active
 
 * identifier MS
 

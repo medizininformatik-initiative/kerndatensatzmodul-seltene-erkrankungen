@@ -2,9 +2,21 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-seltene-therapieplan",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan",
+  "version": "2026.0.0",
   "name": "MII_PR_Seltene_Therapieplan",
   "title": "MII PR SE Therapieplan",
   "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
   "description": "Therapieplan",
   "fhirVersion": "4.0.1",
   "kind": "resource",

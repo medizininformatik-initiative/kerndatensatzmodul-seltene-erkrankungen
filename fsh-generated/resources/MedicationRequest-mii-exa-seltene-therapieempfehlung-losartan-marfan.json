@@ -1,0 +1,71 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "mii-exa-seltene-therapieempfehlung-losartan-marfan",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung|2026.0.0"
+    ]
+  },
+  "status": "active",
+  "intent": "proposal",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "prevention-medication",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
+          "display": "Prophylaktische Medikation"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "symptomatic",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
+          "display": "Symptomatisch"
+        }
+      ]
+    }
+  ],
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "code": "C09CA01",
+        "display": "Losartan"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "dosageInstruction": [
+    {
+      "text": "50mg 1x täglich",
+      "timing": {
+        "repeat": {
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      },
+      "doseAndRate": [
+        {
+          "doseQuantity": {
+            "value": 50,
+            "code": "mg",
+            "system": "http://unitsofmeasure.org",
+            "unit": "mg"
+          }
+        }
+      ]
+    }
+  ],
+  "reasonReference": [
+    {
+      "reference": "Condition/condition-marfan-clinical",
+      "display": "Marfan-Syndrom mit Aortenwurzeldilatation"
+    }
+  ]
+}

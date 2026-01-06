@@ -122,115 +122,28 @@ Folgende Suchparameter sind für nicht-medikamentöse Therapieempfehlungen relev
 ### Beispiele
 
 #### Aortenwurzelersatz bei Marfan-Syndrom
-```json
-{
-  "resourceType": "ServiceRequest",
-  "meta": {
-    "profile": ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"]
-  },
-  "status": "active",
-  "intent": "proposal",
-  "priority": "routine",
-  "code": {
-    "coding": [{
-      "system": "http://fhir.de/CodeSystem/dimdi/ops-2024",
-      "code": "5-354.09",
-      "display": "Andere Operationen an Herzklappen: Aortenklappe"
-    }, {
-      "system": "http://snomed.info/sct",
-      "code": "232021009",
-      "display": "Aortic root replacement"
-    }],
-    "text": "Composite-Graft-Implantation (David-OP)"
-  },
-  "subject": {
-    "reference": "Patient/marfan-patient"
-  },
-  "occurrenceDateTime": "2025-03-15",
-  "authoredOn": "2024-12-15",
-  "reasonReference": [{
-    "reference": "Condition/aortic-root-dilatation",
-    "display": "Progrediente Aortenwurzeldilatation bei Marfan-Syndrom"
-  }],
-  "note": [{
-    "text": "Geplanter elektiver Eingriff bei progredienter Aortenwurzeldilatation (48mm) zur Prävention einer Aortendissektion"
-  }]
-}
-```
+
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan}}</tab>
+  <tab title="XML">{{xml:mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan}}</tab>
+</tabs>
 
 #### Physiotherapie bei SMA
-```json
-{
-  "resourceType": "ServiceRequest",
-  "meta": {
-    "profile": ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"]
-  },
-  "status": "active",
-  "intent": "proposal",
-  "priority": "routine",
-  "code": {
-    "coding": [{
-      "system": "http://snomed.info/sct",
-      "code": "91251008",
-      "display": "Physical therapy"
-    }],
-    "text": "Physiotherapie zur Erhaltung der motorischen Funktionen"
-  },
-  "subject": {
-    "reference": "Patient/sma-patient"
-  },
-  "occurrenceTiming": {
-    "repeat": {
-      "frequency": 2,
-      "period": 1,
-      "periodUnit": "wk"
-    }
-  },
-  "authoredOn": "2024-07-29",
-  "reasonReference": [{
-    "reference": "Condition/sma-diagnosis",
-    "display": "Infantile Spinale Muskelatrophie Typ 1"
-  }],
-  "note": [{
-    "text": "Regelmäßige Physiotherapie 2x wöchentlich zur Kontrakturprophylaxe und Erhaltung der Restfunktion"
-  }]
-}
-```
+
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-therapieempfehlung-physiotherapie-sma}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-therapieempfehlung-physiotherapie-sma}}</tab>
+  <tab title="XML">{{xml:mii-exa-seltene-therapieempfehlung-physiotherapie-sma}}</tab>
+</tabs>
 
 #### Genetische Beratung
-```json
-{
-  "resourceType": "ServiceRequest",
-  "meta": {
-    "profile": ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"]
-  },
-  "status": "active",
-  "intent": "proposal",
-  "priority": "routine",
-  "code": {
-    "coding": [{
-      "system": "http://snomed.info/sct",
-      "code": "409063005",
-      "display": "Genetic counseling"
-    }],
-    "text": "Humangenetische Beratung"
-  },
-  "subject": {
-    "reference": "Patient/example"
-  },
-  "authoredOn": "2024-11-01",
-  "reasonCode": [{
-    "coding": [{
-      "system": "http://snomed.info/sct",
-      "code": "134436002",
-      "display": "Family history of genetic disorder"
-    }]
-  }],
-  "note": [{
-    "text": "Beratung bezüglich Vererbungsmodus und Wiederholungsrisiko"
-  }]
-}
-```
+
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-therapieempfehlung-genetische-beratung}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-therapieempfehlung-genetische-beratung}}</tab>
+  <tab title="XML">{{xml:mii-exa-seltene-therapieempfehlung-genetische-beratung}}</tab>
+</tabs>
 
 ---
 

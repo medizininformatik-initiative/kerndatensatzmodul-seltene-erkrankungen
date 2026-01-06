@@ -1,6 +1,6 @@
 ---
 parent:
-topic: Observation
+topic: Hueftumfang-Observation
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hueftumfang
 ---
 

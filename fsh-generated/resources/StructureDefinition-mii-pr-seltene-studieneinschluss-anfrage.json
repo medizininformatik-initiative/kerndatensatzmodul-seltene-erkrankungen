@@ -2,9 +2,21 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-seltene-studieneinschluss-anfrage",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage",
+  "version": "2026.0.0",
   "name": "MII_PR_Seltene_Studieneinschluss_Anfrage",
   "title": "MII PR SE Studieneinschluss Anfrage",
   "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
   "description": "Anfrage zum Studieneinschluss",
   "fhirVersion": "4.0.1",
   "kind": "resource",

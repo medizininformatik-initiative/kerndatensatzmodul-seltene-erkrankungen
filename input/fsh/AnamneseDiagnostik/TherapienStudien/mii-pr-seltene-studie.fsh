@@ -4,6 +4,9 @@ Id: mii-pr-seltene-studie
 Title: "MII PR SE Studie"
 Description: "SE Studie"
 // Note: Changed parent from MII_PR_Studie_Studie to ResearchStudy due to missing snapshot in dependency package
+* insert PR_CS_VS_Version
+* insert Publisher
+* ^status = #active
 
 * identifier 0..* MS
 * identifier ^slicing.discriminator.type = #value

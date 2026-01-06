@@ -1,0 +1,65 @@
+// Example: Aortenwurzelersatz bei Marfan-Syndrom
+Instance: mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan
+InstanceOf: MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes
+Usage: #example
+Title: "Beispiel Aortenwurzelersatz bei Marfan-Syndrom"
+Description: "Beispiel einer nicht-medikamentösen Therapieempfehlung für Aortenwurzelersatz bei Marfan-Syndrom"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes)
+* status = #active
+* intent = #proposal
+* priority = #routine
+* category[MVGenomSeqTherapieStrategie].coding = MII_CS_Seltene_TherapieempfehlungStrategie#prophylactic "Prophylaxe"
+* category[MVGenomSeqTherapieTyp].coding = MII_CS_Seltene_TherapieempfehlungTyp#symptomatic "Symptomatisch"
+* code.coding[ops].system = "http://fhir.de/CodeSystem/bfarm/ops"
+* code.coding[ops].code = #5-354.09
+* code.coding[ops].display = "Andere Operationen an Herzklappen: Aortenklappe"
+* code.coding[snomed] = $SCT#232021009 "Aortic root replacement"
+* code.text = "Composite-Graft-Implantation (David-OP)"
+* subject = Reference(patient-marfan-001)
+* occurrenceDateTime = "2025-03-15"
+* authoredOn = "2024-12-15"
+* reasonReference = Reference(Condition/condition-marfan-clinical)
+* reasonReference.display = "Progrediente Aortenwurzeldilatation bei Marfan-Syndrom"
+* note.text = "Geplanter elektiver Eingriff bei progredienter Aortenwurzeldilatation (48mm) zur Prävention einer Aortendissektion"
+
+// Example: Physiotherapie bei SMA
+Instance: mii-exa-seltene-therapieempfehlung-physiotherapie-sma
+InstanceOf: MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes
+Usage: #example
+Title: "Beispiel Physiotherapie bei SMA"
+Description: "Beispiel einer nicht-medikamentösen Therapieempfehlung für Physiotherapie bei Spinaler Muskelatrophie"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes)
+* status = #active
+* intent = #proposal
+* priority = #routine
+* category[MVGenomSeqTherapieStrategie].coding = MII_CS_Seltene_TherapieempfehlungStrategie#other "Sonstige"
+* category[MVGenomSeqTherapieTyp].coding = MII_CS_Seltene_TherapieempfehlungTyp#symptomatic "Symptomatisch"
+* code.coding[snomed] = $SCT#91251008 "Physical therapy"
+* code.text = "Physiotherapie zur Erhaltung der motorischen Funktionen"
+* subject = Reference(patient-sma-001)
+* occurrenceTiming.repeat.frequency = 2
+* occurrenceTiming.repeat.period = 1
+* occurrenceTiming.repeat.periodUnit = #wk
+* authoredOn = "2024-07-29"
+* reasonReference = Reference(Condition/sma-diagnosis)
+* reasonReference.display = "Infantile Spinale Muskelatrophie Typ 1"
+* note.text = "Regelmäßige Physiotherapie 2x wöchentlich zur Kontrakturprophylaxe und Erhaltung der Restfunktion"
+
+// Example: Genetische Beratung
+Instance: mii-exa-seltene-therapieempfehlung-genetische-beratung
+InstanceOf: MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes
+Usage: #example
+Title: "Beispiel Genetische Beratung"
+Description: "Beispiel einer nicht-medikamentösen Therapieempfehlung für genetische Beratung"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes)
+* status = #active
+* intent = #proposal
+* priority = #routine
+* category[MVGenomSeqTherapieStrategie].coding = MII_CS_Seltene_TherapieempfehlungStrategie#other "Sonstige"
+* category[MVGenomSeqTherapieTyp].coding = MII_CS_Seltene_TherapieempfehlungTyp#symptomatic "Symptomatisch"
+* code.coding[snomed] = $SCT#409063005 "Genetic counseling"
+* code.text = "Humangenetische Beratung"
+* subject = Reference(Patient/example)
+* authoredOn = "2024-11-01"
+* reasonCode.coding = $SCT#134436002 "Family history of genetic disorder"
+* note.text = "Beratung bezüglich Vererbungsmodus und Wiederholungsrisiko"

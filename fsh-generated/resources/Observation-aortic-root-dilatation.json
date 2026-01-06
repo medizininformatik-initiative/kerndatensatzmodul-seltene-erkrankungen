@@ -1,6 +1,33 @@
 {
   "resourceType": "Observation",
   "id": "aortic-root-dilatation",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment|2026.0.0"
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "260411009",
+            "system": "http://snomed.info/sct",
+            "display": "Presence findings"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "LA9633-4",
+            "system": "http://loinc.org",
+            "display": "Present"
+          }
+        ]
+      }
+    }
+  ],
   "status": "final",
   "category": [
     {
@@ -31,12 +58,6 @@
     "reference": "Patient/example"
   },
   "effectiveDateTime": "2024-12-15",
-  "valueQuantity": {
-    "value": 48,
-    "code": "mm",
-    "system": "http://unitsofmeasure.org",
-    "unit": "mm"
-  },
   "interpretation": [
     {
       "coding": [
@@ -48,14 +69,6 @@
       ]
     }
   ],
-  "referenceRange": [
-    {
-      "high": {
-        "value": 40,
-        "unit": "mm"
-      }
-    }
-  ],
   "method": {
     "coding": [
       {
@@ -64,5 +77,10 @@
         "display": "Echocardiography"
       }
     ]
-  }
+  },
+  "note": [
+    {
+      "text": "Aortenwurzeldurchmesser 48mm (Referenz <40mm)"
+    }
+  ]
 }

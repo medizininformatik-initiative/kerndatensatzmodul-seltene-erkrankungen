@@ -1,3 +1,7 @@
+---
+parent:
+topic: Terminologien
+---
 ## {{page-title}}
 
 > **Hinweis zum BfArM Terminologieserver:** Die nachfolgend beschriebenen Kodesysteme ICD-10-GM und ORPHAcodes können über den [Terminologieserver des BfArM](https://www.bfarm.de/DE/Kodiersysteme/Terminologieserver/_node.html) abgerufen und in FHIR-basierten Systemen genutzt werden. Der Server stellt diese Terminologien als FHIR-konforme CodeSystem- und ValueSet-Ressourcen zur Verfügung.

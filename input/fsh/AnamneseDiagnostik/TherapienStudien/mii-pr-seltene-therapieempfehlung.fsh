@@ -3,6 +3,9 @@ Parent: https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/S
 Id: mii-pr-seltene-therapieempfehlung
 Title: "MII PR SE Therapieempfehlung Systemische Therapie"
 Description: "Therapieempfehlung für eine medikamentöse Systemische Therapie"
+* insert PR_CS_VS_Version
+* insert Publisher
+* ^status = #active
 
 // TODO Constrain status to draft?
 * status ^short = "active | on-hold | cancelled | completed | entered-in-error | stopped | draft | unknown"

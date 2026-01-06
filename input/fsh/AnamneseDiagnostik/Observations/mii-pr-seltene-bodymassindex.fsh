@@ -3,6 +3,9 @@ Id:          mii-pr-seltene-bodymassindex
 Parent:      Observation
 Title:       "Body Mass Index (BMI) of the patient"
 Description: "Describes the Body Mass Index (BMI) of the patient."
+* insert PR_CS_VS_Version
+* insert Publisher
+* ^status = #active
 
 * status MS
 

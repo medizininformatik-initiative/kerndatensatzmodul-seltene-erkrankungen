@@ -99,7 +99,7 @@
         },
         "name": "Antevertierte Nares - HPO-kodiert",
         "description": "Nach oben gerichtete Nasenlöcher",
-        "exampleBoolean": true
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
         "reference": {
@@ -131,7 +131,7 @@
         },
         "name": "Aortenwurzeldilatation - HPO-kodiert",
         "description": "Echokardiographisch nachgewiesene Aortenwurzeldilatation",
-        "exampleBoolean": true
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
         "reference": {
@@ -139,7 +139,7 @@
         },
         "name": "Arachnodaktylie - HPO-kodiert",
         "description": "Spinnenfingrigkeit bei Marfan-Syndrom",
-        "exampleBoolean": true
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
         "reference": {
@@ -167,6 +167,14 @@
       },
       {
         "reference": {
+          "reference": "ServiceRequest/mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan"
+        },
+        "name": "Beispiel Aortenwurzelersatz bei Marfan-Syndrom",
+        "description": "Beispiel einer nicht-medikamentösen Therapieempfehlung für Aortenwurzelersatz bei Marfan-Syndrom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"
+      },
+      {
+        "reference": {
           "reference": "ServiceRequest/example-nutrition-therapy-recommendation"
         },
         "name": "Beispiel Ernährungstherapie-Empfehlung",
@@ -183,6 +191,30 @@
       },
       {
         "reference": {
+          "reference": "ServiceRequest/mii-exa-seltene-therapieempfehlung-genetische-beratung"
+        },
+        "name": "Beispiel Genetische Beratung",
+        "description": "Beispiel einer nicht-medikamentösen Therapieempfehlung für genetische Beratung",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/mii-exa-seltene-therapieempfehlung-gentherapie-sma"
+        },
+        "name": "Beispiel Gentherapie bei SMA",
+        "description": "Beispiel einer medikamentösen Therapieempfehlung für Gentherapie bei Spinaler Muskelatrophie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung"
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/mii-exa-seltene-therapieempfehlung-losartan-marfan"
+        },
+        "name": "Beispiel Losartan bei Marfan-Syndrom",
+        "description": "Beispiel einer medikamentösen Therapieempfehlung für Losartan zur Progressionshemmung bei Marfan-Syndrom",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung"
+      },
+      {
+        "reference": {
           "reference": "Procedure/mii-exa-seltene-narse-gentherapie-sma"
         },
         "name": "Beispiel NARSE Gentherapie bei SMA",
@@ -196,6 +228,14 @@
         "name": "Beispiel NARSE Stoffwechseltherapie bei Morbus Pompe",
         "description": "Beispiel einer durchgeführten Enzymersatztherapie bei Morbus Pompe",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/mii-exa-seltene-therapieempfehlung-physiotherapie-sma"
+        },
+        "name": "Beispiel Physiotherapie bei SMA",
+        "description": "Beispiel einer nicht-medikamentösen Therapieempfehlung für Physiotherapie bei Spinaler Muskelatrophie",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"
       },
       {
         "reference": {
@@ -259,7 +299,7 @@
         },
         "name": "Chronische Diarrhoe - HPO-kodiert",
         "description": "Chronische Durchfälle bei CF",
-        "exampleBoolean": true
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
         "reference": {
@@ -347,7 +387,7 @@
         },
         "name": "Gedeihstörung - HPO-kodiert",
         "description": "Mangelhafte Gewichtszunahme",
-        "exampleBoolean": true
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
         "reference": {
@@ -387,7 +427,7 @@
         },
         "name": "Hochwuchs - HPO-kodiert",
         "description": "Pathologisch erhöhte Körpergröße",
-        "exampleBoolean": true
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
         "reference": {
@@ -451,7 +491,7 @@
         },
         "name": "Hypertelorismus - HPO-kodiert",
         "description": "Vergrößerter Augenabstand",
-        "exampleBoolean": true
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
         "reference": {
@@ -547,7 +587,7 @@
         },
         "name": "Linsenluxation - HPO-kodiert",
         "description": "Ectopia lentis bei Marfan-Syndrom",
-        "exampleBoolean": true
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
         "reference": {
@@ -563,7 +603,7 @@
         },
         "name": "Lymphödem - HPO-kodiert",
         "description": "Peripheres Lymphödem",
-        "exampleBoolean": true
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
         "reference": {
@@ -1083,7 +1123,7 @@
         },
         "name": "Rezidivierende Atemwegsinfekte - HPO-kodiert",
         "description": "Häufige respiratorische Infektionen bei CF",
-        "exampleBoolean": true
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
         "reference": {
@@ -1291,7 +1331,7 @@
         },
         "name": "Ventrikelseptumdefekt - HPO-kodiert",
         "description": "Angeborener Ventrikelseptumdefekt",
-        "exampleBoolean": true
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
         "reference": {

@@ -1,0 +1,55 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "mii-exa-seltene-therapieempfehlung-gentherapie-sma",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung|2026.0.0"
+    ]
+  },
+  "status": "active",
+  "intent": "proposal",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "gene-therapy",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
+          "display": "Gentherapie"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "causal",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
+          "display": "Kausal"
+        }
+      ]
+    }
+  ],
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fdasis.nlm.nih.gov",
+        "code": "MLU3LU3EVV",
+        "display": "Onasemnogene abeparvovec"
+      }
+    ],
+    "text": "Zolgensma"
+  },
+  "subject": {
+    "reference": "Patient/patient-sma-001"
+  },
+  "reasonReference": [
+    {
+      "reference": "Condition/sma-diagnosis",
+      "display": "Spinale Muskelatrophie Typ 1"
+    }
+  ],
+  "note": [
+    {
+      "text": "Einmalige intravenöse Infusion der Gentherapie"
+    }
+  ]
+}

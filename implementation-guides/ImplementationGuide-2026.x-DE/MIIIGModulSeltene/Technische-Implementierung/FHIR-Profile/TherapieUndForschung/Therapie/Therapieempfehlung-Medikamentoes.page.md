@@ -113,78 +113,20 @@ Folgende Suchparameter sind für medikamentöse Therapieempfehlungen relevant:
 ### Beispiele
 
 #### Gentherapie bei SMA
-```json
-{
-  "resourceType": "MedicationRequest",
-  "meta": {
-    "profile": ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung"]
-  },
-  "status": "active",
-  "intent": "proposal",
-  "medicationCodeableConcept": {
-    "coding": [{
-      "system": "http://fdasis.nlm.nih.gov",
-      "code": "MLU3LU3EVV",
-      "display": "Onasemnogene abeparvovec"
-    }],
-    "text": "Zolgensma"
-  },
-  "subject": {
-    "reference": "Patient/sma-patient"
-  },
-  "reasonReference": [{
-    "reference": "Condition/sma-diagnosis",
-    "display": "Spinale Muskelatrophie Typ 1"
-  }],
-  "note": [{
-    "text": "Einmalige intravenöse Infusion der Gentherapie"
-  }]
-}
-```
 
-#### ACE-Hemmer bei Marfan-Syndrom
-```json
-{
-  "resourceType": "MedicationRequest",
-  "meta": {
-    "profile": ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung"]
-  },
-  "status": "active",
-  "intent": "proposal",
-  "medicationCodeableConcept": {
-    "coding": [{
-      "system": "http://www.whocc.no/atc",
-      "code": "C09CA01",
-      "display": "Losartan"
-    }]
-  },
-  "subject": {
-    "reference": "Patient/marfan-patient"
-  },
-  "dosageInstruction": [{
-    "text": "50mg 1x täglich",
-    "timing": {
-      "repeat": {
-        "frequency": 1,
-        "period": 1,
-        "periodUnit": "d"
-      }
-    },
-    "doseAndRate": [{
-      "doseQuantity": {
-        "value": 50,
-        "unit": "mg",
-        "system": "http://unitsofmeasure.org",
-        "code": "mg"
-      }
-    }]
-  }],
-  "reasonReference": [{
-    "reference": "Condition/marfan-syndrome",
-    "display": "Marfan-Syndrom mit Aortenwurzeldilatation"
-  }]
-}
-```
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-therapieempfehlung-gentherapie-sma}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-therapieempfehlung-gentherapie-sma}}</tab>
+  <tab title="XML">{{xml:mii-exa-seltene-therapieempfehlung-gentherapie-sma}}</tab>
+</tabs>
+
+#### Losartan bei Marfan-Syndrom
+
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-therapieempfehlung-losartan-marfan}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-therapieempfehlung-losartan-marfan}}</tab>
+  <tab title="XML">{{xml:mii-exa-seltene-therapieempfehlung-losartan-marfan}}</tab>
+</tabs>
 
 ---
 

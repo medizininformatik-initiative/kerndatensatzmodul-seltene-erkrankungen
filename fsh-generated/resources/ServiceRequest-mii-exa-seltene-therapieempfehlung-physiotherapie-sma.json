@@ -1,0 +1,64 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "mii-exa-seltene-therapieempfehlung-physiotherapie-sma",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2026.0.0"
+    ]
+  },
+  "intent": "proposal",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "91251008",
+        "display": "Physical therapy"
+      }
+    ],
+    "text": "Physiotherapie zur Erhaltung der motorischen Funktionen"
+  },
+  "status": "active",
+  "priority": "routine",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "other",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
+          "display": "Sonstige"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "symptomatic",
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
+          "display": "Symptomatisch"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/patient-sma-001"
+  },
+  "occurrenceTiming": {
+    "repeat": {
+      "frequency": 2,
+      "period": 1,
+      "periodUnit": "wk"
+    }
+  },
+  "authoredOn": "2024-07-29",
+  "reasonReference": [
+    {
+      "reference": "Condition/sma-diagnosis",
+      "display": "Infantile Spinale Muskelatrophie Typ 1"
+    }
+  ],
+  "note": [
+    {
+      "text": "Regelmäßige Physiotherapie 2x wöchentlich zur Kontrakturprophylaxe und Erhaltung der Restfunktion"
+    }
+  ]
+}

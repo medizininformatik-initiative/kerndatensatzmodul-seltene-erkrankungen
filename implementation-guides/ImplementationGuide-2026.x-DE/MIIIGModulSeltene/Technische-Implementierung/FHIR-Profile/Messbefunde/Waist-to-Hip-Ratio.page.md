@@ -1,6 +1,6 @@
 ---
-parent: 
-topic: Specimen
+parent:
+topic: Waist-to-Hip-Ratio
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-waist-to-hip-ratio
 ---
 
