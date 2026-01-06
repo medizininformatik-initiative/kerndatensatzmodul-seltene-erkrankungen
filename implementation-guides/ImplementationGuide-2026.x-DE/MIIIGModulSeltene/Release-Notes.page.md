@@ -3,6 +3,18 @@ Auf dieser Seite werden die Unterschiede zwischen den Versionen nachgehalten, be
 
 ---
 
+## Version 2026.0.0 (Finale Version)
+
+Diese Version ist die finale Veröffentlichung des MII Moduls Seltene Erkrankungen nach erfolgreichem Ballot-Verfahren.
+
+### Änderungen seit v2026.0.0-rc.1
+
+- `chore` Alle Ressourcen auf Status "active" gesetzt
+- `refactor` Diagnose-Abhängigkeit durch Base-Modul ersetzt für bessere Modularität
+- `chore` Bake-Quellpfad für Package-Builds korrigiert
+
+---
+
 ## Änderungen Version v2026.0.0-rc.1 (Release Candidate 1)
 
 ### Neue Funktionen
