@@ -145,6 +145,9 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
 **Beispiele**
 
-{{json:mii-exa-seltene-bodymassindex}}
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-bodymassindex}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-bodymassindex}}</tab>
+</tabs>
 
 ---

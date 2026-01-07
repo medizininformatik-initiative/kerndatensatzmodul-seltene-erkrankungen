@@ -126,7 +126,6 @@ Folgende Suchparameter sind für nicht-medikamentöse Therapieempfehlungen relev
 <tabs>
   <tab title="Übersicht">{{table:mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan}}</tab>
   <tab title="JSON">{{json:mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan}}</tab>
-  <tab title="XML">{{xml:mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan}}</tab>
 </tabs>
 
 #### Physiotherapie bei SMA
@@ -134,7 +133,6 @@ Folgende Suchparameter sind für nicht-medikamentöse Therapieempfehlungen relev
 <tabs>
   <tab title="Übersicht">{{table:mii-exa-seltene-therapieempfehlung-physiotherapie-sma}}</tab>
   <tab title="JSON">{{json:mii-exa-seltene-therapieempfehlung-physiotherapie-sma}}</tab>
-  <tab title="XML">{{xml:mii-exa-seltene-therapieempfehlung-physiotherapie-sma}}</tab>
 </tabs>
 
 #### Genetische Beratung
@@ -142,7 +140,6 @@ Folgende Suchparameter sind für nicht-medikamentöse Therapieempfehlungen relev
 <tabs>
   <tab title="Übersicht">{{table:mii-exa-seltene-therapieempfehlung-genetische-beratung}}</tab>
   <tab title="JSON">{{json:mii-exa-seltene-therapieempfehlung-genetische-beratung}}</tab>
-  <tab title="XML">{{xml:mii-exa-seltene-therapieempfehlung-genetische-beratung}}</tab>
 </tabs>
 
 ---

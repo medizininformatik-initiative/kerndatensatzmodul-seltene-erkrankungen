@@ -96,10 +96,18 @@ Da viele Therapien bei seltenen Erkrankungen außerhalb des stationären Setting
 ### Beispiele
 
 #### Gentherapie bei SMA
-{{json:mii-exa-seltene-narse-gentherapie-sma}}
+
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-narse-gentherapie-sma}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-narse-gentherapie-sma}}</tab>
+</tabs>
 
 #### Enzymersatztherapie bei Morbus Pompe
-{{json:mii-exa-seltene-narse-stoffwechseltherapie-pompe}}
+
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-narse-stoffwechseltherapie-pompe}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-narse-stoffwechseltherapie-pompe}}</tab>
+</tabs>
 
 ---
 

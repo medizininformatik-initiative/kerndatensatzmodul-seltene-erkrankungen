@@ -182,8 +182,29 @@ sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-\(mii-ex-selt
 # =============================================================================
 echo "15. Fixing remaining artifacts/package/ paths..."
 
-# Generic fallback: any remaining mii-pr-seltene profiles -> Simplifier resolve
-sed -i '' 's|artifacts/package/StructureDefinition-\(mii-pr-seltene-[^.#"]*\)\.json\([^"]*\)|https://simplifier.net/resolve?canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/\1\&fhirVersion=R4|g' *.html
+# Generic fallback: any remaining mii-pr-seltene profiles -> Simplifier resolve with scope
+sed -i '' 's|artifacts/package/StructureDefinition-\(mii-pr-seltene-[^.#"]*\)\.json\([^"]*\)|https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.seltene@2026.0.0\&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/\1\&fhirVersion=R4|g' *.html
+sed -i '' 's|artifacts/fsh-generated/resources/StructureDefinition-\(mii-pr-seltene-[^.#"]*\)\.json\([^"]*\)|https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.seltene@2026.0.0\&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/\1\&fhirVersion=R4|g' *.html
+
+# =============================================================================
+# Step 16: Fix remaining direct MII canonical links (without resolve)
+# =============================================================================
+echo "16. Fixing remaining direct MII canonical links..."
+
+# Fix any remaining direct href links to MII canonicals that were not caught by FQL
+sed -i '' 's|href="https://www\.medizininformatik-initiative\.de/fhir/ext/modul-seltene/StructureDefinition/\([^"]*\)"|href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.seltene@2026.0.0\&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/\1\&fhirVersion=R4"|g' *.html
+
+# Fix MII ValueSet direct links
+sed -i '' 's|href="https://www\.medizininformatik-initiative\.de/fhir/ext/modul-seltene/ValueSet/\([^"]*\)"|href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.seltene@2026.0.0\&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/\1\&fhirVersion=R4"|g' *.html
+
+# Fix MII CodeSystem direct links
+sed -i '' 's|href="https://www\.medizininformatik-initiative\.de/fhir/ext/modul-seltene/CodeSystem/\([^"]*\)"|href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.seltene@2026.0.0\&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/\1\&fhirVersion=R4"|g' *.html
+
+# =============================================================================
+# Step 17: Clean up backup files
+# =============================================================================
+echo "17. Cleaning up backup files..."
+find . -name "*''" -type f -delete 2>/dev/null || true
 
 # =============================================================================
 # Done

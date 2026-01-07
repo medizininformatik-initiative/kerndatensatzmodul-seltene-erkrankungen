@@ -130,10 +130,10 @@ Usage: #definition
 * insert SupportSearchParam(value-quantity, http://hl7.org/fhir/SearchParameter/Observation-value-quantity, #quantity, #SHALL)
 * insert SupportSearchParam(value-string, http://hl7.org/fhir/SearchParameter/Observation-value-string, #string, #SHALL)
 
-// ResearchStudy requirements
+// ResearchStudy requirements - using Studie module profile
 * insert SupportResource(ResearchStudy, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/ResearchStudy)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studie|2026.0.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie|2026.0.0-ballot, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)

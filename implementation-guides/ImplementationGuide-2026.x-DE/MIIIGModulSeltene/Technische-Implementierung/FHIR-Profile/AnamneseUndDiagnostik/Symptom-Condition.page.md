@@ -193,6 +193,9 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
 **Beispiele**
 
-{{json:mii-exa-seltene-symptom-condition}}
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-symptom-condition}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-symptom-condition}}</tab>
+</tabs>
 
 ---

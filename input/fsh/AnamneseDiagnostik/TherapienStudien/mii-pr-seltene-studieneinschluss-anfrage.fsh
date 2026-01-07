@@ -44,7 +44,6 @@ Description: "Anfrage zum Studieneinschluss"
 
 * supportingInfo contains Studie 0..* MS
 * supportingInfo[Studie] only Reference(
-    MII_PR_Seltene_Studie or
     MII_PR_Studie_Studie or
     ResearchStudy
 )

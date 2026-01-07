@@ -117,7 +117,6 @@ Folgende Suchparameter sind für medikamentöse Therapieempfehlungen relevant:
 <tabs>
   <tab title="Übersicht">{{table:mii-exa-seltene-therapieempfehlung-gentherapie-sma}}</tab>
   <tab title="JSON">{{json:mii-exa-seltene-therapieempfehlung-gentherapie-sma}}</tab>
-  <tab title="XML">{{xml:mii-exa-seltene-therapieempfehlung-gentherapie-sma}}</tab>
 </tabs>
 
 #### Losartan bei Marfan-Syndrom
@@ -125,7 +124,6 @@ Folgende Suchparameter sind für medikamentöse Therapieempfehlungen relevant:
 <tabs>
   <tab title="Übersicht">{{table:mii-exa-seltene-therapieempfehlung-losartan-marfan}}</tab>
   <tab title="JSON">{{json:mii-exa-seltene-therapieempfehlung-losartan-marfan}}</tab>
-  <tab title="XML">{{xml:mii-exa-seltene-therapieempfehlung-losartan-marfan}}</tab>
 </tabs>
 
 ---

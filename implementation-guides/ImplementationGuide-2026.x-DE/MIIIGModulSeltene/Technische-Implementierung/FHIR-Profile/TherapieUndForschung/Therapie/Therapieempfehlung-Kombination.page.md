@@ -120,6 +120,9 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
 **Beispiele**
 
-{{json:mii-exa-seltene-therapieempfehlung-kombination}}
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-therapieempfehlung-kombination}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-therapieempfehlung-kombination}}</tab>
+</tabs>
 
 ---

@@ -131,6 +131,9 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
 **Beispiele**
 
-{{json:mii-exa-seltene-kopfumfang}}
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-kopfumfang}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-kopfumfang}}</tab>
+</tabs>
 
 ---
