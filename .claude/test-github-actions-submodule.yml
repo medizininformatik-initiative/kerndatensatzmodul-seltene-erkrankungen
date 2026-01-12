@@ -1,0 +1,55 @@
+# EXAMPLE: GitHub Actions workflow with submodule checkout
+# This shows how to properly checkout git submodules in CI/CD
+
+name: Test Submodule Checkout
+
+on:
+  push:
+    branches: [ dev, main ]
+  pull_request:
+    branches: [ dev, main ]
+
+jobs:
+  test-submodule:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Critical: Use submodules: 'recursive' to checkout submodules
+      - name: Checkout repository with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'  # or 'true' for non-recursive
+
+      # Alternative: Manual submodule init/update
+      # - name: Checkout repository
+      #   uses: actions/checkout@v4
+      #
+      # - name: Initialize submodules
+      #   run: |
+      #     git submodule update --init --recursive
+
+      # Verify submodule was checked out
+      - name: Verify submodule
+        run: |
+          ls -la .claude/mii-shared/
+          cat .claude/mii-shared/README.md
+
+      # If using copy approach: Sync shared files
+      - name: Sync from submodule (copy approach)
+        run: |
+          ./.claude/sync-from-submodule.sh
+
+      # If using symlink approach: No sync needed
+      # Skills/commands are already linked to submodule
+
+      # Verify synced/linked files are accessible
+      - name: Verify shared skills
+        run: |
+          ls -la .claude/skills/
+          cat .claude/skills/fix-ig-export-links/SKILL.md
+
+      # Your actual build/test steps here
+      - name: Run SUSHI
+        run: |
+          # Your SUSHI build commands...
+          echo "Build would happen here"
