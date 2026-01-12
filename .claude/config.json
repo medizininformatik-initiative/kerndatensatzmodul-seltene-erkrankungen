@@ -16,5 +16,16 @@
       "de.medizininformatikinitiative.kerndatensatz.icu": "2025.0.4",
       "de.medizininformatikinitiative.kerndatensatz.studie": "2026.0.0-ballot"
     }
+  },
+  "version_files": {
+    "fsh_path": "input/fsh/rulesets/version.fsh",
+    "rulesets": ["PR_CS_VS_Version", "Version", "MetaProfile"],
+    "files": {
+      "package_json": true,
+      "package_json_description": true,
+      "sushi_config": true,
+      "qc_rules": true,
+      "guide_yaml": "implementation-guides/ImplementationGuide-202*.x-DE/guide.yaml"
+    }
   }
 }
