@@ -1,13 +1,13 @@
-# Kerndatensatz Modul Seltene Erkrankungen
+# Kerndatensatz-Modul Seltene Erkrankungen
 
-Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz Moduls Seltene Erkrankungen der Medizininformatik-Initiative.
+Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz-Moduls Seltene Erkrankungen der Medizininformatik-Initiative.
 Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
 
 | Veröffentlichung   |   |
 |---------|---|
-| Datum   | 10.09.2025 |
-| Version | 2026.0.0-ballot        |
-| Status  | Ballot       |
+| Datum   | 04.02.2026 |
+| Version | 2026.0.0        |
+| Status  | Active       |
 | Realm   | DE          | 
 
 ## Inhaltsverzeichnis
