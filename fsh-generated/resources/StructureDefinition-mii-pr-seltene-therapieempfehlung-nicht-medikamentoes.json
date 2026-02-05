@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-seltene-therapieempfehlung-nicht-medikamentoes",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes",
-  "version": "2026.0.0",
+  "version": "2026.0.1",
   "name": "MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes",
   "title": "MII PR SE Therapieempfehlung Nicht-Medikamentös",
   "status": "active",
@@ -26,6 +26,20 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "ServiceRequest.extension",
+        "path": "ServiceRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
       {
         "id": "ServiceRequest.extension:Prioritaet",
         "path": "ServiceRequest.extension",
