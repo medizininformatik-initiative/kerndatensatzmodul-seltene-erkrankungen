@@ -3,7 +3,7 @@
   "id": "mii-ig-seltene-erkrankungen-v2026-de",
   "language": "de-DE",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de",
-  "version": "2026.0.0",
+  "version": "2026.0.1",
   "name": "MIIIGModulSelteneErkrankungen",
   "title": "MII IG Seltene Erkrankungen (DE)",
   "status": "active",
@@ -44,13 +44,13 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.icu",
-      "version": "2025.0.x",
+      "version": "2026.0.x",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.icu/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.icu",
       "id": "de_medizininformatikinitiative_kerndatensatz_icu"
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.studie",
-      "version": "2026.0.0-ballot",
+      "version": "2026.0.2",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.studie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.studie",
       "id": "de_medizininformatikinitiative_kerndatensatz_studie"
     },
@@ -834,7 +834,7 @@
           "reference": "StructureDefinition/mii-pr-seltene-kopfumfang"
         },
         "name": "MII PR SE Kopfumfang",
-        "description": "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen.",
+        "description": "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom MII ICU Kopfumfang-Profil.",
         "exampleBoolean": false
       },
       {

@@ -3,6 +3,25 @@ Auf dieser Seite werden die Unterschiede zwischen den Versionen nachgehalten, be
 
 ---
 
+## Version 2026.0.1 (Patch-Release)
+
+### Abhängigkeiten
+
+- `chore` Abhängigkeit auf Modul Studie von `2026.0.0-ballot` auf `2026.0.2` aktualisiert
+
+### CI/CD und Tooling
+
+- `feat` Validierungsregeln (qc/custom.rules.yaml) für Ressourcenvalidierung hinzugefügt
+- `feat` Zentralisiertes `/build-package` Kommando hinzugefügt
+- `feat` FHIR Restore-Schritt zum Build-Prozess hinzugefügt
+- `feat` mii-shared Submodul und fix-ig-export-links Skill hinzugefügt
+- `refactor` IG-Seiten auf Tabs-Format umgestellt und lokales Studie-Profil entfernt
+- `fix` Terminologie-Codes und Display-Namen in Therapiebeispielen korrigiert
+- `fix` MII IG Namenskonventionen für 2026-Release angewandt
+- `fix` 'Erweiterungsmodul' durch 'KDS-Modul' gemäß MII-Richtlinien ersetzt
+
+---
+
 ## Version 2026.0.0 (Finale Version)
 
 Diese Version ist die finale Veröffentlichung des MII Moduls Seltene Erkrankungen nach erfolgreichem Ballot-Verfahren.
