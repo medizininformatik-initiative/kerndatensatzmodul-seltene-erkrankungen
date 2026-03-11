@@ -59,6 +59,8 @@ Description: "Extension to capture the penetrance of genetic variants associated
 * ^status = #active
 * ^context[+].type = #element
 * ^context[=].expression = "Condition"
+* ^context[+].type = #element
+* ^context[=].expression = "FamilyMemberHistory.condition"
 * value[x] only CodeableConcept or Quantity
 * valueCodeableConcept from PenetranceValueSet (extensible)
 * valueCodeableConcept ^short = "Qualitative penetrance description"
