@@ -24,7 +24,7 @@ Description: "Beispiel einer Kopfumfang-Messung bei einem Patienten mit seltener
 * category[VSCat].coding.code = #vital-signs
 * category[VSCat].coding.display = "Vital Signs"
 * code.coding[loinc] = $LNC#9843-4 "Head Occipital-frontal circumference"
-* code.coding[snomed] = $SCT#363811000 "Head circumference measure (observable entity)"
+* code.coding[snomed] = $SCT#363812007 "Kopfumfang"
 * subject = Reference(Patient/example)
 * subject.display = "Beispielpatient"
 * effectiveDateTime = "2024-08-08T10:00:00+02:00"
