@@ -8,6 +8,15 @@ Auf dieser Seite werden die Unterschiede zwischen den Versionen nachgehalten, be
 ### Abhängigkeiten
 
 - `chore` Abhängigkeit auf Modul Studie von `2026.0.0-ballot` auf `2026.0.2` aktualisiert
+- `chore` Abhängigkeit auf Modul ICU auf `2026.0.x` (resolved: `2026.0.2`) aktualisiert
+
+### Fehlerbehebungen
+
+- `fix` ICU-Kopfumfang-Alias auf umbenanntes Profil `mii-pr-icu-muv-kopfumfang` aktualisiert
+- `fix` Korrekter SNOMED-Code für Kopfumfang (363812007 statt 363811000)
+- `fix` SNOMED Display auf englisch (Head circumference) für Validator-Kompatibilität
+- `fix` FamilyMemberHistory.condition zum Penetrance-Extension-Context hinzugefügt
+- `fix` CPS Version über RuleSet statt Hardcoding, SupportProfile ohne Version-Suffix
 
 ### CI/CD und Tooling
 
