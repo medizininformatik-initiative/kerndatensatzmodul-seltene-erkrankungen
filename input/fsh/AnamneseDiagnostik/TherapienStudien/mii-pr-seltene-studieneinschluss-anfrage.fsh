@@ -3,6 +3,9 @@ Parent: ServiceRequest
 Id: mii-pr-seltene-studieneinschluss-anfrage
 Title: "MII PR SE Studieneinschluss Anfrage"
 Description: "Anfrage zum Studieneinschluss"
+* insert PR_CS_VS_Version
+* insert Publisher
+* ^status = #active
 
 * status MS
 * status ^short = "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
@@ -41,7 +44,6 @@ Description: "Anfrage zum Studieneinschluss"
 
 * supportingInfo contains Studie 0..* MS
 * supportingInfo[Studie] only Reference(
-    MII_PR_Seltene_Studie or
     MII_PR_Studie_Studie or
     ResearchStudy
 )

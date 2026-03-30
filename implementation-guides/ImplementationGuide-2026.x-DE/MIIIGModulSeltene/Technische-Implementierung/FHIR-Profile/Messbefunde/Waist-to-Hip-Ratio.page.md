@@ -1,6 +1,6 @@
 ---
-parent: 
-topic: Specimen
+parent:
+topic: Waist-to-Hip-Ratio
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-waist-to-hip-ratio
 ---
 
@@ -146,6 +146,9 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
 **Beispiele**
 
-{{json:mii-exa-seltene-waist-to-hip-ratio}}
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-waist-to-hip-ratio}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-waist-to-hip-ratio}}</tab>
+</tabs>
 
 ---

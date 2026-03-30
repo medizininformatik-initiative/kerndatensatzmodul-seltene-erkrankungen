@@ -3,6 +3,9 @@ Parent: CarePlan
 Id: mii-pr-seltene-therapieplan
 Title: "MII PR SE Therapieplan"
 Description: "Therapieplan"
+* insert PR_CS_VS_Version
+* insert Publisher
+* ^status = #active
 
 * status ^short = "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
 * status ^definition = "Status der Umsetzung des beschlossenen Therapieplans"

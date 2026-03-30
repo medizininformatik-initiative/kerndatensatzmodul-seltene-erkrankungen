@@ -120,6 +120,9 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
 **Beispiele**
 
-{{json:mii-exa-seltene-studieneinschluss-anfrage}}
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-studieneinschluss-anfrage}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-studieneinschluss-anfrage}}</tab>
+</tabs>
 
 ---

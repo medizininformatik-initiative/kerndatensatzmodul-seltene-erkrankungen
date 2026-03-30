@@ -287,18 +287,30 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
 ### Beispiel: Basis HPO-Assessment
 
-{{json:mii-exa-seltene-hpo-assessment}}
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-hpo-assessment}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-hpo-assessment}}</tab>
+</tabs>
 
 ### Beispiel: HPO-Assessment mit Schweregrad
 
-{{json:mii-exa-seltene-hpo-assessment-severity}}
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-hpo-assessment-severity}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-hpo-assessment-severity}}</tab>
+</tabs>
 
 ### Beispiel: Ausgeschlossener HPO-Phänotyp (Absent)
 
-{{json:mii-exa-seltene-hpo-assessment-excluded}}
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-hpo-assessment-excluded}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-hpo-assessment-excluded}}</tab>
+</tabs>
 
 ### Beispiel: HPO-Assessment mit Änderungsstatus
 
-{{json:mii-exa-seltene-hpo-assessment-change-status}}
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-hpo-assessment-change-status}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-hpo-assessment-change-status}}</tab>
+</tabs>
 
 ---

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-seltene-kopfumfang",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang",
-  "version": "2026.0.0",
+  "version": "2026.0.1",
   "name": "MII_PR_Seltene_Kopfumfang",
   "title": "MII PR SE Kopfumfang",
   "status": "active",
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen.",
+  "description": "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom MII ICU Kopfumfang-Profil.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -29,7 +29,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -47,7 +47,6 @@
       {
         "id": "Observation.status",
         "path": "Observation.status",
-        "mustSupport": true,
         "mapping": [
           {
             "identity": "SE-LogicalModel",
@@ -57,53 +56,13 @@
         ]
       },
       {
-        "id": "Observation.category",
-        "path": "Observation.category",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category.coding.system",
-        "path": "Observation.category.coding.system",
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
-      },
-      {
-        "id": "Observation.category.coding.code",
-        "path": "Observation.category.coding.code",
-        "fixedCode": "vital-signs"
-      },
-      {
-        "id": "Observation.category.coding.display",
-        "path": "Observation.category.coding.display",
-        "patternString": "Vital Signs"
-      },
-      {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Kopfumfang okzipital-frontal",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "9843-4",
-              "system": "http://loinc.org",
-              "display": "Head Occipital-frontal circumference"
-            }
-          ]
-        },
-        "mustSupport": true
+        "short": "Kopfumfang okzipital-frontal"
       },
       {
         "id": "Observation.subject",
         "path": "Observation.subject",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient"
-            ]
-          }
-        ],
-        "mustSupport": true,
         "mapping": [
           {
             "identity": "SE-LogicalModel",
@@ -113,14 +72,14 @@
         ]
       },
       {
-        "id": "Observation.effective[x]",
+        "id": "Observation.effective[x]:effectiveDateTime",
         "path": "Observation.effective[x]",
+        "sliceName": "effectiveDateTime",
         "type": [
           {
             "code": "dateTime"
           }
         ],
-        "mustSupport": true,
         "mapping": [
           {
             "identity": "SE-LogicalModel",
@@ -130,17 +89,17 @@
         ]
       },
       {
-        "id": "Observation.value[x]",
+        "id": "Observation.value[x]:valueQuantity",
         "path": "Observation.value[x]",
+        "sliceName": "valueQuantity",
         "type": [
           {
             "code": "Quantity"
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
-        "id": "Observation.value[x].value",
+        "id": "Observation.value[x]:valueQuantity.value",
         "path": "Observation.value[x].value",
         "mapping": [
           {
@@ -149,21 +108,6 @@
             "comment": "Kopfumfang in cm"
           }
         ]
-      },
-      {
-        "id": "Observation.value[x].unit",
-        "path": "Observation.value[x].unit",
-        "fixedString": "cm"
-      },
-      {
-        "id": "Observation.value[x].system",
-        "path": "Observation.value[x].system",
-        "fixedUri": "http://unitsofmeasure.org"
-      },
-      {
-        "id": "Observation.value[x].code",
-        "path": "Observation.value[x].code",
-        "fixedCode": "cm"
       }
     ]
   }

@@ -1,6 +1,6 @@
 ---
-parent: 
-topic: Specimen
+parent:
+topic: Therapieplan
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan
 ---
 
@@ -77,60 +77,47 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
     Beispiele:
 
-    ```GET [base]/Observation?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory```
+    ```GET [base]/CarePlan?category=http://snomed.info/sct|734163000```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
 
-4. Der Suchparameter "code" MUSS unterstützt werden:
+4. Der Suchparameter "subject" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
-
-5. Der Suchparameter "subject" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?subject=Patient/example```
+    ```GET [base]/CarePlan?subject=Patient/example```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
-6. Der Suchparameter "focus" MUSS unterstützt werden:
+5. Der Suchparameter "encounter" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?focus=Condition/example```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "focus" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-
-7. Der Suchparameter "encounter" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?encounter=Encounter/example```
+    ```GET [base]/CarePlan?encounter=Encounter/example```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
-8. Der Suchparameter "date" MUSS unterstützt werden:
+6. Der Suchparameter "date" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?date=2024-02-08```
+    ```GET [base]/CarePlan?date=2024-02-08```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
 
-9. Der Suchparameter "derived-from" MUSS unterstützt werden:
+7. Der Suchparameter "activity-reference" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/Observation?derived-from=Observation/example```
+    ```GET [base]/CarePlan?activity-reference=ServiceRequest/example```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+    Anwendungshinweise: Weitere Informationen zur Suche nach "activity-reference" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
 
 **Beispiele**
 
-{{json:mii-exa-seltene-therapieplan}}
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-therapieplan}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-therapieplan}}</tab>
+</tabs>
 
 ---

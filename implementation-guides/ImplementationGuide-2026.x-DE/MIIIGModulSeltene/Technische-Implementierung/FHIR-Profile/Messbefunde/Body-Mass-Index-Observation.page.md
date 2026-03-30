@@ -1,6 +1,6 @@
 ---
-parent: 
-topic: Specimen
+parent:
+topic: Body-Mass-Index-Observation
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex
 ---
 
@@ -145,6 +145,9 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
 **Beispiele**
 
-{{json:mii-exa-seltene-bodymassindex}}
+<tabs>
+  <tab title="Übersicht">{{table:mii-exa-seltene-bodymassindex}}</tab>
+  <tab title="JSON">{{json:mii-exa-seltene-bodymassindex}}</tab>
+</tabs>
 
 ---

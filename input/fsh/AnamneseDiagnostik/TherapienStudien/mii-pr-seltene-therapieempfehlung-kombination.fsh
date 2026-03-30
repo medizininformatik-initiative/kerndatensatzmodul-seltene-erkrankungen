@@ -3,6 +3,9 @@ Parent: RequestGroup
 Id: mii-pr-seltene-therapieempfehlung-kombination
 Title: "MII PR SE Therapieempfehlung Kombinationstherapie"
 Description: "Therapieempfehlung für eine medikamentöse Kombinationstherapie"
+* insert PR_CS_VS_Version
+* insert Publisher
+* ^status = #active
 
 * identifier MS
 
@@ -13,7 +16,6 @@ Description: "Therapieempfehlung für eine medikamentöse Kombinationstherapie"
     active: In Umsetzung, 
     completed: Abgeschlossen oder abgebrochen (Patient verstorben)"
 
-// TODO Strictly Constrain intent to proposal and option? (Option is needed for RequestGroup)
 * intent ^short = "proposal | option"
 * intent ^definition = "Da nur Empfehlungen abgegeben werden, wird hier typischerweise 'proposal' stehen. Es sei denn,
 diese Therapieempfehlung ist selbst nochmal Teil einer RequestGroup. In dem Fall muss hier 'option' stehen."

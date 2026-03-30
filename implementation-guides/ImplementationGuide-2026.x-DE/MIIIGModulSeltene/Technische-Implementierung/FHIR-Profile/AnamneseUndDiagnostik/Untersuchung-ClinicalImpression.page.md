@@ -166,10 +166,16 @@ Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch i
 
 ### Beispiel: Klinische Beurteilung bei Erstvorstellung
 
-{{json:clinical-impression-erstvorstellung}}
+<tabs>
+  <tab title="Übersicht">{{table:clinical-impression-erstvorstellung}}</tab>
+  <tab title="JSON">{{json:clinical-impression-erstvorstellung}}</tab>
+</tabs>
 
 ### Beispiel: Klinische Beurteilung bei Nachsorge
 
-{{json:clinical-impression-nachsorge}}
+<tabs>
+  <tab title="Übersicht">{{table:clinical-impression-nachsorge}}</tab>
+  <tab title="JSON">{{json:clinical-impression-nachsorge}}</tab>
+</tabs>
 
 ---

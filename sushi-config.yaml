@@ -9,7 +9,7 @@ name: MIIIGModulSelteneErkrankungen
 title: MII IG Kerndatensatz-Modul Seltene Erkrankungen
 # description: Example Implementation Guide for getting started with SUSHI
 status: active # draft | active | retired | unknown
-version: "2026.0.0"
+version: "2026.0.1"
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -30,8 +30,8 @@ dependencies:
   de.medizininformatikinitiative.kerndatensatz.meta: 2026.0.x
   de.medizininformatikinitiative.kerndatensatz.molgen: 2026.0.x
   #de.medizininformatikinitiative.kerndatensatz.labor: 2025.0.2
-  de.medizininformatikinitiative.kerndatensatz.icu: 2025.0.x
-  de.medizininformatikinitiative.kerndatensatz.studie: 2026.0.0-ballot
+  de.medizininformatikinitiative.kerndatensatz.icu: 2026.0.x
+  de.medizininformatikinitiative.kerndatensatz.studie: 2026.0.2
   #de.medizininformatikinitiative.kerndatensatz.diagnose: 2025.0.x
   de.medizininformatikinitiative.kerndatensatz.base: 2026.0.x
  

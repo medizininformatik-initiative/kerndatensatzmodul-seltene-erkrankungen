@@ -3,16 +3,7 @@
   "id": "mii-exa-seltene-kopfumfang",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang|2026.0.0"
-    ]
-  },
-  "code": {
-    "coding": [
-      {
-        "code": "9843-4",
-        "system": "http://loinc.org",
-        "display": "Head Occipital-frontal circumference"
-      }
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang|2026.0.1"
     ]
   },
   "category": [
@@ -26,9 +17,22 @@
       ]
     }
   ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "9843-4",
+        "display": "Head Occipital-frontal circumference"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "363812007"
+      }
+    ]
+  },
   "valueQuantity": {
-    "unit": "cm",
     "system": "http://unitsofmeasure.org",
+    "unit": "centimeter",
     "code": "cm",
     "value": 54.5
   },

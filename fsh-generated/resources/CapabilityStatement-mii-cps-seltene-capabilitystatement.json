@@ -18,7 +18,7 @@
   "status": "active",
   "experimental": false,
   "date": "2025-01-21",
-  "version": "2026.0.0-ballot",
+  "version": "2026.0.1",
   "description": "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Seltene Erkrankungen der Medizininformatik Initiative zu implementieren.",
   "jurisdiction": [
     {
@@ -51,9 +51,9 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/Condition",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2026.0.0-ballot",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2026.0.0-ballot",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition|2026.0.0-ballot"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition"
           ],
           "_supportedProfile": [
             {
@@ -235,7 +235,7 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/ClinicalImpression",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2026.0.0-ballot"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression"
           ],
           "_supportedProfile": [
             {
@@ -357,10 +357,10 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/Observation",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment|2026.0.0-ballot",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex|2026.0.0-ballot",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-blutgruppe|2026.0.0-ballot",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-waist-to-hip-ratio|2026.0.0-ballot"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-blutgruppe",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-waist-to-hip-ratio"
           ],
           "_supportedProfile": [
             {
@@ -814,7 +814,7 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/ResearchStudy",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studie|2026.0.0-ballot"
+            "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie"
           ],
           "_supportedProfile": [
             {
@@ -925,8 +925,8 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage|2026.0.0-ballot",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2026.0.0-ballot"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"
           ],
           "_supportedProfile": [
             {
@@ -1045,8 +1045,8 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung|2026.0.0-ballot",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-kombination|2026.0.0-ballot"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-kombination"
           ],
           "_supportedProfile": [
             {
@@ -1373,7 +1373,7 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/CarePlan",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan|2026.0.0-ballot"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan"
           ],
           "_supportedProfile": [
             {
@@ -1484,7 +1484,7 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese|2026.0.0-ballot"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese"
           ],
           "_supportedProfile": [
             {

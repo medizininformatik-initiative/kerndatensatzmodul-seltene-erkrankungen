@@ -39,3 +39,6 @@ Alias: $MII_PR_Diagnose_Condition = https://www.medizininformatik-initiative.de/
 
 // FHIR observation related code systems
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
+
+// ICU module aliases
+Alias: $MII_PR_ICU_Kopfumfang = https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang
