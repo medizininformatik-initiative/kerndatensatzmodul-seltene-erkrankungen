@@ -56,18 +56,37 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-# NOTE (IG Publisher migration): The custom pages block is commented out so that
-# SUSHI / the IG Publisher auto-generate the page list. The referenced content pages
-# (index.md, guidance.md, information_model.md, fhir_model.md) do not yet exist in this
-# repo; they will be repopulated here when page content is ported in a later PR.
-# pages:
-#   index.md:
-#     title: Home
-#   guidance.md:
-#     information_model.md:
-#       title: Information-Model
-#     fhir_model.md:
-#       title: FHIR-Model
+pages:
+  index.md:
+    title: Home
+  module-description.md:
+    title: Beschreibung des Moduls
+  context.md:
+    title: Kontext und Bezüge zu anderen Modulen
+  scenarios.md:
+    title: Anwendungsszenarien
+  datasets.md:
+    title: Datensätze und Beschreibungen
+  information-model.md:
+    title: Informationsmodell (UML)
+  profiles-overview.md:
+    title: FHIR-Profile (Übersicht)
+  terminology.md:
+    title: Terminologien
+  capability.md:
+    title: CapabilityStatement
+  clinical-genetic-diagnosis-guide.md:
+    title: Leitfaden Klinisch-genetische Diagnose
+  coding-best-practices.md:
+    title: Kodier-Empfehlungen
+  sma-example-annotations.md:
+    title: Beispiel Spinale Muskelatrophie (SMA)
+  marfan-example-annotations.md:
+    title: Beispiel Marfan-Syndrom
+  references.md:
+    title: Referenzen
+  release-notes.md:
+    title: Release Notes
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -101,12 +120,26 @@ parameters:
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-# NOTE (IG Publisher migration): A minimal menu is required — the fhir2 template's
-# multi-language machinery includes menu.xml (as <lang>/menu.xml) and Jekyll fails
-# without it. We keep it to the two always-auto-generated pages (Home, Artifacts);
-# it will be expanded when content is ported.
 menu:
   Home: index.html
+  Modul:
+    Beschreibung des Moduls: module-description.html
+    Kontext und Bezüge: context.html
+    Referenzen: references.html
+    Release Notes: release-notes.html
+  Anwendungsfälle:
+    Anwendungsszenarien: scenarios.html
+    Datensätze: datasets.html
+    Informationsmodell (UML): information-model.html
+  Technische Umsetzung:
+    FHIR-Profile: profiles-overview.html
+    Terminologien: terminology.html
+    CapabilityStatement: capability.html
+  Beispiele und Leitfäden:
+    Beispiel SMA: sma-example-annotations.html
+    Beispiel Marfan: marfan-example-annotations.html
+    Klinisch-genetische Diagnose: clinical-genetic-diagnosis-guide.html
+    Kodier-Empfehlungen: coding-best-practices.html
   Artifacts: artifacts.html
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
