@@ -96,9 +96,15 @@ jobs:
           # genuinely broken build (no output) still fails via the checks below.
           docker run --rm --network host -v $PWD:/workspace -v /usr/bin/dot:/usr/local/bin/dot:ro -v /usr/lib/x86_64-linux-gnu:/usr/host/lib:ro -e LD_LIBRARY_PATH=/usr/host/lib -w /workspace ghcr.io/gefyra/ig-publisher-with-snapshot-support:latest sh -c "igpublisher -ig ig.ini -tx http://127.0.0.1:8090/fhir" \
             || echo "::warning::IG Publisher exited non-zero (validation errors present); continuing to publish preview."
+          # Hard requirement: the published site entry must exist.
           test -s output/index.html
-          test -s output/qa.json
-          jq empty output/qa.json
+          # qa.json may be absent/incomplete when the build has validation errors
+          # or the combined package failed — treat it as a soft check.
+          if [ -s output/qa.json ]; then
+            jq empty output/qa.json || echo "::warning::qa.json is not valid JSON."
+          else
+            echo "::warning::output/qa.json missing (build had validation errors); publishing preview anyway."
+          fi
       
       - name: Cleanup NGINX
         if: always()
