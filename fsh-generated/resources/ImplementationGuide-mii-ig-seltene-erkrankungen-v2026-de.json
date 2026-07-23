@@ -1348,26 +1348,24 @@
       "generation": "html",
       "page": [
         {
-          "nameUrl": "index.html",
-          "title": "Home",
+          "nameUrl": "clinical-genetic-diagnosis-guide.html",
+          "title": "Clinical Genetic Diagnosis Guide",
           "generation": "markdown"
         },
         {
-          "nameUrl": "guidance.html",
-          "title": "Guidance",
-          "generation": "markdown",
-          "page": [
-            {
-              "nameUrl": "information_model.html",
-              "title": "Information-Model",
-              "generation": "markdown"
-            },
-            {
-              "nameUrl": "fhir_model.html",
-              "title": "FHIR-Model",
-              "generation": "markdown"
-            }
-          ]
+          "nameUrl": "coding-best-practices.html",
+          "title": "Coding Best Practices",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "marfan-example-annotations.html",
+          "title": "Marfan Example Annotations",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "sma-example-annotations.html",
+          "title": "Sma Example Annotations",
+          "generation": "markdown"
         }
       ]
     },
@@ -1379,6 +1377,10 @@
       {
         "code": "releaselabel",
         "value": "ci-build"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
       }
     ]
   }
