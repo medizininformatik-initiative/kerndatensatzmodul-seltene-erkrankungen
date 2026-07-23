@@ -19,28 +19,6 @@
   ],
   "description": "MII LogicalModel Modul Seltene Erkraknungen",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "FHIR",
-      "name": "SE LogicalModel FHIR Mapping",
-      "uri": "http://hl7.org/fhir"
-    },
-    {
-      "identity": "NARSE",
-      "name": "SE LogicalModel NARSE Mapping",
-      "uri": "https://www.se-atlas.de/narse"
-    },
-    {
-      "identity": "ERDRICDS",
-      "name": "SE LogicalModel ERDRI CDS Mapping",
-      "uri": "https://eu-rd-platform.jrc.ec.europa.eu/set-of-common-data-elements_en"
-    },
-    {
-      "identity": "ModellvorhabenGenomsequenzierung",
-      "name": "SE LogicalModel ModellvorhabenGenomsequenzierung Mapping",
-      "uri": "https://www.medizininformatik-initiative.de/de/modellvorhaben-genomsequenzierung"
-    }
-  ],
   "kind": "logical",
   "abstract": false,
   "type": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene",
@@ -65,24 +43,6 @@
           {
             "code": "BackboneElement"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition | Observation | ClinicalImpression"
-          },
-          {
-            "identity": "NARSE",
-            "map": "-"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "-"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "-"
-          }
         ]
       },
       {
@@ -95,24 +55,6 @@
         "type": [
           {
             "code": "date"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "ClinicalImpression.effectiveDateTime"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht direkt vorhanden; gibt nur Daten für vergangene Diagnostik, Proben, etc."
           }
         ]
       },
@@ -127,12 +69,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "ClinicalImpression.reasonCode"
-          }
         ]
       },
       {
@@ -145,24 +81,6 @@
         "type": [
           {
             "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.where(code.coding.exists(system='http://purl.obolibrary.org/obo/hp.owl')) | Condition.where(code.coding.exists(system='http://purl.obolibrary.org/obo/hp.owl')) | Observation (SNOMED CT, ICD-10, LOINC)"
-          },
-          {
-            "identity": "NARSE",
-            "map": "-"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "-"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "-"
           }
         ]
       },
@@ -177,24 +95,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.code | Condition.code"
-          },
-          {
-            "identity": "NARSE",
-            "map": "AnamneseUndDiagnostik.Phänotyp:HPOTerm"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nur beim nicht diagnostiziertem Fall unter Diagnose.NichtDiagnostizierterFall"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "diagnosisRd.phenotypes[].code+text oder followUpRd.phenotypes[].code (Angabe mit code, text, system und display) "
-          }
         ]
       },
       {
@@ -207,12 +107,6 @@
         "type": [
           {
             "code": "boolean"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.valueCodeableConcept (true wenn LOINC#LA9634-2 'Absent', false wenn LA9633-4 'Present')"
           }
         ]
       },
@@ -227,24 +121,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.valueCodeableConcept (LOINC Present/Absent oder HPO Severity codes) | Condition.verificationStatus"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -257,24 +133,6 @@
         "type": [
           {
             "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.code.coding.version | Condition.code.coding.version"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Katalog mit vorhanden unter AnamneseUndDiagnostik.Phänotyp:HPOTerm"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Angabe unter system bei phenotypes[].code"
           }
         ]
       },
@@ -289,24 +147,6 @@
           {
             "code": "BackboneElement"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.onset[x] | Observation.effective[x]"
-          },
-          {
-            "identity": "NARSE",
-            "map": "-"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "-"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "-"
-          }
         ]
       },
       {
@@ -319,24 +159,6 @@
         "type": [
           {
             "code": "dateTime"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.onsetDateTime | Condition.onsetPeriod | Observation.effectivePeriod"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Krankheitsverlauf.AlterBeiKrankheitsbeginn unter Datum(TT/MM/JJJJ) "
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "diagnosisRd.symptomOnsetDate (Monat und Jahr des Beginns des ersten aufgetretenen HPO-kodierten Symptoms) "
           }
         ]
       },
@@ -351,24 +173,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-onset-age').valueCodeableConcept"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Ähnlich zu AlterBeiErstenSymptomen:AuswahlDerAltersangabe; allerdings anderes ValueSet"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Krankheitsverlauf.AlterBeiKrankheitsbeginn; aber anderes ValueSet"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -381,24 +185,6 @@
         "type": [
           {
             "code": "integer"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.onsetAge | Observation.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-onset-age').valueAge"
-          },
-          {
-            "identity": "NARSE",
-            "map": "AnamneseUndDiagnostik.AlterBeiErstenSymptomen:Alter "
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -413,24 +199,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-phenotypic-pattern').valueCodeableConcept | Observation.interpretation"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "followUpRd.phenotypes[].change (anderes ValueSet: newlyAdded, improved, degraded, noLongerObserved,unchanged)"
-          }
         ]
       },
       {
@@ -443,24 +211,6 @@
         "type": [
           {
             "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.where(category.coding.exists(code='clinical'))"
-          },
-          {
-            "identity": "NARSE",
-            "map": "-"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "-"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "-"
           }
         ]
       },
@@ -475,24 +225,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-onset-age').valueCodeableConcept"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Ähnlich zu AnamneseUndDiagnostikAlterBeiDiagnose:AuswahlDerAltersangabe; allerdings anderes ValueSet"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Ähnlich zu Krankheitsverlauf.AlterBeiDiagnose; allerdings anderes ValueSet"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -505,24 +237,6 @@
         "type": [
           {
             "code": "date"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate').valueDateTime"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Krankheitsverlauf.AlterBeiDiagnose unter Datum(TT/MM/JJJJ)"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht direkt bei RareDiseasesCase; jedoch allgemein: mainDiagnosis.date oder additionalDiagnoses[].date (Datum der Hauptdiagnose im ISO 8601 Format JJJJ-MM-TT. Wenn Tag unbekannt -> 15. des Monats)"
           }
         ]
       },
@@ -537,24 +251,6 @@
           {
             "code": "integer"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.onsetAge"
-          },
-          {
-            "identity": "NARSE",
-            "map": "AnamneseUndDiagnostik.AlterBeiDiagnose:Alter"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -567,24 +263,6 @@
         "type": [
           {
             "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.where(category.coding.exists(code='genetic'))"
-          },
-          {
-            "identity": "NARSE",
-            "map": "-"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "-"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "-"
           }
         ]
       },
@@ -599,24 +277,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-onset-age').valueCodeableConcept"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Ähnlich zu AnamneseUndDiagnostikAlterBeiDiagnose:AuswahlDerAltersangabe; allerdings anderes ValueSet und nicht auf genetische Diagnose beschränkt"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Ähnlich zu Krankheitsverlauf.AlterBeiDiagnose; allerdings anderes ValueSet und nicht auf genetische Diagnose beschränkt"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -629,24 +289,6 @@
         "type": [
           {
             "code": "date"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate').valueDateTime"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Krankheitsverlauf.AlterBeiDiagnose unter Datum(TT/MM/JJJJ), aber nicht auf genetische Diagnose beschränkt"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht direkt bei RareDiseasesCase; jedoch allgemein: mainDiagnosis.date oder additionalDiagnoses[].date (Datum der Hauptdiagnose im ISO 8601 Format JJJJ-MM-TT. Wenn Tag unbekannt -> 15. des Monats), aber nicht auf genetische Diagnose beschränkt"
           }
         ]
       },
@@ -661,24 +303,6 @@
           {
             "code": "integer"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.onsetAge"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Kann zu AnamneseUndDiagnostik.AlterBeiDiagnose:Alter zugeordnet werden; im NARSE jedoch nicht auf genetische Diagnose beschränkt"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -691,24 +315,6 @@
         "type": [
           {
             "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance').valueCodeableConcept"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -723,24 +329,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.method"
-          },
-          {
-            "identity": "NARSE",
-            "map": "AnamneseUndDiagnostik.Diagnosestellung"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -753,24 +341,6 @@
         "type": [
           {
             "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation"
-          },
-          {
-            "identity": "NARSE",
-            "map": "-"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "-"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "-"
           }
         ]
       },
@@ -785,24 +355,6 @@
           {
             "code": "BackboneElement"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='29463-7')) | Profile: https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/Koerpergewicht"
-          },
-          {
-            "identity": "NARSE",
-            "map": "-"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -815,24 +367,6 @@
         "type": [
           {
             "code": "decimal"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.valueQuantity.value"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -847,24 +381,6 @@
           {
             "code": "dateTime"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.effectiveDateTime"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -877,24 +393,6 @@
         "type": [
           {
             "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='8302-2')) | Profile: https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/Koerpergroesse"
-          },
-          {
-            "identity": "NARSE",
-            "map": "-"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -909,24 +407,6 @@
           {
             "code": "decimal"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.valueQuantity.value"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -939,24 +419,6 @@
         "type": [
           {
             "code": "dateTime"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.effectiveDateTime"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -971,24 +433,6 @@
           {
             "code": "BackboneElement"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='39156-5'))"
-          },
-          {
-            "identity": "NARSE",
-            "map": "-"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -1001,24 +445,6 @@
         "type": [
           {
             "code": "decimal"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.valueQuantity.value"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -1033,24 +459,6 @@
           {
             "code": "dateTime"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.effectiveDateTime"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -1063,24 +471,6 @@
         "type": [
           {
             "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='9843-4')) | Profile: http://fhir.de/StructureDefinition/observation-de-vitalsign-kopfumfang"
-          },
-          {
-            "identity": "NARSE",
-            "map": "-"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -1095,24 +485,6 @@
           {
             "code": "decimal"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.valueQuantity.value"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -1125,24 +497,6 @@
         "type": [
           {
             "code": "dateTime"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.effectiveDateTime"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -1157,24 +511,6 @@
           {
             "code": "BackboneElement"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='8280-0'))"
-          },
-          {
-            "identity": "NARSE",
-            "map": "-"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -1187,24 +523,6 @@
         "type": [
           {
             "code": "decimal"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.valueQuantity.value"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -1219,24 +537,6 @@
           {
             "code": "dateTime"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.effectiveDateTime"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -1249,24 +549,6 @@
         "type": [
           {
             "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='62409-8'))"
-          },
-          {
-            "identity": "NARSE",
-            "map": "-"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -1281,24 +563,6 @@
           {
             "code": "decimal"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.valueQuantity.value"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -1311,24 +575,6 @@
         "type": [
           {
             "code": "dateTime"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.effectiveDateTime"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -1343,24 +589,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='882-1')).valueCodeableConcept"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -1373,24 +601,6 @@
         "type": [
           {
             "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Patient"
-          },
-          {
-            "identity": "NARSE",
-            "map": "-"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "-"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "-"
           }
         ]
       },
@@ -1405,24 +615,6 @@
           {
             "code": "BackboneElement"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Patient.deceased[x]"
-          },
-          {
-            "identity": "NARSE",
-            "map": "-"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "-"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "-"
-          }
         ]
       },
       {
@@ -1435,24 +627,6 @@
         "type": [
           {
             "code": "date"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Patient.deceasedDateTime"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht direkt vorhanden, wird im NARSE nur durch PersönlicherUndFamiliärerHintergrund.Sterbealter abgebildet."
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Patientenstatus.Todeszeitpunkt"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "followUpRd.deathDate (Sterbemonat und Sterbejahr, Datum"
           }
         ]
       },
@@ -1467,24 +641,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate')"
-          },
-          {
-            "identity": "NARSE",
-            "map": "PersönlicherUndFamiliärerHintergrund.AnSeVerstorben "
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -1497,24 +653,6 @@
         "type": [
           {
             "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Condition.where(category.coding.exists(code='cause-of-death')).code"
-          },
-          {
-            "identity": "NARSE",
-            "map": "PersönlicherUndFamiliärerHintergrund.AndereTodesursache "
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -1529,24 +667,6 @@
           {
             "code": "BackboneElement"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "FamilyMemberHistory"
-          },
-          {
-            "identity": "NARSE",
-            "map": "PersönlicherUndFamiliärerHintergrund"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "-"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "-"
-          }
         ]
       },
       {
@@ -1559,24 +679,6 @@
         "type": [
           {
             "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "FamilyMemberHistory.relationship"
-          },
-          {
-            "identity": "NARSE",
-            "map": "PersönlicherUndFamiliärerHintergrund.BetroffeneFamilienangehörige:Verwandtschaftsbeziehung"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -1591,24 +693,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "FamilyMemberHistory.sex"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -1621,24 +705,6 @@
         "type": [
           {
             "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "FamilyMemberHistory.condition.code"
-          },
-          {
-            "identity": "NARSE",
-            "map": "PersönlicherUndFamiliärerHintergrund.BetroffeneFamilienangehörige:SelteneErkrankung"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -1653,24 +719,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "FamilyMemberHistory.condition.code"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -1683,24 +731,6 @@
         "type": [
           {
             "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "FamilyMemberHistory.extension.where(url='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance').valueCodeableConcept"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
           }
         ]
       },
@@ -1715,24 +745,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "FamilyMemberHistory.deceasedBoolean"
-          },
-          {
-            "identity": "NARSE",
-            "map": "PersönlicherUndFamiliärerHintergrund.BetroffeneFamilienangehörigeVerstorben?"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -1745,24 +757,6 @@
         "type": [
           {
             "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "CarePlan | MedicationRequest | ResearchStudy"
-          },
-          {
-            "identity": "NARSE",
-            "map": "AnamneseUndDiagnostik"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "-"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "-"
           }
         ]
       },
@@ -1777,24 +771,6 @@
           {
             "code": "BackboneElement"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "MedicationRequest.extension"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "-"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "-"
-          }
         ]
       },
       {
@@ -1807,24 +783,6 @@
         "type": [
           {
             "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "MedicationRequest.extension.where(url='http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal').valueBoolean"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht identisch, aber unter recommendedSystemicTherapies.type (offLabel) möglich"
           }
         ]
       },
@@ -1839,24 +797,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "MedicationRequest.medicationCodeableConcept"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht identisch, aber unter recommendedSystemicTherapies.substances[].code/.version möglich"
-          }
         ]
       },
       {
@@ -1869,24 +809,6 @@
         "type": [
           {
             "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "ResearchStudy | ServiceRequest.where(code.coding.exists(code='study-enrollment'))"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "-"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "-"
           }
         ]
       },
@@ -1901,24 +823,6 @@
           {
             "code": "Identifier"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "ResearchStudy.identifier"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nur Empfehlung, nicht tatsächliche Studie recommendedStudies.identifier und recommendedStudies.id"
-          }
         ]
       },
       {
@@ -1931,24 +835,6 @@
         "type": [
           {
             "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "ResearchStudy.status"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "recommendedStudies.name"
           }
         ]
       },
@@ -1966,24 +852,6 @@
               "http://hl7.org/fhir/StructureDefinition/organization-period"
             ]
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "ResearchStudy.period"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht vorhanden"
-          }
         ]
       },
       {
@@ -1996,24 +864,6 @@
         "type": [
           {
             "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "CarePlan"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "-"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "-"
           }
         ]
       },
@@ -2028,24 +878,6 @@
           {
             "code": "code"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "MedicationRequest | ServiceRequest"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "Nicht identisch RareDiseasesPlan.recommendedTherapies.strategy (Anderes ValueSet: systemicMedication, targetedMedication, preventionMedication, geneTherapy, prophylactic, earlyDetection, combination, nutrition, other); Angabe unter recommendedTherapies.strategyOther möglich"
-          }
         ]
       },
       {
@@ -2058,24 +890,6 @@
         "type": [
           {
             "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "Procedure | MedicationStatement"
-          },
-          {
-            "identity": "NARSE",
-            "map": "AnamneseUndDiagnostik.Therapiestatus"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "recommendedSystemicTherapies.therapeuticStrategy (Anderes ValueSet)"
           }
         ]
       },
@@ -2090,24 +904,6 @@
           {
             "code": "date"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "CarePlan.period.start"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "therapies.therapyStartDate (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase (Startdatum der fallrelevante,systemische Vortherapie))"
-          }
         ]
       },
       {
@@ -2121,24 +917,6 @@
           {
             "code": "date"
           }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "CarePlan.period.end"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "therapies.therapyEndDate (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase (Enddatum der fallrelevante,systemische Vortherapie))"
-          }
         ]
       },
       {
@@ -2151,24 +929,6 @@
         "type": [
           {
             "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "FHIR",
-            "map": "CarePlan.activity.outcomeCodeableConcept"
-          },
-          {
-            "identity": "NARSE",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ERDRICDS",
-            "map": "Nicht vorhanden"
-          },
-          {
-            "identity": "ModellvorhabenGenomsequenzierung",
-            "map": "therapies.terminationReasonOBDS (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase; ValueSet: E = reguläres Ende; R = reguläres Ende mit Dosisreduktion; W = reguläres Ende mit Substanzwechsel; A = Abbruch wegen Nebenwirkungen; P = Abbruch wegen Progress; S = Abbruch aus sonstigen Gründen; V= Patient verweigert weitere Therapie ;T= Patient verstorben; U = unbekannt)"
           }
         ]
       }

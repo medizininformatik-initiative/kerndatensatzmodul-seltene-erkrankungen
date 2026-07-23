@@ -76,6 +76,11 @@ Description: "MII LogicalModel Modul Seltene Erkraknungen"
     * EnddatumTherapie 0..1 date "Enddatum Therapie" "Datum, an dem die Therapie beendet wurde."
     * GrundEndeTherapie 0..* code "Grund Ende Therapie" "Gibt an, warum die Therapie beendet wurde (z.B. Nebenwirkungen, keine Wirkung)."
       
+// --- Logical Model mappings TEMPORARILY DISABLED for the IG Publisher build ---
+// The IG Publisher throws 'NullPointerException: tgt is null' while rendering the
+// maps fragment (StructureDefinition-mii-lm-seltene-maps-*.xhtml); adding Target:
+// uris did not resolve it. Content preserved below; re-enable after diagnosis.
+/*
 Mapping: SE-vomLogicalModelzuFHIR
 Id: FHIR
 Title: "SE LogicalModel FHIR Mapping"
@@ -371,3 +376,4 @@ Target: "https://www.medizininformatik-initiative.de/de/modellvorhaben-genomsequ
     * StartdatumTherapie -> "therapies.therapyStartDate (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase (Startdatum der fallrelevante,systemische Vortherapie))"
     * EnddatumTherapie -> "therapies.therapyEndDate (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase (Enddatum der fallrelevante,systemische Vortherapie))"
     * GrundEndeTherapie -> "therapies.terminationReasonOBDS (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase; ValueSet: E = reguläres Ende; R = reguläres Ende mit Dosisreduktion; W = reguläres Ende mit Substanzwechsel; A = Abbruch wegen Nebenwirkungen; P = Abbruch wegen Progress; S = Abbruch aus sonstigen Gründen; V= Patient verweigert weitere Therapie ;T= Patient verstorben; U = unbekannt)"
+*/
