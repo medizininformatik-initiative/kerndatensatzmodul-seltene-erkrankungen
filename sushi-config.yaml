@@ -101,14 +101,13 @@ parameters:
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-# NOTE (IG Publisher migration): The custom menu block is commented out so the IG
-# Publisher auto-generates the menu. It will be repopulated when content is ported.
-# menu:
-#   Home: index.html
-#   Guidance:
-#     Information Model: information_model.html
-#     FHIR Model: fhir_model.html
-#   Artifacts: artifacts.html
+# NOTE (IG Publisher migration): A minimal menu is required — the fhir2 template's
+# multi-language machinery includes menu.xml (as <lang>/menu.xml) and Jekyll fails
+# without it. We keep it to the two always-auto-generated pages (Home, Artifacts);
+# it will be expanded when content is ported.
+menu:
+  Home: index.html
+  Artifacts: artifacts.html
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │
