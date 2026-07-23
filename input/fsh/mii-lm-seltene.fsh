@@ -155,49 +155,49 @@ Mapping: SE-vomLogicalModelzuNARSE
 Id: NARSE
 Title: "SE LogicalModel NARSE Mapping"
 Source: MII_LM_SE
-* AnamneseUndDiagnostik 
+* AnamneseUndDiagnostik -> "-"
   * Untersuchungsdatum -> "Nicht vorhanden"
-  * Phaenotypisierung 
+  * Phaenotypisierung -> "-"
     * HPOTerm -> "AnamneseUndDiagnostik.Phänotyp:HPOTerm"
     * HPOStatus -> "Nicht vorhanden"
     * HPOVersion -> "Katalog mit vorhanden unter AnamneseUndDiagnostik.Phänotyp:HPOTerm"
-    * ZeitraumSymptom 
+    * ZeitraumSymptom -> "-"
       * ZeitraumSymptom -> "Nicht vorhanden"
       * Lebensphase -> "Ähnlich zu AlterBeiErstenSymptomen:AuswahlDerAltersangabe; allerdings anderes ValueSet"
       * AlterSymptom -> "AnamneseUndDiagnostik.AlterBeiErstenSymptomen:Alter "
     * VerlaufSymptom -> "Nicht vorhanden"
-  * KlinischeDiagnose
+  * KlinischeDiagnose -> "-"
     * ZeitpunktKlinischeDia -> "Ähnlich zu AnamneseUndDiagnostikAlterBeiDiagnose:AuswahlDerAltersangabe; allerdings anderes ValueSet"
     * FeststellungsdatumKlinischeDia -> "Nicht vorhanden"
     * AlterKlinischeDia -> "AnamneseUndDiagnostik.AlterBeiDiagnose:Alter"
-  * GenetischeDiagnose
+  * GenetischeDiagnose -> "-"
     * ZeitpunktGenDia -> "Ähnlich zu AnamneseUndDiagnostikAlterBeiDiagnose:AuswahlDerAltersangabe; allerdings anderes ValueSet und nicht auf genetische Diagnose beschränkt"
     * FeststellungsdatumGenDia -> "Nicht vorhanden"
     * AlterGenDia -> "Kann zu AnamneseUndDiagnostik.AlterBeiDiagnose:Alter zugeordnet werden; im NARSE jedoch nicht auf genetische Diagnose beschränkt"
   * GenDiaFehlendePenetranz -> "Nicht vorhanden"
   * MethodeDiagnosestellung -> "AnamneseUndDiagnostik.Diagnosestellung"
-* KoerperlicheUntersuchung
-  * Koerpergewicht
+* KoerperlicheUntersuchung -> "-"
+  * Koerpergewicht -> "-"
     * Koerpergewicht -> "Nicht vorhanden"
     * DatumKoerpergewicht -> "Nicht vorhanden"
-  * Koerpergroesse
+  * Koerpergroesse -> "-"
     * Koerpergroesse -> "Nicht vorhanden"
     * DatumKoerpergroesse -> "Nicht vorhanden"
-  * BMI
+  * BMI -> "-"
     * BMI -> "Nicht vorhanden"
     * DatumBMI -> "Nicht vorhanden"
-  * Kopfumfang
+  * Kopfumfang -> "-"
     * Kopfumfang -> "Nicht vorhanden"
     * DatumKopfumfang -> "Nicht vorhanden"
-  * Bauchumfang
+  * Bauchumfang -> "-"
     * Bauchumfang -> "Nicht vorhanden"
     * DatumBauchumfang -> "Nicht vorhanden"
-  * Hueftumfang
+  * Hueftumfang -> "-"
     * Hueftumfang -> "Nicht vorhanden"
     * DatumHueftumfang -> "Nicht vorhanden"
   * Blutgruppe -> "Nicht vorhanden"
-* PersoenlicheInfosIndexpatient
-  * Tod 
+* PersoenlicheInfosIndexpatient -> "-"
+  * Tod -> "-"
     * Sterbedatum -> "Nicht direkt vorhanden, wird im NARSE nur durch PersönlicherUndFamiliärerHintergrund.Sterbealter abgebildet."
     * AnSEVerstorben -> "PersönlicherUndFamiliärerHintergrund.AnSeVerstorben "
     * AndereTodesursache -> "PersönlicherUndFamiliärerHintergrund.AndereTodesursache "
@@ -227,28 +227,28 @@ Mapping: SE-vomLogicalModelzumERDRICDS
 Id: ERDRICDS
 Title: "SE LogicalModel ERDRI CDS Mapping"
 Source: MII_LM_SE
-* AnamneseUndDiagnostik
+* AnamneseUndDiagnostik -> "-"
   * Untersuchungsdatum -> "Nicht vorhanden"
-  * Phaenotypisierung
+  * Phaenotypisierung -> "-"
     * HPOTerm -> "Nur beim nicht diagnostiziertem Fall unter Diagnose.NichtDiagnostizierterFall"
     * HPOStatus -> "Nicht vorhanden"
     * HPOVersion -> "Nicht vorhanden"
-    * ZeitraumSymptom
+    * ZeitraumSymptom -> "-"
       * ZeitraumSymptom -> "Krankheitsverlauf.AlterBeiKrankheitsbeginn unter Datum(TT/MM/JJJJ) "
       * Lebensphase -> "Krankheitsverlauf.AlterBeiKrankheitsbeginn; aber anderes ValueSet"
       * AlterSymptom -> "Nicht vorhanden"
     * VerlaufSymptom -> "Nicht vorhanden"
-  * KlinischeDiagnose
+  * KlinischeDiagnose -> "-"
     * ZeitpunktKlinischeDia -> "Ähnlich zu Krankheitsverlauf.AlterBeiDiagnose; allerdings anderes ValueSet"
     * FeststellungsdatumKlinischeDia -> "Krankheitsverlauf.AlterBeiDiagnose unter Datum(TT/MM/JJJJ)"
     * AlterKlinischeDia -> "Nicht vorhanden"
-  * GenetischeDiagnose
+  * GenetischeDiagnose -> "-"
     * ZeitpunktGenDia -> "Ähnlich zu Krankheitsverlauf.AlterBeiDiagnose; allerdings anderes ValueSet und nicht auf genetische Diagnose beschränkt"
     * FeststellungsdatumGenDia -> "Krankheitsverlauf.AlterBeiDiagnose unter Datum(TT/MM/JJJJ), aber nicht auf genetische Diagnose beschränkt"
     * AlterGenDia -> "Nicht vorhanden"
   * GenDiaFehlendePenetranz -> "Nicht vorhanden"
   * MethodeDiagnosestellung -> "Nicht vorhanden"
-* KoerperlicheUntersuchung
+* KoerperlicheUntersuchung -> "-"
   * Koerpergewicht -> "Nicht vorhanden"
     * Koerpergewicht -> "Nicht vorhanden"
     * DatumKoerpergewicht -> "Nicht vorhanden"
@@ -268,27 +268,27 @@ Source: MII_LM_SE
     * Hueftumfang -> "Nicht vorhanden"
     * DatumHueftumfang -> "Nicht vorhanden"
   * Blutgruppe -> "Nicht vorhanden"
-* PersoenlicheInfosIndexpatient
-  * Tod 
+* PersoenlicheInfosIndexpatient -> "-"
+  * Tod -> "-"
     * Sterbedatum -> "Patientenstatus.Todeszeitpunkt"
     * AnSEVerstorben -> "Nicht vorhanden"
     * AndereTodesursache -> "Nicht vorhanden"
-* Familienanamnese 
+* Familienanamnese -> "-"
   * Verwandtschaftsverhaeltnis -> "Nicht vorhanden"
   * Geschlecht -> "Nicht vorhanden"
   * GleicheSE -> "Nicht vorhanden"
   * AndereSE -> "Nicht vorhanden"
   * Penetranz -> "Nicht vorhanden"
   * FamilienmitgliedVerstorben -> "Nicht vorhanden"
-* TherapieForschung 
-  * OffLabel
+* TherapieForschung -> "-"
+  * OffLabel -> "-"
     * OffLabelGabe -> "Nicht vorhanden"
     * OffLabelMedikament -> "Nicht vorhanden"
-  * Studie 
+  * Studie -> "-"
     * StudienID -> "Nicht vorhanden"
     * StudienStatus -> "Nicht vorhanden"
     * Studienzeitraum -> "Nicht vorhanden"
-  * Therapie 
+  * Therapie -> "-"
     * Therapieempfehlung -> "Nicht vorhanden"
     * DurchgefuehrteTherapie -> "Nicht vorhanden"
     * StartdatumTherapie -> "Nicht vorhanden"
@@ -300,28 +300,28 @@ Mapping: SE-vomLogicalModelzumModellvorhabenGenomsequenzierung
 Id: ModellvorhabenGenomsequenzierung
 Title: "SE LogicalModel ModellvorhabenGenomsequenzierung Mapping"
 Source: MII_LM_SE
-* AnamneseUndDiagnostik
+* AnamneseUndDiagnostik -> "-"
   * Untersuchungsdatum -> "Nicht direkt vorhanden; gibt nur Daten für vergangene Diagnostik, Proben, etc."
-  * Phaenotypisierung
+  * Phaenotypisierung -> "-"
     * HPOTerm -> "diagnosisRd.phenotypes[].code+text oder followUpRd.phenotypes[].code (Angabe mit code, text, system und display) "
     * HPOStatus -> "Nicht vorhanden"
     * HPOVersion -> "Angabe unter system bei phenotypes[].code"
-    * ZeitraumSymptom
+    * ZeitraumSymptom -> "-"
       * ZeitraumSymptom -> "diagnosisRd.symptomOnsetDate (Monat und Jahr des Beginns des ersten aufgetretenen HPO-kodierten Symptoms) "
       * Lebensphase -> "Nicht vorhanden"
       * AlterSymptom -> "Nicht vorhanden"
     * VerlaufSymptom -> "followUpRd.phenotypes[].change (anderes ValueSet: newlyAdded, improved, degraded, noLongerObserved,unchanged)"
-  * KlinischeDiagnose
+  * KlinischeDiagnose -> "-"
     * ZeitpunktKlinischeDia -> "Nicht vorhanden"
     * FeststellungsdatumKlinischeDia -> "Nicht direkt bei RareDiseasesCase; jedoch allgemein: mainDiagnosis.date oder additionalDiagnoses[].date (Datum der Hauptdiagnose im ISO 8601 Format JJJJ-MM-TT. Wenn Tag unbekannt -> 15. des Monats)"
     * AlterKlinischeDia -> "Nicht vorhanden"
-  * GenetischeDiagnose
+  * GenetischeDiagnose -> "-"
     * ZeitpunktGenDia -> "Nicht vorhanden"
     * FeststellungsdatumGenDia -> "Nicht direkt bei RareDiseasesCase; jedoch allgemein: mainDiagnosis.date oder additionalDiagnoses[].date (Datum der Hauptdiagnose im ISO 8601 Format JJJJ-MM-TT. Wenn Tag unbekannt -> 15. des Monats), aber nicht auf genetische Diagnose beschränkt"
     * AlterGenDia -> "Nicht vorhanden"
   * GenDiaFehlendePenetranz -> "Nicht vorhanden"
   * MethodeDiagnosestellung -> "Nicht vorhanden"
-* KoerperlicheUntersuchung
+* KoerperlicheUntersuchung -> "-"
   * Koerpergewicht -> "Nicht vorhanden"
     * Koerpergewicht -> "Nicht vorhanden"
     * DatumKoerpergewicht -> "Nicht vorhanden"
@@ -341,27 +341,27 @@ Source: MII_LM_SE
     * Hueftumfang -> "Nicht vorhanden"
     * DatumHueftumfang -> "Nicht vorhanden"
   * Blutgruppe -> "Nicht vorhanden"
-* PersoenlicheInfosIndexpatient
-  * Tod 
+* PersoenlicheInfosIndexpatient -> "-"
+  * Tod -> "-"
     * Sterbedatum -> "followUpRd.deathDate (Sterbemonat und Sterbejahr, Datum"
     * AnSEVerstorben -> "Nicht vorhanden"
     * AndereTodesursache -> "Nicht vorhanden"
-* Familienanamnese 
+* Familienanamnese -> "-"
   * Verwandtschaftsverhaeltnis -> "Nicht vorhanden"
   * Geschlecht -> "Nicht vorhanden"
   * GleicheSE -> "Nicht vorhanden"
   * AndereSE -> "Nicht vorhanden"
   * Penetranz -> "Nicht vorhanden"
   * FamilienmitgliedVerstorben -> "Nicht vorhanden"
-* TherapieForschung 
-  * OffLabel
+* TherapieForschung -> "-"
+  * OffLabel -> "-"
     * OffLabelGabe -> "Nicht identisch, aber unter recommendedSystemicTherapies.type (offLabel) möglich"
     * OffLabelMedikament -> "Nicht identisch, aber unter recommendedSystemicTherapies.substances[].code/.version möglich"
-  * Studie 
+  * Studie -> "-"
     * StudienID -> "Nur Empfehlung, nicht tatsächliche Studie recommendedStudies.identifier und recommendedStudies.id"
     * StudienStatus -> "recommendedStudies.name"
     * Studienzeitraum -> "Nicht vorhanden"
-  * Therapie 
+  * Therapie -> "-"
     * Therapieempfehlung -> "Nicht identisch RareDiseasesPlan.recommendedTherapies.strategy (Anderes ValueSet: systemicMedication, targetedMedication, preventionMedication, geneTherapy, prophylactic, earlyDetection, combination, nutrition, other); Angabe unter recommendedTherapies.strategyOther möglich"
     * DurchgefuehrteTherapie -> "recommendedSystemicTherapies.therapeuticStrategy (Anderes ValueSet)"
     * StartdatumTherapie -> "therapies.therapyStartDate (allerdings unter OncologyFollowUp nicht unter RareDiseasesCase (Startdatum der fallrelevante,systemische Vortherapie))"

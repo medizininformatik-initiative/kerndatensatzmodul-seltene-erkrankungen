@@ -66,6 +66,18 @@
           {
             "identity": "FHIR",
             "map": "Condition | Observation | ClinicalImpression"
+          },
+          {
+            "identity": "NARSE",
+            "map": "-"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "-"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "-"
           }
         ]
       },
@@ -135,6 +147,18 @@
           {
             "identity": "FHIR",
             "map": "Observation.where(code.coding.exists(system='http://purl.obolibrary.org/obo/hp.owl')) | Condition.where(code.coding.exists(system='http://purl.obolibrary.org/obo/hp.owl')) | Observation (SNOMED CT, ICD-10, LOINC)"
+          },
+          {
+            "identity": "NARSE",
+            "map": "-"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "-"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "-"
           }
         ]
       },
@@ -266,6 +290,18 @@
           {
             "identity": "FHIR",
             "map": "Condition.onset[x] | Observation.effective[x]"
+          },
+          {
+            "identity": "NARSE",
+            "map": "-"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "-"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "-"
           }
         ]
       },
@@ -409,6 +445,18 @@
           {
             "identity": "FHIR",
             "map": "Condition.where(category.coding.exists(code='clinical'))"
+          },
+          {
+            "identity": "NARSE",
+            "map": "-"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "-"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "-"
           }
         ]
       },
@@ -521,6 +569,18 @@
           {
             "identity": "FHIR",
             "map": "Condition.where(category.coding.exists(code='genetic'))"
+          },
+          {
+            "identity": "NARSE",
+            "map": "-"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "-"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "-"
           }
         ]
       },
@@ -695,6 +755,18 @@
           {
             "identity": "FHIR",
             "map": "Observation"
+          },
+          {
+            "identity": "NARSE",
+            "map": "-"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "-"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "-"
           }
         ]
       },
@@ -714,6 +786,10 @@
           {
             "identity": "FHIR",
             "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='29463-7')) | Profile: https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/Koerpergewicht"
+          },
+          {
+            "identity": "NARSE",
+            "map": "-"
           },
           {
             "identity": "ERDRICDS",
@@ -805,6 +881,10 @@
             "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='8302-2')) | Profile: https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/Koerpergroesse"
           },
           {
+            "identity": "NARSE",
+            "map": "-"
+          },
+          {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
           },
@@ -892,6 +972,10 @@
           {
             "identity": "FHIR",
             "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='39156-5'))"
+          },
+          {
+            "identity": "NARSE",
+            "map": "-"
           },
           {
             "identity": "ERDRICDS",
@@ -983,6 +1067,10 @@
             "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='9843-4')) | Profile: http://fhir.de/StructureDefinition/observation-de-vitalsign-kopfumfang"
           },
           {
+            "identity": "NARSE",
+            "map": "-"
+          },
+          {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
           },
@@ -1072,6 +1160,10 @@
             "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='8280-0'))"
           },
           {
+            "identity": "NARSE",
+            "map": "-"
+          },
+          {
             "identity": "ERDRICDS",
             "map": "Nicht vorhanden"
           },
@@ -1159,6 +1251,10 @@
           {
             "identity": "FHIR",
             "map": "Observation.where(code.coding.exists(system='http://loinc.org' and code='62409-8'))"
+          },
+          {
+            "identity": "NARSE",
+            "map": "-"
           },
           {
             "identity": "ERDRICDS",
@@ -1279,6 +1375,18 @@
           {
             "identity": "FHIR",
             "map": "Patient"
+          },
+          {
+            "identity": "NARSE",
+            "map": "-"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "-"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "-"
           }
         ]
       },
@@ -1298,6 +1406,18 @@
           {
             "identity": "FHIR",
             "map": "Patient.deceased[x]"
+          },
+          {
+            "identity": "NARSE",
+            "map": "-"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "-"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "-"
           }
         ]
       },
@@ -1414,6 +1534,14 @@
           {
             "identity": "NARSE",
             "map": "PersönlicherUndFamiliärerHintergrund"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "-"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "-"
           }
         ]
       },
@@ -1623,6 +1751,14 @@
           {
             "identity": "NARSE",
             "map": "AnamneseUndDiagnostik"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "-"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "-"
           }
         ]
       },
@@ -1646,6 +1782,14 @@
           {
             "identity": "NARSE",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "-"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "-"
           }
         ]
       },
@@ -1731,6 +1875,14 @@
           {
             "identity": "NARSE",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "-"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "-"
           }
         ]
       },
@@ -1850,6 +2002,14 @@
           {
             "identity": "NARSE",
             "map": "Nicht vorhanden"
+          },
+          {
+            "identity": "ERDRICDS",
+            "map": "-"
+          },
+          {
+            "identity": "ModellvorhabenGenomsequenzierung",
+            "map": "-"
           }
         ]
       },
