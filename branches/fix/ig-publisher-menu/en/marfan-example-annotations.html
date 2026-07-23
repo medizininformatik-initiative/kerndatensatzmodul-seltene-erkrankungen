@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Marfan Example Annotations - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Seltene Erkrankungen</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Marfan Example Annotations</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Seltene Erkrankungen - Local Development build (v2026.0.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Marfan Example Annotations</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#marfan-syndrom-fallbeispiel---semantische-annotationen" id="markdown-toc-marfan-syndrom-fallbeispiel---semantische-annotationen">Marfan-Syndrom Fallbeispiel - Semantische Annotationen</a>    <ul>
+      <li><a href="#übersicht" id="markdown-toc-übersicht">Übersicht</a></li>
+      <li><a href="#zeitlicher-verlauf" id="markdown-toc-zeitlicher-verlauf">Zeitlicher Verlauf</a>        <ul>
+          <li><a href="#1-augenärztliche-vorstellung-15102024" id="markdown-toc-1-augenärztliche-vorstellung-15102024">1. Augenärztliche Vorstellung (15.10.2024)</a></li>
+          <li><a href="#2-katarakt-operation-12112024" id="markdown-toc-2-katarakt-operation-12112024">2. Katarakt-Operation (12.11.2024)</a></li>
+          <li><a href="#3-kardiologische-erstvorstellung-15122024" id="markdown-toc-3-kardiologische-erstvorstellung-15122024">3. Kardiologische Erstvorstellung (15.12.2024)</a></li>
+          <li><a href="#4-geplante-aortenwurzelersatz-op-15032025" id="markdown-toc-4-geplante-aortenwurzelersatz-op-15032025">4. Geplante Aortenwurzelersatz-OP (15.03.2025)</a></li>
+        </ul>
+      </li>
+      <li><a href="#semantische-annotationen" id="markdown-toc-semantische-annotationen">Semantische Annotationen</a>        <ul>
+          <li><a href="#patient" id="markdown-toc-patient">Patient</a></li>
+          <li><a href="#phänotypische-merkmale" id="markdown-toc-phänotypische-merkmale">Phänotypische Merkmale</a></li>
+          <li><a href="#diagnosen" id="markdown-toc-diagnosen">Diagnosen</a></li>
+          <li><a href="#prozeduren" id="markdown-toc-prozeduren">Prozeduren</a></li>
+          <li><a href="#medikation" id="markdown-toc-medikation">Medikation</a></li>
+          <li><a href="#diagnostische-untersuchungen" id="markdown-toc-diagnostische-untersuchungen">Diagnostische Untersuchungen</a></li>
+          <li><a href="#behandlungsplan" id="markdown-toc-behandlungsplan">Behandlungsplan</a></li>
+        </ul>
+      </li>
+      <li><a href="#fhir-mapping" id="markdown-toc-fhir-mapping">FHIR-Mapping</a>        <ul>
+          <li><a href="#verwendete-profile" id="markdown-toc-verwendete-profile">Verwendete Profile</a></li>
+          <li><a href="#ressourcen-übersicht" id="markdown-toc-ressourcen-übersicht">Ressourcen-Übersicht</a></li>
+          <li><a href="#bundle" id="markdown-toc-bundle">Bundle</a></li>
+        </ul>
+      </li>
+      <li><a href="#ressourcen-diagramme" id="markdown-toc-ressourcen-diagramme">Ressourcen-Diagramme</a>        <ul>
+          <li><a href="#gesamtübersicht-aller-ressourcen-und-beziehungen" id="markdown-toc-gesamtübersicht-aller-ressourcen-und-beziehungen">Gesamtübersicht aller Ressourcen und Beziehungen</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="marfan-syndrom-fallbeispiel---semantische-annotationen">Marfan-Syndrom Fallbeispiel - Semantische Annotationen</h1>
+
+<h2 id="übersicht">Übersicht</h2>
+<p>Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel eines Marfan-Syndroms bei einem 19-jährigen männlichen Patienten.</p>
+
+<h2 id="zeitlicher-verlauf">Zeitlicher Verlauf</h2>
+
+<h3 id="1-augenärztliche-vorstellung-15102024">1. Augenärztliche Vorstellung (15.10.2024)</h3>
+<ul>
+  <li><strong>Anlass</strong>: Katarakt-Konsultation</li>
+  <li><strong>Befund</strong>: Katarakt beidseits</li>
+  <li><strong>Setting</strong>: Ambulant</li>
+  <li><strong>Weiteres Vorgehen</strong>: OP-Planung</li>
+</ul>
+
+<h3 id="2-katarakt-operation-12112024">2. Katarakt-Operation (12.11.2024)</h3>
+<ul>
+  <li><strong>Prozedur</strong>: Phakoemulsifikation mit Linsenimplantation</li>
+  <li><strong>Setting</strong>: Ambulant/Tagesklinik</li>
+  <li><strong>Komplikationen</strong>: Keine</li>
+  <li><strong>Befund</strong>: Erfolgreiche Linsenimplantation</li>
+</ul>
+
+<h3 id="3-kardiologische-erstvorstellung-15122024">3. Kardiologische Erstvorstellung (15.12.2024)</h3>
+<ul>
+  <li><strong>Einweisungsgrund</strong>: Thoraxschmerzen, Verdacht auf Marfan-Syndrom</li>
+  <li><strong>Diagnose</strong>: Marfan-Syndrom bestätigt</li>
+  <li><strong>Befunde</strong>:
+    <ul>
+      <li>Aortenwurzeldilatation (48mm)</li>
+      <li>Aortenklappeninsuffizienz Grad II</li>
+      <li>Mitralklappeninsuffizienz Grad I</li>
+    </ul>
+  </li>
+  <li><strong>Therapie</strong>: Losartan 50mg 1x täglich initiiert</li>
+</ul>
+
+<h3 id="4-geplante-aortenwurzelersatz-op-15032025">4. Geplante Aortenwurzelersatz-OP (15.03.2025)</h3>
+<ul>
+  <li><strong>Prozedur</strong>: Composite-Graft-Implantation (David-OP)</li>
+  <li><strong>Setting</strong>: Stationär geplant</li>
+  <li><strong>Indikation</strong>: Progrediente Aortenwurzeldilatation bei Marfan-Syndrom</li>
+</ul>
+
+<h2 id="semantische-annotationen">Semantische Annotationen</h2>
+
+<h3 id="patient">Patient</h3>
+<ul>
+  <li><strong>Geschlecht</strong>: Männlich</li>
+  <li><strong>Geburtsdatum</strong>: ~2005 (19 Jahre alt)</li>
+  <li><strong>Körpergröße</strong>: 2,13 m (pathologisch erhöht)</li>
+  <li><strong>Besonderheiten</strong>:
+    <ul>
+      <li>Beinlängendifferenz (rechts verkürzt)</li>
+      <li>Marfanoider Habitus</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="phänotypische-merkmale">Phänotypische Merkmale</h3>
+
+<h4 id="skelettale-manifestationen">Skelettale Manifestationen</h4>
+<ol>
+  <li><strong>Hochwuchs</strong>:
+    <ul>
+      <li><strong>HPO</strong>: HP:0000098 "Tall stature"</li>
+      <li><strong>Wert</strong>: 2,13 m</li>
+      <li><strong>Perzentile</strong>: &gt;99. Perzentile</li>
+    </ul>
+  </li>
+  <li><strong>Beinlängendifferenz</strong>:
+    <ul>
+      <li><strong>HPO</strong>: HP:0100559 "Lower limb asymmetry"</li>
+      <li><strong>Beschreibung</strong>: Rechtes Bein verkürzt</li>
+      <li><strong>SNOMED CT</strong>: 707738004 "Leg length discrepancy"</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="kardiovaskuläre-manifestationen">Kardiovaskuläre Manifestationen</h4>
+<ol>
+  <li><strong>Thoraxschmerzen</strong>:
+    <ul>
+      <li><strong>HPO</strong>: HP:0100749 "Chest pain"</li>
+      <li><strong>SNOMED CT</strong>: 29857009 "Chest pain"</li>
+      <li><strong>Onset</strong>: Akut</li>
+    </ul>
+  </li>
+  <li><strong>Aortenwurzeldilatation</strong>:
+    <ul>
+      <li><strong>HPO</strong>: HP:0002616 "Aortic root aneurysm"</li>
+      <li><strong>SNOMED CT</strong>: 251036003 "Aortic root dilatation"</li>
+      <li><strong>Messwert</strong>: 48 mm (pathologisch erweitert)</li>
+    </ul>
+  </li>
+  <li><strong>Aortenklappeninsuffizienz</strong>:
+    <ul>
+      <li><strong>HPO</strong>: HP:0001659 "Aortic regurgitation"</li>
+      <li><strong>SNOMED CT</strong>: 60234000 "Aortic valve regurgitation"</li>
+      <li><strong>Schweregrad</strong>: Grad II (moderat)</li>
+    </ul>
+  </li>
+  <li><strong>Mitralklappeninsuffizienz</strong>:
+    <ul>
+      <li><strong>HPO</strong>: HP:0001653 "Mitral regurgitation"</li>
+      <li><strong>SNOMED CT</strong>: 48724000 "Mitral valve regurgitation"</li>
+      <li><strong>Schweregrad</strong>: Grad I (mild)</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="ophthalmologische-manifestationen">Ophthalmologische Manifestationen</h4>
+<ol>
+  <li><strong>Katarakt</strong>:
+    <ul>
+      <li><strong>HPO</strong>: HP:0000518 "Cataract"</li>
+      <li><strong>ICD-10-GM</strong>: H26.9 "Katarakt, nicht näher bezeichnet"</li>
+      <li><strong>SNOMED CT</strong>: 193570009 "Cataract"</li>
+      <li><strong>Lokalisation</strong>: Bilateral</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="diagnosen">Diagnosen</h3>
+<ol>
+  <li><strong>Hauptdiagnose</strong>:
+    <ul>
+      <li><strong>Bezeichnung</strong>: Marfan-Syndrom</li>
+      <li><strong>ICD-10-GM</strong>: Q87.4 "Marfan-Syndrom"</li>
+      <li><strong>Orpha</strong>: 558 "Marfan syndrome"</li>
+      <li><strong>SNOMED CT</strong>: 19346006 "Marfan syndrome"</li>
+      <li><strong>OMIM</strong>: 154700</li>
+      <li><strong>Status</strong>: Klinisch bestätigt</li>
+      <li><strong>Feststellungsdatum</strong>: 15.12.2024</li>
+    </ul>
+  </li>
+  <li><strong>Nebendiagnose</strong>:
+    <ul>
+      <li><strong>Bezeichnung</strong>: Katarakt</li>
+      <li><strong>ICD-10-GM</strong>: H26.9 "Katarakt, nicht näher bezeichnet"</li>
+      <li><strong>Status</strong>: Operativ behandelt</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="prozeduren">Prozeduren</h3>
+<ol>
+  <li><strong>Katarakt-Operation</strong>:
+    <ul>
+      <li><strong>OPS-Code</strong>: 5-144.5a "Extrakapsuläre Extraktion der Linse [ECCE]: Phakoemulsifikation: Mit Einführung einer kapselfixierten Hinterkammerlinse, monofokale Intraokularlinse"</li>
+      <li><strong>SNOMED CT</strong>: 54885007 "Phacoemulsification of cataract with intraocular lens implantation"</li>
+      <li><strong>Datum</strong>: 12.11.2024</li>
+      <li><strong>Status</strong>: Abgeschlossen</li>
+    </ul>
+  </li>
+  <li><strong>Geplante Aortenwurzelersatz-OP</strong>:
+    <ul>
+      <li><strong>OPS-Code</strong>: 5-354.0a "Andere Operationen an Herzklappen: Aortenklappe: Klappenrekonstruktion"</li>
+      <li><strong>SNOMED CT</strong>: 119564002 "Aortic root replacement"</li>
+      <li><strong>Geplantes Datum</strong>: 15.03.2025</li>
+      <li><strong>Status</strong>: Geplant</li>
+      <li><strong>Technik</strong>: David-Operation (Valve-sparing root replacement)</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="medikation">Medikation</h3>
+<ol>
+  <li><strong>Losartan</strong>:
+    <ul>
+      <li><strong>ATC-Code</strong>: C09CA01</li>
+      <li><strong>Dosierung</strong>: 50 mg</li>
+      <li><strong>Frequenz</strong>: 1x täglich</li>
+      <li><strong>Indikation</strong>: Progressionshemmung der Aortenwurzeldilatation</li>
+      <li><strong>Startdatum</strong>: 15.12.2024</li>
+      <li><strong>SNOMED CT</strong>: 387069000 "Losartan"</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="diagnostische-untersuchungen">Diagnostische Untersuchungen</h3>
+
+<h4 id="echokardiographie-15122024">Echokardiographie (15.12.2024)</h4>
+<ol>
+  <li><strong>Aortenwurzeldurchmesser</strong>:
+    <ul>
+      <li><strong>LOINC</strong>: 79992-2 "Aortic root diameter by US"</li>
+      <li><strong>Wert</strong>: 48 mm</li>
+      <li><strong>Interpretation</strong>: Pathologisch erweitert</li>
+    </ul>
+  </li>
+  <li><strong>Aortenklappeninsuffizienz-Grad</strong>:
+    <ul>
+      <li><strong>LOINC</strong>: 80140-5 "Aortic valve regurgitation severity by US"</li>
+      <li><strong>Wert</strong>: Grad II</li>
+      <li><strong>Interpretation</strong>: Moderat</li>
+    </ul>
+  </li>
+  <li><strong>Mitralklappeninsuffizienz-Grad</strong>:
+    <ul>
+      <li><strong>LOINC</strong>: 80186-8 "Mitral valve regurgitation severity by US"</li>
+      <li><strong>Wert</strong>: Grad I</li>
+      <li><strong>Interpretation</strong>: Mild</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="behandlungsplan">Behandlungsplan</h3>
+<ul>
+  <li><strong>Kardiologische Überwachung</strong>: Alle 6 Monate Echokardiographie</li>
+  <li><strong>Medikamentöse Therapie</strong>: Fortführung Losartan</li>
+  <li><strong>Operative Therapie</strong>: Elektive Aortenwurzelersatz-OP am 15.03.2025</li>
+  <li><strong>Genetische Beratung</strong>: Empfohlen für Familienplanung</li>
+  <li><strong>Ophthalmologische Nachsorge</strong>: Post-operative Kontrollen</li>
+</ul>
+
+<h2 id="fhir-mapping">FHIR-Mapping</h2>
+
+<h3 id="verwendete-profile">Verwendete Profile</h3>
+<ul>
+  <li><strong>Patient</strong>: MII KDS Patient</li>
+  <li><strong>Diagnose</strong>: MII PR SE Diagnose</li>
+  <li><strong>Symptom/Phänotyp</strong>: MII PR SE Symptom</li>
+  <li><strong>Prozedur</strong>: MII PR Prozedur</li>
+  <li><strong>MedicationStatement</strong>: MII PR Medikation MedicationStatement</li>
+  <li><strong>Observation</strong>: MII PR Labor Observation</li>
+  <li><strong>Encounter</strong>: MII PR Encounter</li>
+  <li><strong>ClinicalImpression</strong>: MII PR SE ClinicalImpression</li>
+</ul>
+
+<h3 id="ressourcen-übersicht">Ressourcen-Übersicht</h3>
+
+<h4 id="patient-und-phänotyp">Patient und Phänotyp</h4>
+<p>| Ressource ID | Typ | Beschreibung | Datum | Status/Details |
+|————–|—–|————–|——-|—————-|
+| <code class="language-plaintext highlighter-rouge">patient-marfan-001</code> | Patient | 19-jähriger Mann | Geburt: ~2005 | ID: MRF-2024-001 |
+| <code class="language-plaintext highlighter-rouge">observation-height-001</code> | Observation | Körpergröße | 15.12.2024 | 2,13 m (HPO:0000098) |
+| <code class="language-plaintext highlighter-rouge">observation-leg-asymmetry</code> | Observation | Beinlängendifferenz | 15.12.2024 | Rechts verkürzt (HPO:0100559) |</p>
+
+<h4 id="symptome-und-befunde">Symptome und Befunde</h4>
+<p>| Ressource ID | Typ | Beschreibung | Datum | HPO Code | Schweregrad |
+|————–|—–|————–|——-|———-|————-|
+| <code class="language-plaintext highlighter-rouge">symptom-chest-pain</code> | Observation | Thoraxschmerzen | 15.12.2024 | HP:0100749 | Akut |
+| <code class="language-plaintext highlighter-rouge">symptom-aortic-root</code> | Observation | Aortenwurzeldilatation | 15.12.2024 | HP:0002616 | 48mm |
+| <code class="language-plaintext highlighter-rouge">symptom-aortic-regurg</code> | Observation | Aortenklappeninsuffizienz | 15.12.2024 | HP:0001659 | Grad II |
+| <code class="language-plaintext highlighter-rouge">symptom-mitral-regurg</code> | Observation | Mitralklappeninsuffizienz | 15.12.2024 | HP:0001653 | Grad I |
+| <code class="language-plaintext highlighter-rouge">symptom-cataract</code> | Observation | Katarakt bilateral | 15.10.2024 | HP:0000518 | Bilateral |</p>
+
+<h4 id="diagnosen-1">Diagnosen</h4>
+<p>| Ressource ID | Typ | Beschreibung | Feststellungsdatum | ICD-10 | Orpha |
+|————–|—–|————–|——————-|———|——-|
+| <code class="language-plaintext highlighter-rouge">condition-marfan-confirmed</code> | Condition | Marfan-Syndrom | 15.12.2024 | Q87.4 | 558 |
+| <code class="language-plaintext highlighter-rouge">condition-cataract</code> | Condition | Katarakt bilateral | 15.10.2024 | H26.9 | - |</p>
+
+<h4 id="prozeduren-1">Prozeduren</h4>
+<p>| Ressource ID | Typ | Beschreibung | Datum | OPS Code | Status |
+|————–|—–|————–|——-|———-|———|
+| <code class="language-plaintext highlighter-rouge">procedure-cataract-surgery</code> | Procedure | Phakoemulsifikation mit IOL | 12.11.2024 | 5-144.5a | Abgeschlossen |
+| <code class="language-plaintext highlighter-rouge">procedure-aortic-planned</code> | Procedure | Aortenwurzelersatz (David-OP) | 15.03.2025 | 5-354.0a | Geplant |</p>
+
+<h4 id="medikation-1">Medikation</h4>
+<p>| Ressource ID | Typ | Medikament | Dosierung | Start | Indikation |
+|————–|—–|————|———–|——-|————|
+| <code class="language-plaintext highlighter-rouge">medication-losartan</code> | MedicationStatement | Losartan | 50mg 1x täglich | 15.12.2024 | Aortenprotektion |</p>
+
+<h4 id="diagnostik">Diagnostik</h4>
+<p>| Ressource ID | Typ | Untersuchung | Datum | Wichtige Befunde |
+|————–|—–|————–|——-|——————|
+| <code class="language-plaintext highlighter-rouge">observation-echo-aortic</code> | Observation | Aortenwurzel-Echo | 15.12.2024 | 48mm (pathologisch) |
+| <code class="language-plaintext highlighter-rouge">observation-echo-av</code> | Observation | AK-Insuffizienz Echo | 15.12.2024 | Grad II |
+| <code class="language-plaintext highlighter-rouge">observation-echo-mv</code> | Observation | MK-Insuffizienz Echo | 15.12.2024 | Grad I |</p>
+
+<h4 id="behandlungskontakte">Behandlungskontakte</h4>
+<p>| Ressource ID | Typ | Beschreibung | Datum | Setting | Fachbereich |
+|————–|—–|————–|——-|———|————-|
+| <code class="language-plaintext highlighter-rouge">encounter-ophthalmology</code> | Encounter | Augenärztliche Konsultation | 15.10.2024 | Ambulant | Ophthalmologie |
+| <code class="language-plaintext highlighter-rouge">encounter-cataract-surgery</code> | Encounter | Katarakt-OP | 12.11.2024 | Tagesklinik | Ophthalmologie |
+| <code class="language-plaintext highlighter-rouge">encounter-cardiology</code> | Encounter | Kardiologische Erstvorstellung | 15.12.2024 | Ambulant | Kardiologie |
+| <code class="language-plaintext highlighter-rouge">encounter-surgery-planned</code> | Encounter | Geplante Herzchirurgie | 15.03.2025 | Stationär | Herzchirurgie |</p>
+
+<h4 id="klinische-beurteilungen">Klinische Beurteilungen</h4>
+<p>| Ressource ID | Typ | Beschreibung | Datum | Wichtige Aspekte |
+|————–|—–|————–|——-|——————|
+| <code class="language-plaintext highlighter-rouge">clinical-impression-cardiology</code> | ClinicalImpression | Kardiologische Beurteilung | 15.12.2024 | Marfan bestätigt, OP-Indikation |</p>
+
+<h3 id="bundle">Bundle</h3>
+<p>| Ressource ID | Typ | Beschreibung | Anzahl Einträge |
+|————–|—–|————–|—————–|
+| <code class="language-plaintext highlighter-rouge">bundle-marfan-complete</code> | Bundle | Transaction Bundle mit allen Ressourcen | 20 Ressourcen |</p>
+
+<h2 id="ressourcen-diagramme">Ressourcen-Diagramme</h2>
+
+<h3 id="gesamtübersicht-aller-ressourcen-und-beziehungen">Gesamtübersicht aller Ressourcen und Beziehungen</h3>
+
+<plantuml>
+@startuml
+!define DARKBLUE #1e3a5f
+!define LIGHTBLUE #4a86e8
+!define GREEN #0d9488
+!define ORANGE #ea580c
+!define PURPLE #7c3aed
+!define RED #dc2626
+!define YELLOW #facc15
+!define PINK #ec4899
+
+skinparam backgroundColor #f8f9fa
+skinparam roundcorner 10
+skinparam shadowing true
+skinparam ArrowColor #666666
+skinparam ArrowThickness 2
+
+skinparam class {
+    BackgroundColor&lt;<Patient>&gt; DARKBLUE
+    BorderColor&lt;<Patient>&gt; DARKBLUE
+    FontColor&lt;<Patient>&gt; white
+    
+    BackgroundColor&lt;<Condition>&gt; RED
+    BorderColor&lt;<Condition>&gt; RED
+    FontColor&lt;<Condition>&gt; white
+    
+    BackgroundColor&lt;<Observation>&gt; GREEN
+    BorderColor&lt;<Observation>&gt; GREEN
+    FontColor&lt;<Observation>&gt; white
+    
+    BackgroundColor&lt;<Procedure>&gt; PURPLE
+    BorderColor&lt;<Procedure>&gt; PURPLE
+    FontColor&lt;<Procedure>&gt; white
+    
+    BackgroundColor&lt;<Encounter>&gt; ORANGE
+    BorderColor&lt;<Encounter>&gt; ORANGE
+    FontColor&lt;<Encounter>&gt; white
+    
+    BackgroundColor&lt;<Medication>&gt; PINK
+    BorderColor&lt;<Medication>&gt; PINK
+    FontColor&lt;<Medication>&gt; white
+    
+    BackgroundColor&lt;<ClinicalImpression>&gt; YELLOW
+    BorderColor&lt;<ClinicalImpression>&gt; YELLOW
+    FontColor&lt;<ClinicalImpression>&gt; black
+}
+
+' Patient at the center
+class "patient-marfan-001" &lt;<Patient>&gt; {
+    19-jähriger Mann
+    Geburt: ~2005
+    ID: MRF-2024-001
+    Größe: 2,13m
+}
+
+' Main diagnosis
+class "condition-marfan-confirmed" &lt;<Condition>&gt; {
+    **Marfan-Syndrom**
+    Status: confirmed
+    ICD-10: Q87.4
+    Orpha: 558
+    Feststellung: 15.12.2024
+}
+
+class "condition-cataract" &lt;<Condition>&gt; {
+    **Katarakt bilateral**
+    Status: resolved
+    ICD-10: H26.9
+    Feststellung: 15.10.2024
+}
+
+' Phenotypic observations (left side)
+class "observation-height-001" &lt;<Observation>&gt; {
+    **Körpergröße**
+    HPO: HP:0000098
+    Wert: 2,13 m
+    Datum: 15.12.2024
+}
+
+class "observation-leg-asymmetry" &lt;<Observation>&gt; {
+    **Beinlängendifferenz**
+    HPO: HP:0100559
+    Rechts verkürzt
+    Datum: 15.12.2024
+}
+
+' Symptoms (top)
+class "symptom-chest-pain" &lt;<Observation>&gt; {
+    **Thoraxschmerzen**
+    HPO: HP:0100749
+    Akut
+    Datum: 15.12.2024
+}
+
+class "symptom-cataract" &lt;<Observation>&gt; {
+    **Katarakt**
+    HPO: HP:0000518
+    Bilateral
+    Datum: 15.10.2024
+}
+
+' Cardiac findings (right side)
+class "symptom-aortic-root" &lt;<Observation>&gt; {
+    **Aortenwurzeldilatation**
+    HPO: HP:0002616
+    48 mm
+    Datum: 15.12.2024
+}
+
+class "symptom-aortic-regurg" &lt;<Observation>&gt; {
+    **Aortenklappeninsuffizienz**
+    HPO: HP:0001659
+    Grad II
+    Datum: 15.12.2024
+}
+
+class "symptom-mitral-regurg" &lt;<Observation>&gt; {
+    **Mitralklappeninsuffizienz**
+    HPO: HP:0001653
+    Grad I
+    Datum: 15.12.2024
+}
+
+' Echocardiography observations
+class "observation-echo-series" &lt;<Observation>&gt; {
+    **Echokardiographie**
+    Aortenwurzel: 48mm
+    AKI: Grad II
+    MKI: Grad I
+    Datum: 15.12.2024
+}
+
+' Procedures
+class "procedure-cataract-surgery" &lt;<Procedure>&gt; {
+    **Katarakt-OP**
+    OPS: 5-144.5a
+    Datum: 12.11.2024
+    Status: completed
+}
+
+class "procedure-aortic-planned" &lt;<Procedure>&gt; {
+    **Aortenwurzelersatz**
+    OPS: 5-354.0a
+    David-OP
+    Geplant: 15.03.2025
+    Status: planned
+}
+
+' Medication
+class "medication-losartan" &lt;<Medication>&gt; {
+    **Losartan**
+    50mg 1x täglich
+    Start: 15.12.2024
+    Indikation: Aortenprotektion
+}
+
+' Encounters
+class "encounter-ophthalmology" &lt;<Encounter>&gt; {
+    **Augenärztliche Konsultation**
+    Datum: 15.10.2024
+    Typ: Ambulant
+}
+
+class "encounter-cataract-surgery" &lt;<Encounter>&gt; {
+    **Katarakt-OP**
+    Datum: 12.11.2024
+    Typ: Tagesklinik
+}
+
+class "encounter-cardiology" &lt;<Encounter>&gt; {
+    **Kardiologische Erstvorstellung**
+    Datum: 15.12.2024
+    Typ: Ambulant
+}
+
+class "encounter-surgery-planned" &lt;<Encounter>&gt; {
+    **Geplante Herzchirurgie**
+    Datum: 15.03.2025
+    Typ: Stationär geplant
+}
+
+' Clinical Impression
+class "clinical-impression-cardiology" &lt;<ClinicalImpression>&gt; {
+    **Kardiologische Beurteilung**
+    Datum: 15.12.2024
+    Marfan-Syndrom bestätigt
+    OP-Indikation gestellt
+}
+
+' Relationships - Patient at center
+"patient-marfan-001" &lt;-- "condition-marfan-confirmed" : subject
+"patient-marfan-001" &lt;-- "condition-cataract" : subject
+"patient-marfan-001" &lt;-- "observation-height-001" : subject
+"patient-marfan-001" &lt;-- "observation-leg-asymmetry" : subject
+"patient-marfan-001" &lt;-- "symptom-chest-pain" : subject
+"patient-marfan-001" &lt;-- "symptom-cataract" : subject
+"patient-marfan-001" &lt;-- "symptom-aortic-root" : subject
+"patient-marfan-001" &lt;-- "symptom-aortic-regurg" : subject
+"patient-marfan-001" &lt;-- "symptom-mitral-regurg" : subject
+"patient-marfan-001" &lt;-- "observation-echo-series" : subject
+"patient-marfan-001" &lt;-- "procedure-cataract-surgery" : subject
+"patient-marfan-001" &lt;-- "procedure-aortic-planned" : subject
+"patient-marfan-001" &lt;-- "medication-losartan" : subject
+
+' Evidence links
+"condition-marfan-confirmed" --&gt; "symptom-aortic-root" : evidence
+"condition-marfan-confirmed" --&gt; "symptom-aortic-regurg" : evidence
+"condition-marfan-confirmed" --&gt; "symptom-mitral-regurg" : evidence
+"condition-marfan-confirmed" --&gt; "observation-height-001" : evidence
+"condition-marfan-confirmed" --&gt; "observation-leg-asymmetry" : evidence
+"condition-marfan-confirmed" --&gt; "symptom-chest-pain" : evidence
+
+"condition-cataract" --&gt; "symptom-cataract" : evidence
+
+' Procedure reasons
+"procedure-cataract-surgery" --&gt; "condition-cataract" : reasonReference
+"procedure-aortic-planned" --&gt; "condition-marfan-confirmed" : reasonReference
+
+' Encounter relationships
+"encounter-ophthalmology" --&gt; "condition-cataract" : diagnosis
+"encounter-cataract-surgery" ..&gt; "procedure-cataract-surgery" : serviceProvider
+"encounter-cardiology" --&gt; "condition-marfan-confirmed" : diagnosis
+"encounter-surgery-planned" ..&gt; "procedure-aortic-planned" : scheduled
+
+"patient-marfan-001" &lt;-- "encounter-ophthalmology" : subject
+"patient-marfan-001" &lt;-- "encounter-cataract-surgery" : subject
+"patient-marfan-001" &lt;-- "encounter-cardiology" : subject
+"patient-marfan-001" &lt;-- "encounter-surgery-planned" : subject
+
+' Clinical Impression relationships
+"clinical-impression-cardiology" --&gt; "encounter-cardiology" : encounter
+"clinical-impression-cardiology" --&gt; "condition-marfan-confirmed" : problem
+"clinical-impression-cardiology" --&gt; "symptom-aortic-root" : finding
+"clinical-impression-cardiology" --&gt; "symptom-aortic-regurg" : finding
+"clinical-impression-cardiology" --&gt; "symptom-mitral-regurg" : finding
+"clinical-impression-cardiology" --&gt; "observation-echo-series" : investigation
+"clinical-impression-cardiology" --&gt; "procedure-aortic-planned" : plan
+"patient-marfan-001" &lt;-- "clinical-impression-cardiology" : subject
+
+' Medication reason
+"medication-losartan" --&gt; "condition-marfan-confirmed" : reasonReference
+
+' Timeline annotation
+note right of "condition-marfan-confirmed"
+  **Diagnose-Zeitpunkt:**
+  15.12.2024
+  Klinisch bestätigt
+end note
+
+note left of "procedure-aortic-planned"
+  **Geplante OP:**
+  15.03.2025
+  David-Operation
+end note
+
+legend bottom center
+|= Legende |
+| &lt;color:white,back:DARKBLUE&gt;Patient&lt;/color&gt; | Zentrale Patientenressource |
+| &lt;color:white,back:RED&gt;Condition&lt;/color&gt; | Diagnosen |
+| &lt;color:white,back:GREEN&gt;Observation&lt;/color&gt; | Befunde &amp; Messungen |
+| &lt;color:white,back:PURPLE&gt;Procedure&lt;/color&gt; | Prozeduren |
+| &lt;color:white,back:ORANGE&gt;Encounter&lt;/color&gt; | Kontakte |
+| &lt;color:white,back:PINK&gt;Medication&lt;/color&gt; | Medikation |
+| &lt;color:black,back:YELLOW&gt;ClinicalImpression&lt;/color&gt; | Klinische Beurteilung |
+| → | Referenz |
+| ⋯&gt; | Assoziation |
+endlegend
+
+@enduml
+&lt;/plantuml&gt;
+
+### Zeitlicher Verlauf
+
+<plantuml>
+@startuml
+!theme plain
+skinparam backgroundColor #ffffff
+
+' Timeline sequence diagram showing progression
+title Marfan-Syndrom Fall - Zeitlicher Verlauf und Ressourcen-Beziehungen
+
+participant "Patient\n(19-jähriger Mann)" as Patient #2563eb
+participant "Diagnosen" as Diagnosis #dc2626
+participant "Encounters" as Encounters #ea580c
+participant "Symptome/\nPhänotyp" as Symptoms #059669
+participant "Prozeduren" as Procedures #7c3aed
+participant "Medikation" as Medication #ec4899
+participant "Diagnostik" as Diagnostics #16a34a
+participant "Klinische\nBeurteilung" as ClinImp #facc15
+
+== 15.10.2024 - Augenärztliche Konsultation ==
+Encounters -&gt; Patient: encounter-ophthalmology
+activate Encounters #ea580c
+Symptoms -&gt; Patient: symptom-cataract
+activate Symptoms #059669
+note right of Symptoms
+  **Katarakt bilateral**
+  HPO: HP:0000518
+end note
+
+Encounters -&gt; Diagnosis: Katarakt-Diagnose
+activate Diagnosis #dc2626
+note right of Diagnosis
+  **condition-cataract**
+  ICD-10: H26.9
+  Status: active
+end note
+deactivate Encounters
+
+== 12.11.2024 - Katarakt-Operation ==
+Encounters -&gt; Patient: encounter-cataract-surgery
+activate Encounters #ea580c
+Procedures -&gt; Patient: procedure-cataract-surgery
+activate Procedures #7c3aed
+note right of Procedures
+  **Phakoemulsifikation**
+  OPS: 5-144.5a
+  Mit IOL-Implantation
+  Status: completed
+end note
+deactivate Procedures
+
+Diagnosis -&gt; Diagnosis: Katarakt resolved
+note right of Diagnosis
+  Status: resolved
+end note
+deactivate Encounters
+deactivate Symptoms
+
+== 15.12.2024 - Kardiologische Erstvorstellung ==
+Encounters -&gt; Patient: encounter-cardiology
+activate Encounters #ea580c
+
+Patient -&gt; Symptoms: Phänotypische Befunde
+activate Symptoms #059669
+note left of Patient
+  **Körperliche Untersuchung:**
+  - Größe: 2,13m
+  - Beinlängendifferenz
+  - Marfanoider Habitus
+end note
+
+Symptoms -&gt; Patient: symptom-chest-pain
+note right of Symptoms
+  **Thoraxschmerzen**
+  HPO: HP:0100749
+  Akut
+end note
+
+Symptoms -&gt; Patient: observation-height-001
+note right of Symptoms
+  **Hochwuchs**
+  HPO: HP:0000098
+  2,13 m
+end note
+
+Symptoms -&gt; Patient: observation-leg-asymmetry
+note right of Symptoms
+  **Beinlängendifferenz**
+  HPO: HP:0100559
+  Rechts verkürzt
+end note
+
+Diagnostics -&gt; Patient: Echokardiographie
+activate Diagnostics #16a34a
+note right of Diagnostics
+  **Echo-Befunde:**
+  - Aortenwurzel: 48mm ↑
+  - AKI: Grad II
+  - MKI: Grad I
+end note
+
+Diagnostics -&gt; Symptoms: Kardiale Befunde
+Symptoms -&gt; Patient: symptom-aortic-root
+note right of Symptoms
+  **Aortenwurzeldilatation**
+  HPO: HP:0002616
+  48 mm (pathologisch)
+end note
+
+Symptoms -&gt; Patient: symptom-aortic-regurg
+note right of Symptoms
+  **Aortenklappeninsuffizienz**
+  HPO: HP:0001659
+  Grad II
+end note
+
+Symptoms -&gt; Patient: symptom-mitral-regurg
+note right of Symptoms
+  **Mitralklappeninsuffizienz**
+  HPO: HP:0001653
+  Grad I
+end note
+deactivate Diagnostics
+
+Encounters -&gt; Diagnosis: Marfan-Syndrom bestätigt
+note right of Diagnosis
+  **condition-marfan-confirmed**
+  ICD-10: Q87.4
+  Orpha: 558
+  Status: confirmed
+  Feststellungsdatum: 15.12.2024
+end note
+
+ClinImp -&gt; Patient: clinical-impression-cardiology
+activate ClinImp #facc15
+note right of ClinImp
+  **Kardiologische Beurteilung:**
+  - Marfan-Syndrom bestätigt
+  - Aortenwurzel 48mm
+  - OP-Indikation gestellt
+  - Medikation eingeleitet
+end note
+
+Medication -&gt; Patient: medication-losartan
+activate Medication #ec4899
+note right of Medication
+  **Losartan 50mg**
+  1x täglich
+  Indikation: Aortenprotektion
+  Start: 15.12.2024
+end note
+
+ClinImp -&gt; Procedures: OP-Planung
+note right of ClinImp
+  David-OP geplant
+  für 15.03.2025
+end note
+deactivate ClinImp
+
+deactivate Encounters
+deactivate Symptoms
+
+== 15.03.2025 - Geplante Aortenwurzelersatz-OP ==
+Encounters -&gt; Patient: encounter-surgery-planned
+activate Encounters #ea580c
+Procedures -&gt; Patient: procedure-aortic-planned
+activate Procedures #7c3aed
+note right of Procedures
+  **Aortenwurzelersatz**
+  OPS: 5-354.0a
+  David-Operation
+  Status: planned
+  → reasonReference: condition-marfan-confirmed
+end note
+deactivate Procedures
+deactivate Encounters
+
+deactivate Diagnosis
+deactivate Medication
+
+legend bottom
+|= Ressourcen-Typen und Beziehungen |
+| &lt;back:#2563eb&gt;Patient&lt;/back&gt; | Zentrale Patientenressource |
+| &lt;back:#dc2626&gt;Condition&lt;/back&gt; | Diagnosen (2 Instanzen) |
+| &lt;back:#ea580c&gt;Encounter&lt;/back&gt; | Behandlungskontakte (4 Instanzen) |
+| &lt;back:#059669&gt;Observation&lt;/back&gt; | Symptome &amp; Befunde (8 Instanzen) |
+| &lt;back:#7c3aed&gt;Procedure&lt;/back&gt; | Prozeduren (2 Instanzen) |
+| &lt;back:#ec4899&gt;MedicationStatement&lt;/back&gt; | Medikation (1 Instanz) |
+| &lt;back:#16a34a&gt;Diagnostic&lt;/back&gt; | Echo-Untersuchung (3 Instanzen) |
+| &lt;back:#facc15&gt;ClinicalImpression&lt;/back&gt; | Klinische Beurteilung (1 Instanz) |
+| → | Referenz zwischen Ressourcen |
+endlegend
+
+@enduml
+</plantuml>
+
+## Implementierung
+
+Die vollständigen FHIR-Ressourcen sind in folgenden Dateien definiert:
+- **Einzelressourcen**: [`input/fsh/marfan-example-resources.fsh`](../fsh/marfan-example-resources.fsh)
+- **Transaction Bundle**: [`input/fsh/marfan-transaction-bundle.fsh`](../fsh/marfan-transaction-bundle.fsh)
+</ClinicalImpression></Encounter></Encounter></Encounter></Encounter></Medication></Procedure></Procedure></Observation></Observation></Observation></Observation></Observation></Observation></Observation></Observation></Condition></Condition></Patient></ClinicalImpression></ClinicalImpression></ClinicalImpression></Medication></Medication></Medication></Encounter></Encounter></Encounter></Procedure></Procedure></Procedure></Observation></Observation></Observation></Condition></Condition></Condition></Patient></Patient></Patient></plantuml>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-seltene-erkrankungen-v2026-de#2026.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-07-23 10:24:00 +0000">
+    2026-07-23
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

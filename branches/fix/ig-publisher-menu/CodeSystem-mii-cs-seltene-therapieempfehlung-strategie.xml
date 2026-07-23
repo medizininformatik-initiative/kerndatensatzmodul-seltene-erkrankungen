@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mii-cs-seltene-therapieempfehlung-strategie"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-seltene-therapieempfehlung-strategie</b></p><a name="mii-cs-seltene-therapieempfehlung-strategie"> </a><a name="hcmii-cs-seltene-therapieempfehlung-strategie"> </a><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">systemic-medication<a name="mii-cs-seltene-therapieempfehlung-strategie-systemic-medication"> </a></td><td>Systemische Medikation</td><td>Systemische medikamentöse Therapie, die den gesamten Körper betrifft</td></tr><tr><td style="white-space:nowrap">targeted-medication<a name="mii-cs-seltene-therapieempfehlung-strategie-targeted-medication"> </a></td><td>Zielgerichtete Medikation</td><td>Zielgerichtete medikamentöse Therapie basierend auf molekularen Targets</td></tr><tr><td style="white-space:nowrap">prevention-medication<a name="mii-cs-seltene-therapieempfehlung-strategie-prevention-medication"> </a></td><td>Präventive Medikation</td><td>Medikamentöse Therapie zur Prävention von Krankheitsmanifestationen</td></tr><tr><td style="white-space:nowrap">gene-therapy<a name="mii-cs-seltene-therapieempfehlung-strategie-gene-therapy"> </a></td><td>Gentherapie</td><td>Therapeutische Intervention durch Genmodifikation oder Genersatz</td></tr><tr><td style="white-space:nowrap">prophylactic<a name="mii-cs-seltene-therapieempfehlung-strategie-prophylactic"> </a></td><td>Prophylaxe</td><td>Vorbeugende Maßnahmen zur Verhinderung von Komplikationen</td></tr><tr><td style="white-space:nowrap">early-detection<a name="mii-cs-seltene-therapieempfehlung-strategie-early-detection"> </a></td><td>Früherkennung</td><td>Maßnahmen zur frühzeitigen Erkennung von Krankheitszeichen</td></tr><tr><td style="white-space:nowrap">combination<a name="mii-cs-seltene-therapieempfehlung-strategie-combination"> </a></td><td>Kombinationstherapie</td><td>Kombinierte Anwendung mehrerer Therapieansätze</td></tr><tr><td style="white-space:nowrap">nutrition<a name="mii-cs-seltene-therapieempfehlung-strategie-nutrition"> </a></td><td>Ernährungstherapie</td><td>Therapeutische Intervention durch spezielle Ernährungsmaßnahmen</td></tr><tr><td style="white-space:nowrap">other<a name="mii-cs-seltene-therapieempfehlung-strategie-other"> </a></td><td>Sonstige</td><td>Andere Therapiestrategien, die nicht in die definierten Kategorien fallen</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"/>
+  <version value="2026.0.1"/>
+  <name value="MII_CS_Seltene_TherapieempfehlungStrategie"/>
+  <title value="MII CS SE Therapieempfehlung Strategie"/>
+  <status value="active"/>
+  <date value="2026-07-23T10:24:15+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Strategietypen für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="9"/>
+  <concept>
+    <code value="systemic-medication"/>
+    <display value="Systemische Medikation"/>
+    <definition value="Systemische medikamentöse Therapie, die den gesamten Körper betrifft"/>
+  </concept>
+  <concept>
+    <code value="targeted-medication"/>
+    <display value="Zielgerichtete Medikation"/>
+    <definition value="Zielgerichtete medikamentöse Therapie basierend auf molekularen Targets"/>
+  </concept>
+  <concept>
+    <code value="prevention-medication"/>
+    <display value="Präventive Medikation"/>
+    <definition value="Medikamentöse Therapie zur Prävention von Krankheitsmanifestationen"/>
+  </concept>
+  <concept>
+    <code value="gene-therapy"/>
+    <display value="Gentherapie"/>
+    <definition value="Therapeutische Intervention durch Genmodifikation oder Genersatz"/>
+  </concept>
+  <concept>
+    <code value="prophylactic"/>
+    <display value="Prophylaxe"/>
+    <definition value="Vorbeugende Maßnahmen zur Verhinderung von Komplikationen"/>
+  </concept>
+  <concept>
+    <code value="early-detection"/>
+    <display value="Früherkennung"/>
+    <definition value="Maßnahmen zur frühzeitigen Erkennung von Krankheitszeichen"/>
+  </concept>
+  <concept>
+    <code value="combination"/>
+    <display value="Kombinationstherapie"/>
+    <definition value="Kombinierte Anwendung mehrerer Therapieansätze"/>
+  </concept>
+  <concept>
+    <code value="nutrition"/>
+    <display value="Ernährungstherapie"/>
+    <definition value="Therapeutische Intervention durch spezielle Ernährungsmaßnahmen"/>
+  </concept>
+  <concept>
+    <code value="other"/>
+    <display value="Sonstige"/>
+    <definition value="Andere Therapiestrategien, die nicht in die definierten Kategorien fallen"/>
+  </concept>
+</CodeSystem>

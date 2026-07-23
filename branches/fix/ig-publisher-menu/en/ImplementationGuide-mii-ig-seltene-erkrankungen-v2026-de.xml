@@ -1,0 +1,2396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="mii-ig-seltene-erkrankungen-v2026-de"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide mii-ig-seltene-erkrankungen-v2026-de</b></p><a name="mii-ig-seltene-erkrankungen-v2026-de"> </a><a name="hcmii-ig-seltene-erkrankungen-v2026-de"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p></div><h2>MIIIGModulSelteneErkrankungen</h2><p>The official URL for this implementation guide is: </p><pre>https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de</pre></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de"/>
+  <version value="2026.0.1"/>
+  <name value="MIIIGModulSelteneErkrankungen"/>
+  <title value="MII IG Kerndatensatz-Modul Seltene Erkrankungen"/>
+  <status value="active"/>
+  <date value="2026-07-23T10:24:15+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <packageId value="mii-ig-seltene-erkrankungen-v2026-de"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="7.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.3.0"/>
+  </dependsOn>
+  <dependsOn id="de_basisprofil_r4">
+    <uri value="http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4"/>
+    <packageId value="de.basisprofil.r4"/>
+    <version value="1.5.x"/>
+  </dependsOn>
+  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_meta">
+    <uri value="https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta"/>
+    <packageId value="de.medizininformatikinitiative.kerndatensatz.meta"/>
+    <version value="2026.0.x"/>
+  </dependsOn>
+  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_molgen">
+    <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.molgen/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.molgen"/>
+    <packageId value="de.medizininformatikinitiative.kerndatensatz.molgen"/>
+    <version value="2026.0.x"/>
+  </dependsOn>
+  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_icu">
+    <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.icu/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.icu"/>
+    <packageId value="de.medizininformatikinitiative.kerndatensatz.icu"/>
+    <version value="2026.0.x"/>
+  </dependsOn>
+  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_studie">
+    <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.studie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.studie"/>
+    <packageId value="de.medizininformatikinitiative.kerndatensatz.studie"/>
+    <version value="2026.0.2"/>
+  </dependsOn>
+  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_base">
+    <uri value="https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base"/>
+    <packageId value="de.medizininformatikinitiative.kerndatensatz.base"/>
+    <version value="2026.0.x"/>
+  </dependsOn>
+  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_medikation">
+    <uri value="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ImplementationGuide/mii-ig-medikation"/>
+    <packageId value="de.medizininformatikinitiative.kerndatensatz.medikation"/>
+    <version value="2026.0.x"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2022+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludettl"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="i18n-default-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="en"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="wantGen-ttl"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="wantGen-ttl-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r4#1.1.2"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2022+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludettl"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="i18n-default-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="en"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="wantGen-ttl"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="wantGen-ttl-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-alt-001"/>
+      </reference>
+      <name value="ALT Labor - Post-therapeutisch"/>
+      <description value="ALT Wert nach Gentherapie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/encounter-ambulant-001"/>
+      </reference>
+      <name value="Ambulante Erstvorstellung"/>
+      <description value="Erstvorstellung im SMA-Zentrum"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/encounter-nachsorge-001"/>
+      </reference>
+      <name value="Ambulante Nachsorge"/>
+      <description value="Erster Nachsorgetermin nach Gentherapie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/anteverted-nares"/>
+      </reference>
+      <name value="Antevertierte Nares - HPO-kodiert"/>
+      <description value="Nach oben gerichtete Nasenlöcher"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/symptom-aortic-regurg"/>
+      </reference>
+      <name value="Aortenklappeninsuffizienz"/>
+      <description value="Moderate Aortenklappeninsuffizienz Grad II"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/aortic-root-normal"/>
+      </reference>
+      <name value="Aortenwurzel - Normalbefund"/>
+      <description value="Normale Aortenwurzel, schließt Marfan aus"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/symptom-aortic-root"/>
+      </reference>
+      <name value="Aortenwurzeldilatation"/>
+      <description value="Pathologisch erweiterte Aortenwurzel"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/aortic-root-dilatation"/>
+      </reference>
+      <name value="Aortenwurzeldilatation - HPO-kodiert"/>
+      <description value="Echokardiographisch nachgewiesene Aortenwurzeldilatation"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/arachnodactyly"/>
+      </reference>
+      <name value="Arachnodaktylie - HPO-kodiert"/>
+      <description value="Spinnenfingrigkeit bei Marfan-Syndrom"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-ast-001"/>
+      </reference>
+      <name value="AST Labor - Post-therapeutisch"/>
+      <description value="AST Wert nach Gentherapie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/encounter-ophthalmology"/>
+      </reference>
+      <name value="Augenärztliche Konsultation"/>
+      <description value="Erstvorstellung beim Augenarzt wegen Katarakt"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-leg-asymmetry"/>
+      </reference>
+      <name value="Beinlängendifferenz"/>
+      <description value="Beinlängendifferenz mit rechts verkürztem Bein"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan"/>
+      </reference>
+      <name value="Beispiel Aortenwurzelersatz bei Marfan-Syndrom"/>
+      <description value="Beispiel einer nicht-medikamentösen Therapieempfehlung für Aortenwurzelersatz bei Marfan-Syndrom"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/example-nutrition-therapy-recommendation"/>
+      </reference>
+      <name value="Beispiel Ernährungstherapie-Empfehlung"/>
+      <description value="Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/example-early-detection-recommendation"/>
+      </reference>
+      <name value="Beispiel Früherkennungsprogramm-Empfehlung"/>
+      <description value="Beispiel einer Empfehlung für regelmäßige Früherkennungsuntersuchungen"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/mii-exa-seltene-therapieempfehlung-genetische-beratung"/>
+      </reference>
+      <name value="Beispiel Genetische Beratung"/>
+      <description value="Beispiel einer nicht-medikamentösen Therapieempfehlung für genetische Beratung"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/mii-exa-seltene-therapieempfehlung-gentherapie-sma"/>
+      </reference>
+      <name value="Beispiel Gentherapie bei SMA"/>
+      <description value="Beispiel einer medikamentösen Therapieempfehlung für Gentherapie bei Spinaler Muskelatrophie"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/mii-exa-seltene-therapieempfehlung-losartan-marfan"/>
+      </reference>
+      <name value="Beispiel Losartan bei Marfan-Syndrom"/>
+      <description value="Beispiel einer medikamentösen Therapieempfehlung für Losartan zur Progressionshemmung bei Marfan-Syndrom"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/mii-exa-seltene-narse-gentherapie-sma"/>
+      </reference>
+      <name value="Beispiel NARSE Gentherapie bei SMA"/>
+      <description value="Beispiel einer durchgeführten Gentherapie bei Spinaler Muskelatrophie"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/mii-exa-seltene-narse-stoffwechseltherapie-pompe"/>
+      </reference>
+      <name value="Beispiel NARSE Stoffwechseltherapie bei Morbus Pompe"/>
+      <description value="Beispiel einer durchgeführten Enzymersatztherapie bei Morbus Pompe"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/mii-exa-seltene-therapieempfehlung-physiotherapie-sma"/>
+      </reference>
+      <name value="Beispiel Physiotherapie bei SMA"/>
+      <description value="Beispiel einer nicht-medikamentösen Therapieempfehlung für Physiotherapie bei Spinaler Muskelatrophie"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/example"/>
+      </reference>
+      <name value="Beispielpatient"/>
+      <description value="Generischer Beispielpatient für Testzwecke"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-bodymassindex"/>
+      </reference>
+      <name value="Body Mass Index (BMI) Example"/>
+      <description value="Example of a Body Mass Index (BMI) observation for a patient."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-bodymassindex"/>
+      </reference>
+      <name value="Body Mass Index (BMI) of the patient"/>
+      <description value="Describes the Body Mass Index (BMI) of the patient."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/molgen-variant-brca1-pathogenic"/>
+      </reference>
+      <name value="BRCA1 Pathogene Variante - MolGen"/>
+      <description value="Pathogene BRCA1-Variante"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/molgen-brca-panel"/>
+      </reference>
+      <name value="BRCA1/2 Panel - Diagnostische Implikation"/>
+      <description value="Hereditäres Karzinom-Panel"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/molgen-cf-diagnostic"/>
+      </reference>
+      <name value="CF Diagnostische Implikation - MolGen"/>
+      <description value="Mukoviszidose genetischer Befund"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/molgen-variant-cftr-f508del-homozygous"/>
+      </reference>
+      <name value="CFTR F508del Homozygot - MolGen Variante"/>
+      <description value="Homozygote F508del Mutation bei Mukoviszidose"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/chronic-diarrhea"/>
+      </reference>
+      <name value="Chronische Diarrhoe - HPO-kodiert"/>
+      <description value="Chronische Durchfälle bei CF"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/molgen-diagnostic-dmd"/>
+      </reference>
+      <name value="DMD Diagnostische Implikation"/>
+      <description value="Diagnostischer Bericht Duchenne-Muskeldystrophie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/molgen-variant-dmd-deletion-exon45-47"/>
+      </reference>
+      <name value="DMD Exon 45-47 Deletion - MolGen Variante"/>
+      <description value="Out-of-frame Deletion im DMD-Gen"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/example-dmd-excluded-bmd-confirmed"/>
+      </reference>
+      <name value="Duchenne ausgeschlossen - Becker bestätigt"/>
+      <description value="Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muskeldystrophie"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/example-dmd-genetic-diagnosis"/>
+      </reference>
+      <name value="Duchenne-Muskeldystrophie - Genetisch bestätigt"/>
+      <description value="Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-echo-av"/>
+      </reference>
+      <name value="Echokardiographie - Aortenklappeninsuffizienz"/>
+      <description value="Beurteilung der Aortenklappeninsuffizienz"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-echo-aortic"/>
+      </reference>
+      <name value="Echokardiographie - Aortenwurzeldurchmesser"/>
+      <description value="Aortenwurzeldurchmesser in der Echokardiographie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-echo-mv"/>
+      </reference>
+      <name value="Echokardiographie - Mitralklappeninsuffizienz"/>
+      <description value="Beurteilung der Mitralklappeninsuffizienz"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/example-eds-excluded-clinical"/>
+      </reference>
+      <name value="Ehlers-Danlos-Syndrom - Ausgeschlossen"/>
+      <description value="Differentialdiagnose EDS ausgeschlossen"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="FamilyMemberHistory"/>
+      </extension>
+      <reference>
+        <reference value="FamilyMemberHistory/family-history-001"/>
+      </reference>
+      <name value="Familienanamnese - Urgroßmutter mit Muskelerkrankung"/>
+      <description value="Urgroßmutter mit unbekannter Muskelerkrankung"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/variant-fbn1-001"/>
+      </reference>
+      <name value="FBN1 Gen - Pathogene Mutation"/>
+      <description value="Pathogene FBN1-Mutation bei Marfan-Syndrom"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/failure-to-thrive"/>
+      </reference>
+      <name value="Gedeihstörung - HPO-kodiert"/>
+      <description value="Mangelhafte Gewichtszunahme"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/procedure-gentherapy-001"/>
+      </reference>
+      <name value="Gentherapie Verabreichung"/>
+      <description value="Verabreichung des Gentherapeutikums für SMA"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/procedure-aortic-planned"/>
+      </reference>
+      <name value="Geplante Aortenwurzelersatz-Operation"/>
+      <description value="Geplante David-Operation (Valve-sparing root replacement)"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/encounter-surgery-planned"/>
+      </reference>
+      <name value="Geplante Herzchirurgie"/>
+      <description value="Geplanter stationärer Aufenthalt für Aortenwurzelersatz"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/example-brca1-genetic-diagnosis"/>
+      </reference>
+      <name value="Hereditäres Mamma- und Ovarialkarzinom-Syndrom"/>
+      <description value="Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/tall-stature"/>
+      </reference>
+      <name value="Hochwuchs - HPO-kodiert"/>
+      <description value="Pathologisch erhöhte Körpergröße"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-hpo-assessment-excluded"/>
+      </reference>
+      <name value="HPO Assessment - Excluded Phenotype"/>
+      <description value="Example of an explicitly excluded phenotype (arachnodactyly ruled out during Marfan syndrome workup)."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-hpo-assessment-severity"/>
+      </reference>
+      <name value="HPO Assessment - Present with Severity"/>
+      <description value="Example of a phenotype with both status (present) and severity grading. Demonstrates HL7 Phenomics IG component pattern."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-hpo-assessment-change-status"/>
+      </reference>
+      <name value="HPO Assessment mit Änderungsstatus"/>
+      <description value="Beispiel einer HPO-Beobachtung mit dokumentiertem Änderungsstatus"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-hpo-presence-status"/>
+      </reference>
+      <name value="HPO Phenotype Presence Status"/>
+      <description value="LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes"/>
+      </reference>
+      <name value="HPO Phenotypic Observation Codes"/>
+      <description value="Human Phenotype Ontology codes for phenotypic observations"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-hpo-severity"/>
+      </reference>
+      <name value="HPO Severity"/>
+      <description value="HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Phenomics IG component pattern."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-hpo-assessment"/>
+      </reference>
+      <name value="HPO Symptom Observation Example"/>
+      <description value="Example of an HPO-based phenotypic observation for intellectual disability."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/hypertelorism"/>
+      </reference>
+      <name value="Hypertelorismus - HPO-kodiert"/>
+      <description value="Vergrößerter Augenabstand"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-hueftumfang"/>
+      </reference>
+      <name value="Hüftumfang Beispiel"/>
+      <description value="Beispiel einer Hüftumfang-Messung bei einem Patienten mit seltener Erkrankung."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hueftumfang"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/encounter-cardiology"/>
+      </reference>
+      <name value="Kardiologische Erstvorstellung"/>
+      <description value="Ambulante kardiologische Erstvorstellung bei Thoraxschmerzen"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/condition-cataract"/>
+      </reference>
+      <name value="Katarakt bilateral"/>
+      <description value="Beidseitige Katarakt bei Marfan-Syndrom"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/symptom-cataract"/>
+      </reference>
+      <name value="Katarakt bilateral"/>
+      <description value="Beidseitige Katarakt als ophthalmologische Manifestation"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/procedure-cataract-surgery"/>
+      </reference>
+      <name value="Katarakt-Operation"/>
+      <description value="Phakoemulsifikation mit Intraokularlinsenimplantation"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/encounter-cataract-surgery"/>
+      </reference>
+      <name value="Katarakt-Operation Aufenthalt"/>
+      <description value="Tagesklinischer Aufenthalt für Katarakt-Operation"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ClinicalImpression"/>
+      </extension>
+      <reference>
+        <reference value="ClinicalImpression/clinical-impression-erstvorstellung"/>
+      </reference>
+      <name value="Klinische Beurteilung - Erstvorstellung"/>
+      <description value="Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ClinicalImpression"/>
+      </extension>
+      <reference>
+        <reference value="ClinicalImpression/clinical-impression-nachsorge"/>
+      </reference>
+      <name value="Klinische Beurteilung - Nachsorge"/>
+      <description value="Nachsorgeuntersuchung nach Gentherapie"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ClinicalImpression"/>
+      </extension>
+      <reference>
+        <reference value="ClinicalImpression/clinical-impression-seltene-assessment"/>
+      </reference>
+      <name value="Konsultation ZSE bei V.a. Marfan-Syndrom"/>
+      <description value="Konsultation im Zentrum für Seltene Erkrankungen mit kardiologischer Mitbeurteilung bei V.a. Marfan-Syndrom"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-kopfumfang"/>
+      </reference>
+      <name value="Kopfumfang Beispiel"/>
+      <description value="Beispiel einer Kopfumfang-Messung bei einem Patienten mit seltener Erkrankung."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-height-001"/>
+      </reference>
+      <name value="Körpergröße - Hochwuchs"/>
+      <description value="Pathologisch erhöhte Körpergröße bei Marfan-Syndrom"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/lens-dislocation"/>
+      </reference>
+      <name value="Linsenluxation - HPO-kodiert"/>
+      <description value="Ectopia lentis bei Marfan-Syndrom"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/medication-losartan"/>
+      </reference>
+      <name value="Losartan Therapie"/>
+      <description value="Losartan zur Progressionshemmung der Aortenwurzeldilatation"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/lymphedema"/>
+      </reference>
+      <name value="Lymphödem - HPO-kodiert"/>
+      <description value="Peripheres Lymphödem"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/patient-marfan-001"/>
+      </reference>
+      <name value="Marfan Patient - 19-jähriger Mann"/>
+      <description value="19-jähriger männlicher Patient mit bestätigtem Marfan-Syndrom"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/condition-marfan-genetic"/>
+      </reference>
+      <name value="Marfan-Syndrom - Genetische Diagnose"/>
+      <description value="Genetisch bestätigtes Marfan-Syndrom mit FBN1-Mutation"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/example-marfan-excluded-clinical"/>
+      </reference>
+      <name value="Marfan-Syndrom - Klinisch ausgeschlossen"/>
+      <description value="Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/example-marfan-clinical-diagnosis"/>
+      </reference>
+      <name value="Marfan-Syndrom - Klinische Diagnose"/>
+      <description value="Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend auf phänotypischen Merkmalen"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/condition-marfan-clinical"/>
+      </reference>
+      <name value="Marfan-Syndrom - Klinische Diagnose"/>
+      <description value="Klinisch bestätigtes Marfan-Syndrom"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/condition-marfan-suspected"/>
+      </reference>
+      <name value="Marfan-Syndrom - Verdacht"/>
+      <description value="Verdacht auf Marfan-Syndrom"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/bundle-marfan-complete"/>
+      </reference>
+      <name value="Marfan-Syndrom Fallbeispiel - Vollständiges Transaction Bundle"/>
+      <description value="Transaction Bundle mit allen Ressourcen für den Marfan-Syndrom Fall"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/example-metabolic-myopathy-excluded"/>
+      </reference>
+      <name value="Metabolische Myopathie - Ausgeschlossen"/>
+      <description value="Metabolische Myopathie als Differentialdiagnose ausgeschlossen"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/mii-cps-seltene-capabilitystatement"/>
+      </reference>
+      <name value="MII CPS Seltene Erkrankungen CapabilityStatement"/>
+      <description value="Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Seltene Erkrankungen der Medizininformatik Initiative zu implementieren."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mii-cs-seltene-empfehlung-status-begruendung"/>
+      </reference>
+      <name value="MII CS SE Empfehlung Status Begründung"/>
+      <description value="Begründung bei fehlender Empfehlung"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"/>
+      </reference>
+      <name value="MII CS SE Therapieempfehlung Strategie"/>
+      <description value="Strategietypen für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mii-cs-seltene-therapieempfehlung-typ"/>
+      </reference>
+      <name value="MII CS SE Therapieempfehlung Typ"/>
+      <description value="Therapietyp (kausal vs. symptomatisch) für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mii-cs-seltene-hpo-change-status"/>
+      </reference>
+      <name value="MII CS Seltene Erkrankungen HPO Change Status"/>
+      <description value="CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mii-cs-seltene-narse-therapietyp"/>
+      </reference>
+      <name value="MII CS Seltene Erkrankungen NARSE Therapietyp"/>
+      <description value="CodeSystem für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-ex-seltene-age-of-onset"/>
+      </reference>
+      <name value="MII EX SE Age of Onset"/>
+      <description value="Extension to capture the age of onset of a rare disease using structured HPO age of onset terms"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung"/>
+      </reference>
+      <name value="MII EX SE Empfehlung Evidenzgraduierung"/>
+      <description value="Evidenzgraduierung der (einzelnen) Empfehlung"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-ex-seltene-empfehlung-prioritaet"/>
+      </reference>
+      <name value="MII EX SE Empfehlung Priorität"/>
+      <description value="Priorität der (einzelnen) Empfehlung"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-ex-seltene-empfehlung-publikation"/>
+      </reference>
+      <name value="MII EX SE Empfehlung Publikation"/>
+      <description value="Verweis auf Publikation der (einzelnen) Empfehlung"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-ex-seltene-genetic-basis"/>
+      </reference>
+      <name value="MII EX SE Genetic Basis"/>
+      <description value="Extension to describe the genetic basis of a rare disease"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-ex-seltene-inheritance-pattern"/>
+      </reference>
+      <name value="MII EX SE Inheritance Pattern"/>
+      <description value="Extension to capture the mode of inheritance of a rare disease"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-ex-seltene-penetrance"/>
+      </reference>
+      <name value="MII EX SE Penetrance"/>
+      <description value="Extension to capture the penetrance of genetic variants associated with a rare disease"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/mii-exa-seltene-symptom-condition"/>
+      </reference>
+      <name value="MII Example SE Symptom Condition"/>
+      <description value="Example of a symptom condition in the context of rare diseases using HPO codes"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-blutgruppe"/>
+      </reference>
+      <name value="MII PR SE Blutgruppe"/>
+      <description value="Observation-Profil für die Erfassung der Blutgruppe (AB0 und Rhesusfaktor) im Kontext seltener Erkrankungen"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-clinical-diagnosis"/>
+      </reference>
+      <name value="MII PR SE Clinical Diagnosis"/>
+      <description value="Profile for clinical diagnosis of rare diseases with HPO phenotype codes. This profile is used for clinically diagnosed rare diseases based on phenotypic presentation."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-familienanamnese"/>
+      </reference>
+      <name value="MII PR SE Familienanamnese"/>
+      <description value="Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil. Für jedes Familienmitglied wird eine separate FamilyMemberHistory-Ressource erstellt. Das Profil unterstützt die Dokumentation von Todesfällen durch seltene Erkrankungen über condition.contributedToDeath. Für den Indexpatienten selbst kann relationship.coding[snomed] = 116154003 | Patient | verwendet werden, um den Tod des Patienten durch eine seltene Erkrankung einheitlich zu dokumentieren."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-genetic-diagnosis"/>
+      </reference>
+      <name value="MII PR SE Genetic Diagnosis"/>
+      <description value="Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and links to MolGen variant/diagnostic implication resources. This profile is used when a rare disease diagnosis has been confirmed through genetic testing."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-hueftumfang"/>
+      </reference>
+      <name value="MII PR SE Hüftumfang"/>
+      <description value="Profil zur Dokumentation des Hüftumfangs (maximale Gesäßprotuberanz) eines Patienten. Relevant für seltene Erkrankungen mit Auswirkungen auf die Körperproportionen, metabolische Erkrankungen oder Skelettdysplasien."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-kopfumfang"/>
+      </reference>
+      <name value="MII PR SE Kopfumfang"/>
+      <description value="Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom MII ICU Kopfumfang-Profil."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage"/>
+      </reference>
+      <name value="MII PR SE Studieneinschluss Anfrage"/>
+      <description value="Anfrage zum Studieneinschluss"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-taillenumfang"/>
+      </reference>
+      <name value="MII PR SE Taillenumfang"/>
+      <description value="Profil zur Dokumentation des Taillenumfangs (Bauchumfang auf Nabelhöhe) eines Patienten. Relevant für seltene Erkrankungen mit metabolischen Komponenten oder Skelettdysplasien."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-therapieempfehlung-kombination"/>
+      </reference>
+      <name value="MII PR SE Therapieempfehlung Kombinationstherapie"/>
+      <description value="Therapieempfehlung für eine medikamentöse Kombinationstherapie"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"/>
+      </reference>
+      <name value="MII PR SE Therapieempfehlung Nicht-Medikamentös"/>
+      <description value="Therapieempfehlung für nicht-medikamentöse Interventionen bei seltenen Erkrankungen (z.B. Ernährungstherapie, Gentherapie, Prophylaxe, Früherkennung)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-therapieempfehlung"/>
+      </reference>
+      <name value="MII PR SE Therapieempfehlung Systemische Therapie"/>
+      <description value="Therapieempfehlung für eine medikamentöse Systemische Therapie"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-therapieplan"/>
+      </reference>
+      <name value="MII PR SE Therapieplan"/>
+      <description value="Therapieplan"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt"/>
+      </reference>
+      <name value="MII PR Seltene Erkrankungen Therapie Durchgeführt"/>
+      <description value="Minimales Profil zur Dokumentation durchgeführter Therapien bei Seltenen Erkrankungen gemäß NARSE-Klassifikation. Dieses Profil erfasst Therapien unabhängig vom Durchführungsort (ambulant, stationär, außerhalb des Krankenhauses)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-clinical-impression"/>
+      </reference>
+      <name value="MII Profile SE Clinical Impression"/>
+      <description value="Profile for clinical impressions in the context of rare diseases. This profile captures clinical assessments and suspected diagnoses based on phenotypic findings and symptoms."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+      </reference>
+      <name value="MII Profile SE HPO Assessment"/>
+      <description value="Profile for HPO-based phenotypic observations in the context of rare diseases. This profile uses the Human Phenotype Ontology (HPO) to describe clinical symptoms and phenotypic abnormalities."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-seltene-symptom-condition"/>
+      </reference>
+      <name value="MII Profile SE Symptom Condition"/>
+      <description value="Profile for symptom-based conditions in the context of rare diseases. This profile captures symptomatic conditions with temporal characteristics, complementing the HPO Assessment Observation profile."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-blutgruppe"/>
+      </reference>
+      <name value="MII VS SE Blutgruppe"/>
+      <description value="ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List für 882-1"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-clinical-diagnosis-category"/>
+      </reference>
+      <name value="MII VS SE Clinical Diagnosis Category"/>
+      <description value="Value set for categorizing clinical diagnoses of rare diseases"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-empfehlung-status-begruendung"/>
+      </reference>
+      <name value="MII VS SE Empfehlung Status Begründung"/>
+      <description value="ValueSet für Begründung bei fehlender Empfehlung"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-genetic-basis"/>
+      </reference>
+      <name value="MII VS SE Genetic Basis"/>
+      <description value="Value set for types of genetic basis of rare diseases"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-hpo-age-of-onset"/>
+      </reference>
+      <name value="MII VS SE HPO Age of Onset"/>
+      <description value="Value set containing HPO terms for age of onset of diseases"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-hpo-inheritance-pattern"/>
+      </reference>
+      <name value="MII VS SE HPO Inheritance Pattern"/>
+      <description value="Value set containing HPO terms for modes of inheritance"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-penetrance"/>
+      </reference>
+      <name value="MII VS SE Penetrance"/>
+      <description value="Value set for qualitative descriptions of genetic penetrance"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-therapieempfehlung-strategie"/>
+      </reference>
+      <name value="MII VS SE Therapieempfehlung Strategie"/>
+      <description value="ValueSet für Strategietypen von Therapieempfehlungen bei seltenen Erkrankungen (Modellvorhaben GenomSeq)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-therapieempfehlung-strategie-medikamentoes"/>
+      </reference>
+      <name value="MII VS SE Therapieempfehlung Strategie - Medikamentös"/>
+      <description value="ValueSet für medikamentöse Therapiestrategien (für MedicationRequest Profile) - Verwendet für MedicationRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes"/>
+      </reference>
+      <name value="MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös"/>
+      <description value="ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profile) - Verwendet für ServiceRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-therapieempfehlung-typ"/>
+      </reference>
+      <name value="MII VS SE Therapieempfehlung Typ"/>
+      <description value="ValueSet für Therapietypen (kausal/symptomatisch) bei seltenen Erkrankungen (Modellvorhaben GenomSeq)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-hpo-change-status"/>
+      </reference>
+      <name value="MII VS Seltene Erkrankungen HPO Change Status"/>
+      <description value="ValueSet für Änderungsstatus von HPO-Phänotypen gemäß Modellvorhaben Genomsequenzierung"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-narse-therapietyp"/>
+      </reference>
+      <name value="MII VS Seltene Erkrankungen NARSE Therapietyp"/>
+      <description value="ValueSet für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-symptom-change-status-combined"/>
+      </reference>
+      <name value="MII VS Seltene Erkrankungen Symptom Change Status (Combined)"/>
+      <description value="ValueSet zur Dokumentation von Änderungen bei Symptomen/Phänotypen über Zeit. Kombiniert MVGenomSeq-spezifische Codes mit SNOMED CT-Codes für internationale Interoperabilität."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="FamilyMemberHistory"/>
+      </extension>
+      <reference>
+        <reference value="FamilyMemberHistory/mii-exa-seltene-familienanamnese"/>
+      </reference>
+      <name value="mii-exa-seltene-familienanamnese"/>
+      <description value="Example Patient Family Anamnesis"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/symptom-mitral-regurg"/>
+      </reference>
+      <name value="Mitralklappeninsuffizienz"/>
+      <description value="Milde Mitralklappeninsuffizienz Grad I"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/example-cf-genetic"/>
+      </reference>
+      <name value="Mukoviszidose - Genetisch bestätigt"/>
+      <description value="Genetisch bestätigte Mukoviszidose"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/example-cf-clinical"/>
+      </reference>
+      <name value="Mukoviszidose - Klinischer Verdacht"/>
+      <description value="Initiale klinische Verdachtsdiagnose Mukoviszidose"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/example-cf-excluded-after-screening"/>
+      </reference>
+      <name value="Mukoviszidose - Nach positivem Screening ausgeschlossen"/>
+      <description value="CF nach auffälligem Neugeborenenscreening genetisch ausgeschlossen"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/encounter-screening-001"/>
+      </reference>
+      <name value="Neugeborenenscreening"/>
+      <description value="Neugeborenenscreening mit SMA-Verdacht"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/example-noonan-clinical-diagnosis"/>
+      </reference>
+      <name value="Noonan-Syndrom - Klinische Diagnose"/>
+      <description value="Beispiel einer klinischen Diagnose des Noonan-Syndroms"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-ext-seltene-onset-age"/>
+      </reference>
+      <name value="Onset Age Extension"/>
+      <description value="Extension to capture the age at onset of a condition. This backports the onsetAge functionality from FHIR R5 to R4."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-ext-seltene-phenotypic-pattern"/>
+      </reference>
+      <name value="Phenotypic Pattern Extension"/>
+      <description value="Extension to link syndrome diagnoses to characteristic phenotypic patterns or symptom clusters"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/condition-pku-diagnosis"/>
+      </reference>
+      <name value="Phenylketonurie - Genetische Diagnose"/>
+      <description value="Genetisch bestätigte Phenylketonurie (PKU)"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/recurrent-respiratory-infections"/>
+      </reference>
+      <name value="Rezidivierende Atemwegsinfekte - HPO-kodiert"/>
+      <description value="Häufige respiratorische Infektionen bei CF"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/example-sma-excluded-genetic"/>
+      </reference>
+      <name value="SMA - Genetisch ausgeschlossen"/>
+      <description value="Spinale Muskelatrophie genetisch ausgeschlossen"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/molgen-diagnostic-implication-sma"/>
+      </reference>
+      <name value="SMA Diagnostische Implikation - MolGen"/>
+      <description value="Diagnostischer Bericht zur SMA-Genetik"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/bundle-sma-complete"/>
+      </reference>
+      <name value="SMA Fallbeispiel - Vollständiges Transaction Bundle"/>
+      <description value="Transaction Bundle mit allen Ressourcen für den SMA Fall inkl. Diagnoseverlauf"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/molgen-sma-negative"/>
+      </reference>
+      <name value="SMA Genetik - Negativbefund"/>
+      <description value="Genetischer Test schließt SMA aus"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/condition-sma-genetic"/>
+      </reference>
+      <name value="SMA Genetische Diagnose"/>
+      <description value="SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/condition-sma-clinical"/>
+      </reference>
+      <name value="SMA Klinische Diagnose"/>
+      <description value="Klinische Diagnose SMA Typ 1 bei Erstvorstellung"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-sma-screening"/>
+      </reference>
+      <name value="SMA Neugeborenenscreening Ergebnis"/>
+      <description value="Positives SMA-Screening beim Neugeborenenscreening"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/patient-sma-001"/>
+      </reference>
+      <name value="SMA Patient - Neugeborenes Mädchen"/>
+      <description value="Neugeborenes Mädchen mit bestätigter SMA Typ 1"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/example-sma-genetic-diagnosis"/>
+      </reference>
+      <name value="SMA Typ 1 - Genetisch bestätigte Diagnose"/>
+      <description value="Beispiel einer genetisch bestätigten Diagnose der spinalen Muskelatrophie Typ 1"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/condition-sma-suspected"/>
+      </reference>
+      <name value="SMA Verdacht - Neugeborenenscreening"/>
+      <description value="Verdacht auf SMA beim Neugeborenenscreening"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/molgen-smn1-normal-copies"/>
+      </reference>
+      <name value="SMN1 - Normale Kopienanzahl"/>
+      <description value="2 Kopien SMN1 - schließt SMA aus"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/variant-smn1-001"/>
+      </reference>
+      <name value="SMN1 Gen - Homozygote Deletion"/>
+      <description value="0 Kopien des SMN1-Gens nachgewiesen"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/molgen-variant-smn1-deletion"/>
+      </reference>
+      <name value="SMN1 Gen Deletion - MolGen Variante"/>
+      <description value="Homozygote Deletion des SMN1-Gens bei SMA"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/variant-smn2-001"/>
+      </reference>
+      <name value="SMN2 Gen - Kopienanzahl"/>
+      <description value="2 Kopien des SMN2-Gens nachgewiesen"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/encounter-stationaer-001"/>
+      </reference>
+      <name value="Stationärer Aufenthalt zur Gentherapie"/>
+      <description value="Stationäre Aufnahme für Gentherapie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-ext-seltene-syndrome-category"/>
+      </reference>
+      <name value="Syndrome Category Extension"/>
+      <description value="Extension to categorize syndrome types for rare diseases (genetic, metabolic, developmental, etc.)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-syndrome-category"/>
+      </reference>
+      <name value="Syndrome Category Value Set"/>
+      <description value="Categories for classifying syndrome types in rare diseases"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-taillenumfang"/>
+      </reference>
+      <name value="Taillenumfang Beispiel"/>
+      <description value="Beispiel einer Taillenumfang-Messung bei einem Patienten mit seltener Erkrankung."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-taillenumfang"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/mii-exa-seltene-therapieplan"/>
+      </reference>
+      <name value="Therapieplan Example"/>
+      <description value="Example of a Therapieplan for a patient."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/symptom-chest-pain"/>
+      </reference>
+      <name value="Thoraxschmerzen"/>
+      <description value="Akute Thoraxschmerzen als Präsentationssymptom"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-plt-001"/>
+      </reference>
+      <name value="Thrombozytenzahl - Post-therapeutisch"/>
+      <description value="Thrombozytenzahl nach Gentherapie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-troponin-003"/>
+      </reference>
+      <name value="Troponin T hs - 01.08.2024"/>
+      <description value="Troponin T hochsensitiv nach Therapie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-troponin-004"/>
+      </reference>
+      <name value="Troponin T hs - 12.08.2024"/>
+      <description value="Troponin T hochsensitiv bei Nachsorge"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-troponin-001"/>
+      </reference>
+      <name value="Troponin T hs - 22.07.2024"/>
+      <description value="Troponin T hochsensitiv Baseline"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-troponin-002"/>
+      </reference>
+      <name value="Troponin T hs - 28.07.2024"/>
+      <description value="Troponin T hochsensitiv vor Therapie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/vsd"/>
+      </reference>
+      <name value="Ventrikelseptumdefekt - HPO-kodiert"/>
+      <description value="Angeborener Ventrikelseptumdefekt"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/von-seltene-betroffen-vs"/>
+      </reference>
+      <name value="Von SE betroffen Value Set"/>
+      <description value="ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Verwendet SNOMED CT codes für internationale Interoperabilität."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/von-seltene-betroffen"/>
+      </reference>
+      <name value="VonSEBetroffen"/>
+      <description value="Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="clinical-genetic-diagnosis-guide.html"/>
+        </extension>
+        <nameUrl value="clinical-genetic-diagnosis-guide.html"/>
+        <title value="Clinical Genetic Diagnosis Guide"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="coding-best-practices.html"/>
+        </extension>
+        <nameUrl value="coding-best-practices.html"/>
+        <title value="Coding Best Practices"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="marfan-example-annotations.html"/>
+        </extension>
+        <nameUrl value="marfan-example-annotations.html"/>
+        <title value="Marfan Example Annotations"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="sma-example-annotations.html"/>
+        </extension>
+        <nameUrl value="sma-example-annotations.html"/>
+        <title value="Sma Example Annotations"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/assets"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>
