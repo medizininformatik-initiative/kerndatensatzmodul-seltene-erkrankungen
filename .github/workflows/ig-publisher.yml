@@ -88,23 +88,29 @@ jobs:
       # Run the HL7 FHIR IG Publisher
       - name: Build IG
         run: |
-          set -euo pipefail
+          set -uo pipefail
           # The IG Publisher exits non-zero when the IG still has validation errors.
-          # This module's content migration is ongoing (WIP), so we tolerate QA
-          # errors and still publish the branch preview — provided the publisher
-          # actually produced valid output (index.html + parseable qa.json). A
-          # genuinely broken build (no output) still fails via the checks below.
-          docker run --rm --network host -v $PWD:/workspace -v /usr/bin/dot:/usr/local/bin/dot:ro -v /usr/lib/x86_64-linux-gnu:/usr/host/lib:ro -e LD_LIBRARY_PATH=/usr/host/lib -w /workspace ghcr.io/gefyra/ig-publisher-with-snapshot-support:latest sh -c "igpublisher -ig ig.ini -tx http://127.0.0.1:8090/fhir" \
-            || echo "::warning::IG Publisher exited non-zero (validation errors present); continuing to publish preview."
-          # Hard requirement: the published site entry must exist.
-          test -s output/index.html
-          # qa.json may be absent/incomplete when the build has validation errors
-          # or the combined package failed — treat it as a soft check.
+          # This module's content migration is ongoing (WIP), so tolerate QA errors
+          # and still publish the branch preview as long as a landing page exists.
+          set +e
+          docker run --rm --network host -v $PWD:/workspace -v /usr/bin/dot:/usr/local/bin/dot:ro -v /usr/lib/x86_64-linux-gnu:/usr/host/lib:ro -e LD_LIBRARY_PATH=/usr/host/lib -w /workspace ghcr.io/gefyra/ig-publisher-with-snapshot-support:latest sh -c "igpublisher -ig ig.ini -tx http://127.0.0.1:8090/fhir"
+          igpub_rc=$?
+          set -e
+          echo "IG Publisher exit code: ${igpub_rc} (QA validation errors are tolerated for this WIP module)"
+          echo "--- output/ (top level) ---"
+          ls -la output/ 2>/dev/null | head -25 || echo "output/ missing!"
+          # Hard requirement: a published landing page must exist, else nothing to publish.
+          if [ ! -s output/index.html ]; then
+            echo "::error::output/index.html was not produced — cannot publish preview."
+            exit 1
+          fi
+          # qa.json may be absent/incomplete when the build has errors — soft check only.
           if [ -s output/qa.json ]; then
             jq empty output/qa.json || echo "::warning::qa.json is not valid JSON."
           else
-            echo "::warning::output/qa.json missing (build had validation errors); publishing preview anyway."
+            echo "::warning::output/qa.json missing (build had validation errors); publishing anyway."
           fi
+          echo "index.html present — proceeding to publish preview."
       
       - name: Cleanup NGINX
         if: always()
