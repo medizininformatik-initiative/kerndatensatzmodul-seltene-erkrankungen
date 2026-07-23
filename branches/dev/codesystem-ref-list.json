@@ -32,11 +32,11 @@
     "oids" : ["2.16.840.1.113883.6.339"],
     "uses" : {
     },
+    "ValueSet-mii-vs-seltene-hpo-age-of-onset.html" : "MII VS SE HPO Age of Onset",
     "ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html" : "HPO Phenotypic Observation Codes",
-    "ValueSet-mii-vs-seltene-hpo-inheritance-pattern.html" : "MII VS SE HPO Inheritance Pattern",
-    "ValueSet-mii-vs-seltene-penetrance.html" : "MII VS SE Penetrance",
     "ValueSet-mii-vs-seltene-hpo-severity.html" : "HPO Severity",
-    "ValueSet-mii-vs-seltene-hpo-age-of-onset.html" : "MII VS SE HPO Age of Onset"
+    "ValueSet-mii-vs-seltene-hpo-inheritance-pattern.html" : "MII VS SE HPO Inheritance Pattern",
+    "ValueSet-mii-vs-seltene-penetrance.html" : "MII VS SE Penetrance"
   },
   {
     "url" : "http://loinc.org",
@@ -48,8 +48,8 @@
     "oids" : ["2.16.840.1.113883.6.1"],
     "uses" : {
     },
-    "ValueSet-mii-vs-seltene-hpo-presence-status.html" : "HPO Phenotype Presence Status",
-    "ValueSet-mii-vs-seltene-blutgruppe.html" : "MII VS SE Blutgruppe"
+    "ValueSet-mii-vs-seltene-blutgruppe.html" : "MII VS SE Blutgruppe",
+    "ValueSet-mii-vs-seltene-hpo-presence-status.html" : "HPO Phenotype Presence Status"
   },
   {
     "url" : "http://snomed.info/sct",
@@ -61,15 +61,15 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
-    "ValueSet-mii-vs-seltene-symptom-change-status-combined.html" : "MII VS Seltene Erkrankungen Symptom Change Status (Combined)",
-    "ValueSet-von-seltene-betroffen-vs.html" : "Von SE betroffen Value Set",
-    "ValueSet-mii-vs-seltene-blutgruppe.html" : "MII VS SE Blutgruppe",
-    "ValueSet-mii-vs-seltene-syndrome-category.html" : "Syndrome Category Value Set",
-    "ValueSet-mii-vs-seltene-clinical-diagnosis-category.html" : "MII VS SE Clinical Diagnosis Category",
     "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
     "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
-    "ValueSet-mii-vs-seltene-genetic-basis.html" : "MII VS SE Genetic Basis"
+    "ValueSet-mii-vs-seltene-genetic-basis.html" : "MII VS SE Genetic Basis",
+    "ValueSet-mii-vs-seltene-symptom-change-status-combined.html" : "MII VS Seltene Erkrankungen Symptom Change Status (Combined)",
+    "ValueSet-mii-vs-seltene-syndrome-category.html" : "Syndrome Category Value Set",
+    "ValueSet-mii-vs-seltene-blutgruppe.html" : "MII VS SE Blutgruppe",
+    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "ValueSet-von-seltene-betroffen-vs.html" : "Von SE betroffen Value Set",
+    "ValueSet-mii-vs-seltene-clinical-diagnosis-category.html" : "MII VS SE Clinical Diagnosis Category"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
@@ -138,8 +138,8 @@
     "description" : "CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit",
     "uses" : {
     },
-    "ValueSet-mii-vs-seltene-hpo-change-status.html" : "MII VS Seltene Erkrankungen HPO Change Status",
-    "ValueSet-mii-vs-seltene-symptom-change-status-combined.html" : "MII VS Seltene Erkrankungen Symptom Change Status (Combined)"
+    "ValueSet-mii-vs-seltene-symptom-change-status-combined.html" : "MII VS Seltene Erkrankungen Symptom Change Status (Combined)",
+    "ValueSet-mii-vs-seltene-hpo-change-status.html" : "MII VS Seltene Erkrankungen HPO Change Status"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp",

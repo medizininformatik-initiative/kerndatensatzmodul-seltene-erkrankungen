@@ -32,7 +32,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "MII_VS_Seltene_TherapieempfehlungStrategie",
   "title" : "MII VS SE Therapieempfehlung Strategie",
   "status" : "active",
-  "date" : "2026-07-23T11:20:28+00:00",
+  "date" : "2026-07-23T15:55:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
