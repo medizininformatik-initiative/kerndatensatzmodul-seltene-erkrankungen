@@ -80,6 +80,7 @@ Mapping: SE-vomLogicalModelzuFHIR
 Id: FHIR
 Title: "SE LogicalModel FHIR Mapping"
 Source: MII_LM_SE
+Target: "http://hl7.org/fhir"
 * AnamneseUndDiagnostik -> "Condition | Observation | ClinicalImpression"
   * Untersuchungsdatum -> "ClinicalImpression.effectiveDateTime"
   * Untersuchungsanlass -> "ClinicalImpression.reasonCode"
@@ -155,6 +156,7 @@ Mapping: SE-vomLogicalModelzuNARSE
 Id: NARSE
 Title: "SE LogicalModel NARSE Mapping"
 Source: MII_LM_SE
+Target: "https://www.se-atlas.de/narse"
 * AnamneseUndDiagnostik -> "-"
   * Untersuchungsdatum -> "Nicht vorhanden"
   * Phaenotypisierung -> "-"
@@ -227,6 +229,7 @@ Mapping: SE-vomLogicalModelzumERDRICDS
 Id: ERDRICDS
 Title: "SE LogicalModel ERDRI CDS Mapping"
 Source: MII_LM_SE
+Target: "https://eu-rd-platform.jrc.ec.europa.eu/set-of-common-data-elements_en"
 * AnamneseUndDiagnostik -> "-"
   * Untersuchungsdatum -> "Nicht vorhanden"
   * Phaenotypisierung -> "-"
@@ -300,6 +303,7 @@ Mapping: SE-vomLogicalModelzumModellvorhabenGenomsequenzierung
 Id: ModellvorhabenGenomsequenzierung
 Title: "SE LogicalModel ModellvorhabenGenomsequenzierung Mapping"
 Source: MII_LM_SE
+Target: "https://www.medizininformatik-initiative.de/de/modellvorhaben-genomsequenzierung"
 * AnamneseUndDiagnostik -> "-"
   * Untersuchungsdatum -> "Nicht direkt vorhanden; gibt nur Daten für vergangene Diagnostik, Proben, etc."
   * Phaenotypisierung -> "-"

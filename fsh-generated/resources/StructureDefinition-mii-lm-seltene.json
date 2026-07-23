@@ -22,19 +22,23 @@
   "mapping": [
     {
       "identity": "FHIR",
-      "name": "SE LogicalModel FHIR Mapping"
+      "name": "SE LogicalModel FHIR Mapping",
+      "uri": "http://hl7.org/fhir"
     },
     {
       "identity": "NARSE",
-      "name": "SE LogicalModel NARSE Mapping"
+      "name": "SE LogicalModel NARSE Mapping",
+      "uri": "https://www.se-atlas.de/narse"
     },
     {
       "identity": "ERDRICDS",
-      "name": "SE LogicalModel ERDRI CDS Mapping"
+      "name": "SE LogicalModel ERDRI CDS Mapping",
+      "uri": "https://eu-rd-platform.jrc.ec.europa.eu/set-of-common-data-elements_en"
     },
     {
       "identity": "ModellvorhabenGenomsequenzierung",
-      "name": "SE LogicalModel ModellvorhabenGenomsequenzierung Mapping"
+      "name": "SE LogicalModel ModellvorhabenGenomsequenzierung Mapping",
+      "uri": "https://www.medizininformatik-initiative.de/de/modellvorhaben-genomsequenzierung"
     }
   ],
   "kind": "logical",
