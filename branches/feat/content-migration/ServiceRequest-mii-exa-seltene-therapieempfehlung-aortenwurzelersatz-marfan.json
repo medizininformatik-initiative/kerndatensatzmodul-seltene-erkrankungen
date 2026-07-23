@@ -1,0 +1,53 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2026.0.1"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan</b></p><a name=\"mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan\"> </a><a name=\"hcmii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html\">MII PR SE Therapieempfehlung Nicht-Medikamentös</a> version: 2026.0.1</p></div><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>category</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie prophylactic}\">Prophylaxe</span>, <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ symptomatic}\">Symptomatisch</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-354.0a}, {http://snomed.info/sct 428179006}\">Composite-Graft-Implantation (David-OP)</span></p><p><b>subject</b>: <a href=\"Patient-patient-marfan-001.html\">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>occurrence</b>: 2025-03-15</p><p><b>authoredOn</b>: 2024-12-15</p><p><b>reasonReference</b>: <a href=\"Condition-condition-marfan-clinical.html\">Progrediente Aortenwurzeldilatation bei Marfan-Syndrom</a></p><p><b>note</b>: </p><blockquote><div><p>Geplanter elektiver Eingriff bei progredienter Aortenwurzeldilatation (48mm) zur Prävention einer Aortendissektion</p>\n</div></blockquote></div>"
+  },
+  "status" : "active",
+  "intent" : "proposal",
+  "category" : [{
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
+      "code" : "prophylactic",
+      "display" : "Prophylaxe"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
+      "code" : "symptomatic",
+      "display" : "Symptomatisch"
+    }]
+  }],
+  "priority" : "routine",
+  "code" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/ops",
+      "code" : "5-354.0a",
+      "display" : "Andere Operationen an Herzklappen: Aortenklappe: Rekonstruktion der Aortenwurzel mit Implantation einer Gefäßprothese nach David"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "428179006",
+      "display" : "Replacement of aortic root"
+    }],
+    "text" : "Composite-Graft-Implantation (David-OP)"
+  },
+  "subject" : {
+    "reference" : "Patient/patient-marfan-001"
+  },
+  "occurrenceDateTime" : "2025-03-15",
+  "authoredOn" : "2024-12-15",
+  "reasonReference" : [{
+    "reference" : "Condition/condition-marfan-clinical",
+    "display" : "Progrediente Aortenwurzeldilatation bei Marfan-Syndrom"
+  }],
+  "note" : [{
+    "text" : "Geplanter elektiver Eingriff bei progredienter Aortenwurzeldilatation (48mm) zur Prävention einer Aortendissektion"
+  }]
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FamilyMemberHistory xmlns="http://hl7.org/fhir">
+  <id value="family-history-001"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese|2026.0.1"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: FamilyMemberHistory family-history-001</b></p><a name="family-history-001"> </a><a name="hcfamily-history-001"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-familienanamnese.html">MII PR SE Familienanamnese</a> version: 2026.0.1</p></div><p><b>VonSEBetroffen</b>: <span title="Codes:{http://snomed.info/sct 261665006}">Unknown</span></p><p><b>status</b>: Completed</p><p><b>patient</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>date</b>: 2024-07-22</p><p><b>relationship</b>: <span title="Codes:{http://snomed.info/sct 78652007}">Great grandmother</span></p><h3>Conditions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 129565002}">Unbekannte Muskelerkrankung</span></td></tr></table></div>
+  </text>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="261665006"/>
+        <display value="Unknown"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <status value="completed"/>
+  <patient>
+    <reference value="Patient/patient-sma-001"/>
+  </patient>
+  <date value="2024-07-22"/>
+  <relationship>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="78652007"/>
+      <display value="Great grandmother"/>
+    </coding>
+  </relationship>
+  <condition>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="129565002"/>
+        <display value="Disorder of muscle"/>
+      </coding>
+      <text value="Unbekannte Muskelerkrankung"/>
+    </code>
+  </condition>
+</FamilyMemberHistory>
