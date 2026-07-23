@@ -1,0 +1,44 @@
+{
+  "resourceType": "Encounter",
+  "id": "encounter-ophthalmology",
+  "status": "finished",
+  "class": {
+    "code": "AMB",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "display": "ambulatory"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "36228007",
+          "system": "http://snomed.info/sct",
+          "display": "Ophthalmic examination and evaluation"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "period": {
+    "start": "2024-10-15",
+    "end": "2024-10-15"
+  },
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/condition-cataract"
+      },
+      "use": {
+        "coding": [
+          {
+            "code": "AD",
+            "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+            "display": "Admission diagnosis"
+          }
+        ]
+      }
+    }
+  ]
+}

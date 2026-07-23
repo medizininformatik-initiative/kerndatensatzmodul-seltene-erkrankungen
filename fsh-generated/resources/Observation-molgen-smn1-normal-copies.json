@@ -1,0 +1,81 @@
+{
+  "resourceType": "Observation",
+  "id": "molgen-smn1-normal-copies",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "69548-6",
+        "system": "http://loinc.org",
+        "display": "Genetic variant assessment"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-07-26",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "280413001",
+        "system": "http://snomed.info/sct",
+        "display": "Normal result"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "48018-6",
+            "system": "http://loinc.org",
+            "display": "Gene studied [ID]"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "HGNC:11117",
+            "system": "http://www.genenames.org/geneId",
+            "display": "SMN1"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "text": "Copy Number"
+      },
+      "valueInteger": 2
+    }
+  ],
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "N",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display": "Normal"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "Normale Kopienanzahl des SMN1-Gens. SMA ausgeschlossen."
+    }
+  ]
+}

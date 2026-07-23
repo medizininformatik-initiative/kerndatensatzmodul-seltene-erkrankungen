@@ -1,0 +1,65 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "medication-losartan",
+  "status": "active",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "code": "C09CA01",
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "display": "Losartan"
+      },
+      {
+        "code": "373567002",
+        "system": "http://snomed.info/sct",
+        "display": "Losartan"
+      }
+    ],
+    "text": "Losartan 50mg"
+  },
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "effectiveDateTime": "2024-12-15",
+  "reasonReference": [
+    {
+      "reference": "Condition/condition-marfan-clinical"
+    }
+  ],
+  "dosage": [
+    {
+      "text": "50mg einmal täglich",
+      "route": {
+        "coding": [
+          {
+            "code": "26643006",
+            "system": "http://snomed.info/sct",
+            "display": "Oral route"
+          }
+        ]
+      },
+      "doseAndRate": [
+        {
+          "doseQuantity": {
+            "value": 50,
+            "code": "mg",
+            "system": "http://unitsofmeasure.org",
+            "unit": "mg"
+          }
+        }
+      ],
+      "timing": {
+        "repeat": {
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      }
+    }
+  ],
+  "note": [
+    {
+      "text": "Zur Progressionshemmung der Aortenwurzeldilatation bei Marfan-Syndrom"
+    }
+  ]
+}

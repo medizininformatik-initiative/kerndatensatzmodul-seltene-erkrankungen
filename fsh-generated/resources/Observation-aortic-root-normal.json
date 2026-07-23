@@ -1,0 +1,57 @@
+{
+  "resourceType": "Observation",
+  "id": "aortic-root-normal",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "imaging",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "78176-5",
+        "system": "http://loinc.org",
+        "display": "Aorta root Diameter by US 2D"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2024-12-15",
+  "valueQuantity": {
+    "value": 32,
+    "code": "mm",
+    "system": "http://unitsofmeasure.org",
+    "unit": "mm"
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "N",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display": "Normal"
+        }
+      ]
+    }
+  ],
+  "referenceRange": [
+    {
+      "low": {
+        "value": 29,
+        "unit": "mm"
+      },
+      "high": {
+        "value": 37,
+        "unit": "mm"
+      }
+    }
+  ]
+}

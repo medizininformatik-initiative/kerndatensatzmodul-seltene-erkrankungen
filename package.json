@@ -1,0 +1,38 @@
+{
+  "name": "de.medizininformatikinitiative.kerndatensatz.seltene",
+  "version": "2026.0.1",
+  "title": "MII IG Seltene Erkrankungen",
+  "description": "Medizininformatik Initiative - Modul Seltene Erkrankungen. Version 2026.0.1: Patch-Release mit Aktualisierung der Abhängigkeiten (Studie 2026.0.2, ICU 2026.0.2), Fix ICU-Kopfumfang-Alias und Penetrance-Extension-Context. Release Notes: https://simplifier.net/guide/mii-ig-seltene-erkrankungen-v2026-de/ReleaseNotes",
+  "author": "thomasdebertshaeuser",
+  "fhirVersions": [
+    "4.0.1"
+  ],
+  "keywords": [
+    "MII",
+    "KDS",
+    "Seltene Erkrankungen",
+    "Rare Diseases",
+    "HPO"
+  ],
+  "homepage": "https://www.medizininformatik-initiative.de/",
+  "directories": {
+    "lib": "package",
+    "example": "examples"
+  },
+  "maintainers": [
+    {
+      "name": "Medizininformatik Initiative"
+    }
+  ],
+  "canonicals": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de",
+  "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",
+  "dependencies": {
+    "de.basisprofil.r4": "1.5.x",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "2026.0.x",
+    "de.medizininformatikinitiative.kerndatensatz.molgen": "2026.0.x",
+    "de.medizininformatikinitiative.kerndatensatz.icu": "2026.0.x",
+    "de.medizininformatikinitiative.kerndatensatz.studie": "2026.0.2",
+    "de.medizininformatikinitiative.kerndatensatz.base": "2026.0.x",
+    "de.medizininformatikinitiative.kerndatensatz.medikation": "2026.0.x"
+  }
+}

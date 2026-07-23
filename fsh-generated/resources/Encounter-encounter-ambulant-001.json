@@ -1,0 +1,44 @@
+{
+  "resourceType": "Encounter",
+  "id": "encounter-ambulant-001",
+  "status": "finished",
+  "class": {
+    "code": "AMB",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "display": "ambulatory"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "390906007",
+          "system": "http://snomed.info/sct",
+          "display": "Follow-up encounter"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/patient-sma-001"
+  },
+  "period": {
+    "start": "2024-07-22",
+    "end": "2024-07-22"
+  },
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/condition-sma-clinical"
+      },
+      "use": {
+        "coding": [
+          {
+            "code": "AD",
+            "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+            "display": "Admission diagnosis"
+          }
+        ]
+      }
+    }
+  ]
+}

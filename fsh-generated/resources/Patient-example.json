@@ -1,0 +1,20 @@
+{
+  "resourceType": "Patient",
+  "id": "example",
+  "identifier": [
+    {
+      "system": "http://test-krankenhaus.de/fhir/sid/patienten",
+      "value": "12345"
+    }
+  ],
+  "name": [
+    {
+      "family": "Mustermann",
+      "given": [
+        "Max"
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1990-01-01"
+}

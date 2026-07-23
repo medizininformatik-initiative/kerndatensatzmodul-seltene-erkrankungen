@@ -1,0 +1,71 @@
+{
+  "resourceType": "Observation",
+  "id": "observation-leg-asymmetry",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "exam",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "707738004",
+        "system": "http://snomed.info/sct",
+        "display": "Leg length discrepancy"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/patient-marfan-001"
+  },
+  "effectiveDateTime": "2024-12-15",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "7771000",
+        "system": "http://snomed.info/sct",
+        "display": "Left"
+      }
+    ]
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "A",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display": "Abnormal"
+        }
+      ]
+    }
+  ],
+  "bodySite": {
+    "coding": [
+      {
+        "code": "30021000",
+        "system": "http://snomed.info/sct",
+        "display": "Lower leg structure"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0100559",
+            "system": "http://human-phenotype-ontology.org",
+            "display": "Lower limb asymmetry"
+          }
+        ]
+      },
+      "valueString": "Rechtes Bein verkürzt"
+    }
+  ]
+}
