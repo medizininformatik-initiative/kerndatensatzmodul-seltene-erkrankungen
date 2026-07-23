@@ -783,14 +783,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-lm-seltene"
-        },
-        "name": "MII LM SE",
-        "description": "MII LogicalModel Modul Seltene Erkraknungen",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/mii-pr-seltene-blutgruppe"
         },
         "name": "MII PR SE Blutgruppe",
@@ -1347,6 +1339,11 @@
       "title": "Table of Contents",
       "generation": "html",
       "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
         {
           "nameUrl": "clinical-genetic-diagnosis-guide.html",
           "title": "Clinical Genetic Diagnosis Guide",
