@@ -56,14 +56,18 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-pages:
-  index.md:
-    title: Home
-  guidance.md:
-    information_model.md:
-      title: Information-Model
-    fhir_model.md:
-      title: FHIR-Model
+# NOTE (IG Publisher migration): The custom pages block is commented out so that
+# SUSHI / the IG Publisher auto-generate the page list. The referenced content pages
+# (index.md, guidance.md, information_model.md, fhir_model.md) do not yet exist in this
+# repo; they will be repopulated here when page content is ported in a later PR.
+# pages:
+#   index.md:
+#     title: Home
+#   guidance.md:
+#     information_model.md:
+#       title: Information-Model
+#     fhir_model.md:
+#       title: FHIR-Model
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -73,9 +77,21 @@ pages:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
-# parameters:
-#   excludettl: true
-#   validation: [allow-any-extensions, no-broken-links]
+parameters:
+  excludettl: true
+  # ── i18n scaffolding (basis-style), COMMENTED OUT for now ─────────────────────
+  # This module currently builds German-only (language: "de-DE" above). The
+  # EN-primary / DE-additional internationalization setup below mirrors the
+  # kerndatensatz-basis blueprint and will be enabled in a later PR once the
+  # English content and translation sources are in place.
+  # i18n-default-lang: en
+  # i18n-lang:
+  #   - de
+  # translation-sources:
+  #   - input/translations/de
+  # ── custom introductory notes (enable together with path-pages) ───────────────
+  # path-pages:
+  #   - input/intro-notes
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
@@ -85,12 +101,14 @@ pages:
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-menu:
-  Home: index.html
-  Guidance:
-    Information Model: information_model.html
-    FHIR Model: fhir_model.html
-  Artifacts: artifacts.html
+# NOTE (IG Publisher migration): The custom menu block is commented out so the IG
+# Publisher auto-generates the menu. It will be repopulated when content is ported.
+# menu:
+#   Home: index.html
+#   Guidance:
+#     Information Model: information_model.html
+#     FHIR Model: fhir_model.html
+#   Artifacts: artifacts.html
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │
