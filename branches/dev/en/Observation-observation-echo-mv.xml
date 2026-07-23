@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="observation-echo-mv"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation observation-echo-mv</b></p><a name="observation-echo-mv"> </a><a name="hcobservation-echo-mv"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category imaging}">Imaging</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 18113-1}">Mitral valve Regurgitation degree by US.doppler</span></p><p><b>subject</b>: <a href="Patient-patient-marfan-001.html">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>effective</b>: 2024-12-15</p><p><b>value</b>: <span title="Codes:">Grad I</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation A}">Abnormal</span></p><p><b>method</b>: <span title="Codes:{http://snomed.info/sct 40701008}">Echocardiography</span></p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="imaging"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="18113-1"/>
+      <display value="Mitral valve Regurgitation degree by US.doppler"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/patient-marfan-001"/>
+  </subject>
+  <effectiveDateTime value="2024-12-15"/>
+  <valueCodeableConcept>
+    <text value="Grad I"/>
+  </valueCodeableConcept>
+  <interpretation>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+      <code value="A"/>
+      <display value="Abnormal"/>
+    </coding>
+  </interpretation>
+  <method>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="40701008"/>
+      <display value="Echocardiography"/>
+    </coding>
+  </method>
+</Observation>

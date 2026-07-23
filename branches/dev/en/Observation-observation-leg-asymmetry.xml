@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="observation-leg-asymmetry"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation observation-leg-asymmetry</b></p><a name="observation-leg-asymmetry"> </a><a name="hcobservation-leg-asymmetry"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category exam}">Exam</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 707738004}">Leg length discrepancy</span></p><p><b>subject</b>: <a href="Patient-patient-marfan-001.html">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>effective</b>: 2024-12-15</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 7771000}">Left</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation A}">Abnormal</span></p><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 30021000}">Lower leg structure</span></p><h3>Components</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://human-phenotype-ontology.org HP:0100559}">Lower limb asymmetry</span></td><td>Rechtes Bein verkürzt</td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="exam"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="707738004"/>
+      <display value="Leg length discrepancy"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/patient-marfan-001"/>
+  </subject>
+  <effectiveDateTime value="2024-12-15"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="7771000"/>
+      <display value="Left"/>
+    </coding>
+  </valueCodeableConcept>
+  <interpretation>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+      <code value="A"/>
+      <display value="Abnormal"/>
+    </coding>
+  </interpretation>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="30021000"/>
+      <display value="Lower leg structure"/>
+    </coding>
+  </bodySite>
+  <component>
+    <code>
+      <coding>
+        <system value="http://human-phenotype-ontology.org"/>
+        <code value="HP:0100559"/>
+        <display value="Lower limb asymmetry"/>
+      </coding>
+    </code>
+    <valueString value="Rechtes Bein verkürzt"/>
+  </component>
+</Observation>

@@ -1,0 +1,83 @@
+{
+  "resourceType" : "Condition",
+  "id" : "example-cf-genetic",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2026.0.1"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition example-cf-genetic</b></p><a name=\"example-cf-genetic\"> </a><a name=\"hcexample-cf-genetic\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-seltene-genetic-diagnosis.html\">MII PR SE Genetic Diagnosis</a> version: 2026.0.1</p></div><p><b>Condition Asserted Date</b>: 2024-08-25</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 782964007}\">Genetic disease</span></p><p><b>code</b>: <span title=\"Codes:{http://omim.org 219700}, {http://snomed.info/sct 190905008}, {http://www.orpha.net 586}\">Cystic fibrosis</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>recordedDate</b>: 2024-08-25</p><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 106221001}\">Genetic finding</span></p><p><b>detail</b>: <a href=\"Observation-molgen-variant-cftr-f508del-homozygous.html\">Observation Genetic variant assessment</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 405824009}\">Genetic test</span></p><p><b>detail</b>: <a href=\"DiagnosticReport-molgen-cf-diagnostic.html\">Diagnostic Report for 'Genetic analysis report' for '-&gt;Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'</a></p></blockquote><p><b>note</b>: </p><blockquote><div><p>Homozygot für F508del (c.1521_1523delCTT) im CFTR-Gen. Schwerer Phänotyp zu erwarten.</p>\n</div></blockquote></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+    "valueDateTime" : "2024-08-25"
+  }],
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "active"
+    }]
+  },
+  "verificationStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+      "code" : "confirmed"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "782964007",
+      "display" : "Genetic disease"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://omim.org",
+      "version" : "2024",
+      "code" : "219700",
+      "display" : "Cystic fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190905008",
+      "display" : "Cystic fibrosis"
+    },
+    {
+      "system" : "http://www.orpha.net",
+      "code" : "586",
+      "display" : "Cystic fibrosis"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "recordedDate" : "2024-08-25",
+  "evidence" : [{
+    "code" : [{
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "106221001",
+        "display" : "Genetic finding"
+      }]
+    }],
+    "detail" : [{
+      "reference" : "Observation/molgen-variant-cftr-f508del-homozygous"
+    }]
+  },
+  {
+    "code" : [{
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "405824009",
+        "display" : "Genetic test"
+      }]
+    }],
+    "detail" : [{
+      "reference" : "DiagnosticReport/molgen-cf-diagnostic"
+    }]
+  }],
+  "note" : [{
+    "text" : "Homozygot für F508del (c.1521_1523delCTT) im CFTR-Gen. Schwerer Phänotyp zu erwarten."
+  }]
+}

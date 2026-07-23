@@ -1,0 +1,31 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-seltene-empfehlung-status-begruendung",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-seltene-empfehlung-status-begruendung</b></p><a name=\"mii-cs-seltene-empfehlung-status-begruendung\"> </a><a name=\"hcmii-cs-seltene-empfehlung-status-begruendung\"> </a><p>This  code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-empfehlung-status-begruendung</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">no-target<a name=\"mii-cs-seltene-empfehlung-status-begruendung-no-target\"> </a></td><td>Keine therapeutische Konsequenz</td><td>Keine therapeutische Konsequenz durch fehlende Empfehlung</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-empfehlung-status-begruendung",
+  "version" : "2026.0.1",
+  "name" : "MII_CS_Seltene_Empfehlung_StatusBegruendung",
+  "title" : "MII CS SE Empfehlung Status Begründung",
+  "status" : "active",
+  "date" : "2026-07-23T10:39:42+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Begründung bei fehlender Empfehlung",
+  "content" : "complete",
+  "count" : 1,
+  "concept" : [{
+    "code" : "no-target",
+    "display" : "Keine therapeutische Konsequenz",
+    "definition" : "Keine therapeutische Konsequenz durch fehlende Empfehlung"
+  }]
+}

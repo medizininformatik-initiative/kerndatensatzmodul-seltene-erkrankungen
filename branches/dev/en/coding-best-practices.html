@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Coding Best Practices - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Seltene Erkrankungen</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Coding Best Practices</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Seltene Erkrankungen - Local Development build (v2026.0.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Coding Best Practices</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#best-practices-für-kodierung-bei-seltenen-erkrankungen" id="markdown-toc-best-practices-für-kodierung-bei-seltenen-erkrankungen">Best Practices für Kodierung bei Seltenen Erkrankungen</a>    <ul>
+      <li><a href="#vermeidung-von-redundanz" id="markdown-toc-vermeidung-von-redundanz">Vermeidung von Redundanz</a>        <ul>
+          <li><a href="#problem" id="markdown-toc-problem">Problem</a></li>
+          <li><a href="#lösung-gezielte-kodierung" id="markdown-toc-lösung-gezielte-kodierung">Lösung: Gezielte Kodierung</a></li>
+        </ul>
+      </li>
+      <li><a href="#empfohlene-kodierungsstrategie" id="markdown-toc-empfohlene-kodierungsstrategie">Empfohlene Kodierungsstrategie</a>        <ul>
+          <li><a href="#1-primäre-kodiersysteme-nach-diagnosetyp" id="markdown-toc-1-primäre-kodiersysteme-nach-diagnosetyp">1. Primäre Kodiersysteme nach Diagnosetyp</a></li>
+          <li><a href="#2-kontextabhängige-kodiersysteme" id="markdown-toc-2-kontextabhängige-kodiersysteme">2. Kontextabhängige Kodiersysteme</a></li>
+        </ul>
+      </li>
+      <li><a href="#entscheidungsmatrix" id="markdown-toc-entscheidungsmatrix">Entscheidungsmatrix</a></li>
+      <li><a href="#praktische-beispiele" id="markdown-toc-praktische-beispiele">Praktische Beispiele</a>        <ul>
+          <li><a href="#-richtig-fokussierte-kodierung" id="markdown-toc--richtig-fokussierte-kodierung">✅ RICHTIG: Fokussierte Kodierung</a></li>
+          <li><a href="#-falsch-übermäßige-kodierung" id="markdown-toc--falsch-übermäßige-kodierung">❌ FALSCH: Übermäßige Kodierung</a></li>
+        </ul>
+      </li>
+      <li><a href="#spezielle-szenarien" id="markdown-toc-spezielle-szenarien">Spezielle Szenarien</a>        <ul>
+          <li><a href="#diagnose-progression" id="markdown-toc-diagnose-progression">Diagnose-Progression</a></li>
+          <li><a href="#rein-genetische-vs-klinisch-genetische-diagnosen" id="markdown-toc-rein-genetische-vs-klinisch-genetische-diagnosen">Rein genetische vs. Klinisch-genetische Diagnosen</a></li>
+        </ul>
+      </li>
+      <li><a href="#qualitätskriterien" id="markdown-toc-qualitätskriterien">Qualitätskriterien</a>        <ul>
+          <li><a href="#minimale-anforderungen" id="markdown-toc-minimale-anforderungen">Minimale Anforderungen</a></li>
+          <li><a href="#optimale-kodierung" id="markdown-toc-optimale-kodierung">Optimale Kodierung</a></li>
+        </ul>
+      </li>
+      <li><a href="#wann-icd-10-gm-bei-genetischen-diagnosen-verwenden" id="markdown-toc-wann-icd-10-gm-bei-genetischen-diagnosen-verwenden">Wann ICD-10-GM bei genetischen Diagnosen verwenden?</a>        <ul>
+          <li><a href="#-icd-10-gm-sinnvoll-bei" id="markdown-toc--icd-10-gm-sinnvoll-bei">✅ ICD-10-GM sinnvoll bei:</a></li>
+          <li><a href="#-icd-10-gm-weglassen-bei" id="markdown-toc--icd-10-gm-weglassen-bei">❌ ICD-10-GM weglassen bei:</a></li>
+        </ul>
+      </li>
+      <li><a href="#wichtiger-hinweis-ausgeschlossene-diagnosen" id="markdown-toc-wichtiger-hinweis-ausgeschlossene-diagnosen">Wichtiger Hinweis: Ausgeschlossene Diagnosen</a>        <ul>
+          <li><a href="#️-pflicht-dokumentation-ausgeschlossener-diagnosen" id="markdown-toc-️-pflicht-dokumentation-ausgeschlossener-diagnosen">⚠️ PFLICHT: Dokumentation ausgeschlossener Diagnosen</a></li>
+        </ul>
+      </li>
+      <li><a href="#zusammenfassung" id="markdown-toc-zusammenfassung">Zusammenfassung</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="best-practices-für-kodierung-bei-seltenen-erkrankungen">Best Practices für Kodierung bei Seltenen Erkrankungen</h1>
+
+<h2 id="vermeidung-von-redundanz">Vermeidung von Redundanz</h2>
+
+<h3 id="problem">Problem</h3>
+<p>Nicht alle Diagnosen benötigen alle verfügbaren Kodiersysteme. Eine übermäßige Mehrfachkodierung kann zu:</p>
+<ul>
+  <li>Redundanz und Datenaufblähung führen</li>
+  <li>Inkonsistenzen zwischen verschiedenen Kodiersystemen verursachen</li>
+  <li>Die Wartbarkeit erschweren</li>
+</ul>
+
+<h3 id="lösung-gezielte-kodierung">Lösung: Gezielte Kodierung</h3>
+
+<h2 id="empfohlene-kodierungsstrategie">Empfohlene Kodierungsstrategie</h2>
+
+<h3 id="1-primäre-kodiersysteme-nach-diagnosetyp">1. Primäre Kodiersysteme nach Diagnosetyp</h3>
+
+<h4 id="für-klinische-diagnosen">Für KLINISCHE Diagnosen</h4>
+<ul>
+  <li><strong>ICD-10-GM:</strong> Pflicht (Abrechnung/Statistik im deutschen Gesundheitswesen)</li>
+  <li><strong>Orpha-Codes:</strong> Pflicht für seltene Erkrankungen</li>
+  <li><strong>HPO-Codes:</strong> Empfohlen für phänotypische Beschreibung</li>
+</ul>
+
+<h4 id="für-genetische-diagnosen">Für GENETISCHE Diagnosen</h4>
+<ul>
+  <li><strong>Orpha-Codes:</strong> Pflicht für seltene Erkrankungen</li>
+  <li><strong>OMIM-Codes:</strong> Stark empfohlen für genetische Entitäten</li>
+  <li><strong>ICD-10-GM:</strong> Optional (oft unspezifisch für genetische Varianten)</li>
+</ul>
+
+<h3 id="2-kontextabhängige-kodiersysteme">2. Kontextabhängige Kodiersysteme</h3>
+
+<h4 id="hpo-codes">HPO-Codes</h4>
+<ul>
+  <li><strong>Verwenden bei:</strong> Klinischen Diagnosen (<code class="language-plaintext highlighter-rouge">MII_PR_SE_ClinicalDiagnosis</code>)</li>
+  <li><strong>Zweck:</strong> Phänotypische Beschreibung</li>
+  <li><strong>Optional bei:</strong> Genetischen Diagnosen (wenn Phänotyp relevant)</li>
+</ul>
+
+<h4 id="omim-codes">OMIM-Codes</h4>
+<ul>
+  <li><strong>Verwenden bei:</strong> Genetischen Diagnosen (<code class="language-plaintext highlighter-rouge">MII_PR_SE_GeneticDiagnosis</code>)</li>
+  <li><strong>Zweck:</strong> Genetische Krankheitsentität</li>
+  <li><strong>Nicht verwenden bei:</strong> Rein klinischen Diagnosen ohne genetische Bestätigung</li>
+</ul>
+
+<h4 id="snomed-ct">SNOMED CT</h4>
+<ul>
+  <li><strong>Verwenden wenn:</strong>
+    <ul>
+      <li>Keine spezifischere Kodierung verfügbar</li>
+      <li>Internationale Interoperabilität erforderlich</li>
+      <li>Komplexe klinische Konzepte abgebildet werden müssen</li>
+    </ul>
+  </li>
+  <li><strong>Vermeiden wenn:</strong> Orpha/OMIM ausreichend</li>
+</ul>
+
+<h2 id="entscheidungsmatrix">Entscheidungsmatrix</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Diagnosetyp</th>
+      <th>ICD-10-GM</th>
+      <th>Orpha</th>
+      <th>HPO</th>
+      <th>OMIM</th>
+      <th>SNOMED CT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Klinische SE-Diagnose</td>
+      <td>✅ Pflicht</td>
+      <td>✅ Pflicht</td>
+      <td>✅ Empfohlen</td>
+      <td>❌ Nicht verwenden</td>
+      <td>⚠️ Optional</td>
+    </tr>
+    <tr>
+      <td>Genetische SE-Diagnose</td>
+      <td>⚠️ Optional</td>
+      <td>✅ Pflicht</td>
+      <td>⚠️ Optional</td>
+      <td>✅ Stark empfohlen</td>
+      <td>⚠️ Optional</td>
+    </tr>
+    <tr>
+      <td>Verdachtsdiagnose</td>
+      <td>✅ Pflicht</td>
+      <td>⚠️ Wenn möglich</td>
+      <td>✅ Für Symptome</td>
+      <td>❌ Nicht verwenden</td>
+      <td>⚠️ Optional</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="praktische-beispiele">Praktische Beispiele</h2>
+
+<h3 id="-richtig-fokussierte-kodierung">✅ RICHTIG: Fokussierte Kodierung</h3>
+
+<h4 id="klinische-diagnose-icd-10-gm-erforderlich">Klinische Diagnose (ICD-10-GM erforderlich)</h4>
+<pre><code class="language-fsh">Instance: marfan-clinical-focused
+InstanceOf: MII_PR_SE_ClinicalDiagnosis
+* code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
+* code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
+* code.coding[omim] = http://omim.org#154700 "Marfan syndrome"
+// OMIM für genetische Kodierung verwendet
+</code></pre>
+
+<h4 id="genetische-diagnose-icd-10-gm-optional">Genetische Diagnose (ICD-10-GM optional)</h4>
+<pre><code class="language-fsh">Instance: sma-genetic-focused
+InstanceOf: MII_PR_SE_GeneticDiagnosis
+* code.coding[orphanet] = http://www.orpha.net#83330 "SMA type 1"
+* code.coding[omim] = http://omim.org#253300 "Spinal muscular atrophy, type I"
+// ICD-10-GM kann weggelassen werden bei rein genetischer Diagnose
+// HPO optional, nur wenn Phänotyp dokumentiert werden soll
+</code></pre>
+
+<h4 id="genetische-diagnose-mit-icd-10-wenn-klinisch-relevant">Genetische Diagnose mit ICD-10 (wenn klinisch relevant)</h4>
+<pre><code class="language-fsh">Instance: cf-genetic-with-clinical
+InstanceOf: MII_PR_SE_GeneticDiagnosis
+* code.coding[icd10-gm] = $ICD10GM#E84.0 "Zystische Fibrose mit Lungenmanifestationen"
+* code.coding[orphanet] = http://www.orpha.net#586 "Cystic fibrosis"
+* code.coding[omim] = http://omim.org#219700 "Cystic fibrosis"
+// ICD-10 hier sinnvoll, da klinische Manifestation spezifiziert
+</code></pre>
+
+<h3 id="-falsch-übermäßige-kodierung">❌ FALSCH: Übermäßige Kodierung</h3>
+
+<pre><code class="language-fsh">Instance: overencoded-diagnosis
+InstanceOf: Condition
+* code.coding[0] = $ICD10GM#Q87.4 "Marfan-Syndrom"
+* code.coding[1] = http://www.orpha.net#558 "Marfan syndrome"
+* code.coding[2] = $SCT#19346006 "Marfan syndrome"
+* code.coding[3] = http://omim.org#154700 "Marfan syndrome"
+* code.coding[4] = $UMLS#C0024796 "Marfan Syndrome"
+* code.coding[5] = $MeSH#D008382 "Marfan Syndrome"
+// Zu viele redundante Codes!
+</code></pre>
+
+<h2 id="spezielle-szenarien">Spezielle Szenarien</h2>
+
+<h3 id="diagnose-progression">Diagnose-Progression</h3>
+<p>Bei der Modellierung von Diagnose-Verläufen:</p>
+
+<ol>
+  <li><strong>Verdacht</strong> (Screening)
+    <ul>
+      <li>ICD-10-GM: Pflicht</li>
+      <li>Orpha: Wenn spezifischer SE-Verdacht</li>
+      <li>HPO: Für Symptombeschreibung</li>
+      <li>OMIM: Nicht verwenden</li>
+    </ul>
+  </li>
+  <li><strong>Klinische Diagnose</strong>
+    <ul>
+      <li>ICD-10-GM: Pflicht</li>
+      <li>Orpha: Pflicht</li>
+      <li>HPO: Empfohlen</li>
+      <li>OMIM: Nicht verwenden</li>
+    </ul>
+  </li>
+  <li><strong>Genetisch bestätigt</strong>
+    <ul>
+      <li>ICD-10-GM: Optional (nur wenn klinisch relevant)</li>
+      <li>Orpha: Pflicht</li>
+      <li>HPO: Optional (wenn phänotypisch relevant)</li>
+      <li>OMIM: Stark empfohlen</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="rein-genetische-vs-klinisch-genetische-diagnosen">Rein genetische vs. Klinisch-genetische Diagnosen</h3>
+
+<h4 id="rein-genetische-befunde">Rein genetische Befunde</h4>
+<pre><code class="language-fsh">// Beispiel: Carrier-Status ohne Symptome
+Instance: carrier-status-sma
+InstanceOf: MII_PR_SE_GeneticDiagnosis
+* code.coding[orphanet] = http://www.orpha.net#83330 "SMA"
+* code.coding[omim] = http://omim.org#253300 "SMA type I"
+* code.text = "Heterozygote SMN1-Mutation (Anlageträger)"
+// Kein ICD-10, da keine klinische Manifestation
+</code></pre>
+
+<h4 id="klinisch-genetische-diagnose">Klinisch-genetische Diagnose</h4>
+<pre><code class="language-fsh">// Beispiel: Symptomatischer Patient mit genetischer Bestätigung
+Instance: symptomatic-genetic-diagnosis
+InstanceOf: MII_PR_SE_GeneticDiagnosis
+* code.coding[icd10-gm] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie"
+* code.coding[orphanet] = http://www.orpha.net#83330 "SMA type 1"
+* code.coding[omim] = http://omim.org#253300 "SMA type I"
+// ICD-10 sinnvoll, da klinische Manifestation vorhanden
+</code></pre>
+
+<h2 id="qualitätskriterien">Qualitätskriterien</h2>
+
+<h3 id="minimale-anforderungen">Minimale Anforderungen</h3>
+
+<h4 id="klinische-diagnose">Klinische Diagnose</h4>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ICD-10-GM Code vorhanden</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Orpha-Code für seltene Erkrankung</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Angemessener verificationStatus</li>
+</ul>
+
+<h4 id="genetische-diagnose">Genetische Diagnose</h4>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Orpha-Code für seltene Erkrankung</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />OMIM-Code (wenn verfügbar)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Evidence-Link zu MolGen-Ressourcen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Angemessener verificationStatus (meist "confirmed")</li>
+</ul>
+
+<h3 id="optimale-kodierung">Optimale Kodierung</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Keine redundanten Codes</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Kontextgerechte Verwendung von HPO/OMIM</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Klare Trennung zwischen klinischer und genetischer Diagnose</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Evidence-Verlinkung passend zum Diagnosetyp</li>
+</ul>
+
+<h2 id="wann-icd-10-gm-bei-genetischen-diagnosen-verwenden">Wann ICD-10-GM bei genetischen Diagnosen verwenden?</h2>
+
+<h3 id="-icd-10-gm-sinnvoll-bei">✅ ICD-10-GM sinnvoll bei:</h3>
+<ul>
+  <li>Symptomatischen Patienten</li>
+  <li>Klinisch manifesten Erkrankungen</li>
+  <li>Wenn spezifische klinische Subtypen kodiert werden (z.B. CF mit Lungenmanifestationen)</li>
+  <li>Abrechnungsrelevanten Diagnosen</li>
+</ul>
+
+<h3 id="-icd-10-gm-weglassen-bei">❌ ICD-10-GM weglassen bei:</h3>
+<ul>
+  <li>Reinen Anlageträgern ohne Symptome</li>
+  <li>Prädiktiven genetischen Tests</li>
+  <li>Genetischen Varianten unklarer Signifikanz (VUS)</li>
+  <li>Wenn ICD-10 keine adäquate Spezifität bietet</li>
+</ul>
+
+<h2 id="wichtiger-hinweis-ausgeschlossene-diagnosen">Wichtiger Hinweis: Ausgeschlossene Diagnosen</h2>
+
+<h3 id="️-pflicht-dokumentation-ausgeschlossener-diagnosen">⚠️ PFLICHT: Dokumentation ausgeschlossener Diagnosen</h3>
+
+<p><strong>Ausgeschlossene Diagnosen (refuted) MÜSSEN ebenfalls kodiert und dokumentiert werden!</strong></p>
+
+<p>Dies gilt insbesondere für:</p>
+<ul>
+  <li>Verdachtsdiagnosen, die widerlegt wurden</li>
+  <li>Differentialdiagnosen, die ausgeschlossen wurden</li>
+  <li>Negative genetische Testergebnisse für vermutete Erkrankungen</li>
+</ul>
+
+<h4 id="kodierung-ausgeschlossener-diagnosen">Kodierung ausgeschlossener Diagnosen</h4>
+<pre><code class="language-fsh">* verificationStatus = #refuted
+* clinicalStatus = #inactive
+* code.coding[orphanet] = // Orpha-Code der ausgeschlossenen Erkrankung
+* note.text = // Begründung des Ausschlusses
+</code></pre>
+
+<h4 id="warum-ist-das-wichtig">Warum ist das wichtig?</h4>
+<ul>
+  <li><strong>Vermeidung redundanter Diagnostik</strong>: Bereits durchgeführte Tests nicht wiederholen</li>
+  <li><strong>Vollständige Dokumentation</strong>: Diagnostischer Prozess nachvollziehbar</li>
+  <li><strong>Forschung</strong>: Wichtig für Epidemiologie und Differentialdiagnostik</li>
+  <li><strong>Patientensicherheit</strong>: Verhindert unnötige Untersuchungen</li>
+</ul>
+
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+
+<p><strong>Grundprinzip:</strong> So viel wie nötig, so wenig wie möglich</p>
+
+<ol>
+  <li><strong>Klinische Diagnose:</strong> ICD-10-GM + Orpha + HPO</li>
+  <li><strong>Genetische Diagnose:</strong> Orpha + OMIM (ICD-10-GM nur wenn klinisch relevant)</li>
+  <li><strong>Ausgeschlossene Diagnose:</strong> Gleiche Kodierung + verificationStatus = refuted</li>
+  <li><strong>SNOMED CT:</strong> Nur wenn Mehrwert vorhanden</li>
+  <li><strong>Andere Systeme:</strong> Nur in begründeten Ausnahmefällen</li>
+</ol>
+
+<p>Die Wahl der Kodiersysteme sollte den Kontext der Diagnose (klinisch vs. genetisch) und den Verwendungszweck (Abrechnung, Forschung, Registrierung) berücksichtigen.</p>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-seltene-erkrankungen-v2026-de#2026.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-07-23 10:39:00 +0000">
+    2026-07-23
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="example-marfan-excluded-clinical"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2026.0.1"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Condition example-marfan-excluded-clinical</b></p><a name="example-marfan-excluded-clinical"> </a><a name="hcexample-marfan-excluded-clinical"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-clinical-diagnosis.html">MII PR SE Clinical Diagnosis</a> version: 2026.0.1</p></div><p><b>Condition Asserted Date</b>: 2024-12-15</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical inactive}">Inactive</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status refuted}">Refuted</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}">Encounter Diagnosis</span></p><p><b>code</b>: <span title="Codes:{http://omim.org 154700}, {http://www.orpha.net 558}">Marfan-Syndrom (ausgeschlossen)</span></p><p><b>subject</b>: <a href="Patient-example.html">Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>encounter</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/cardiology-consultation">Encounter/cardiology-consultation</a></p><p><b>abatement</b>: 2024-12-15</p><p><b>recordedDate</b>: 2024-12-15</p><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title="Codes:">Normale Aortenwurzel</span></p><p><b>detail</b>: <a href="Observation-aortic-root-normal.html">Observation Aorta root Diameter by US 2D</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title="Codes:">Keine Linsenluxation</span></p><p><b>detail</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/lens-examination-normal">Observation/lens-examination-normal</a></p></blockquote><p><b>note</b>: </p><blockquote><div><p>Marfan-Syndrom klinisch ausgeschlossen. Ghent-Kriterien nicht erfüllt. Aortenwurzel normwertig, keine ophthalmologischen Manifestationen, Körpergröße im Normbereich.</p>
+</div></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+    <valueDateTime value="2024-12-15"/>
+  </extension>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="inactive"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="refuted"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+      <code value="encounter-diagnosis"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://omim.org"/>
+      <version value="2024"/>
+      <code value="154700"/>
+      <display value="Marfan syndrome"/>
+    </coding>
+    <coding>
+      <system value="http://www.orpha.net"/>
+      <code value="558"/>
+      <display value="Marfan syndrome"/>
+    </coding>
+    <text value="Marfan-Syndrom (ausgeschlossen)"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/cardiology-consultation"/>
+  </encounter>
+  <abatementDateTime value="2024-12-15"/>
+  <recordedDate value="2024-12-15"/>
+  <evidence>
+    <code>
+      <text value="Normale Aortenwurzel"/>
+    </code>
+    <detail>
+      <reference value="Observation/aortic-root-normal"/>
+    </detail>
+  </evidence>
+  <evidence>
+    <code>
+      <text value="Keine Linsenluxation"/>
+    </code>
+    <detail>
+      <reference value="Observation/lens-examination-normal"/>
+    </detail>
+  </evidence>
+  <note>
+    <text value="Marfan-Syndrom klinisch ausgeschlossen. Ghent-Kriterien nicht erfüllt. Aortenwurzel normwertig, keine ophthalmologischen Manifestationen, Körpergröße im Normbereich."/>
+  </note>
+</Condition>
