@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Anwendungsszenarien - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Seltene Erkrankungen</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Modul
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="module-description.html">Beschreibung des Moduls</a>
+      </li>
+      <li>
+        <a href="context.html">Kontext und Bezüge</a>
+      </li>
+      <li>
+        <a href="references.html">Referenzen</a>
+      </li>
+      <li>
+        <a href="release-notes.html">Release Notes</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scenarios.html">Anwendungsszenarien</a>
+      </li>
+      <li>
+        <a href="datasets.html">Datensätze</a>
+      </li>
+      <li>
+        <a href="information-model.html">Informationsmodell (UML)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Umsetzung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="profiles-overview.html">FHIR-Profile</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminologien</a>
+      </li>
+      <li>
+        <a href="capability.html">CapabilityStatement</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beispiele und Leitfäden
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="sma-example-annotations.html">Beispiel SMA</a>
+      </li>
+      <li>
+        <a href="marfan-example-annotations.html">Beispiel Marfan</a>
+      </li>
+      <li>
+        <a href="clinical-genetic-diagnosis-guide.html">Klinisch-genetische Diagnose</a>
+      </li>
+      <li>
+        <a href="coding-best-practices.html">Kodier-Empfehlungen</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Anwendungsszenarien</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Seltene Erkrankungen - Local Development build (v2026.0.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Anwendungsszenarien</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#anwendungsszenario-der-behandlung-einer-seltenen-erkrankung-am-beispiel-der-spinalen-muskelatrophie-sma" id="markdown-toc-anwendungsszenario-der-behandlung-einer-seltenen-erkrankung-am-beispiel-der-spinalen-muskelatrophie-sma">Anwendungsszenario der Behandlung einer Seltenen Erkrankung am Beispiel der Spinalen Muskelatrophie (SMA)</a></li>
+  <li><a href="#anwendungsszenario-der-behandlung-einer-seltenen-erkrankung-am-beispiel-des-marfan-syndroms" id="markdown-toc-anwendungsszenario-der-behandlung-einer-seltenen-erkrankung-am-beispiel-des-marfan-syndroms">Anwendungsszenario der Behandlung einer Seltenen Erkrankung am Beispiel des <strong>Marfan Syndroms</strong></a></li>
+</ul>
+
+</div>
+<p>Im vorliegenden IG wird daraus abgeleitet, nach europäischem Datensatz (<a href="https://eu-rd-platform.jrc.ec.europa.eu/sites/default/files/CDS/JRC-2018-00192-00-00-DE-TRA-00-Final.pdf" target="_blank">CDS-ERDRI.eu</a>) und französischen Datensatz (<a href="https://www.bndmr.fr/les-donnees-collectees/le-set-de-donnees-minimal/" target="_blank">SDM-MR.fr</a>) Vorbild in möglichst vielen Einrichtungen, an möglichst vielen klnischen Arbeitsplätzen für möglichst viele Betroffene von Seltenen Erkrankungen sowie durch Betroffene in eigener Regie die Dokumentation einheitlicher, interoperabler Minimalbasisdatensätze anzustreben.</p>
+
+<p>Diese Minimalbasisdatensätze sollen sowohl lokal als auch übergreifend gemeinsam datenschutzkonform möglichst vielfältig genutzt werden können. Darauf dürfen mit Orientierung an der Gliederung der <strong>Europäischen Referenznetzwerke für Seltene und Komplexe Erkrankungen (ERN)</strong> spezifischere, differenziertere Dokumentationen aufbauen. Die Erhebung und Nutzung soll in ausgewählten Anwendungsszenarien gestaltet und erprobt werden.</p>
+
+<h3 id="anwendungsszenario-der-behandlung-einer-seltenen-erkrankung-am-beispiel-der-spinalen-muskelatrophie-sma">Anwendungsszenario der Behandlung einer Seltenen Erkrankung am Beispiel der Spinalen Muskelatrophie (SMA)</h3>
+
+<p><strong>Anamnese</strong></p>
+
+<p>Bei einem neugeborenen Mädchen wird beim Neugeborenenscreening am 18.07.2024 der Verdacht auf eine <strong>Spinale Muskelatrophie (SMA)</strong> gestellt. Den Eltern wird geraten, sich in einem Zentrum vorzustellen, das auf die Behandlung der SMA spezialisiert ist. Ihnen werden zwei Zentren empfohlen. <br />
+Bis auf eine unbekannte Muskelerkrankung der Urgroßmutter ist die <strong>Familienanamnese unauffällig</strong>.</p>
+
+<p><strong>Therapie und Verlauf:</strong></p>
+
+<p>Die Eltern stellen ihr Kind in einem dieser Zentren am 22.07.2024 ambulant vor. Im Zentrum wird ein Molekulargenetischer Befund im EDTA-Blut am 26.07.2024 erhoben. Dieser ergibt den <strong>molekulargenetischen Nachweis</strong> einer SMA und bestätigt den klinischen Verdacht des Neugeborenenscreenings. Der Befund ergibt im Einzelnen folgendes Ergebnis:</p>
+
+<ol>
+  <li>0 Kopien des SMN1-Gens</li>
+  <li>2 Kopien des SMN2-Gens</li>
+</ol>
+
+<p>Dieses Ergebnis wird als krankheitsursächlich gewertet. Damit wird die am 22.07.2024 dokumentierte Einweisungsdiagnose nach <strong>ICD-10-GM G12.0 „Infantile Spinale Muskelatrophie Typ 1"</strong> bestätigt. Da die Kodierung der Diagnose im Kodiertool im Klinischen Arbeitsplatzsystem (KAS) des Krankenhauses vorgenommen wird, wird zusätzlich der passende <strong>ORPHAcode ORPHA:83330</strong> dokumentiert.</p>
+
+<p>Den Eltern des Kindes wird eine Behandlung mit einem Gentherapeutikum empfohlen; sowie zwei weitere Medikamente als Behandlungsalternativen genannt. Nach einer kurzen Bedenkzeit entscheiden sich die Eltern für die <strong>Behandlung mit dem Gentherapeutikum.</strong></p>
+
+<p>Das <strong>Gentherapeutikum</strong> wird bei einem stationären Aufenthalt im Zentrum ohne Komplikationen am 29.07.2024 verabreicht mit vorheriger Gabe von Prednisolon. Eine Laboruntersuchung wird standardmäßig bei stationärer Aufnahme durchgeführt. Der weitere Verlauf im Krankenhaus ist unauffällig. Das Labor ist posttherapeutisch bzgl. ALT und AST sowie der Thrombozytenzahl normwertig.</p>
+
+<p>Die SMA wird beim stationären Aufenthalt wiederum mit <strong>G12.0</strong> nach ICD-10-GM und dem ORPHAcode ORPHA:83330 dokumentiert. Die Gentherapie wird als <strong>Prozedur nach SOP</strong> mit dem <strong>Code: 6-00d.0</strong> im KAS dokumentiert.</p>
+
+<p>Bei Entlassung wird den Eltern eine Wiedervorstellung in einer kinderärztlichen Praxis sowie die weitere Durchführung der Therapie mit <strong>Prednisolon</strong> empfohlen. Eine humangenetische Beratung sowie die Vorstellung im Sozialpädiatrischen Zentrum wird veranlasst. Mit den Eltern wird ein patientenbezogener Nachsorgeplan im Zentrum vereinbart.</p>
+
+<p><strong>Nachsorge</strong></p>
+
+<p>Beim ersten ambulanten Nachsorgetermin im Zentrum am 12.08.2024 wird die klinische Untersuchung inkl. Labor durchgeführt. Die Werte für ALT und AST sowie die Thrombozytenzahl sind dabei normwertig, aber <strong>Troponin Ths mit 106 ng/l erhöht</strong> – die Verlaufswerte vorher lagen bei 57 ng/l am 01.08.2025, 58 ng/l am 28.07.2025 und 92 ng/l am 22.07.2025. Somit war das Trop T bereits vor der Gentherapie erhöht.</p>
+
+<hr />
+
+<h3 id="anwendungsszenario-der-behandlung-einer-seltenen-erkrankung-am-beispiel-des-marfan-syndroms">Anwendungsszenario der Behandlung einer Seltenen Erkrankung am Beispiel des <strong>Marfan Syndroms</strong></h3>
+
+<p><strong>Anamnese</strong></p>
+
+<p>Ein 19-jähriger junger Mann stellt sich ambulant am 15.10.2024 mit Verdacht auf <strong>Katerakt</strong> (Grauer Star) und <strong>Marfan Syndrom</strong> in der Augenklinik eines Universitätsklinikums vor. Mit ihm wird die operative Behandlung des Grauen Stars mittels <strong>Phakoemulsifikation</strong> und der anschließenden <strong>Implantation einer Hinterkammerlinse (HKL)</strong> besprochen. Der Patient willigt ein und daraufhin wird der operative Eingriff am 12.11.2024 komplikationslos durchgeführt. Der postoperative Verlauf gestaltet sich ebenfalls unauffällig. Dem jungen Mann wird geraten, sich im Marfan-Zentrum der Uniklinik bei V. a. Marfan Syndrom vorzustellen.</p>
+
+<p>Der Patient kommt dem ärztlichen Rat nach und stellt sich am 15.12.2024 ambulant dort vor. Er berichtet bei diesem Besuch, dass er etwa 3 Tage zuvor Blut gehustet habe, kein Fieber hat, aber manchmal <strong>Schmerzen im Bereich des Herzens</strong>. Er hat eine <strong>Körpergröße von 2,13 m</strong> und sein <strong>rechtes Bein ist verkürzt</strong>. Der Blutdruck wurde bereits mit <strong>Losartan</strong> eingestellt. Bei der durchgeführten <strong>Echokardiographie</strong> wird eine <strong>dilatierte Aortenwurzel</strong>, eine leichte <strong>Aortenklappen-Insuffizienz</strong> sowie ein anteriorer und posteriorer Mitralklappenprolaps mit geringer <strong>Mitralinsuffizienz</strong> festgestellt. In der Röntgen-Thorax aufnahme zeigt sich zusätzlich eine <strong>Steilstellung der Brustwirbelsäule (BWS)</strong>.</p>
+
+<p>Das Marfan-Zentrum kommt zum Schluss, dass es sich um die Diagnose eines Marfan Syndroms handelt, welche nach der Genter Nosologie bestätigt wurden. Es liegen Hauptmerkmale aus kardiovaskulärer, ophthalmologischer und klinisch-skelettaler Sicht vor." Die Diagnose des Marfan Syndroms wird mit dem <strong>ICD-10-GM-Code: Q87.4</strong> und dem dazugehörigen <strong>ORPHAcode ORPHA:558</strong> verschlüsselt.</p>
+
+<p>Der Patient wird über die Möglichkeit informiert, die Daten über seine Seltene Erkrankung in ein zentrales deutschlandweites <strong>"Nationale Register für Seltene Erkrankungen" (NARSE)</strong> einzutragen. Der Patient willigt ein und unterschreibt die Einwilligungserklärung und seine behandelnde Ärztin nimmmt die Registrierung des Patienten beim NARSE vor und trägt die Krankheitsdaten des Patienten ins Register ein. Neben den Daten zu seiner Anamnese und Diagnose trägt seine Ärztin, die vom Patienten genannten Symptome seiner Erkrankung in Form von <a href="https://hpo.jax.org/" target="_blank">HPO (Human Phenotyp Ontology)</a> Terms ein. Für die Schmerzen im Bereich des Herzens kodiert sie unter anderem den <strong>HPO-Term HP:0100749</strong> (chest pain) ein.</p>
+
+<p>Das Marfan-Zentrum sieht bei dem Patienten es als absolut lebensnotwendig an, dass der arterielle Blutdruck streng eingestellt und niedrig gehalten wird. Die systolischen Blutdruckwerte sollten 130 mmHg nicht übersteigen und die diastolischen Werte sollten maximal zwischen 80-85 mmHg liegen. Sie haben deshalb damit begonnen, die <strong>Losartan</strong>-Medikation neu einzustellen und raten zu einer engmaschigen Blutdruckkontrolle und auch um eine Kontrolle der Langzeit-Blutdruckmessung.
+Das Marfan-Zentrum sieht zwar zu diesem Zeitpunkt bereits eine Operationsindikation, da aber der gemessene Aortendurchmesser noch im unteren Grenzbereich liegt, empfiehlt es demzufolge zunächst regelmäßige Kontrollen durchzuführen, und entsprechend die Aortenwurzeloperation zu planen. Der Patient stimmt diesem Vorgehen zu.</p>
+
+<p><strong>Therapie und Verlauf</strong></p>
+
+<p>Der geplante Eingriff einer Klappenerhaltender Aorta aszendens Ersatz nach David, <strong>OPS: 5-354.0a</strong> wird am 15.03.2025 durchgeführt.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package mii-ig-seltene-erkrankungen-v2026-de#2026.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-07-23 11:20:00 +0000">
+    2026-07-23
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

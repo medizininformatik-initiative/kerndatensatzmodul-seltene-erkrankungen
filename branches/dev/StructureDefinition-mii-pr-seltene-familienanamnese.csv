@@ -46,7 +46,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "FamilyMemberHistory.instantiatesCanonical","FamilyMemberHistory.instantiatesCanonical","","","",0,*,"","","Y","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/PlanDefinition], CanonicalType[http://hl7.org/fhir/StructureDefinition/Questionnaire], CanonicalType[http://hl7.org/fhir/StructureDefinition/ActivityDefinition], CanonicalType[http://hl7.org/fhir/StructureDefinition/Measure], CanonicalType[http://hl7.org/fhir/StructureDefinition/OperationDefinition]]}
-","Instantiates FHIR protocol or definition","The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this FamilyMemberHistory.","see [Canonical References](http://hl7.org/fhir/R4/references.html#canonical)","","","","","","","","",,,,,"",,,,"FamilyMemberHistory.instantiatesCanonical",0,*,"ele-1
+","Instantiates FHIR protocol or definition","The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this FamilyMemberHistory.","see [Canonical References](references.html#canonical)","","","","","","","","",,,,,"",,,,"FamilyMemberHistory.instantiatesCanonical",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "FamilyMemberHistory.instantiatesUri","FamilyMemberHistory.instantiatesUri","","","",0,*,"","","Y","uri {[]} {[]}

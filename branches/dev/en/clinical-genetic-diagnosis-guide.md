@@ -1,6 +1,6 @@
-# Clinical Genetic Diagnosis Guide - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# Leitfaden Klinisch-genetische Diagnose - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
 
-## Clinical Genetic Diagnosis Guide
+## Leitfaden Klinisch-genetische Diagnose
 
 # Leitfaden: Klinische vs. Genetische Diagnose bei Seltenen Erkrankungen
 

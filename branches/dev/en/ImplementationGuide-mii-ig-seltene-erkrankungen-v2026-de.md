@@ -14,7 +14,7 @@
   "name" : "MIIIGModulSelteneErkrankungen",
   "title" : "MII IG Kerndatensatz-Modul Seltene Erkrankungen",
   "status" : "active",
-  "date" : "2026-07-23T10:39:42+00:00",
+  "date" : "2026-07-23T11:20:28+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -3279,10 +3279,82 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "module-description.html"
+        }],
+        "nameUrl" : "module-description.html",
+        "title" : "Beschreibung des Moduls",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "context.html"
+        }],
+        "nameUrl" : "context.html",
+        "title" : "Kontext und Bezüge zu anderen Modulen",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "scenarios.html"
+        }],
+        "nameUrl" : "scenarios.html",
+        "title" : "Anwendungsszenarien",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "datasets.html"
+        }],
+        "nameUrl" : "datasets.html",
+        "title" : "Datensätze und Beschreibungen",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "information-model.html"
+        }],
+        "nameUrl" : "information-model.html",
+        "title" : "Informationsmodell (UML)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "profiles-overview.html"
+        }],
+        "nameUrl" : "profiles-overview.html",
+        "title" : "FHIR-Profile (Übersicht)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "terminology.html"
+        }],
+        "nameUrl" : "terminology.html",
+        "title" : "Terminologien",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "capability.html"
+        }],
+        "nameUrl" : "capability.html",
+        "title" : "CapabilityStatement",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "clinical-genetic-diagnosis-guide.html"
         }],
         "nameUrl" : "clinical-genetic-diagnosis-guide.html",
-        "title" : "Clinical Genetic Diagnosis Guide",
+        "title" : "Leitfaden Klinisch-genetische Diagnose",
         "generation" : "markdown"
       },
       {
@@ -3291,16 +3363,7 @@
           "valueUrl" : "coding-best-practices.html"
         }],
         "nameUrl" : "coding-best-practices.html",
-        "title" : "Coding Best Practices",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "marfan-example-annotations.html"
-        }],
-        "nameUrl" : "marfan-example-annotations.html",
-        "title" : "Marfan Example Annotations",
+        "title" : "Kodier-Empfehlungen",
         "generation" : "markdown"
       },
       {
@@ -3309,7 +3372,34 @@
           "valueUrl" : "sma-example-annotations.html"
         }],
         "nameUrl" : "sma-example-annotations.html",
-        "title" : "Sma Example Annotations",
+        "title" : "Beispiel Spinale Muskelatrophie (SMA)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "marfan-example-annotations.html"
+        }],
+        "nameUrl" : "marfan-example-annotations.html",
+        "title" : "Beispiel Marfan-Syndrom",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "references.html"
+        }],
+        "nameUrl" : "references.html",
+        "title" : "Referenzen",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "release-notes.html"
+        }],
+        "nameUrl" : "release-notes.html",
+        "title" : "Release Notes",
         "generation" : "markdown"
       }]
     },

@@ -1,58 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
-
-
-
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Marfan Example Annotations - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Beispiel Marfan-Syndrom - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link href="fhir.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="fhir.css"/>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
 
-    <!-- Project extras -->
-    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
-    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-  	<link href="assets/css/prism.css" rel="stylesheet" />
-    <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+    <link rel="stylesheet" href="assets/css/project.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
 
-    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
-    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+    <script src="assets/js/direction-management.js" type="text/javascript"> </script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+    <![endif] -->
 
-    <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
     <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
-	  <script type="text/javascript" src="assets/js/prism.js"></script>
-	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
-	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"4"}
-    h3,h4,h5,h6{--heading-prefix:"4"}</style>
-    <div id="segment-header" class="segment">  <!-- segment-header -->
-      <div class="container">  <!-- container -->
+	  <script src="assets/js/prism.js" type="text/javascript"></script>
+	  <script src="assets/js/prism-fhirpath.js" type="text/javascript"></script>
+	  <script src="assets/js/prism-cql.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"13"}
+    h3,h4,h5,h6{--heading-prefix:"13"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
 
-        <!-- Placeholder for child template header declarations -->
+          <!-- Placeholder for child template header declarations -->
 
 
         <div id="ig-status" data-fhir="generated">
@@ -64,58 +61,128 @@
             </span>
           </p>
         </div>
-      </div> <!-- /container -->
-    </div>  <!-- /segment-header -->
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment" data-fhir="generated">    <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">  <!-- container -->
-        <!-- HEADER CONTENT -->
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-          <!--status-bar-->
+            <!-- status-bar -->
           <div class="container">
 
-            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- menu.xml  -->
+                <!-- menu.xml -->
 
-<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+<ul class="nav navbar-nav">
   <li>
     <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Modul
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="module-description.html">Beschreibung des Moduls</a>
+      </li>
+      <li>
+        <a href="context.html">Kontext und Bezüge</a>
+      </li>
+      <li>
+        <a href="references.html">Referenzen</a>
+      </li>
+      <li>
+        <a href="release-notes.html">Release Notes</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scenarios.html">Anwendungsszenarien</a>
+      </li>
+      <li>
+        <a href="datasets.html">Datensätze</a>
+      </li>
+      <li>
+        <a href="information-model.html">Informationsmodell (UML)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Umsetzung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="profiles-overview.html">FHIR-Profile</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminologien</a>
+      </li>
+      <li>
+        <a href="capability.html">CapabilityStatement</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beispiele und Leitfäden
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="sma-example-annotations.html">Beispiel SMA</a>
+      </li>
+      <li>
+        <a href="marfan-example-annotations.html">Beispiel Marfan</a>
+      </li>
+      <li>
+        <a href="clinical-genetic-diagnosis-guide.html">Klinisch-genetische Diagnose</a>
+      </li>
+      <li>
+        <a href="coding-best-practices.html">Kodier-Empfehlungen</a>
+      </li>
+    </ul>
   </li>
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
 </ul>
-            </div>  <!-- /.nav-collapse -->
+            </div>    <!-- /.nav-collapse -->
 
               
 
-          </div>  <!-- /.container -->
-        </nav>  <!-- /.navbar -->
-      <!-- /HEADER CONTENT -->
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-navbar -->
-    <!--status-bar-->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
 
-    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
-      <div class="container">  <!-- container -->
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Marfan Example Annotations</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Beispiel Marfan-Syndrom</b></li>
 
         </ul>
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-breadcrumb -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">  <!-- segment-content -->
-      <div class="container">  <!-- container -->
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
@@ -127,8 +194,8 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Seltene Erkrankungen - Local Development build (v2026.0.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Marfan Example Annotations</h2>
+    <!-- ReleaseHeader --><p id="publish-box">MII IG Kerndatensatz-Modul Seltene Erkrankungen - Local Development build (v2026.0.1) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Beispiel Marfan-Syndrom</h2>
   
 
 
@@ -143,7 +210,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
-    <p><!-- white space is critical inside of capture --></p>
+    <p>  <!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#marfan-syndrom-fallbeispiel---semantische-annotationen" id="markdown-toc-marfan-syndrom-fallbeispiel---semantische-annotationen">Marfan-Syndrom Fallbeispiel - Semantische Annotationen</a>    <ul>
@@ -173,8 +240,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </li>
       <li><a href="#ressourcen-diagramme" id="markdown-toc-ressourcen-diagramme">Ressourcen-Diagramme</a>        <ul>
           <li><a href="#gesamtübersicht-aller-ressourcen-und-beziehungen" id="markdown-toc-gesamtübersicht-aller-ressourcen-und-beziehungen">Gesamtübersicht aller Ressourcen und Beziehungen</a></li>
+          <li><a href="#zeitlicher-verlauf-1" id="markdown-toc-zeitlicher-verlauf-1">Zeitlicher Verlauf</a></li>
         </ul>
       </li>
+      <li><a href="#implementierung" id="markdown-toc-implementierung">Implementierung</a></li>
     </ul>
   </li>
 </ul>
@@ -474,508 +543,48 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="gesamtübersicht-aller-ressourcen-und-beziehungen">Gesamtübersicht aller Ressourcen und Beziehungen</h3>
 
-<plantuml>
-@startuml
-!define DARKBLUE #1e3a5f
-!define LIGHTBLUE #4a86e8
-!define GREEN #0d9488
-!define ORANGE #ea580c
-!define PURPLE #7c3aed
-!define RED #dc2626
-!define YELLOW #facc15
-!define PINK #ec4899
+<p><em>(Diagramm folgt.)</em></p>
 
-skinparam backgroundColor #f8f9fa
-skinparam roundcorner 10
-skinparam shadowing true
-skinparam ArrowColor #666666
-skinparam ArrowThickness 2
+<h3 id="zeitlicher-verlauf-1">Zeitlicher Verlauf</h3>
 
-skinparam class {
-    BackgroundColor&lt;<Patient>&gt; DARKBLUE
-    BorderColor&lt;<Patient>&gt; DARKBLUE
-    FontColor&lt;<Patient>&gt; white
-    
-    BackgroundColor&lt;<Condition>&gt; RED
-    BorderColor&lt;<Condition>&gt; RED
-    FontColor&lt;<Condition>&gt; white
-    
-    BackgroundColor&lt;<Observation>&gt; GREEN
-    BorderColor&lt;<Observation>&gt; GREEN
-    FontColor&lt;<Observation>&gt; white
-    
-    BackgroundColor&lt;<Procedure>&gt; PURPLE
-    BorderColor&lt;<Procedure>&gt; PURPLE
-    FontColor&lt;<Procedure>&gt; white
-    
-    BackgroundColor&lt;<Encounter>&gt; ORANGE
-    BorderColor&lt;<Encounter>&gt; ORANGE
-    FontColor&lt;<Encounter>&gt; white
-    
-    BackgroundColor&lt;<Medication>&gt; PINK
-    BorderColor&lt;<Medication>&gt; PINK
-    FontColor&lt;<Medication>&gt; white
-    
-    BackgroundColor&lt;<ClinicalImpression>&gt; YELLOW
-    BorderColor&lt;<ClinicalImpression>&gt; YELLOW
-    FontColor&lt;<ClinicalImpression>&gt; black
-}
+<p><em>(Diagramm folgt.)</em></p>
 
-' Patient at the center
-class "patient-marfan-001" &lt;<Patient>&gt; {
-    19-jähriger Mann
-    Geburt: ~2005
-    ID: MRF-2024-001
-    Größe: 2,13m
-}
+<h2 id="implementierung">Implementierung</h2>
 
-' Main diagnosis
-class "condition-marfan-confirmed" &lt;<Condition>&gt; {
-    **Marfan-Syndrom**
-    Status: confirmed
-    ICD-10: Q87.4
-    Orpha: 558
-    Feststellung: 15.12.2024
-}
-
-class "condition-cataract" &lt;<Condition>&gt; {
-    **Katarakt bilateral**
-    Status: resolved
-    ICD-10: H26.9
-    Feststellung: 15.10.2024
-}
-
-' Phenotypic observations (left side)
-class "observation-height-001" &lt;<Observation>&gt; {
-    **Körpergröße**
-    HPO: HP:0000098
-    Wert: 2,13 m
-    Datum: 15.12.2024
-}
-
-class "observation-leg-asymmetry" &lt;<Observation>&gt; {
-    **Beinlängendifferenz**
-    HPO: HP:0100559
-    Rechts verkürzt
-    Datum: 15.12.2024
-}
-
-' Symptoms (top)
-class "symptom-chest-pain" &lt;<Observation>&gt; {
-    **Thoraxschmerzen**
-    HPO: HP:0100749
-    Akut
-    Datum: 15.12.2024
-}
-
-class "symptom-cataract" &lt;<Observation>&gt; {
-    **Katarakt**
-    HPO: HP:0000518
-    Bilateral
-    Datum: 15.10.2024
-}
-
-' Cardiac findings (right side)
-class "symptom-aortic-root" &lt;<Observation>&gt; {
-    **Aortenwurzeldilatation**
-    HPO: HP:0002616
-    48 mm
-    Datum: 15.12.2024
-}
-
-class "symptom-aortic-regurg" &lt;<Observation>&gt; {
-    **Aortenklappeninsuffizienz**
-    HPO: HP:0001659
-    Grad II
-    Datum: 15.12.2024
-}
-
-class "symptom-mitral-regurg" &lt;<Observation>&gt; {
-    **Mitralklappeninsuffizienz**
-    HPO: HP:0001653
-    Grad I
-    Datum: 15.12.2024
-}
-
-' Echocardiography observations
-class "observation-echo-series" &lt;<Observation>&gt; {
-    **Echokardiographie**
-    Aortenwurzel: 48mm
-    AKI: Grad II
-    MKI: Grad I
-    Datum: 15.12.2024
-}
-
-' Procedures
-class "procedure-cataract-surgery" &lt;<Procedure>&gt; {
-    **Katarakt-OP**
-    OPS: 5-144.5a
-    Datum: 12.11.2024
-    Status: completed
-}
-
-class "procedure-aortic-planned" &lt;<Procedure>&gt; {
-    **Aortenwurzelersatz**
-    OPS: 5-354.0a
-    David-OP
-    Geplant: 15.03.2025
-    Status: planned
-}
-
-' Medication
-class "medication-losartan" &lt;<Medication>&gt; {
-    **Losartan**
-    50mg 1x täglich
-    Start: 15.12.2024
-    Indikation: Aortenprotektion
-}
-
-' Encounters
-class "encounter-ophthalmology" &lt;<Encounter>&gt; {
-    **Augenärztliche Konsultation**
-    Datum: 15.10.2024
-    Typ: Ambulant
-}
-
-class "encounter-cataract-surgery" &lt;<Encounter>&gt; {
-    **Katarakt-OP**
-    Datum: 12.11.2024
-    Typ: Tagesklinik
-}
-
-class "encounter-cardiology" &lt;<Encounter>&gt; {
-    **Kardiologische Erstvorstellung**
-    Datum: 15.12.2024
-    Typ: Ambulant
-}
-
-class "encounter-surgery-planned" &lt;<Encounter>&gt; {
-    **Geplante Herzchirurgie**
-    Datum: 15.03.2025
-    Typ: Stationär geplant
-}
-
-' Clinical Impression
-class "clinical-impression-cardiology" &lt;<ClinicalImpression>&gt; {
-    **Kardiologische Beurteilung**
-    Datum: 15.12.2024
-    Marfan-Syndrom bestätigt
-    OP-Indikation gestellt
-}
-
-' Relationships - Patient at center
-"patient-marfan-001" &lt;-- "condition-marfan-confirmed" : subject
-"patient-marfan-001" &lt;-- "condition-cataract" : subject
-"patient-marfan-001" &lt;-- "observation-height-001" : subject
-"patient-marfan-001" &lt;-- "observation-leg-asymmetry" : subject
-"patient-marfan-001" &lt;-- "symptom-chest-pain" : subject
-"patient-marfan-001" &lt;-- "symptom-cataract" : subject
-"patient-marfan-001" &lt;-- "symptom-aortic-root" : subject
-"patient-marfan-001" &lt;-- "symptom-aortic-regurg" : subject
-"patient-marfan-001" &lt;-- "symptom-mitral-regurg" : subject
-"patient-marfan-001" &lt;-- "observation-echo-series" : subject
-"patient-marfan-001" &lt;-- "procedure-cataract-surgery" : subject
-"patient-marfan-001" &lt;-- "procedure-aortic-planned" : subject
-"patient-marfan-001" &lt;-- "medication-losartan" : subject
-
-' Evidence links
-"condition-marfan-confirmed" --&gt; "symptom-aortic-root" : evidence
-"condition-marfan-confirmed" --&gt; "symptom-aortic-regurg" : evidence
-"condition-marfan-confirmed" --&gt; "symptom-mitral-regurg" : evidence
-"condition-marfan-confirmed" --&gt; "observation-height-001" : evidence
-"condition-marfan-confirmed" --&gt; "observation-leg-asymmetry" : evidence
-"condition-marfan-confirmed" --&gt; "symptom-chest-pain" : evidence
-
-"condition-cataract" --&gt; "symptom-cataract" : evidence
-
-' Procedure reasons
-"procedure-cataract-surgery" --&gt; "condition-cataract" : reasonReference
-"procedure-aortic-planned" --&gt; "condition-marfan-confirmed" : reasonReference
-
-' Encounter relationships
-"encounter-ophthalmology" --&gt; "condition-cataract" : diagnosis
-"encounter-cataract-surgery" ..&gt; "procedure-cataract-surgery" : serviceProvider
-"encounter-cardiology" --&gt; "condition-marfan-confirmed" : diagnosis
-"encounter-surgery-planned" ..&gt; "procedure-aortic-planned" : scheduled
-
-"patient-marfan-001" &lt;-- "encounter-ophthalmology" : subject
-"patient-marfan-001" &lt;-- "encounter-cataract-surgery" : subject
-"patient-marfan-001" &lt;-- "encounter-cardiology" : subject
-"patient-marfan-001" &lt;-- "encounter-surgery-planned" : subject
-
-' Clinical Impression relationships
-"clinical-impression-cardiology" --&gt; "encounter-cardiology" : encounter
-"clinical-impression-cardiology" --&gt; "condition-marfan-confirmed" : problem
-"clinical-impression-cardiology" --&gt; "symptom-aortic-root" : finding
-"clinical-impression-cardiology" --&gt; "symptom-aortic-regurg" : finding
-"clinical-impression-cardiology" --&gt; "symptom-mitral-regurg" : finding
-"clinical-impression-cardiology" --&gt; "observation-echo-series" : investigation
-"clinical-impression-cardiology" --&gt; "procedure-aortic-planned" : plan
-"patient-marfan-001" &lt;-- "clinical-impression-cardiology" : subject
-
-' Medication reason
-"medication-losartan" --&gt; "condition-marfan-confirmed" : reasonReference
-
-' Timeline annotation
-note right of "condition-marfan-confirmed"
-  **Diagnose-Zeitpunkt:**
-  15.12.2024
-  Klinisch bestätigt
-end note
-
-note left of "procedure-aortic-planned"
-  **Geplante OP:**
-  15.03.2025
-  David-Operation
-end note
-
-legend bottom center
-|= Legende |
-| &lt;color:white,back:DARKBLUE&gt;Patient&lt;/color&gt; | Zentrale Patientenressource |
-| &lt;color:white,back:RED&gt;Condition&lt;/color&gt; | Diagnosen |
-| &lt;color:white,back:GREEN&gt;Observation&lt;/color&gt; | Befunde &amp; Messungen |
-| &lt;color:white,back:PURPLE&gt;Procedure&lt;/color&gt; | Prozeduren |
-| &lt;color:white,back:ORANGE&gt;Encounter&lt;/color&gt; | Kontakte |
-| &lt;color:white,back:PINK&gt;Medication&lt;/color&gt; | Medikation |
-| &lt;color:black,back:YELLOW&gt;ClinicalImpression&lt;/color&gt; | Klinische Beurteilung |
-| → | Referenz |
-| ⋯&gt; | Assoziation |
-endlegend
-
-@enduml
-&lt;/plantuml&gt;
-
-### Zeitlicher Verlauf
-
-<plantuml>
-@startuml
-!theme plain
-skinparam backgroundColor #ffffff
-
-' Timeline sequence diagram showing progression
-title Marfan-Syndrom Fall - Zeitlicher Verlauf und Ressourcen-Beziehungen
-
-participant "Patient\n(19-jähriger Mann)" as Patient #2563eb
-participant "Diagnosen" as Diagnosis #dc2626
-participant "Encounters" as Encounters #ea580c
-participant "Symptome/\nPhänotyp" as Symptoms #059669
-participant "Prozeduren" as Procedures #7c3aed
-participant "Medikation" as Medication #ec4899
-participant "Diagnostik" as Diagnostics #16a34a
-participant "Klinische\nBeurteilung" as ClinImp #facc15
-
-== 15.10.2024 - Augenärztliche Konsultation ==
-Encounters -&gt; Patient: encounter-ophthalmology
-activate Encounters #ea580c
-Symptoms -&gt; Patient: symptom-cataract
-activate Symptoms #059669
-note right of Symptoms
-  **Katarakt bilateral**
-  HPO: HP:0000518
-end note
-
-Encounters -&gt; Diagnosis: Katarakt-Diagnose
-activate Diagnosis #dc2626
-note right of Diagnosis
-  **condition-cataract**
-  ICD-10: H26.9
-  Status: active
-end note
-deactivate Encounters
-
-== 12.11.2024 - Katarakt-Operation ==
-Encounters -&gt; Patient: encounter-cataract-surgery
-activate Encounters #ea580c
-Procedures -&gt; Patient: procedure-cataract-surgery
-activate Procedures #7c3aed
-note right of Procedures
-  **Phakoemulsifikation**
-  OPS: 5-144.5a
-  Mit IOL-Implantation
-  Status: completed
-end note
-deactivate Procedures
-
-Diagnosis -&gt; Diagnosis: Katarakt resolved
-note right of Diagnosis
-  Status: resolved
-end note
-deactivate Encounters
-deactivate Symptoms
-
-== 15.12.2024 - Kardiologische Erstvorstellung ==
-Encounters -&gt; Patient: encounter-cardiology
-activate Encounters #ea580c
-
-Patient -&gt; Symptoms: Phänotypische Befunde
-activate Symptoms #059669
-note left of Patient
-  **Körperliche Untersuchung:**
-  - Größe: 2,13m
-  - Beinlängendifferenz
-  - Marfanoider Habitus
-end note
-
-Symptoms -&gt; Patient: symptom-chest-pain
-note right of Symptoms
-  **Thoraxschmerzen**
-  HPO: HP:0100749
-  Akut
-end note
-
-Symptoms -&gt; Patient: observation-height-001
-note right of Symptoms
-  **Hochwuchs**
-  HPO: HP:0000098
-  2,13 m
-end note
-
-Symptoms -&gt; Patient: observation-leg-asymmetry
-note right of Symptoms
-  **Beinlängendifferenz**
-  HPO: HP:0100559
-  Rechts verkürzt
-end note
-
-Diagnostics -&gt; Patient: Echokardiographie
-activate Diagnostics #16a34a
-note right of Diagnostics
-  **Echo-Befunde:**
-  - Aortenwurzel: 48mm ↑
-  - AKI: Grad II
-  - MKI: Grad I
-end note
-
-Diagnostics -&gt; Symptoms: Kardiale Befunde
-Symptoms -&gt; Patient: symptom-aortic-root
-note right of Symptoms
-  **Aortenwurzeldilatation**
-  HPO: HP:0002616
-  48 mm (pathologisch)
-end note
-
-Symptoms -&gt; Patient: symptom-aortic-regurg
-note right of Symptoms
-  **Aortenklappeninsuffizienz**
-  HPO: HP:0001659
-  Grad II
-end note
-
-Symptoms -&gt; Patient: symptom-mitral-regurg
-note right of Symptoms
-  **Mitralklappeninsuffizienz**
-  HPO: HP:0001653
-  Grad I
-end note
-deactivate Diagnostics
-
-Encounters -&gt; Diagnosis: Marfan-Syndrom bestätigt
-note right of Diagnosis
-  **condition-marfan-confirmed**
-  ICD-10: Q87.4
-  Orpha: 558
-  Status: confirmed
-  Feststellungsdatum: 15.12.2024
-end note
-
-ClinImp -&gt; Patient: clinical-impression-cardiology
-activate ClinImp #facc15
-note right of ClinImp
-  **Kardiologische Beurteilung:**
-  - Marfan-Syndrom bestätigt
-  - Aortenwurzel 48mm
-  - OP-Indikation gestellt
-  - Medikation eingeleitet
-end note
-
-Medication -&gt; Patient: medication-losartan
-activate Medication #ec4899
-note right of Medication
-  **Losartan 50mg**
-  1x täglich
-  Indikation: Aortenprotektion
-  Start: 15.12.2024
-end note
-
-ClinImp -&gt; Procedures: OP-Planung
-note right of ClinImp
-  David-OP geplant
-  für 15.03.2025
-end note
-deactivate ClinImp
-
-deactivate Encounters
-deactivate Symptoms
-
-== 15.03.2025 - Geplante Aortenwurzelersatz-OP ==
-Encounters -&gt; Patient: encounter-surgery-planned
-activate Encounters #ea580c
-Procedures -&gt; Patient: procedure-aortic-planned
-activate Procedures #7c3aed
-note right of Procedures
-  **Aortenwurzelersatz**
-  OPS: 5-354.0a
-  David-Operation
-  Status: planned
-  → reasonReference: condition-marfan-confirmed
-end note
-deactivate Procedures
-deactivate Encounters
-
-deactivate Diagnosis
-deactivate Medication
-
-legend bottom
-|= Ressourcen-Typen und Beziehungen |
-| &lt;back:#2563eb&gt;Patient&lt;/back&gt; | Zentrale Patientenressource |
-| &lt;back:#dc2626&gt;Condition&lt;/back&gt; | Diagnosen (2 Instanzen) |
-| &lt;back:#ea580c&gt;Encounter&lt;/back&gt; | Behandlungskontakte (4 Instanzen) |
-| &lt;back:#059669&gt;Observation&lt;/back&gt; | Symptome &amp; Befunde (8 Instanzen) |
-| &lt;back:#7c3aed&gt;Procedure&lt;/back&gt; | Prozeduren (2 Instanzen) |
-| &lt;back:#ec4899&gt;MedicationStatement&lt;/back&gt; | Medikation (1 Instanz) |
-| &lt;back:#16a34a&gt;Diagnostic&lt;/back&gt; | Echo-Untersuchung (3 Instanzen) |
-| &lt;back:#facc15&gt;ClinicalImpression&lt;/back&gt; | Klinische Beurteilung (1 Instanz) |
-| → | Referenz zwischen Ressourcen |
-endlegend
-
-@enduml
-</plantuml>
-
-## Implementierung
-
-Die vollständigen FHIR-Ressourcen sind in folgenden Dateien definiert:
-- **Einzelressourcen**: [`input/fsh/marfan-example-resources.fsh`](../fsh/marfan-example-resources.fsh)
-- **Transaction Bundle**: [`input/fsh/marfan-transaction-bundle.fsh`](../fsh/marfan-transaction-bundle.fsh)
-</ClinicalImpression></Encounter></Encounter></Encounter></Encounter></Medication></Procedure></Procedure></Observation></Observation></Observation></Observation></Observation></Observation></Observation></Observation></Condition></Condition></Patient></ClinicalImpression></ClinicalImpression></ClinicalImpression></Medication></Medication></Medication></Encounter></Encounter></Encounter></Procedure></Procedure></Procedure></Observation></Observation></Observation></Condition></Condition></Condition></Patient></Patient></Patient></plantuml>
+<p>Die vollständigen FHIR-Ressourcen sind in folgenden Dateien definiert:</p>
+<ul>
+  <li><a name="l1317">​</a><strong>Einzelressourcen</strong>: <a href="../fsh/marfan-example-resources.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/marfan-example-resources.fsh</code></a></li>
+  <li><a name="l1325">​</a><strong>Transaction Bundle</strong>: <a href="../fsh/marfan-transaction-bundle.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/marfan-transaction-bundle.fsh</code></a></li>
+</ul>
 
 
 
 </div>
-        </div>  <!-- /inner-wrapper -->
-      </div>  <!-- /row -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-content -->
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
 
-  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
-  <script type="text/javascript" src="assets/js/flags.js"> </script>
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+  <script src="assets/js/flags.js" type="text/javascript"> </script>
 
-  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
-  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
-  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <script src="assets/js/togglechanges.js" type="text/javascript"> </script>
+  <script src="assets/js/requirements-table.js" type="text/javascript"> </script>
   <a name="bottom"> </a>
-  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
-    <div class="container" data-fhir="generated">  <!-- container -->
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container" data-fhir="generated">    <!-- container -->
 
       <div class="inner-wrapper">
         <p>
 
 
 
-          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package mii-ig-seltene-erkrankungen-v2026-de#2026.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-23 10:39:00 +0000">
+  <span title="2026-07-23 11:20:00 +0000">
     2026-07-23
   </span>
 
@@ -987,27 +596,26 @@ Die vollständigen FHIR-Ressourcen sind in folgenden Dateien definiert:
                 
           </span>
         </p>
-      </div>  <!-- /inner-wrapper -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-footer -->
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
-    <div class="container">  <!-- container -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
 
-  <!-- JS and analytics only. -->
-  <!-- Bootstrap core JavaScript
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
-  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  <!-- Analytics Below
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
   ================================================== -->
   </body>
 </html>
-

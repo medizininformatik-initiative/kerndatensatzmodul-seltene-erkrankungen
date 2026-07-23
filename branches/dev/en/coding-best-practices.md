@@ -1,6 +1,6 @@
-# Coding Best Practices - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# Kodier-Empfehlungen - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
 
-## Coding Best Practices
+## Kodier-Empfehlungen
 
 # Best Practices für Kodierung bei Seltenen Erkrankungen
 

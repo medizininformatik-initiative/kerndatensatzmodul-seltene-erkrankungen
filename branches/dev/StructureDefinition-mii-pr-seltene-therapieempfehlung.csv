@@ -408,7 +408,7 @@ ref-1:SHALL have a contained resource if a local reference is provided {referenc
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}"
 "MedicationRequest.instantiatesCanonical","MedicationRequest.instantiatesCanonical","","","",0,*,"","","Y","canonical {[]} {[]}
-","Instantiates FHIR protocol or definition","The URL pointing to a protocol, guideline, orderset, or other definition that is adhered to in whole or in part by this MedicationRequest.","see [Canonical References](http://hl7.org/fhir/R4/references.html#canonical)","","","","","","","","",,,,,"",,,,"MedicationRequest.instantiatesCanonical",0,*,"ele-1
+","Instantiates FHIR protocol or definition","The URL pointing to a protocol, guideline, orderset, or other definition that is adhered to in whole or in part by this MedicationRequest.","see [Canonical References](references.html#canonical)","","","","","","","","",,,,,"",,,,"MedicationRequest.instantiatesCanonical",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "MedicationRequest.instantiatesUri","MedicationRequest.instantiatesUri","","","",0,*,"","","Y","uri {[]} {[]}

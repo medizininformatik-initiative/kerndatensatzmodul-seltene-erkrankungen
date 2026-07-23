@@ -1,6 +1,6 @@
-# Marfan Example Annotations - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# Beispiel Marfan-Syndrom - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
 
-## Marfan Example Annotations
+## Beispiel Marfan-Syndrom
 
 # Marfan-Syndrom Fallbeispiel - Semantische Annotationen
 
@@ -220,46 +220,16 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 
 ### Gesamtübersicht aller Ressourcen und Beziehungen
 
-@startuml !define DARKBLUE #1e3a5f !define LIGHTBLUE #4a86e8 !define GREEN #0d9488 !define ORANGE #ea580c !define PURPLE #7c3aed !define RED #dc2626 !define YELLOW #facc15 !define PINK #ec4899 skinparam backgroundColor #f8f9fa skinparam roundcorner 10 skinparam shadowing true skinparam ArrowColor #666666 skinparam ArrowThickness 2 skinparam class { BackgroundColor<
-> DARKBLUE BorderColor<
-> DARKBLUE FontColor<
-> white BackgroundColor<
-> RED BorderColor<
-> RED FontColor<
-> white BackgroundColor<
-> GREEN BorderColor<
-> GREEN FontColor<
-> white BackgroundColor<
-> PURPLE BorderColor<
-> PURPLE FontColor<
-> white BackgroundColor<
-> ORANGE BorderColor<
-> ORANGE FontColor<
-> white BackgroundColor<
-> PINK BorderColor<
-> PINK FontColor<
-> white BackgroundColor<
-> YELLOW BorderColor<
-> YELLOW FontColor<
-> black } ' Patient at the center class "patient-marfan-001" <
-> { 19-jähriger Mann Geburt: ~2005 ID: MRF-2024-001 Größe: 2,13m } ' Main diagnosis class "condition-marfan-confirmed" <
-> { **Marfan-Syndrom** Status: confirmed ICD-10: Q87.4 Orpha: 558 Feststellung: 15.12.2024 } class "condition-cataract" <
-> { **Katarakt bilateral** Status: resolved ICD-10: H26.9 Feststellung: 15.10.2024 } ' Phenotypic observations (left side) class "observation-height-001" <
-> { **Körpergröße** HPO: HP:0000098 Wert: 2,13 m Datum: 15.12.2024 } class "observation-leg-asymmetry" <
-> { **Beinlängendifferenz** HPO: HP:0100559 Rechts verkürzt Datum: 15.12.2024 } ' Symptoms (top) class "symptom-chest-pain" <
-> { **Thoraxschmerzen** HPO: HP:0100749 Akut Datum: 15.12.2024 } class "symptom-cataract" <
-> { **Katarakt** HPO: HP:0000518 Bilateral Datum: 15.10.2024 } ' Cardiac findings (right side) class "symptom-aortic-root" <
-> { **Aortenwurzeldilatation** HPO: HP:0002616 48 mm Datum: 15.12.2024 } class "symptom-aortic-regurg" <
-> { **Aortenklappeninsuffizienz** HPO: HP:0001659 Grad II Datum: 15.12.2024 } class "symptom-mitral-regurg" <
-> { **Mitralklappeninsuffizienz** HPO: HP:0001653 Grad I Datum: 15.12.2024 } ' Echocardiography observations class "observation-echo-series" <
-> { **Echokardiographie** Aortenwurzel: 48mm AKI: Grad II MKI: Grad I Datum: 15.12.2024 } ' Procedures class "procedure-cataract-surgery" <
-> { **Katarakt-OP** OPS: 5-144.5a Datum: 12.11.2024 Status: completed } class "procedure-aortic-planned" <
-> { **Aortenwurzelersatz** OPS: 5-354.0a David-OP Geplant: 15.03.2025 Status: planned } ' Medication class "medication-losartan" <
-> { **Losartan** 50mg 1x täglich Start: 15.12.2024 Indikation: Aortenprotektion } ' Encounters class "encounter-ophthalmology" <
-> { **Augenärztliche Konsultation** Datum: 15.10.2024 Typ: Ambulant } class "encounter-cataract-surgery" <
-> { **Katarakt-OP** Datum: 12.11.2024 Typ: Tagesklinik } class "encounter-cardiology" <
-> { **Kardiologische Erstvorstellung** Datum: 15.12.2024 Typ: Ambulant } class "encounter-surgery-planned" <
-> { **Geplante Herzchirurgie** Datum: 15.03.2025 Typ: Stationär geplant } ' Clinical Impression class "clinical-impression-cardiology" <
-> { **Kardiologische Beurteilung** Datum: 15.12.2024 Marfan-Syndrom bestätigt OP-Indikation gestellt } ' Relationships - Patient at center "patient-marfan-001" <-- "condition-marfan-confirmed" : subject "patient-marfan-001" <-- "condition-cataract" : subject "patient-marfan-001" <-- "observation-height-001" : subject "patient-marfan-001" <-- "observation-leg-asymmetry" : subject "patient-marfan-001" <-- "symptom-chest-pain" : subject "patient-marfan-001" <-- "symptom-cataract" : subject "patient-marfan-001" <-- "symptom-aortic-root" : subject "patient-marfan-001" <-- "symptom-aortic-regurg" : subject "patient-marfan-001" <-- "symptom-mitral-regurg" : subject "patient-marfan-001" <-- "observation-echo-series" : subject "patient-marfan-001" <-- "procedure-cataract-surgery" : subject "patient-marfan-001" <-- "procedure-aortic-planned" : subject "patient-marfan-001" <-- "medication-losartan" : subject ' Evidence links "condition-marfan-confirmed" --> "symptom-aortic-root" : evidence "condition-marfan-confirmed" --> "symptom-aortic-regurg" : evidence "condition-marfan-confirmed" --> "symptom-mitral-regurg" : evidence "condition-marfan-confirmed" --> "observation-height-001" : evidence "condition-marfan-confirmed" --> "observation-leg-asymmetry" : evidence "condition-marfan-confirmed" --> "symptom-chest-pain" : evidence "condition-cataract" --> "symptom-cataract" : evidence ' Procedure reasons "procedure-cataract-surgery" --> "condition-cataract" : reasonReference "procedure-aortic-planned" --> "condition-marfan-confirmed" : reasonReference ' Encounter relationships "encounter-ophthalmology" --> "condition-cataract" : diagnosis "encounter-cataract-surgery" ..> "procedure-cataract-surgery" : serviceProvider "encounter-cardiology" --> "condition-marfan-confirmed" : diagnosis "encounter-surgery-planned" ..> "procedure-aortic-planned" : scheduled "patient-marfan-001" <-- "encounter-ophthalmology" : subject "patient-marfan-001" <-- "encounter-cataract-surgery" : subject "patient-marfan-001" <-- "encounter-cardiology" : subject "patient-marfan-001" <-- "encounter-surgery-planned" : subject ' Clinical Impression relationships "clinical-impression-cardiology" --> "encounter-cardiology" : encounter "clinical-impression-cardiology" --> "condition-marfan-confirmed" : problem "clinical-impression-cardiology" --> "symptom-aortic-root" : finding "clinical-impression-cardiology" --> "symptom-aortic-regurg" : finding "clinical-impression-cardiology" --> "symptom-mitral-regurg" : finding "clinical-impression-cardiology" --> "observation-echo-series" : investigation "clinical-impression-cardiology" --> "procedure-aortic-planned" : plan "patient-marfan-001" <-- "clinical-impression-cardiology" : subject ' Medication reason "medication-losartan" --> "condition-marfan-confirmed" : reasonReference ' Timeline annotation note right of "condition-marfan-confirmed" **Diagnose-Zeitpunkt:** 15.12.2024 Klinisch bestätigt end note note left of "procedure-aortic-planned" **Geplante OP:** 15.03.2025 David-Operation end note legend bottom center |= Legende | | <color:white,back:DARKBLUE>Patient</color> | Zentrale Patientenressource | | <color:white,back:RED>Condition</color> | Diagnosen | | <color:white,back:GREEN>Observation</color> | Befunde & Messungen | | <color:white,back:PURPLE>Procedure</color> | Prozeduren | | <color:white,back:ORANGE>Encounter</color> | Kontakte | | <color:white,back:PINK>Medication</color> | Medikation | | <color:black,back:YELLOW>ClinicalImpression</color> | Klinische Beurteilung | | → | Referenz | | ⋯> | Assoziation | endlegend @enduml </plantuml> ### Zeitlicher Verlauf
-@startuml !theme plain skinparam backgroundColor #ffffff ' Timeline sequence diagram showing progression title Marfan-Syndrom Fall - Zeitlicher Verlauf und Ressourcen-Beziehungen participant "Patient\n(19-jähriger Mann)" as Patient #2563eb participant "Diagnosen" as Diagnosis #dc2626 participant "Encounters" as Encounters #ea580c participant "Symptome/\nPhänotyp" as Symptoms #059669 participant "Prozeduren" as Procedures #7c3aed participant "Medikation" as Medication #ec4899 participant "Diagnostik" as Diagnostics #16a34a participant "Klinische\nBeurteilung" as ClinImp #facc15 == 15.10.2024 - Augenärztliche Konsultation == Encounters -> Patient: encounter-ophthalmology activate Encounters #ea580c Symptoms -> Patient: symptom-cataract activate Symptoms #059669 note right of Symptoms **Katarakt bilateral** HPO: HP:0000518 end note Encounters -> Diagnosis: Katarakt-Diagnose activate Diagnosis #dc2626 note right of Diagnosis **condition-cataract** ICD-10: H26.9 Status: active end note deactivate Encounters == 12.11.2024 - Katarakt-Operation == Encounters -> Patient: encounter-cataract-surgery activate Encounters #ea580c Procedures -> Patient: procedure-cataract-surgery activate Procedures #7c3aed note right of Procedures **Phakoemulsifikation** OPS: 5-144.5a Mit IOL-Implantation Status: completed end note deactivate Procedures Diagnosis -> Diagnosis: Katarakt resolved note right of Diagnosis Status: resolved end note deactivate Encounters deactivate Symptoms == 15.12.2024 - Kardiologische Erstvorstellung == Encounters -> Patient: encounter-cardiology activate Encounters #ea580c Patient -> Symptoms: Phänotypische Befunde activate Symptoms #059669 note left of Patient **Körperliche Untersuchung:** - Größe: 2,13m - Beinlängendifferenz - Marfanoider Habitus end note Symptoms -> Patient: symptom-chest-pain note right of Symptoms **Thoraxschmerzen** HPO: HP:0100749 Akut end note Symptoms -> Patient: observation-height-001 note right of Symptoms **Hochwuchs** HPO: HP:0000098 2,13 m end note Symptoms -> Patient: observation-leg-asymmetry note right of Symptoms **Beinlängendifferenz** HPO: HP:0100559 Rechts verkürzt end note Diagnostics -> Patient: Echokardiographie activate Diagnostics #16a34a note right of Diagnostics **Echo-Befunde:** - Aortenwurzel: 48mm ↑ - AKI: Grad II - MKI: Grad I end note Diagnostics -> Symptoms: Kardiale Befunde Symptoms -> Patient: symptom-aortic-root note right of Symptoms **Aortenwurzeldilatation** HPO: HP:0002616 48 mm (pathologisch) end note Symptoms -> Patient: symptom-aortic-regurg note right of Symptoms **Aortenklappeninsuffizienz** HPO: HP:0001659 Grad II end note Symptoms -> Patient: symptom-mitral-regurg note right of Symptoms **Mitralklappeninsuffizienz** HPO: HP:0001653 Grad I end note deactivate Diagnostics Encounters -> Diagnosis: Marfan-Syndrom bestätigt note right of Diagnosis **condition-marfan-confirmed** ICD-10: Q87.4 Orpha: 558 Status: confirmed Feststellungsdatum: 15.12.2024 end note ClinImp -> Patient: clinical-impression-cardiology activate ClinImp #facc15 note right of ClinImp **Kardiologische Beurteilung:** - Marfan-Syndrom bestätigt - Aortenwurzel 48mm - OP-Indikation gestellt - Medikation eingeleitet end note Medication -> Patient: medication-losartan activate Medication #ec4899 note right of Medication **Losartan 50mg** 1x täglich Indikation: Aortenprotektion Start: 15.12.2024 end note ClinImp -> Procedures: OP-Planung note right of ClinImp David-OP geplant für 15.03.2025 end note deactivate ClinImp deactivate Encounters deactivate Symptoms == 15.03.2025 - Geplante Aortenwurzelersatz-OP == Encounters -> Patient: encounter-surgery-planned activate Encounters #ea580c Procedures -> Patient: procedure-aortic-planned activate Procedures #7c3aed note right of Procedures **Aortenwurzelersatz** OPS: 5-354.0a David-Operation Status: planned → reasonReference: condition-marfan-confirmed end note deactivate Procedures deactivate Encounters deactivate Diagnosis deactivate Medication legend bottom |= Ressourcen-Typen und Beziehungen | | <back:#2563eb>Patient</back> | Zentrale Patientenressource | | <back:#dc2626>Condition</back> | Diagnosen (2 Instanzen) | | <back:#ea580c>Encounter</back> | Behandlungskontakte (4 Instanzen) | | <back:#059669>Observation</back> | Symptome & Befunde (8 Instanzen) | | <back:#7c3aed>Procedure</back> | Prozeduren (2 Instanzen) | | <back:#ec4899>MedicationStatement</back> | Medikation (1 Instanz) | | <back:#16a34a>Diagnostic</back> | Echo-Untersuchung (3 Instanzen) | | <back:#facc15>ClinicalImpression</back> | Klinische Beurteilung (1 Instanz) | | → | Referenz zwischen Ressourcen | endlegend @enduml## Implementierung Die vollständigen FHIR-Ressourcen sind in folgenden Dateien definiert: - **Einzelressourcen**: [`input/fsh/marfan-example-resources.fsh`](../fsh/marfan-example-resources.fsh) - **Transaction Bundle**: [`input/fsh/marfan-transaction-bundle.fsh`](../fsh/marfan-transaction-bundle.fsh)
+**(Diagramm folgt.)**
+
+### Zeitlicher Verlauf
+
+**(Diagramm folgt.)**
+
+## Implementierung
+
+Die vollständigen FHIR-Ressourcen sind in folgenden Dateien definiert:
+
+* **Einzelressourcen**: [`input/fsh/marfan-example-resources.fsh`](../fsh/marfan-example-resources.fsh)
+* **Transaction Bundle**: [`input/fsh/marfan-transaction-bundle.fsh`](../fsh/marfan-transaction-bundle.fsh)
 

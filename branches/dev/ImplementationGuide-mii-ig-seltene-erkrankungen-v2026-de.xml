@@ -11,7 +11,7 @@
   <name value="MIIIGModulSelteneErkrankungen"/>
   <title value="MII IG Kerndatensatz-Modul Seltene Erkrankungen"/>
   <status value="active"/>
-  <date value="2026-07-23T10:39:42+00:00"/>
+  <date value="2026-07-23T11:20:28+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -2297,10 +2297,74 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="module-description.html"/>
+        </extension>
+        <nameUrl value="module-description.html"/>
+        <title value="Beschreibung des Moduls"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="context.html"/>
+        </extension>
+        <nameUrl value="context.html"/>
+        <title value="Kontext und Bezüge zu anderen Modulen"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="scenarios.html"/>
+        </extension>
+        <nameUrl value="scenarios.html"/>
+        <title value="Anwendungsszenarien"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="datasets.html"/>
+        </extension>
+        <nameUrl value="datasets.html"/>
+        <title value="Datensätze und Beschreibungen"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="information-model.html"/>
+        </extension>
+        <nameUrl value="information-model.html"/>
+        <title value="Informationsmodell (UML)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="profiles-overview.html"/>
+        </extension>
+        <nameUrl value="profiles-overview.html"/>
+        <title value="FHIR-Profile (Übersicht)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="terminology.html"/>
+        </extension>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminologien"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="capability.html"/>
+        </extension>
+        <nameUrl value="capability.html"/>
+        <title value="CapabilityStatement"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="clinical-genetic-diagnosis-guide.html"/>
         </extension>
         <nameUrl value="clinical-genetic-diagnosis-guide.html"/>
-        <title value="Clinical Genetic Diagnosis Guide"/>
+        <title value="Leitfaden Klinisch-genetische Diagnose"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -2308,15 +2372,7 @@
           <valueUrl value="coding-best-practices.html"/>
         </extension>
         <nameUrl value="coding-best-practices.html"/>
-        <title value="Coding Best Practices"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="marfan-example-annotations.html"/>
-        </extension>
-        <nameUrl value="marfan-example-annotations.html"/>
-        <title value="Marfan Example Annotations"/>
+        <title value="Kodier-Empfehlungen"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -2324,7 +2380,31 @@
           <valueUrl value="sma-example-annotations.html"/>
         </extension>
         <nameUrl value="sma-example-annotations.html"/>
-        <title value="Sma Example Annotations"/>
+        <title value="Beispiel Spinale Muskelatrophie (SMA)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="marfan-example-annotations.html"/>
+        </extension>
+        <nameUrl value="marfan-example-annotations.html"/>
+        <title value="Beispiel Marfan-Syndrom"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="references.html"/>
+        </extension>
+        <nameUrl value="references.html"/>
+        <title value="Referenzen"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="release-notes.html"/>
+        </extension>
+        <nameUrl value="release-notes.html"/>
+        <title value="Release Notes"/>
         <generation value="markdown"/>
       </page>
     </page>
