@@ -150,7 +150,7 @@ package "MII_Datenmodell_Seltene_Erkrankungen" {
   Untersuchung "0..*" o-- "0..1" Blutgruppe_SE
   Untersuchung "0..*" o-- "0..*" MII_Symptom_Condition_SE
   Untersuchung "0..*" o-- "0..*" Therapiestatus  
-  Untersuchung "0..*" o-- "0..*" InformationIndexpatient
+  Untersuchung "0..1" o-- "0..1" InformationIndexpatient
   Therapiestatus "0..*" o-down- "1..1" Therapieempfehlungen
   Therapiestatus "0..*" o-down- "1..1" Durchgeführte_Therapien
   Therapieempfehlungen "0..*" o-down- "0..*" MII_Studie
