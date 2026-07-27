@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mii-cs-seltene-narse-therapietyp"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-seltene-narse-therapietyp</b></p><a name="mii-cs-seltene-narse-therapietyp"> </a><a name="hcmii-cs-seltene-narse-therapietyp"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class="grid"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>status</td><td>status</td><td>http://hl7.org/fhir/concept-properties#status</td><td>code</td><td>Status of the concept</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">keine<a name="mii-cs-seltene-narse-therapietyp-keine"> </a></td><td>Keine</td><td>Keine Therapie</td></tr><tr><td style="white-space:nowrap">pharmakotherapie<a name="mii-cs-seltene-narse-therapietyp-pharmakotherapie"> </a></td><td>Pharmakotherapie</td><td>Medikamentöse Therapie mit konventionellen Arzneimitteln</td></tr><tr><td style="white-space:nowrap">gentherapie<a name="mii-cs-seltene-narse-therapietyp-gentherapie"> </a></td><td>Gentherapie</td><td>Therapie mit genetisch veränderten Zellen oder direkter Genmodifikation</td></tr><tr><td style="white-space:nowrap">mrna-therapie<a name="mii-cs-seltene-narse-therapietyp-mrna-therapie"> </a></td><td>mRNA Therapie</td><td>Therapie mit mRNA-basierten Therapeutika</td></tr><tr><td style="white-space:nowrap">antikoerpertherapie<a name="mii-cs-seltene-narse-therapietyp-antikoerpertherapie"> </a></td><td>Antikörpertherapie</td><td>Therapie mit monoklonalen oder polyklonalen Antikörpern</td></tr><tr><td style="white-space:nowrap">cart-zelltherapie<a name="mii-cs-seltene-narse-therapietyp-cart-zelltherapie"> </a></td><td>CAR-T-Zelltherapie</td><td>Chimäre Antigenrezeptor-T-Zelltherapie</td></tr><tr><td style="white-space:nowrap">stammzelltransplantation<a name="mii-cs-seltene-narse-therapietyp-stammzelltransplantation"> </a></td><td>Stammzelltransplantation</td><td>Hämatopoetische Stammzelltransplantation (autolog oder allogen)</td></tr><tr><td style="white-space:nowrap">stoffwechseltherapie<a name="mii-cs-seltene-narse-therapietyp-stoffwechseltherapie"> </a></td><td>Stoffwechseltherapie</td><td>Therapie zur Korrektur von Stoffwechselstörungen (z.B. Enzymersatztherapie, Substratreduktion)</td></tr><tr><td style="white-space:nowrap">sonstiges<a name="mii-cs-seltene-narse-therapietyp-sonstiges"> </a></td><td>Sonstiges</td><td>Andere Therapieform, nicht näher spezifiziert</td></tr><tr><td style="white-space:nowrap">unbekannt<a name="mii-cs-seltene-narse-therapietyp-unbekannt"> </a></td><td>Unbekannt</td><td>Therapietyp ist nicht bekannt</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp"/>
+  <version value="2026.0.1"/>
+  <name value="MII_CS_Seltene_NARSE_Therapietyp"/>
+  <title value="MII CS Seltene Erkrankungen NARSE Therapietyp"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-07-27T16:21:59+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="CodeSystem für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="10"/>
+  <property>
+    <code value="status"/>
+    <uri value="http://hl7.org/fhir/concept-properties#status"/>
+    <description value="Status of the concept"/>
+    <type value="code"/>
+  </property>
+  <concept>
+    <code value="keine"/>
+    <display value="Keine"/>
+    <definition value="Keine Therapie"/>
+  </concept>
+  <concept>
+    <code value="pharmakotherapie"/>
+    <display value="Pharmakotherapie"/>
+    <definition value="Medikamentöse Therapie mit konventionellen Arzneimitteln"/>
+  </concept>
+  <concept>
+    <code value="gentherapie"/>
+    <display value="Gentherapie"/>
+    <definition value="Therapie mit genetisch veränderten Zellen oder direkter Genmodifikation"/>
+  </concept>
+  <concept>
+    <code value="mrna-therapie"/>
+    <display value="mRNA Therapie"/>
+    <definition value="Therapie mit mRNA-basierten Therapeutika"/>
+  </concept>
+  <concept>
+    <code value="antikoerpertherapie"/>
+    <display value="Antikörpertherapie"/>
+    <definition value="Therapie mit monoklonalen oder polyklonalen Antikörpern"/>
+  </concept>
+  <concept>
+    <code value="cart-zelltherapie"/>
+    <display value="CAR-T-Zelltherapie"/>
+    <definition value="Chimäre Antigenrezeptor-T-Zelltherapie"/>
+  </concept>
+  <concept>
+    <code value="stammzelltransplantation"/>
+    <display value="Stammzelltransplantation"/>
+    <definition value="Hämatopoetische Stammzelltransplantation (autolog oder allogen)"/>
+  </concept>
+  <concept>
+    <code value="stoffwechseltherapie"/>
+    <display value="Stoffwechseltherapie"/>
+    <definition value="Therapie zur Korrektur von Stoffwechselstörungen (z.B. Enzymersatztherapie, Substratreduktion)"/>
+  </concept>
+  <concept>
+    <code value="sonstiges"/>
+    <display value="Sonstiges"/>
+    <definition value="Andere Therapieform, nicht näher spezifiziert"/>
+  </concept>
+  <concept>
+    <code value="unbekannt"/>
+    <display value="Unbekannt"/>
+    <definition value="Therapietyp ist nicht bekannt"/>
+  </concept>
+</CodeSystem>

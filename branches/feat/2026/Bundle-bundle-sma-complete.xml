@@ -1,0 +1,1293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="bundle-sma-complete"/>
+  <type value="transaction"/>
+  <timestamp value="2024-08-12T14:00:00Z"/>
+  <entry>
+    <fullUrl value="urn:uuid:6830d99e-9bbe-48ed-8927-ff28eadc42e0"/>
+    <resource>
+      <Patient>
+        <id value="patient-sma-001"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_patient-sma-001"> </a><p class="res-header-id"><b>Generated Narrative: Patient patient-sma-001</b></p><a name="patient-sma-001"> </a><a name="hcpatient-sma-001"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</p><hr/></div>
+        </text>
+        <identifier>
+          <system value="https://www.medizininformatik-initiative.de/fhir/sid/patient-id"/>
+          <value value="SMA-2024-001"/>
+        </identifier>
+        <gender value="female"/>
+        <birthDate value="2024-07-01"/>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:117180a6-0392-47c5-8841-aa5b57d0e47e"/>
+    <resource>
+      <Condition>
+        <id value="condition-sma-suspected"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2026.0.1"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Condition_condition-sma-suspected"> </a><p class="res-header-id"><b>Generated Narrative: Condition condition-sma-suspected</b></p><a name="condition-sma-suspected"> </a><a name="hccondition-sma-suspected"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-clinical-diagnosis.html">MII PR SE Clinical Diagnosis</a> version: 2026.0.1</p></div><p><b>Condition Asserted Date</b>: 2024-07-18</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status unconfirmed}">Unconfirmed</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}">Encounter Diagnosis</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 64383006}, {http://human-phenotype-ontology.org HP:0007373}">Verdacht auf Spinale Muskelatrophie</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-screening-001.html">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Neonatal screening (procedure); period = 2024-07-18 --&gt; 2024-07-18; reasonCode = </a></p><p><b>recordedDate</b>: 2024-07-18</p><h3>Evidences</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:">Positives Neugeborenenscreening</span></td><td><a href="Observation-observation-sma-screening.html">Observation Spinal muscular atrophy newborn screening panel</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Verdacht beim Neugeborenenscreening gestellt - SMN1 Exon 7 nicht nachweisbar</p>
+</div></blockquote></div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2024-07-18"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="unconfirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="encounter-diagnosis"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="64383006"/>
+            <display value="Werdnig-Hoffmann disease"/>
+          </coding>
+          <coding>
+            <system value="http://human-phenotype-ontology.org"/>
+            <code value="HP:0007373"/>
+            <display value="Motor neuron atrophy"/>
+          </coding>
+          <text value="Verdacht auf Spinale Muskelatrophie"/>
+        </code>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-screening-001"/>
+        </encounter>
+        <recordedDate value="2024-07-18"/>
+        <evidence>
+          <code>
+            <text value="Positives Neugeborenenscreening"/>
+          </code>
+          <detail>
+            <reference value="Observation/observation-sma-screening"/>
+          </detail>
+        </evidence>
+        <note>
+          <text value="Verdacht beim Neugeborenenscreening gestellt - SMN1 Exon 7 nicht nachweisbar"/>
+        </note>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:7041e5af-feab-4650-af1b-e2051ba0a95a"/>
+    <resource>
+      <Condition>
+        <id value="condition-sma-clinical"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2026.0.1"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Condition_condition-sma-clinical"> </a><p class="res-header-id"><b>Generated Narrative: Condition condition-sma-clinical</b></p><a name="condition-sma-clinical"> </a><a name="hccondition-sma-clinical"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-clinical-diagnosis.html">MII PR SE Clinical Diagnosis</a> version: 2026.0.1</p></div><p><b>Condition Asserted Date</b>: 2024-07-22</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}">Encounter Diagnosis</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm G12.0}, {http://snomed.info/sct 64383006}, {http://www.orpha.net 83330}, {http://human-phenotype-ontology.org HP:0007373}">Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ambulant-001.html">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Follow-up encounter; period = 2024-07-22 --&gt; 2024-07-22</a></p><p><b>onset</b>: 2024-07-01</p><p><b>recordedDate</b>: 2024-07-22</p><h3>Evidences</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:">Klinische Präsentation</span></td><td><a href="Observation-observation-troponin-001.html">Observation Troponin T.cardiac [Mass/volume] in Serum or Plasma</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Klinische Diagnose basierend auf typischer Präsentation: Neonatale Hypotonie, fehlende Muskeleigenreflexe, erhöhtes Troponin</p>
+</div></blockquote></div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2024-07-22"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="encounter-diagnosis"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <version value="2024"/>
+            <code value="G12.0"/>
+            <display value="Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="64383006"/>
+            <display value="Werdnig-Hoffmann disease"/>
+          </coding>
+          <coding>
+            <system value="http://www.orpha.net"/>
+            <code value="83330"/>
+            <display value="Proximal spinal muscular atrophy type 1"/>
+          </coding>
+          <coding>
+            <system value="http://human-phenotype-ontology.org"/>
+            <code value="HP:0007373"/>
+            <display value="Motor neuron atrophy"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ambulant-001"/>
+        </encounter>
+        <onsetDateTime value="2024-07-01"/>
+        <recordedDate value="2024-07-22"/>
+        <evidence>
+          <code>
+            <text value="Klinische Präsentation"/>
+          </code>
+          <detail>
+            <reference value="Observation/observation-troponin-001"/>
+          </detail>
+        </evidence>
+        <note>
+          <text value="Klinische Diagnose basierend auf typischer Präsentation: Neonatale Hypotonie, fehlende Muskeleigenreflexe, erhöhtes Troponin"/>
+        </note>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:9596df71-0f1b-495f-bf1c-16708dc952bf"/>
+    <resource>
+      <Condition>
+        <id value="condition-sma-genetic"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2026.0.1"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Condition_condition-sma-genetic"> </a><p class="res-header-id"><b>Generated Narrative: Condition condition-sma-genetic</b></p><a name="condition-sma-genetic"> </a><a name="hccondition-sma-genetic"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-genetic-diagnosis.html">MII PR SE Genetic Diagnosis</a> version: 2026.0.1</p></div><p><b>Condition Asserted Date</b>: 2024-07-26</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 782964007}">Genetic disease</span></p><p><b>code</b>: <span title="Codes:{http://omim.org 253300}, {http://snomed.info/sct 64383006}, {http://www.orpha.net 83330}">Spinal muscular atrophy, type I</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>onset</b>: 2024-07-01</p><p><b>recordedDate</b>: 2024-07-26</p><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 106221001}">Genetic finding</span></p><p><b>detail</b>: </p><ul><li><a href="Observation-variant-smn1-001.html">Observation Genetic analysis master panel</a></li><li><a href="Observation-variant-smn2-001.html">Observation Genetic analysis master panel</a></li></ul></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 405824009}">Genetic test</span></p><p><b>detail</b>: <a href="DiagnosticReport-molgen-diagnostic-implication-sma.html">Diagnostic Report for 'Genetic analysis report' for '-&gt;Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'</a></p></blockquote><p><b>note</b>: </p><blockquote><div><p>0 Kopien des SMN1-Gens, 2 Kopien des SMN2-Gens - krankheitsursächlich. Genetische Diagnose existiert parallel zur klinischen Diagnose.</p>
+</div></blockquote></div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2024-07-26"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="782964007"/>
+            <display value="Genetic disease"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://omim.org"/>
+            <version value="2024"/>
+            <code value="253300"/>
+            <display value="Spinal muscular atrophy, type I"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="64383006"/>
+            <display value="Werdnig-Hoffmann disease"/>
+          </coding>
+          <coding>
+            <system value="http://www.orpha.net"/>
+            <code value="83330"/>
+            <display value="Proximal spinal muscular atrophy type 1"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <onsetDateTime value="2024-07-01"/>
+        <recordedDate value="2024-07-26"/>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="106221001"/>
+              <display value="Genetic finding"/>
+            </coding>
+          </code>
+          <detail>
+            <reference value="Observation/variant-smn1-001"/>
+          </detail>
+          <detail>
+            <reference value="Observation/variant-smn2-001"/>
+          </detail>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="405824009"/>
+              <display value="Genetic test"/>
+            </coding>
+          </code>
+          <detail>
+            <reference value="DiagnosticReport/molgen-diagnostic-implication-sma"/>
+          </detail>
+        </evidence>
+        <note>
+          <text value="0 Kopien des SMN1-Gens, 2 Kopien des SMN2-Gens - krankheitsursächlich. Genetische Diagnose existiert parallel zur klinischen Diagnose."/>
+        </note>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:00e23000-f21c-470d-8f71-1942f0f72efe"/>
+    <resource>
+      <FamilyMemberHistory>
+        <id value="family-history-001"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese|2026.0.1"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="FamilyMemberHistory_family-history-001"> </a><p class="res-header-id"><b>Generated Narrative: FamilyMemberHistory family-history-001</b></p><a name="family-history-001"> </a><a name="hcfamily-history-001"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-familienanamnese.html">MII PR SE Familienanamnese</a> version: 2026.0.1</p></div><p><b>VonSEBetroffen</b>: <span title="Codes:{http://snomed.info/sct 261665006}">Unknown</span></p><p><b>status</b>: Completed</p><p><b>patient</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>date</b>: 2024-07-22</p><p><b>relationship</b>: <span title="Codes:{http://snomed.info/sct 78652007}">Great grandmother</span></p><h3>Conditions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 129565002}">Unbekannte Muskelerkrankung</span></td></tr></table></div>
+        </text>
+        <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="261665006"/>
+              <display value="Unknown"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="completed"/>
+        <patient>
+          <reference value="Patient/patient-sma-001"/>
+        </patient>
+        <date value="2024-07-22"/>
+        <relationship>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="78652007"/>
+            <display value="Great grandmother"/>
+          </coding>
+        </relationship>
+        <condition>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="129565002"/>
+              <display value="Disorder of muscle"/>
+            </coding>
+            <text value="Unbekannte Muskelerkrankung"/>
+          </code>
+        </condition>
+      </FamilyMemberHistory>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="FamilyMemberHistory"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:07ff35a6-561b-4a3b-bfc0-be528e6ab5a4"/>
+    <resource>
+      <Observation>
+        <id value="observation-sma-screening"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-sma-screening"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-sma-screening</b></p><a name="observation-sma-screening"> </a><a name="hcobservation-sma-screening"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 92005-8}">Spinal muscular atrophy newborn screening panel</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-07-18</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 260373001}">Detected</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation A}">Abnormal</span></p><p><b>note</b>: </p><blockquote><div><p>Positives SMA-Screening. Konfirmatorische Diagnostik empfohlen.</p>
+</div></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 92004-1}">Spinal muscular atrophy newborn screen interpretation</span></p><p><b>value</b>: <span title="Codes:">Hinweis auf SMA - SMN1 Exon 7 Deletion nachgewiesen</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 92002-5}">SMN1 gene [Cycle Threshold #] in DBS by NAA with probe detection</span></p><p><b>value</b>: 0 Ct<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation A}">Abnormal</span></p></blockquote></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="92005-8"/>
+            <display value="Spinal muscular atrophy newborn screening panel"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <effectiveDateTime value="2024-07-18"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260373001"/>
+            <display value="Detected"/>
+          </coding>
+        </valueCodeableConcept>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="A"/>
+            <display value="Abnormal"/>
+          </coding>
+        </interpretation>
+        <note>
+          <text value="Positives SMA-Screening. Konfirmatorische Diagnostik empfohlen."/>
+        </note>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="92004-1"/>
+              <display value="Spinal muscular atrophy newborn screen interpretation"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <text value="Hinweis auf SMA - SMN1 Exon 7 Deletion nachgewiesen"/>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="92002-5"/>
+              <display value="SMN1 gene [Cycle Threshold #] in DBS by NAA with probe detection"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="0"/>
+            <unit value="Ct"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="1"/>
+          </valueQuantity>
+          <interpretation>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+              <code value="A"/>
+              <display value="Abnormal"/>
+            </coding>
+          </interpretation>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:89231fbc-2218-499e-b3f5-c11368975c6e"/>
+    <resource>
+      <Observation>
+        <id value="variant-smn1-001"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_variant-smn1-001"> </a><p class="res-header-id"><b>Generated Narrative: Observation variant-smn1-001</b></p><a name="variant-smn1-001"> </a><a name="hcvariant-smn1-001"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 55233-1}">Genetic analysis master panel</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-07-26</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 10828004}">Positive</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation POS}">Positive</span></p><p><b>note</b>: </p><blockquote><div><p>Homozygote Deletion des SMN1-Gens, krankheitsursächlich für SMA</p>
+</div></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48018-6}">Gene studied [ID]</span></p><p><b>value</b>: <span title="Codes:{http://www.genenames.org/geneId HGNC:11117}">SMN1</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 62374-4}">Human reference sequence assembly version</span></p><p><b>value</b>: <span title="Codes:">GRCh38</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 53034-5}">Allelic state</span></p><p><b>value</b>: <span title="Codes:{http://loinc.org LA6705-3}">Homozygous</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:">Copy Number</span></p><p><b>value</b>: 0 copies</p></blockquote></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="55233-1"/>
+            <display value="Genetic analysis master panel"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <effectiveDateTime value="2024-07-26"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="10828004"/>
+            <display value="Positive"/>
+          </coding>
+        </valueCodeableConcept>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="POS"/>
+            <display value="Positive"/>
+          </coding>
+        </interpretation>
+        <note>
+          <text value="Homozygote Deletion des SMN1-Gens, krankheitsursächlich für SMA"/>
+        </note>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48018-6"/>
+              <display value="Gene studied [ID]"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://www.genenames.org/geneId"/>
+              <code value="HGNC:11117"/>
+              <display value="SMN1"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="62374-4"/>
+              <display value="Human reference sequence assembly version"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <text value="GRCh38"/>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="53034-5"/>
+              <display value="Allelic state"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="LA6705-3"/>
+              <display value="Homozygous"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <text value="Copy Number"/>
+          </code>
+          <valueQuantity>
+            <value value="0"/>
+            <unit value="copies"/>
+          </valueQuantity>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:3325c12d-0646-433e-8e46-042168eccf92"/>
+    <resource>
+      <Observation>
+        <id value="variant-smn2-001"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_variant-smn2-001"> </a><p class="res-header-id"><b>Generated Narrative: Observation variant-smn2-001</b></p><a name="variant-smn2-001"> </a><a name="hcvariant-smn2-001"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 55233-1}">Genetic analysis master panel</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-07-26</p><p><b>note</b>: </p><blockquote><div><p>2 Kopien des SMN2-Gens, Modifikator des Phänotyps</p>
+</div></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48018-6}">Gene studied [ID]</span></p><p><b>value</b>: <span title="Codes:{http://www.genenames.org/geneId HGNC:11118}">SMN2</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:">Copy Number</span></p><p><b>value</b>: 2 copies</p></blockquote></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="55233-1"/>
+            <display value="Genetic analysis master panel"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <effectiveDateTime value="2024-07-26"/>
+        <note>
+          <text value="2 Kopien des SMN2-Gens, Modifikator des Phänotyps"/>
+        </note>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48018-6"/>
+              <display value="Gene studied [ID]"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://www.genenames.org/geneId"/>
+              <code value="HGNC:11118"/>
+              <display value="SMN2"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <text value="Copy Number"/>
+          </code>
+          <valueQuantity>
+            <value value="2"/>
+            <unit value="copies"/>
+          </valueQuantity>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:127dc51a-19ad-44ff-bf75-b1804d232109"/>
+    <resource>
+      <Procedure>
+        <id value="procedure-gentherapy-001"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Procedure_procedure-gentherapy-001"> </a><p class="res-header-id"><b>Generated Narrative: Procedure procedure-gentherapy-001</b></p><a name="procedure-gentherapy-001"> </a><a name="hcprocedure-gentherapy-001"> </a><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 277132007}">Therapeutic procedure</span></p><p><b>code</b>: <span title="Codes:{http://fdasis.nlm.nih.gov MLU3LU3EVV}, {http://snomed.info/sct 788110002}">Gentherapie mit Onasemnogene abeparvovec (Zolgensma)</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>performed</b>: 2024-07-29</p><p><b>reasonReference</b>: <a href="Condition-condition-sma-genetic.html">Condition Spinal muscular atrophy, type I</a></p><p><b>note</b>: </p><blockquote><div><p>Gentherapeutikum ohne Komplikationen verabreicht, vorherige Gabe von Prednisolon</p>
+</div></blockquote></div>
+        </text>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="277132007"/>
+            <display value="Therapeutic procedure"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fdasis.nlm.nih.gov"/>
+            <code value="MLU3LU3EVV"/>
+            <display value="ONASEMNOGENE ABEPARVOVEC"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="788110002"/>
+            <display value="Onasemnogene abeparvovec"/>
+          </coding>
+          <text value="Gentherapie mit Onasemnogene abeparvovec (Zolgensma)"/>
+        </code>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <performedDateTime value="2024-07-29"/>
+        <reasonReference>
+          <reference value="Condition/condition-sma-genetic"/>
+        </reasonReference>
+        <note>
+          <text value="Gentherapeutikum ohne Komplikationen verabreicht, vorherige Gabe von Prednisolon"/>
+        </note>
+      </Procedure>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Procedure"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:ccdcbdd3-8153-4ef2-8d76-1ee0f681328b"/>
+    <resource>
+      <Observation>
+        <id value="observation-alt-001"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-alt-001"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-alt-001</b></p><a name="observation-alt-001"> </a><a name="hcobservation-alt-001"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 1742-6}">Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-07-29</p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p><p><b>note</b>: </p><blockquote><div><p>Normwertig post-therapeutisch</p>
+</div></blockquote></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="1742-6"/>
+            <display value="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <effectiveDateTime value="2024-07-29"/>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="N"/>
+            <display value="Normal"/>
+          </coding>
+        </interpretation>
+        <note>
+          <text value="Normwertig post-therapeutisch"/>
+        </note>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:bb92ee35-b577-42a8-bf9a-b51cbe5debae"/>
+    <resource>
+      <Observation>
+        <id value="observation-ast-001"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-ast-001"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-ast-001</b></p><a name="observation-ast-001"> </a><a name="hcobservation-ast-001"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 1920-8}">Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-07-29</p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p><p><b>note</b>: </p><blockquote><div><p>Normwertig post-therapeutisch</p>
+</div></blockquote></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="1920-8"/>
+            <display value="Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <effectiveDateTime value="2024-07-29"/>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="N"/>
+            <display value="Normal"/>
+          </coding>
+        </interpretation>
+        <note>
+          <text value="Normwertig post-therapeutisch"/>
+        </note>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:38b52a28-bfa6-451f-8dad-9d0b8a8466bc"/>
+    <resource>
+      <Observation>
+        <id value="observation-plt-001"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-plt-001"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-plt-001</b></p><a name="observation-plt-001"> </a><a name="hcobservation-plt-001"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 777-3}">Platelets [#/volume] in Blood by Automated count</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-07-29</p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p><p><b>note</b>: </p><blockquote><div><p>Normwertig post-therapeutisch</p>
+</div></blockquote></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="777-3"/>
+            <display value="Platelets [#/volume] in Blood by Automated count"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <effectiveDateTime value="2024-07-29"/>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="N"/>
+            <display value="Normal"/>
+          </coding>
+        </interpretation>
+        <note>
+          <text value="Normwertig post-therapeutisch"/>
+        </note>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:ab5b69cf-4eae-4aa3-8ce4-5b5eb1a4a46a"/>
+    <resource>
+      <Observation>
+        <id value="observation-troponin-001"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-troponin-001"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-troponin-001</b></p><a name="observation-troponin-001"> </a><a name="hcobservation-troponin-001"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 6598-7}">Troponin T.cardiac [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-07-22</p><p><b>value</b>: 92 ng/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeng/L = 'ng/L')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="6598-7"/>
+            <display value="Troponin T.cardiac [Mass/volume] in Serum or Plasma"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <effectiveDateTime value="2024-07-22"/>
+        <valueQuantity>
+          <value value="92"/>
+          <unit value="ng/L"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ng/L"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:23b8775e-4704-4037-930e-68d1628cf0b8"/>
+    <resource>
+      <Observation>
+        <id value="observation-troponin-002"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-troponin-002"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-troponin-002</b></p><a name="observation-troponin-002"> </a><a name="hcobservation-troponin-002"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 6598-7}">Troponin T.cardiac [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-07-28</p><p><b>value</b>: 58 ng/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeng/L = 'ng/L')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="6598-7"/>
+            <display value="Troponin T.cardiac [Mass/volume] in Serum or Plasma"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <effectiveDateTime value="2024-07-28"/>
+        <valueQuantity>
+          <value value="58"/>
+          <unit value="ng/L"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ng/L"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:7d919637-556d-441d-8145-706eb3543fa3"/>
+    <resource>
+      <Observation>
+        <id value="observation-troponin-003"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-troponin-003"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-troponin-003</b></p><a name="observation-troponin-003"> </a><a name="hcobservation-troponin-003"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 6598-7}">Troponin T.cardiac [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-08-01</p><p><b>value</b>: 57 ng/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeng/L = 'ng/L')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="6598-7"/>
+            <display value="Troponin T.cardiac [Mass/volume] in Serum or Plasma"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <effectiveDateTime value="2024-08-01"/>
+        <valueQuantity>
+          <value value="57"/>
+          <unit value="ng/L"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ng/L"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:0ccc9861-03d4-403b-a650-a9f24d64a615"/>
+    <resource>
+      <Observation>
+        <id value="observation-troponin-004"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-troponin-004"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-troponin-004</b></p><a name="observation-troponin-004"> </a><a name="hcobservation-troponin-004"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 6598-7}">Troponin T.cardiac [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-08-12</p><p><b>value</b>: 106 ng/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeng/L = 'ng/L')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p><p><b>note</b>: </p><blockquote><div><p>Troponin T weiter erhöht, bereits prä-therapeutisch erhöht</p>
+</div></blockquote></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="6598-7"/>
+            <display value="Troponin T.cardiac [Mass/volume] in Serum or Plasma"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <effectiveDateTime value="2024-08-12"/>
+        <valueQuantity>
+          <value value="106"/>
+          <unit value="ng/L"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ng/L"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+        <note>
+          <text value="Troponin T weiter erhöht, bereits prä-therapeutisch erhöht"/>
+        </note>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:81c1e902-ea19-4d32-adbf-3ee234509cf6"/>
+    <resource>
+      <ClinicalImpression>
+        <id value="clinical-impression-erstvorstellung"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2026.0.1"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="ClinicalImpression_clinical-impression-erstvorstellung"> </a><p class="res-header-id"><b>Generated Narrative: ClinicalImpression clinical-impression-erstvorstellung</b></p><a name="clinical-impression-erstvorstellung"> </a><a name="hcclinical-impression-erstvorstellung"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-clinical-impression.html">MII Profile SE Clinical Impression</a> version: 2026.0.1</p></div><p><b>status</b>: Completed</p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ambulant-001.html">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Follow-up encounter; period = 2024-07-22 --&gt; 2024-07-22</a></p><p><b>effective</b>: 2024-07-22</p><p><b>date</b>: 2024-07-22</p><p><b>problem</b>: <a href="Condition-condition-sma-suspected.html">Condition Werdnig-Hoffmann disease</a></p><blockquote><p><b>investigation</b></p><p><b>code</b>: <span title="Codes:">Familienanamnese</span></p><p><b>item</b>: <a href="FamilyMemberHistory-family-history-001.html">FamilyMemberHistory: extension = Unknown; status = completed; date = 2024-07-22; relationship = Great grandmother</a></p></blockquote><blockquote><p><b>investigation</b></p><p><b>code</b>: <span title="Codes:">Labordiagnostik</span></p><p><b>item</b>: <a href="Observation-observation-troponin-001.html">Observation Troponin T.cardiac [Mass/volume] in Serum or Plasma</a></p></blockquote><p><b>summary</b>: Neugeborenes mit V.a. SMA aus Neugeborenenscreening. Familienanamnese zeigt unklare Muskelerkrankung der Urgroßmutter. Troponin T bereits erhöht (92 ng/l).</p><blockquote><p><b>finding</b></p><p><b>itemReference</b>: <a href="Condition-condition-sma-clinical.html">Condition Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]</a></p></blockquote><blockquote><p><b>finding</b></p><p><b>itemReference</b>: <a href="Condition-condition-sma-genetic.html">Condition Spinal muscular atrophy, type I</a></p></blockquote><blockquote><p><b>finding</b></p><p><b>itemCodeableConcept</b>: <span title="Codes:{http://snomed.info/sct 1363512008}">Troponin above reference range</span></p><p><b>itemReference</b>: <a href="Observation-observation-troponin-001.html">Observation Troponin T.cardiac [Mass/volume] in Serum or Plasma</a></p></blockquote><p><b>prognosisCodeableConcept</b>: <span title="Codes:{http://snomed.info/sct 67334001}">Guarded prognosis</span></p><p><b>note</b>: , </p><blockquote><div><p>Klinische Untersuchung gemäß SMA-Diagnoseprotokoll. Blutentnahme für Genetik veranlasst.</p>
+</div></blockquote><blockquote><div><p>Klinisches Bild vereinbar mit SMA Typ 1. Molekulargenetische Bestätigung ausstehend. Eltern über Therapieoptionen informiert.</p>
+</div></blockquote></div>
+        </text>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ambulant-001"/>
+        </encounter>
+        <effectiveDateTime value="2024-07-22"/>
+        <date value="2024-07-22"/>
+        <problem>
+          <reference value="Condition/condition-sma-suspected"/>
+        </problem>
+        <investigation>
+          <code>
+            <text value="Familienanamnese"/>
+          </code>
+          <item>
+            <reference value="FamilyMemberHistory/family-history-001"/>
+          </item>
+        </investigation>
+        <investigation>
+          <code>
+            <text value="Labordiagnostik"/>
+          </code>
+          <item>
+            <reference value="Observation/observation-troponin-001"/>
+          </item>
+        </investigation>
+        <summary value="Neugeborenes mit V.a. SMA aus Neugeborenenscreening. Familienanamnese zeigt unklare Muskelerkrankung der Urgroßmutter. Troponin T bereits erhöht (92 ng/l)."/>
+        <finding>
+          <itemReference>
+            <reference value="Condition/condition-sma-clinical"/>
+          </itemReference>
+        </finding>
+        <finding>
+          <itemReference>
+            <reference value="Condition/condition-sma-genetic"/>
+          </itemReference>
+        </finding>
+        <finding>
+          <itemCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="1363512008"/>
+              <display value="Troponin above reference range"/>
+            </coding>
+          </itemCodeableConcept>
+          <itemReference>
+            <reference value="Observation/observation-troponin-001"/>
+          </itemReference>
+        </finding>
+        <prognosisCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="67334001"/>
+            <display value="Guarded prognosis"/>
+          </coding>
+        </prognosisCodeableConcept>
+        <note>
+          <text value="Klinische Untersuchung gemäß SMA-Diagnoseprotokoll. Blutentnahme für Genetik veranlasst."/>
+        </note>
+        <note>
+          <text value="Klinisches Bild vereinbar mit SMA Typ 1. Molekulargenetische Bestätigung ausstehend. Eltern über Therapieoptionen informiert."/>
+        </note>
+      </ClinicalImpression>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ClinicalImpression"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b764f4a2-50c0-4624-ad49-8eb9405aaf9d"/>
+    <resource>
+      <ClinicalImpression>
+        <id value="clinical-impression-nachsorge"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2026.0.1"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="ClinicalImpression_clinical-impression-nachsorge"> </a><p class="res-header-id"><b>Generated Narrative: ClinicalImpression clinical-impression-nachsorge</b></p><a name="clinical-impression-nachsorge"> </a><a name="hcclinical-impression-nachsorge"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-clinical-impression.html">MII Profile SE Clinical Impression</a> version: 2026.0.1</p></div><p><b>status</b>: Completed</p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-nachsorge-001.html">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Follow-up encounter; period = 2024-08-12 --&gt; 2024-08-12</a></p><p><b>effective</b>: 2024-08-12</p><p><b>date</b>: 2024-08-12</p><p><b>previous</b>: <a href="ClinicalImpression-clinical-impression-erstvorstellung.html">ClinicalImpression: status = completed; effective[x] = 2024-07-22; date = 2024-07-22; summary = Neugeborenes mit V.a. SMA aus Neugeborenenscreening. Familienanamnese zeigt unklare Muskelerkrankung der Urgroßmutter. Troponin T bereits erhöht (92 ng/l).; prognosisCodeableConcept = Guarded prognosis; note = Klinische Untersuchung gemäß SMA-Diagnoseprotokoll. Blutentnahme für Genetik veranlasst.,Klinisches Bild vereinbar mit SMA Typ 1. Molekulargenetische Bestätigung ausstehend. Eltern über Therapieoptionen informiert.</a></p><p><b>problem</b>: </p><ul><li><a href="Condition-condition-sma-clinical.html">Condition Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]</a></li><li><a href="Condition-condition-sma-genetic.html">Condition Spinal muscular atrophy, type I</a></li></ul><p><b>summary</b>: Erste Nachsorge 14 Tage nach Gentherapie. Klinisch stabil. Troponin T weiter erhöht (106 ng/l), war jedoch bereits prätherapeutisch erhöht.</p><blockquote><p><b>finding</b></p><p><b>itemCodeableConcept</b>: <span title="Codes:{http://snomed.info/sct 1363512008}">Troponin above reference range</span></p><p><b>itemReference</b>: <a href="Observation-observation-troponin-004.html">Observation Troponin T.cardiac [Mass/volume] in Serum or Plasma</a></p><p><b>basis</b>: Troponin-Verlauf: 22.07: 92 ng/l, 28.07: 58 ng/l, 01.08: 57 ng/l, 12.08: 106 ng/l</p></blockquote><blockquote><p><b>finding</b></p><p><b>itemCodeableConcept</b>: <span title="Codes:{http://snomed.info/sct 166645004}">Alanine aminotransferase level within reference range</span></p><p><b>basis</b>: ALT normwertig</p></blockquote><blockquote><p><b>finding</b></p><p><b>itemCodeableConcept</b>: <span title="Codes:{http://snomed.info/sct 166667003}">Aspartate aminotransferase/serum glutamic oxaloacetic transaminase level within reference range</span></p><p><b>basis</b>: AST normwertig</p></blockquote><blockquote><p><b>finding</b></p><p><b>itemCodeableConcept</b>: <span title="Codes:{http://snomed.info/sct 165555003}">Platelet count normal</span></p><p><b>basis</b>: Thrombozytenzahl normwertig</p></blockquote><p><b>prognosisCodeableConcept</b>: <span title="Codes:{http://snomed.info/sct 67334001}">Guarded prognosis</span></p><p><b>note</b>: , </p><blockquote><div><p>Standardisierte Nachsorgeuntersuchung nach Gentherapie gemäß Zentrumsprotokoll</p>
+</div></blockquote><blockquote><div><p>Troponin-Erhöhung präexistent, nicht therapieassoziiert. Gentherapie gut vertragen. Weiterführung der Prednisolon-Therapie. Nächste Kontrolle in 4 Wochen.</p>
+</div></blockquote></div>
+        </text>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-nachsorge-001"/>
+        </encounter>
+        <effectiveDateTime value="2024-08-12"/>
+        <date value="2024-08-12"/>
+        <previous>
+          <reference value="ClinicalImpression/clinical-impression-erstvorstellung"/>
+        </previous>
+        <problem>
+          <reference value="Condition/condition-sma-clinical"/>
+        </problem>
+        <problem>
+          <reference value="Condition/condition-sma-genetic"/>
+        </problem>
+        <summary value="Erste Nachsorge 14 Tage nach Gentherapie. Klinisch stabil. Troponin T weiter erhöht (106 ng/l), war jedoch bereits prätherapeutisch erhöht."/>
+        <finding>
+          <itemCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="1363512008"/>
+              <display value="Troponin above reference range"/>
+            </coding>
+          </itemCodeableConcept>
+          <itemReference>
+            <reference value="Observation/observation-troponin-004"/>
+          </itemReference>
+          <basis value="Troponin-Verlauf: 22.07: 92 ng/l, 28.07: 58 ng/l, 01.08: 57 ng/l, 12.08: 106 ng/l"/>
+        </finding>
+        <finding>
+          <itemCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="166645004"/>
+              <display value="Alanine aminotransferase level within reference range"/>
+            </coding>
+          </itemCodeableConcept>
+          <basis value="ALT normwertig"/>
+        </finding>
+        <finding>
+          <itemCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="166667003"/>
+              <display value="Aspartate aminotransferase/serum glutamic oxaloacetic transaminase level within reference range"/>
+            </coding>
+          </itemCodeableConcept>
+          <basis value="AST normwertig"/>
+        </finding>
+        <finding>
+          <itemCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="165555003"/>
+              <display value="Platelet count normal"/>
+            </coding>
+          </itemCodeableConcept>
+          <basis value="Thrombozytenzahl normwertig"/>
+        </finding>
+        <prognosisCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="67334001"/>
+            <display value="Guarded prognosis"/>
+          </coding>
+        </prognosisCodeableConcept>
+        <note>
+          <text value="Standardisierte Nachsorgeuntersuchung nach Gentherapie gemäß Zentrumsprotokoll"/>
+        </note>
+        <note>
+          <text value="Troponin-Erhöhung präexistent, nicht therapieassoziiert. Gentherapie gut vertragen. Weiterführung der Prednisolon-Therapie. Nächste Kontrolle in 4 Wochen."/>
+        </note>
+      </ClinicalImpression>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ClinicalImpression"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:8320638f-eca2-4586-b173-bd0c49d9ae9d"/>
+    <resource>
+      <Encounter>
+        <id value="encounter-screening-001"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Encounter_encounter-screening-001"> </a><p class="res-header-id"><b>Generated Narrative: Encounter encounter-screening-001</b></p><a name="encounter-screening-001"> </a><a name="hcencounter-screening-001"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 60151004}">Neonatal screening (procedure)</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>period</b>: 2024-07-18 --&gt; 2024-07-18</p><p><b>reasonCode</b>: <span title="Codes:">Neugeborenenscreening</span></p></div>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="AMB"/>
+          <display value="ambulatory"/>
+        </class>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="60151004"/>
+            <display value="Neonatal screening (procedure)"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <period>
+          <start value="2024-07-18"/>
+          <end value="2024-07-18"/>
+        </period>
+        <reasonCode>
+          <text value="Neugeborenenscreening"/>
+        </reasonCode>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:98afd481-d1d6-4c2e-9d1c-51c651964e5f"/>
+    <resource>
+      <Encounter>
+        <id value="encounter-ambulant-001"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Encounter_encounter-ambulant-001"> </a><p class="res-header-id"><b>Generated Narrative: Encounter encounter-ambulant-001</b></p><a name="encounter-ambulant-001"> </a><a name="hcencounter-ambulant-001"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 390906007}">Follow-up encounter</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>period</b>: 2024-07-22 --&gt; 2024-07-22</p><h3>Diagnoses</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Condition</b></td><td><b>Use</b></td></tr><tr><td style="display: none">*</td><td><a href="Condition-condition-sma-clinical.html">Condition Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]</a></td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role AD}">Admission diagnosis</span></td></tr></table></div>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="AMB"/>
+          <display value="ambulatory"/>
+        </class>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="390906007"/>
+            <display value="Follow-up encounter"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <period>
+          <start value="2024-07-22"/>
+          <end value="2024-07-22"/>
+        </period>
+        <diagnosis>
+          <condition>
+            <reference value="Condition/condition-sma-clinical"/>
+          </condition>
+          <use>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+              <code value="AD"/>
+              <display value="Admission diagnosis"/>
+            </coding>
+          </use>
+        </diagnosis>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:bdb5bd40-064b-4b79-aab6-8d9cc9db4873"/>
+    <resource>
+      <Encounter>
+        <id value="encounter-stationaer-001"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Encounter_encounter-stationaer-001"> </a><p class="res-header-id"><b>Generated Narrative: Encounter encounter-stationaer-001</b></p><a name="encounter-stationaer-001"> </a><a name="hcencounter-stationaer-001"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP">ActCode: IMP</a> (inpatient encounter)</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 32485007}">Hospital admission</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>period</b>: 2024-07-29 --&gt; 2024-07-30</p><h3>Diagnoses</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Condition</b></td><td><b>Use</b></td></tr><tr><td style="display: none">*</td><td><a href="Condition-condition-sma-genetic.html">Condition Spinal muscular atrophy, type I</a></td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role CC}">Chief complaint</span></td></tr></table></div>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="IMP"/>
+          <display value="inpatient encounter"/>
+        </class>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="32485007"/>
+            <display value="Hospital admission"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <period>
+          <start value="2024-07-29"/>
+          <end value="2024-07-30"/>
+        </period>
+        <diagnosis>
+          <condition>
+            <reference value="Condition/condition-sma-genetic"/>
+          </condition>
+          <use>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+              <code value="CC"/>
+              <display value="Chief complaint"/>
+            </coding>
+          </use>
+        </diagnosis>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:f8e29cb1-a8a9-4d56-ac0e-65fca096f860"/>
+    <resource>
+      <Encounter>
+        <id value="encounter-nachsorge-001"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Encounter_encounter-nachsorge-001"> </a><p class="res-header-id"><b>Generated Narrative: Encounter encounter-nachsorge-001</b></p><a name="encounter-nachsorge-001"> </a><a name="hcencounter-nachsorge-001"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 390906007}">Follow-up encounter</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>period</b>: 2024-08-12 --&gt; 2024-08-12</p><h3>Diagnoses</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Condition</b></td></tr><tr><td style="display: none">*</td><td><a href="Condition-condition-sma-genetic.html">Condition Spinal muscular atrophy, type I</a></td></tr></table></div>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="AMB"/>
+          <display value="ambulatory"/>
+        </class>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="390906007"/>
+            <display value="Follow-up encounter"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/patient-sma-001"/>
+        </subject>
+        <period>
+          <start value="2024-08-12"/>
+          <end value="2024-08-12"/>
+        </period>
+        <diagnosis>
+          <condition>
+            <reference value="Condition/condition-sma-genetic"/>
+          </condition>
+        </diagnosis>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+</Bundle>

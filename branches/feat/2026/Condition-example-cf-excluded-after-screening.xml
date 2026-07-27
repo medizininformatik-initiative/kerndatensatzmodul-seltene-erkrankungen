@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="example-cf-excluded-after-screening"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2026.0.1"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Condition example-cf-excluded-after-screening</b></p><a name="example-cf-excluded-after-screening"> </a><a name="hcexample-cf-excluded-after-screening"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-genetic-diagnosis.html">MII PR SE Genetic Diagnosis</a> version: 2026.0.1</p></div><p><b>Condition Asserted Date</b>: 2024-08-25</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical inactive}">Inactive</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status refuted}">Refuted</span></p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 782964007}">Genetic disease</span></p><p><b>code</b>: <span title="Codes:{http://omim.org 219700}, {http://www.orpha.net 586}">Mukoviszidose (ausgeschlossen)</span></p><p><b>subject</b>: <a href="Patient-example.html">Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>abatement</b>: 2024-08-25</p><p><b>recordedDate</b>: 2024-08-25</p><h3>Evidences</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 106221001}">Genetic finding</span></td><td><a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/molgen-cftr-heterozygous-carrier">Observation/molgen-cftr-heterozygous-carrier</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Heterozygoter Anlageträger für F508del. Zweite Mutation ausgeschlossen. IRT-Erhöhung im Screening war transient. Mukoviszidose ausgeschlossen.</p>
+</div></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+    <valueDateTime value="2024-08-25"/>
+  </extension>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="inactive"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="refuted"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="782964007"/>
+      <display value="Genetic disease"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://omim.org"/>
+      <version value="2024"/>
+      <code value="219700"/>
+      <display value="Cystic fibrosis"/>
+    </coding>
+    <coding>
+      <system value="http://www.orpha.net"/>
+      <code value="586"/>
+      <display value="Cystic fibrosis"/>
+    </coding>
+    <text value="Mukoviszidose (ausgeschlossen)"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <abatementDateTime value="2024-08-25"/>
+  <recordedDate value="2024-08-25"/>
+  <evidence>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="106221001"/>
+        <display value="Genetic finding"/>
+      </coding>
+    </code>
+    <detail>
+      <reference value="Observation/molgen-cftr-heterozygous-carrier"/>
+    </detail>
+  </evidence>
+  <note>
+    <text value="Heterozygoter Anlageträger für F508del. Zweite Mutation ausgeschlossen. IRT-Erhöhung im Screening war transient. Mukoviszidose ausgeschlossen."/>
+  </note>
+</Condition>
