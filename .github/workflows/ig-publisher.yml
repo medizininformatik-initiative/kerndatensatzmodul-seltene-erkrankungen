@@ -93,7 +93,7 @@ jobs:
           # This module's content migration is ongoing (WIP), so tolerate QA errors
           # and still publish the branch preview as long as a landing page exists.
           set +e
-          docker run --rm --network host -v $PWD:/workspace -v /usr/bin/dot:/usr/local/bin/dot:ro -v /usr/lib/x86_64-linux-gnu:/usr/host/lib:ro -e LD_LIBRARY_PATH=/usr/host/lib -w /workspace ghcr.io/gefyra/ig-publisher-with-snapshot-support:latest sh -c "igpublisher -ig ig.ini -tx http://127.0.0.1:8090/fhir -advisor-file advisor.json"
+          docker run --rm --network host -v $PWD:/workspace -v /usr/bin/dot:/usr/local/bin/dot:ro -v /usr/lib/x86_64-linux-gnu:/usr/host/lib:ro -e LD_LIBRARY_PATH=/usr/host/lib -w /workspace ghcr.io/gefyra/ig-publisher-with-snapshot-support:latest sh -c "igpublisher -ig ig.ini -tx http://127.0.0.1:8090/fhir -advisor-file advisor.json -show-message-ids"
           igpub_rc=$?
           set -e
           echo "IG Publisher exit code: ${igpub_rc} (QA validation errors are tolerated for this WIP module)"
