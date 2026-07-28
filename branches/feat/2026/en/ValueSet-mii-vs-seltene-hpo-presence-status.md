@@ -32,7 +32,7 @@ LOINC codes for indicating presence or absence of phenotypic features. Follows H
   "name" : "HPOPresenceStatus",
   "title" : "HPO Phenotype Presence Status",
   "status" : "active",
-  "date" : "2026-07-28T16:26:31+00:00",
+  "date" : "2026-07-28T16:41:18+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

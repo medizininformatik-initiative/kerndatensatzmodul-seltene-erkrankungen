@@ -33,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bo
   "name" : "MII_PR_Seltene_Bodymassindex",
   "title" : "Body Mass Index (BMI) of the patient",
   "status" : "active",
-  "date" : "2026-07-28T16:26:31+00:00",
+  "date" : "2026-07-28T16:41:18+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
