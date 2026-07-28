@@ -35,7 +35,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-ge
   "name" : "GeneticBasis",
   "title" : "MII EX SE Genetic Basis",
   "status" : "active",
-  "date" : "2026-07-28T16:11:09+00:00",
+  "date" : "2026-07-28T16:26:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
