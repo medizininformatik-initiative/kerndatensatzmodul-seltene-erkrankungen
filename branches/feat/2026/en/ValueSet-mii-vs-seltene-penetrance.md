@@ -32,7 +32,7 @@ Value set for qualitative descriptions of genetic penetrance
   "name" : "PenetranceValueSet",
   "title" : "MII VS SE Penetrance",
   "status" : "active",
-  "date" : "2026-07-27T16:21:59+00:00",
+  "date" : "2026-07-28T16:11:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -33,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
   "name" : "MII_PR_Seltene_HPO_Assessment",
   "title" : "MII Profile SE HPO Assessment",
   "status" : "active",
-  "date" : "2026-07-27T16:21:59+00:00",
+  "date" : "2026-07-28T16:11:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

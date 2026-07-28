@@ -35,7 +35,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ext-seltene-o
   "name" : "OnsetAge",
   "title" : "Onset Age Extension",
   "status" : "active",
-  "date" : "2026-07-27T16:21:59+00:00",
+  "date" : "2026-07-28T16:11:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
