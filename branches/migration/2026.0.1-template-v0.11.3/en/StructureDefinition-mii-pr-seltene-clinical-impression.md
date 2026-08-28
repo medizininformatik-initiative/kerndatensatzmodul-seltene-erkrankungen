@@ -108,7 +108,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
   "name" : "MII_PR_Seltene_ClinicalImpression",
   "title" : "MII Profile SE Clinical Impression",
   "status" : "active",
-  "date" : "2026-08-28T13:39:17+00:00",
+  "date" : "2026-08-28T13:49:20+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -43,7 +43,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "name" : "GeneticBasisValueSet",
   "title" : "MII VS SE Genetic Basis",
   "status" : "active",
-  "date" : "2026-08-28T13:39:17+00:00",
+  "date" : "2026-08-28T13:49:20+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
