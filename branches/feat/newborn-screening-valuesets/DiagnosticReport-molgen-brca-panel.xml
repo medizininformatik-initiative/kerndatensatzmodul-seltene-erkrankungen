@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="molgen-brca-panel"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DiagnosticReport molgen-brca-panel</b></p><a name="molgen-brca-panel"> </a><a name="hcmolgen-brca-panel"> </a><h2><span title="Codes:{http://loinc.org 81247-9}">Master HL7 genetic variant reporting panel</span> (<span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 LAB}">Laboratory</span>) </h2><table class="grid"><tr><td>Subject</td><td>Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</td></tr><tr><td>Relevant Time</td><td>2024-11-01</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td></tr><tr><td><a href="Observation-molgen-variant-brca1-pathogenic.html"><span title="Codes:{http://loinc.org 69548-6}">Genetic variant assessment</span></a></td><td><span title="Codes:{http://snomed.info/sct 10828004}">Positive</span></td><td>Final</td></tr></table><p>Pathogene Variante c.68_69del (p.Glu23Valfs*17) in BRCA1 nachgewiesen. Diese Frameshift-Mutation führt zu einem vorzeitigen Stopcodon. Erhöhtes Risiko für Mamma- und Ovarialkarzinom. Lebenszeitrisiko Mammakarzinom: 60-72%, Ovarialkarzinom: 40-44%.</p><p><b>Coded Conclusions:</b></p><ul><li><span title="Codes:{http://omim.org 604370}">Breast-ovarian cancer, familial, 1</span></li></ul></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DiagnosticReport molgen-brca-panel</b></p><a name="de-molgen-brca-panel"> </a><a name="de-hcmolgen-brca-panel"> </a><h2><span title="Codes:{http://loinc.org 81247-9}">Master HL7 genetic variant reporting panel</span> (<span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 LAB}">Laboratory</span>) </h2><table class="grid"><tr><td>Subject</td><td>Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</td></tr><tr><td>Relevant Time</td><td>2024-11-01</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td></tr><tr><td><a href="Observation-molgen-variant-brca1-pathogenic.html"><span title="Codes:{http://loinc.org 69548-6}">Genetic variant assessment</span></a></td><td><span title="Codes:{http://snomed.info/sct 10828004}">Positive</span></td><td>Final</td></tr></table><p>Pathogene Variante c.68_69del (p.Glu23Valfs*17) in BRCA1 nachgewiesen. Diese Frameshift-Mutation führt zu einem vorzeitigen Stopcodon. Erhöhtes Risiko für Mamma- und Ovarialkarzinom. Lebenszeitrisiko Mammakarzinom: 60-72%, Ovarialkarzinom: 40-44%.</p><p><b>Coded Conclusions:</b></p><ul><li><span title="Codes:{http://omim.org 604370}">Breast-ovarian cancer, familial, 1</span></li></ul></div></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="LAB"/>
+      <display value="Laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="81247-9"/>
+      <display value="Master HL7 genetic variant reporting panel"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <effectiveDateTime value="2024-11-01"/>
+  <result>
+    <reference value="Observation/molgen-variant-brca1-pathogenic"/>
+  </result>
+  <conclusion value="Pathogene Variante c.68_69del (p.Glu23Valfs*17) in BRCA1 nachgewiesen. Diese Frameshift-Mutation führt zu einem vorzeitigen Stopcodon. Erhöhtes Risiko für Mamma- und Ovarialkarzinom. Lebenszeitrisiko Mammakarzinom: 60-72%, Ovarialkarzinom: 40-44%."/>
+  <conclusionCode>
+    <coding>
+      <system value="http://omim.org"/>
+      <code value="604370"/>
+      <display value="Breast-ovarian cancer, familial, 1"/>
+    </coding>
+  </conclusionCode>
+</DiagnosticReport>

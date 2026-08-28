@@ -1,0 +1,77 @@
+# MII CS SE Empfehlung Status Begründung - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII CS SE Empfehlung Status Begründung**
+
+## CodeSystem: MII CS SE Empfehlung Status Begründung 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-empfehlung-status-begruendung | *Version*:2027.0.0-ballot |
+| Active as of 2026-08-28 | *Computable Name*:MII_CS_Seltene_Empfehlung_StatusBegruendung |
+
+ 
+Begründung bei fehlender Empfehlung 
+
+This Code system is referenced in the definition of the following value sets:
+
+* [MII VS SE Empfehlung Status Begründung](ValueSet-mii-vs-seltene-empfehlung-status-begruendung.md)
+
+-------
+
+ [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-seltene-empfehlung-status-begruendung",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-empfehlung-status-begruendung",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_CS_Seltene_Empfehlung_StatusBegruendung",
+  "title" : "MII CS SE Empfehlung Status Begründung",
+  "status" : "active",
+  "date" : "2026-08-28T14:48:20+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Begründung bei fehlender Empfehlung",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 1,
+  "concept" : [{
+    "code" : "no-target",
+    "display" : "Keine therapeutische Konsequenz",
+    "definition" : "Keine therapeutische Konsequenz durch fehlende Empfehlung"
+  }]
+}
+
+```

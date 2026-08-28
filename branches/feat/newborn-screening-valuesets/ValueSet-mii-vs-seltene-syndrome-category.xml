@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-seltene-syndrome-category"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-seltene-syndrome-category</b></p><a name="mii-vs-seltene-syndrome-category"> </a><a name="hcmii-vs-seltene-syndrome-category"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/32895009">32895009</a></td><td>Genetic disorder</td></tr><tr><td><a href="http://snomed.info/id/75934005">75934005</a></td><td>Metabolic disease</td></tr><tr><td><a href="http://snomed.info/id/128139000">128139000</a></td><td>Inflammatory disorder</td></tr><tr><td><a href="http://snomed.info/id/276654001">276654001</a></td><td>Congenital malformation</td></tr><tr><td><a href="http://snomed.info/id/371097004">371097004</a></td><td>Developmental disorder</td></tr><tr><td><a href="http://snomed.info/id/254829008">254829008</a></td><td>Degenerative disorder</td></tr></table></li></ul></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-seltene-syndrome-category</b></p><a name="de-mii-vs-seltene-syndrome-category"> </a><a name="de-hcmii-vs-seltene-syndrome-category"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/32895009">32895009</a></td><td>Genetic disorder</td></tr><tr><td><a href="http://snomed.info/id/75934005">75934005</a></td><td>Metabolic disease</td></tr><tr><td><a href="http://snomed.info/id/128139000">128139000</a></td><td>Inflammatory disorder</td></tr><tr><td><a href="http://snomed.info/id/276654001">276654001</a></td><td>Congenital malformation</td></tr><tr><td><a href="http://snomed.info/id/371097004">371097004</a></td><td>Developmental disorder</td></tr><tr><td><a href="http://snomed.info/id/254829008">254829008</a></td><td>Degenerative disorder</td></tr></table></li></ul></div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-syndrome-category"/>
+  <version value="2027.0.0-ballot"/>
+  <name value="SyndromeCategoryVS"/>
+  <title value="Syndrome Category Value Set"/>
+  <status value="active"/>
+  <date value="2026-08-28T14:48:20+00:00"/>
+  <publisher value="Medizininformatik Initiative">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="de"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Medizininformatik Initiative"/>
+      </extension>
+    </extension>
+  </publisher>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Categories for classifying syndrome types in rare diseases"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="32895009"/>
+        <display value="Genetic disorder"/>
+      </concept>
+      <concept>
+        <code value="75934005"/>
+        <display value="Metabolic disease"/>
+      </concept>
+      <concept>
+        <code value="128139000"/>
+        <display value="Inflammatory disorder"/>
+      </concept>
+      <concept>
+        <code value="276654001"/>
+        <display value="Congenital malformation"/>
+      </concept>
+      <concept>
+        <code value="371097004"/>
+        <display value="Developmental disorder"/>
+      </concept>
+      <concept>
+        <code value="254829008"/>
+        <display value="Degenerative disorder"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

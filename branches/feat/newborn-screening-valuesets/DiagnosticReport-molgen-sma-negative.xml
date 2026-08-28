@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="molgen-sma-negative"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DiagnosticReport molgen-sma-negative</b></p><a name="molgen-sma-negative"> </a><a name="hcmolgen-sma-negative"> </a><h2><span title="Codes:{http://loinc.org 51969-4}">Genetic analysis report</span> (<span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 LAB}">Laboratory</span>) </h2><table class="grid"><tr><td>Subject</td><td>Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</td></tr><tr><td>Relevant Time</td><td>2024-07-26</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Note</b></td></tr><tr><td><a href="Observation-molgen-smn1-normal-copies.html"><span title="Codes:{http://loinc.org 69548-6}">Genetic variant assessment</span></a></td><td><span title="Codes:{http://snomed.info/sct 280413001}">Normal result</span></td><td>Final, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></td><td><blockquote><div><p>Normale Kopienanzahl des SMN1-Gens. SMA ausgeschlossen.</p>
+</div></blockquote></td></tr></table><p>SMN1-Gen: 2 Kopien (Normalbefund). SMN2-Gen: 2 Kopien. Spinale Muskelatrophie ausgeschlossen.</p><p><b>Coded Conclusions:</b></p><ul><li><span title="Codes:{http://snomed.info/sct 280413001}">Normal result</span></li></ul></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DiagnosticReport molgen-sma-negative</b></p><a name="de-molgen-sma-negative"> </a><a name="de-hcmolgen-sma-negative"> </a><h2><span title="Codes:{http://loinc.org 51969-4}">Genetic analysis report</span> (<span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 LAB}">Laboratory</span>) </h2><table class="grid"><tr><td>Subject</td><td>Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</td></tr><tr><td>Relevant Time</td><td>2024-07-26</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Note</b></td></tr><tr><td><a href="Observation-molgen-smn1-normal-copies.html"><span title="Codes:{http://loinc.org 69548-6}">Genetic variant assessment</span></a></td><td><span title="Codes:{http://snomed.info/sct 280413001}">Normal result</span></td><td>Final, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></td><td><blockquote><div><p>Normale Kopienanzahl des SMN1-Gens. SMA ausgeschlossen.</p>
+</div></blockquote></td></tr></table><p>SMN1-Gen: 2 Kopien (Normalbefund). SMN2-Gen: 2 Kopien. Spinale Muskelatrophie ausgeschlossen.</p><p><b>Coded Conclusions:</b></p><ul><li><span title="Codes:{http://snomed.info/sct 280413001}">Normal result</span></li></ul></div></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="LAB"/>
+      <display value="Laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="51969-4"/>
+      <display value="Genetic analysis report"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <effectiveDateTime value="2024-07-26"/>
+  <result>
+    <reference value="Observation/molgen-smn1-normal-copies"/>
+  </result>
+  <conclusion value="SMN1-Gen: 2 Kopien (Normalbefund). SMN2-Gen: 2 Kopien. Spinale Muskelatrophie ausgeschlossen."/>
+  <conclusionCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="280413001"/>
+      <display value="Normal result"/>
+    </coding>
+  </conclusionCode>
+</DiagnosticReport>
