@@ -115,7 +115,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Consanguinity",
   "title" : "MII PR SE Consanguinity",
   "status" : "active",
-  "date" : "2026-08-28T14:48:20+00:00",
+  "date" : "2026-08-28T15:01:21+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

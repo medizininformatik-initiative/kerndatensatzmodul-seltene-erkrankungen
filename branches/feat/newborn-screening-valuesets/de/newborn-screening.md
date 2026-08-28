@@ -86,7 +86,7 @@ Ein vollständiger Befund staffelt sich über drei Ebenen: das Report-Panel `571
 ```
 57128-1  Newborn Screening Report summary panel
  ├─ hasMember → 57130-7  Gesamtinterpretation          → LA12428-1 / LA18944-1 …
- ├─ hasMember → 46778-7  MCAD-Interpretation           → LA18592-8 / LA18593-6
+ ├─ hasMember → 46752-2  MCAD/GA-2-Interpretation      → LA18592-8 / LA18593-6
  │    └─ derivedFrom → 53175-6  C8       (valueQuantity µmol/L)
  │    └─ derivedFrom → 53177-2  C8/C10   (valueQuantity 1)
  └─ hasMember → 46762-1  Hypothyreose-Interpretation   → LA18592-8 …
@@ -104,10 +104,14 @@ Diese Lücken wurden durch Suchen festgestellt, nicht angenommen. Sie sind wicht
 | :--- | :--- | :--- |
 | 3-OH-Propionsäure in Trockenblut | Second-Tier-Parameter der Zielkrankheiten 17–20 | nur Plasma (`47536-8`), Urin (`29625-1`), Liquor, Fruchtwasser — kein DBS-Code |
 | PAP (Pankreatitis-assoziiertes Protein) | zweite Stufe des CF-Programms | überhaupt kein LOINC-Code, in keinem Material |
-| Interpretationscode Vitamin-B12-Mangel | Zielkrankheit 17 | keiner unter den 74 NBS-Interpretationscodes;`46747-2`**Propionic/Methylmalonic Acidemias**kommt am nächsten, bedeutet aber nicht dasselbe |
+| Interpretationscode Vitamin-B12-Mangel | Zielkrankheit 17 | keiner unter den NBS-Interpretationscodes. Der nächstliegende,`46747-2`**Propionic/Methylmalonic Acidemias**, ist selbst DISCOURAGED; der aktive Rückfall ist der Gruppencode`46744-9`**Organic acidemias**, der noch breiter ist |
 | SMN1-Deletionsnachweis in Trockenblut | Zielkrankheit 16, wo die Richtlinie die homozygote SMN1-Deletion fordert | nur`92002-5`, ein Ct-Wert — kein Deletionsbefund |
 | Acylcarnitin-/Aminosäure-**Panel**für Trockenblut | Sammelcode für das MS/MS-Profil | Panel-Codes gibt es nur für Serum, Plasma und Urin; für Trockenblut nur Einzelanalyt-Codes |
 | ORPHA für „Vitamin-B12-Mangel" | Zielkrankheit 17 | kein Code trifft den breiten Begriff der Richtlinie, der auch den erworbenen (maternal bedingten) Mangel umfasst |
+
+**LOINC hat die meisten krankheitsspezifischen Interpretationscodes zurückgezogen.** Ein zweiter Prüfdurchgang über den gesamten Codebestand fand **18 DISCOURAGED-Codes**; für acht davon gibt es keinen aktiven krankheitsspezifischen Nachfolger, sondern nur Gruppencodes wie `46736-5` **Fatty acid oxidation defects**, `46744-9` **Organic acidemias** und `46733-2` **Amino acidemias**. Betroffen sind LCHAD, VLCAD, CPT2/CACT, Glutarazidurie I, Propion- und Methylmalonazidämie, Homocystinurie und Tyrosinämie. Wer die einzelne Zielkrankheit weiter benennen will, muss die Spezifität anderswo tragen — über den Gruppencode in `Observation.code` **plus** einen Bezug zur `Condition` oder über die zugrunde liegenden Analyt-Observations. Zwei Codes, die sich als Nachfolger anbieten würden, `46766-2` und `46767-0`, sind selbst DISCOURAGED.
+
+Derselbe Durchgang zeigte, dass sich das Sichelzell-Screening nicht nur im Code, sondern im Abbildungsmuster geändert hat: Die drei methodenspezifischen „Hemoglobin pattern"-Codes (`54104-5`, `54103-7`, `54105-2`) sind alle DISCOURAGED. LOINC modelliert den Befund jetzt als Rangfolge der tatsächlich nachgewiesenen Hämoglobine (`64117-5` **Most predominant hemoglobin in DBS** und Geschwistercodes) plus einen Verdachtscode (`71592-0`). Die Tabelle oben nutzt den Screening-Panel-Code `54081-5`; wer den Befund selbst braucht und nicht die Tatsache, dass gescreent wurde, nimmt `64117-5`.
 
 **Einen Code hat der Build gefunden, nicht die Recherche.** `54104-5` **Hemoglobin pattern in DBS by HPLC** löst einwandfrei auf und wirkt wie der offensichtliche Leitanalyt der Sichelzellkrankheit — LOINC führt ihn aber mit dem Status **DISCOURAGED**, was der IG-Publisher meldete, nachdem das ValueSet schon existierte. Ersetzt durch den Panel-Code `54081-5` (ACTIVE); der spezifische Befund der Sichelzellkrankheit ist die HbS-Fraktion `56476-5`, die im generierten Hämoglobin-ValueSet enthalten ist. Der Generator liest jetzt die LOINC-Eigenschaft `STATUS` mit, damit ein discouraged oder deprecated Code gemeldet statt stillschweigend publiziert wird.
 

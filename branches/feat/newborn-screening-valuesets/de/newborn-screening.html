@@ -632,7 +632,7 @@ krankheitsbezogene Interpretationen, die zwischen Panel und Einzelanalyten sitze
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>57128-1  Newborn Screening Report summary panel
  ├─ hasMember → 57130-7  Gesamtinterpretation          → LA12428-1 / LA18944-1 …
- ├─ hasMember → 46778-7  MCAD-Interpretation           → LA18592-8 / LA18593-6
+ ├─ hasMember → 46752-2  MCAD/GA-2-Interpretation      → LA18592-8 / LA18593-6
  │    └─ derivedFrom → 53175-6  C8       (valueQuantity µmol/L)
  │    └─ derivedFrom → 53177-2  C8/C10   (valueQuantity 1)
  └─ hasMember → 46762-1  Hypothyreose-Interpretation   → LA18592-8 …
@@ -674,7 +674,7 @@ von ihnen sonst ein Code erfunden wird.</p>
     <tr>
       <td>Interpretationscode Vitamin-B12-Mangel</td>
       <td>Zielkrankheit 17</td>
-      <td>keiner unter den 74 NBS-Interpretationscodes; <code class="language-plaintext highlighter-rouge">46747-2</code> <em>Propionic/Methylmalonic Acidemias</em> kommt am nächsten, bedeutet aber nicht dasselbe</td>
+      <td>keiner unter den NBS-Interpretationscodes. Der nächstliegende, <code class="language-plaintext highlighter-rouge">46747-2</code> <em>Propionic/Methylmalonic Acidemias</em>, ist selbst DISCOURAGED; der aktive Rückfall ist der Gruppencode <code class="language-plaintext highlighter-rouge">46744-9</code> <em>Organic acidemias</em>, der noch breiter ist</td>
     </tr>
     <tr>
       <td>SMN1-Deletionsnachweis in Trockenblut</td>
@@ -693,6 +693,24 @@ von ihnen sonst ein Code erfunden wird.</p>
     </tr>
   </tbody>
 </table>
+
+<p><strong>LOINC hat die meisten krankheitsspezifischen Interpretationscodes zurückgezogen.</strong> Ein zweiter
+Prüfdurchgang über den gesamten Codebestand fand <strong>18 DISCOURAGED-Codes</strong>; für acht davon gibt es
+keinen aktiven krankheitsspezifischen Nachfolger, sondern nur Gruppencodes wie <code class="language-plaintext highlighter-rouge">46736-5</code> <em>Fatty acid
+oxidation defects</em>, <code class="language-plaintext highlighter-rouge">46744-9</code> <em>Organic acidemias</em> und <code class="language-plaintext highlighter-rouge">46733-2</code> <em>Amino acidemias</em>. Betroffen sind
+LCHAD, VLCAD, CPT2/CACT, Glutarazidurie I, Propion- und Methylmalonazidämie, Homocystinurie und
+Tyrosinämie. Wer die einzelne Zielkrankheit weiter benennen will, muss die Spezifität anderswo
+tragen — über den Gruppencode in <code class="language-plaintext highlighter-rouge">Observation.code</code> <strong>plus</strong> einen Bezug zur <code class="language-plaintext highlighter-rouge">Condition</code> oder über
+die zugrunde liegenden Analyt-Observations. Zwei Codes, die sich als Nachfolger anbieten würden,
+<code class="language-plaintext highlighter-rouge">46766-2</code> und <code class="language-plaintext highlighter-rouge">46767-0</code>, sind selbst DISCOURAGED.</p>
+
+<p>Derselbe Durchgang zeigte, dass sich das Sichelzell-Screening nicht nur im Code, sondern im
+Abbildungsmuster geändert hat: Die drei methodenspezifischen „Hemoglobin pattern"-Codes (<code class="language-plaintext highlighter-rouge">54104-5</code>,
+<code class="language-plaintext highlighter-rouge">54103-7</code>, <code class="language-plaintext highlighter-rouge">54105-2</code>) sind alle DISCOURAGED. LOINC modelliert den Befund jetzt als Rangfolge der
+tatsächlich nachgewiesenen Hämoglobine (<code class="language-plaintext highlighter-rouge">64117-5</code> <em>Most predominant hemoglobin in DBS</em> und
+Geschwistercodes) plus einen Verdachtscode (<code class="language-plaintext highlighter-rouge">71592-0</code>). Die Tabelle oben nutzt den
+Screening-Panel-Code <code class="language-plaintext highlighter-rouge">54081-5</code>; wer den Befund selbst braucht und nicht die Tatsache, dass
+gescreent wurde, nimmt <code class="language-plaintext highlighter-rouge">64117-5</code>.</p>
 
 <p><strong>Einen Code hat der Build gefunden, nicht die Recherche.</strong> <code class="language-plaintext highlighter-rouge">54104-5</code> <em>Hemoglobin pattern in DBS by
 HPLC</em> löst einwandfrei auf und wirkt wie der offensichtliche Leitanalyt der Sichelzellkrankheit —
@@ -741,7 +759,7 @@ nicht zusätzlich gegen die offizielle LOINC-Release-Datei abgeglichen.</p>
 
           IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Aug 28, 2026 14:48+0000">2026-08-28</span>
+          Erstellt <span title="Fri, Aug 28, 2026 15:01+0000">2026-08-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
               <!-- Branding override for the fhir2.base.template footer fragment.

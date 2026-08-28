@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-ag
   "name" : "AgeOfOnset",
   "title" : "MII EX SE Age of Onset",
   "status" : "active",
-  "date" : "2026-08-28T14:48:20+00:00",
+  "date" : "2026-08-28T15:01:21+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

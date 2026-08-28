@@ -667,7 +667,7 @@ interpretations that sit between the panel and the individual analytes.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>57128-1  Newborn Screening Report summary panel
  ├─ hasMember → 57130-7  overall interpretation        → LA12428-1 / LA18944-1 …
- ├─ hasMember → 46778-7  MCAD interpretation           → LA18592-8 / LA18593-6
+ ├─ hasMember → 46752-2  MCAD/GA-2 interpretation      → LA18592-8 / LA18593-6
  │    └─ derivedFrom → 53175-6  C8       (valueQuantity µmol/L)
  │    └─ derivedFrom → 53177-2  C8/C10   (valueQuantity 1)
  └─ hasMember → 46762-1  hypothyroidism interpretation → LA18592-8 …
@@ -709,7 +709,7 @@ where an implementer will otherwise invent a code.</p>
     <tr>
       <td>Vitamin B12 deficiency interpretation</td>
       <td>condition 17</td>
-      <td>none among the 74 newborn-screen interpretation codes; <code class="language-plaintext highlighter-rouge">46747-2</code> <em>Propionic/Methylmalonic Acidemias</em> is the closest but does not mean the same thing</td>
+      <td>none among the newborn-screen interpretation codes. The closest, <code class="language-plaintext highlighter-rouge">46747-2</code> <em>Propionic/Methylmalonic Acidemias</em>, is itself DISCOURAGED; the active fallback is the group code <code class="language-plaintext highlighter-rouge">46744-9</code> <em>Organic acidemias</em>, which is broader still</td>
     </tr>
     <tr>
       <td>SMN1 deletion in DBS</td>
@@ -728,6 +728,23 @@ where an implementer will otherwise invent a code.</p>
     </tr>
   </tbody>
 </table>
+
+<p><strong>LOINC has retired most of the per-condition interpretation codes.</strong> A second verification pass over
+the whole code set found <strong>18 DISCOURAGED codes</strong>, and for eight of them there is no active
+condition-specific successor — only group codes such as <code class="language-plaintext highlighter-rouge">46736-5</code> <em>Fatty acid oxidation defects</em>,
+<code class="language-plaintext highlighter-rouge">46744-9</code> <em>Organic acidemias</em> and <code class="language-plaintext highlighter-rouge">46733-2</code> <em>Amino acidemias</em>. That affects LCHAD, VLCAD, CPT2/CACT,
+glutaric aciduria I, propionic and methylmalonic acidemia, homocystinuria and tyrosinemia. Anyone
+who wants to keep naming the individual condition has to carry the specificity elsewhere — through
+the group code on <code class="language-plaintext highlighter-rouge">Observation.code</code> <strong>plus</strong> a link to the <code class="language-plaintext highlighter-rouge">Condition</code>, or through the underlying
+analyte observations. Two codes that still look like obvious successors, <code class="language-plaintext highlighter-rouge">46766-2</code> and <code class="language-plaintext highlighter-rouge">46767-0</code>,
+are DISCOURAGED themselves.</p>
+
+<p>The same pass established that the sickle cell screen has changed shape rather than merely changed
+code: the three method-specific "haemoglobin pattern" codes (<code class="language-plaintext highlighter-rouge">54104-5</code>, <code class="language-plaintext highlighter-rouge">54103-7</code>, <code class="language-plaintext highlighter-rouge">54105-2</code>) are all
+DISCOURAGED, and LOINC now models the finding as a ranking of the haemoglobins actually detected
+(<code class="language-plaintext highlighter-rouge">64117-5</code> <em>Most predominant hemoglobin in DBS</em> and its siblings) plus a suspicion code
+(<code class="language-plaintext highlighter-rouge">71592-0</code>). The table above uses the screening panel code <code class="language-plaintext highlighter-rouge">54081-5</code>; a project that needs the
+finding itself, not the fact that screening happened, should use <code class="language-plaintext highlighter-rouge">64117-5</code>.</p>
 
 <p><strong>One code was caught by the build, not by the research.</strong> <code class="language-plaintext highlighter-rouge">54104-5</code> <em>Hemoglobin pattern in DBS by
 HPLC</em> resolves perfectly well and looks like the obvious lead analyte for sickle cell disease — but
@@ -776,7 +793,7 @@ official LOINC release file.</p>
 
           IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Aug 28, 2026 14:48+0000">2026-08-28</span>
+          Generated <span title="Fri, Aug 28, 2026 15:01+0000">2026-08-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
               <!-- Branding override for the fhir2.base.template footer fragment.
