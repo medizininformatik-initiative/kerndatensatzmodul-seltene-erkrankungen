@@ -121,7 +121,7 @@ interpretations that sit between the panel and the individual analytes.
 ```
 57128-1  Newborn Screening Report summary panel
  ├─ hasMember → 57130-7  overall interpretation        → LA12428-1 / LA18944-1 …
- ├─ hasMember → 46778-7  MCAD interpretation           → LA18592-8 / LA18593-6
+ ├─ hasMember → 46752-2  MCAD/GA-2 interpretation      → LA18592-8 / LA18593-6
  │    └─ derivedFrom → 53175-6  C8       (valueQuantity µmol/L)
  │    └─ derivedFrom → 53177-2  C8/C10   (valueQuantity 1)
  └─ hasMember → 46762-1  hypothyroidism interpretation → LA18592-8 …
@@ -145,10 +145,27 @@ where an implementer will otherwise invent a code.
 |---|---|---|
 | 3-OH-propionic acid in DBS | second-tier parameter for conditions 17–20 | only plasma (`47536-8`), urine (`29625-1`), CSF, amniotic fluid — no DBS code |
 | PAP (pancreatitis-associated protein) | second tier of the CF programme | no LOINC code at all, in any specimen |
-| Vitamin B12 deficiency interpretation | condition 17 | none among the 74 newborn-screen interpretation codes; `46747-2` *Propionic/Methylmalonic Acidemias* is the closest but does not mean the same thing |
+| Vitamin B12 deficiency interpretation | condition 17 | none among the newborn-screen interpretation codes. The closest, `46747-2` *Propionic/Methylmalonic Acidemias*, is itself DISCOURAGED; the active fallback is the group code `46744-9` *Organic acidemias*, which is broader still |
 | SMN1 deletion in DBS | condition 16, where the Richtlinie asks for homozygous SMN1 deletion | only `92002-5`, a cycle-threshold value — not a deletion finding |
 | Acylcarnitine / amino acid **panel** for DBS | a collective code for the MS/MS profile | panel codes exist only for serum, plasma and urine; for DBS there are single-analyte codes only |
 | ORPHA for "vitamin B12 deficiency" | condition 17 | no code matches the Richtlinie's broad term, which also covers acquired maternal deficiency |
+
+**LOINC has retired most of the per-condition interpretation codes.** A second verification pass over
+the whole code set found **18 DISCOURAGED codes**, and for eight of them there is no active
+condition-specific successor — only group codes such as `46736-5` *Fatty acid oxidation defects*,
+`46744-9` *Organic acidemias* and `46733-2` *Amino acidemias*. That affects LCHAD, VLCAD, CPT2/CACT,
+glutaric aciduria I, propionic and methylmalonic acidemia, homocystinuria and tyrosinemia. Anyone
+who wants to keep naming the individual condition has to carry the specificity elsewhere — through
+the group code on `Observation.code` **plus** a link to the `Condition`, or through the underlying
+analyte observations. Two codes that still look like obvious successors, `46766-2` and `46767-0`,
+are DISCOURAGED themselves.
+
+The same pass established that the sickle cell screen has changed shape rather than merely changed
+code: the three method-specific "haemoglobin pattern" codes (`54104-5`, `54103-7`, `54105-2`) are all
+DISCOURAGED, and LOINC now models the finding as a ranking of the haemoglobins actually detected
+(`64117-5` *Most predominant hemoglobin in DBS* and its siblings) plus a suspicion code
+(`71592-0`). The table above uses the screening panel code `54081-5`; a project that needs the
+finding itself, not the fact that screening happened, should use `64117-5`.
 
 **One code was caught by the build, not by the research.** `54104-5` *Hemoglobin pattern in DBS by
 HPLC* resolves perfectly well and looks like the obvious lead analyte for sickle cell disease — but
