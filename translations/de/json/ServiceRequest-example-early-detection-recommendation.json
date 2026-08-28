@@ -1,0 +1,37 @@
+{
+  "id" : "ServiceRequest-example-early-detection-recommendation",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Früherkennung",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Symptomatisch",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Screening for disorder",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Jährliche kardiologische Kontrolle bei Marfan-Syndrom",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Jährliche Echokardiographie zur Früherkennung von Aortenwurzeldilatation empfohlen",
+      "target" : null
+    }]
+  }]
+}

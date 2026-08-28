@@ -217,9 +217,15 @@ This document contains the semantic annotations for a case example of Marfan syn
 |--------------|-----|--------------|-----------------|
 | `bundle-marfan-complete` | Bundle | Transaction bundle with all resources | 20 resources |
 
-### Resource diagram
+### Resource diagrams
+
+#### Overall view of all resources and their relationships
 
 ![Marfan case example resource overview](Marfan_Case_Resources_Diagram.svg)
+
+#### Timeline
+
+![Marfan case example timeline](Marfan_Case_Timeline_Diagram.svg)
 
 ### Implementation
 

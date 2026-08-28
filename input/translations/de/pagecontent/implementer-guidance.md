@@ -5,7 +5,7 @@ Das Modul Seltene Erkrankungen ist ein KDS-Modul für die Basismodule der Medizi
 
 &nbsp;
 
-Wie auf der [UML-Seite](information-model.html) gezeigt, ist das mit folgenden anderen Modulen zu verwenden:
+Wie auf der [UML-Seite](uml-diagrams.html) gezeigt, ist das mit folgenden anderen Modulen zu verwenden:
 
 * Molekulargenetischer Befund
 * Symptom

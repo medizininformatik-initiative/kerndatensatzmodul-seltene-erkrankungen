@@ -185,21 +185,17 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 |--------------|-----|--------------|-----------------|
 | `bundle-sma-complete` | Bundle | Transaction Bundle mit allen Ressourcen | 22 Ressourcen |
 
-## Ressourcen-Diagramme
-
-### Gesamtübersicht aller Ressourcen und Beziehungen
-
-*(Diagramm folgt.)*
-
-### Zeitlicher Verlauf
-
-*(Diagramm folgt.)*
-
 ## Implementierung
 
 Die vollständigen FHIR-Ressourcen sind in den FSH-Quellen dieses Moduls definiert (`input/fsh/Beispiel_SMA/`), inklusive Transaction Bundle.
 
 
-### Ressourcen-Diagramm
+### Ressourcen-Diagramme
 
-![SMA-Fallbeispiel Ressourcenuebersicht](SMA_Case_Resources_Diagram.svg)
+#### Gesamtübersicht aller Ressourcen und Beziehungen
+
+![SMA-Fallbeispiel Ressourcenübersicht](SMA_Case_Resources_Diagram.svg)
+
+#### Zeitlicher Verlauf
+
+![SMA-Fallbeispiel zeitlicher Verlauf](SMA_Case_Timeline_Diagram.svg)

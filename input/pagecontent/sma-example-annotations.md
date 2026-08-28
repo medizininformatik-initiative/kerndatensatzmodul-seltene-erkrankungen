@@ -184,9 +184,15 @@ This document contains the semantic annotations for a case example of spinal mus
 |--------------|-----|--------------|-----------------|
 | `bundle-sma-complete` | Bundle | Transaction bundle with all resources | 22 resources |
 
-### Resource diagram
+### Resource diagrams
+
+#### Overall view of all resources and their relationships
 
 ![SMA case example resource overview](SMA_Case_Resources_Diagram.svg)
+
+#### Timeline
+
+![SMA case example timeline](SMA_Case_Timeline_Diagram.svg)
 
 ### Implementation
 

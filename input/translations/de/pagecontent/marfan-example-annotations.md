@@ -218,21 +218,17 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 |--------------|-----|--------------|-----------------|
 | `bundle-marfan-complete` | Bundle | Transaction Bundle mit allen Ressourcen | 20 Ressourcen |
 
-## Ressourcen-Diagramme
-
-### Gesamtübersicht aller Ressourcen und Beziehungen
-
-*(Diagramm folgt.)*
-
-### Zeitlicher Verlauf
-
-*(Diagramm folgt.)*
-
 ## Implementierung
 
 Die vollständigen FHIR-Ressourcen sind in den FSH-Quellen dieses Moduls definiert (`input/fsh/Beispiel_Marfan/`), inklusive Transaction Bundle.
 
 
-### Ressourcen-Diagramm
+### Ressourcen-Diagramme
 
-![Marfan-Fallbeispiel Ressourcenuebersicht](Marfan_Case_Resources_Diagram.svg)
+#### Gesamtübersicht aller Ressourcen und Beziehungen
+
+![Marfan-Fallbeispiel Ressourcenübersicht](Marfan_Case_Resources_Diagram.svg)
+
+#### Zeitlicher Verlauf
+
+![Marfan-Fallbeispiel zeitlicher Verlauf](Marfan_Case_Timeline_Diagram.svg)

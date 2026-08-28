@@ -1,0 +1,31 @@
+{
+  "id" : "Encounter-encounter-surgery-planned",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "inpatient encounter",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Admission to cardiology department",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Elektive Aortenwurzelersatz-Operation bei Marfan-Syndrom",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Chief complaint",
+      "target" : null
+    }]
+  }]
+}

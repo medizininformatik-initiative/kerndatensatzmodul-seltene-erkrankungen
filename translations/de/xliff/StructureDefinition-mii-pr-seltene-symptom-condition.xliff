@@ -1,0 +1,519 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="en" target-language="de" id="StructureDefinition-mii-pr-seltene-symptom-condition" original="Resource StructureDefinition-mii-pr-seltene-symptom-condition" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.name">
+             <notes>
+               <note id="n1">A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.</note>
+             </notes>
+        <source>MII_PR_Seltene_Symptom_Condition</source>
+        <target>MII_PR_Seltene_Symptom_Condition</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.title">
+             <notes>
+               <note id="n1">A short, descriptive, user-friendly title for the structure definition.</note>
+             </notes>
+        <source>MII Profile SE Symptom Condition</source>
+        <target>MII Profile SE Symptom Condition</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.publisher">
+             <notes>
+               <note id="n1">The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.contact.name">
+             <notes>
+               <note id="n1">The name of an individual to contact.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.mapping.SE-LogicalModel/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Mapping FHIR zu Seltene Erkrankungen Logical Model</source>
+        <target>Mapping FHIR zu Seltene Erkrankungen Logical Model</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.mapping.workflow/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Workflow Pattern</source>
+        <target>Workflow Pattern</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.mapping.sct-concept/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>SNOMED CT Concept Domain Binding</source>
+        <target>SNOMED CT Concept Domain Binding</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.mapping.v2/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>HL7 v2 Mapping</source>
+        <target>HL7 v2 Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.mapping.w5/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>FiveWs Pattern Mapping</source>
+        <target>FiveWs Pattern Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.mapping.sct-attr/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>SNOMED CT Attribute Binding</source>
+        <target>SNOMED CT Attribute Binding</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Phänotypisierung als Condition</source>
+        <target>Phänotypisierung als Condition</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.clinicalStatus/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Klinischer Status der Symptom-Erkrankung</source>
+        <target>Klinischer Status der Symptom-Erkrankung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.verificationStatus/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Verifikationsstatus der Symptom-Erkrankung</source>
+        <target>Verifikationsstatus der Symptom-Erkrankung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.category/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Kategorie der Erkrankung - muss Symptom-Kategorie enthalten</source>
+        <target>Kategorie der Erkrankung - muss Symptom-Kategorie enthalten</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.category/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Kategoriecodes, die die Erkrankung klassifizieren, mit besonderem Fokus auf symptombezogene Kategorien</source>
+        <target>Kategoriecodes, die die Erkrankung klassifizieren, mit besonderem Fokus auf symptombezogene Kategorien</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.severity/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Schweregrad der Symptom-Erkrankung</source>
+        <target>Schweregrad der Symptom-Erkrankung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.severity/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Schweregradbewertung der Symptom-Erkrankung unter Verwendung von HPO-Schweregrad-Werten</source>
+        <target>Schweregradbewertung der Symptom-Erkrankung unter Verwendung von HPO-Schweregrad-Werten</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.severity/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.severity/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Schweregrad/Verlauf</source>
+        <target>Schweregrad/Verlauf</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>HPO-basierter Symptom-Erkrankungs-Code</source>
+        <target>HPO-basierter Symptom-Erkrankungs-Code</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Code zur Identifikation der Symptom-Erkrankung, vorzugsweise unter Verwendung von Human Phenotype Ontology (HPO) Codes</source>
+        <target>Code zur Identifikation der Symptom-Erkrankung, vorzugsweise unter Verwendung von Human Phenotype Ontology (HPO) Codes</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:hpoCoding/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>HPO Code für das Symptom</source>
+        <target>HPO Code für das Symptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:hpoCoding/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Human Phenotype Ontology Code zur Beschreibung des phänotypischen Symptoms</source>
+        <target>Human Phenotype Ontology Code zur Beschreibung des phänotypischen Symptoms</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:hpoCoding/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:hpoCoding/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>HPO-Term des Symptoms</source>
+        <target>HPO-Term des Symptoms</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:snomedCoding/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>SNOMED CT Code für das Symptom</source>
+        <target>SNOMED CT Code für das Symptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:snomedCoding/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>SNOMED CT Code zur klinischen Beschreibung des Symptoms</source>
+        <target>SNOMED CT Code zur klinischen Beschreibung des Symptoms</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:snomedCoding/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:snomedCoding/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>SNOMED CT Symptom</source>
+        <target>SNOMED CT Symptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:icd10GMCoding/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>ICD-10-GM Code für das Symptom</source>
+        <target>ICD-10-GM Code für das Symptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:icd10GMCoding/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>ICD-10 German Modification Code für die Symptom-Klassifikation</source>
+        <target>ICD-10 German Modification Code für die Symptom-Klassifikation</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:icd10GMCoding/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:icd10GMCoding/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>ICD-10-GM Symptom</source>
+        <target>ICD-10-GM Symptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:mondoCoding/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>MONDO Code für das Symptom</source>
+        <target>MONDO Code für das Symptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:mondoCoding/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Monarch Disease Ontology (MONDO) Code für internationale Interoperabilität. MONDO harmonisiert SNOMED, ORDO, OMIM und ICD automatisch und ermöglicht die Integration mit internationalen Projekten wie Phenopackets und GA4GH.</source>
+        <target>Monarch Disease Ontology (MONDO) Code für internationale Interoperabilität. MONDO harmonisiert SNOMED, ORDO, OMIM und ICD automatisch und ermöglicht die Integration mit internationalen Projekten wie Phenopackets und GA4GH.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:mondoCoding/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.code.coding:mondoCoding/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>MONDO Symptom (internationale Interoperabilität)</source>
+        <target>MONDO Symptom (internationale Interoperabilität)</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.bodySite/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Anatomische Lokalisation des Symptoms</source>
+        <target>Anatomische Lokalisation des Symptoms</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.bodySite/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Die anatomische Lokalisation, wo sich das Symptom manifestiert</source>
+        <target>Die anatomische Lokalisation, wo sich das Symptom manifestiert</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.subject/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Patient mit der Symptom-Erkrankung</source>
+        <target>Patient mit der Symptom-Erkrankung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.subject/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Referenz auf den Patienten, der diese Symptom-Erkrankung hat</source>
+        <target>Referenz auf den Patienten, der diese Symptom-Erkrankung hat</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.subject/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>Patient</source>
+        <target>Patient</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.subject/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Patient/Indexpatient</source>
+        <target>Patient/Indexpatient</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.encounter/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Untersuchungsdatum</source>
+        <target>AnamneseUndDiagnostik.Untersuchungsdatum</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.encounter/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Untersuchungskontakt</source>
+        <target>Untersuchungskontakt</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.onset[x]/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Beginn der Symptom-Erkrankung</source>
+        <target>Beginn der Symptom-Erkrankung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.onset[x]/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Geschätztes oder tatsächliches Datum, Alter, Zeitraum oder zeitliche Beschreibung, wann die Symptom-Erkrankung begann</source>
+        <target>Geschätztes oder tatsächliches Datum, Alter, Zeitraum oder zeitliche Beschreibung, wann die Symptom-Erkrankung begann</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.onset[x]:onsetDateTime/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.onset[x]:onsetDateTime/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Startdatum des Symptoms</source>
+        <target>Startdatum des Symptoms</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.onset[x]:onsetPeriod.start/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.onset[x]:onsetPeriod.start/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Beginn Symptomzeitraum</source>
+        <target>Beginn Symptomzeitraum</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.onset[x]:onsetPeriod.end/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.onset[x]:onsetPeriod.end/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Ende Symptomzeitraum</source>
+        <target>Ende Symptomzeitraum</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.onset[x]:onsetAge/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.onset[x]:onsetAge/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Alter bei Symptombeginn</source>
+        <target>Alter bei Symptombeginn</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.onset[x]:onsetString/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.onset[x]:onsetString/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Lebensphase Symptom</source>
+        <target>Lebensphase Symptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.abatement[x]/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Auflösung der Symptom-Erkrankung</source>
+        <target>Auflösung der Symptom-Erkrankung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.abatement[x]/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Datum, Alter, Zeitraum oder zeitliche Beschreibung, wann die Symptom-Erkrankung abgeklungen ist oder in Remission ging</source>
+        <target>Datum, Alter, Zeitraum oder zeitliche Beschreibung, wann die Symptom-Erkrankung abgeklungen ist oder in Remission ging</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.abatement[x]:abatementDateTime/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>Ende des Symptoms</source>
+        <target>Ende des Symptoms</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.abatement[x]:abatementDateTime/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Enddatum des Symptoms</source>
+        <target>Enddatum des Symptoms</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.recordedDate/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Untersuchungsdatum</source>
+        <target>AnamneseUndDiagnostik.Untersuchungsdatum</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.recordedDate/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Dokumentationsdatum</source>
+        <target>Dokumentationsdatum</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.stage/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Stadium oder Progression der Symptom-Erkrankung</source>
+        <target>Stadium oder Progression der Symptom-Erkrankung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.evidence/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Unterstützende Evidenz für die Symptom-Erkrankung</source>
+        <target>Unterstützende Evidenz für die Symptom-Erkrankung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.evidence.code/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.evidence.code/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Unterstützende HPO-Symptome</source>
+        <target>Unterstützende HPO-Symptome</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.evidence.detail/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Unterstützende Beobachtungen oder Dokumente</source>
+        <target>Unterstützende Beobachtungen oder Dokumente</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.evidence.detail/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.evidence.detail/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Verweis auf Beobachtungen</source>
+        <target>Verweis auf Beobachtungen</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.note/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Zusätzliche Anmerkungen zur Symptom-Erkrankung</source>
+        <target>Zusätzliche Anmerkungen zur Symptom-Erkrankung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-symptom-condition" resname="StructureDefinition.element.Condition.note/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Zusätzliche Beschreibung der Symptom-Erkrankung, die in anderen Feldern nicht erfasst ist</source>
+        <target>Zusätzliche Beschreibung der Symptom-Erkrankung, die in anderen Feldern nicht erfasst ist</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
