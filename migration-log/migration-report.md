@@ -30,6 +30,16 @@ The MII KDS module **Seltene Erkrankungen** (rare diseases) has been moved off S
 
 **Build status:** SUSHI 0 errors / 0 warnings. IG Publisher exits 0 and renders both language trees (804 pages each). QA reports 116 errors — every one of them classified in ③, and every one either a terminology-server false positive or a defect the source already had. The one defect the migration itself introduced (a wrong link on the German implementer-guidance page) was found by the verification pass and fixed.
 
+## Look at the result first
+
+Once the `Build and Publish IG` workflow on this branch is green, the rendered guide is at
+
+**`https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen/branches/migration/2026.0.1-template-v0.11.3/`**
+
+Note the **slashes** — the branch name is a path, not a dashed slug. English is what the URL serves; the language switcher in the header leads to the German pages. Reviewing the rendering is worth more than reviewing the diff: the queues below say what to look for.
+
+The preview is a branch preview and is overwritten on every push to this branch. It is **not** a publication.
+
 ## Where the evidence lives
 
 | Question | File |
