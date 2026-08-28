@@ -1,0 +1,325 @@
+{
+  "id" : "ValueSet-mii-vs-seltene-nbs-ratio-dbs",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "ValueSet.name",
+      "context" : "ValueSet.name",
+      "source" : "MII_VS_Seltene_NBS_Ratio_DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.title",
+      "context" : "ValueSet.title",
+      "source" : "MII VS Seltene Erkrankungen NBS Quotienten (Trockenblut)",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.publisher",
+      "context" : "ValueSet.publisher",
+      "source" : "Medizininformatik Initiative",
+      "target" : "Medizininformatik Initiative"
+    },
+    {
+      "id" : "ContactDetail.name",
+      "context" : "ContactDetail.name",
+      "source" : "Medizininformatik Initiative",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.description",
+      "context" : "ValueSet.description",
+      "source" : "Diagnostische Quotienten aus Trockenblut-Analyten. Im Neugeborenenscreening tragen die Verhältnisse (z. B. C3/C2, Phe/Tyr) einen großen Teil der diagnostischen Trennschärfe, weil sie von der Probenqualität weniger abhängen als Einzelwerte.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Germany",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "3-Hydroxyisovalerylcarnitine (C5-OH)/Carnitine.free (C0) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "3-Hydroxyisovalerylcarnitine (C5-OH)/Octanoylcarnitine (C8) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "3-Hydroxypalmitoylcarnitine (C16-OH)/Palmitoylcarnitine (C16) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Arginine/Ornithine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Arginine/Phenylalanine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Argininosuccinate/Arginine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Carnitine esters/Carnitine.free (C0) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Citrulline/Arginine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Citrulline/Phenylalanine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Citrulline/Tyrosine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Creatine/Creatinine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Carnitine free (C0)/Palmitoylcarnitine (C16) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Carnitine free (C0)/Stearoylcarnitine (C18) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Glutarylcarnitine (C5-DC)/Acetylcarnitine (C2) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Glutarylcarnitine (C5-DC)/Carnitine (C0) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Glutarylcarnitine (C5-DC)/Malonylcarnitine (C3-DC) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Glutarylcarnitine (C5-DC)/Palmitoylcarnitine (C16) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Glutarylcarnitine (C5-DC)/Propionylcarnitine (C3) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Guanidinoacetate/Creatine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Guanidinoacetate/Creatinine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Leucine/Phenylalanine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Malonylcarnitine (C3-DC)/Decanoylcarnitine (C10) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Methylmalonylcarnitine (C4-DC)/3-Hydroxyisovalerylcarnitine (C5-OH) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Monolysocardiolipin/Cardiolipin [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Octanoylcarnitine (C8)/Acetylcarnitine (C2) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Octanoylcarnitine (C8)/Decanoylcarnitine (C10) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Octanoylcarnitine (C8)/Carnitine.free (C0) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Ornithine/Citrulline [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Palmitoylcarnitine (C16)/Acetylcarnitine (C2) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Palmitoylcarnitine (C16)/Carnitine.free (C0) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Phenylalanine/Tyrosine [Molar ratio] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Phenylalanine/Tyrosine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Proline/Phenylalanine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Propionylcarnitine (C3)/Acetylcarnitine (C2) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Propionylcarnitine (C3)/Carnitine.free (C0) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Propionylcarnitine (C3)/Palmitoylcarnitine (C16) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Propionylcarnitine (C3)/Methionine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Methionine/Phenylalanine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Stearoylcarnitine (C18)/Propionylcarnitine (C3) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Tetradecenoylcarnitine (C14:1)/Acetylcarnitine (C2) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Tetradecenoylcarnitine (C14:1)/Dodecenoylcarnitine (C12:1) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Tetradecenoylcarnitine (C14:1)/Carnitine.free (C0) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Tetradecenoylcarnitine (C14:1)/Palmitoylcarnitine (C16) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Tetradecenoylcarnitine (C14:1)/Tetradecanoylcarnitine (C14) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Tyrosine/Phenylalanine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Tyrosine/Phenylalanine [Molar ratio] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Valine/Phenylalanine [Molar ratio] in DBS",
+      "target" : null
+    }]
+  }]
+}

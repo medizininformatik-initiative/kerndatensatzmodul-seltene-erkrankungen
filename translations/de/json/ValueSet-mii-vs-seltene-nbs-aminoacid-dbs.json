@@ -1,0 +1,619 @@
+{
+  "id" : "ValueSet-mii-vs-seltene-nbs-aminoacid-dbs",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "ValueSet.name",
+      "context" : "ValueSet.name",
+      "source" : "MII_VS_Seltene_NBS_AminoAcid_DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.title",
+      "context" : "ValueSet.title",
+      "source" : "MII VS Seltene Erkrankungen NBS Aminosäuren (Trockenblut)",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.publisher",
+      "context" : "ValueSet.publisher",
+      "source" : "Medizininformatik Initiative",
+      "target" : "Medizininformatik Initiative"
+    },
+    {
+      "id" : "ContactDetail.name",
+      "context" : "ContactDetail.name",
+      "source" : "Medizininformatik Initiative",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.description",
+      "context" : "ValueSet.description",
+      "source" : "Aminosäure-Analyte, die in Trockenblut bestimmt werden — die Messgrößen des MS/MS-Aminosäureprofils im Neugeborenenscreening (Phenylketonurie, Ahornsirupkrankheit, Homocystinurie, Tyrosinämie, Harnstoffzyklusdefekte).",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Germany",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "1-Methylhistidine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Alpha aminobutyrate [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Beta aminoisobutyrate [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "3-Methylhistidine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Alanine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Alanine/Amino acids.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Alanine/Lysine [Mass Ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Alloisoleucine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Alloisoleucine [Moles/volume] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Alpha aminoadipate [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Arginine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Arginine [Moles/volume] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Arginine [Presence] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Arginine/Amino acids.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Arginine/Ornithine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Arginine/Phenylalanine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Argininosuccinate [Moles/volume] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Argininosuccinate [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Argininosuccinate/Arginine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Asparagine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Beta alanine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Carnitine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Citrulline [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Citrulline/Arginine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Citrulline/Phenylalanine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Citrulline/Tyrosine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Cystathionine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Carnitine free (C0) [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Carnitine free (C0) [Moles/volume] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Carnitine free (C0)/Carnitine.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Carnitine free (C0)/Palmitoylcarnitine (C16) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Carnitine free (C0)/Stearoylcarnitine (C18) [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Glutamine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Glycine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Glycine/Amino acids.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Guanidinoacetate [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Guanidinoacetate/Creatine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Guanidinoacetate/Creatinine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Histidine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Histidine/Amino acids.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Homocitrulline [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Homocysteine [Presence] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Homocysteine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Homocystine [Presence] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Homocystine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Hydroxylysine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Hydroxyproline [Moles/volume] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Hydroxyproline [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Isoleucine [Moles/volume] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Isoleucine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Isoleucine/Amino acids.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Leucine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Leucine [Moles/volume] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Leucine/Alanine [Mass Ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Leucine/Amino acids.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Leucine/Phenylalanine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Leucine/Phenylalanine [Mass Ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Lysine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Lysine/Amino acids.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Ornithine [Moles/volume] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Ornithine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Ornithine/Citrulline [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Phenylalanine [Measurement] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Phenylalanine [Mass/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Phenylalanine [Moles/volume] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Phenylalanine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Phenylalanine [Presence] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Phenylalanine/Amino acids.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Phenylalanine/Tyrosine [Molar ratio] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Phenylalanine/Tyrosine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Phosphoserine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Pipecolate [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Proline [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Proline/Amino acids.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Proline/Phenylalanine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Methionine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Methionine [Presence] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Methionine/Amino acids.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Methionine/Phenylalanine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Serine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Serine/Amino acids.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Taurine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Threonine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Threonine/Amino acids.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Trimethyllysine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Tryptophan [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Tyrosine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Tyrosine [Mass/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Tyrosine [Moles/volume] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Tyrosine/Amino acids.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Tyrosine/Phenylalanine [Molar ratio] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Tyrosine/Phenylalanine [Molar ratio] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Valine [Moles/volume] in DBS --post therapeutic diet",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Valine [Moles/volume] in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Valine/Amino acids.total in DBS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Valine/Phenylalanine [Molar ratio] in DBS",
+      "target" : null
+    }]
+  }]
+}

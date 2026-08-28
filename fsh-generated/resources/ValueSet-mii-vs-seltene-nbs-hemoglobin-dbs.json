@@ -1,0 +1,67 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Seltene_NBS_Hemoglobin_DBS",
+  "id": "mii-vs-seltene-nbs-hemoglobin-dbs",
+  "title": "MII VS Seltene Erkrankungen NBS Hämoglobin-Fraktionen (Trockenblut)",
+  "description": "Hämoglobin-Fraktionen in Trockenblut, bezogen auf das Gesamthämoglobin — die Messgrößen des Screenings auf Sichelzellkrankheit und weitere Hämoglobinopathien.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-hemoglobin-dbs",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2026.0.1",
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "54069-0",
+            "display": "Hemoglobin Barts/Hemoglobin.total in DBS"
+          },
+          {
+            "code": "96595-4",
+            "display": "Hemoglobin A1c/Hemoglobin.total in DBS"
+          },
+          {
+            "code": "54072-4",
+            "display": "Hemoglobin A/Hemoglobin.total in DBS"
+          },
+          {
+            "code": "54073-2",
+            "display": "Hemoglobin C/Hemoglobin.total in DBS"
+          },
+          {
+            "code": "54070-8",
+            "display": "Hemoglobin D/Hemoglobin.total in DBS"
+          },
+          {
+            "code": "54071-6",
+            "display": "Hemoglobin E/Hemoglobin.total in DBS"
+          },
+          {
+            "code": "54074-0",
+            "display": "Hemoglobin F/Hemoglobin.total in DBS"
+          },
+          {
+            "code": "54068-2",
+            "display": "Hemoglobin O - Arab/Hemoglobin.total in DBS"
+          },
+          {
+            "code": "56476-5",
+            "display": "Hemoglobin S/Hemoglobin.total in DBS"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1223,6 +1223,54 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-seltene-nbs-acylcarnitine-dbs"
+        },
+        "name": "MII VS Seltene Erkrankungen NBS Acylcarnitine (Trockenblut)",
+        "description": "Acylcarnitin- und Carnitin-Analyte, die in Trockenblut (dried blood spot) bestimmt werden — die Messgrößen des MS/MS-Acylcarnitinprofils im Neugeborenenscreening (Fettsäureoxidationsstörungen, Organoazidopathien, Carnitinzyklusdefekte).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-nbs-aminoacid-dbs"
+        },
+        "name": "MII VS Seltene Erkrankungen NBS Aminosäuren (Trockenblut)",
+        "description": "Aminosäure-Analyte, die in Trockenblut bestimmt werden — die Messgrößen des MS/MS-Aminosäureprofils im Neugeborenenscreening (Phenylketonurie, Ahornsirupkrankheit, Homocystinurie, Tyrosinämie, Harnstoffzyklusdefekte).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-nbs-enzyme-activity-dbs"
+        },
+        "name": "MII VS Seltene Erkrankungen NBS Enzymaktivitäten (Trockenblut)",
+        "description": "Enzymaktivitäten (katalytische Konzentration), die in Trockenblut bestimmt werden — u. a. Biotinidase und Galaktose-Enzyme des deutschen Neugeborenenscreenings sowie die Enzyme lysosomaler Speicherkrankheiten, die international gescreent werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-nbs-hemoglobin-dbs"
+        },
+        "name": "MII VS Seltene Erkrankungen NBS Hämoglobin-Fraktionen (Trockenblut)",
+        "description": "Hämoglobin-Fraktionen in Trockenblut, bezogen auf das Gesamthämoglobin — die Messgrößen des Screenings auf Sichelzellkrankheit und weitere Hämoglobinopathien.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-nbs-target-analyte"
+        },
+        "name": "MII VS Seltene Erkrankungen NBS Leitanalyten der Zielkrankheiten",
+        "description": "Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie § 17 Abs. 1 (20 Zielkrankheiten) und § 23 ff. (Mukoviszidose). Je Zielkrankheit der Analyt, über den sie im Screening erkannt wird.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-nbs-ratio-dbs"
+        },
+        "name": "MII VS Seltene Erkrankungen NBS Quotienten (Trockenblut)",
+        "description": "Diagnostische Quotienten aus Trockenblut-Analyten. Im Neugeborenenscreening tragen die Verhältnisse (z. B. C3/C2, Phe/Tyr) einen großen Teil der diagnostischen Trennschärfe, weil sie von der Probenqualität weniger abhängen als Einzelwerte.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-seltene-symptom-change-status-combined"
         },
         "name": "MII VS Seltene Erkrankungen Symptom Change Status (Combined)",
@@ -1582,6 +1630,11 @@
             {
               "nameUrl": "coding-best-practices.html",
               "title": "Coding Best Practices",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "newborn-screening.html",
+              "title": "Newborn Screening",
               "generation": "markdown"
             }
           ]
