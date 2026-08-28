@@ -24,8 +24,6 @@
 > (Konventions-Check M9).
 {: .ig-highlight .ig-highlight-grey}
 
-### Metadaten-Übersicht
-
 Diese Seite beschreibt die maschinenlesbaren Metadaten des Moduls
 **Seltene Erkrankungen**. Sie existieren, damit die Artefakte dieses Leitfadens
 auffindbar, bewertbar, validierbar, zitierbar, steuerbar und

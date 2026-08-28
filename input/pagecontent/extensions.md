@@ -14,8 +14,6 @@
 > check M9).
 {: .ig-highlight .ig-highlight-grey}
 
-### Extensions
-
 This page lists the FHIR extensions defined by the **Seltene Erkrankungen** module
 (naming convention `MII_EX_<Module>_<Name>`). Extensions carry information the
 base resources and profiles cannot express; the profiles that use them are on

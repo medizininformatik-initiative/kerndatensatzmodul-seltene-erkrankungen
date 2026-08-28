@@ -45,3 +45,9 @@ output/
 publisher.jar
 temp/
 template/
+
+# IG-Publisher-Laufzeit-Caches im vendorierten Template. Der Publisher legt sie
+# beim Build an; eingecheckt lassen sie sync-ig-template.yml gegen den
+# Template-Upstream divergieren (Migration 2026-08-28).
+ig-template/**/.index.db
+ig-template/**/.index.json

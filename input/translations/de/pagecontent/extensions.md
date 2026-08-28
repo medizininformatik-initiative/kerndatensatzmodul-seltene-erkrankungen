@@ -14,8 +14,6 @@
 > (Konventions-Check M9).
 {: .ig-highlight .ig-highlight-grey}
 
-### Extensions
-
 Diese Seite listet die FHIR-Extensions, die das Modul **Seltene Erkrankungen**
 definiert (Namenskonvention `MII_EX_<Modul>_<Name>`). Extensions transportieren
 Informationen, die die Basis-Ressourcen und Profile nicht ausdrücken können; die

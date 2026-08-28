@@ -16,8 +16,6 @@
 > (Konventions-Check M9).
 {: .ig-highlight .ig-highlight-grey}
 
-### ValueSets
-
 Diese Seite beschreibt die ValueSets des Moduls **Seltene Erkrankungen**
 (Namenskonvention `MII_VS_<Modul>_<Name>`). Allgemeine Hinweise zur Verwendung
 von Codes: siehe

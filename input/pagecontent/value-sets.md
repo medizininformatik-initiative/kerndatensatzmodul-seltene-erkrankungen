@@ -16,8 +16,6 @@
 > check M9).
 {: .ig-highlight .ig-highlight-grey}
 
-### Value Sets
-
 This page describes the ValueSets of the **Seltene Erkrankungen** module (naming
 convention `MII_VS_<Module>_<Name>`). For general guidance on using codes, see
 [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html); the code systems

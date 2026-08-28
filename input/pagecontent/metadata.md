@@ -22,8 +22,6 @@
 > repository. A release must not ship with this banner (convention check M9).
 {: .ig-highlight .ig-highlight-grey}
 
-### Metadata Overview
-
 This page documents the computable metadata of the **Seltene Erkrankungen** module.
 The metadata exists so that the artifacts of this guide can be discovered,
 evaluated, validated, cited, governed and reused — by people and by software
