@@ -26,6 +26,11 @@ fsh-generated/fsh-index.txt
 fsh-generated/includes/fsh-link-references.md
 # ---- mii-kds-module-template v0.11.3 ----
 *.log
+# ... but NOT the migration protocol. migration-log/run.log is append-only and
+# is REQUIRED to be committed with the branch: the migration report cites it as
+# its evidence, and the verification step reads it back as a second oracle.
+# The per-step raw logs stay ignored (they are regenerated on every run).
+!migration-log/run.log
 # --- IG Publisher / SUSHI build artifacts (regenerated on every build) ---
 # --- OS / editor noise ---
 # --- Tooling ---
