@@ -77,7 +77,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-selte
   "name" : "MII_EX_Seltene_Empfehlung_Publikation",
   "title" : "MII EX SE Empfehlung Publikation",
   "status" : "active",
-  "date" : "2026-08-28T13:49:20+00:00",
+  "date" : "2026-08-28T14:00:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -81,7 +81,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-selte
   "name" : "AgeOfOnset",
   "title" : "MII EX SE Age of Onset",
   "status" : "active",
-  "date" : "2026-08-28T13:49:20+00:00",
+  "date" : "2026-08-28T14:00:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

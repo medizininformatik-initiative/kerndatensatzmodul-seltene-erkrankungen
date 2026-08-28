@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-em
   "name" : "MII_EX_Seltene_Empfehlung_Evidenzgraduierung",
   "title" : "MII EX SE Empfehlung Evidenzgraduierung",
   "status" : "active",
-  "date" : "2026-08-28T13:49:20+00:00",
+  "date" : "2026-08-28T14:00:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
