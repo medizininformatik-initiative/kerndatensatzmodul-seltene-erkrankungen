@@ -1,8 +1,6 @@
-<!-- markdownlint-disable MD041 -->
-<!-- Source: kerndatensatz-basis input/pagecontent/uml-diagrams.md.
-     German mirror: input/translations/de/pagecontent/uml-diagrams.md. -->
+<!-- TODO:REVIEW machine translation of source page information-model.md (de) — Migration 2026-08-28, page-map.tsv -->
+<img style="width:100%; height:auto;" decoding="async" src="MII_Datenmodell_Seltene_Erkrankungen_logisch.svg" alt="UML" title="UML">
 
-UML overviews of the data models of the **Seltene Erkrankungen** module and their relationships. Editable sources (e.g. PlantUML) belong in `input/images-source/`, the rendered images in `input/images/`.
+&nbsp;
 
-> [TODO: Add your module's UML diagrams, or delete this page if there are none.]
-{: .ig-highlight .ig-highlight-grey}
+The image is available <a href="MII_Datenmodell_Seltene_Erkrankungen_logisch.svg" target="_blank">here</a> in zoomable form.

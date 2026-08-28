@@ -1,6 +1,6 @@
-<!-- markdownlint-disable MD041 -->
+<!-- DE-Uebersetzungsseite; Quelle(n): information-model.md — Migration 2026-08-28, page-map.tsv -->
+<img style="width:100%; height:auto;" decoding="async" src="MII_Datenmodell_Seltene_Erkrankungen_logisch.svg" alt="UML" title="UML">
 
-UML-Übersichten der Datenmodelle des Moduls **Seltene Erkrankungen** und ihrer Beziehungen. Editierbare Quellen (z. B. PlantUML) gehören nach `input/images-source/`, die gerenderten Bilder nach `input/images/`.
+&nbsp;
 
-> [TODO: Fügen Sie die UML-Diagramme Ihres Moduls ein, oder entfernen Sie diese Seite, wenn keine vorhanden sind.]
-{: .ig-highlight .ig-highlight-grey}
+Das Bild ist <a href="MII_Datenmodell_Seltene_Erkrankungen_logisch.svg" target="_blank">hier</a> in zoombarer Form abrufbar.

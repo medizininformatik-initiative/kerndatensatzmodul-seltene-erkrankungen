@@ -56,20 +56,6 @@ TODO boxes below and adopt it verbatim):
 > data category that raises security or privacy aspects of its own, and it
 > places no module-specific security or privacy requirements on implementers.
 
-<!-- ILLUSTRATIVE-EXAMPLE — decide this section and remove the example box
-     below (in this file AND the German mirror) before the first release;
-     the convention check (M11) fails a release branch while it is present. -->
-> **Illustrative example — remove before the first release.** How another KDS
-> module fills this section (*Person*): the patient identifiers are pseudonyms
-> from the trusted third party; systems must not let record linkage
-> re-identify a person, and the pseudonym's scope (site-wide vs
-> project-specific) must be respected when data is combined.
-{: .ig-highlight .ig-highlight-orange}
-
-> [TODO: State your module's specific aspects — the data categories it carries
-> and their sensitivity, risks that profile-level pseudonymisation does not
-> cover, and any security- or privacy-related SHALL/SHOULD/MAY requirements
-> this module places on implementers, each with the risk it addresses. Name
-> residual risks that must be handled in system design, deployment or policy —
-> or adopt the default text above if there are none.]
-{: .ig-highlight .ig-highlight-grey}
+<!-- DERIVED:suggestion source=none gate=B -->
+> **Written during migration - review before release.** The following module-specific aspects were derived from the module's artifacts: This module carries data categories of heightened sensitivity. ORPHAcode-coded diagnoses of rare diseases are, by definition, rare — small case numbers substantially increase the re-identification risk of pseudonymized records, especially when combined with region, age or the detailed HPO phenotype profiles this module models. The genetic diagnoses and the structured family history additionally carry information about **third parties** (biological relatives) who have not themselves consented under the MII Broad Consent. Implementers SHOULD therefore treat combinations of ORPHA diagnosis, phenotype profile and family history as quasi-identifying, apply the output controls of the Use & Access processes to small cell counts, and observe that transmission to external registries (NARSE, ERN/ERDRI) requires the separate, explicit consent of the person concerned, as described on the module's pages.
+{: .ig-highlight .ig-highlight-blue}

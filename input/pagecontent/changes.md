@@ -1,91 +1,79 @@
-<!-- markdownlint-disable MD041 -->
-<!-- Default-language (English) page. Structure ported from kerndatensatz-basis
-     input/pagecontent/changes.md (branch main) — one section per version,
-     newest first — and from the MII IG release-notes template
-     (kerndatensatz-meta/implementation-guides/MedizininformatikInitiative-ImplementationGuide-Template/
-     MII-IG-Modul--Modul/Release-notes.page.md), which prescribes Keep a Changelog.
-     German mirror: input/translations/de/pagecontent/changes.md — both files
-     must say the same thing.
-
-     Maintenance rule: add a new `#### Version <x>` section on top for every
-     release, in BOTH languages, as part of the release pull request. Never edit
-     a released section afterwards. -->
-
-### Changelog
-
-This page records the changes between the released versions of the
-**Seltene Erkrankungen** module, newest version first. It follows
-[Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the KDS calendar
-versioning scheme described on the [Versioning](version-history.html) page.
-
-Each version gets its own section with the release date and the changes grouped
-by category:
-
-* **Added** — new profiles, extensions, value sets, search parameters, pages.
-* **Changed** — modified constraints, bindings, guidance or documentation.
-* **Deprecated** — artifacts that still exist but should no longer be used.
-* **Removed** — artifacts that were withdrawn.
-* **Fixed** — corrections of defects.
-* **Security** — changes with a security or data-protection impact.
-
-Leave out the categories with nothing to report. Where a change is driven by an
-issue or a pull request, link it.
-
-<div class="ig-highlight ig-highlight-red">
-<h5>Breaking changes MUST be reported and explained</h5>
-<p>A version section that contains a breaking change is not complete until it
-answers, explicitly and in this changelog:</p>
-<ul>
-<li><b>What exactly changed</b> between the two versions — the artifact, the
-element, the old and the new constraint (not just "profile X was revised").</li>
-<li><b>What it means for existing data:</b> does data that conformed to the
-previous version still validate against the new one? If not, which resources
-and elements are affected, and how does the failure show up?</li>
-<li><b>What implementers should do:</b> the authors' recommendation for
-migrating existing data to the new version — transformation steps, default
-values, re-coding guidance — or an explicit statement that no migration path
-is provided and why.</li>
-</ul>
-<p><b>What counts as breaking</b> — treat a change as breaking if it does any
-of the following, even when it looks small: tightens a cardinality
-(<code>0..*</code> → <code>1..1</code>), raises a binding strength (example →
-required), removes codes from a required value set, removes or renames an
-element or a slice, narrows a type, adds an invariant or a must-support
-obligation, or changes a canonical URL. When in doubt, report it as
-breaking.</p>
-<p><b>Breaking for whom:</b> state both perspectives — <i>stored data</i>
-(instances valid against the old version) and <i>implementations</i> (clients
-and servers built against it; a removed search parameter breaks
-implementations while every stored instance stays valid).</p>
-<p><b>The version number will not warn anyone.</b> The KDS calendar versioning
-scheme (<code>YYYY.n.n</code>) carries no major-version signal the way SemVer
-does — this changelog section is the <i>only</i> warning a reader gets.</p>
-<p><b>Link the technical delta.</b> From the second formal publication on,
-enable the IG Publisher's version comparison (<code>version-comparison</code>
-in <code>sushi-config.yaml</code> — see the <a href="version-history.html">
-Versioning</a> page for the setup and its prerequisites); it publishes a
-machine-generated comparison at
-<code>comparison-v&lt;previous&gt;/index.html</code>. Link it from the version
-section, so the prose explanation and the technical diff sit side by side.</p>
-<p>Mark such entries clearly (for example, prefix them with
-<b>BREAKING:</b>) so a reader scanning the section cannot miss them.</p>
-</div>
+<!-- TODO:REVIEW machine translation of source page release-notes.md (de) — Migration 2026-08-28, page-map.tsv -->
+This page tracks the differences between versions, beginning with the differences between the ballot version and the final 2026 version.
 
 ---
 
-#### Version 2027.0.0-ballot
+### Version 2026.0.1 (patch release)
 
-**Date:** 2026-08-28
+#### Dependencies
 
-##### Added
+- `chore` dependency on module Studie updated from `2026.0.0-ballot` to `2026.0.2`
+- `chore` dependency on module ICU updated to `2026.0.x` (resolved: `2026.0.2`)
 
-* First publication of the **Seltene Erkrankungen** module.
+#### Bug fixes
 
-> [TODO: Replace this section with the real entries of your first release, and
-> add a new section on top for every subsequent version. For a module with
-> several sub-domains, `kerndatensatz-basis` groups the entries of a version by
-> topic (for example *Documentation*, *Terminology updates*, and one heading per
-> sub-module) and prefixes each bullet with **Added:** / **Changed:** /
-> **Removed:** — use whichever of the two groupings suits your module, but keep
-> it the same across versions and identical in both languages.]
-{: .ig-highlight .ig-highlight-grey}
+- `fix` ICU head circumference alias updated to the renamed profile `mii-pr-icu-muv-kopfumfang`
+- `fix` correct SNOMED code for head circumference (363812007 instead of 363811000)
+- `fix` SNOMED display in English (Head circumference) for validator compatibility
+- `fix` FamilyMemberHistory.condition added to the penetrance extension context
+- `fix` CPS version via RuleSet instead of hardcoding, SupportProfile without version suffix
+
+#### CI/CD and tooling
+
+- `feat` validation rules (qc/custom.rules.yaml) for resource validation added
+- `feat` centralized `/build-package` command added
+- `feat` FHIR restore step added to the build process
+- `feat` mii-shared submodule and fix-ig-export-links skill added
+- `refactor` IG pages converted to tabs format and local Studie profile removed
+- `fix` terminology codes and display names in therapy examples corrected
+- `fix` MII IG naming conventions applied for the 2026 release
+- `fix` 'Erweiterungsmodul' replaced by 'KDS-Modul' according to MII guidelines
+
+---
+
+### Version 2026.0.0 (final version)
+
+This version is the final publication of the MII Rare Diseases module after a successful ballot procedure.
+
+#### Changes since v2026.0.0-rc.1
+
+- `chore` all resources set to status "active"
+- `refactor` Diagnose dependency replaced by the Base module for better modularity
+- `chore` bake source path for package builds corrected
+
+---
+
+### Changes in version v2026.0.0-rc.1 (release candidate 1)
+
+#### New features
+
+- `feat` MetaProfile RuleSet for all example instances with versioned profile URL added
+- `feat` therapy type category (causal/symptomatic) for therapy recommendations added
+
+#### Documentation improvements
+
+- `docs` HPO phenotyping documentation updated according to the HL7 Phenomics IG pattern (HDB-755, HDB-737)
+- `docs` clarification: one FamilyMemberHistory resource per family member (HDB-750)
+- `docs` rare disease definitions in the module description updated (HDB-757)
+- `docs` Orpha coding → ORPHAcode coding terminology corrected (HDB-764)
+- `docs` HPO vs. symptom distinction documented with the Marfan example (HDB-738)
+- `docs` documentation clarifications (HDB-741, HDB-739)
+
+#### Bug fixes
+
+- `fix` incorrect oBDS mappings removed from the therapy plan page (HDB-751)
+- `fix` incorrect oBDS mappings removed from the measurement profiles (HDB-751)
+- `fix` death-by-RD extension replaced by the standard contributedToDeath element
+- `fix` body measurement profiles added and validation errors fixed
+- `fix` 21 SUSHI compilation errors fixed and HPO profile design improved
+- `fix` 21 validation errors fixed with terminology and example corrections
+- `fix` HPO assessment profile refactored according to the HL7 Phenomics IG pattern
+
+#### Validation and quality improvements (from ballot feedback)
+
+- `fix` SNOMED CT-based ValueSet for "affected by RD" created with codes 373066001 "Yes", 373067005 "No", 261665006 "Unknown". HL7 v2 codes retained for backwards compatibility.
+- `fix` combined symptom change status ValueSet created: MVGenomSeq codes (newly-added, improved, degraded, no-longer-observed, unchanged) with SNOMED CT mapping (385425000 Improved, 231877006 Worse, 385630006 Maintained, 2667000 Absent)
+- `fix` FamilyMemberHistory examples corrected: ICD-10-GM version 2004→2009, display names (Natural Mother→Natural mother), invalid code E11.X→E11.9
+- `fix` invalid LOINC code 79992-2 replaced by 78176-5 "Aorta root Diameter by US 2D"
+- `fix` invalid SNOMED code 249374003 "Anteverted nares" removed from the HPO observation example (HPO code HP:0000463 retained)
+- `fix` patient identifier changed from `http://example.org` to `http://test-krankenhaus.de/fhir/sid/patienten`
