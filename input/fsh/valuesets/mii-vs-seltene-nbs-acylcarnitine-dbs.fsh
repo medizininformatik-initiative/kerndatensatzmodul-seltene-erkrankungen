@@ -4,6 +4,15 @@
 //
 //   <363787002 |Observable entity| : 704327008 |Direct site| = 440500007 |Dried blood spot specimen|, 246093002 |Component| = << 102651000 |Acylcarnitine|
 //
+// NICHT VOLLSTÄNDIG GEGENÜBER LOINC — das ist der Preis der Gliederung. Die
+// LOINC-SNOMED-Edition bildet nur den nach SNOMED gemappten Teil von LOINC ab:
+// gemessen am 2026-08-28 sind das 335 Konzepte gegenüber 608 LOINC-Codes mit
+// SYSTEM = Trockenblut. Bei den Acylcarnitinen fehlen dadurch etwa 45 % der
+// LOINC-Codes, bei den Hämoglobin-Fraktionen rund zwei Drittel, darunter echte
+// Analyte wie 50086-8 (C5-OH) und 53166-5 (C4). Wer Vollständigkeit braucht statt
+// klinischer Gliederung, nimmt mii-vs-seltene-nbs-dbs-all: dort ist die Menge
+// intensional über die LOINC-Eigenschaft SYSTEM definiert und deshalb lückenlos.
+//
 // Aus jedem Treffer wurde der LOINC-Code über den alternateIdentifier des Konzepts
 // (identifierScheme 30051010000102 "LOINC code identifier") gelesen; alle 78
 // Codes wurden per CodeSystem/$lookup auf tx.fhir.org bestätigt.
@@ -18,7 +27,7 @@
 ValueSet: MII_VS_Seltene_NBS_Acylcarnitine_DBS
 Id: mii-vs-seltene-nbs-acylcarnitine-dbs
 Title: "MII VS Seltene Erkrankungen NBS Acylcarnitine (Trockenblut)"
-Description: "Acylcarnitin- und Carnitin-Analyte, die in Trockenblut (dried blood spot) bestimmt werden — die Messgrößen des MS/MS-Acylcarnitinprofils im Neugeborenenscreening (Fettsäureoxidationsstörungen, Organoazidopathien, Carnitinzyklusdefekte)."
+Description: "Acylcarnitin- und Carnitin-Analyte in Trockenblut (dried blood spot) — die Messgrößen des MS/MS-Acylcarnitinprofils im Neugeborenenscreening (Fettsäureoxidationsstörungen, Organoazidopathien, Carnitinzyklusdefekte). Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb NICHT vollständig gegenüber LOINC: enthalten ist der nach SNOMED gemappte Teil. Für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all."
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-acylcarnitine-dbs"

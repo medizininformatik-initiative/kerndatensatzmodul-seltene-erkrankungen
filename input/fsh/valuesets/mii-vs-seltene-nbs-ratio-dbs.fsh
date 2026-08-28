@@ -4,6 +4,15 @@
 //
 //   <363787002 |Observable entity| : 704327008 |Direct site| = 440500007 |Dried blood spot specimen|, 370130000 |Property| = 118563004 |Substance ratio|
 //
+// NICHT VOLLSTÄNDIG GEGENÜBER LOINC — das ist der Preis der Gliederung. Die
+// LOINC-SNOMED-Edition bildet nur den nach SNOMED gemappten Teil von LOINC ab:
+// gemessen am 2026-08-28 sind das 335 Konzepte gegenüber 608 LOINC-Codes mit
+// SYSTEM = Trockenblut. Bei den Acylcarnitinen fehlen dadurch etwa 45 % der
+// LOINC-Codes, bei den Hämoglobin-Fraktionen rund zwei Drittel, darunter echte
+// Analyte wie 50086-8 (C5-OH) und 53166-5 (C4). Wer Vollständigkeit braucht statt
+// klinischer Gliederung, nimmt mii-vs-seltene-nbs-dbs-all: dort ist die Menge
+// intensional über die LOINC-Eigenschaft SYSTEM definiert und deshalb lückenlos.
+//
 // Aus jedem Treffer wurde der LOINC-Code über den alternateIdentifier des Konzepts
 // (identifierScheme 30051010000102 "LOINC code identifier") gelesen; alle 47
 // Codes wurden per CodeSystem/$lookup auf tx.fhir.org bestätigt.

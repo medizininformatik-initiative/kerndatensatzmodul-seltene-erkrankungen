@@ -4,6 +4,15 @@
 //
 //   <363787002 |Observable entity| : 704327008 |Direct site| = 440500007 |Dried blood spot specimen|, 246093002 |Component| = << 38082009 |Hemoglobin|
 //
+// NICHT VOLLSTÄNDIG GEGENÜBER LOINC — das ist der Preis der Gliederung. Die
+// LOINC-SNOMED-Edition bildet nur den nach SNOMED gemappten Teil von LOINC ab:
+// gemessen am 2026-08-28 sind das 335 Konzepte gegenüber 608 LOINC-Codes mit
+// SYSTEM = Trockenblut. Bei den Acylcarnitinen fehlen dadurch etwa 45 % der
+// LOINC-Codes, bei den Hämoglobin-Fraktionen rund zwei Drittel, darunter echte
+// Analyte wie 50086-8 (C5-OH) und 53166-5 (C4). Wer Vollständigkeit braucht statt
+// klinischer Gliederung, nimmt mii-vs-seltene-nbs-dbs-all: dort ist die Menge
+// intensional über die LOINC-Eigenschaft SYSTEM definiert und deshalb lückenlos.
+//
 // Aus jedem Treffer wurde der LOINC-Code über den alternateIdentifier des Konzepts
 // (identifierScheme 30051010000102 "LOINC code identifier") gelesen; alle 9
 // Codes wurden per CodeSystem/$lookup auf tx.fhir.org bestätigt.
@@ -18,7 +27,7 @@
 ValueSet: MII_VS_Seltene_NBS_Hemoglobin_DBS
 Id: mii-vs-seltene-nbs-hemoglobin-dbs
 Title: "MII VS Seltene Erkrankungen NBS Hämoglobin-Fraktionen (Trockenblut)"
-Description: "Hämoglobin-Fraktionen in Trockenblut, bezogen auf das Gesamthämoglobin — die Messgrößen des Screenings auf Sichelzellkrankheit und weitere Hämoglobinopathien."
+Description: "Hämoglobin-Fraktionen in Trockenblut, bezogen auf das Gesamthämoglobin — die Messgrößen des Screenings auf Sichelzellkrankheit und weitere Hämoglobinopathien. Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb deutlich unvollständig gegenüber LOINC (rund ein Drittel der DBS-Hämoglobin-Codes); für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all."
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-hemoglobin-dbs"

@@ -72,6 +72,7 @@ extend them.
 | [Enzyme activities in DBS](ValueSet-mii-vs-seltene-nbs-enzyme-activity-dbs.html) | 34 | ECL over the ontology |
 | [Ratios in DBS](ValueSet-mii-vs-seltene-nbs-ratio-dbs.html) | 47 | ECL over the ontology |
 | [Haemoglobin fractions in DBS](ValueSet-mii-vs-seltene-nbs-hemoglobin-dbs.html) | 9 | ECL over the ontology |
+| [All DBS analytes](ValueSet-mii-vs-seltene-nbs-dbs-all.html) | 608 | intensional over LOINC's `SYSTEM` property |
 
 The generated five start from one expression describing "anything measured in a dried blood spot":
 
@@ -98,6 +99,22 @@ The generated ValueSets describe **what can be measured in a dried blood spot**,
 German programme measures. They therefore also contain analytes that are not part of it — the
 lysosomal enzymes of conditions screened elsewhere, and a few analytes used for entirely different
 purposes. Use the curated lead-analyte ValueSet when you mean the German programme.
+
+**And they are not complete against LOINC — grouping costs coverage.** The LOINC-SNOMED edition
+only covers the part of LOINC that has been mapped to SNOMED: 335 concepts, against **608 LOINC
+codes** whose `SYSTEM` is a dried blood spot. Roughly 45 % of the LOINC codes are therefore absent
+from the ontology, and the missing ones are not exotic — `50086-8` (C5-OH, the lead metabolite for
+3-MCC deficiency) and `53166-5` (C4) are among them, as are most of the diagnostic ratios built
+from them. Measured per group: acylcarnitines cover about half of LOINC's dried-blood-spot
+acylcarnitine codes, haemoglobin fractions about a third.
+
+That is why a sixth ValueSet exists. [All DBS analytes](ValueSet-mii-vs-seltene-nbs-dbs-all.html)
+binds intensionally to LOINC's own `SYSTEM` property (`LP21304-8`), so it is complete by
+construction and does not age — a new dried-blood-spot code from LOINC is in it without anyone
+touching a file. What it cannot offer is the clinical grouping: analytes, ratios, panels,
+interpretation codes and unrelated assays (drug levels, serology, PSA) all sit side by side.
+**Use the grouped sets when you need a clinically bounded list, the complete one when you need
+coverage.**
 
 ### Representing a result
 

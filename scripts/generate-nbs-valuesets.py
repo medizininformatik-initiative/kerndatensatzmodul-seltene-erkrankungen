@@ -61,10 +61,12 @@ SPECS = [
         "title": "MII VS Seltene Erkrankungen NBS Acylcarnitine (Trockenblut)",
         "ecl": ECL_BASE + ", 246093002 |Component| = << 102651000 |Acylcarnitine|",
         "desc": (
-            "Acylcarnitin- und Carnitin-Analyte, die in Trockenblut (dried blood spot) "
-            "bestimmt werden — die Messgrößen des MS/MS-Acylcarnitinprofils im "
-            "Neugeborenenscreening (Fettsäureoxidationsstörungen, Organoazidopathien, "
-            "Carnitinzyklusdefekte)."
+            "Acylcarnitin- und Carnitin-Analyte in Trockenblut (dried blood spot) — die "
+            "Messgrößen des MS/MS-Acylcarnitinprofils im Neugeborenenscreening "
+            "(Fettsäureoxidationsstörungen, Organoazidopathien, Carnitinzyklusdefekte). "
+            "Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb NICHT vollständig "
+            "gegenüber LOINC: enthalten ist der nach SNOMED gemappte Teil. Für die "
+            "lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all."
         ),
     },
     {
@@ -73,9 +75,11 @@ SPECS = [
         "title": "MII VS Seltene Erkrankungen NBS Aminosäuren (Trockenblut)",
         "ecl": ECL_BASE + ", 246093002 |Component| = << 52518006 |Amino acid|",
         "desc": (
-            "Aminosäure-Analyte, die in Trockenblut bestimmt werden — die Messgrößen des "
-            "MS/MS-Aminosäureprofils im Neugeborenenscreening (Phenylketonurie, "
-            "Ahornsirupkrankheit, Homocystinurie, Tyrosinämie, Harnstoffzyklusdefekte)."
+            "Aminosäure-Analyte in Trockenblut — die Messgrößen des MS/MS-Aminosäureprofils "
+            "im Neugeborenenscreening (Phenylketonurie, Ahornsirupkrankheit, "
+            "Homocystinurie, Tyrosinämie, Harnstoffzyklusdefekte). Abgeleitet aus der "
+            "LOINC-SNOMED-Ontologie und deshalb NICHT vollständig gegenüber LOINC; für "
+            "die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all."
         ),
     },
     {
@@ -110,7 +114,9 @@ SPECS = [
         "desc": (
             "Hämoglobin-Fraktionen in Trockenblut, bezogen auf das Gesamthämoglobin — die "
             "Messgrößen des Screenings auf Sichelzellkrankheit und weitere "
-            "Hämoglobinopathien."
+            "Hämoglobinopathien. Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb "
+            "deutlich unvollständig gegenüber LOINC (rund ein Drittel der DBS-Hämoglobin-"
+            "Codes); für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all."
         ),
     },
 ]
@@ -230,6 +236,15 @@ def render(spec, entries):
 // Die Auswahl ist NICHT handverlesen, sondern das Ergebnis dieser ECL-Abfrage:
 //
 //   {spec['ecl']}
+//
+// NICHT VOLLSTÄNDIG GEGENÜBER LOINC — das ist der Preis der Gliederung. Die
+// LOINC-SNOMED-Edition bildet nur den nach SNOMED gemappten Teil von LOINC ab:
+// gemessen am 2026-08-28 sind das 335 Konzepte gegenüber 608 LOINC-Codes mit
+// SYSTEM = Trockenblut. Bei den Acylcarnitinen fehlen dadurch etwa 45 % der
+// LOINC-Codes, bei den Hämoglobin-Fraktionen rund zwei Drittel, darunter echte
+// Analyte wie 50086-8 (C5-OH) und 53166-5 (C4). Wer Vollständigkeit braucht statt
+// klinischer Gliederung, nimmt mii-vs-seltene-nbs-dbs-all: dort ist die Menge
+// intensional über die LOINC-Eigenschaft SYSTEM definiert und deshalb lückenlos.
 //
 // Aus jedem Treffer wurde der LOINC-Code über den alternateIdentifier des Konzepts
 // (identifierScheme 30051010000102 "LOINC code identifier") gelesen; alle {len(entries)}
