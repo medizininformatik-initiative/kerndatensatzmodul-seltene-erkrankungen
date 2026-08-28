@@ -38,7 +38,13 @@ fsh-generated/includes/fsh-link-references.md
 # The template package the IG Publisher extracts into ./template at build
 # time. Why: this repo REFERENCES the template by version in ig.ini; the
 # would live under a different, tracked path.)
-fsh-generated/
+#
+# fsh-generated/ is DELIBERATELY NOT ignored here. The template ignores it, but
+# this module COMMITS its SUSHI output (162 tracked files) and four workflows
+# depend on that — validation.yml's .NET job auto-commits fsh-generated on PRs
+# and fails outright when it is ignored, and module-release/go-publish/main read
+# from it. Source convention wins (Migration 2026-08-28); the sibling modules
+# Onkologie and Bildgebung track it too.
 input-cache/
 node_modules/
 output/
