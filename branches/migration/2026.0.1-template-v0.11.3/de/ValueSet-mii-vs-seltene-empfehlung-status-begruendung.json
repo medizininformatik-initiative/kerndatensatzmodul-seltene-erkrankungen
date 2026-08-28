@@ -1,0 +1,36 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-seltene-empfehlung-status-begruendung",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-seltene-empfehlung-status-begruendung</b></p><a name=\"de-mii-vs-seltene-empfehlung-status-begruendung\"> </a><a name=\"de-hcmii-vs-seltene-empfehlung-status-begruendung\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-mii-cs-seltene-empfehlung-status-begruendung.html\"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-empfehlung-status-begruendung</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;2027.0.0-ballot</span></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-empfehlung-status-begruendung",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_VS_Seltene_Empfehlung_StatusBegruendung",
+  "title" : "MII VS SE Empfehlung Status Begründung",
+  "status" : "active",
+  "date" : "2026-08-28T13:39:17+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "ValueSet für Begründung bei fehlender Empfehlung",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-empfehlung-status-begruendung"
+    }]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "resourceType" : "DiagnosticReport",
+  "id" : "molgen-brca-panel",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport molgen-brca-panel</b></p><a name=\"molgen-brca-panel\"> </a><a name=\"hcmolgen-brca-panel\"> </a><h2><span title=\"Codes:{http://loinc.org 81247-9}\">Master HL7 genetic variant reporting panel</span> (<span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 LAB}\">Laboratory</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</td></tr><tr><td>Relevant Time</td><td>2024-11-01</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td></tr><tr><td><a href=\"Observation-molgen-variant-brca1-pathogenic.html\"><span title=\"Codes:{http://loinc.org 69548-6}\">Genetic variant assessment</span></a></td><td><span title=\"Codes:{http://snomed.info/sct 10828004}\">Positive</span></td><td>Final</td></tr></table><p>Pathogene Variante c.68_69del (p.Glu23Valfs*17) in BRCA1 nachgewiesen. Diese Frameshift-Mutation führt zu einem vorzeitigen Stopcodon. Erhöhtes Risiko für Mamma- und Ovarialkarzinom. Lebenszeitrisiko Mammakarzinom: 60-72%, Ovarialkarzinom: 40-44%.</p><p><b>Coded Conclusions:</b></p><ul><li><span title=\"Codes:{http://omim.org 604370}\">Breast-ovarian cancer, familial, 1</span></li></ul></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport molgen-brca-panel</b></p><a name=\"de-molgen-brca-panel\"> </a><a name=\"de-hcmolgen-brca-panel\"> </a><h2><span title=\"Codes:{http://loinc.org 81247-9}\">Master HL7 genetic variant reporting panel</span> (<span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 LAB}\">Laboratory</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</td></tr><tr><td>Relevant Time</td><td>2024-11-01</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td></tr><tr><td><a href=\"Observation-molgen-variant-brca1-pathogenic.html\"><span title=\"Codes:{http://loinc.org 69548-6}\">Genetic variant assessment</span></a></td><td><span title=\"Codes:{http://snomed.info/sct 10828004}\">Positive</span></td><td>Final</td></tr></table><p>Pathogene Variante c.68_69del (p.Glu23Valfs*17) in BRCA1 nachgewiesen. Diese Frameshift-Mutation führt zu einem vorzeitigen Stopcodon. Erhöhtes Risiko für Mamma- und Ovarialkarzinom. Lebenszeitrisiko Mammakarzinom: 60-72%, Ovarialkarzinom: 40-44%.</p><p><b>Coded Conclusions:</b></p><ul><li><span title=\"Codes:{http://omim.org 604370}\">Breast-ovarian cancer, familial, 1</span></li></ul></div></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+      "code" : "LAB",
+      "display" : "Laboratory"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "81247-9",
+      "display" : "Master HL7 genetic variant reporting panel"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "effectiveDateTime" : "2024-11-01",
+  "result" : [{
+    "reference" : "Observation/molgen-variant-brca1-pathogenic"
+  }],
+  "conclusion" : "Pathogene Variante c.68_69del (p.Glu23Valfs*17) in BRCA1 nachgewiesen. Diese Frameshift-Mutation führt zu einem vorzeitigen Stopcodon. Erhöhtes Risiko für Mamma- und Ovarialkarzinom. Lebenszeitrisiko Mammakarzinom: 60-72%, Ovarialkarzinom: 40-44%.",
+  "conclusionCode" : [{
+    "coding" : [{
+      "system" : "http://omim.org",
+      "code" : "604370",
+      "display" : "Breast-ovarian cancer, familial, 1"
+    }]
+  }]
+}

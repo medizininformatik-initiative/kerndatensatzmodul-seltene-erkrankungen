@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-seltene-narse-therapietyp"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-seltene-narse-therapietyp</b></p><a name="de-mii-vs-seltene-narse-therapietyp"> </a><a name="de-hcmii-vs-seltene-narse-therapietyp"> </a><ul><li>Include all codes defined in <a href="CodeSystem-mii-cs-seltene-narse-therapietyp.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2027.0.0-ballot</span></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-narse-therapietyp"/>
+  <version value="2027.0.0-ballot"/>
+  <name value="MII_VS_Seltene_NARSE_Therapietyp"/>
+  <title value="MII VS Seltene Erkrankungen NARSE Therapietyp"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-08-28T13:39:17+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp"/>
+    </include>
+  </compose>
+</ValueSet>

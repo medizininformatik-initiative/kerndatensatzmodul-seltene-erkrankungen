@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-seltene-hpo-phenotypic-observation-codes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-seltene-hpo-phenotypic-observation-codes</b></p><a name=\"mii-vs-seltene-hpo-phenotypic-observation-codes\"> </a><a name=\"hcmii-vs-seltene-hpo-phenotypic-observation-codes\"> </a><ul><li>Include all codes defined in <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-HPO.html\"><code>http://human-phenotype-ontology.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span></li></ul></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-seltene-hpo-phenotypic-observation-codes</b></p><a name=\"de-mii-vs-seltene-hpo-phenotypic-observation-codes\"> </a><a name=\"de-hcmii-vs-seltene-hpo-phenotypic-observation-codes\"> </a><ul><li>Include all codes defined in <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-HPO.html\"><code>http://human-phenotype-ontology.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span></li></ul></div></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes",
+  "version" : "2027.0.0-ballot",
+  "name" : "HPOPhenotypicObservationCodes",
+  "title" : "HPO Phenotypic Observation Codes",
+  "status" : "active",
+  "date" : "2026-08-28T13:39:17+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Human Phenotype Ontology codes for phenotypic observations",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://human-phenotype-ontology.org"
+    }]
+  }
+}
