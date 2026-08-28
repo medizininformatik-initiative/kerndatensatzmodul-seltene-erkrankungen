@@ -578,6 +578,11 @@ ihnen vertrauen oder sie erweitern wollen.</p>
       <td>9</td>
       <td>ECL über die Ontologie</td>
     </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-seltene-nbs-dbs-all.html">Alle Trockenblut-Analyte</a></td>
+      <td>608</td>
+      <td>intensional über die LOINC-Eigenschaft <code class="language-plaintext highlighter-rouge">SYSTEM</code></td>
+    </tr>
   </tbody>
 </table>
 
@@ -607,6 +612,22 @@ Schreiben einzeln per <code class="language-plaintext highlighter-rouge">CodeSys
 Programm misst. Sie enthalten deshalb auch Analyte, die nicht dazugehören — die lysosomalen Enzyme
 international gescreenter Erkrankungen und einige Analyte für ganz andere Zwecke. Wer das deutsche
 Programm meint, nutzt das kuratierte Leitanalyten-ValueSet.</p>
+
+<p><strong>Und sie sind gegenüber LOINC nicht vollständig — Gliederung kostet Abdeckung.</strong> Die
+LOINC-SNOMED-Edition bildet nur den nach SNOMED gemappten Teil von LOINC ab: 335 Konzepte gegenüber
+<strong>608 LOINC-Codes</strong>, deren <code class="language-plaintext highlighter-rouge">SYSTEM</code> Trockenblut ist. Rund 45 % der LOINC-Codes fehlen damit in der
+Ontologie, und die fehlenden sind keine Exoten — <code class="language-plaintext highlighter-rouge">50086-8</code> (C5-OH, Leitmetabolit des
+3-MCC-Mangels) und <code class="language-plaintext highlighter-rouge">53166-5</code> (C4) gehören dazu, ebenso die meisten daraus gebildeten
+diagnostischen Quotienten. Je Gruppe gemessen: die Acylcarnitine decken etwa die Hälfte der
+LOINC-Trockenblut-Acylcarnitine ab, die Hämoglobin-Fraktionen etwa ein Drittel.</p>
+
+<p>Deshalb gibt es ein sechstes ValueSet. <a href="ValueSet-mii-vs-seltene-nbs-dbs-all.html">Alle Trockenblut-Analyte</a>
+bindet intensional an die LOINC-eigene Eigenschaft <code class="language-plaintext highlighter-rouge">SYSTEM</code> (<code class="language-plaintext highlighter-rouge">LP21304-8</code>) und ist damit per
+Konstruktion vollständig und alterungsfrei — ein neuer Trockenblut-Code von LOINC ist enthalten,
+ohne dass jemand eine Datei anfasst. Was es nicht bietet, ist die klinische Gliederung: Analyte,
+Quotienten, Panels, Interpretationscodes und fachfremde Analytik (Medikamentenspiegel, Serologie,
+PSA) stehen nebeneinander. <strong>Für eine klinisch abgegrenzte Liste die gruppierten Sets, für
+Abdeckung das vollständige.</strong></p>
 
 <h3 id="abbildung-eines-befunds">Abbildung eines Befunds</h3>
 
@@ -759,7 +780,7 @@ nicht zusätzlich gegen die offizielle LOINC-Release-Datei abgeglichen.</p>
 
           IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Aug 28, 2026 15:01+0000">2026-08-28</span>
+          Erstellt <span title="Fri, Aug 28, 2026 15:14+0000">2026-08-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
               <!-- Branding override for the fhir2.base.template footer fragment.

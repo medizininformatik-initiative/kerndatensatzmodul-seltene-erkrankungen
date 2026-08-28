@@ -43,7 +43,7 @@ No Expansion for this valueset (Unknown Code System)
   "name" : "HPOInheritancePatternValueSet",
   "title" : "MII VS SE HPO Inheritance Pattern",
   "status" : "active",
-  "date" : "2026-08-28T15:01:21+00:00",
+  "date" : "2026-08-28T15:14:21+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

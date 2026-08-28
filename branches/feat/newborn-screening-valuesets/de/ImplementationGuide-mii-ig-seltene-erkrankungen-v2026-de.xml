@@ -2248,7 +2248,18 @@
         <reference value="ValueSet/mii-vs-seltene-nbs-acylcarnitine-dbs"/>
       </reference>
       <name value="MII VS Seltene Erkrankungen NBS Acylcarnitine (Trockenblut)"/>
-      <description value="Acylcarnitin- und Carnitin-Analyte, die in Trockenblut (dried blood spot) bestimmt werden — die Messgrößen des MS/MS-Acylcarnitinprofils im Neugeborenenscreening (Fettsäureoxidationsstörungen, Organoazidopathien, Carnitinzyklusdefekte)."/>
+      <description value="Acylcarnitin- und Carnitin-Analyte in Trockenblut (dried blood spot) — die Messgrößen des MS/MS-Acylcarnitinprofils im Neugeborenenscreening (Fettsäureoxidationsstörungen, Organoazidopathien, Carnitinzyklusdefekte). Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb NICHT vollständig gegenüber LOINC: enthalten ist der nach SNOMED gemappte Teil. Für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-seltene-nbs-dbs-all"/>
+      </reference>
+      <name value="MII VS Seltene Erkrankungen NBS alle Trockenblut-Analyte (LOINC)"/>
+      <description value="Alle LOINC-Codes, deren Untersuchungsmaterial Trockenblut (dried blood spot) ist — intensional über die LOINC-Eigenschaft SYSTEM definiert und damit vollständig. Enthält Analyte, Quotienten, Panels und Interpretationscodes nebeneinander sowie Analytik ausserhalb des Neugeborenenscreenings; für klinisch abgegrenzte Teilmengen dienen die gruppierten ValueSets mii-vs-seltene-nbs-*-dbs."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2259,7 +2270,7 @@
         <reference value="ValueSet/mii-vs-seltene-nbs-aminoacid-dbs"/>
       </reference>
       <name value="MII VS Seltene Erkrankungen NBS Aminosäuren (Trockenblut)"/>
-      <description value="Aminosäure-Analyte, die in Trockenblut bestimmt werden — die Messgrößen des MS/MS-Aminosäureprofils im Neugeborenenscreening (Phenylketonurie, Ahornsirupkrankheit, Homocystinurie, Tyrosinämie, Harnstoffzyklusdefekte)."/>
+      <description value="Aminosäure-Analyte in Trockenblut — die Messgrößen des MS/MS-Aminosäureprofils im Neugeborenenscreening (Phenylketonurie, Ahornsirupkrankheit, Homocystinurie, Tyrosinämie, Harnstoffzyklusdefekte). Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb NICHT vollständig gegenüber LOINC; für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2281,7 +2292,7 @@
         <reference value="ValueSet/mii-vs-seltene-nbs-hemoglobin-dbs"/>
       </reference>
       <name value="MII VS Seltene Erkrankungen NBS Hämoglobin-Fraktionen (Trockenblut)"/>
-      <description value="Hämoglobin-Fraktionen in Trockenblut, bezogen auf das Gesamthämoglobin — die Messgrößen des Screenings auf Sichelzellkrankheit und weitere Hämoglobinopathien."/>
+      <description value="Hämoglobin-Fraktionen in Trockenblut, bezogen auf das Gesamthämoglobin — die Messgrößen des Screenings auf Sichelzellkrankheit und weitere Hämoglobinopathien. Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb deutlich unvollständig gegenüber LOINC (rund ein Drittel der DBS-Hämoglobin-Codes); für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

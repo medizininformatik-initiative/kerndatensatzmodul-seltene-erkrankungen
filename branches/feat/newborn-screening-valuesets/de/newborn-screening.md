@@ -56,6 +56,7 @@ Sechs ValueSets gehören zu diesem Modul. Fünf davon sind **aus der LOINC-SNOME
 | [Enzymaktivitäten in Trockenblut](ValueSet-mii-vs-seltene-nbs-enzyme-activity-dbs.md) | 34 | ECL über die Ontologie |
 | [Quotienten in Trockenblut](ValueSet-mii-vs-seltene-nbs-ratio-dbs.md) | 47 | ECL über die Ontologie |
 | [Hämoglobin-Fraktionen in Trockenblut](ValueSet-mii-vs-seltene-nbs-hemoglobin-dbs.md) | 9 | ECL über die Ontologie |
+| [Alle Trockenblut-Analyte](ValueSet-mii-vs-seltene-nbs-dbs-all.md) | 608 | intensional über die LOINC-Eigenschaft`SYSTEM` |
 
 Die fünf generierten gehen von einem Ausdruck aus, der „alles, was in Trockenblut gemessen wird" beschreibt:
 
@@ -70,6 +71,10 @@ Die LOINC-SNOMED-Edition beantwortet ihn mit 335 Konzepten. Jedes ValueSet grenz
 **Warum die ValueSets LOINC-Codes enthalten, obwohl die Abfrage gegen SNOMED läuft.** Jedes LOINC-SNOMED-Konzept trägt seinen LOINC-Code als `alternateIdentifier`. Die Ontologie wählt also die Konzepte aus, LOINC liefert die Codes. Diese Indirektion ist beabsichtigt: tx.fhir.org — der Terminologieserver, gegen den dieser IG baut und validiert — kennt die LOINC-SNOMED-Edition nicht, ein intensionales ECL-ValueSet ließe sich dort gar nicht expandieren. Alle 264 Codes wurden vor dem Schreiben einzeln per `CodeSystem/$lookup` bestätigt.
 
 Die generierten ValueSets beschreiben, **was in Trockenblut messbar ist**, nicht was das deutsche Programm misst. Sie enthalten deshalb auch Analyte, die nicht dazugehören — die lysosomalen Enzyme international gescreenter Erkrankungen und einige Analyte für ganz andere Zwecke. Wer das deutsche Programm meint, nutzt das kuratierte Leitanalyten-ValueSet.
+
+**Und sie sind gegenüber LOINC nicht vollständig — Gliederung kostet Abdeckung.** Die LOINC-SNOMED-Edition bildet nur den nach SNOMED gemappten Teil von LOINC ab: 335 Konzepte gegenüber **608 LOINC-Codes**, deren `SYSTEM` Trockenblut ist. Rund 45 % der LOINC-Codes fehlen damit in der Ontologie, und die fehlenden sind keine Exoten — `50086-8` (C5-OH, Leitmetabolit des 3-MCC-Mangels) und `53166-5` (C4) gehören dazu, ebenso die meisten daraus gebildeten diagnostischen Quotienten. Je Gruppe gemessen: die Acylcarnitine decken etwa die Hälfte der LOINC-Trockenblut-Acylcarnitine ab, die Hämoglobin-Fraktionen etwa ein Drittel.
+
+Deshalb gibt es ein sechstes ValueSet. [Alle Trockenblut-Analyte](ValueSet-mii-vs-seltene-nbs-dbs-all.md) bindet intensional an die LOINC-eigene Eigenschaft `SYSTEM` (`LP21304-8`) und ist damit per Konstruktion vollständig und alterungsfrei — ein neuer Trockenblut-Code von LOINC ist enthalten, ohne dass jemand eine Datei anfasst. Was es nicht bietet, ist die klinische Gliederung: Analyte, Quotienten, Panels, Interpretationscodes und fachfremde Analytik (Medikamentenspiegel, Serologie, PSA) stehen nebeneinander. **Für eine klinisch abgegrenzte Liste die gruppierten Sets, für Abdeckung das vollständige.**
 
 ### Abbildung eines Befunds
 

@@ -41,7 +41,7 @@ ValueSet für Begründung bei fehlender Empfehlung
   "name" : "MII_VS_Seltene_Empfehlung_StatusBegruendung",
   "title" : "MII VS SE Empfehlung Status Begründung",
   "status" : "active",
-  "date" : "2026-08-28T15:01:21+00:00",
+  "date" : "2026-08-28T15:14:21+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
