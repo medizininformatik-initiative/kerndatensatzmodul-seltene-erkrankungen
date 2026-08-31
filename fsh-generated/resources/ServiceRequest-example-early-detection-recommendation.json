@@ -7,6 +7,26 @@
     ]
   },
   "intent": "proposal",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
+          "code": "early-detection",
+          "display": "Früherkennung"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
+          "code": "symptomatic",
+          "display": "Symptomatisch"
+        }
+      ]
+    }
+  ],
   "code": {
     "coding": [
       {
@@ -19,26 +39,6 @@
   },
   "status": "draft",
   "priority": "routine",
-  "category": [
-    {
-      "coding": [
-        {
-          "code": "early-detection",
-          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
-          "display": "Früherkennung"
-        }
-      ]
-    },
-    {
-      "coding": [
-        {
-          "code": "symptomatic",
-          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
-          "display": "Symptomatisch"
-        }
-      ]
-    }
-  ],
   "subject": {
     "reference": "Patient/patient-marfan-001"
   },

@@ -7,6 +7,26 @@
     ]
   },
   "intent": "proposal",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
+          "code": "nutrition",
+          "display": "Ernährungstherapie"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
+          "code": "causal",
+          "display": "Kausal"
+        }
+      ]
+    }
+  ],
   "code": {
     "coding": [
       {
@@ -19,26 +39,6 @@
   },
   "status": "active",
   "priority": "routine",
-  "category": [
-    {
-      "coding": [
-        {
-          "code": "nutrition",
-          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
-          "display": "Ernährungstherapie"
-        }
-      ]
-    },
-    {
-      "coding": [
-        {
-          "code": "causal",
-          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
-          "display": "Kausal"
-        }
-      ]
-    }
-  ],
   "subject": {
     "reference": "Patient/example"
   },

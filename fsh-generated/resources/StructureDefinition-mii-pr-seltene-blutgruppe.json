@@ -258,8 +258,8 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
-              "path": "$this"
+              "type": "value",
+              "path": "system"
             }
           ],
           "rules": "open"
@@ -288,6 +288,7 @@
       {
         "id": "Observation.value[x].coding:loinc.system",
         "path": "Observation.value[x].coding.system",
+        "min": 1,
         "patternUri": "http://loinc.org"
       },
       {
@@ -308,6 +309,7 @@
       {
         "id": "Observation.value[x].coding:snomed.system",
         "path": "Observation.value[x].coding.system",
+        "min": 1,
         "patternUri": "http://snomed.info/sct"
       },
       {

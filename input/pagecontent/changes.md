@@ -3,6 +3,24 @@ This page tracks the differences between versions, beginning with the difference
 
 ---
 
+### Version 2027.0.0-ballot
+
+#### Breaking changes
+
+- `remove` extension `mii-ex-seltene-empfehlung-evidenzgraduierung` removed from this module, along with its use in the three Therapieempfehlung profiles. It was a copy of the MTB module's extension and was never finished: its `system` discriminator carried no value, so the mandatory `Evidenzgrad 1..1` slice could not be satisfied by any instance — the extension shipped in 2026.0.1 but was unusable, and no example ever used it. Which evidence scale applies is tracked in ballot ticket HDB-543 and is framed in oncological terms (NCT m1A–m4, ESMO, ASCO); the question was never answered for rare diseases. Rather than importing a tumour scale, the topic stays with the MTB module. Removal is therefore not expected to affect any conformant implementation
+
+#### Bug fixes
+
+- `fix` value set `mii-vs-seltene-penetrance` corrected — three of four codes were wrong (issue #31). `HP:0025169`, published as "Complete penetrance", is in fact *Left ventricular systolic dysfunction*, and is replaced by `HP:0034950`. `HP:0003828`, published as "Variable penetrance", is *Variable expressivity* — a different concept — and is dropped; the graded terms `HP:4000158/59/60` (high/moderate/low) now provide that dimension. `HP:0003829` carried an outdated display. All codes verified against the HPO API. Note that the graded terms are subtypes of *incomplete* penetrance, not alternatives to complete penetrance
+- `fix` slicing discriminator on `mii-pr-seltene-blutgruppe` `value[x].coding` changed from `#pattern`/`$this` to `#value`/`system` (issue #25). The slices differ only by code system and set `.system`, which yields a `patternUri` on the child element rather than a `patternCoding` on the coding itself, so the discriminator had nothing to match
+- `fix` same defect repaired on `category` in `mii-pr-seltene-therapieempfehlung` and `mii-pr-seltene-therapieempfehlung-nicht-medikamentoes` (found by an audit, not previously reported). Both slices were distinguished solely by a required binding to different value sets, which no FHIR R4 discriminator can evaluate; `coding.system` is now pinned per slice
+
+#### Governance
+
+- `chore` licence declared as `CC-BY-4.0` at IG level (Gate A decision). The module previously declared no licence anywhere in `sushi-config.yaml`, `package.json` or a LICENSE file; the artefact level already applied CC-BY-4.0 through `LicenseCodeableCCBY40`
+
+---
+
 ### Version 2026.0.1 (patch release)
 
 #### Dependencies

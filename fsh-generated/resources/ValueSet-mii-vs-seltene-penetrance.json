@@ -4,7 +4,7 @@
   "name": "PenetranceValueSet",
   "id": "mii-vs-seltene-penetrance",
   "title": "MII VS SE Penetrance",
-  "description": "Value set for qualitative descriptions of genetic penetrance",
+  "description": "Value set for qualitative descriptions of genetic penetrance, drawn from the HPO branch Inheritance qualifier (HP:0034335). Note that the graded terms (high/moderate/low penetrance) are subtypes of incomplete penetrance, not alternatives to complete penetrance.",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-penetrance",
   "version": "2026.0.1",
   "publisher": "Medizininformatik Initiative",
@@ -24,20 +24,28 @@
         "system": "http://human-phenotype-ontology.org",
         "concept": [
           {
+            "code": "HP:0034950",
+            "display": "Typified by complete penetrance"
+          },
+          {
             "code": "HP:0003829",
-            "display": "Incomplete penetrance"
+            "display": "Typified by incomplete penetrance"
           },
           {
-            "code": "HP:0003828",
-            "display": "Variable penetrance"
+            "code": "HP:4000158",
+            "display": "Typified by high penetrance"
           },
           {
-            "code": "HP:0025169",
-            "display": "Complete penetrance"
+            "code": "HP:4000159",
+            "display": "Typified by moderate penetrance"
+          },
+          {
+            "code": "HP:4000160",
+            "display": "Typified by low penetrance"
           },
           {
             "code": "HP:0003831",
-            "display": "Age-dependent penetrance"
+            "display": "Typified by age-related disease onset"
           }
         ]
       }

@@ -45,8 +45,17 @@ Description: "Observation-Profil für die Erfassung der Blutgruppe (AB0 und Rhes
 * valueCodeableConcept MS
 * valueCodeableConcept.coding MS
 * valueCodeableConcept.coding from MII_VS_Seltene_Blutgruppe (required)
-* valueCodeableConcept.coding ^slicing.discriminator.type = #pattern
-* valueCodeableConcept.coding ^slicing.discriminator.path = "$this"
+// Discriminator auf #value/system statt #pattern/$this (GitHub-Issue #25).
+// Die Slices unterscheiden sich ausschliesslich durch ihr Codesystem und setzen
+// dafuer .system — das erzeugt ein patternUri auf dem Kindelement, KEIN
+// patternCoding auf dem Coding selbst. Ein Discriminator vom Typ #pattern auf
+// $this sucht aber genau dort und findet nichts, daher
+// "Slicing cannot be evaluated: Could not match discriminator ($this)".
+// Gegenprobe in derselben Datei: code.coding weiter oben wird per
+// "* code.coding[loinc-abo-rh] = $LNC#882-1" als ganzes Coding zugewiesen,
+// bekommt dadurch ein echtes patternCoding und validiert mit #pattern/$this.
+* valueCodeableConcept.coding ^slicing.discriminator.type = #value
+* valueCodeableConcept.coding ^slicing.discriminator.path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains 
     loinc 0..1 MS and

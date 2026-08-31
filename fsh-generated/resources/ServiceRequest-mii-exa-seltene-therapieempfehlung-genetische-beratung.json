@@ -7,6 +7,26 @@
     ]
   },
   "intent": "proposal",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
+          "code": "other",
+          "display": "Sonstige"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
+          "code": "symptomatic",
+          "display": "Symptomatisch"
+        }
+      ]
+    }
+  ],
   "code": {
     "coding": [
       {
@@ -19,26 +39,6 @@
   },
   "status": "active",
   "priority": "routine",
-  "category": [
-    {
-      "coding": [
-        {
-          "code": "other",
-          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
-          "display": "Sonstige"
-        }
-      ]
-    },
-    {
-      "coding": [
-        {
-          "code": "symptomatic",
-          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
-          "display": "Symptomatisch"
-        }
-      ]
-    }
-  ],
   "subject": {
     "reference": "Patient/example"
   },
