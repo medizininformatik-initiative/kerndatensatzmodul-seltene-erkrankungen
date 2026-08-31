@@ -105,7 +105,7 @@ Each is revertible on its own; each has a run-log line.
 
 | id | Decision | Evidence | Effort | If nobody decides |
 | --- | --- | --- | --- | --- |
-| **A-1** | **Which licence does this module declare?** | The source declares none anywhere: no `license` in `sushi-config.yaml` or `package.json`, no LICENSE file, no statement on the index page. The **artefact** level uses `LicenseCodeableCCBY40` (CC-BY-4.0) in `input/fsh/rulesets/license-terms.fsh`; the index page carries `Copyright © 2019+: TMF e. V.` and states re-use is unrestricted. Findings F1-7bae24, F3-1a29c4 | 5 min once decided | The guide ships with no declared licence. The template's default is CC-BY-4.0 — adopting it silently would be a **relicensing by accident**, which is why the migration refused to |
+| **A-1** ✅ | **~~Which licence does this module declare?~~ DECIDED 2026-08-31: `CC-BY-4.0`** | Decided by the module maintainer. The source declared none at IG level: no `license` in `sushi-config.yaml` or `package.json`, no LICENSE file, no statement on the index page. The **artefact** level already used `LicenseCodeableCCBY40` (CC-BY-4.0) in `input/fsh/rulesets/license-terms.fsh`, and the index page states re-use is unrestricted — the decision aligns the IG level with both. The migration deliberately left it blank rather than inheriting the template default, so that this choice was made and not defaulted into. Findings F1-7bae24, F3-1a29c4 | done | — |
 | **A-2** | **Confirm the target version 2027.0.0-ballot** | The only identity value the migration changed; decided by the maintainer 2026-08-28. Source was 2026.0.1. This is the single `REGRESSION` row in `prepost-delta.tsv` | 1 min | The ballot version is asserted without a recorded decision |
 | **A-3** | **Confirm the 6 resolved dependency pins** | `basisprofil 1.5.x→1.5.4`, `meta 2026.0.x→2026.0.0`, `molgen 2026.0.x→2026.0.4`, `icu 2026.0.x→2026.0.3`, `base 2026.0.x→2026.0.1`, `medikation 2026.0.x→2026.0.1`. Resolved against the registry on 2026-08-28. F2 ×6 | 15 min | The module silently tracks whatever the registry served that day, and the guide claims pins the source never made |
 | **A-4** | **Confirm the 3 added template dependencies** | `hl7.fhir.uv.crmi 2.0.0` (required by the CRMI meta.profile claims), `hl7.terminology.r4 7.3.0`, `hl7.fhir.uv.extensions.r4 5.3.0`. F2 ×3 | 5 min | Additions to the dependency set stand unreviewed |
@@ -170,7 +170,7 @@ The 56 DIVERGIERT rows, all triaged:
 - **31 `C4` + 15 `C7` — the language inversion, not text loss.** The source is German; the target's default language is English. The verifier looks for German source text in `input/pagecontent/`, where the *machine translation* lives — the German is in `input/translations/de/`. A counter-measurement was run: **1030 source text runs from all 41 tree pages against the German target pages → 986 found (95.7 %)**. All 44 exceptions are classified: 24 rewritten `.page.md` links (now artefact HTML), 7 `raw.githubusercontent` image hotlinks (deliberately replaced with local images), 6 empty example headings (replaced with pointers), 3 profile-name lists (the port writes `MII PR SE` where the tree writes `MII PR Seltene`), 2 orphaned FQL table headers, 1 empty RETIRED page, 1 outdated Marfan status line (*"resources are under development"* — they exist now), 1 RETIRED Waist-to-Hip-Ratio page. `C7` follows mechanically from `C4`: the pages it names carry **moved** content (family index pages 1:1, headings demoted one level), and the marker contract explicitly exempts moved and split content.
 - **6 `F2`** — the resolved dependency pins (① A-3).
 - **2 `R2`** — the `searchform.html` template artefact (above).
-- **1 `F1` + 1 `F3`** — the undeclared licence (① A-1).
+- **1 `F1` + 1 `F3`** — the undeclared licence (① A-1 — **decided 2026-08-31: CC-BY-4.0**).
 
 The 71 NICHT PRÜFBAR rows are checks that could not be mechanised here — most because no rendered Simplifier source was harvested for a pixel-level comparison, and because ten optional pipeline steps (goFSH conversion, guide harvest, package/repo identity recovery) legitimately did not run for a shape-A, in-place migration. Each is listed in `migration-log/qa-checklist.md` with the human action it needs.
 
@@ -213,7 +213,7 @@ Every value below was **read** from the source, never asked for and never invent
 | `status` / `releaseLabel` | `active` / `ci-build` | sushi-config | no |
 | `publisher` | `Medizininformatik Initiative` | sushi-config | no — the template ships `NUM-DIZ`; source wins |
 | `copyrightYear` | `2022+` | sushi-config | no |
-| `license` | **not declared anywhere** | — | **not defaulted** (① A-1) |
+| `license` | not declared anywhere → **`CC-BY-4.0`** | maintainer decision 2026-08-31 | **decided** (① A-1 ✅) |
 | `description` | new English text, `TODO:REVIEW` | derived — the source's description was German and version-specific | new |
 
 ## Verification (GENERATED — see `migration-log/verification.md`)

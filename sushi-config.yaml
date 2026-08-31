@@ -21,11 +21,14 @@ packageId: de.medizininformatikinitiative.kerndatensatz.seltene
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: "2022+"
 releaseLabel: ci-build # Quelle gewinnt (2027.0.0-ballot ist kein formales Release)
-# license: BEWUSST AUSGELASSEN — die Quelle deklariert nirgends eine Lizenz
-# (kein Feld in sushi-config/package.json, keine LICENSE-Datei, kein
-# Impressums-Statement). Artefakt-Ebene nutzt LicenseCodeableCCBY40
-# (input/fsh/rulesets/license-terms.fsh). Lizenz-Entscheidung = Gate A ①;
-# das Template-Default CC-BY-4.0 wird NICHT stillschweigend übernommen.
+# Gate A ① (A-1) ENTSCHIEDEN am 2026-08-31 durch den Modulverantwortlichen:
+# CC-BY-4.0. Die Quelle deklarierte auf IG-Ebene nirgends eine Lizenz (kein Feld
+# in sushi-config/package.json, keine LICENSE-Datei, kein Impressums-Statement);
+# die Migration hat deshalb NICHT stillschweigend das Template-Default gesetzt,
+# sondern die Entscheidung offengelassen. Sie deckt sich nun mit der bereits
+# gelebten Artefakt-Ebene (LicenseCodeableCCBY40 in
+# input/fsh/rulesets/license-terms.fsh) und mit dem Index-Seiten-Statement.
+license: CC-BY-4.0
 # Must equal the publication date; go-publish.yml validates this.
 date: "2026-08-28" # TODO:REVIEW Migrations-Datum, kein Publikationsdatum (Gate A)
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # package.json nutzt m49#276 (ebenfalls DE) — Template-Idiom übernommen
