@@ -1,0 +1,84 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-seltene-symptom-change-status-combined",
+  "language" : "de",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-seltene-symptom-change-status-combined</b></p><a name=\"de-mii-vs-seltene-symptom-change-status-combined\"> </a><a name=\"de-hcmii-vs-seltene-symptom-change-status-combined\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"CodeSystem-mii-cs-seltene-hpo-change-status.html\"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;2027.0.0-ballot</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-mii-cs-seltene-hpo-change-status.html#mii-cs-seltene-hpo-change-status-newly-added\">newly-added</a></td><td>Neu hinzugefügt</td><td>Phänotyp wurde neu beobachtet/diagnostiziert</td></tr><tr><td><a href=\"CodeSystem-mii-cs-seltene-hpo-change-status.html#mii-cs-seltene-hpo-change-status-improved\">improved</a></td><td>Verbessert</td><td>Phänotyp hat sich verbessert</td></tr><tr><td><a href=\"CodeSystem-mii-cs-seltene-hpo-change-status.html#mii-cs-seltene-hpo-change-status-degraded\">degraded</a></td><td>Verschlechtert</td><td>Phänotyp hat sich verschlechtert</td></tr><tr><td><a href=\"CodeSystem-mii-cs-seltene-hpo-change-status.html#mii-cs-seltene-hpo-change-status-no-longer-observed\">no-longer-observed</a></td><td>Nicht mehr beobachtet</td><td>Phänotyp wird nicht mehr beobachtet/ist verschwunden</td></tr><tr><td><a href=\"CodeSystem-mii-cs-seltene-hpo-change-status.html#mii-cs-seltene-hpo-change-status-unchanged\">unchanged</a></td><td>Unverändert</td><td>Phänotyp ist unverändert geblieben</td></tr></table></li><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/385425000\">385425000</a></td><td>Improved</td></tr><tr><td><a href=\"http://snomed.info/id/231877006\">231877006</a></td><td>Worse</td></tr><tr><td><a href=\"http://snomed.info/id/385630006\">385630006</a></td><td>Maintained</td></tr><tr><td><a href=\"http://snomed.info/id/2667000\">2667000</a></td><td>Absent</td></tr><tr><td><a href=\"http://snomed.info/id/35105006\">35105006</a></td><td>Increased</td></tr><tr><td><a href=\"http://snomed.info/id/1250004\">1250004</a></td><td>Decreased</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-symptom-change-status-combined",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_VS_Seltene_Symptom_ChangeStatus_Combined",
+  "title" : "MII VS Seltene Erkrankungen Symptom Change Status (Combined)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-08-31T13:50:55+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "ValueSet zur Dokumentation von Änderungen bei Symptomen/Phänotypen über Zeit. Kombiniert MVGenomSeq-spezifische Codes mit SNOMED CT-Codes für internationale Interoperabilität.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status",
+      "concept" : [{
+        "code" : "newly-added",
+        "display" : "Neu hinzugefügt"
+      },
+      {
+        "code" : "improved",
+        "display" : "Verbessert"
+      },
+      {
+        "code" : "degraded",
+        "display" : "Verschlechtert"
+      },
+      {
+        "code" : "no-longer-observed",
+        "display" : "Nicht mehr beobachtet"
+      },
+      {
+        "code" : "unchanged",
+        "display" : "Unverändert"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "385425000",
+        "display" : "Improved"
+      },
+      {
+        "code" : "231877006",
+        "display" : "Worse"
+      },
+      {
+        "code" : "385630006",
+        "display" : "Maintained"
+      },
+      {
+        "code" : "2667000",
+        "display" : "Absent"
+      },
+      {
+        "code" : "35105006",
+        "display" : "Increased"
+      },
+      {
+        "code" : "1250004",
+        "display" : "Decreased"
+      }]
+    }]
+  }
+}

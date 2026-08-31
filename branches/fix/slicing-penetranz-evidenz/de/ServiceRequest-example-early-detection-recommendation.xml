@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="example-early-detection-recommendation"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2026.0.1"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ServiceRequest example-early-detection-recommendation</b></p><a name="de-example-early-detection-recommendation"> </a><a name="de-hcexample-early-detection-recommendation"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2026.0.1">https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2026.0.1</a></p></div><p><b>status</b>: Draft</p><p><b>intent</b>: Proposal</p><p><b>category</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie early-detection}">Früherkennung</span>, <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ symptomatic}">Symptomatisch</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 312851005}">Jährliche kardiologische Kontrolle bei Marfan-Syndrom</span></p><p><b>subject</b>: <a href="Patient-patient-marfan-001.html">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>reasonReference</b>: <a href="Condition-condition-marfan-clinical.html">Condition Marfan syndrome</a></p><p><b>note</b>: </p><blockquote><div><p>Jährliche Echokardiographie zur Früherkennung von Aortenwurzeldilatation empfohlen</p>
+</div></blockquote></div>
+  </text>
+  <status value="draft"/>
+  <intent value="proposal"/>
+  <category>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"/>
+      <code value="early-detection"/>
+      <display value="Früherkennung"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ"/>
+      <code value="symptomatic"/>
+      <display value="Symptomatisch"/>
+    </coding>
+  </category>
+  <priority value="routine"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="312851005"/>
+      <display value="Screening for disorder"/>
+    </coding>
+    <text value="Jährliche kardiologische Kontrolle bei Marfan-Syndrom"/>
+  </code>
+  <subject>
+    <reference value="Patient/patient-marfan-001"/>
+  </subject>
+  <reasonReference>
+    <reference value="Condition/condition-marfan-clinical"/>
+  </reasonReference>
+  <note>
+    <text value="Jährliche Echokardiographie zur Früherkennung von Aortenwurzeldilatation empfohlen"/>
+  </note>
+</ServiceRequest>

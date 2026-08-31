@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="symptom-aortic-root"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation symptom-aortic-root</b></p><a name="symptom-aortic-root"> </a><a name="hcsymptom-aortic-root"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category imaging}">Imaging</span></p><p><b>code</b>: <span title="Codes:{http://human-phenotype-ontology.org HP:0002616}, {http://snomed.info/sct 251036003}">Aortenwurzeldilatation</span></p><p><b>subject</b>: <a href="Patient-patient-marfan-001.html">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>effective</b>: 2024-12-15</p><p><b>value</b>: 48 mm<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm = 'mm')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>High</b></td><td><b>Text</b></td></tr><tr><td style="display: none">*</td><td>40 mm</td><td>Normwert &lt;40mm</td></tr></table></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation symptom-aortic-root</b></p><a name="de-symptom-aortic-root"> </a><a name="de-hcsymptom-aortic-root"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category imaging}">Imaging</span></p><p><b>code</b>: <span title="Codes:{http://human-phenotype-ontology.org HP:0002616}, {http://snomed.info/sct 251036003}">Aortenwurzeldilatation</span></p><p><b>subject</b>: <a href="Patient-patient-marfan-001.html">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>effective</b>: 2024-12-15</p><p><b>value</b>: 48 mm<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm = 'mm')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>High</b></td><td><b>Text</b></td></tr><tr><td style="display: none">*</td><td>40 mm</td><td>Normwert &lt;40mm</td></tr></table></div></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="imaging"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://human-phenotype-ontology.org"/>
+      <code value="HP:0002616"/>
+      <display value="Aortic root aneurysm"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="251036003"/>
+      <display value="Aortic root dilatation"/>
+    </coding>
+    <text value="Aortenwurzeldilatation"/>
+  </code>
+  <subject>
+    <reference value="Patient/patient-marfan-001"/>
+  </subject>
+  <effectiveDateTime value="2024-12-15"/>
+  <valueQuantity>
+    <value value="48"/>
+    <unit value="mm"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="mm"/>
+  </valueQuantity>
+  <interpretation>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+      <code value="H"/>
+      <display value="High"/>
+    </coding>
+  </interpretation>
+  <referenceRange>
+    <high>
+      <value value="40"/>
+      <unit value="mm"/>
+    </high>
+    <text value="Normwert &lt;40mm"/>
+  </referenceRange>
+</Observation>
