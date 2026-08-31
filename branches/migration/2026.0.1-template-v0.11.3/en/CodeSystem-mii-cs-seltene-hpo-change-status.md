@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status | *Version*:2027.0.0-ballot |
-| Active as of 2026-08-28 | *Computable Name*:MII_CS_Seltene_HPO_ChangeStatus |
+| Active as of 2026-08-31 | *Computable Name*:MII_CS_Seltene_HPO_ChangeStatus |
 
  
 CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit 
@@ -37,7 +37,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Seltene Erkrankungen HPO Change Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-28T14:00:29+00:00",
+  "date" : "2026-08-31T13:41:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

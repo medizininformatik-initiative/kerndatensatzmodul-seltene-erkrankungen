@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-penetrance | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:PenetranceValueSet |
+| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:PenetranceValueSet |
 
  
 Value set for qualitative descriptions of genetic penetrance 
@@ -43,7 +43,7 @@ No Expansion for this valueset (Unknown Code System)
   "name" : "PenetranceValueSet",
   "title" : "MII VS SE Penetrance",
   "status" : "active",
-  "date" : "2026-08-28T14:00:29+00:00",
+  "date" : "2026-08-31T13:41:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

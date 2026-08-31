@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:ClinicalDiagnosisCategoryVS |
+| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:ClinicalDiagnosisCategoryVS |
 
  
 Value set for categorizing clinical diagnoses of rare diseases 
@@ -43,7 +43,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "name" : "ClinicalDiagnosisCategoryVS",
   "title" : "MII VS SE Clinical Diagnosis Category",
   "status" : "active",
-  "date" : "2026-08-28T14:00:29+00:00",
+  "date" : "2026-08-31T13:41:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

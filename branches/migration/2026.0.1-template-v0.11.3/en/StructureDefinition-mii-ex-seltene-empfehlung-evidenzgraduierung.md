@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung | *Version*:2027.0.0-ballot |
-| Active as of 2026-08-28 | *Computable Name*:MII_EX_Seltene_Empfehlung_Evidenzgraduierung |
+| Active as of 2026-08-31 | *Computable Name*:MII_EX_Seltene_Empfehlung_Evidenzgraduierung |
 
 Evidenzgraduierung der (einzelnen) Empfehlung
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-em
   "name" : "MII_EX_Seltene_Empfehlung_Evidenzgraduierung",
   "title" : "MII EX SE Empfehlung Evidenzgraduierung",
   "status" : "active",
-  "date" : "2026-08-28T14:00:29+00:00",
+  "date" : "2026-08-31T13:41:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

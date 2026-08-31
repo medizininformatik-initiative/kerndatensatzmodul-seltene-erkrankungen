@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese | *Version*:2027.0.0-ballot |
-| Active as of 2026-08-28 | *Computable Name*:MII_PR_Seltene_Familienanamnese |
+| Active as of 2026-08-31 | *Computable Name*:MII_PR_Seltene_Familienanamnese |
 
  
 
@@ -156,7 +156,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
   "name" : "MII_PR_Seltene_Familienanamnese",
   "title" : "MII PR SE Familienanamnese",
   "status" : "active",
-  "date" : "2026-08-28T14:00:29+00:00",
+  "date" : "2026-08-31T13:41:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

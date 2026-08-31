@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-08-28 | *Maschinenlesbarer Name*:HPOPresenceStatus |
+| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:HPOPresenceStatus |
 | **Copyright/Rechtliches**: This value set includes content from LOINC which is copyrighted by Regenstrief Institute, Inc. | |
 
  
@@ -42,7 +42,7 @@ LOINC codes for indicating presence or absence of phenotypic features. Follows H
   "name" : "HPOPresenceStatus",
   "title" : "HPO Phenotype Presence Status",
   "status" : "active",
-  "date" : "2026-08-28T14:00:29+00:00",
+  "date" : "2026-08-31T13:41:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

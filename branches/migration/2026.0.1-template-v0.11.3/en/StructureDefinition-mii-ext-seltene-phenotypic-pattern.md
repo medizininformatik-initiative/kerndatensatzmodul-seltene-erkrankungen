@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-phenotypic-pattern | *Version*:2027.0.0-ballot |
-| Active as of 2026-08-28 | *Computable Name*:PhenotypicPattern |
+| Active as of 2026-08-31 | *Computable Name*:PhenotypicPattern |
 
 Extension to link syndrome diagnoses to characteristic phenotypic patterns or symptom clusters
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ext-seltene-p
   "name" : "PhenotypicPattern",
   "title" : "Phenotypic Pattern Extension",
   "status" : "active",
-  "date" : "2026-08-28T14:00:29+00:00",
+  "date" : "2026-08-31T13:41:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

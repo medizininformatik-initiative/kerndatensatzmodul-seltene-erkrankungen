@@ -329,7 +329,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     }]
   }],
   "packageId" : "de.medizininformatikinitiative.kerndatensatz.seltene",
-  "license" : "CC0-1.0",
+  "license" : "CC-BY-4.0",
   "fhirVersion" : ["4.0.1"],
   "dependsOn" : [{
     "id" : "de_basisprofil_r4",

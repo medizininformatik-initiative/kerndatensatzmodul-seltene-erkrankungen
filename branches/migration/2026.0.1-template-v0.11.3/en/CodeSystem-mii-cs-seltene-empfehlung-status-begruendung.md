@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-empfehlung-status-begruendung | *Version*:2027.0.0-ballot |
-| Active as of 2026-08-28 | *Computable Name*:MII_CS_Seltene_Empfehlung_StatusBegruendung |
+| Active as of 2026-08-31 | *Computable Name*:MII_CS_Seltene_Empfehlung_StatusBegruendung |
 
  
 Begründung bei fehlender Empfehlung 
@@ -35,7 +35,7 @@ This Code system is referenced in the definition of the following value sets:
   "name" : "MII_CS_Seltene_Empfehlung_StatusBegruendung",
   "title" : "MII CS SE Empfehlung Status Begründung",
   "status" : "active",
-  "date" : "2026-08-28T14:00:29+00:00",
+  "date" : "2026-08-31T13:41:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
