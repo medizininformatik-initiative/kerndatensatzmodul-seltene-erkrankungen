@@ -880,10 +880,10 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-seltene-icf-qualifier"
+          "reference": "CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal"
         },
-        "name": "MII CS SE ICF Generic Qualifier",
-        "description": "The WHO generic qualifier scale used with ICF categories. Defined locally because the qualifiers are not concepts in the ICF classification itself — WHO specifies them as a scale appended to a category. Wording and percentage ranges are quoted from the ICF.",
+        "name": "MII CS SE ICF Qualifier Kind",
+        "description": "Names which ICF qualifier a component carries. This is a slot name, not a scale — the scales themselves are the seven BfArM code systems. Defined locally because neither the ICF nor BfArM publishes identifiers for the qualifier positions, and because capacity and performance share one scale and can only be told apart here.",
         "exampleBoolean": false
       },
       {
@@ -1075,7 +1075,7 @@
           "reference": "StructureDefinition/mii-pr-seltene-icf-assessment"
         },
         "name": "MII PR SE ICF Assessment",
-        "description": "Observation profile grading a single ICF category for a patient, as required by the JARDIN MDS draft and the ERDRI-CDS. Observation.code carries the ICF category (body function, body structure, activity/participation or environmental factor); Observation.value carries the WHO generic qualifier, which is not itself an ICF code.",
+        "description": "Observation profile grading a single ICF category for a patient, as required by the JARDIN MDS draft and the ERDRI-CDS. Observation.code carries the ICF category; the WHO qualifiers are carried as components, because body structures take three of them and activities/participation take two (capacity and performance).",
         "exampleBoolean": false
       },
       {
@@ -1227,15 +1227,15 @@
           "reference": "ValueSet/mii-vs-seltene-icf"
         },
         "name": "MII VS SE ICF Categories",
-        "description": "All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. Note that the content is not shipped by HL7 Terminology — it resolves against a terminology server that carries ICF (verified against tx.fhir.org, release 2017a).",
+        "description": "All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. German display text comes from the BfArM language supplement, so the value set does not need a German twin.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-seltene-icf-qualifier"
+          "reference": "ValueSet/mii-vs-seltene-icf-beurteilungsmerkmal"
         },
-        "name": "MII VS SE ICF Generic Qualifier",
-        "description": "The full WHO generic qualifier scale (0-4, 8, 9) for grading an ICF category.",
+        "name": "MII VS SE ICF Qualifier Kind",
+        "description": "All qualifier kinds usable as a component code in the ICF assessment profile.",
         "exampleBoolean": false
       },
       {

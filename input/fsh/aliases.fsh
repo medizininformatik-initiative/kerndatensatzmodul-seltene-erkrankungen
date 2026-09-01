@@ -92,3 +92,11 @@ Alias: $icf = http://hl7.org/fhir/sid/icf
 // Modul Studie: Register (Library) und Proband (ResearchSubject)
 Alias: $mii-pr-studie-proband = https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband
 Alias: $mii-pr-studie-register = https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-register
+// BfArM ICF (Package bfarm.terminologien.icf 2005.0.0) — Beurteilungsmerkmale
+Alias: $icf-q-ausmass = https://terminologien.bfarm.de/fhir/ValueSet/icf-q-ausmass-der-schaedigung
+Alias: $icf-q-ausmass-s = https://terminologien.bfarm.de/fhir/ValueSet/icf-q-ausmass-der-schaedigung-s
+Alias: $icf-q-art = https://terminologien.bfarm.de/fhir/ValueSet/icf-q-art-oder-veraenderung-in-der-entsprechenden-koerperstruktur
+Alias: $icf-q-lokalisation = https://terminologien.bfarm.de/fhir/ValueSet/icf-q-anatomische-lokalisation
+Alias: $icf-q-leistung = https://terminologien.bfarm.de/fhir/ValueSet/icf-q-leistungsfaehigkeit-und-leistung
+Alias: $icf-q-barrieren = https://terminologien.bfarm.de/fhir/ValueSet/icf-q-barrieren
+Alias: $icf-q-foerderfaktoren = https://terminologien.bfarm.de/fhir/ValueSet/icf-q-foerderfaktoren
