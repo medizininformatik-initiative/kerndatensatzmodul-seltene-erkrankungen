@@ -42,7 +42,7 @@ ValueSet für Therapietypen (kausal/symptomatisch) bei seltenen Erkrankungen (Mo
   "name" : "MII_VS_Seltene_TherapieempfehlungTyp",
   "title" : "MII VS SE Therapieempfehlung Typ",
   "status" : "active",
-  "date" : "2026-09-01T21:34:57+00:00",
+  "date" : "2026-09-01T21:46:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
