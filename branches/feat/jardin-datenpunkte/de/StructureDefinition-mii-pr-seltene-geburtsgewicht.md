@@ -16,7 +16,7 @@ Gemessenes Geburtsgewicht. Bei seltenen Erkrankungen ein Ausgangswert für die B
 
 **Usages:**
 
-* This Profile is not used by any profiles in this Specification
+* Examples for this Profile: [Observation/mii-exa-seltene-geburtsgewicht](Observation-mii-exa-seltene-geburtsgewicht.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-geburtsgewicht.json)
 
@@ -99,7 +99,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Geburtsgewicht",
   "title" : "MII PR SE Geburtsgewicht",
   "status" : "active",
-  "date" : "2026-09-01T20:22:52+00:00",
+  "date" : "2026-09-01T21:17:23+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -11,7 +11,7 @@
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register | *Version*:2027.0.0-ballot |
 | Active as of 2026-09-01 | *Computable Name*:MII_EX_Seltene_Register |
 
-Verweis auf das Register, an dem die Person teilnimmt, als Library nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Notwendig, weil ResearchSubject.study nur auf ResearchStudy zeigen kann, das Modul Studie ein Register aber als Library modelliert.
+Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.
 
 **Context of Use**
 
@@ -20,6 +20,7 @@ Verweis auf das Register, an dem die Person teilnimmt, als Library nach dem Prof
 **Usages:**
 
 * Use this Extension: [MII PR SE Registerteilnahme](StructureDefinition-mii-pr-seltene-registerteilnahme.md)
+* Examples for this Extension: [ResearchSubject/mii-exa-seltene-registerteilnahme](ResearchSubject-mii-exa-seltene-registerteilnahme.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-ex-seltene-register.json)
 
@@ -44,7 +45,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-re
   "name" : "MII_EX_Seltene_Register",
   "title" : "MII EX SE Register",
   "status" : "active",
-  "date" : "2026-09-01T20:22:52+00:00",
+  "date" : "2026-09-01T21:17:23+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -66,7 +67,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-re
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Verweis auf das Register, an dem die Person teilnimmt, als Library nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Notwendig, weil ResearchSubject.study nur auf ResearchStudy zeigen kann, das Modul Studie ein Register aber als Library modelliert.",
+  "description" : "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -89,7 +90,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-re
       "id" : "Extension",
       "path" : "Extension",
       "short" : "MII EX SE Register",
-      "definition" : "Verweis auf das Register, an dem die Person teilnimmt, als Library nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Notwendig, weil ResearchSubject.study nur auf ResearchStudy zeigen kann, das Modul Studie ein Register aber als Library modelliert."
+      "definition" : "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt."
     },
     {
       "id" : "Extension.extension",
@@ -104,7 +105,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-re
     {
       "id" : "Extension.value[x]",
       "path" : "Extension.value[x]",
-      "short" : "Register (Library nach mii-pr-studie-register)",
+      "short" : "Katalogeintrag des Registers (Library nach mii-pr-studie-register)",
       "min" : 1,
       "type" : [{
         "code" : "Reference",

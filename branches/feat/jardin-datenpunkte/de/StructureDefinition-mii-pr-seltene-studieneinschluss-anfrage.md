@@ -145,7 +145,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Studieneinschluss_Anfrage",
   "title" : "MII PR SE Studieneinschluss Anfrage",
   "status" : "active",
-  "date" : "2026-09-01T20:22:52+00:00",
+  "date" : "2026-09-01T21:17:23+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

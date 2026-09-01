@@ -16,7 +16,7 @@ Teilnahme einer Person an einem Register für seltene Erkrankungen, insbesondere
 
 **Usages:**
 
-* This Profile is not used by any profiles in this Specification
+* Examples for this Profile: [ResearchSubject/mii-exa-seltene-registerteilnahme](ResearchSubject-mii-exa-seltene-registerteilnahme.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-registerteilnahme.json)
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-re
   "name" : "MII_PR_Seltene_Registerteilnahme",
   "title" : "MII PR SE Registerteilnahme",
   "status" : "active",
-  "date" : "2026-09-01T20:22:52+00:00",
+  "date" : "2026-09-01T21:17:23+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -83,16 +83,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-re
       "path" : "ResearchSubject"
     },
     {
-      "id" : "ResearchSubject.extension",
-      "path" : "ResearchSubject.extension",
-      "min" : 1
-    },
-    {
       "id" : "ResearchSubject.extension:register",
       "path" : "ResearchSubject.extension",
       "sliceName" : "register",
-      "short" : "Register, an dem teilgenommen wird",
-      "min" : 1,
+      "short" : "Katalogeintrag des Registers als Library (optional)",
+      "comment" : "Optionaler Verweis auf den Library-Katalogeintrag nach mii-pr-studie-register. Der verbindliche Registerbezug laeuft ueber study, weil R4 das so erzwingt.",
+      "min" : 0,
       "max" : "1",
       "type" : [{
         "code" : "Extension",
@@ -119,8 +115,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-re
     {
       "id" : "ResearchSubject.study",
       "path" : "ResearchSubject.study",
-      "short" : "Nur zu setzen, wenn das Register zusätzlich als ResearchStudy geführt wird",
-      "comment" : "Siehe Kopfkommentar: der eigentliche Registerbezug läuft über die Extension 'register', weil ResearchSubject.study nicht auf eine Library zeigen kann."
+      "short" : "Das Register, als ResearchStudy gefuehrt",
+      "comment" : "In R4 ist study 1..1 Pflicht und auf ResearchStudy festgelegt. Ein Register muss daher als ResearchStudy vorliegen; der Library-Katalogeintrag des Moduls Studie kann hier nicht stehen. Siehe Kopfkommentar."
     },
     {
       "id" : "ResearchSubject.consent",

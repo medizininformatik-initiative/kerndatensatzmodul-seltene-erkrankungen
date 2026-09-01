@@ -1054,6 +1054,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Consent"/>
+      </extension>
+      <reference>
+        <reference value="Consent/mii-exa-seltene-register-einwilligung"/>
+      </reference>
+      <name value="Beispiel Einwilligung zur Registerteilnahme"/>
+      <description value="Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusaetzliche Huerde."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ServiceRequest"/>
       </extension>
       <reference>
@@ -1076,6 +1087,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-geburtsgewicht"/>
+      </reference>
+      <name value="Beispiel Geburtsgewicht"/>
+      <description value="Geburtsgewicht im Normbereich. Ausgangswert für die Beurteilung der bei SMA Typ 1 häufigen späteren Gedeihstörung."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geburtsgewicht"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-geburtslaenge"/>
+      </reference>
+      <name value="Beispiel Geburtslänge"/>
+      <description value="Körperlänge bei Geburt, gemessen."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geburtslaenge"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ServiceRequest"/>
       </extension>
       <reference>
@@ -1095,6 +1128,39 @@
       <name value="Beispiel Gentherapie bei SMA"/>
       <description value="Beispiel einer medikamentösen Therapieempfehlung für Gentherapie bei Spinaler Muskelatrophie"/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-geschlecht-bei-geburt-indeterminate"/>
+      </reference>
+      <name value="Beispiel Geschlecht bei Geburt — nicht bestimmbar"/>
+      <description value="Der Fall, für den dieses Profil überhaupt SNOMED CT statt der LOINC-Antwortliste bindet: bei Geburt nicht bestimmbares Geschlecht. LOINC LL3324-2 böte hier nur 'Unknown' an, was etwas anderes heißt — nicht erhoben statt nicht bestimmbar. Störungen der Geschlechtsentwicklung sind selbst seltene Erkrankungen und damit Kerngeschäft dieses Moduls."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geschlecht-bei-geburt"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-geschlecht-bei-geburt"/>
+      </reference>
+      <name value="Beispiel Geschlecht bei Geburt — weiblich"/>
+      <description value="Biologisches Geschlecht bei Geburt für das SMA-Neugeborene. Deckt sich hier mit dem administrativen Patient.gender; der Sinn des eigenen Datenpunkts zeigt sich erst im Fall daneben."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geschlecht-bei-geburt"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-gestationsalter"/>
+      </reference>
+      <name value="Beispiel Gestationsalter bei Geburt"/>
+      <description value="Reifgeborenes in der 38. Woche. Bei SMA Typ 1 wichtig als Abgrenzung: die Muskelschwäche ist nicht durch Frühgeburtlichkeit erklärbar."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-gestationsalter"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1139,6 +1205,39 @@
       <name value="Beispiel Physiotherapie bei SMA"/>
       <description value="Beispiel einer nicht-medikamentösen Therapieempfehlung für Physiotherapie bei Spinaler Muskelatrophie"/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ResearchStudy"/>
+      </extension>
+      <reference>
+        <reference value="ResearchStudy/mii-exa-seltene-register-euro-nmd"/>
+      </reference>
+      <name value="Beispiel Register als ResearchStudy — ERN EURO-NMD"/>
+      <description value="Das Register des European Reference Network für neuromuskuläre Erkrankungen, als ResearchStudy geführt. Ein Register ist inhaltlich eine Beobachtungsstudie; das ist keine Verlegenheitslösung, sondern die Voraussetzung dafür, dass ResearchSubject.study überhaupt darauf zeigen kann."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/mii-exa-seltene-register-katalog-euro-nmd"/>
+      </reference>
+      <name value="Beispiel Register-Katalogeintrag (Library)"/>
+      <description value="Derselbe Registerbestand als Katalogeintrag nach dem Profil mii-pr-studie-register des Moduls Studie. Steht neben der ResearchStudy, nicht an ihrer Stelle — eine Library kann kein Ziel von ResearchSubject.study sein."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ResearchSubject"/>
+      </extension>
+      <reference>
+        <reference value="ResearchSubject/mii-exa-seltene-registerteilnahme"/>
+      </reference>
+      <name value="Beispiel Registerteilnahme — ERN EURO-NMD"/>
+      <description value="Teilnahme des SMA-Kindes am EURO-NMD-Register. Die Kennung ist das registereigene Pseudonym, nicht die Patienten-ID des Standorts."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-registerteilnahme"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1513,6 +1612,50 @@
       <name value="Hüftumfang Beispiel"/>
       <description value="Beispiel einer Hüftumfang-Messung bei einem Patienten mit seltener Erkrankung."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hueftumfang"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-icf-aktivitaet"/>
+      </reference>
+      <name value="ICF example — activities and participation (chapter d), capacity vs performance"/>
+      <description value="Eating in SMA type 1, and the reason chapter d takes two qualifiers rather than one. Without assistance the child cannot feed orally at all — capacity is a complete problem. With a gastrostomy in place, nutrition in daily life is only moderately impaired — performance is markedly better. The gap between the two IS the measured effect of the assistive device; a model with a single value would have had to discard one of the two numbers and would have said something false either way."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-icf-koerperfunktion"/>
+      </reference>
+      <name value="ICF example — body function (chapter b), one qualifier"/>
+      <description value="Muscle power functions in SMA type 1, graded as a complete problem. Chapter b takes exactly one qualifier; invariant mii-icf-1 rejects any other component here."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-icf-koerperstruktur"/>
+      </reference>
+      <name value="ICF example — body structure (chapter s), three qualifiers"/>
+      <description value="Spinal cord in SMA type 1: degeneration of the anterior horn cells. The only chapter that takes three qualifiers at once — extent, nature of the change and anatomical location. This is the case a single value[x] could never have carried, which is why the profile uses components."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-seltene-icf-umweltfaktor"/>
+      </reference>
+      <name value="ICF example — environmental factor (chapter e), facilitator"/>
+      <description value="Assistive products for mobility, graded as a substantial FACILITATOR. Environmental factors are the one chapter with a two-sided scale, and BfArM resolves it by putting the sign into the code itself: facilitators run +0 to +4, barriers .0 to .4. Invariant mii-icf-5 forbids grading the same factor as both at once."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1907,7 +2050,7 @@
         <reference value="StructureDefinition/mii-ex-seltene-register"/>
       </reference>
       <name value="MII EX SE Register"/>
-      <description value="Verweis auf das Register, an dem die Person teilnimmt, als Library nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Notwendig, weil ResearchSubject.study nur auf ResearchStudy zeigen kann, das Modul Studie ein Register aber als Library modelliert."/>
+      <description value="Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

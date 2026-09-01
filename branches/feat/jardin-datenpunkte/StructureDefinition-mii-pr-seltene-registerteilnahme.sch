@@ -12,7 +12,6 @@
   <sch:pattern>
     <sch:title>f:ResearchSubject</sch:title>
     <sch:rule context="f:ResearchSubject">
-      <sch:assert test="count(f:extension[@url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register']) &gt;= 1">extension with URL = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register']) &lt;= 1">extension with URL = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>

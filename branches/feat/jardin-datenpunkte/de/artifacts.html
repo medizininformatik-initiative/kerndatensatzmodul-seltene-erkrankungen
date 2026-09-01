@@ -742,7 +742,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Verweis auf das Register, an dem die Person teilnimmt, als Library nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Notwendig, weil ResearchSubject.study nur auf ResearchStudy zeigen kann, das Modul Studie ein Register aber als Library modelliert.</p>
+<p>Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.</p>
 </td>
          </tr>
          <tr>
@@ -1347,6 +1347,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Consent-mii-exa-seltene-register-einwilligung.html"
+                  title="Consent/mii-exa-seltene-register-einwilligung">
+                  <span title="Consent/mii-exa-seltene-register-einwilligung">Beispiel Einwilligung zur Registerteilnahme
+</span>
+               </a>
+            </td>
+            <td>
+<p>Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusaetzliche Huerde.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ServiceRequest-example-nutrition-therapy-recommendation.html"
                   title="ServiceRequest/example-nutrition-therapy-recommendation">
                   <span title="ServiceRequest/example-nutrition-therapy-recommendation">Beispiel Ernährungstherapie-Empfehlung
@@ -1371,6 +1383,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-mii-exa-seltene-geburtsgewicht.html"
+                  title="Observation/mii-exa-seltene-geburtsgewicht">
+                  <span title="Observation/mii-exa-seltene-geburtsgewicht">Beispiel Geburtsgewicht
+</span>
+               </a>
+            </td>
+            <td>
+<p>Geburtsgewicht im Normbereich. Ausgangswert für die Beurteilung der bei SMA Typ 1 häufigen späteren Gedeihstörung.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-seltene-geburtslaenge.html"
+                  title="Observation/mii-exa-seltene-geburtslaenge">
+                  <span title="Observation/mii-exa-seltene-geburtslaenge">Beispiel Geburtslänge
+</span>
+               </a>
+            </td>
+            <td>
+<p>Körperlänge bei Geburt, gemessen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ServiceRequest-mii-exa-seltene-therapieempfehlung-genetische-beratung.html"
                   title="ServiceRequest/mii-exa-seltene-therapieempfehlung-genetische-beratung">
                   <span title="ServiceRequest/mii-exa-seltene-therapieempfehlung-genetische-beratung">Beispiel Genetische Beratung
@@ -1391,6 +1427,42 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Beispiel einer medikamentösen Therapieempfehlung für Gentherapie bei Spinaler Muskelatrophie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-seltene-geschlecht-bei-geburt-indeterminate.html"
+                  title="Observation/mii-exa-seltene-geschlecht-bei-geburt-indeterminate">
+                  <span title="Observation/mii-exa-seltene-geschlecht-bei-geburt-indeterminate">Beispiel Geschlecht bei Geburt — nicht bestimmbar
+</span>
+               </a>
+            </td>
+            <td>
+<p>Der Fall, für den dieses Profil überhaupt SNOMED CT statt der LOINC-Antwortliste bindet: bei Geburt nicht bestimmbares Geschlecht. LOINC LL3324-2 böte hier nur 'Unknown' an, was etwas anderes heißt — nicht erhoben statt nicht bestimmbar. Störungen der Geschlechtsentwicklung sind selbst seltene Erkrankungen und damit Kerngeschäft dieses Moduls.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-seltene-geschlecht-bei-geburt.html"
+                  title="Observation/mii-exa-seltene-geschlecht-bei-geburt">
+                  <span title="Observation/mii-exa-seltene-geschlecht-bei-geburt">Beispiel Geschlecht bei Geburt — weiblich
+</span>
+               </a>
+            </td>
+            <td>
+<p>Biologisches Geschlecht bei Geburt für das SMA-Neugeborene. Deckt sich hier mit dem administrativen Patient.gender; der Sinn des eigenen Datenpunkts zeigt sich erst im Fall daneben.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-seltene-gestationsalter.html"
+                  title="Observation/mii-exa-seltene-gestationsalter">
+                  <span title="Observation/mii-exa-seltene-gestationsalter">Beispiel Gestationsalter bei Geburt
+</span>
+               </a>
+            </td>
+            <td>
+<p>Reifgeborenes in der 38. Woche. Bei SMA Typ 1 wichtig als Abgrenzung: die Muskelschwäche ist nicht durch Frühgeburtlichkeit erklärbar.</p>
 </td>
          </tr>
          <tr>
@@ -1439,6 +1511,42 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Beispiel einer nicht-medikamentösen Therapieempfehlung für Physiotherapie bei Spinaler Muskelatrophie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ResearchStudy-mii-exa-seltene-register-euro-nmd.html"
+                  title="ResearchStudy/mii-exa-seltene-register-euro-nmd">
+                  <span title="ResearchStudy/mii-exa-seltene-register-euro-nmd">Beispiel Register als ResearchStudy — ERN EURO-NMD
+</span>
+               </a>
+            </td>
+            <td>
+<p>Das Register des European Reference Network für neuromuskuläre Erkrankungen, als ResearchStudy geführt. Ein Register ist inhaltlich eine Beobachtungsstudie; das ist keine Verlegenheitslösung, sondern die Voraussetzung dafür, dass ResearchSubject.study überhaupt darauf zeigen kann.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Library-mii-exa-seltene-register-katalog-euro-nmd.html"
+                  title="Library/mii-exa-seltene-register-katalog-euro-nmd">
+                  <span title="Library/mii-exa-seltene-register-katalog-euro-nmd">Beispiel Register-Katalogeintrag (Library)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Derselbe Registerbestand als Katalogeintrag nach dem Profil mii-pr-studie-register des Moduls Studie. Steht neben der ResearchStudy, nicht an ihrer Stelle — eine Library kann kein Ziel von ResearchSubject.study sein.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ResearchSubject-mii-exa-seltene-registerteilnahme.html"
+                  title="ResearchSubject/mii-exa-seltene-registerteilnahme">
+                  <span title="ResearchSubject/mii-exa-seltene-registerteilnahme">Beispiel Registerteilnahme — ERN EURO-NMD
+</span>
+               </a>
+            </td>
+            <td>
+<p>Teilnahme des SMA-Kindes am EURO-NMD-Register. Die Kennung ist das registereigene Pseudonym, nicht die Patienten-ID des Standorts.</p>
 </td>
          </tr>
          <tr>
@@ -1772,6 +1880,54 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Beispiel einer Hüftumfang-Messung bei einem Patienten mit seltener Erkrankung.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-seltene-icf-aktivitaet.html"
+                  title="Observation/mii-exa-seltene-icf-aktivitaet">
+                  <span title="Observation/mii-exa-seltene-icf-aktivitaet">ICF example — activities and participation (chapter d), capacity vs performance
+</span>
+               </a>
+            </td>
+            <td>
+<p>Eating in SMA type 1, and the reason chapter d takes two qualifiers rather than one. Without assistance the child cannot feed orally at all — capacity is a complete problem. With a gastrostomy in place, nutrition in daily life is only moderately impaired — performance is markedly better. The gap between the two IS the measured effect of the assistive device; a model with a single value would have had to discard one of the two numbers and would have said something false either way.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-seltene-icf-koerperfunktion.html"
+                  title="Observation/mii-exa-seltene-icf-koerperfunktion">
+                  <span title="Observation/mii-exa-seltene-icf-koerperfunktion">ICF example — body function (chapter b), one qualifier
+</span>
+               </a>
+            </td>
+            <td>
+<p>Muscle power functions in SMA type 1, graded as a complete problem. Chapter b takes exactly one qualifier; invariant mii-icf-1 rejects any other component here.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-seltene-icf-koerperstruktur.html"
+                  title="Observation/mii-exa-seltene-icf-koerperstruktur">
+                  <span title="Observation/mii-exa-seltene-icf-koerperstruktur">ICF example — body structure (chapter s), three qualifiers
+</span>
+               </a>
+            </td>
+            <td>
+<p>Spinal cord in SMA type 1: degeneration of the anterior horn cells. The only chapter that takes three qualifiers at once — extent, nature of the change and anatomical location. This is the case a single value[x] could never have carried, which is why the profile uses components.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-seltene-icf-umweltfaktor.html"
+                  title="Observation/mii-exa-seltene-icf-umweltfaktor">
+                  <span title="Observation/mii-exa-seltene-icf-umweltfaktor">ICF example — environmental factor (chapter e), facilitator
+</span>
+               </a>
+            </td>
+            <td>
+<p>Assistive products for mobility, graded as a substantial FACILITATOR. Environmental factors are the one chapter with a two-sided scale, and BfArM resolves it by putting the sign into the code itself: facilitators run +0 to +4, barriers .0 to .4. Invariant mii-icf-5 forbids grading the same factor as both at once.</p>
 </td>
          </tr>
          <tr>
@@ -2474,7 +2630,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Tue, Sep 1, 2026 20:22+0000">2026-09-01</span>
+          Erstellt <span title="Tue, Sep 1, 2026 21:17+0000">2026-09-01</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

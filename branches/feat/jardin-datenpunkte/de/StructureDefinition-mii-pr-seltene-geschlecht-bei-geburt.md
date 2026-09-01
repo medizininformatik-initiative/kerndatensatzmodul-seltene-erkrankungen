@@ -16,7 +16,7 @@ Observation-Profil zur Erfassung des biologischen Geschlechts bei Geburt (sex as
 
 **Usages:**
 
-* This Profile is not used by any profiles in this Specification
+* Examples for this Profile: [Observation/mii-exa-seltene-geschlecht-bei-geburt-indeterminate](Observation-mii-exa-seltene-geschlecht-bei-geburt-indeterminate.md) and [Observation/mii-exa-seltene-geschlecht-bei-geburt](Observation-mii-exa-seltene-geschlecht-bei-geburt.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-geschlecht-bei-geburt.json)
 
@@ -103,7 +103,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_GeschlechtBeiGeburt",
   "title" : "MII PR SE Geschlecht bei Geburt",
   "status" : "active",
-  "date" : "2026-09-01T20:22:52+00:00",
+  "date" : "2026-09-01T21:17:23+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

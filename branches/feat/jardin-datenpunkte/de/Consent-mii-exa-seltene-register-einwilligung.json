@@ -1,0 +1,32 @@
+{
+  "resourceType" : "Consent",
+  "id" : "mii-exa-seltene-register-einwilligung",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Consent mii-exa-seltene-register-einwilligung</b></p><a name=\"de-mii-exa-seltene-register-einwilligung\"> </a><a name=\"de-hcmii-exa-seltene-register-einwilligung\"> </a><h2>Participants</h2><table class=\"grid\"><tr><td><b>Role</b></td><td><b>Details</b></td></tr><tr><td title=\"Who the consent applies to\">Patient</td><td><a href=\"Patient-patient-sma-001.html\">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></td></tr></table><p>This consent is made under the regulation <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/consentpolicycodes cric}\">Common Rule Informed Consent</span> .</p><p>The subject has given their consent.</p></div>"
+  },
+  "status" : "active",
+  "scope" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/consentscope",
+      "code" : "research"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/consentcategorycodes",
+      "code" : "research"
+    }]
+  }],
+  "patient" : {
+    "reference" : "Patient/patient-sma-001"
+  },
+  "dateTime" : "2024-08-15",
+  "policyRule" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/consentpolicycodes",
+      "code" : "cric"
+    }]
+  }
+}
