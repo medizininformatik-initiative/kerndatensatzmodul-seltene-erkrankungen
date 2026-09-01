@@ -13,8 +13,20 @@
 //                               (Library.type = asset-collection)
 //   * mii-pr-studie-proband   — die Teilnahme einer Person, profiliert auf
 //                               ResearchSubject
-// Dieses Modul erfindet daher nichts Neues, sondern schränkt den Probanden auf
-// den Registerfall ein.
+//
+// WARUM DIESES PROFIL TROTZDEM NICHT VON mii-pr-studie-proband ABLEITET:
+// Das Probanden-Profil fordert consent mit 1..1. Das passt zum PRIMAERFALL, in
+// dem der Standort die Studie selbst durchfuehrt und die Einwilligung vorhaelt.
+// Hier geht es aber um SEKUNDAERINFORMATION im Versorgungskontext: dokumentiert
+// wird, DASS eine Person an einem Register teilnimmt. Die Einwilligung liegt in
+// aller Regel beim Registerbetreiber (dem ERN), nicht im FHIR-Repository des
+// dokumentierenden Standorts — sie waere dort schlicht nicht referenzierbar.
+// Eine Ableitung kann Kardinalitaeten nur verschaerfen, niemals lockern; consent
+// bliebe also Pflicht und wuerde Standorte zwingen, auf eine Ressource zu
+// verweisen, die sie nicht haben. Deshalb leitet dieses Profil direkt von
+// ResearchSubject ab, wo consent 0..1 ist, und bleibt in allem uebrigen nah am
+// Probanden-Profil. Auch das gehoert als Rueckmeldung an das Modul Studie:
+// die Teilnahme-Dokumentation aus zweiter Hand ist dort bisher nicht vorgesehen.
 //
 // MODELLIERUNGSSPANNUNG, beim Schreiben der Beispiele praezisiert:
 // ResearchSubject.study ist in FHIR R4 nicht etwa optional, sondern 1..1 PFLICHT
@@ -50,9 +62,9 @@ Description: "Optionaler Verweis auf den Library-Katalogeintrag des Registers na
 
 Profile:     MII_PR_Seltene_Registerteilnahme
 Id:          mii-pr-seltene-registerteilnahme
-Parent:      $mii-pr-studie-proband
+Parent:      ResearchSubject
 Title:       "MII PR SE Registerteilnahme"
-Description: "Teilnahme einer Person an einem Register für seltene Erkrankungen, insbesondere an einem Register eines European Reference Network (ERN). Leitet vom Probanden-Profil des MII KDS Moduls Studie ab und ergänzt den Verweis auf das Register."
+Description: "Teilnahme einer Person an einem Register für seltene Erkrankungen, insbesondere an einem Register eines European Reference Network (ERN). Gedacht für die Dokumentation aus zweiter Hand im Versorgungskontext: festgehalten wird, dass die Person teilnimmt. Nah am Probanden-Profil des MII KDS Moduls Studie, aber bewusst nicht davon abgeleitet, weil dessen Pflichtangabe consent den Sekundärfall ausschließt."
 * insert PR_CS_VS_Version
 * insert Publisher
 
@@ -60,22 +72,24 @@ Description: "Teilnahme einer Person an einem Register für seltene Erkrankungen
 * extension[register] ^short = "Katalogeintrag des Registers als Library (optional)"
 * extension[register] ^comment = "Optionaler Verweis auf den Library-Katalogeintrag nach mii-pr-studie-register. Der verbindliche Registerbezug laeuft ueber study, weil R4 das so erzwingt."
 
-* identifier MS
+* identifier 0..1 MS
 * identifier ^short = "Pseudonym der Person im Register"
-* identifier ^comment = "Vom Modul Studie geerbt: der subjectIdentificationCode ist dort verpflichtend. In Registern ist das üblicherweise das registereigene Pseudonym, nicht die Patienten-ID des Standorts."
+* identifier ^comment = "Das registereigene Pseudonym, nicht die Patienten-ID des Standorts. Bewusst optional: beim Dokumentieren aus zweiter Hand ist oft bekannt, DASS jemand teilnimmt, ohne dass das Pseudonym des Registers am Standort vorliegt. Wenn es vorliegt, ist es die wertvollste Angabe dieses Profils, weil erst sie die Verknuepfung erlaubt."
 
 * status MS
 * status ^short = "Status der Teilnahme"
 
-* period 1..1 MS
-* period.start 1..1 MS
+* period 0..1 MS
+* period.start MS
 * period ^short = "Zeitraum der Registerteilnahme"
+* period ^comment = "Optional, aus demselben Grund wie identifier: das Einschlussdatum ist am dokumentierenden Standort nicht immer bekannt."
 
 * individual 1..1 MS
 * individual only Reference(Patient)
 
-* consent MS
-* consent ^comment = "Vom Probanden-Profil des Moduls Studie mit 1..1 geerbt. Für die Aufnahme in ein ERN-Register ist eine Einwilligung ohnehin die Regel; die Pflichtangabe ist hier also keine zusätzliche Hürde, sondern deckt sich mit der Praxis."
+* consent 0..1 MS
+* consent ^short = "Nur zu setzen, wenn die Einwilligung am dokumentierenden Standort tatsaechlich als Ressource vorliegt"
+* consent ^comment = "Eine Registeraufnahme beruht selbstverstaendlich auf einer Einwilligung — aber die liegt beim Registerbetreiber. Ein Standort, der die Teilnahme nur nachhaelt, kann sie nicht referenzieren. Die Angabe leer zu lassen bedeutet daher NICHT, dass keine Einwilligung existiert, sondern nur, dass sie hier nicht als FHIR-Ressource greifbar ist. Genau deshalb leitet dieses Profil nicht vom Probanden-Profil des Moduls Studie ab, das consent mit 1..1 fordert."
 
 * study 1..1 MS
 * study only Reference(ResearchStudy)

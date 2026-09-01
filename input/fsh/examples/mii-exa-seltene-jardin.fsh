@@ -3,8 +3,8 @@
 //
 // Angebunden an patient-sma-001 aus dem bestehenden SMA-Fallbeispiel: ein
 // neugeborenes Mädchen mit im Screening entdeckter SMA Typ 1, geboren am
-// 2024-07-01. Das ist kein beliebiger Aufhänger — bei SMA Typ 1 sind alle vier
-// Datenpunkte gleichzeitig einschlägig: perinatale Ausgangswerte als Bezug für
+// 2024-07-01. Das ist kein beliebiger Aufhänger — bei SMA Typ 1 sind die hier
+// modellierten Datenpunkte gleichzeitig einschlägig: perinatale Ausgangswerte als Bezug für
 // spätere Verläufe, eine ICF-Einstufung, deren Kern der Abstand zwischen
 // Leistungsfähigkeit und Leistung ist, und die Teilnahme an einem ERN-Register
 // (ERN EURO-NMD für neuromuskuläre Erkrankungen).
@@ -14,34 +14,17 @@
 // ungeprüft blieben.
 // -----------------------------------------------------------------------------
 
-// ── #34 Geschlecht bei Geburt ────────────────────────────────────────────────
-
-Instance:    mii-exa-seltene-geschlecht-bei-geburt
-InstanceOf:  MII_PR_Seltene_GeschlechtBeiGeburt
-Usage:       #example
-Title:       "Beispiel Geschlecht bei Geburt — weiblich"
-Description: "Biologisches Geschlecht bei Geburt für das SMA-Neugeborene. Deckt sich hier mit dem administrativen Patient.gender; der Sinn des eigenen Datenpunkts zeigt sich erst im Fall daneben."
-* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geschlecht-bei-geburt)
-* status = #final
-* category[socialHistory] = $observation-category#social-history
-* code = $LNC#76689-9 "Sex assigned at birth"
-* subject = Reference(patient-sma-001)
-* effectiveDateTime = "2024-07-01"
-* valueCodeableConcept = $SCT#248152002 "Female"
-
-Instance:    mii-exa-seltene-geschlecht-bei-geburt-indeterminate
-InstanceOf:  MII_PR_Seltene_GeschlechtBeiGeburt
-Usage:       #example
-Title:       "Beispiel Geschlecht bei Geburt — nicht bestimmbar"
-Description: "Der Fall, für den dieses Profil überhaupt SNOMED CT statt der LOINC-Antwortliste bindet: bei Geburt nicht bestimmbares Geschlecht. LOINC LL3324-2 böte hier nur 'Unknown' an, was etwas anderes heißt — nicht erhoben statt nicht bestimmbar. Störungen der Geschlechtsentwicklung sind selbst seltene Erkrankungen und damit Kerngeschäft dieses Moduls."
-* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geschlecht-bei-geburt)
-* status = #final
-* category[socialHistory] = $observation-category#social-history
-* code = $LNC#76689-9 "Sex assigned at birth"
-* subject = Reference(example)
-* effectiveDateTime = "1990-01-01"
-* valueCodeableConcept = $SCT#37791004 "Indeterminate sex"
-* valueCodeableConcept.text = "Bei Geburt nicht bestimmbar; Zuordnung nach Abklärung offen"
+// ── #34 Geschlecht bei Geburt — NICHT in diesem Modul ────────────────────────
+// Entscheidung des Modulverantwortlichen (2026-09-01): der Datenpunkt wird hier
+// NICHT modelliert, sondern als Ballotierungskommentar an das MII KDS Modul
+// Person adressiert (HDB-782). Begruendung: es ist ein demografisches Attribut
+// der Person, kein Befund einer seltenen Erkrankung, und HL7 Gender Harmony
+// standardisiert es bereits als Extension individual-recordedSexOrGender mit
+// type = LOINC 76689-9 — deren Context ist Patient, und Patient gehoert dem
+// Modul Person. Es hier zu modellieren hiesse, in fremde Zustaendigkeit hinein
+// zu profilieren und einen zweiten Ort dafuer zu schaffen.
+// Das urspruengliche Ticket schlaegt ausdruecklich den Weg ueber das Modul SE
+// vor; der Kommentar widerspricht dem begruendet.
 
 // ── #35 Prä-/perinatale Informationen ────────────────────────────────────────
 
@@ -201,8 +184,8 @@ Title:       "Beispiel Registerteilnahme — ERN EURO-NMD"
 Description: "Teilnahme des SMA-Kindes am EURO-NMD-Register. Die Kennung ist das registereigene Pseudonym, nicht die Patienten-ID des Standorts."
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-registerteilnahme)
 * extension[register].valueReference = Reference(mii-exa-seltene-register-katalog-euro-nmd)
-* identifier[subjectIdentificationCode].system = "https://ern-euro-nmd.eu/fhir/sid/subject"
-* identifier[subjectIdentificationCode].value = "NMD-DE-004712"
+* identifier.system = "https://ern-euro-nmd.eu/fhir/sid/subject"
+* identifier.value = "NMD-DE-004712"
 * status = #on-study
 * period.start = "2024-08-15"
 * study = Reference(mii-exa-seltene-register-euro-nmd)
