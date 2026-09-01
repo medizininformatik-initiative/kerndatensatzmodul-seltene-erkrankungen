@@ -1,0 +1,78 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-seltene-icf-aktivitaet",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment|2026.0.1"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "survey",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "capacity",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": ".4",
+            "system": "https://terminologien.bfarm.de/fhir/CodeSystem/icf-q-leistungsfaehigkeit-und-leistung",
+            "display": "Problem voll ausgeprägt (komplett, total ...) 96-100 %"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "performance",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": ".2",
+            "system": "https://terminologien.bfarm.de/fhir/CodeSystem/icf-q-leistungsfaehigkeit-und-leistung",
+            "display": "Problem mäßig ausgeprägt (mittel, ziemlich ...) 25-49 %"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "d550",
+        "system": "http://hl7.org/fhir/sid/icf",
+        "display": "Eating"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/patient-sma-001"
+  },
+  "effectiveDateTime": "2025-07-01",
+  "note": [
+    {
+      "text": "Leistungsfähigkeit ohne Hilfsmittel beurteilt, Leistung mit liegender PEG. Die Differenz beziffert den Nutzen der Sondenernährung."
+    }
+  ]
+}

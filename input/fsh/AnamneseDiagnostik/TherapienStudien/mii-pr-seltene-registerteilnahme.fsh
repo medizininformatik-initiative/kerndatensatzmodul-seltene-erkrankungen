@@ -16,22 +16,26 @@
 // Dieses Modul erfindet daher nichts Neues, sondern schränkt den Probanden auf
 // den Registerfall ein.
 //
-// MODELLIERUNGSSPANNUNG, die dabei sichtbar wird und NICHT hier zu lösen ist:
-// ResearchSubject.study ist in FHIR R4 auf Reference(ResearchStudy) festgelegt,
-// das Modul Studie modelliert ein Register aber als Library. Ein Proband kann
-// also formal nicht auf ein Register im Sinne von mii-pr-studie-register
-// zeigen — die beiden Bausteine passen an genau dieser Stelle nicht zusammen.
-// Bis das im Modul Studie geklärt ist, wird der Registerbezug hier über eine
-// eigene Extension hergestellt, die direkt auf die Library zeigt; study bleibt
-// für den Fall erhalten, dass das Register zusätzlich als ResearchStudy geführt
-// wird. Das ist bewusst redundant und als Übergang gedacht, nicht als Zielbild.
-// Diese Beobachtung gehört als Rückmeldung an das Modul Studie.
+// MODELLIERUNGSSPANNUNG, beim Schreiben der Beispiele praezisiert:
+// ResearchSubject.study ist in FHIR R4 nicht etwa optional, sondern 1..1 PFLICHT
+// und auf Reference(ResearchStudy) festgelegt (am R4-Snapshot geprueft). Das
+// Modul Studie modelliert ein Register dagegen als Library
+// (mii-pr-studie-register, Library.type = asset-collection). Eine Library kann
+// damit NIEMALS das Ziel von study sein — nicht ersatzweise und nicht ergaenzend.
+//
+// Folge fuer dieses Profil: Wer eine Registerteilnahme abbilden will, MUSS das
+// Register als ResearchStudy fuehren. Ein Register ist inhaltlich eine
+// Beobachtungsstudie, das ist keine Verlegenheitsloesung. Die Library aus dem
+// Modul Studie bleibt daneben sinnvoll, aber als KATALOGEINTRAG des Registers,
+// nicht als Teilnahmeziel — deshalb ist die Extension unten 0..1 und optional.
+// Diese Praezisierung gehoert als Rueckmeldung an das Modul Studie: dort steht
+// Register (Library) und Proband (ResearchSubject) unverbunden nebeneinander.
 // -----------------------------------------------------------------------------
 
 Extension:   MII_EX_Seltene_Register
 Id:          mii-ex-seltene-register
 Title:       "MII EX SE Register"
-Description: "Verweis auf das Register, an dem die Person teilnimmt, als Library nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Notwendig, weil ResearchSubject.study nur auf ResearchStudy zeigen kann, das Modul Studie ein Register aber als Library modelliert."
+Description: "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register"
 * insert PR_CS_VS_Version
 * insert Publisher
@@ -41,7 +45,7 @@ Description: "Verweis auf das Register, an dem die Person teilnimmt, als Library
 * value[x] only Reference
 * valueReference 1..1
 * valueReference only Reference(Library)
-* valueReference ^short = "Register (Library nach mii-pr-studie-register)"
+* valueReference ^short = "Katalogeintrag des Registers (Library nach mii-pr-studie-register)"
 
 
 Profile:     MII_PR_Seltene_Registerteilnahme
@@ -52,8 +56,9 @@ Description: "Teilnahme einer Person an einem Register für seltene Erkrankungen
 * insert PR_CS_VS_Version
 * insert Publisher
 
-* extension contains MII_EX_Seltene_Register named register 1..1 MS
-* extension[register] ^short = "Register, an dem teilgenommen wird"
+* extension contains MII_EX_Seltene_Register named register 0..1 MS
+* extension[register] ^short = "Katalogeintrag des Registers als Library (optional)"
+* extension[register] ^comment = "Optionaler Verweis auf den Library-Katalogeintrag nach mii-pr-studie-register. Der verbindliche Registerbezug laeuft ueber study, weil R4 das so erzwingt."
 
 * identifier MS
 * identifier ^short = "Pseudonym der Person im Register"
@@ -72,6 +77,7 @@ Description: "Teilnahme einer Person an einem Register für seltene Erkrankungen
 * consent MS
 * consent ^comment = "Vom Probanden-Profil des Moduls Studie mit 1..1 geerbt. Für die Aufnahme in ein ERN-Register ist eine Einwilligung ohnehin die Regel; die Pflichtangabe ist hier also keine zusätzliche Hürde, sondern deckt sich mit der Praxis."
 
-* study MS
-* study ^short = "Nur zu setzen, wenn das Register zusätzlich als ResearchStudy geführt wird"
-* study ^comment = "Siehe Kopfkommentar: der eigentliche Registerbezug läuft über die Extension 'register', weil ResearchSubject.study nicht auf eine Library zeigen kann."
+* study 1..1 MS
+* study only Reference(ResearchStudy)
+* study ^short = "Das Register, als ResearchStudy gefuehrt"
+* study ^comment = "In R4 ist study 1..1 Pflicht und auf ResearchStudy festgelegt. Ein Register muss daher als ResearchStudy vorliegen; der Library-Katalogeintrag des Moduls Studie kann hier nicht stehen. Siehe Kopfkommentar."

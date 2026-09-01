@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Verweis auf das Register, an dem die Person teilnimmt, als Library nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Notwendig, weil ResearchSubject.study nur auf ResearchStudy zeigen kann, das Modul Studie ein Register aber als Library modelliert.",
+  "description": "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -36,7 +36,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "MII EX SE Register",
-        "definition": "Verweis auf das Register, an dem die Person teilnimmt, als Library nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Notwendig, weil ResearchSubject.study nur auf ResearchStudy zeigen kann, das Modul Studie ein Register aber als Library modelliert."
+        "definition": "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt."
       },
       {
         "id": "Extension.extension",
@@ -51,7 +51,7 @@
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
-        "short": "Register (Library nach mii-pr-studie-register)",
+        "short": "Katalogeintrag des Registers (Library nach mii-pr-studie-register)",
         "min": 1,
         "type": [
           {

@@ -27,16 +27,12 @@
   "differential": {
     "element": [
       {
-        "id": "ResearchSubject.extension",
-        "path": "ResearchSubject.extension",
-        "min": 1
-      },
-      {
         "id": "ResearchSubject.extension:register",
         "path": "ResearchSubject.extension",
         "sliceName": "register",
-        "short": "Register, an dem teilgenommen wird",
-        "min": 1,
+        "short": "Katalogeintrag des Registers als Library (optional)",
+        "comment": "Optionaler Verweis auf den Library-Katalogeintrag nach mii-pr-studie-register. Der verbindliche Registerbezug laeuft ueber study, weil R4 das so erzwingt.",
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -67,8 +63,8 @@
       {
         "id": "ResearchSubject.study",
         "path": "ResearchSubject.study",
-        "short": "Nur zu setzen, wenn das Register zusätzlich als ResearchStudy geführt wird",
-        "comment": "Siehe Kopfkommentar: der eigentliche Registerbezug läuft über die Extension 'register', weil ResearchSubject.study nicht auf eine Library zeigen kann."
+        "short": "Das Register, als ResearchStudy gefuehrt",
+        "comment": "In R4 ist study 1..1 Pflicht und auf ResearchStudy festgelegt. Ein Register muss daher als ResearchStudy vorliegen; der Library-Katalogeintrag des Moduls Studie kann hier nicht stehen. Siehe Kopfkommentar."
       },
       {
         "id": "ResearchSubject.consent",
