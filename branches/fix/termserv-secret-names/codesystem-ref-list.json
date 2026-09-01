@@ -1,0 +1,221 @@
+{
+  "codeSystems" : [{
+    "url" : "http://fhir.de/CodeSystem/bfarm/ops",
+    "version" : null,
+    "status" : "active",
+    "name" : "OPS",
+    "title" : "OPS",
+    "description" : "OPS Platzhalter-CodeSystem",
+    "uses" : {
+    },
+    "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/bfarm/ops" : "OPS ValueSet"
+  },
+  {
+    "url" : "http://hl7.org/fhir/event-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EventStatus",
+    "title" : "EventStatus",
+    "description" : "Codes identifying the lifecycle stage of an event.",
+    "oids" : ["2.16.840.1.113883.4.642.4.110"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-clinicalimpression-status.html" : "Clinical Impression Status",
+    "http://hl7.org/fhir/R4/valueset-event-status.html" : "EventStatus"
+  },
+  {
+    "url" : "http://human-phenotype-ontology.org",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "HPO",
+    "title" : "Human Phenotype Ontology",
+    "description" : "\"The Human Phenotype Ontology (HPO) provides a standardized vocabulary of phenotypic abnormalities encountered in human disease. Each term in the HPO describes a phenotypic abnormality, such as Atrial septal defect. The HPO is currently being developed using the medical literature, Orphanet, DECIPHER, and OMIM. HPO currently contains over 13,000 terms and over 156,000 annotations to hereditary diseases. The HPO project and others have developed software for phenotype-driven differential diagnostics, genomic diagnostics, and translational research. The HPO is a flagship product of the Monarch Initiative, an NIH-supported international consortium dedicated to semantic integration of biomedical and model organism data with the ultimate goal of improving biomedical research. The HPO, as a part of the Monarch Initiative, is a central component of one of the 13 driver projects in the Global Alliance for Genomics and Health (GA4GH) strategic roadmap.\"\r\n\r\nPlease see https://hpo.jax.org/app/download/ontology.\r\n\r\nReleases, produced approximately every 2 months, can be found [here](https://github.com/obophenotype/human-phenotype-ontology/releases).",
+    "oids" : ["2.16.840.1.113883.6.339"],
+    "uses" : {
+    },
+    "ValueSet-mii-vs-seltene-penetrance.html" : "MII VS SE Penetrance",
+    "ValueSet-mii-vs-seltene-hpo-age-of-onset.html" : "MII VS SE HPO Age of Onset",
+    "ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html" : "HPO Phenotypic Observation Codes",
+    "ValueSet-mii-vs-seltene-hpo-inheritance-pattern.html" : "MII VS SE HPO Inheritance Pattern",
+    "ValueSet-mii-vs-seltene-hpo-severity.html" : "HPO Severity"
+  },
+  {
+    "url" : "http://loinc.org",
+    "version" : "3.1.0",
+    "status" : "active",
+    "name" : "LOINC",
+    "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
+    "description" : "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments.",
+    "oids" : ["2.16.840.1.113883.6.1"],
+    "uses" : {
+    },
+    "ValueSet-mii-vs-seltene-hpo-presence-status.html" : "HPO Phenotype Presence Status",
+    "ValueSet-mii-vs-seltene-blutgruppe.html" : "MII VS SE Blutgruppe",
+    "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes"
+  },
+  {
+    "url" : "http://snomed.info/sct",
+    "version" : null,
+    "status" : "active",
+    "name" : "SNOMED_CT",
+    "title" : "SNOMED CT (all versions)",
+    "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+    "oids" : ["2.16.840.1.113883.6.96"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-device-kind.html" : "FHIR Device Types",
+    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
+    "http://hl7.org/fhir/R4/valueset-additional-instruction-codes.html" : "SNOMED CT Additional Dosage Instructions",
+    "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
+    "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
+    "http://hl7.org/fhir/R4/valueset-approach-site-codes.html" : "SNOMED CT Anatomical Structure for Administration Site Codes",
+    "ValueSet-mii-vs-seltene-blutgruppe.html" : "MII VS SE Blutgruppe",
+    "http://hl7.org/fhir/R4/valueset-device-action.html" : "Procedure Device Action Codes",
+    "ValueSet-von-seltene-betroffen-vs.html" : "Von SE betroffen Value Set",
+    "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
+    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-procedure-outcome.html" : "Procedure Outcome Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-route-codes.html" : "SNOMED CT Route Codes",
+    "http://hl7.org/fhir/R4/valueset-administration-method-codes.html" : "SNOMED CT Administration Method Codes",
+    "ValueSet-mii-vs-seltene-genetic-basis.html" : "MII VS SE Genetic Basis",
+    "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+    "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/lebensphase-de" : "LebensphaseDe ValueSet",
+    "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
+    "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
+    "ValueSet-mii-vs-seltene-consanguinity.html" : "MII VS Seltene Erkrankungen Consanguinity",
+    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
+    "http://hl7.org/fhir/R4/valueset-procedure-not-performed-reason.html" : "Procedure Not Performed Reason (SNOMED-CT)",
+    "https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.1/ValueSet-mii-vs-diagnose-bodystructure-snomed.html" : "MII VS Diagnose BodyStructure SNOMED",
+    "ValueSet-mii-vs-seltene-symptom-change-status-combined.html" : "MII VS Seltene Erkrankungen Symptom Change Status (Combined)",
+    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed" : "MII VS MolGen Family Member SNOMED",
+    "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
+    "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-procedure-followup.html" : "Procedure Follow up Codes (SNOMED CT)",
+    "ValueSet-mii-vs-seltene-clinical-diagnosis-category.html" : "MII VS SE Clinical Diagnosis Category",
+    "http://hl7.org/fhir/R4/valueset-procedure-category.html" : "Procedure Category Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-investigation-sets.html" : "Investigation Type",
+    "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
+    "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
+    "http://127.0.0.1:8090/fhir/ValueSet/ips-target-site-uv-ips" : "Target Site - IPS",
+    "http://hl7.org/fhir/R4/valueset-clinicalimpression-prognosis.html" : "Clinical Impression Prognosis",
+    "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/VitalSignDE-Kopfumfang-SNOMED-CT" : "VitalSignDE_Kopfumfang_SNOMED_CT",
+    "https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.1/ValueSet-mii-vs-diagnose-diagnosecodes-snomed.html" : "MII VS Diagnose Diagnose-Codes SNOMED",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes",
+    "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
+    "ValueSet-mii-vs-seltene-syndrome-category.html" : "Syndrome Category Value Set",
+    "http://hl7.org/fhir/R4/valueset-condition-outcome.html" : "Condition Outcome Codes",
+    "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ConditionClinicalStatusCodes",
+    "title" : "Condition Clinical Status Codes",
+    "description" : "Preferred value set for Condition Clinical Status.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1074"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-condition-clinical.html" : "Condition Clinical Status Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+    "version" : "2.0.1",
+    "status" : "active",
+    "name" : "ConditionVerificationStatus",
+    "title" : "ConditionVerificationStatus",
+    "description" : "The verification status to support or decline the clinical status of the condition or diagnosis.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1075"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-condition-ver-status.html" : "ConditionVerificationStatus"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ExpandedYesNoIndicator",
+    "title" : "expandedYes-NoIndicator",
+    "description" : "HL7-defined code system of concepts used to specify an expansion on the original Yes/No indicator table by including \"flavors of null\".  It is intended to be applied to fields where the response is not limited to \"yes\" or \"no\".  Used in numerous locations in HL7 Version 2.x messaging.",
+    "oids" : ["2.16.840.1.113883.18.347"],
+    "uses" : {
+    },
+    "ValueSet-von-seltene-betroffen-vs.html" : "Von SE betroffen Value Set"
+  },
+  {
+    "url" : "http://unitsofmeasure.org",
+    "version" : "3.0.1",
+    "status" : "active",
+    "name" : "UCUM",
+    "title" : "Unified Code for Units of Measure (UCUM)",
+    "description" : "The Unified Code for Units of Measure (UCUM) is a code system intended to include all units of measures being contemporarily used in international science, engineering, and business. The purpose is to facilitate unambiguous electronic communication of quantities together with their units. The focus is on electronic communication, as opposed to communication between humans. A typical application of The Unified Code for Units of Measure are electronic data interchange (EDI) protocols, but there is nothing that prevents it from being used in other types of machine communication.",
+    "uses" : {
+    },
+    "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/VitalSignDE_Body_Length_UCUM" : "VitalSignDE_Body_Length_UCUM",
+    "http://hl7.org/fhir/R4/valueset-age-units.html" : "Common UCUM Codes for Age",
+    "http://hl7.org/fhir/R4/valueset-units-of-time.html" : "UnitsOfTime",
+    "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/UcumVitalsCommonDE" : "UCUM Vitals Common DE",
+    "http://ig.fhir.de/igs/medication/1.0.0/ValueSet-DosageDoseQuantityDE.html" : "Dosage DoseQuantity ValueSet"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-empfehlung-status-begruendung",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_CS_Seltene_Empfehlung_StatusBegruendung",
+    "title" : "MII CS SE Empfehlung Status Begründung",
+    "description" : "Begründung bei fehlender Empfehlung",
+    "uses" : {
+    },
+    "ValueSet-mii-vs-seltene-empfehlung-status-begruendung.html" : "MII VS SE Empfehlung Status Begründung"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_CS_Seltene_HPO_ChangeStatus",
+    "title" : "MII CS Seltene Erkrankungen HPO Change Status",
+    "description" : "CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit",
+    "uses" : {
+    },
+    "ValueSet-mii-vs-seltene-hpo-change-status.html" : "MII VS Seltene Erkrankungen HPO Change Status",
+    "ValueSet-mii-vs-seltene-symptom-change-status-combined.html" : "MII VS Seltene Erkrankungen Symptom Change Status (Combined)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_CS_Seltene_NARSE_Therapietyp",
+    "title" : "MII CS Seltene Erkrankungen NARSE Therapietyp",
+    "description" : "CodeSystem für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen",
+    "uses" : {
+    },
+    "ValueSet-mii-vs-seltene-narse-therapietyp.html" : "MII VS Seltene Erkrankungen NARSE Therapietyp"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_CS_Seltene_TherapieempfehlungStrategie",
+    "title" : "MII CS SE Therapieempfehlung Strategie",
+    "description" : "Strategietypen für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq",
+    "uses" : {
+    },
+    "ValueSet-mii-vs-seltene-therapieempfehlung-strategie.html" : "MII VS SE Therapieempfehlung Strategie",
+    "ValueSet-mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes.html" : "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
+    "ValueSet-mii-vs-seltene-therapieempfehlung-strategie-medikamentoes.html" : "MII VS SE Therapieempfehlung Strategie - Medikamentös"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_CS_Seltene_TherapieempfehlungTyp",
+    "title" : "MII CS SE Therapieempfehlung Typ",
+    "description" : "Therapietyp (kausal vs. symptomatisch) für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq",
+    "uses" : {
+    },
+    "ValueSet-mii-vs-seltene-therapieempfehlung-typ.html" : "MII VS SE Therapieempfehlung Typ"
+  }]
+}

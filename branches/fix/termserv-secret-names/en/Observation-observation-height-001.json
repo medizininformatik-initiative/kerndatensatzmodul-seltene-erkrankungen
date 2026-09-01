@@ -1,0 +1,57 @@
+{
+  "resourceType" : "Observation",
+  "id" : "observation-height-001",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-height-001</b></p><a name=\"observation-height-001\"> </a><a name=\"hcobservation-height-001\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8302-2}\">Body height</span></p><p><b>subject</b>: <a href=\"Patient-patient-marfan-001.html\">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>effective</b>: 2024-12-15</p><p><b>value</b>: 213 cm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codecm = 'cm')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 38266002}\">Entire body as a whole</span></p><h3>Components</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://human-phenotype-ontology.org HP:0000098}\">Tall stature</span></td><td>Pathologischer Hochwuchs &gt;99. Perzentile</td></tr></table></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "vital-signs"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "8302-2",
+      "display" : "Body height"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/patient-marfan-001"
+  },
+  "effectiveDateTime" : "2024-12-15",
+  "valueQuantity" : {
+    "value" : 213,
+    "unit" : "cm",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "cm"
+  },
+  "interpretation" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code" : "H",
+      "display" : "High"
+    }]
+  }],
+  "bodySite" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "38266002",
+      "display" : "Entire body as a whole"
+    }]
+  },
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://human-phenotype-ontology.org",
+        "code" : "HP:0000098",
+        "display" : "Tall stature"
+      }]
+    },
+    "valueString" : "Pathologischer Hochwuchs >99. Perzentile"
+  }]
+}

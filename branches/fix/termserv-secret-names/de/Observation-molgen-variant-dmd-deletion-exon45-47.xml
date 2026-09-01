@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="molgen-variant-dmd-deletion-exon45-47"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation molgen-variant-dmd-deletion-exon45-47</b></p><a name="de-molgen-variant-dmd-deletion-exon45-47"> </a><a name="de-hcmolgen-variant-dmd-deletion-exon45-47"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 69548-6}">Genetic variant assessment</span></p><p><b>subject</b>: <a href="Patient-example.html">Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>effective</b>: 2024-09-15</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 10828004}">Positive</span></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48018-6}">Gene studied [ID]</span></p><p><b>value</b>: <span title="Codes:{http://www.genenames.org/geneId HGNC:2928}">DMD</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48002-0}">Genomic source class</span></p><p><b>value</b>: <span title="Codes:{http://loinc.org LA6683-2}">Germline</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 81290-9}">Genomic DNA change (gHGVS)</span></p><p><b>value</b>: <span title="Codes:">NC_000023.11:g.31774346_31953400del</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48004-6}">DNA change (c.HGVS)</span></p><p><b>value</b>: <span title="Codes:">c.6439-?_6912+?del</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:">Deleted Exons</span></p><p><b>value</b>: Exons 45-47</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 53037-8}">Genetic variation clinical significance [Imp]</span></p><p><b>value</b>: <span title="Codes:{http://loinc.org LA6668-3}">Pathogenic</span></p></blockquote></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="69548-6"/>
+      <display value="Genetic variant assessment"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <effectiveDateTime value="2024-09-15"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="10828004"/>
+      <display value="Positive"/>
+    </coding>
+  </valueCodeableConcept>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48018-6"/>
+        <display value="Gene studied [ID]"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.genenames.org/geneId"/>
+        <code value="HGNC:2928"/>
+        <display value="DMD"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48002-0"/>
+        <display value="Genomic source class"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="LA6683-2"/>
+        <display value="Germline"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="81290-9"/>
+        <display value="Genomic DNA change (gHGVS)"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <text value="NC_000023.11:g.31774346_31953400del"/>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48004-6"/>
+        <display value="DNA change (c.HGVS)"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <text value="c.6439-?_6912+?del"/>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <text value="Deleted Exons"/>
+    </code>
+    <valueString value="Exons 45-47"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="53037-8"/>
+        <display value="Genetic variation clinical significance [Imp]"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="LA6668-3"/>
+        <display value="Pathogenic"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>

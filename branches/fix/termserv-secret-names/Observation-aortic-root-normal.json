@@ -1,0 +1,49 @@
+{
+  "resourceType" : "Observation",
+  "id" : "aortic-root-normal",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation aortic-root-normal</b></p><a name=\"aortic-root-normal\"> </a><a name=\"hcaortic-root-normal\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category imaging}\">Imaging</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 78176-5}\">Aorta root Diameter by US 2D</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>effective</b>: 2024-12-15</p><p><b>value</b>: 32 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style=\"display: none\">*</td><td>29 mm</td><td>37 mm</td></tr></table></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation aortic-root-normal</b></p><a name=\"de-aortic-root-normal\"> </a><a name=\"de-hcaortic-root-normal\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category imaging}\">Imaging</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 78176-5}\">Aorta root Diameter by US 2D</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>effective</b>: 2024-12-15</p><p><b>value</b>: 32 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style=\"display: none\">*</td><td>29 mm</td><td>37 mm</td></tr></table></div></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "imaging"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "78176-5",
+      "display" : "Aorta root Diameter by US 2D"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "effectiveDateTime" : "2024-12-15",
+  "valueQuantity" : {
+    "value" : 32,
+    "unit" : "mm",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "mm"
+  },
+  "interpretation" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code" : "N",
+      "display" : "Normal"
+    }]
+  }],
+  "referenceRange" : [{
+    "low" : {
+      "value" : 29,
+      "unit" : "mm"
+    },
+    "high" : {
+      "value" : 37,
+      "unit" : "mm"
+    }
+  }]
+}

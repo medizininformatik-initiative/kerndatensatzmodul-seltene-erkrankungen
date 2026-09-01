@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-seltene-hpo-change-status"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-seltene-hpo-change-status</b></p><a name="mii-vs-seltene-hpo-change-status"> </a><a name="hcmii-vs-seltene-hpo-change-status"> </a><ul><li>Include all codes defined in <a href="CodeSystem-mii-cs-seltene-hpo-change-status.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2027.0.0-ballot</span></li></ul></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-seltene-hpo-change-status</b></p><a name="de-mii-vs-seltene-hpo-change-status"> </a><a name="de-hcmii-vs-seltene-hpo-change-status"> </a><ul><li>Include all codes defined in <a href="CodeSystem-mii-cs-seltene-hpo-change-status.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2027.0.0-ballot</span></li></ul></div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-change-status"/>
+  <version value="2027.0.0-ballot"/>
+  <name value="MII_VS_Seltene_HPO_ChangeStatus"/>
+  <title value="MII VS Seltene Erkrankungen HPO Change Status"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-01T20:45:00+00:00"/>
+  <publisher value="Medizininformatik Initiative">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="de"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Medizininformatik Initiative"/>
+      </extension>
+    </extension>
+  </publisher>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet für Änderungsstatus von HPO-Phänotypen gemäß Modellvorhaben Genomsequenzierung"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status"/>
+    </include>
+  </compose>
+</ValueSet>

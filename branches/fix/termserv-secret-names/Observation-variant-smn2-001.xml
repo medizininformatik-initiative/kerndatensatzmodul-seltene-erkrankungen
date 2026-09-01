@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="variant-smn2-001"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation variant-smn2-001</b></p><a name="variant-smn2-001"> </a><a name="hcvariant-smn2-001"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 55233-1}">Genetic analysis master panel</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-07-26</p><p><b>note</b>: </p><blockquote><div><p>2 Kopien des SMN2-Gens, Modifikator des Phänotyps</p>
+</div></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48018-6}">Gene studied [ID]</span></p><p><b>value</b>: <span title="Codes:{http://www.genenames.org/geneId HGNC:11118}">SMN2</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:">Copy Number</span></p><p><b>value</b>: 2 copies</p></blockquote></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation variant-smn2-001</b></p><a name="de-variant-smn2-001"> </a><a name="de-hcvariant-smn2-001"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 55233-1}">Genetic analysis master panel</span></p><p><b>subject</b>: <a href="Patient-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-07-26</p><p><b>note</b>: </p><blockquote><div><p>2 Kopien des SMN2-Gens, Modifikator des Phänotyps</p>
+</div></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48018-6}">Gene studied [ID]</span></p><p><b>value</b>: <span title="Codes:{http://www.genenames.org/geneId HGNC:11118}">SMN2</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:">Copy Number</span></p><p><b>value</b>: 2 copies</p></blockquote></div></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="55233-1"/>
+      <display value="Genetic analysis master panel"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/patient-sma-001"/>
+  </subject>
+  <effectiveDateTime value="2024-07-26"/>
+  <note>
+    <text value="2 Kopien des SMN2-Gens, Modifikator des Phänotyps"/>
+  </note>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48018-6"/>
+        <display value="Gene studied [ID]"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.genenames.org/geneId"/>
+        <code value="HGNC:11118"/>
+        <display value="SMN2"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <text value="Copy Number"/>
+    </code>
+    <valueQuantity>
+      <value value="2"/>
+      <unit value="copies"/>
+    </valueQuantity>
+  </component>
+</Observation>

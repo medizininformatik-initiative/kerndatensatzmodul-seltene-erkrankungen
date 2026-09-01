@@ -1,0 +1,73 @@
+{
+  "resourceType" : "Condition",
+  "id" : "condition-marfan-genetic",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2026.0.1"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Condition condition-marfan-genetic</b></p><a name=\"de-condition-marfan-genetic\"> </a><a name=\"de-hccondition-marfan-genetic\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2026.0.1\">https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2026.0.1</a></p></div><p><b>Condition Asserted Date</b>: 2024-12-20</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 782964007}\">Genetic disease</span></p><p><b>code</b>: <span title=\"Codes:{http://omim.org 154700}, {http://snomed.info/sct 19346006}, {http://www.orpha.net 558}\">Marfan-Syndrom - genetisch bestätigt</span></p><p><b>subject</b>: <a href=\"Patient-patient-marfan-001.html\">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>recordedDate</b>: 2024-12-20</p><h3>Evidences</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 106221001}\">Genetic finding</span></td><td><a href=\"Observation-variant-fbn1-001.html\">Observation Genetic analysis master panel</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>FBN1-Mutation c.3217G&gt;A (p.Gly1073Arg) nachgewiesen, krankheitsursächlich. Genetische Diagnose existiert parallel zur klinischen Diagnose.</p>\n</div></blockquote></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+    "valueDateTime" : "2024-12-20"
+  }],
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "active"
+    }]
+  },
+  "verificationStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+      "code" : "confirmed"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "782964007",
+      "display" : "Genetic disease"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://omim.org",
+      "version" : "2024",
+      "code" : "154700",
+      "display" : "Marfan syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "19346006",
+      "display" : "Marfan syndrome"
+    },
+    {
+      "system" : "http://www.orpha.net",
+      "code" : "558",
+      "display" : "Marfan syndrome"
+    }],
+    "text" : "Marfan-Syndrom - genetisch bestätigt"
+  },
+  "subject" : {
+    "reference" : "Patient/patient-marfan-001"
+  },
+  "recordedDate" : "2024-12-20",
+  "evidence" : [{
+    "code" : [{
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "106221001",
+        "display" : "Genetic finding"
+      }]
+    }],
+    "detail" : [{
+      "reference" : "Observation/variant-fbn1-001"
+    }]
+  }],
+  "note" : [{
+    "text" : "FBN1-Mutation c.3217G>A (p.Gly1073Arg) nachgewiesen, krankheitsursächlich. Genetische Diagnose existiert parallel zur klinischen Diagnose."
+  }]
+}
