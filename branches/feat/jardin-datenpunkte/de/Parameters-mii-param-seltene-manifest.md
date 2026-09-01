@@ -451,10 +451,6 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geschlecht-bei-geburt|2027.0.0-ballot"
-  },
-  {
-    "name" : "default-canonical-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-gestationsalter|2027.0.0-ballot"
   },
   {
@@ -719,10 +715,6 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-geschlecht-bei-geburt|2027.0.0-ballot"
-  },
-  {
-    "name" : "default-valueset-version",
     "valueCanonical" : "http://hl7.org/fhir/ValueSet/body-site|4.0.1"
   },
   {
@@ -887,35 +879,11 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband|2026.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/security-labels|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/common-tags|4.0.1"
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/ResearchSubject|4.0.1"
   },
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register|2027.0.0-ballot"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/identifier-type|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Period|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Consent|4.0.1"
   },
   {
     "name" : "default-canonical-version",
@@ -972,6 +940,18 @@
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest|2026.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/security-labels|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/common-tags|4.0.1"
   },
   {
     "name" : "default-valueset-version",
@@ -1076,6 +1056,10 @@
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Duration|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Period|4.0.1"
   },
   {
     "name" : "default-valueset-version",

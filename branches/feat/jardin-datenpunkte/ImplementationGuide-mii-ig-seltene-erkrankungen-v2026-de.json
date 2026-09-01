@@ -1476,30 +1476,6 @@
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/mii-exa-seltene-geschlecht-bei-geburt-indeterminate"
-      },
-      "name" : "Beispiel Geschlecht bei Geburt — nicht bestimmbar",
-      "description" : "Der Fall, für den dieses Profil überhaupt SNOMED CT statt der LOINC-Antwortliste bindet: bei Geburt nicht bestimmbares Geschlecht. LOINC LL3324-2 böte hier nur 'Unknown' an, was etwas anderes heißt — nicht erhoben statt nicht bestimmbar. Störungen der Geschlechtsentwicklung sind selbst seltene Erkrankungen und damit Kerngeschäft dieses Moduls.",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geschlecht-bei-geburt"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-seltene-geschlecht-bei-geburt"
-      },
-      "name" : "Beispiel Geschlecht bei Geburt — weiblich",
-      "description" : "Biologisches Geschlecht bei Geburt für das SMA-Neugeborene. Deckt sich hier mit dem administrativen Patient.gender; der Sinn des eigenen Datenpunkts zeigt sich erst im Fall daneben.",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geschlecht-bei-geburt"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
         "reference" : "Observation/mii-exa-seltene-gestationsalter"
       },
       "name" : "Beispiel Gestationsalter bei Geburt",
@@ -2580,18 +2556,6 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/mii-pr-seltene-geschlecht-bei-geburt"
-      },
-      "name" : "MII PR SE Geschlecht bei Geburt",
-      "description" : "Observation-Profil zur Erfassung des biologischen Geschlechts bei Geburt (sex assigned at birth) gemaess JARDIN-MDS-Entwurf und ERDRI-CDS. Bewusst getrennt vom administrativen Patient.gender des MII KDS Moduls Person, von dem es abweichen kann.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
         "reference" : "StructureDefinition/mii-pr-seltene-gestationsalter"
       },
       "name" : "MII PR SE Gestationsalter bei Geburt",
@@ -2643,7 +2607,7 @@
         "reference" : "StructureDefinition/mii-pr-seltene-registerteilnahme"
       },
       "name" : "MII PR SE Registerteilnahme",
-      "description" : "Teilnahme einer Person an einem Register für seltene Erkrankungen, insbesondere an einem Register eines European Reference Network (ERN). Leitet vom Probanden-Profil des MII KDS Moduls Studie ab und ergänzt den Verweis auf das Register.",
+      "description" : "Teilnahme einer Person an einem Register für seltene Erkrankungen, insbesondere an einem Register eines European Reference Network (ERN). Gedacht für die Dokumentation aus zweiter Hand im Versorgungskontext: festgehalten wird, dass die Person teilnimmt. Nah am Probanden-Profil des MII KDS Moduls Studie, aber bewusst nicht davon abgeleitet, weil dessen Pflichtangabe consent den Sekundärfall ausschließt.",
       "exampleBoolean" : false
     },
     {
@@ -2932,18 +2896,6 @@
       },
       "name" : "MII VS Seltene Erkrankungen Consanguinity",
       "description" : "ValueSet zur Angabe der Blutsverwandtschaft der Eltern (Consanguinity): Ja / Nein / Unbekannt / Nicht erfasst (SNOMED CT), entsprechend dem Consanguinity Value Set aus RD-CDM v2.0.0.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/mii-vs-seltene-geschlecht-bei-geburt"
-      },
-      "name" : "MII VS Seltene Erkrankungen Geschlecht bei Geburt",
-      "description" : "Biologisches Geschlecht bei Geburt nach JARDIN-MDS/ERDRI-CDS: Male, Female, Indeterminate sex. Ergaenzt um Unknown fuer den Fall, dass die Angabe nicht erhoben wurde — dieser Fall ist ausdruecklich NICHT mit Indeterminate sex zu verwechseln, das eine klinische Feststellung ist.",
       "exampleBoolean" : false
     },
     {

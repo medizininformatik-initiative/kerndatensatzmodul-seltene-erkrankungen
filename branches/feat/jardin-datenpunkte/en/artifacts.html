@@ -485,18 +485,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-mii-pr-seltene-geschlecht-bei-geburt.html"
-                  title="StructureDefinition/mii-pr-seltene-geschlecht-bei-geburt">
-                  <span title="StructureDefinition/mii-pr-seltene-geschlecht-bei-geburt">MII PR SE Geschlecht bei Geburt
-</span>
-               </a>
-            </td>
-            <td>
-<p>Observation-Profil zur Erfassung des biologischen Geschlechts bei Geburt (sex assigned at birth) gemaess JARDIN-MDS-Entwurf und ERDRI-CDS. Bewusst getrennt vom administrativen Patient.gender des MII KDS Moduls Person, von dem es abweichen kann.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-mii-pr-seltene-gestationsalter.html"
                   title="StructureDefinition/mii-pr-seltene-gestationsalter">
                   <span title="StructureDefinition/mii-pr-seltene-gestationsalter">MII PR SE Gestationsalter bei Geburt
@@ -552,7 +540,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Teilnahme einer Person an einem Register für seltene Erkrankungen, insbesondere an einem Register eines European Reference Network (ERN). Leitet vom Probanden-Profil des MII KDS Moduls Studie ab und ergänzt den Verweis auf das Register.</p>
+<p>Teilnahme einer Person an einem Register für seltene Erkrankungen, insbesondere an einem Register eines European Reference Network (ERN). Gedacht für die Dokumentation aus zweiter Hand im Versorgungskontext: festgehalten wird, dass die Person teilnimmt. Nah am Probanden-Profil des MII KDS Moduls Studie, aber bewusst nicht davon abgeleitet, weil dessen Pflichtangabe consent den Sekundärfall ausschließt.</p>
 </td>
          </tr>
          <tr>
@@ -1041,18 +1029,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-mii-vs-seltene-geschlecht-bei-geburt.html"
-                  title="ValueSet/mii-vs-seltene-geschlecht-bei-geburt">
-                  <span title="ValueSet/mii-vs-seltene-geschlecht-bei-geburt">MII VS Seltene Erkrankungen Geschlecht bei Geburt
-</span>
-               </a>
-            </td>
-            <td>
-<p>Biologisches Geschlecht bei Geburt nach JARDIN-MDS/ERDRI-CDS: Male, Female, Indeterminate sex. Ergaenzt um Unknown fuer den Fall, dass die Angabe nicht erhoben wurde — dieser Fall ist ausdruecklich NICHT mit Indeterminate sex zu verwechseln, das eine klinische Feststellung ist.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="ValueSet-mii-vs-seltene-hpo-change-status.html"
                   title="ValueSet/mii-vs-seltene-hpo-change-status">
                   <span title="ValueSet/mii-vs-seltene-hpo-change-status">MII VS Seltene Erkrankungen HPO Change Status
@@ -1461,30 +1437,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Beispiel einer medikamentösen Therapieempfehlung für Gentherapie bei Spinaler Muskelatrophie</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Observation-mii-exa-seltene-geschlecht-bei-geburt-indeterminate.html"
-                  title="Observation/mii-exa-seltene-geschlecht-bei-geburt-indeterminate">
-                  <span title="Observation/mii-exa-seltene-geschlecht-bei-geburt-indeterminate">Beispiel Geschlecht bei Geburt — nicht bestimmbar
-</span>
-               </a>
-            </td>
-            <td>
-<p>Der Fall, für den dieses Profil überhaupt SNOMED CT statt der LOINC-Antwortliste bindet: bei Geburt nicht bestimmbares Geschlecht. LOINC LL3324-2 böte hier nur 'Unknown' an, was etwas anderes heißt — nicht erhoben statt nicht bestimmbar. Störungen der Geschlechtsentwicklung sind selbst seltene Erkrankungen und damit Kerngeschäft dieses Moduls.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Observation-mii-exa-seltene-geschlecht-bei-geburt.html"
-                  title="Observation/mii-exa-seltene-geschlecht-bei-geburt">
-                  <span title="Observation/mii-exa-seltene-geschlecht-bei-geburt">Beispiel Geschlecht bei Geburt — weiblich
-</span>
-               </a>
-            </td>
-            <td>
-<p>Biologisches Geschlecht bei Geburt für das SMA-Neugeborene. Deckt sich hier mit dem administrativen Patient.gender; der Sinn des eigenen Datenpunkts zeigt sich erst im Fall daneben.</p>
 </td>
          </tr>
          <tr>
@@ -2664,7 +2616,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Tue, Sep 1, 2026 21:17+0000">2026-09-01</span>
+          Generated <span title="Tue, Sep 1, 2026 21:34+0000">2026-09-01</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

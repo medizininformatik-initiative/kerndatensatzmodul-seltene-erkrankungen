@@ -57,18 +57,6 @@
     "StructureDefinition-mii-ex-seltene-genetic-basis.html" : "MII EX SE Genetic Basis"
   },
   {
-    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-geschlecht-bei-geburt",
-    "version" : "2027.0.0-ballot",
-    "status" : "active",
-    "name" : "MII_VS_Seltene_GeschlechtBeiGeburt",
-    "title" : "MII VS Seltene Erkrankungen Geschlecht bei Geburt",
-    "description" : "Biologisches Geschlecht bei Geburt nach JARDIN-MDS/ERDRI-CDS: Male, Female, Indeterminate sex. Ergaenzt um Unknown fuer den Fall, dass die Angabe nicht erhoben wurde — dieser Fall ist ausdruecklich NICHT mit Indeterminate sex zu verwechseln, das eine klinische Feststellung ist.",
-    "systems" : ["http://snomed.info/sct"],
-    "uses" : {
-    },
-    "StructureDefinition-mii-pr-seltene-geschlecht-bei-geburt.html" : "MII PR SE Geschlecht bei Geburt"
-  },
-  {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-age-of-onset",
     "version" : "2027.0.0-ballot",
     "status" : "active",
@@ -111,10 +99,10 @@
     "systems" : ["http://human-phenotype-ontology.org"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
-    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
     "StructureDefinition-mii-pr-seltene-clinical-impression.html" : "MII Profile SE Clinical Impression",
-    "StructureDefinition-mii-pr-seltene-symptom-condition.html" : "MII Profile SE Symptom Condition"
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
+    "StructureDefinition-mii-pr-seltene-symptom-condition.html" : "MII Profile SE Symptom Condition",
+    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status",
@@ -254,8 +242,8 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie",
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös"
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/von-seltene-betroffen-vs",

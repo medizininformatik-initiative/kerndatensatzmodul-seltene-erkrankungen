@@ -43,7 +43,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "name" : "SyndromeCategoryVS",
   "title" : "Syndrome Category Value Set",
   "status" : "active",
-  "date" : "2026-09-01T21:17:23+00:00",
+  "date" : "2026-09-01T21:34:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -440,10 +440,6 @@
   </parameter>
   <parameter>
     <name value="default-canonical-version"/>
-    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geschlecht-bei-geburt|2027.0.0-ballot"/>
-  </parameter>
-  <parameter>
-    <name value="default-canonical-version"/>
     <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-gestationsalter|2027.0.0-ballot"/>
   </parameter>
   <parameter>
@@ -708,10 +704,6 @@
   </parameter>
   <parameter>
     <name value="default-valueset-version"/>
-    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-geschlecht-bei-geburt|2027.0.0-ballot"/>
-  </parameter>
-  <parameter>
-    <name value="default-valueset-version"/>
     <valueCanonical value="http://hl7.org/fhir/ValueSet/body-site|4.0.1"/>
   </parameter>
   <parameter>
@@ -876,35 +868,11 @@
   </parameter>
   <parameter>
     <name value="default-canonical-version"/>
-    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband|2026.0.1"/>
-  </parameter>
-  <parameter>
-    <name value="default-canonical-version"/>
-    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1"/>
-  </parameter>
-  <parameter>
-    <name value="default-valueset-version"/>
-    <valueCanonical value="http://hl7.org/fhir/ValueSet/security-labels|4.0.1"/>
-  </parameter>
-  <parameter>
-    <name value="default-valueset-version"/>
-    <valueCanonical value="http://hl7.org/fhir/ValueSet/common-tags|4.0.1"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/ResearchSubject|4.0.1"/>
   </parameter>
   <parameter>
     <name value="default-canonical-version"/>
     <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register|2027.0.0-ballot"/>
-  </parameter>
-  <parameter>
-    <name value="default-valueset-version"/>
-    <valueCanonical value="http://hl7.org/fhir/ValueSet/identifier-type|4.0.1"/>
-  </parameter>
-  <parameter>
-    <name value="default-canonical-version"/>
-    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Period|4.0.1"/>
-  </parameter>
-  <parameter>
-    <name value="default-canonical-version"/>
-    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Consent|4.0.1"/>
   </parameter>
   <parameter>
     <name value="default-canonical-version"/>
@@ -961,6 +929,18 @@
   <parameter>
     <name value="default-canonical-version"/>
     <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest|2026.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/security-labels|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="http://hl7.org/fhir/ValueSet/common-tags|4.0.1"/>
   </parameter>
   <parameter>
     <name value="default-valueset-version"/>
@@ -1065,6 +1045,10 @@
   <parameter>
     <name value="default-canonical-version"/>
     <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Duration|4.0.1"/>
+  </parameter>
+  <parameter>
+    <name value="default-canonical-version"/>
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Period|4.0.1"/>
   </parameter>
   <parameter>
     <name value="default-valueset-version"/>

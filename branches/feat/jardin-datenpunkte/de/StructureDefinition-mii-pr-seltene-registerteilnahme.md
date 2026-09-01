@@ -12,7 +12,7 @@
 | Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_PR_Seltene_Registerteilnahme |
 
  
-Teilnahme einer Person an einem Register für seltene Erkrankungen, insbesondere an einem Register eines European Reference Network (ERN). Leitet vom Probanden-Profil des MII KDS Moduls Studie ab und ergänzt den Verweis auf das Register. 
+Teilnahme einer Person an einem Register für seltene Erkrankungen, insbesondere an einem Register eines European Reference Network (ERN). Gedacht für die Dokumentation aus zweiter Hand im Versorgungskontext: festgehalten wird, dass die Person teilnimmt. Nah am Probanden-Profil des MII KDS Moduls Studie, aber bewusst nicht davon abgeleitet, weil dessen Pflichtangabe consent den Sekundärfall ausschließt. 
 
 **Usages:**
 
@@ -34,17 +34,17 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Studie_Proband](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.studie@2026.0.2&canonical=https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband) 
+Diese Struktur ist abgeleitet von [ResearchSubject](http://hl7.org/fhir/R4/researchsubject.html) 
 
 #### Terminology Bindings
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Studie_Proband](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.studie@2026.0.2&canonical=https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband) 
+Diese Struktur ist abgeleitet von [ResearchSubject](http://hl7.org/fhir/R4/researchsubject.html) 
 
 ** Summary **
 
-Must-Support: 1 element
+Must-Support: 8 elements
 
 **Extensions**
 
@@ -60,7 +60,7 @@ This structure refers to these extensions:
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [MII_PR_Studie_Proband](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.studie@2026.0.2&canonical=https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband) 
+Diese Struktur ist abgeleitet von [ResearchSubject](http://hl7.org/fhir/R4/researchsubject.html) 
 
  **Snapshot-AnsichtView** 
 
@@ -68,11 +68,11 @@ Diese Struktur ist abgeleitet von [MII_PR_Studie_Proband](https://simplifier.net
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Studie_Proband](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.studie@2026.0.2&canonical=https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband) 
+Diese Struktur ist abgeleitet von [ResearchSubject](http://hl7.org/fhir/R4/researchsubject.html) 
 
 ** Summary **
 
-Must-Support: 1 element
+Must-Support: 8 elements
 
 **Extensions**
 
@@ -97,7 +97,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Registerteilnahme",
   "title" : "MII PR SE Registerteilnahme",
   "status" : "active",
-  "date" : "2026-09-01T21:17:23+00:00",
+  "date" : "2026-09-01T21:34:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -119,7 +119,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Teilnahme einer Person an einem Register für seltene Erkrankungen, insbesondere an einem Register eines European Reference Network (ERN). Leitet vom Probanden-Profil des MII KDS Moduls Studie ab und ergänzt den Verweis auf das Register.",
+  "description" : "Teilnahme einer Person an einem Register für seltene Erkrankungen, insbesondere an einem Register eines European Reference Network (ERN). Gedacht für die Dokumentation aus zweiter Hand im Versorgungskontext: festgehalten wird, dass die Person teilnimmt. Nah am Probanden-Profil des MII KDS Moduls Studie, aber bewusst nicht davon abgeleitet, weil dessen Pflichtangabe consent den Sekundärfall ausschließt.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -128,15 +128,42 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     }]
   }],
   "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "BRIDG5.1",
+    "uri" : "https://bridgmodel.nci.nih.gov",
+    "name" : "BRIDG 5.1 Mapping"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "ResearchSubject",
-  "baseDefinition" : "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/ResearchSubject",
   "derivation" : "constraint",
   "differential" : {
     "element" : [{
       "id" : "ResearchSubject",
       "path" : "ResearchSubject"
+    },
+    {
+      "id" : "ResearchSubject.extension",
+      "path" : "ResearchSubject.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
     },
     {
       "id" : "ResearchSubject.extension:register",
@@ -156,28 +183,46 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "id" : "ResearchSubject.identifier",
       "path" : "ResearchSubject.identifier",
       "short" : "Pseudonym der Person im Register",
-      "comment" : "Vom Modul Studie geerbt: der subjectIdentificationCode ist dort verpflichtend. In Registern ist das üblicherweise das registereigene Pseudonym, nicht die Patienten-ID des Standorts."
+      "comment" : "Das registereigene Pseudonym, nicht die Patienten-ID des Standorts. Bewusst optional: beim Dokumentieren aus zweiter Hand ist oft bekannt, DASS jemand teilnimmt, ohne dass das Pseudonym des Registers am Standort vorliegt. Wenn es vorliegt, ist es die wertvollste Angabe dieses Profils, weil erst sie die Verknuepfung erlaubt.",
+      "max" : "1",
+      "mustSupport" : true
     },
     {
       "id" : "ResearchSubject.status",
       "path" : "ResearchSubject.status",
-      "short" : "Status der Teilnahme"
+      "short" : "Status der Teilnahme",
+      "mustSupport" : true
     },
     {
       "id" : "ResearchSubject.period",
       "path" : "ResearchSubject.period",
-      "short" : "Zeitraum der Registerteilnahme"
+      "short" : "Zeitraum der Registerteilnahme",
+      "comment" : "Optional, aus demselben Grund wie identifier: das Einschlussdatum ist am dokumentierenden Standort nicht immer bekannt.",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ResearchSubject.period.start",
+      "path" : "ResearchSubject.period.start",
+      "mustSupport" : true
     },
     {
       "id" : "ResearchSubject.study",
       "path" : "ResearchSubject.study",
       "short" : "Das Register, als ResearchStudy gefuehrt",
-      "comment" : "In R4 ist study 1..1 Pflicht und auf ResearchStudy festgelegt. Ein Register muss daher als ResearchStudy vorliegen; der Library-Katalogeintrag des Moduls Studie kann hier nicht stehen. Siehe Kopfkommentar."
+      "comment" : "In R4 ist study 1..1 Pflicht und auf ResearchStudy festgelegt. Ein Register muss daher als ResearchStudy vorliegen; der Library-Katalogeintrag des Moduls Studie kann hier nicht stehen. Siehe Kopfkommentar.",
+      "mustSupport" : true
+    },
+    {
+      "id" : "ResearchSubject.individual",
+      "path" : "ResearchSubject.individual",
+      "mustSupport" : true
     },
     {
       "id" : "ResearchSubject.consent",
       "path" : "ResearchSubject.consent",
-      "comment" : "Vom Probanden-Profil des Moduls Studie mit 1..1 geerbt. Für die Aufnahme in ein ERN-Register ist eine Einwilligung ohnehin die Regel; die Pflichtangabe ist hier also keine zusätzliche Hürde, sondern deckt sich mit der Praxis."
+      "short" : "Nur zu setzen, wenn die Einwilligung am dokumentierenden Standort tatsaechlich als Ressource vorliegt",
+      "comment" : "Eine Registeraufnahme beruht selbstverstaendlich auf einer Einwilligung — aber die liegt beim Registerbetreiber. Ein Standort, der die Teilnahme nur nachhaelt, kann sie nicht referenzieren. Die Angabe leer zu lassen bedeutet daher NICHT, dass keine Einwilligung existiert, sondern nur, dass sie hier nicht als FHIR-Ressource greifbar ist. Genau deshalb leitet dieses Profil nicht vom Probanden-Profil des Moduls Studie ab, das consent mit 1..1 fordert.",
+      "mustSupport" : true
     }]
   }
 }

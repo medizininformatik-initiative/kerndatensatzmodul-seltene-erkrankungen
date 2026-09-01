@@ -16,7 +16,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **MII EX SE Register**: [ERN EURO-NMD Patient Registry — Katalogeintrag](Library-mii-exa-seltene-register-katalog-euro-nmd.md)
 
-**identifier**: Anonymous identifier/NMD-DE-004712
+**identifier**: `https://ern-euro-nmd.eu/fhir/sid/subject`/NMD-DE-004712
 
 **status**: On-study
 
@@ -46,12 +46,6 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
     }
   }],
   "identifier" : [{
-    "type" : {
-      "coding" : [{
-        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-        "code" : "ANON"
-      }]
-    },
     "system" : "https://ern-euro-nmd.eu/fhir/sid/subject",
     "value" : "NMD-DE-004712"
   }],
