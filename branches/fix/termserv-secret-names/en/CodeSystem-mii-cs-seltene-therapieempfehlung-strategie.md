@@ -37,7 +37,7 @@ This Code system is referenced in the definition of the following value sets:
   "name" : "MII_CS_Seltene_TherapieempfehlungStrategie",
   "title" : "MII CS SE Therapieempfehlung Strategie",
   "status" : "active",
-  "date" : "2026-09-01T20:45:00+00:00",
+  "date" : "2026-09-01T21:00:36+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -71,7 +71,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ko
   "name" : "MII_PR_Seltene_Kopfumfang",
   "title" : "MII PR SE Kopfumfang",
   "status" : "active",
-  "date" : "2026-09-01T20:45:00+00:00",
+  "date" : "2026-09-01T21:00:36+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
