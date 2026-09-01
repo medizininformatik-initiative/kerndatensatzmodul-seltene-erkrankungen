@@ -1,0 +1,165 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-seltene-icf-assessment",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment",
+  "version": "2026.0.1",
+  "name": "MII_PR_Seltene_ICFAssessment",
+  "title": "MII PR SE ICF Assessment",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Observation profile grading a single ICF category for a patient, as required by the JARDIN MDS draft and the ERDRI-CDS. Observation.code carries the ICF category (body function, body structure, activity/participation or environmental factor); Observation.value carries the WHO generic qualifier, which is not itself an ICF code.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.id",
+        "path": "Observation.id",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.meta",
+        "path": "Observation.meta",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.meta.profile",
+        "path": "Observation.meta.profile",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:survey",
+        "path": "Observation.category",
+        "sliceName": "survey",
+        "short": "Category: survey/assessment",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "survey",
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "ICF category being graded",
+        "definition": "A single ICF category, e.g. b280 |Sensation of pain| or d450 |Walking|. The ICF chapters are b (body functions), s (body structures), d (activities and participation) and e (environmental factors).",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf"
+        }
+      },
+      {
+        "id": "Observation.code.coding.system",
+        "path": "Observation.code.coding.system",
+        "patternUri": "http://hl7.org/fhir/sid/icf"
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "short": "When the assessment was made — ICF gradings are point-in-time and change over the course of a disease",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.performer",
+        "path": "Observation.performer",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "short": "WHO generic qualifier 0-4, 8 or 9",
+        "definition": "The extent of the problem for the ICF category in Observation.code, expressed on the WHO generic qualifier scale. Note that this is not an ICF code: WHO appends the qualifier to the category (b280.2), but '.2' has no separate identity in the classification.",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding",
+        "path": "Observation.value[x].coding",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf-qualifier"
+        }
+      },
+      {
+        "id": "Observation.note",
+        "path": "Observation.note",
+        "mustSupport": true
+      }
+    ]
+  }
+}

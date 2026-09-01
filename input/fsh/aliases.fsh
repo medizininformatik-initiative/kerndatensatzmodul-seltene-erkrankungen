@@ -86,3 +86,9 @@ Alias: $crmi-release-version-behavior-codes = http://hl7.org/fhir/uv/crmi/CodeSy
 Alias: $crmi-release-experimental-behavior-codes = http://hl7.org/fhir/uv/crmi/CodeSystem/crmi-release-experimental-behavior-codes
 Alias: $crmi-release-version-behavior = http://hl7.org/fhir/uv/crmi/ValueSet/crmi-release-version-behavior
 Alias: $crmi-release-experimental-behavior = http://hl7.org/fhir/uv/crmi/ValueSet/crmi-release-experimental-behavior
+
+// JARDIN-Datenpunkte (Issues #34-#38) — 2026-09-01
+Alias: $icf = http://hl7.org/fhir/sid/icf
+// Modul Studie: Register (Library) und Proband (ResearchSubject)
+Alias: $mii-pr-studie-proband = https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband
+Alias: $mii-pr-studie-register = https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-register

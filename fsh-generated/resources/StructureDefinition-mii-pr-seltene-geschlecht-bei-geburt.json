@@ -1,0 +1,155 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-seltene-geschlecht-bei-geburt",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geschlecht-bei-geburt",
+  "version": "2026.0.1",
+  "name": "MII_PR_Seltene_GeschlechtBeiGeburt",
+  "title": "MII PR SE Geschlecht bei Geburt",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Observation-Profil zur Erfassung des biologischen Geschlechts bei Geburt (sex assigned at birth) gemaess JARDIN-MDS-Entwurf und ERDRI-CDS. Bewusst getrennt vom administrativen Patient.gender des MII KDS Moduls Person, von dem es abweichen kann.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.id",
+        "path": "Observation.id",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.meta",
+        "path": "Observation.meta",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.meta.profile",
+        "path": "Observation.meta.profile",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:socialHistory",
+        "path": "Observation.category",
+        "sliceName": "socialHistory",
+        "short": "Kategorie: Sozialanamnese",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "social-history",
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "Biologisches Geschlecht bei Geburt",
+        "definition": "Das bei der Geburt festgestellte biologische Geschlecht. Abzugrenzen vom administrativen Geschlecht (Patient.gender) und von der Geschlechtsidentitaet (LOINC 76691-5).",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "76689-9",
+              "system": "http://loinc.org",
+              "display": "Sex assigned at birth"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "short": "Zeitpunkt der Feststellung (in der Regel das Geburtsdatum)",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "short": "Male | Female | Indeterminate sex | Unknown",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding",
+        "path": "Observation.value[x].coding",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-geschlecht-bei-geburt"
+        }
+      },
+      {
+        "id": "Observation.value[x].coding.system",
+        "path": "Observation.value[x].coding.system",
+        "patternUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Observation.value[x].text",
+        "path": "Observation.value[x].text",
+        "mustSupport": true
+      }
+    ]
+  }
+}
