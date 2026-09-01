@@ -11,7 +11,7 @@
   <title value="MII VS SE ICF Categories"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-01T19:54:19+00:00"/>
+  <date value="2026-09-01T20:22:52+00:00"/>
   <publisher value="Medizininformatik Initiative">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
@@ -29,7 +29,7 @@
       <value value="https://www.medizininformatik-initiative.de/"/>
     </telecom>
   </contact>
-  <description value="All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. Note that the content is not shipped by HL7 Terminology — it resolves against a terminology server that carries ICF (verified against tx.fhir.org, release 2017a)."/>
+  <description value="All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. German display text comes from the BfArM language supplement, so the value set does not need a German twin."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

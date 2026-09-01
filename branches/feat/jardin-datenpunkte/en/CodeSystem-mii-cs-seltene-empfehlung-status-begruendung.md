@@ -35,7 +35,7 @@ This Code system is referenced in the definition of the following value sets:
   "name" : "MII_CS_Seltene_Empfehlung_StatusBegruendung",
   "title" : "MII CS SE Empfehlung Status Begründung",
   "status" : "active",
-  "date" : "2026-09-01T19:54:19+00:00",
+  "date" : "2026-09-01T20:22:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

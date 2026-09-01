@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-von-seltene-betro
   "version" : "2027.0.0-ballot",
   "name" : "VonSEBetroffen",
   "status" : "active",
-  "date" : "2026-09-01T19:54:19+00:00",
+  "date" : "2026-09-01T20:22:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

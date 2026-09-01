@@ -23,15 +23,15 @@
     "ValueSet-mii-vs-seltene-hpo-change-status.html" : "MII VS Seltene Erkrankungen HPO Change Status"
   },
   {
-    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-qualifier",
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal",
     "version" : "2027.0.0-ballot",
     "status" : "active",
-    "name" : "MII_CS_Seltene_ICFQualifier",
-    "title" : "MII CS SE ICF Generic Qualifier",
-    "description" : "The WHO generic qualifier scale used with ICF categories. Defined locally because the qualifiers are not concepts in the ICF classification itself — WHO specifies them as a scale appended to a category. Wording and percentage ranges are quoted from the ICF.",
+    "name" : "MII_CS_Seltene_ICFBeurteilungsmerkmal",
+    "title" : "MII CS SE ICF Qualifier Kind",
+    "description" : "Names which ICF qualifier a component carries. This is a slot name, not a scale — the scales themselves are the seven BfArM code systems. Defined locally because neither the ICF nor BfArM publishes identifiers for the qualifier positions, and because capacity and performance share one scale and can only be told apart here.",
     "uses" : {
     },
-    "ValueSet-mii-vs-seltene-icf-qualifier.html" : "MII VS SE ICF Generic Qualifier"
+    "ValueSet-mii-vs-seltene-icf-beurteilungsmerkmal.html" : "MII VS SE ICF Qualifier Kind"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp",

@@ -189,7 +189,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes",
   "title" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
   "status" : "active",
-  "date" : "2026-09-01T19:54:19+00:00",
+  "date" : "2026-09-01T20:22:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

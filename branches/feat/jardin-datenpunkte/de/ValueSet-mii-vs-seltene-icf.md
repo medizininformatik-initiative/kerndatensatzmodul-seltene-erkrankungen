@@ -12,7 +12,7 @@
 | Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_VS_Seltene_ICF |
 
  
-All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. Note that the content is not shipped by HL7 Terminology — it resolves against a terminology server that carries ICF (verified against tx.fhir.org, release 2017a). 
+All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. German display text comes from the BfArM language supplement, so the value set does not need a German twin. 
 
  **References** 
 
@@ -42,7 +42,7 @@ All categories of the WHO International Classification of Functioning, Disabilit
   "title" : "MII VS SE ICF Categories",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-01T19:54:19+00:00",
+  "date" : "2026-09-01T20:22:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -64,7 +64,7 @@ All categories of the WHO International Classification of Functioning, Disabilit
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. Note that the content is not shipped by HL7 Terminology — it resolves against a terminology server that carries ICF (verified against tx.fhir.org, release 2017a).",
+  "description" : "All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. German display text comes from the BfArM language supplement, so the value set does not need a German twin.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

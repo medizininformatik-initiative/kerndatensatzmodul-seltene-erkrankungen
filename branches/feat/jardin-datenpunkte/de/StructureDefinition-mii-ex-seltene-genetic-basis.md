@@ -81,7 +81,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-selte
   "name" : "GeneticBasis",
   "title" : "MII EX SE Genetic Basis",
   "status" : "active",
-  "date" : "2026-09-01T19:54:19+00:00",
+  "date" : "2026-09-01T20:22:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

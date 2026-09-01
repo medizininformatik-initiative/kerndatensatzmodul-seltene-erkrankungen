@@ -494,7 +494,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Observation profile grading a single ICF category for a patient, as required by the JARDIN MDS draft and the ERDRI-CDS. Observation.code carries the ICF category (body function, body structure, activity/participation or environmental factor); Observation.value carries the WHO generic qualifier, which is not itself an ICF code.</p>
+<p>Observation profile grading a single ICF category for a patient, as required by the JARDIN MDS draft and the ERDRI-CDS. Observation.code carries the ICF category; the WHO qualifiers are carried as components, because body structures take three of them and activities/participation take two (capacity and performance).</p>
 </td>
          </tr>
          <tr>
@@ -918,19 +918,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. Note that the content is not shipped by HL7 Terminology — it resolves against a terminology server that carries ICF (verified against tx.fhir.org, release 2017a).</p>
+<p>All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. German display text comes from the BfArM language supplement, so the value set does not need a German twin.</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-mii-vs-seltene-icf-qualifier.html"
-                  title="ValueSet/mii-vs-seltene-icf-qualifier">
-                  <span title="ValueSet/mii-vs-seltene-icf-qualifier">MII VS SE ICF Generic Qualifier
+               <a href="ValueSet-mii-vs-seltene-icf-beurteilungsmerkmal.html"
+                  title="ValueSet/mii-vs-seltene-icf-beurteilungsmerkmal">
+                  <span title="ValueSet/mii-vs-seltene-icf-beurteilungsmerkmal">MII VS SE ICF Qualifier Kind
 </span>
                </a>
             </td>
             <td>
-<p>The full WHO generic qualifier scale (0-4, 8, 9) for grading an ICF category.</p>
+<p>All qualifier kinds usable as a component code in the ICF assessment profile.</p>
 </td>
          </tr>
          <tr>
@@ -1099,14 +1099,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-mii-cs-seltene-icf-qualifier.html"
-                  title="CodeSystem/mii-cs-seltene-icf-qualifier">
-                  <span title="CodeSystem/mii-cs-seltene-icf-qualifier">MII CS SE ICF Generic Qualifier
+               <a href="CodeSystem-mii-cs-seltene-icf-beurteilungsmerkmal.html"
+                  title="CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal">
+                  <span title="CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal">MII CS SE ICF Qualifier Kind
 </span>
                </a>
             </td>
             <td>
-<p>The WHO generic qualifier scale used with ICF categories. Defined locally because the qualifiers are not concepts in the ICF classification itself — WHO specifies them as a scale appended to a category. Wording and percentage ranges are quoted from the ICF.</p>
+<p>Names which ICF qualifier a component carries. This is a slot name, not a scale — the scales themselves are the seven BfArM code systems. Defined locally because neither the ICF nor BfArM publishes identifiers for the qualifier positions, and because capacity and performance share one scale and can only be told apart here.</p>
 </td>
          </tr>
          <tr>
@@ -2474,7 +2474,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Tue, Sep 1, 2026 19:54+0000">2026-09-01</span>
+          Erstellt <span title="Tue, Sep 1, 2026 20:22+0000">2026-09-01</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
