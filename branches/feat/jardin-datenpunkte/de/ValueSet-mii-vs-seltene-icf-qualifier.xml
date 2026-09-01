@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-seltene-icf-qualifier"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-seltene-icf-qualifier</b></p><a name="de-mii-vs-seltene-icf-qualifier"> </a><a name="de-hcmii-vs-seltene-icf-qualifier"> </a><ul><li>Include all codes defined in <a href="CodeSystem-mii-cs-seltene-icf-qualifier.html"><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-qualifier</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2027.0.0-ballot</span></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf-qualifier"/>
+  <version value="2027.0.0-ballot"/>
+  <name value="MII_VS_Seltene_ICFQualifier"/>
+  <title value="MII VS SE ICF Generic Qualifier"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-01T19:54:19+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="The full WHO generic qualifier scale (0-4, 8, 9) for grading an ICF category."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-qualifier"/>
+    </include>
+  </compose>
+</ValueSet>
