@@ -12,15 +12,16 @@ Description: "Profile for clinical diagnosis of rare diseases with HPO phenotype
 // Inherit all constraints from parent Diagnose profile
 * clinicalStatus MS
 * verificationStatus MS
-// Bindung ergaenzt 2026-09-02 (Nutzerentscheid). Das ValueSet
-// ClinicalDiagnosisCategoryVS existiert seit dem 2025-08-07 und war NIE an ein
-// Profil gebunden — die gesamte Historie kennt keinen entsprechenden Commit,
-// obwohl der Leitfaden die Kategorisierung seit einem Jahr beschreibt.
-// extensible statt required: das Element war bisher unbeschraenkt, eine
-// Pflichtbindung waere ein Bruch fuer bestehende Instanzen; extensible laesst
-// weitere Codes zu und macht die vorgesehene Menge dennoch sichtbar.
+// category BEWUSST OHNE modulweite Bindung. Am 2026-09-02 war hier kurzzeitig
+// ClinicalDiagnosisCategoryVS extensible gebunden; die Bindung wurde noch am
+// selben Tag zurueckgenommen, weil sie einen Denkfehler zementiert haette:
+// Condition.category beantwortet in FHIR die Frage nach der ROLLE der Condition
+// im Datensatz — der Kurztext lautet woertlich "problem-list-item |
+// encounter-diagnosis" — und nicht die Frage, was fuer eine Krankheit vorliegt.
+// Die Krankheitsart steht in Condition.code, wo sie ueber ICD-10-GM, Orpha und
+// OMIM ohnehin kodiert ist. Es bleibt bei der extensible-Bindung des
+// FHIR-Standards an condition-category.
 * category 1..* MS
-* category from ClinicalDiagnosisCategoryVS (extensible)
 * severity MS
 * code MS
 * bodySite MS

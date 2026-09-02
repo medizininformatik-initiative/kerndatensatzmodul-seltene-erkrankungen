@@ -1,14 +1,25 @@
 // Value Sets for Rare Disease Diagnosis Profiles
 
 // Clinical Diagnosis Category Value Set
+// RETIRED 2026-09-02. Das ValueSet war seit dem 2025-08-07 nie gebunden; beim
+// Versuch, das nachzuholen, zeigte sich der eigentliche Grund: es beantwortet
+// die falsche Frage. Condition.category sagt in FHIR, welche ROLLE eine
+// Condition im Datensatz spielt (problem-list-item, encounter-diagnosis), nicht
+// welche Art von Krankheit vorliegt. Was nach der Codekorrektur uebrig blieb,
+// waren drei Tautologien (Diagnosis, Disease, Clinical finding an einer
+// Condition) und drei Krankheitsklassifikationen, die in Condition.code
+// gehoeren. Dass SNOMED kein generisches "Rare disease" kennt, ist dabei kein
+// Verlust — die Seltenheit steht im Orpha-Code der Diagnose.
+// Nicht geloescht, sondern retired: die URL ist seit 2026.0.1 publiziert und
+// bleibt aufloesbar, der Status haelt Nachnutzer davon ab, sie erneut zu binden.
 ValueSet: ClinicalDiagnosisCategoryVS
 Id: mii-vs-seltene-clinical-diagnosis-category
-Title: "MII VS SE Clinical Diagnosis Category"
-Description: "Value set for categorizing clinical diagnoses of rare diseases"
+Title: "MII VS SE Clinical Diagnosis Category (retired)"
+Description: "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #active
+* ^status = #retired
 // KORRIGIERT 2026-09-02. Vier der acht urspruenglichen Codes waren falsch oder
 // existierten nicht — geprueft per CodeSystem/$lookup auf tx.fhir.org:
 //   363358000 stand als "Clinical finding" und ist Malignant neoplasm of lung

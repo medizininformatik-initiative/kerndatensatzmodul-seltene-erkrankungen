@@ -24,7 +24,7 @@ class "MII_PR_Seltene_ClinicalDiagnosis" as C {
   code.coding[orphanet]
   code.coding[**hpo**]      << eigener Slice >>
   --
-  category : ClinicalDiagnosisCategoryVS  (extensible)
+  category : problem-list-item | encounter-diagnosis
   --
   evidence.detail → **HPO-Symptom-Observation**
   --
