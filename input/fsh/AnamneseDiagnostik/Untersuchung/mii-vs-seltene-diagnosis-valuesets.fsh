@@ -86,15 +86,38 @@ Description: "Value set for types of genetic basis of rare diseases"
 * $SCT#363235000 "Multifactorial disorder"
 
 // Penetrance Value Set
+//
+// KORRIGIERT (GitHub-Issue #31). Die bis 2026.0.1 publizierte Fassung enthielt drei
+// fehlerhafte Eintraege; alle Codes unten sind gegen die HPO-API (ontology.jax.org)
+// mit Label und Definition geprueft:
+//   HP:0025169 war als "Complete penetrance" gefuehrt und ist in Wahrheit
+//     "Left ventricular systolic dysfunction" — ein kardialer Befund. Ersetzt
+//     durch HP:0034950, den echten Term fuer vollstaendige Penetranz.
+//   HP:0003828 war als "Variable penetrance" gefuehrt und ist "Variable expressivity" —
+//     Expressivitaet ist die Auspraegungsstaerke, nicht der Anteil Betroffener.
+//     Ersatzlos entfernt: die Abstufung leistet HP:4000158/59/60.
+//   HP:0003829 trug ein veraltetes Display ("Incomplete penetrance").
+//
+// HIERARCHIE, wichtig fuer die Auswahl: HP:4000158/59/60 (hoch/mittel/niedrig) sind
+// Kinder von HP:0003829 "incomplete penetrance", NICHT Geschwister von "complete".
+// "Hohe Penetranz" heisst in HPO also "unvollstaendig, aber hoch" — wer HP:4000158
+// waehlt, sagt damit implizit auch unvollstaendig.
+//
+// HP:0003831 bleibt trotz des auf Onset lautenden Labels enthalten: seine HPO-Definition
+// lautet "... in which age of onset is typically later in life and in which penetrance is
+// dependent on the age of the subject" und deckt damit die altersabhaengige Penetranz ab,
+// die die alte Fassung meinte.
 ValueSet: PenetranceValueSet
 Id: mii-vs-seltene-penetrance
 Title: "MII VS SE Penetrance"
-Description: "Value set for qualitative descriptions of genetic penetrance"
+Description: "Value set for qualitative descriptions of genetic penetrance, drawn from the HPO branch Inheritance qualifier (HP:0034335). Note that the graded terms (high/moderate/low penetrance) are subtypes of incomplete penetrance, not alternatives to complete penetrance."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-penetrance"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
-* http://human-phenotype-ontology.org#HP:0003829 "Incomplete penetrance"
-* http://human-phenotype-ontology.org#HP:0003828 "Variable penetrance"
-* http://human-phenotype-ontology.org#HP:0025169 "Complete penetrance"
-* http://human-phenotype-ontology.org#HP:0003831 "Age-dependent penetrance"
+* http://human-phenotype-ontology.org#HP:0034950 "Typified by complete penetrance"
+* http://human-phenotype-ontology.org#HP:0003829 "Typified by incomplete penetrance"
+* http://human-phenotype-ontology.org#HP:4000158 "Typified by high penetrance"
+* http://human-phenotype-ontology.org#HP:4000159 "Typified by moderate penetrance"
+* http://human-phenotype-ontology.org#HP:4000160 "Typified by low penetrance"
+* http://human-phenotype-ontology.org#HP:0003831 "Typified by age-related disease onset"

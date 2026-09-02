@@ -6,14 +6,12 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung|2026.0.1"
     ]
   },
-  "status": "active",
-  "intent": "proposal",
   "category": [
     {
       "coding": [
         {
-          "code": "gene-therapy",
           "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
+          "code": "gene-therapy",
           "display": "Gentherapie"
         }
       ]
@@ -21,13 +19,15 @@
     {
       "coding": [
         {
-          "code": "causal",
           "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
+          "code": "causal",
           "display": "Kausal"
         }
       ]
     }
   ],
+  "status": "active",
+  "intent": "proposal",
   "medicationCodeableConcept": {
     "coding": [
       {

@@ -494,9 +494,18 @@ jobs:
         id: terminology
         shell: bash
         env:
-          SU_TERMSERV_CLIENT_CERT: ${{ secrets.SU_TERMSERV_CLIENT_CERT }}
-          SU_TERMSERV_CLIENT_KEY: ${{ secrets.SU_TERMSERV_CLIENT_KEY }}
-          SU_TERMSERV_CLIENT_PASSWORD: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD }}
+          # Zwei Namenskonventionen sind in der MII parallel im Umlauf: dieses
+          # Repo (und das Template) nennen das SU-TermServ-Client-Zertifikat
+          # SU_TERMSERV_CLIENT_*, die Organisation hinterlegt es zentral als
+          # CDS_DEV_CLIENT_* (so verwendet es auch
+          # kerndatensatz-meta/ci_java_validation.yml). Wurde hier nur der
+          # erste Name gelesen, blieb die Bedingung unten immer falsch und der
+          # Build fiel still auf tx.fhir.org zurueck, obwohl das Zertifikat in
+          # der Org vorhanden war. Repo-Secret gewinnt, Org-Secret als Rueckfall.
+          # ACHTUNG: das Passwort heisst auf der Org-Seite _CERT_PASSWORD.
+          SU_TERMSERV_CLIENT_CERT: ${{ secrets.SU_TERMSERV_CLIENT_CERT || secrets.CDS_DEV_CLIENT_CERT }}
+          SU_TERMSERV_CLIENT_KEY: ${{ secrets.SU_TERMSERV_CLIENT_KEY || secrets.CDS_DEV_CLIENT_KEY }}
+          SU_TERMSERV_CLIENT_PASSWORD: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD || secrets.CDS_DEV_CLIENT_CERT_PASSWORD }}
         run: |
           set -euo pipefail
           # Prefer the MII terminology server (SU-TermServ) through the
