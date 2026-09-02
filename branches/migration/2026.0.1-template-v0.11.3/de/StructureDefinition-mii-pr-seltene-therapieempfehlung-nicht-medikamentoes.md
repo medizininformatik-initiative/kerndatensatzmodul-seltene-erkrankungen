@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes |
+| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes |
 
  
 Therapieempfehlung für nicht-medikamentöse Interventionen bei seltenen Erkrankungen (z.B. Ernährungstherapie, Gentherapie, Prophylaxe, Früherkennung) 
@@ -115,14 +115,13 @@ Diese Struktur ist abgeleitet von [ServiceRequest](http://hl7.org/fhir/R4/servic
 ** Summary **
 
 Mandatory: 3 elements(9 nested mandatory elements)
- Must-Support: 23 elements
+ Must-Support: 22 elements
 
 **Extensions**
 
 This structure refers to these extensions:
 
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-prioritaet](StructureDefinition-mii-ex-seltene-empfehlung-prioritaet.md)
-* [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung](StructureDefinition-mii-ex-seltene-empfehlung-evidenzgraduierung.md)
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-publikation](StructureDefinition-mii-ex-seltene-empfehlung-publikation.md)
 
 **Slices**
@@ -155,14 +154,13 @@ Diese Struktur ist abgeleitet von [ServiceRequest](http://hl7.org/fhir/R4/servic
 ** Summary **
 
 Mandatory: 3 elements(9 nested mandatory elements)
- Must-Support: 23 elements
+ Must-Support: 22 elements
 
 **Extensions**
 
 This structure refers to these extensions:
 
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-prioritaet](StructureDefinition-mii-ex-seltene-empfehlung-prioritaet.md)
-* [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung](StructureDefinition-mii-ex-seltene-empfehlung-evidenzgraduierung.md)
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-publikation](StructureDefinition-mii-ex-seltene-empfehlung-publikation.md)
 
 **Slices**
@@ -189,7 +187,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes",
   "title" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
   "status" : "active",
-  "date" : "2026-08-31T13:41:24+00:00",
+  "date" : "2026-09-02T03:14:53+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -275,18 +273,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true
     },
     {
-      "id" : "ServiceRequest.extension:Evidenzgraduierung",
-      "path" : "ServiceRequest.extension",
-      "sliceName" : "Evidenzgraduierung",
-      "min" : 0,
-      "max" : "1",
-      "type" : [{
-        "code" : "Extension",
-        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung"]
-      }],
-      "mustSupport" : true
-    },
-    {
       "id" : "ServiceRequest.extension:Publikation",
       "path" : "ServiceRequest.extension",
       "sliceName" : "Publikation",
@@ -318,8 +304,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "ServiceRequest.category",
       "slicing" : {
         "discriminator" : [{
-          "type" : "pattern",
-          "path" : "$this"
+          "type" : "value",
+          "path" : "coding.system"
         }],
         "description" : "Slice für Therapiestrategie-Kategorisierung aus Modellvorhaben GenomSeq",
         "rules" : "open"
@@ -351,7 +337,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     {
       "id" : "ServiceRequest.category:MVGenomSeqTherapieStrategie.coding.system",
       "path" : "ServiceRequest.category.coding.system",
-      "min" : 1
+      "min" : 1,
+      "patternUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"
     },
     {
       "id" : "ServiceRequest.category:MVGenomSeqTherapieStrategie.coding.code",
@@ -382,7 +369,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     {
       "id" : "ServiceRequest.category:MVGenomSeqTherapieTyp.coding.system",
       "path" : "ServiceRequest.category.coding.system",
-      "min" : 1
+      "min" : 1,
+      "patternUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ"
     },
     {
       "id" : "ServiceRequest.category:MVGenomSeqTherapieTyp.coding.code",

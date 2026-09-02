@@ -9,6 +9,24 @@ Auf dieser Seite werden die Unterschiede zwischen den Versionen nachgehalten, be
 
 -------
 
+## Version 2027.0.0-ballot
+
+### Breaking Changes
+
+* `remove` Extension `mii-ex-seltene-empfehlung-evidenzgraduierung` aus diesem Modul entfernt, samt ihrer Verwendung in den drei Therapieempfehlungs-Profilen. Sie war eine Kopie der Extension aus dem MTB-Modul und von Anfang an unfertig: ihr `system`-Discriminator trug nie einen Wert, wodurch der Pflicht-Slice `Evidenzgrad 1..1` von keiner Instanz erfüllbar war — die Extension wurde in 2026.0.1 publiziert, war aber unbenutzbar, und kein Beispiel hat sie je verwendet. Welche Evidenzskala hier gilt, wird im Ballot-Ticket HDB-543 verhandelt und ist onkologisch geprägt (NCT m1A–m4, ESMO, ASCO); für seltene Erkrankungen wurde die Frage nie beantwortet. Statt eine Tumorskala zu importieren, bleibt das Thema beim MTB-Modul. Die Entfernung dürfte daher keine konforme Implementierung betreffen
+
+### Fehlerbehebungen
+
+* `fix` ValueSet `mii-vs-seltene-penetrance` korrigiert — drei von vier Codes waren falsch (Issue #31). `HP:0025169`, publiziert als „Complete penetrance", ist tatsächlich **Left ventricular systolic dysfunction** und wird durch `HP:0034950` ersetzt. `HP:0003828`, publiziert als „Variable penetrance", ist **Variable expressivity** — ein anderes Konzept — und entfällt; die Abstufung leisten nun `HP:4000158/59/60` (hoch/mittel/niedrig). `HP:0003829` trug ein veraltetes Display. Alle Codes gegen die HPO-API geprüft. Zu beachten: die abgestuften Terme sind Untertypen der **unvollständigen** Penetranz, nicht Alternativen zur vollständigen
+* `fix` Slicing-Discriminator auf `mii-pr-seltene-blutgruppe` `value[x].coding` von `#pattern`/`$this` auf `#value`/`system` umgestellt (Issue #25). Die Slices unterscheiden sich nur durch ihr Codesystem und setzen dafür `.system` — das erzeugt ein `patternUri` auf dem Kindelement statt eines `patternCoding` auf dem Coding selbst, sodass der Discriminator ins Leere zeigte
+* `fix` derselbe Defekt bei `category` in `mii-pr-seltene-therapieempfehlung` und `mii-pr-seltene-therapieempfehlung-nicht-medikamentoes` behoben (durch eine Prüfung gefunden, vorher nicht gemeldet). Beide Slices wurden ausschließlich über ein required-Binding auf verschiedene ValueSets unterschieden, was kein FHIR-R4-Discriminator auswerten kann; `coding.system` ist nun je Slice festgelegt
+
+### Governance
+
+* `chore` Lizenz auf IG-Ebene als `CC-BY-4.0` deklariert (Gate-A-Entscheidung). Das Modul deklarierte zuvor weder in `sushi-config.yaml` noch in `package.json` noch als LICENSE-Datei eine Lizenz; auf Artefakt-Ebene war CC-BY-4.0 über `LicenseCodeableCCBY40` bereits in Gebrauch
+
+-------
+
 ## Version 2026.0.1 (Patch-Release)
 
 ### Abhängigkeiten

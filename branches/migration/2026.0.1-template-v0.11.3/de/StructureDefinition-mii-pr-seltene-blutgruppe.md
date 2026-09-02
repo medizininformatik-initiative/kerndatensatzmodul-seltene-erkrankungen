@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-blutgruppe | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:MII_PR_Seltene_Blutgruppe |
+| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_Seltene_Blutgruppe |
 
  
 Observation-Profil für die Erfassung der Blutgruppe (AB0 und Rhesusfaktor) im Kontext seltener Erkrankungen 
@@ -62,7 +62,7 @@ Diese Struktur ist abgeleitet von [Observation](http://hl7.org/fhir/R4/observati
 
 ** Summary **
 
-Mandatory: 4 elements
+Mandatory: 4 elements(2 nested mandatory elements)
  Must-Support: 19 elements
 
 **Slices**
@@ -96,7 +96,7 @@ Diese Struktur ist abgeleitet von [Observation](http://hl7.org/fhir/R4/observati
 
 ** Summary **
 
-Mandatory: 4 elements
+Mandatory: 4 elements(2 nested mandatory elements)
  Must-Support: 19 elements
 
 **Slices**
@@ -125,7 +125,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Blutgruppe",
   "title" : "MII PR SE Blutgruppe",
   "status" : "active",
-  "date" : "2026-08-31T13:41:24+00:00",
+  "date" : "2026-09-02T03:14:53+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -384,8 +384,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "Observation.value[x].coding",
       "slicing" : {
         "discriminator" : [{
-          "type" : "pattern",
-          "path" : "$this"
+          "type" : "value",
+          "path" : "system"
         }],
         "rules" : "open"
       },
@@ -411,6 +411,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     {
       "id" : "Observation.value[x].coding:loinc.system",
       "path" : "Observation.value[x].coding.system",
+      "min" : 1,
       "patternUri" : "http://loinc.org"
     },
     {
@@ -429,6 +430,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     {
       "id" : "Observation.value[x].coding:snomed.system",
       "path" : "Observation.value[x].coding.system",
+      "min" : 1,
       "patternUri" : "http://snomed.info/sct"
     },
     {

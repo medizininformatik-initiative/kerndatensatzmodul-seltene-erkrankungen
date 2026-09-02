@@ -30,11 +30,11 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **reasonCode**: Osteogenesis imperfecta
 
-> **condition****code**: H35.8
+> **condition****code**: Sonstige näher bezeichnete Affektionen der Netzhaut
 
-> **condition****code**: E11.9
+> **condition****code**: Diabetes mellitus, Typ 2: Ohne Komplikationen
 
-> **condition****code**: I21.2**contributedToDeath**: true
+> **condition****code**: Akuter transmuraler Myokardinfarkt an sonstigen Lokalisationen**contributedToDeath**: true
 
 
 

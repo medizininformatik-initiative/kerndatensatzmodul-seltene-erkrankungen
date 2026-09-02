@@ -20,6 +20,13 @@
   "name" : "MII_CS_Seltene_HPO_ChangeStatus"
 },
 {
+  "id" : "mii-cs-seltene-icf-beurteilungsmerkmal",
+  "type" : "CodeSystem",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_CS_Seltene_ICFBeurteilungsmerkmal"
+},
+{
   "id" : "mii-cs-seltene-narse-therapietyp",
   "type" : "CodeSystem",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp",
@@ -48,18 +55,18 @@
   "name" : "MIIIGModulSelteneErkrankungen"
 },
 {
+  "id" : "mii-exa-seltene-register-katalog-euro-nmd",
+  "type" : "Library",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Library/mii-exa-seltene-register-katalog-euro-nmd",
+  "version" : "2027.0.0-ballot",
+  "name" : "ERNEuroNMDRegistry"
+},
+{
   "id" : "mii-ex-seltene-age-of-onset",
   "type" : "StructureDefinition",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-age-of-onset",
   "version" : "2027.0.0-ballot",
   "name" : "AgeOfOnset"
-},
-{
-  "id" : "mii-ex-seltene-empfehlung-evidenzgraduierung",
-  "type" : "StructureDefinition",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung",
-  "version" : "2027.0.0-ballot",
-  "name" : "MII_EX_Seltene_Empfehlung_Evidenzgraduierung"
 },
 {
   "id" : "mii-ex-seltene-empfehlung-prioritaet",
@@ -95,6 +102,13 @@
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance",
   "version" : "2027.0.0-ballot",
   "name" : "Penetrance"
+},
+{
+  "id" : "mii-ex-seltene-register",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_EX_Seltene_Register"
 },
 {
   "id" : "mii-ext-seltene-onset-age",
@@ -160,11 +174,32 @@
   "name" : "MII_PR_Seltene_Familienanamnese"
 },
 {
+  "id" : "mii-pr-seltene-geburtsgewicht",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geburtsgewicht",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_PR_Seltene_Geburtsgewicht"
+},
+{
+  "id" : "mii-pr-seltene-geburtslaenge",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geburtslaenge",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_PR_Seltene_Geburtslaenge"
+},
+{
   "id" : "mii-pr-seltene-genetic-diagnosis",
   "type" : "StructureDefinition",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis",
   "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Seltene_GeneticDiagnosis"
+},
+{
+  "id" : "mii-pr-seltene-gestationsalter",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-gestationsalter",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_PR_Seltene_Gestationsalter"
 },
 {
   "id" : "mii-pr-seltene-hpo-assessment",
@@ -181,11 +216,25 @@
   "name" : "MII_PR_Seltene_Hueftumfang"
 },
 {
+  "id" : "mii-pr-seltene-icf-assessment",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_PR_Seltene_ICFAssessment"
+},
+{
   "id" : "mii-pr-seltene-kopfumfang",
   "type" : "StructureDefinition",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang",
   "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Seltene_Kopfumfang"
+},
+{
+  "id" : "mii-pr-seltene-registerteilnahme",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-registerteilnahme",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_PR_Seltene_Registerteilnahme"
 },
 {
   "id" : "mii-pr-seltene-studieneinschluss-anfrage",
@@ -328,11 +377,74 @@
   "name" : "HPOSeverity"
 },
 {
+  "id" : "mii-vs-seltene-icf",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_VS_Seltene_ICF"
+},
+{
+  "id" : "mii-vs-seltene-icf-beurteilungsmerkmal",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf-beurteilungsmerkmal",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_VS_Seltene_ICFBeurteilungsmerkmal"
+},
+{
   "id" : "mii-vs-seltene-narse-therapietyp",
   "type" : "ValueSet",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-narse-therapietyp",
   "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Seltene_NARSE_Therapietyp"
+},
+{
+  "id" : "mii-vs-seltene-nbs-acylcarnitine-dbs",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-acylcarnitine-dbs",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_VS_Seltene_NBS_Acylcarnitine_DBS"
+},
+{
+  "id" : "mii-vs-seltene-nbs-aminoacid-dbs",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-aminoacid-dbs",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_VS_Seltene_NBS_AminoAcid_DBS"
+},
+{
+  "id" : "mii-vs-seltene-nbs-dbs-all",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-dbs-all",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_VS_Seltene_NBS_DBS_All"
+},
+{
+  "id" : "mii-vs-seltene-nbs-enzyme-activity-dbs",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-enzyme-activity-dbs",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_VS_Seltene_NBS_EnzymeActivity_DBS"
+},
+{
+  "id" : "mii-vs-seltene-nbs-hemoglobin-dbs",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-hemoglobin-dbs",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_VS_Seltene_NBS_Hemoglobin_DBS"
+},
+{
+  "id" : "mii-vs-seltene-nbs-ratio-dbs",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-ratio-dbs",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_VS_Seltene_NBS_Ratio_DBS"
+},
+{
+  "id" : "mii-vs-seltene-nbs-target-analyte",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-target-analyte",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_VS_Seltene_NBS_TargetAnalyte"
 },
 {
   "id" : "mii-vs-seltene-penetrance",

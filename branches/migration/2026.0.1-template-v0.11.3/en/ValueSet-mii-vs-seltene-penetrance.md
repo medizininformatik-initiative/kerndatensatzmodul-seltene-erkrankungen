@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-penetrance | *Version*:2027.0.0-ballot |
-| Active as of 2026-08-31 | *Computable Name*:PenetranceValueSet |
+| Active as of 2026-09-02 | *Computable Name*:PenetranceValueSet |
 
  
-Value set for qualitative descriptions of genetic penetrance 
+Value set for qualitative descriptions of genetic penetrance, drawn from the HPO branch Inheritance qualifier (HP:0034335). Note that the graded terms (high/moderate/low penetrance) are subtypes of incomplete penetrance, not alternatives to complete penetrance. 
 
  **References** 
 
@@ -23,8 +23,6 @@ Value set for qualitative descriptions of genetic penetrance
  
 
 ### Expansion
-
-No Expansion for this valueset (Unknown Code System)
 
 -------
 
@@ -43,7 +41,7 @@ No Expansion for this valueset (Unknown Code System)
   "name" : "PenetranceValueSet",
   "title" : "MII VS SE Penetrance",
   "status" : "active",
-  "date" : "2026-08-31T13:41:24+00:00",
+  "date" : "2026-09-02T03:14:53+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -65,7 +63,7 @@ No Expansion for this valueset (Unknown Code System)
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Value set for qualitative descriptions of genetic penetrance",
+  "description" : "Value set for qualitative descriptions of genetic penetrance, drawn from the HPO branch Inheritance qualifier (HP:0034335). Note that the graded terms (high/moderate/low penetrance) are subtypes of incomplete penetrance, not alternatives to complete penetrance.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -77,20 +75,28 @@ No Expansion for this valueset (Unknown Code System)
     "include" : [{
       "system" : "http://human-phenotype-ontology.org",
       "concept" : [{
+        "code" : "HP:0034950",
+        "display" : "Typified by complete penetrance"
+      },
+      {
         "code" : "HP:0003829",
-        "display" : "Incomplete penetrance"
+        "display" : "Typified by incomplete penetrance"
       },
       {
-        "code" : "HP:0003828",
-        "display" : "Variable penetrance"
+        "code" : "HP:4000158",
+        "display" : "Typified by high penetrance"
       },
       {
-        "code" : "HP:0025169",
-        "display" : "Complete penetrance"
+        "code" : "HP:4000159",
+        "display" : "Typified by moderate penetrance"
+      },
+      {
+        "code" : "HP:4000160",
+        "display" : "Typified by low penetrance"
       },
       {
         "code" : "HP:0003831",
-        "display" : "Age-dependent penetrance"
+        "display" : "Typified by age-related disease onset"
       }]
     }]
   }

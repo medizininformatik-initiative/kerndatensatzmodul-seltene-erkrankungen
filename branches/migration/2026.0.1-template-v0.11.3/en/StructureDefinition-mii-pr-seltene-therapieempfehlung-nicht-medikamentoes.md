@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes | *Version*:2027.0.0-ballot |
-| Active as of 2026-08-31 | *Computable Name*:MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes |
+| Active as of 2026-09-02 | *Computable Name*:MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes |
 
  
 Therapieempfehlung für nicht-medikamentöse Interventionen bei seltenen Erkrankungen (z.B. Ernährungstherapie, Gentherapie, Prophylaxe, Früherkennung) 
@@ -109,7 +109,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
   "name" : "MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes",
   "title" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
   "status" : "active",
-  "date" : "2026-08-31T13:41:24+00:00",
+  "date" : "2026-09-02T03:14:53+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -195,18 +195,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
       "mustSupport" : true
     },
     {
-      "id" : "ServiceRequest.extension:Evidenzgraduierung",
-      "path" : "ServiceRequest.extension",
-      "sliceName" : "Evidenzgraduierung",
-      "min" : 0,
-      "max" : "1",
-      "type" : [{
-        "code" : "Extension",
-        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung"]
-      }],
-      "mustSupport" : true
-    },
-    {
       "id" : "ServiceRequest.extension:Publikation",
       "path" : "ServiceRequest.extension",
       "sliceName" : "Publikation",
@@ -238,8 +226,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
       "path" : "ServiceRequest.category",
       "slicing" : {
         "discriminator" : [{
-          "type" : "pattern",
-          "path" : "$this"
+          "type" : "value",
+          "path" : "coding.system"
         }],
         "description" : "Slice für Therapiestrategie-Kategorisierung aus Modellvorhaben GenomSeq",
         "rules" : "open"
@@ -271,7 +259,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
     {
       "id" : "ServiceRequest.category:MVGenomSeqTherapieStrategie.coding.system",
       "path" : "ServiceRequest.category.coding.system",
-      "min" : 1
+      "min" : 1,
+      "patternUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"
     },
     {
       "id" : "ServiceRequest.category:MVGenomSeqTherapieStrategie.coding.code",
@@ -302,7 +291,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
     {
       "id" : "ServiceRequest.category:MVGenomSeqTherapieTyp.coding.system",
       "path" : "ServiceRequest.category.coding.system",
-      "min" : 1
+      "min" : 1,
+      "patternUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ"
     },
     {
       "id" : "ServiceRequest.category:MVGenomSeqTherapieTyp.coding.code",

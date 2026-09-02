@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-genetic-basis | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:GeneticBasisValueSet |
+| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:GeneticBasisValueSet |
 
  
 Value set for types of genetic basis of rare diseases 
@@ -23,8 +23,6 @@ Value set for types of genetic basis of rare diseases
  
 
 ### Expansion
-
-No Expansion for this valueset (Unsupported Code System Version)
 
 -------
 
@@ -43,7 +41,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "name" : "GeneticBasisValueSet",
   "title" : "MII VS SE Genetic Basis",
   "status" : "active",
-  "date" : "2026-08-31T13:41:24+00:00",
+  "date" : "2026-09-02T03:14:53+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

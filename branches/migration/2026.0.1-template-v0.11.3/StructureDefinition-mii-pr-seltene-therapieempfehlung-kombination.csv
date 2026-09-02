@@ -28,10 +28,6 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","MII EX SE Empfehlung Priorität","Priorität der (einzelnen) Empfehlung","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"RequestGroup.extension:Evidenzgraduierung","RequestGroup.extension","Evidenzgraduierung","","",0,1,"Y","","","Extension {[CanonicalType[https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung]]} {[]}
-","MII EX SE Empfehlung Evidenzgraduierung","Evidenzgraduierung der (einzelnen) Empfehlung","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "RequestGroup.extension:Publikation","RequestGroup.extension","Publikation","","",0,*,"Y","","","Extension {[CanonicalType[https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-publikation]]} {[]}
 ","MII EX SE Empfehlung Publikation","Verweis auf Publikation der (einzelnen) Empfehlung","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

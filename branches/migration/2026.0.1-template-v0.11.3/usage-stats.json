@@ -12,33 +12,6 @@
       ]
     },
     {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung",
-      "title": "MII EX SE Empfehlung Evidenzgraduierung",
-      "types": [
-        "CodeableConcept",
-        "string",
-        "Extension",
-        "Coding",
-        "Coding",
-        "string",
-        "Extension",
-        "uri",
-        "string",
-        "code",
-        "string",
-        "boolean",
-        "Coding",
-        "string",
-        "Extension",
-        "uri",
-        "string",
-        "code",
-        "string",
-        "boolean",
-        "string"
-      ]
-    },
-    {
       "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-prioritaet",
       "title": "MII EX SE Empfehlung Priorität",
       "types": [
@@ -95,6 +68,13 @@
         "string",
         "uri",
         "code"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register",
+      "title": "MII EX SE Register",
+      "types": [
+        "Reference"
       ]
     },
     {
@@ -156,6 +136,12 @@
       {
         "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese",
         "title": "MII PR SE Familienanamnese"
+      }
+    ],
+    "ResearchSubject": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-registerteilnahme",
+        "title": "MII PR SE Registerteilnahme"
       }
     ],
     "ServiceRequest": [
@@ -351,11 +337,6 @@
     "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis": [
       "FamilyMemberHistory.relationship.coding"
     ],
-    "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung": [
-      "MedicationRequest",
-      "RequestGroup",
-      "ServiceRequest"
-    ],
     "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-prioritaet": [
       "MedicationRequest",
       "RequestGroup",
@@ -369,6 +350,9 @@
     "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance": [
       "Condition",
       "FamilyMemberHistory.condition"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register": [
+      "ResearchSubject"
     ],
     "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen": [
       "Bundle.entry.resource",

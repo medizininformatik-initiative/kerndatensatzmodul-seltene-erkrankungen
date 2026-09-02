@@ -1,0 +1,42 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-seltene-nbs-dbs-all",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-seltene-nbs-dbs-all</b></p><a name=\"de-mii-vs-seltene-nbs-dbs-all\"> </a><a name=\"de-hcmii-vs-seltene-nbs-dbs-all\"> </a><ul><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where SYSTEM  = LP21304-8 (Bld.dot)</li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-dbs-all",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_VS_Seltene_NBS_DBS_All",
+  "title" : "MII VS Seltene Erkrankungen NBS alle Trockenblut-Analyte (LOINC)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-02T03:14:53+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Alle LOINC-Codes, deren Untersuchungsmaterial Trockenblut (dried blood spot) ist — intensional über die LOINC-Eigenschaft SYSTEM definiert und damit vollständig. Enthält Analyte, Quotienten, Panels und Interpretationscodes nebeneinander sowie Analytik ausserhalb des Neugeborenenscreenings; für klinisch abgegrenzte Teilmengen dienen die gruppierten ValueSets mii-vs-seltene-nbs-*-dbs.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "SYSTEM",
+        "op" : "=",
+        "value" : "LP21304-8"
+      }]
+    }]
+  }
+}

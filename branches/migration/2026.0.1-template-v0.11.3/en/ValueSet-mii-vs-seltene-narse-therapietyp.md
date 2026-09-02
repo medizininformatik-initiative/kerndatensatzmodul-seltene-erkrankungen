@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-narse-therapietyp | *Version*:2027.0.0-ballot |
-| Active as of 2026-08-31 | *Computable Name*:MII_VS_Seltene_NARSE_Therapietyp |
+| Active as of 2026-09-02 | *Computable Name*:MII_VS_Seltene_NARSE_Therapietyp |
 
  
 ValueSet für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen 
@@ -42,7 +42,7 @@ ValueSet für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen
   "title" : "MII VS Seltene Erkrankungen NARSE Therapietyp",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-31T13:41:24+00:00",
+  "date" : "2026-09-02T03:14:53+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

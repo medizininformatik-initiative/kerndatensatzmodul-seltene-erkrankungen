@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-kombination | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:MII_PR_Seltene_Therapieempfehlung_Kombination |
+| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_Seltene_Therapieempfehlung_Kombination |
 
  
 Therapieempfehlung für eine medikamentöse Kombinationstherapie 
@@ -61,7 +61,7 @@ Diese Struktur ist abgeleitet von [RequestGroup](http://hl7.org/fhir/R4/requestg
 ** Summary **
 
 Mandatory: 2 elements
- Must-Support: 8 elements
+ Must-Support: 7 elements
  Prohibited: 1 element
 
 **Structures**
@@ -75,7 +75,6 @@ This structure refers to these other structures:
 This structure refers to these extensions:
 
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-prioritaet](StructureDefinition-mii-ex-seltene-empfehlung-prioritaet.md)
-* [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung](StructureDefinition-mii-ex-seltene-empfehlung-evidenzgraduierung.md)
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-publikation](StructureDefinition-mii-ex-seltene-empfehlung-publikation.md)
 
  **Schlüsselelemente-Ansicht** 
@@ -99,7 +98,7 @@ Diese Struktur ist abgeleitet von [RequestGroup](http://hl7.org/fhir/R4/requestg
 ** Summary **
 
 Mandatory: 2 elements
- Must-Support: 8 elements
+ Must-Support: 7 elements
  Prohibited: 1 element
 
 **Structures**
@@ -113,7 +112,6 @@ This structure refers to these other structures:
 This structure refers to these extensions:
 
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-prioritaet](StructureDefinition-mii-ex-seltene-empfehlung-prioritaet.md)
-* [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung](StructureDefinition-mii-ex-seltene-empfehlung-evidenzgraduierung.md)
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-publikation](StructureDefinition-mii-ex-seltene-empfehlung-publikation.md)
 
  
@@ -133,7 +131,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Therapieempfehlung_Kombination",
   "title" : "MII PR SE Therapieempfehlung Kombinationstherapie",
   "status" : "active",
-  "date" : "2026-08-31T13:41:24+00:00",
+  "date" : "2026-09-02T03:14:53+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -205,18 +203,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "type" : [{
         "code" : "Extension",
         "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-prioritaet"]
-      }],
-      "mustSupport" : true
-    },
-    {
-      "id" : "RequestGroup.extension:Evidenzgraduierung",
-      "path" : "RequestGroup.extension",
-      "sliceName" : "Evidenzgraduierung",
-      "min" : 0,
-      "max" : "1",
-      "type" : [{
-        "code" : "Extension",
-        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung"]
       }],
       "mustSupport" : true
     },

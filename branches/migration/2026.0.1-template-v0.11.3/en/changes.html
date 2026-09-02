@@ -145,7 +145,7 @@
 
 
 
-  <img alt="Germany flag" src="assets/images/deu.svg" height="16" title="Germany"/>
+  Germany
 
 
             </span>
@@ -212,6 +212,7 @@
       <li><a href="implementer-guidance.html">Guidance for Implementers</a></li>
       <li><a href="clinical-genetic-diagnosis-guide.html">Clinical vs. Genetic Diagnosis</a></li>
       <li><a href="coding-best-practices.html">Coding Best Practices</a></li>
+      <li><a href="newborn-screening.html">Newborn Screening</a></li>
       <!-- link-only entry: Logical-Models section of the Artifacts Summary (see header note) -->
       <li><a href="logical-models.html">Datasets and Descriptions</a></li>
       <li><a href="uml-diagrams.html">UML Diagrams</a></li>
@@ -332,6 +333,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#version-202700-ballot" id="markdown-toc-version-202700-ballot">Version 2027.0.0-ballot</a></li>
   <li><a href="#version-202601-patch-release" id="markdown-toc-version-202601-patch-release">Version 2026.0.1 (patch release)</a></li>
   <li><a href="#version-202600-final-version" id="markdown-toc-version-202600-final-version">Version 2026.0.0 (final version)</a></li>
   <li><a href="#changes-in-version-v202600-rc1-release-candidate-1" id="markdown-toc-changes-in-version-v202600-rc1-release-candidate-1">Changes in version v2026.0.0-rc.1 (release candidate 1)</a></li>
@@ -340,6 +342,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <!-- TODO:REVIEW machine translation of source page release-notes.md (de) — Migration 2026-08-28, page-map.tsv -->
 <p>This page tracks the differences between versions, beginning with the differences between the ballot version and the final 2026 version.</p>
+
+<hr />
+
+<h3 id="version-202700-ballot">Version 2027.0.0-ballot</h3>
+
+<h4 id="breaking-changes">Breaking changes</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">remove</code> extension <code class="language-plaintext highlighter-rouge">mii-ex-seltene-empfehlung-evidenzgraduierung</code> removed from this module, along with its use in the three Therapieempfehlung profiles. It was a copy of the MTB module's extension and was never finished: its <code class="language-plaintext highlighter-rouge">system</code> discriminator carried no value, so the mandatory <code class="language-plaintext highlighter-rouge">Evidenzgrad 1..1</code> slice could not be satisfied by any instance — the extension shipped in 2026.0.1 but was unusable, and no example ever used it. Which evidence scale applies is tracked in ballot ticket HDB-543 and is framed in oncological terms (NCT m1A–m4, ESMO, ASCO); the question was never answered for rare diseases. Rather than importing a tumour scale, the topic stays with the MTB module. Removal is therefore not expected to affect any conformant implementation</li>
+</ul>
+
+<h4 id="bug-fixes">Bug fixes</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> value set <code class="language-plaintext highlighter-rouge">mii-vs-seltene-penetrance</code> corrected — three of four codes were wrong (issue #31). <code class="language-plaintext highlighter-rouge">HP:0025169</code>, published as "Complete penetrance", is in fact <em>Left ventricular systolic dysfunction</em>, and is replaced by <code class="language-plaintext highlighter-rouge">HP:0034950</code>. <code class="language-plaintext highlighter-rouge">HP:0003828</code>, published as "Variable penetrance", is <em>Variable expressivity</em> — a different concept — and is dropped; the graded terms <code class="language-plaintext highlighter-rouge">HP:4000158/59/60</code> (high/moderate/low) now provide that dimension. <code class="language-plaintext highlighter-rouge">HP:0003829</code> carried an outdated display. All codes verified against the HPO API. Note that the graded terms are subtypes of <em>incomplete</em> penetrance, not alternatives to complete penetrance</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> slicing discriminator on <code class="language-plaintext highlighter-rouge">mii-pr-seltene-blutgruppe</code> <code class="language-plaintext highlighter-rouge">value[x].coding</code> changed from <code class="language-plaintext highlighter-rouge">#pattern</code>/<code class="language-plaintext highlighter-rouge">$this</code> to <code class="language-plaintext highlighter-rouge">#value</code>/<code class="language-plaintext highlighter-rouge">system</code> (issue #25). The slices differ only by code system and set <code class="language-plaintext highlighter-rouge">.system</code>, which yields a <code class="language-plaintext highlighter-rouge">patternUri</code> on the child element rather than a <code class="language-plaintext highlighter-rouge">patternCoding</code> on the coding itself, so the discriminator had nothing to match</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> same defect repaired on <code class="language-plaintext highlighter-rouge">category</code> in <code class="language-plaintext highlighter-rouge">mii-pr-seltene-therapieempfehlung</code> and <code class="language-plaintext highlighter-rouge">mii-pr-seltene-therapieempfehlung-nicht-medikamentoes</code> (found by an audit, not previously reported). Both slices were distinguished solely by a required binding to different value sets, which no FHIR R4 discriminator can evaluate; <code class="language-plaintext highlighter-rouge">coding.system</code> is now pinned per slice</li>
+</ul>
+
+<h4 id="governance">Governance</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">chore</code> licence declared as <code class="language-plaintext highlighter-rouge">CC-BY-4.0</code> at IG level (Gate A decision). The module previously declared no licence anywhere in <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>, <code class="language-plaintext highlighter-rouge">package.json</code> or a LICENSE file; the artefact level already applied CC-BY-4.0 through <code class="language-plaintext highlighter-rouge">LicenseCodeableCCBY40</code></li>
+</ul>
 
 <hr />
 
@@ -352,7 +378,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">chore</code> dependency on module ICU updated to <code class="language-plaintext highlighter-rouge">2026.0.x</code> (resolved: <code class="language-plaintext highlighter-rouge">2026.0.2</code>)</li>
 </ul>
 
-<h4 id="bug-fixes">Bug fixes</h4>
+<h4 id="bug-fixes-1">Bug fixes</h4>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">fix</code> ICU head circumference alias updated to the renamed profile <code class="language-plaintext highlighter-rouge">mii-pr-icu-muv-kopfumfang</code></li>
@@ -411,7 +437,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">docs</code> documentation clarifications (HDB-741, HDB-739)</li>
 </ul>
 
-<h4 id="bug-fixes-1">Bug fixes</h4>
+<h4 id="bug-fixes-2">Bug fixes</h4>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">fix</code> incorrect oBDS mappings removed from the therapy plan page (HDB-751)</li>
@@ -459,7 +485,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Aug 31, 2026 13:41+0000">2026-08-31</span>
+          Generated <span title="Wed, Sep 2, 2026 03:14+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

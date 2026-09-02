@@ -145,7 +145,7 @@
 
 
 
-  <img alt="Germany Flagge" src="assets/images/deu.svg" height="16" title="Germany"/>
+  Germany
 
 
             </span>
@@ -182,6 +182,7 @@
       <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
       <li><a href="clinical-genetic-diagnosis-guide.html">Klinische vs. genetische Diagnose</a></li>
       <li><a href="coding-best-practices.html">Kodier-Empfehlungen</a></li>
+      <li><a href="newborn-screening.html">Neugeborenenscreening</a></li>
       <li><a href="logical-models.html">Datensätze und Beschreibungen</a></li>
       <li><a href="uml-diagrams.html">UML-Diagramme</a></li>
     </ul>
@@ -292,9 +293,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#version-202700-ballot" id="markdown-toc-version-202700-ballot">Version 2027.0.0-ballot</a>    <ul>
+      <li><a href="#breaking-changes" id="markdown-toc-breaking-changes">Breaking Changes</a></li>
+      <li><a href="#fehlerbehebungen" id="markdown-toc-fehlerbehebungen">Fehlerbehebungen</a></li>
+      <li><a href="#governance" id="markdown-toc-governance">Governance</a></li>
+    </ul>
+  </li>
   <li><a href="#version-202601-patch-release" id="markdown-toc-version-202601-patch-release">Version 2026.0.1 (Patch-Release)</a>    <ul>
       <li><a href="#abhängigkeiten" id="markdown-toc-abhängigkeiten">Abhängigkeiten</a></li>
-      <li><a href="#fehlerbehebungen" id="markdown-toc-fehlerbehebungen">Fehlerbehebungen</a></li>
+      <li><a href="#fehlerbehebungen-1" id="markdown-toc-fehlerbehebungen-1">Fehlerbehebungen</a></li>
       <li><a href="#cicd-und-tooling" id="markdown-toc-cicd-und-tooling">CI/CD und Tooling</a></li>
     </ul>
   </li>
@@ -305,7 +312,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#änderungen-version-v202600-rc1-release-candidate-1" id="markdown-toc-änderungen-version-v202600-rc1-release-candidate-1">Änderungen Version v2026.0.0-rc.1 (Release Candidate 1)</a>    <ul>
       <li><a href="#neue-funktionen" id="markdown-toc-neue-funktionen">Neue Funktionen</a></li>
       <li><a href="#dokumentationsverbesserungen" id="markdown-toc-dokumentationsverbesserungen">Dokumentationsverbesserungen</a></li>
-      <li><a href="#fehlerbehebungen-1" id="markdown-toc-fehlerbehebungen-1">Fehlerbehebungen</a></li>
+      <li><a href="#fehlerbehebungen-2" id="markdown-toc-fehlerbehebungen-2">Fehlerbehebungen</a></li>
       <li><a href="#validierung-und-qualitätsverbesserungen-aus-ballot-feedback" id="markdown-toc-validierung-und-qualitätsverbesserungen-aus-ballot-feedback">Validierung und Qualitätsverbesserungen (aus Ballot-Feedback)</a></li>
     </ul>
   </li>
@@ -314,6 +321,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <!-- DE-Uebersetzungsseite; Quelle(n): release-notes.md — Migration 2026-08-28, page-map.tsv -->
 <p>Auf dieser Seite werden die Unterschiede zwischen den Versionen nachgehalten, beginnend mit den Unterschieden zwischen der Ballotierungs- und der finalen Version 2026.</p>
+
+<hr />
+
+<h2 id="version-202700-ballot">Version 2027.0.0-ballot</h2>
+
+<h3 id="breaking-changes">Breaking Changes</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">remove</code> Extension <code class="language-plaintext highlighter-rouge">mii-ex-seltene-empfehlung-evidenzgraduierung</code> aus diesem Modul entfernt, samt ihrer Verwendung in den drei Therapieempfehlungs-Profilen. Sie war eine Kopie der Extension aus dem MTB-Modul und von Anfang an unfertig: ihr <code class="language-plaintext highlighter-rouge">system</code>-Discriminator trug nie einen Wert, wodurch der Pflicht-Slice <code class="language-plaintext highlighter-rouge">Evidenzgrad 1..1</code> von keiner Instanz erfüllbar war — die Extension wurde in 2026.0.1 publiziert, war aber unbenutzbar, und kein Beispiel hat sie je verwendet. Welche Evidenzskala hier gilt, wird im Ballot-Ticket HDB-543 verhandelt und ist onkologisch geprägt (NCT m1A–m4, ESMO, ASCO); für seltene Erkrankungen wurde die Frage nie beantwortet. Statt eine Tumorskala zu importieren, bleibt das Thema beim MTB-Modul. Die Entfernung dürfte daher keine konforme Implementierung betreffen</li>
+</ul>
+
+<h3 id="fehlerbehebungen">Fehlerbehebungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> ValueSet <code class="language-plaintext highlighter-rouge">mii-vs-seltene-penetrance</code> korrigiert — drei von vier Codes waren falsch (Issue #31). <code class="language-plaintext highlighter-rouge">HP:0025169</code>, publiziert als „Complete penetrance", ist tatsächlich <em>Left ventricular systolic dysfunction</em> und wird durch <code class="language-plaintext highlighter-rouge">HP:0034950</code> ersetzt. <code class="language-plaintext highlighter-rouge">HP:0003828</code>, publiziert als „Variable penetrance", ist <em>Variable expressivity</em> — ein anderes Konzept — und entfällt; die Abstufung leisten nun <code class="language-plaintext highlighter-rouge">HP:4000158/59/60</code> (hoch/mittel/niedrig). <code class="language-plaintext highlighter-rouge">HP:0003829</code> trug ein veraltetes Display. Alle Codes gegen die HPO-API geprüft. Zu beachten: die abgestuften Terme sind Untertypen der <em>unvollständigen</em> Penetranz, nicht Alternativen zur vollständigen</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Slicing-Discriminator auf <code class="language-plaintext highlighter-rouge">mii-pr-seltene-blutgruppe</code> <code class="language-plaintext highlighter-rouge">value[x].coding</code> von <code class="language-plaintext highlighter-rouge">#pattern</code>/<code class="language-plaintext highlighter-rouge">$this</code> auf <code class="language-plaintext highlighter-rouge">#value</code>/<code class="language-plaintext highlighter-rouge">system</code> umgestellt (Issue #25). Die Slices unterscheiden sich nur durch ihr Codesystem und setzen dafür <code class="language-plaintext highlighter-rouge">.system</code> — das erzeugt ein <code class="language-plaintext highlighter-rouge">patternUri</code> auf dem Kindelement statt eines <code class="language-plaintext highlighter-rouge">patternCoding</code> auf dem Coding selbst, sodass der Discriminator ins Leere zeigte</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> derselbe Defekt bei <code class="language-plaintext highlighter-rouge">category</code> in <code class="language-plaintext highlighter-rouge">mii-pr-seltene-therapieempfehlung</code> und <code class="language-plaintext highlighter-rouge">mii-pr-seltene-therapieempfehlung-nicht-medikamentoes</code> behoben (durch eine Prüfung gefunden, vorher nicht gemeldet). Beide Slices wurden ausschließlich über ein required-Binding auf verschiedene ValueSets unterschieden, was kein FHIR-R4-Discriminator auswerten kann; <code class="language-plaintext highlighter-rouge">coding.system</code> ist nun je Slice festgelegt</li>
+</ul>
+
+<h3 id="governance">Governance</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">chore</code> Lizenz auf IG-Ebene als <code class="language-plaintext highlighter-rouge">CC-BY-4.0</code> deklariert (Gate-A-Entscheidung). Das Modul deklarierte zuvor weder in <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> noch in <code class="language-plaintext highlighter-rouge">package.json</code> noch als LICENSE-Datei eine Lizenz; auf Artefakt-Ebene war CC-BY-4.0 über <code class="language-plaintext highlighter-rouge">LicenseCodeableCCBY40</code> bereits in Gebrauch</li>
+</ul>
 
 <hr />
 
@@ -326,7 +357,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">chore</code> Abhängigkeit auf Modul ICU auf <code class="language-plaintext highlighter-rouge">2026.0.x</code> (resolved: <code class="language-plaintext highlighter-rouge">2026.0.2</code>) aktualisiert</li>
 </ul>
 
-<h3 id="fehlerbehebungen">Fehlerbehebungen</h3>
+<h3 id="fehlerbehebungen-1">Fehlerbehebungen</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">fix</code> ICU-Kopfumfang-Alias auf umbenanntes Profil <code class="language-plaintext highlighter-rouge">mii-pr-icu-muv-kopfumfang</code> aktualisiert</li>
@@ -385,7 +416,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">docs</code> Dokumentationsklarstellungen (HDB-741, HDB-739)</li>
 </ul>
 
-<h3 id="fehlerbehebungen-1">Fehlerbehebungen</h3>
+<h3 id="fehlerbehebungen-2">Fehlerbehebungen</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">fix</code> Inkorrekte oBDS-Mappings aus Therapieplan-Seite entfernt (HDB-751)</li>
@@ -433,7 +464,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Mon, Aug 31, 2026 13:41+0000">2026-08-31</span>
+          Erstellt <span title="Wed, Sep 2, 2026 03:14+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

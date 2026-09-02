@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-genetic-basis | *Version*:2027.0.0-ballot |
-| Active as of 2026-08-31 | *Computable Name*:GeneticBasis |
+| Active as of 2026-09-02 | *Computable Name*:GeneticBasis |
 
 Extension to describe the genetic basis of a rare disease
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-ge
   "name" : "GeneticBasis",
   "title" : "MII EX SE Genetic Basis",
   "status" : "active",
-  "date" : "2026-08-31T13:41:24+00:00",
+  "date" : "2026-09-02T03:14:53+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

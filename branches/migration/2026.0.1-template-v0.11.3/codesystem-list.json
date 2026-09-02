@@ -23,6 +23,17 @@
     "ValueSet-mii-vs-seltene-hpo-change-status.html" : "MII VS Seltene Erkrankungen HPO Change Status"
   },
   {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_CS_Seltene_ICFBeurteilungsmerkmal",
+    "title" : "MII CS SE ICF Qualifier Kind",
+    "description" : "Names which ICF qualifier a component carries. This is a slot name, not a scale — the scales themselves are the seven BfArM code systems. Defined locally because neither the ICF nor BfArM publishes identifiers for the qualifier positions, and because capacity and performance share one scale and can only be told apart here.",
+    "uses" : {
+    },
+    "ValueSet-mii-vs-seltene-icf-beurteilungsmerkmal.html" : "MII VS SE ICF Qualifier Kind"
+  },
+  {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp",
     "version" : "2027.0.0-ballot",
     "status" : "active",
@@ -42,8 +53,8 @@
     "description" : "Strategietypen für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq",
     "uses" : {
     },
-    "ValueSet-mii-vs-seltene-therapieempfehlung-strategie.html" : "MII VS SE Therapieempfehlung Strategie",
     "ValueSet-mii-vs-seltene-therapieempfehlung-strategie-medikamentoes.html" : "MII VS SE Therapieempfehlung Strategie - Medikamentös",
+    "ValueSet-mii-vs-seltene-therapieempfehlung-strategie.html" : "MII VS SE Therapieempfehlung Strategie",
     "ValueSet-mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes.html" : "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös"
   },
   {
