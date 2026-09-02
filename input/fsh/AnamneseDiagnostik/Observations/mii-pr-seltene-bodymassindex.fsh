@@ -54,9 +54,9 @@ Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_Bodymassindex
 Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
-* -> "Messbefunde.BMI" "BMI"
-* valueQuantity.value -> "Messbefunde.BMI.BMI" "BMI SE-Patient"
-* effectiveDateTime -> "Messbefunde.BMI.DatumBMI" "Datum des BMI"
+* -> "Messbefunde.bmi" "BMI"
+* valueQuantity.value -> "Messbefunde.bmi.bmi" "BMI SE-Patient"
+* effectiveDateTime -> "Messbefunde.bmi.datumBMI" "Datum des BMI"
 * subject -> "Patient" "Patient/Indexpatient"
 * status -> "Status der Messung" "Beobachtungsstatus"
-* code -> "Messbefunde.BMI" "BMI-Code (LOINC 39156-5)"
+* code -> "Messbefunde.bmi" "BMI-Code (LOINC 39156-5)"
