@@ -8,9 +8,9 @@
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-genetic-basis",
   "version" : "2027.0.0-ballot",
   "name" : "GeneticBasisValueSet",
-  "title" : "MII VS SE Genetic Basis",
-  "status" : "active",
-  "date" : "2026-09-02T17:34:23+00:00",
+  "title" : "MII VS SE Genetic Basis (retired)",
+  "status" : "retired",
+  "date" : "2026-09-02T17:52:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -32,7 +32,7 @@
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Value set for types of genetic basis of rare diseases",
+  "description" : "RETIRED. Nicht verwenden. Acht der neun enthaltenen SNOMED-Codes bezeichnen etwas anderes als ihr Display behauptet oder existieren nicht; das ValueSet muss neu erstellt werden.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -3393,8 +3393,8 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       "reference" : {
         "reference" : "ValueSet/mii-vs-seltene-genetic-basis"
       },
-      "name" : "MII VS SE Genetic Basis",
-      "description" : "Value set for types of genetic basis of rare diseases",
+      "name" : "MII VS SE Genetic Basis (retired)",
+      "description" : "RETIRED. Nicht verwenden. Acht der neun enthaltenen SNOMED-Codes bezeichnen etwas anderes als ihr Display behauptet oder existieren nicht; das ValueSet muss neu erstellt werden.",
       "exampleBoolean" : false
     },
     {

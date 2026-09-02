@@ -41,7 +41,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "HPOInheritancePatternValueSet",
   "title" : "MII VS SE HPO Inheritance Pattern",
   "status" : "active",
-  "date" : "2026-09-02T17:34:23+00:00",
+  "date" : "2026-09-02T17:52:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -108,7 +108,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       },
       {
         "code" : "HP:0001428",
-        "display" : "Somatic mutation"
+        "display" : "Typified by somatic mosaicism"
       },
       {
         "code" : "HP:0003745",
@@ -116,15 +116,15 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       },
       {
         "code" : "HP:0010983",
-        "display" : "Oligogenic"
+        "display" : "Oligogenic inheritance"
       },
       {
         "code" : "HP:0010982",
-        "display" : "Polygenic"
+        "display" : "Polygenic inheritance"
       },
       {
         "code" : "HP:0001426",
-        "display" : "Multifactorial inheritance"
+        "display" : "Non-Mendelian inheritance"
       },
       {
         "code" : "HP:0012275",

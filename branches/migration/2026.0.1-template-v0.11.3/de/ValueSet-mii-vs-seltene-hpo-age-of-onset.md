@@ -41,7 +41,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "HPOAgeOfOnsetValueSet",
   "title" : "MII VS SE HPO Age of Onset",
   "status" : "active",
-  "date" : "2026-09-02T17:34:23+00:00",
+  "date" : "2026-09-02T17:52:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -83,8 +83,20 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
     {
       "system" : "http://human-phenotype-ontology.org",
       "concept" : [{
+        "code" : "HP:0011460",
+        "display" : "Embryonal onset"
+      },
+      {
+        "code" : "HP:0011461",
+        "display" : "Fetal onset"
+      },
+      {
         "code" : "HP:0003577",
         "display" : "Congenital onset"
+      },
+      {
+        "code" : "HP:0003623",
+        "display" : "Neonatal onset"
       },
       {
         "code" : "HP:0003593",
@@ -99,32 +111,24 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
         "display" : "Juvenile onset"
       },
       {
-        "code" : "HP:0003581",
-        "display" : "Adult onset"
-      },
-      {
-        "code" : "HP:0003584",
-        "display" : "Late onset"
-      },
-      {
         "code" : "HP:0011462",
         "display" : "Young adult onset"
       },
       {
         "code" : "HP:0025708",
-        "display" : "Middle age onset"
+        "display" : "Early young adult onset"
+      },
+      {
+        "code" : "HP:0003581",
+        "display" : "Adult onset"
       },
       {
         "code" : "HP:0003596",
-        "display" : "Neonatal onset"
+        "display" : "Middle age onset"
       },
       {
-        "code" : "HP:0034198",
-        "display" : "Fetal onset"
-      },
-      {
-        "code" : "HP:0034199",
-        "display" : "Embryonal onset"
+        "code" : "HP:0003584",
+        "display" : "Late onset"
       }]
     }]
   }

@@ -43,7 +43,7 @@ HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Pheno
   "name" : "HPOSeverity",
   "title" : "HPO Severity",
   "status" : "active",
-  "date" : "2026-09-02T17:34:23+00:00",
+  "date" : "2026-09-02T17:52:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
