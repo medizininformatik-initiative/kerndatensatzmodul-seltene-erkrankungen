@@ -30,7 +30,13 @@ releaseLabel: ci-build # Quelle gewinnt (2027.0.0-ballot ist kein formales Relea
 # input/fsh/rulesets/license-terms.fsh) und mit dem Index-Seiten-Statement.
 license: CC-BY-4.0
 # Must equal the publication date; go-publish.yml validates this.
-date: "2026-08-28" # TODO:REVIEW Migrations-Datum, kein Publikationsdatum (Gate A)
+#
+# ACHTUNG BEIM RELEASE-BUILD AM 2026-09-14: dieses Feld MUSS dann auf
+# "2026-09-14" gezogen werden. go-publish.yml prueft date gegen das
+# Publikationsdatum und bricht sonst ab. Der aktuelle Wert bezeichnet den Stand,
+# zu dem der Ballot-Entwurf inhaltlich vollstaendig war — nicht den geplanten
+# Publikationstermin. Ballotierung startet am 2026-09-15, letzter Build 09-14.
+date: "2026-09-02" # Gate A ① (A-7) ENTSCHIEDEN 2026-09-02; zuvor 2026-08-28 = Migrationsdatum
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # package.json nutzt m49#276 (ebenfalls DE) — Template-Idiom übernommen
 publisher:
   name: Medizininformatik Initiative
@@ -45,7 +51,16 @@ meta:
 experimental: false
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/resource-approvalDate
-    valueDate: "2026-08-28" # TODO:REVIEW kein dokumentiertes Approval-Datum (Gate A)
+    # Gate A ① (A-7) ENTSCHIEDEN 2026-09-02 durch den Modulverantwortlichen.
+    # Zuvor stand hier das Migrationsdatum und behauptete damit eine Freigabe, die
+    # es nie gab. Der zunaechst erwogene 2026-08-31 waere dem Inhalt
+    # vorausdatiert gewesen: an jenem Tag fiel nur die Lizenzentscheidung, die
+    # gesamte fachliche Arbeit (JARDIN-Datenpunkte, ICF-Umbau nach BfArM,
+    # Beispiele, beide CI-Fixes, A-5) landete erst am 09-01 und 09-02.
+    # LESART: Freigabe des BALLOT-ENTWURFS durch den Modulverantwortlichen, NICHT
+    # eine Release-Freigabe durch die TF-KDS. Letztere waere fuer ein formales
+    # Release nachzutragen.
+    valueDate: "2026-09-02"
   - url: http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability
     valueCode: shareable
   - url: http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability
