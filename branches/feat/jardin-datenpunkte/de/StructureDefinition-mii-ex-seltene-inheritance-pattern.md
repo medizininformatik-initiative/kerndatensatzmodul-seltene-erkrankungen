@@ -81,7 +81,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-selte
   "name" : "InheritancePattern",
   "title" : "MII EX SE Inheritance Pattern",
   "status" : "active",
-  "date" : "2026-09-02T02:40:35+00:00",
+  "date" : "2026-09-02T02:52:32+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

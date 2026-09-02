@@ -42,7 +42,7 @@ All categories of the WHO International Classification of Functioning, Disabilit
   "title" : "MII VS SE ICF Categories",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T02:40:35+00:00",
+  "date" : "2026-09-02T02:52:32+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
