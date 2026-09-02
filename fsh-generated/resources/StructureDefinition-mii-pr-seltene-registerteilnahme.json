@@ -27,20 +27,6 @@
   "differential": {
     "element": [
       {
-        "id": "ResearchSubject.extension",
-        "path": "ResearchSubject.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "ResearchSubject.extension:register",
         "path": "ResearchSubject.extension",
         "sliceName": "register",
