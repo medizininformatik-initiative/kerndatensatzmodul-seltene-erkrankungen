@@ -1,11 +1,13 @@
 Rückmeldung aus der Umsetzung im Modul Seltene Erkrankungen — mit einem begründeten Gegenvorschlag zum Ort.
 
-**Vorschlag: den Datenpunkt in den Deutschen Basisprofilen verankern (Linie 2027), nicht im Modul SE.**
+**Vorschlag: den Datenpunkt am MII-Patient-Profil führen (`mii-pr-person-patient`, Linie 2027), nicht im Modul SE.**
+
+Entschieden am 2026-09-02. Konkreter Ort: `medizininformatik-initiative/kerndatensatz-basis`, Datei `input/fsh/profiles/MII_PR_Person_Patient.fsh`, ausgeliefert im Paket `de.medizininformatikinitiative.kerndatensatz.base` — bereits Dependency aller aufsetzenden Module, unter anderem des Moduls SE.
 
 Der Ticketvorschlag lautet, das Geburtsgeschlecht „über das MII KDS Modul SE" zu ergänzen. Bei der Umsetzung im Modul SE hat sich gezeigt, dass das der falsche Ort ist:
 
 1. Es ist ein **demografisches Attribut der Person**, kein Befund einer seltenen Erkrankung. Ein Kind mit einer Störung der Geschlechtsentwicklung hat ein Geburtsgeschlecht — aber das gilt für jede Person, unabhängig davon, ob eine seltene Erkrankung vorliegt.
-2. HL7 **Gender Harmony** standardisiert genau diesen Datenpunkt bereits, und zwar als Extension `individual-recordedSexOrGender` (in `hl7.fhir.uv.extensions.r4`). Deren `context` ist `Patient` — eine Ressource, die das Modul SE nicht besitzt. Eine Umsetzung dort hieße, in fremde Zuständigkeit hinein zu profilieren; und da der Datenpunkt für jede Person gilt, gehört er unterhalb der MII-Modulebene, in die Deutschen Basisprofile.
+2. HL7 **Gender Harmony** standardisiert genau diesen Datenpunkt bereits, und zwar als Extension `individual-recordedSexOrGender` (in `hl7.fhir.uv.extensions.r4`). Deren `context` ist `Patient` — eine Ressource, die das Modul SE nicht besitzt. Eine Umsetzung dort hieße, in fremde Zuständigkeit hinein zu profilieren. Da der Datenpunkt für jede Person gilt, gehört er an das MII-Patient-Profil, von dem alle Module erben.
 3. **Auffindbarkeit:** Wer das Geburtsgeschlecht abfragt (FDPG, ein DIC, ein europäischer Registerabgleich), sucht es bei `Patient`. Ein zweiter Ort im Modul SE würde dafür sorgen, dass die Angabe für Personen ohne SE-Bezug gar nicht existiert und für Personen mit SE-Bezug an einer unerwarteten Stelle steht.
 
 **Wie Gender Harmony es löst**, und warum das gut zum Ticket passt: Das Projekt trennt drei bisher in `Patient.gender` vermischte Konzepte — Gender Identity, Sex Parameter for Clinical Use, und Recorded Sex or Gender. „Sex assigned at birth" ist kein eigenes Element, sondern ein `type` unter Recorded Sex or Gender, gebunden an `recorded-sex-or-gender-type` mit LOINC **`76689-9` „Sex assigned at birth"**. Die Extension trägt daneben Provenienz-Felder (`sourceDocument`, `sourceField`, `jurisdiction`, `acquisitionDate`) — für den deutschen Kontext passend, weil das PStG im Geburtenregister auch die offene Angabe zulässt und „welches Register, welches Feld" damit eine echte Information ist. Das deckt sich mit der Ticketaussage, dass der Wert vom administrativen Gender abweichen kann: Gender Harmony sagt ausdrücklich, dass eine erfasste Angabe eine Aussage eines Dokuments ist und nicht dieselbe Aussage wie `Patient.gender`.
