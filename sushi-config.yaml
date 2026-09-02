@@ -137,11 +137,17 @@ dependencies:
   # gepinnt, weil Template-CI (convention-check) floating Versionen ablehnt —
   # Auflösung geloggt in migration-log/run.log 2.1) ──────────────────────────
   de.basisprofil.r4: 1.5.4 # Quelle: 1.5.x
-  de.medizininformatikinitiative.kerndatensatz.meta: 2026.0.0 # Quelle: 2026.0.x
+  # 2027er Ballot-RCs, VORLAEUFIG (Gate A ① / A-3, Nutzerentscheid 2026-09-02):
+  # Die MII harmonisiert derzeit 20+ Packages auf die 2027er Linie, das geschieht
+  # in mehreren Schritten. Diese beiden Pins ziehen mit, sobald hoehere RCs oder
+  # finale Staende erscheinen — sie sind ausdruecklich KEIN Endzustand.
+  # Getestet 2026-09-02: SUSHI 0 Errors / 0 Warnings, Ressourcenzahlen
+  # unveraendert (meta 173, base 36), es fehlt also nichts.
+  de.medizininformatikinitiative.kerndatensatz.meta: 2027.0.0-ballot.rc3 # war 2026.0.0
   de.medizininformatikinitiative.kerndatensatz.molgen: 2026.0.4 # Quelle: 2026.0.x
   de.medizininformatikinitiative.kerndatensatz.icu: 2026.0.3 # Quelle: 2026.0.x
   de.medizininformatikinitiative.kerndatensatz.studie: 2026.0.2 # Quelle: exakt
-  de.medizininformatikinitiative.kerndatensatz.base: 2026.0.1 # Quelle: 2026.0.x
+  de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot.rc1 # war 2026.0.1
   de.medizininformatikinitiative.kerndatensatz.medikation: 2026.0.1 # Quelle: 2026.0.x
   # ── Template-Maschinerie (Gate A dokumentiert, Skill Schritt 3) ────────────
   # CRMI — verlangt von den meta.profile-Claims oben.
