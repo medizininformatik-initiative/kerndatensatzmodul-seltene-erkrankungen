@@ -166,6 +166,6 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * effectivePeriod.start -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom" "Startdatum des Symptoms"
 * effectivePeriod.end -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom" "Enddatum des Symptoms"
 * method -> "anamneseUndDiagnostik.methodeDiagnosestellung" "Methode der Diagnosestellung"
-* subject -> "Patient" "Patient/Indexpatient"
+* subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
 * encounter -> "anamneseUndDiagnostik.untersuchungsdatum" "Untersuchungsdatum"
 * derivedFrom -> "Verweis auf zugrunde liegende Befunde" "Laborbefunde oder Bildgebung"

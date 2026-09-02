@@ -149,6 +149,6 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * abatementDateTime -> "Ende des Symptoms" "Enddatum des Symptoms"
 * evidence.code -> "anamneseUndDiagnostik.phaenotypisierung.hpoTerm" "Unterstützende HPO-Symptome"
 * evidence.detail -> "anamneseUndDiagnostik.phaenotypisierung" "Verweis auf Beobachtungen"
-* subject -> "Patient" "Patient/Indexpatient"
+* subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
 * encounter -> "anamneseUndDiagnostik.untersuchungsdatum" "Untersuchungskontakt"
 * recordedDate -> "anamneseUndDiagnostik.untersuchungsdatum" "Dokumentationsdatum"

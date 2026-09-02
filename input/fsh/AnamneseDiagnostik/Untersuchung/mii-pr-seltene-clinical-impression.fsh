@@ -116,5 +116,5 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * investigation.item -> "anamneseUndDiagnostik.phaenotypisierung" "Durchgeführte Untersuchungen"
 * finding.itemCodeableConcept -> "anamneseUndDiagnostik.phaenotypisierung.hpoTerm" "HPO-Term des Symptoms"
 * finding.itemReference -> "anamneseUndDiagnostik.phaenotypisierung" "Verweis auf Phänotypisierung"
-* subject -> "Patient" "Patient/Indexpatient"
+* subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
 * encounter -> "anamneseUndDiagnostik.untersuchungsdatum" "Untersuchungskontakt"

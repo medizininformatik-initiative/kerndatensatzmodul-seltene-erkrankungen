@@ -99,6 +99,6 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * onsetDateTime -> "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia" "Feststellungsdatum genetische SE-Diagnose"
 * evidence.code -> "anamneseUndDiagnostik.methodeDiagnosestellung" "Methode der Diagnosestellung"
 * evidence.detail -> "Verweis auf MolGen Variante/DiagnostischeImplikation" "Genetische Befunde"
-* subject -> "Patient" "Patient/Indexpatient"
+* subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
 * encounter -> "anamneseUndDiagnostik.untersuchungsdatum" "Untersuchungsdatum"
 * extension[penetrance] -> "anamneseUndDiagnostik.genDiaFehlendePenetranz" "Genetische Diagnose mit fehlender Penetranz"

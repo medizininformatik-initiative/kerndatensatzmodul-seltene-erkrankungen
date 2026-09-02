@@ -39,8 +39,8 @@ Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_Kopfumfang
 Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
-* -> "Messbefunde.kopfumfang" "Kopfumfang"
-* valueQuantity.value -> "Messbefunde.kopfumfang" "Kopfumfang in cm"
-* effectiveDateTime -> "Messbefunde.kopfumfang.Datum" "Datum der Messung"
-* subject -> "Patient" "Patient/Indexpatient"
+* -> "koerperlicheUntersuchung.kopfumfang" "Kopfumfang"
+* valueQuantity.value -> "koerperlicheUntersuchung.kopfumfang.kopfumfang" "Kopfumfang in cm"
+* effectiveDateTime -> "koerperlicheUntersuchung.kopfumfang.datumKopfumfang" "Datum der Messung"
+* subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
 * status -> "Status der Messung" "Beobachtungsstatus"

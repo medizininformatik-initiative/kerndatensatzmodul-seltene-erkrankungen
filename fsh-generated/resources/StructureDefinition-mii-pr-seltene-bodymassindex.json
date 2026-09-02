@@ -39,7 +39,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Messbefunde.bmi",
+            "map": "koerperlicheUntersuchung.bmi",
             "comment": "BMI"
           }
         ]
@@ -91,7 +91,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Messbefunde.bmi",
+            "map": "koerperlicheUntersuchung.bmi",
             "comment": "BMI-Code (LOINC 39156-5)"
           }
         ]
@@ -111,7 +111,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Patient",
+            "map": "persoenlicheInfosIndexpatient",
             "comment": "Patient/Indexpatient"
           }
         ]
@@ -128,7 +128,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Messbefunde.bmi.datumBMI",
+            "map": "koerperlicheUntersuchung.bmi.datumBMI",
             "comment": "Datum des BMI"
           }
         ]
@@ -149,7 +149,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Messbefunde.bmi.bmi",
+            "map": "koerperlicheUntersuchung.bmi.bmi",
             "comment": "BMI SE-Patient"
           }
         ]

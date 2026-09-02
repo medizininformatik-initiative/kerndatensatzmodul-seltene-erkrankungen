@@ -67,6 +67,8 @@ The table below is generated from the published logical model (`mii-lm-seltene`)
 | &nbsp;&nbsp;&nbsp;&nbsp;**andereSE** | 0..* | code | Gibt an, ob das Familienmitglied an einer anderen SE leidet als der Indexpatient. |
 | &nbsp;&nbsp;&nbsp;&nbsp;**penetranz** | 0..1 | code | Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) die genetische Diagnose vorliegt. |
 | &nbsp;&nbsp;&nbsp;&nbsp;**familienmitgliedVerstorben** | 0..1 | code | Gibt an, ob das Familienmitglied verstorben ist. |
+| &nbsp;&nbsp;&nbsp;&nbsp;**todDurchSE** | 0..1 | code | Gibt an, ob die seltene Erkrankung zum Tod des Familienmitglieds beigetragen hat. Abzugrenzen von familienmitgliedVerstorben, das nur den Tod als solchen festhaelt. |
+| &nbsp;&nbsp;&nbsp;&nbsp;**dokumentationsdatum** | 0..1 | date | Datum, an dem die Familienanamnese erhoben beziehungsweise dokumentiert wurde. |
 | **therapieForschung** | 0..* | BackboneElement | Therapie und Forschung |
 | &nbsp;&nbsp;&nbsp;&nbsp;**offLabel** | 0..* | BackboneElement | Off-Label-Gabe |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**offLabelGabe** | 0..1 | code | Gibt an, ob eine Off-Label-Gabe vorliegt. |

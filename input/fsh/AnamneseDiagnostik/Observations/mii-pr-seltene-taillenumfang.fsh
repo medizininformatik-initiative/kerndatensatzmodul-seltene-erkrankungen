@@ -58,8 +58,8 @@ Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_Taillenumfang
 Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
-* -> "Messbefunde.Taillenumfang" "Taillenumfang"
-* valueQuantity.value -> "Messbefunde.Taillenumfang" "Taillenumfang in cm"
-* effectiveDateTime -> "Messbefunde.Taillenumfang.Datum" "Datum der Messung"
-* subject -> "Patient" "Patient/Indexpatient"
+* -> "koerperlicheUntersuchung.bauchumfang" "Taillenumfang"
+* valueQuantity.value -> "koerperlicheUntersuchung.bauchumfang.bauchumfang" "Taillenumfang in cm"
+* effectiveDateTime -> "koerperlicheUntersuchung.bauchumfang.datumBauchumfang" "Datum der Messung"
+* subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
 * status -> "Status der Messung" "Beobachtungsstatus"

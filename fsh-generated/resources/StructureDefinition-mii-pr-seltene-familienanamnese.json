@@ -80,7 +80,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Patient",
+            "map": "persoenlicheInfosIndexpatient",
             "comment": "Patient/Indexpatient"
           }
         ]
@@ -91,7 +91,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Dokumentationsdatum",
+            "map": "familienanamnese.dokumentationsdatum",
             "comment": "Datum der Familienanamnese"
           }
         ]
@@ -309,7 +309,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "familienanamnese.TodDurchSE",
+            "map": "familienanamnese.todDurchSE",
             "comment": "Tod durch seltene Erkrankung"
           }
         ]

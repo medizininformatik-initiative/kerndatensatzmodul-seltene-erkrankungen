@@ -79,5 +79,5 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * onsetDateTime -> "anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia" "Feststellungsdatum klinische SE-Diagnose"
 * evidence.code -> "anamneseUndDiagnostik.phaenotypisierung.hpoTerm" "Unterstützende HPO-Symptome"
 * evidence.detail -> "anamneseUndDiagnostik.phaenotypisierung" "Verweis auf Phänotypisierung"
-* subject -> "Patient" "Patient/Indexpatient"
+* subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
 * encounter -> "anamneseUndDiagnostik.untersuchungsdatum" "Untersuchungsdatum"
