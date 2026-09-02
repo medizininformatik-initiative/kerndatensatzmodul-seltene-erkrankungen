@@ -370,20 +370,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 <h3 id="beispiel-fsh">Beispiel FSH</h3>
-<pre><code class="language-fsh">Instance: marfan-clinical-diagnosis
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
-* verificationStatus = $condition-ver-status#provisional
-* category[+] = $condition-category#encounter-diagnosis
-* category[clinical] = $SCT#47367009 "Syndrome"
-* code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
-* code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
-* code.coding[omim] = http://omim.org#154700 "Marfan syndrome"
-* evidence[+].detail = Reference(observation-aortic-dilatation)  // HPO: HP:0002616
-* evidence[+].detail = Reference(observation-lens-dislocation)   // HPO: HP:0001083
-* evidence[+].detail = Reference(observation-tall-stature)       // HPO: HP:0000098
-* extension[ageOfOnset].valueCodeableConcept = http://hpo.jax.org/app/#HP:0003577 "Congenital onset"
-* extension[inheritancePattern].valueCodeableConcept = http://hpo.jax.org/app/#HP:0000006 "Autosomal dominant"
-</code></pre>
+<p><img src="diagnose-klinisch-vs-genetisch.svg" alt="Klinische gegen genetische Diagnose — struktureller Vergleich" /></p>
+
+<p>Die ausformulierten Instanzen stehen als Beispiele bei den Profilen selbst; hier geht es um den Unterschied, nicht um die Syntax.</p>
 
 <h2 id="genetische-diagnose">Genetische Diagnose</h2>
 
@@ -410,110 +399,23 @@ InstanceOf: MII_PR_SE_ClinicalDiagnosis
 </ul>
 
 <h3 id="beispiel-fsh-1">Beispiel FSH</h3>
-<pre><code class="language-fsh">Instance: sma-genetic-diagnosis
-InstanceOf: MII_PR_SE_GeneticDiagnosis
-* verificationStatus = $condition-ver-status#confirmed
-* category[+] = $condition-category#encounter-diagnosis
-* category[genetic] = $SCT#782964007 "Genetic disease"
-* code.coding[icd10-gm] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie, Typ I"
-* code.coding[orphanet] = http://www.orpha.net#83330 "SMA type 1"
-* code.coding[omim] = http://omim.org#253300 "Spinal muscular atrophy, type I"
-* evidence[+].code = $SCT#106221001 "Genetic finding"
-* evidence[=].detail = Reference(variant-smn1-deletion)  // MolGen Variante
-* evidence[+].detail = Reference(diagnostic-report-sma)   // MolGen DiagnostischeImplikation
-* extension[geneticBasis].valueCodeableConcept = $SCT#264530000 "Single gene disorder"
-* extension[inheritancePattern].valueCodeableConcept = http://hpo.jax.org/app/#HP:0000007 "Autosomal recessive"
-* extension[penetrance].valueCodeableConcept = http://hpo.jax.org/app/#HP:0025169 "Complete penetrance"
-</code></pre>
 
 <h2 id="paralleles-diagnosemodell">Paralleles Diagnosemodell</h2>
 
 <p>Bei seltenen Erkrankungen existieren klinische und genetische Diagnosen <strong>parallel</strong> zueinander:</p>
 
 <h3 id="1-verdachtsdiagnose-screeninginitial">1. Verdachtsdiagnose (Screening/Initial)</h3>
-<pre><code class="language-fsh">* verificationStatus = #provisional
-* category = #encounter-diagnosis
-</code></pre>
+<p><img src="diagnose-parallelmodell.svg" alt="Paralleles Diagnosemodell" /></p>
 
 <h3 id="2-klinische-diagnose">2. Klinische Diagnose</h3>
-<pre><code class="language-fsh">* verificationStatus = #confirmed
-* category[clinical] = "clinical"
-</code></pre>
 
 <h3 id="3-genetische-diagnose-parallel-zur-klinischen">3. Genetische Diagnose (parallel zur klinischen)</h3>
-<pre><code class="language-fsh">* verificationStatus = #confirmed
-* category[genetic] = $SCT#782964007 "Genetic disease"
-</code></pre>
 
 <p><strong>Wichtig:</strong> Die genetische Diagnose ersetzt NICHT die klinische Diagnose. Beide existieren parallel und ergänzen sich gegenseitig.</p>
 
 <h2 id="entscheidungsbaum">Entscheidungsbaum</h2>
 
-<pre><code class="language-plantuml">@startuml
-!define YELLOW #facc15
-!define RED #dc2626
-!define GREEN #0d9488
-!define BLUE #4a86e8
-
-skinparam backgroundColor #f8f9fa
-skinparam roundcorner 10
-skinparam ArrowColor #666666
-skinparam ArrowThickness 2
-
-skinparam activity {
-    BackgroundColor&lt;&lt;suspected&gt;&gt; #fff2cc
-    BorderColor&lt;&lt;suspected&gt;&gt; #d6b656
-    BackgroundColor&lt;&lt;clinical&gt;&gt; RED
-    FontColor&lt;&lt;clinical&gt;&gt; white
-    BackgroundColor&lt;&lt;genetic&gt;&gt; RED
-    FontColor&lt;&lt;genetic&gt;&gt; white
-    BackgroundColor&lt;&lt;impression&gt;&gt; YELLOW
-    BorderColor&lt;&lt;impression&gt;&gt; #d4a017
-}
-
-(*) --&gt; "Seltene Erkrankung vermutet" &lt;&lt;suspected&gt;&gt;
-
-"Seltene Erkrankung vermutet" --&gt; "ClinicalImpression erstellen" &lt;&lt;impression&gt;&gt;
-
-"ClinicalImpression erstellen" --&gt; "Untersuchungen durchführen"
-
-"Untersuchungen durchführen" --&gt; "Phänotypische Analyse"
-"Untersuchungen durchführen" --&gt; "Genetische Analyse"
-
-"Phänotypische Analyse" --&gt; "MII_PR_SE_ClinicalDiagnosis" &lt;&lt;clinical&gt;&gt;
-"Genetische Analyse" --&gt; "MII_PR_SE_GeneticDiagnosis" &lt;&lt;genetic&gt;&gt;
-
-"MII_PR_SE_ClinicalDiagnosis" --&gt; "HPO-Codes hinzufügen"
-"MII_PR_SE_ClinicalDiagnosis" --&gt; "HPO-Symptome verlinken"
-"HPO-Codes hinzufügen" --&gt; "Status: confirmed"
-"HPO-Symptome verlinken" --&gt; "Status: confirmed"
-
-"MII_PR_SE_GeneticDiagnosis" --&gt; "OMIM-Code hinzufügen"
-"MII_PR_SE_GeneticDiagnosis" --&gt; "MolGen-Variante verlinken"
-"MII_PR_SE_GeneticDiagnosis" --&gt; "Diagnostische Implikation"
-"OMIM-Code hinzufügen" --&gt; "Status: confirmed"
-"MolGen-Variante verlinken" --&gt; "Status: confirmed"
-"Diagnostische Implikation" --&gt; "Status: confirmed"
-
-"ClinicalImpression erstellen" ..&gt; "problem: Verdachtsdiagnose" : referenziert
-"ClinicalImpression erstellen" ..&gt; "finding: Klinische Diagnose" : referenziert
-"ClinicalImpression erstellen" ..&gt; "finding: Genetische Diagnose" : referenziert
-
-note right of "ClinicalImpression erstellen"
-  **ClinicalImpression verbindet:**
-  - problem → Verdachtsdiagnose
-  - finding → Klinische Diagnose
-  - finding → Genetische Diagnose
-  - investigation → Untersuchungen
-end note
-
-note bottom
-  **Wichtig:** Klinische und genetische Diagnose
-  existieren **parallel** und ergänzen sich gegenseitig
-end note
-
-@enduml
-</code></pre>
+<p><img src="diagnose-entscheidungsbaum.svg" alt="Entscheidungsbaum: welches Diagnoseprofil wann" /></p>
 
 <h2 id="praktische-hinweise">Praktische Hinweise</h2>
 
@@ -571,15 +473,6 @@ end note
   <li><strong>investigation</strong>: Verweise auf durchgeführte Untersuchungen</li>
 </ol>
 
-<pre><code class="language-fsh">Instance: clinical-impression-se
-InstanceOf: ClinicalImpression
-* problem[+] = Reference(condition-verdacht)  // Ausgangspunkt
-* finding[+].itemReference = Reference(condition-klinisch)  // Ergebnis
-* finding[+].itemReference = Reference(condition-genetisch) // Ergebnis
-* investigation[+].item = Reference(observation-hpo-symptom)
-* investigation[+].item = Reference(observation-genetic-variant)
-</code></pre>
-
 <p>Beide Diagnosen bleiben als eigenständige Ressourcen erhalten und dokumentieren verschiedene Aspekte derselben Erkrankung.</p>
 
 <h3 id="evidence-verlinkung">Evidence-Verlinkung</h3>
@@ -631,28 +524,8 @@ InstanceOf: ClinicalImpression
 <h3 id="modellierung-ausgeschlossener-diagnosen">Modellierung ausgeschlossener Diagnosen</h3>
 
 <h4 id="klinisch-ausgeschlossen">Klinisch ausgeschlossen</h4>
-<pre><code class="language-fsh">Instance: marfan-excluded-clinical
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
-* verificationStatus = $condition-ver-status#refuted
-* clinicalStatus = $condition-clinical#inactive
-* category[clinical] = $SCT#47367009 "Syndrome"
-* code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
-* code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
-* note.text = "Marfan-Syndrom klinisch ausgeschlossen. Ghent-Kriterien nicht erfüllt."
-</code></pre>
 
 <h4 id="genetisch-ausgeschlossen">Genetisch ausgeschlossen</h4>
-<pre><code class="language-fsh">Instance: sma-excluded-genetic
-InstanceOf: MII_PR_SE_GeneticDiagnosis
-* verificationStatus = $condition-ver-status#refuted
-* clinicalStatus = $condition-clinical#inactive
-* category[genetic] = $SCT#782964007 "Genetic disease"
-* code.coding[orphanet] = http://www.orpha.net#83330 "SMA"
-* code.coding[omim] = http://omim.org#253300 "SMA type I"
-* evidence[+].code = $SCT#106221001 "Genetic finding"
-* evidence[=].detail = Reference(molgen-smn1-normal)
-* note.text = "SMN1-Gen normal (2 Kopien). SMA ausgeschlossen."
-</code></pre>
 
 <h3 id="best-practices-für-ausgeschlossene-diagnosen">Best Practices für ausgeschlossene Diagnosen</h3>
 
@@ -713,7 +586,7 @@ InstanceOf: MII_PR_SE_GeneticDiagnosis
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 2, 2026 14:33+0000">2026-09-02</span>
+          Erstellt <span title="Wed, Sep 2, 2026 15:16+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

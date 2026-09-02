@@ -267,23 +267,23 @@
     "sources" : ["2.16.840.1.113883.4.642.3.141"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
-    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
-    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
-    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
-    "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity",
-    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient",
-    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
-    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
-    "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
-    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
-    "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
     "StructureDefinition-mii-pr-seltene-therapie-durchgefuehrt.html" : "MII PR Seltene Erkrankungen Therapie Durchgeführt",
     "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
-    "StructureDefinition-mii-pr-seltene-symptom-condition.html" : "MII Profile SE Symptom Condition",
+    "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
+    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity",
+    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
+    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang",
     "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage",
     "StructureDefinition-mii-pr-seltene-taillenumfang.html" : "MII PR SE Taillenumfang",
-    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang"
+    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
+    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
+    "StructureDefinition-mii-pr-seltene-symptom-condition.html" : "MII Profile SE Symptom Condition",
+    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
+    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
+    "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
+    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-kind",
@@ -410,15 +410,15 @@
     "sources" : ["2.16.840.1.113883.4.642.3.79"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
-    "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
-    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
-    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
     "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity",
-    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
+    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
+    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
+    "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie",
     "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
-    "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie"
+    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
+    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
+    "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-category",
@@ -464,11 +464,11 @@
     "sources" : ["2.16.840.1.113883.4.642.3.161"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
     "StructureDefinition-mii-pr-seltene-therapie-durchgefuehrt.html" : "MII PR Seltene Erkrankungen Therapie Durchgeführt",
-    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
+    "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie",
     "StructureDefinition-mii-pr-seltene-familienanamnese.html" : "MII PR SE Familienanamnese",
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie"
+    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-outcome",
@@ -558,17 +558,17 @@
     "sources" : ["2.16.840.1.113883.4.642.3.5"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
-    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
-    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
-    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
-    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
     "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity",
-    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient",
-    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
+    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang",
     "StructureDefinition-mii-pr-seltene-taillenumfang.html" : "MII PR SE Taillenumfang",
+    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
+    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
+    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
     "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
-    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang"
+    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
@@ -737,29 +737,29 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.html" : "MII PR SE Therapieempfehlung Kombinationstherapie",
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
-    "StructureDefinition-mii-pr-seltene-registerteilnahme.html" : "MII PR SE Registerteilnahme",
-    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
-    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
-    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
-    "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity",
-    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient",
-    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
-    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
-    "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie",
-    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
-    "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
     "StructureDefinition-mii-pr-seltene-therapie-durchgefuehrt.html" : "MII PR Seltene Erkrankungen Therapie Durchgeführt",
-    "StructureDefinition-mii-pr-seltene-clinical-impression.html" : "MII Profile SE Clinical Impression",
-    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
     "StructureDefinition-mii-pr-seltene-therapieplan.html" : "MII PR SE Therapieplan",
-    "StructureDefinition-mii-pr-seltene-symptom-condition.html" : "MII Profile SE Symptom Condition",
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
+    "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie",
+    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-clinical-impression.html" : "MII Profile SE Clinical Impression",
+    "StructureDefinition-mii-pr-seltene-registerteilnahme.html" : "MII PR SE Registerteilnahme",
+    "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity",
+    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
+    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang",
     "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage",
-    "StructureDefinition-mii-pr-seltene-familienanamnese.html" : "MII PR SE Familienanamnese",
     "StructureDefinition-mii-pr-seltene-taillenumfang.html" : "MII PR SE Taillenumfang",
-    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang"
+    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.html" : "MII PR SE Therapieempfehlung Kombinationstherapie",
+    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
+    "StructureDefinition-mii-pr-seltene-familienanamnese.html" : "MII PR SE Familienanamnese",
+    "StructureDefinition-mii-pr-seltene-symptom-condition.html" : "MII Profile SE Symptom Condition",
+    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
+    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
+    "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
+    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/manifestation-or-symptom",
@@ -788,8 +788,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.96"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
     "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
     "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie"
   },
   {
@@ -889,17 +889,17 @@
     "sources" : ["2.16.840.1.113883.4.642.3.403"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
-    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
-    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
-    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
-    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
     "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity",
-    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient",
-    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
+    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang",
     "StructureDefinition-mii-pr-seltene-taillenumfang.html" : "MII PR SE Taillenumfang",
+    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
+    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
+    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
     "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
-    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang"
+    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
@@ -913,17 +913,17 @@
     "sources" : ["2.16.840.1.113883.4.642.3.396"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
-    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
-    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
-    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
-    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
     "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity",
-    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient",
-    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
+    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang",
     "StructureDefinition-mii-pr-seltene-taillenumfang.html" : "MII PR SE Taillenumfang",
+    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
+    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
+    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
     "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
-    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang"
+    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
@@ -937,17 +937,17 @@
     "sources" : ["2.16.840.1.113883.4.642.3.399"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
-    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
-    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
-    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
-    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
     "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity",
-    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient",
-    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
+    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang",
     "StructureDefinition-mii-pr-seltene-taillenumfang.html" : "MII PR SE Taillenumfang",
+    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
+    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
+    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
     "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
-    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang"
+    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
@@ -961,17 +961,17 @@
     "sources" : ["2.16.840.1.113883.4.642.3.395"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
-    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
-    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
-    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
-    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
     "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity",
-    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient",
-    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
+    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang",
     "StructureDefinition-mii-pr-seltene-taillenumfang.html" : "MII PR SE Taillenumfang",
+    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
+    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
+    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
     "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
-    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang"
+    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/observation-status",
@@ -985,17 +985,17 @@
     "sources" : ["2.16.840.1.113883.4.642.3.400"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
-    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
-    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
-    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
-    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
     "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity",
-    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient",
-    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
+    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang",
     "StructureDefinition-mii-pr-seltene-taillenumfang.html" : "MII PR SE Taillenumfang",
+    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
+    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
+    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
     "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
-    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang"
+    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/participant-role",
@@ -1009,8 +1009,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.152"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
-    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage"
+    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/performer-role",
@@ -1053,9 +1053,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.427"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
+    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage",
     "StructureDefinition-mii-pr-seltene-therapieplan.html" : "MII PR SE Therapieplan",
-    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage"
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/procedure-followup",
@@ -1112,8 +1112,8 @@
     "uses" : {
     },
     "StructureDefinition-mii-pr-seltene-therapie-durchgefuehrt.html" : "MII PR Seltene Erkrankungen Therapie Durchgeführt",
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
-    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage"
+    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
@@ -1128,17 +1128,17 @@
     "uses" : {
     },
     "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
-    "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
-    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
-    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
-    "StructureDefinition-mii-ex-seltene-penetrance.html" : "MII EX SE Penetrance",
-    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient",
-    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
     "StructureDefinition-mii-ext-seltene-onset-age.html" : "Onset Age Extension",
-    "StructureDefinition-mii-pr-seltene-taillenumfang.html" : "MII PR SE Taillenumfang",
-    "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
     "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang",
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie"
+    "StructureDefinition-mii-pr-seltene-taillenumfang.html" : "MII PR SE Taillenumfang",
+    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
+    "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie",
+    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
+    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
+    "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
+    "StructureDefinition-mii-ex-seltene-penetrance.html" : "MII EX SE Penetrance",
+    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
@@ -1153,17 +1153,17 @@
     "sources" : ["2.16.840.1.113883.4.642.3.407"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
-    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
-    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
-    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
-    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
     "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity",
-    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient",
-    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
+    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang",
     "StructureDefinition-mii-pr-seltene-taillenumfang.html" : "MII PR SE Taillenumfang",
+    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
+    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
+    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
     "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
-    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang"
+    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
@@ -1177,17 +1177,17 @@
     "sources" : ["2.16.840.1.113883.4.642.3.397"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
-    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
-    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
-    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
-    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
     "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity",
-    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient",
-    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
+    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang",
     "StructureDefinition-mii-pr-seltene-taillenumfang.html" : "MII PR SE Taillenumfang",
+    "StructureDefinition-mii-pr-seltene-hueftumfang.html" : "MII PR SE Hüftumfang",
+    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
+    "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
+    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
     "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
-    "StructureDefinition-mii-pr-seltene-kopfumfang.html" : "MII PR SE Kopfumfang"
+    "StructureDefinition-mii-pr-seltene-bodymassindex.html" : "Body Mass Index (BMI) of the patient"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/request-intent",
@@ -1201,9 +1201,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.113"],
     "uses" : {
     },
+    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage",
     "StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.html" : "MII PR SE Therapieempfehlung Kombinationstherapie",
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
-    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage"
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/request-priority",
@@ -1217,9 +1217,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.115"],
     "uses" : {
     },
+    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage",
     "StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.html" : "MII PR SE Therapieempfehlung Kombinationstherapie",
     "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
-    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage",
     "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie"
   },
   {
@@ -1234,10 +1234,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.111"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.html" : "MII PR SE Therapieempfehlung Kombinationstherapie",
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
+    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage",
     "StructureDefinition-mii-pr-seltene-therapieplan.html" : "MII PR SE Therapieplan",
-    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage"
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.html" : "MII PR SE Therapieempfehlung Kombinationstherapie",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/research-subject-status",
@@ -1298,15 +1298,15 @@
     "sources" : ["2.16.840.1.113883.4.642.3.47"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
-    "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
-    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
-    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
     "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity",
-    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
+    "StructureDefinition-mii-pr-seltene-geburtsgewicht.html" : "MII PR SE Geburtsgewicht",
+    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe",
+    "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie",
     "StructureDefinition-mii-pr-seltene-icf-assessment.html" : "MII PR SE ICF Assessment",
-    "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt",
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie"
+    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
+    "StructureDefinition-mii-pr-seltene-geburtslaenge.html" : "MII PR SE Geburtslänge",
+    "StructureDefinition-mii-pr-seltene-gestationsalter.html" : "MII PR SE Gestationsalter bei Geburt"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/servicerequest-category",
@@ -1320,8 +1320,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.434"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
-    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage"
+    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/servicerequest-orderdetail",
@@ -1335,8 +1335,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.435"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
-    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage"
+    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/timing-abbreviation",
@@ -1458,8 +1458,8 @@
     "sources" : ["2.16.840.1.113883.1.11.17660"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
-    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage"
+    "StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html" : "MII PR SE Studieneinschluss Anfrage",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös"
   },
   {
     "url" : "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason",
@@ -1512,8 +1512,8 @@
     "uses" : {
     },
     "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
-    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
-    "StructureDefinition-mii-pr-seltene-familienanamnese.html" : "MII PR SE Familienanamnese"
+    "StructureDefinition-mii-pr-seltene-familienanamnese.html" : "MII PR SE Familienanamnese",
+    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid",
@@ -1526,8 +1526,8 @@
     "uses" : {
     },
     "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
-    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
-    "StructureDefinition-mii-pr-seltene-familienanamnese.html" : "MII PR SE Familienanamnese"
+    "StructureDefinition-mii-pr-seltene-familienanamnese.html" : "MII PR SE Familienanamnese",
+    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-bodystructure-snomed",
@@ -1553,8 +1553,8 @@
     "uses" : {
     },
     "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
-    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
-    "StructureDefinition-mii-pr-seltene-familienanamnese.html" : "MII PR SE Familienanamnese"
+    "StructureDefinition-mii-pr-seltene-familienanamnese.html" : "MII PR SE Familienanamnese",
+    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet",
@@ -1567,8 +1567,8 @@
     "uses" : {
     },
     "StructureDefinition-mii-pr-seltene-genetic-diagnosis.html" : "MII PR SE Genetic Diagnosis",
-    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
-    "StructureDefinition-mii-pr-seltene-familienanamnese.html" : "MII PR SE Familienanamnese"
+    "StructureDefinition-mii-pr-seltene-familienanamnese.html" : "MII PR SE Familienanamnese",
+    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ValueSet/mii-vs-medikation-atc",
@@ -1694,10 +1694,10 @@
     "systems" : ["http://human-phenotype-ontology.org"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-clinical-impression.html" : "MII Profile SE Clinical Impression",
     "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
     "StructureDefinition-mii-pr-seltene-symptom-condition.html" : "MII Profile SE Symptom Condition",
-    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis"
+    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
+    "StructureDefinition-mii-pr-seltene-clinical-impression.html" : "MII Profile SE Clinical Impression"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status",

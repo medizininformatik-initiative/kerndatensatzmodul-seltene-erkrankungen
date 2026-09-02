@@ -18,7 +18,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **category**: Vital Signs
 
-**code**: Waist Circumference at umbilicus by Tape measure
+**code**: Waist circumference
 
 **subject**: [Beispielpatient](Patient-mii-exa-seltene-patient.md)
 
@@ -47,9 +47,9 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
   }],
   "code" : {
     "coding" : [{
-      "system" : "http://loinc.org",
-      "code" : "8280-0",
-      "display" : "Waist Circumference at umbilicus by Tape measure"
+      "system" : "http://snomed.info/sct",
+      "code" : "276361009",
+      "display" : "Waist circumference"
     }]
   },
   "subject" : {

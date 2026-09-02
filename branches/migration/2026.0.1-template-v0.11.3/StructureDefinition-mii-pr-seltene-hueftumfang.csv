@@ -85,11 +85,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","C*E.9. But note many systems use C*E.2 for this"
 "Observation.code","Observation.code","","Name
 ","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
-","Hüftumfang an der maximalen Gesäßprotuberanz","Describes what was observed. Sometimes this is called the observation ""name"".","*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.","Knowing what kind of observation is being made is essential to understanding the observation.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
+","Hüftumfang","Describes what was observed. Sometimes this is called the observation ""name"".","*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.","Knowing what kind of observation is being made is essential to understanding the observation.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
   <coding>
-    <system value=""http://loinc.org""/>
-    <code value=""56063-1""/>
-    <display value=""Circumference.at maximal protrusion of gluteus muscles Pelvis""/>
+    <system value=""http://snomed.info/sct""/>
+    <code value=""284472007""/>
+    <display value=""Hip circumference""/>
   </coding>
 </valueCodeableConcept>","","","",,"example","Codes identifying names of simple observations.","http://hl7.org/fhir/ValueSet/observation-codes|4.0.1","",,,,"Observation.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.code","< 363787002 |Observable entity| OR < 386053000 |Evaluation procedure|","OBX-3","FiveWs.what[x]","116680003 |Is a|"

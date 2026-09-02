@@ -119,7 +119,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Taillenumfang",
   "title" : "MII PR SE Taillenumfang",
   "status" : "active",
-  "date" : "2026-09-02T14:33:43+00:00",
+  "date" : "2026-09-02T15:16:54+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -191,7 +191,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "Observation",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "koerperlicheUntersuchung.bauchumfang",
+        "map" : "koerperlicheUntersuchung.taillenumfang",
         "comment" : "Taillenumfang"
       }]
     },
@@ -228,12 +228,13 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     {
       "id" : "Observation.code",
       "path" : "Observation.code",
-      "short" : "Taillenumfang auf Nabelhöhe",
+      "short" : "Taillenumfang",
+      "comment" : "Die Messvorschrift ist bewusst offen gelassen. Wer die Landmarke festhalten muss, kann statt des generischen Codes 1162535003 (Mittelpunkt zwischen unterster Rippe und Beckenkamm) oder 1162536002 (schmalste Stelle) verwenden.",
       "patternCodeableConcept" : {
         "coding" : [{
-          "system" : "http://loinc.org",
-          "code" : "8280-0",
-          "display" : "Waist Circumference at umbilicus by Tape measure"
+          "system" : "http://snomed.info/sct",
+          "code" : "276361009",
+          "display" : "Waist circumference"
         }]
       },
       "mustSupport" : true
@@ -262,7 +263,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "koerperlicheUntersuchung.bauchumfang.datumBauchumfang",
+        "map" : "koerperlicheUntersuchung.taillenumfang.datumTaillenumfang",
         "comment" : "Datum der Messung"
       }]
     },
@@ -279,7 +280,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "Observation.value[x].value",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "koerperlicheUntersuchung.bauchumfang.bauchumfang",
+        "map" : "koerperlicheUntersuchung.taillenumfang.taillenumfang",
         "comment" : "Taillenumfang in cm"
       }]
     },

@@ -81,7 +81,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ext-selt
   "name" : "SyndromeCategory",
   "title" : "Syndrome Category Extension",
   "status" : "active",
-  "date" : "2026-09-02T14:33:43+00:00",
+  "date" : "2026-09-02T15:16:54+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -18,7 +18,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **category**: Vital Signs
 
-**code**: Circumference.at maximal protrusion of gluteus muscles Pelvis
+**code**: Hip circumference
 
 **subject**: [Beispielpatient](Patient-mii-exa-seltene-patient.md)
 
@@ -47,9 +47,9 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
   }],
   "code" : {
     "coding" : [{
-      "system" : "http://loinc.org",
-      "code" : "56063-1",
-      "display" : "Circumference.at maximal protrusion of gluteus muscles Pelvis"
+      "system" : "http://snomed.info/sct",
+      "code" : "284472007",
+      "display" : "Hip circumference"
     }]
   },
   "subject" : {

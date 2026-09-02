@@ -294,8 +294,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#version-202700-ballot" id="markdown-toc-version-202700-ballot">Version 2027.0.0-ballot</a>    <ul>
+      <li><a href="#neue-funktionen" id="markdown-toc-neue-funktionen">Neue Funktionen</a></li>
       <li><a href="#breaking-changes" id="markdown-toc-breaking-changes">Breaking Changes</a></li>
       <li><a href="#fehlerbehebungen" id="markdown-toc-fehlerbehebungen">Fehlerbehebungen</a></li>
+      <li><a href="#dokumentation" id="markdown-toc-dokumentation">Dokumentation</a></li>
       <li><a href="#governance" id="markdown-toc-governance">Governance</a></li>
     </ul>
   </li>
@@ -310,7 +312,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </ul>
   </li>
   <li><a href="#änderungen-version-v202600-rc1-release-candidate-1" id="markdown-toc-änderungen-version-v202600-rc1-release-candidate-1">Änderungen Version v2026.0.0-rc.1 (Release Candidate 1)</a>    <ul>
-      <li><a href="#neue-funktionen" id="markdown-toc-neue-funktionen">Neue Funktionen</a></li>
+      <li><a href="#neue-funktionen-1" id="markdown-toc-neue-funktionen-1">Neue Funktionen</a></li>
       <li><a href="#dokumentationsverbesserungen" id="markdown-toc-dokumentationsverbesserungen">Dokumentationsverbesserungen</a></li>
       <li><a href="#fehlerbehebungen-2" id="markdown-toc-fehlerbehebungen-2">Fehlerbehebungen</a></li>
       <li><a href="#validierung-und-qualitätsverbesserungen-aus-ballot-feedback" id="markdown-toc-validierung-und-qualitätsverbesserungen-aus-ballot-feedback">Validierung und Qualitätsverbesserungen (aus Ballot-Feedback)</a></li>
@@ -326,18 +328,51 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h2 id="version-202700-ballot">Version 2027.0.0-ballot</h2>
 
+<h3 id="neue-funktionen">Neue Funktionen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>JARDIN-Datenpunkte</strong> aus der Gegenüberstellung des europäischen Minimaldatensatzes mit dem Modul (Issues #35, #36, #38). Alle drei sind konkrete Datenbedarfe eines europäischen Referenznetzwerks, keiner davon ist auf seltene Erkrankungen beschränkt — die Profile sagen das im Kopfkommentar auch selbst
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">feat</code> prä-/perinatale Angaben: <code class="language-plaintext highlighter-rouge">mii-pr-seltene-gestationsalter</code>, <code class="language-plaintext highlighter-rouge">mii-pr-seltene-geburtsgewicht</code>, <code class="language-plaintext highlighter-rouge">mii-pr-seltene-geburtslaenge</code>. Kein angebundenes MII-Modul deckte sie ab; Mehrlingsschwangerschaften und pränatal diagnostizierte Fehlbildungen wurden bewusst <strong>nicht</strong> profiliert, weil <code class="language-plaintext highlighter-rouge">Patient.multipleBirth[x]</code> und die bestehenden Condition-Profile mit HPO-Onset das leisten</li>
+      <li><code class="language-plaintext highlighter-rouge">feat</code> <code class="language-plaintext highlighter-rouge">mii-pr-seltene-icf-assessment</code> mit CodeSystem und ValueSets für die Beurteilungsmerkmale. Die WHO-Qualifier liegen in <code class="language-plaintext highlighter-rouge">component</code>, nicht in <code class="language-plaintext highlighter-rouge">value[x]</code>, weil ihre Zahl je ICF-Kapitel verschieden ist — Körperstrukturen tragen drei, Aktivitäten und Partizipation zwei (Leistungsfähigkeit <em>und</em> Leistung). Fünf Invarianten erzwingen die Kapitelkohärenz</li>
+      <li><code class="language-plaintext highlighter-rouge">feat</code> <code class="language-plaintext highlighter-rouge">mii-pr-seltene-registerteilnahme</code> für die Teilnahme an ERN-Registern, abgeleitet von <code class="language-plaintext highlighter-rouge">ResearchSubject</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>Consanguinity</strong> (<code class="language-plaintext highlighter-rouge">mii-pr-seltene-consanguinity</code>) mit ValueSet — Blutsverwandtschaft der Eltern nach RD-CDM v2.0.0 §6.4.4 (Issue #37)</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>Neugeborenenscreening</strong>: sieben ValueSets, davon fünf aus der LOINC-SNOMED-Ontologie per ECL abgeleitet, eines kuratiert nach G-BA-Kinder-Richtlinie und eines intensional über die LOINC-Eigenschaft <code class="language-plaintext highlighter-rouge">SYSTEM</code> (608 Trockenblut-Codes), dazu eine eigene Terminologieseite</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> Logical Model <code class="language-plaintext highlighter-rouge">mii-lm-seltene</code> wieder im Build und auf der Datensatzseite vollständig als Tabelle gerendert</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> 13 neue Beispielinstanzen, angebunden an das bestehende SMA-Fallbeispiel</li>
+</ul>
+
 <h3 id="breaking-changes">Breaking Changes</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">remove</code> Extension <code class="language-plaintext highlighter-rouge">mii-ex-seltene-empfehlung-evidenzgraduierung</code> aus diesem Modul entfernt, samt ihrer Verwendung in den drei Therapieempfehlungs-Profilen. Sie war eine Kopie der Extension aus dem MTB-Modul und von Anfang an unfertig: ihr <code class="language-plaintext highlighter-rouge">system</code>-Discriminator trug nie einen Wert, wodurch der Pflicht-Slice <code class="language-plaintext highlighter-rouge">Evidenzgrad 1..1</code> von keiner Instanz erfüllbar war — die Extension wurde in 2026.0.1 publiziert, war aber unbenutzbar, und kein Beispiel hat sie je verwendet. Welche Evidenzskala hier gilt, wird im Ballot-Ticket HDB-543 verhandelt und ist onkologisch geprägt (NCT m1A–m4, ESMO, ASCO); für seltene Erkrankungen wurde die Frage nie beantwortet. Statt eine Tumorskala zu importieren, bleibt das Thema beim MTB-Modul. Die Entfernung dürfte daher keine konforme Implementierung betreffen</li>
+  <li><code class="language-plaintext highlighter-rouge">remove</code> Extension <code class="language-plaintext highlighter-rouge">mii-ex-seltene-empfehlung-evidenzgraduierung</code> entfernt, samt ihrer Verwendung in den drei Therapieempfehlungs-Profilen. Sie war eine Kopie aus dem MTB-Modul, deren <code class="language-plaintext highlighter-rouge">system</code>-Discriminator nie einen Wert trug — der Pflicht-Slice <code class="language-plaintext highlighter-rouge">Evidenzgrad 1..1</code> war von keiner Instanz erfüllbar. Publiziert, aber unbenutzbar, und von keinem Beispiel verwendet. Die Skalenfrage verhandelt Ballot-Ticket HDB-543 und ist onkologisch geprägt; für seltene Erkrankungen wurde sie nie beantwortet</li>
+  <li><code class="language-plaintext highlighter-rouge">change</code> Elementnamen des Logical Models auf lowerCamelCase. PascalCase verstößt gegen die FHIR-Regel <code class="language-plaintext highlighter-rouge">eld-20</code> und erzeugte 195 Warnungen. 62 Segmentnamen umbenannt, Akronyme korrekt behandelt (<code class="language-plaintext highlighter-rouge">HPOTerm</code> → <code class="language-plaintext highlighter-rouge">hpoTerm</code>, <code class="language-plaintext highlighter-rouge">BMI</code> → <code class="language-plaintext highlighter-rouge">bmi</code>), die 90 Mapping-Ziele in 11 Profilen mitgezogen. <strong>Die Elementpfade ändern sich damit</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">change</code> Codes von <code class="language-plaintext highlighter-rouge">mii-pr-seltene-taillenumfang</code> (LOINC <code class="language-plaintext highlighter-rouge">8280-0</code> → SNOMED <code class="language-plaintext highlighter-rouge">276361009</code>) und <code class="language-plaintext highlighter-rouge">mii-pr-seltene-hueftumfang</code> (LOINC <code class="language-plaintext highlighter-rouge">56063-1</code> → SNOMED <code class="language-plaintext highlighter-rouge">284472007</code>). <strong>Abfragen auf die alten Codes greifen nicht mehr</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">change</code> Beispielinstanz <code class="language-plaintext highlighter-rouge">example</code> umbenannt in <code class="language-plaintext highlighter-rouge">mii-exa-seltene-patient</code>, profiliert auf <code class="language-plaintext highlighter-rouge">MII_PR_Person_Patient</code></li>
 </ul>
 
 <h3 id="fehlerbehebungen">Fehlerbehebungen</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">fix</code> ValueSet <code class="language-plaintext highlighter-rouge">mii-vs-seltene-penetrance</code> korrigiert — drei von vier Codes waren falsch (Issue #31). <code class="language-plaintext highlighter-rouge">HP:0025169</code>, publiziert als „Complete penetrance", ist tatsächlich <em>Left ventricular systolic dysfunction</em> und wird durch <code class="language-plaintext highlighter-rouge">HP:0034950</code> ersetzt. <code class="language-plaintext highlighter-rouge">HP:0003828</code>, publiziert als „Variable penetrance", ist <em>Variable expressivity</em> — ein anderes Konzept — und entfällt; die Abstufung leisten nun <code class="language-plaintext highlighter-rouge">HP:4000158/59/60</code> (hoch/mittel/niedrig). <code class="language-plaintext highlighter-rouge">HP:0003829</code> trug ein veraltetes Display. Alle Codes gegen die HPO-API geprüft. Zu beachten: die abgestuften Terme sind Untertypen der <em>unvollständigen</em> Penetranz, nicht Alternativen zur vollständigen</li>
-  <li><code class="language-plaintext highlighter-rouge">fix</code> Slicing-Discriminator auf <code class="language-plaintext highlighter-rouge">mii-pr-seltene-blutgruppe</code> <code class="language-plaintext highlighter-rouge">value[x].coding</code> von <code class="language-plaintext highlighter-rouge">#pattern</code>/<code class="language-plaintext highlighter-rouge">$this</code> auf <code class="language-plaintext highlighter-rouge">#value</code>/<code class="language-plaintext highlighter-rouge">system</code> umgestellt (Issue #25). Die Slices unterscheiden sich nur durch ihr Codesystem und setzen dafür <code class="language-plaintext highlighter-rouge">.system</code> — das erzeugt ein <code class="language-plaintext highlighter-rouge">patternUri</code> auf dem Kindelement statt eines <code class="language-plaintext highlighter-rouge">patternCoding</code> auf dem Coding selbst, sodass der Discriminator ins Leere zeigte</li>
-  <li><code class="language-plaintext highlighter-rouge">fix</code> derselbe Defekt bei <code class="language-plaintext highlighter-rouge">category</code> in <code class="language-plaintext highlighter-rouge">mii-pr-seltene-therapieempfehlung</code> und <code class="language-plaintext highlighter-rouge">mii-pr-seltene-therapieempfehlung-nicht-medikamentoes</code> behoben (durch eine Prüfung gefunden, vorher nicht gemeldet). Beide Slices wurden ausschließlich über ein required-Binding auf verschiedene ValueSets unterschieden, was kein FHIR-R4-Discriminator auswerten kann; <code class="language-plaintext highlighter-rouge">coding.system</code> ist nun je Slice festgelegt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>das Taillenumfang-Profil trug den Code des Bauchumfangs.</strong> LOINC bietet den Taillenumfang ausschließlich auf Nabelhöhe an (<code class="language-plaintext highlighter-rouge">8280-0</code>, <code class="language-plaintext highlighter-rouge">8281-8</code>) — die Landmarke des Bauchumfangs, nicht der Taille, die an der schmalsten Stelle beziehungsweise am Mittelpunkt zwischen unterster Rippe und Beckenkamm definiert ist. Das Profil sagte damit etwas anderes, als es hieß. SNOMED trennt beides; <code class="language-plaintext highlighter-rouge">1162535003</code> und <code class="language-plaintext highlighter-rouge">1162536002</code> bleiben für die landmarkengenaue Angabe verfügbar. Relevant, weil das Modul ein Taille-Hüfte-Verhältnis führt: mit dem Bauchumfang als Zähler ergibt sich ein falsches Verhältnis</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> das Logical Model hat ein <code class="language-plaintext highlighter-rouge">taillenumfang</code> erhalten. Es kannte nur <code class="language-plaintext highlighter-rouge">bauchumfang</code>, wodurch das Taillenumfang-Profil auf den Bauchumfang mappte</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> das (auskommentierte) Profil <code class="language-plaintext highlighter-rouge">mii-pr-seltene-waist-to-hip-ratio</code> trug mit LOINC <code class="language-plaintext highlighter-rouge">8280-0</code> einen doppelt falschen Code — den Umfang statt des Verhältnisses, und denselben wie das Taillenumfang-Profil. Korrigiert auf SNOMED <code class="language-plaintext highlighter-rouge">248367009 |Waist/hip ratio|</code>. Das Profil ist weiterhin inaktiv; dass ausgerechnet das Verhältnis auskommentiert ist, erklärt, warum die Verwechslung so lange unauffällig blieb</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> ValueSet <code class="language-plaintext highlighter-rouge">mii-vs-seltene-penetrance</code> korrigiert — drei von vier Codes waren falsch (Issue #31). <code class="language-plaintext highlighter-rouge">HP:0025169</code>, publiziert als „Complete penetrance", ist <em>Left ventricular systolic dysfunction</em>; <code class="language-plaintext highlighter-rouge">HP:0003828</code>, publiziert als „Variable penetrance", ist <em>Variable expressivity</em>. Alle Codes gegen die HPO-API geprüft. Zu beachten: die abgestuften Terme sind Untertypen der <em>unvollständigen</em> Penetranz</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Slicing-Discriminatoren auf <code class="language-plaintext highlighter-rouge">mii-pr-seltene-blutgruppe</code> sowie auf <code class="language-plaintext highlighter-rouge">category</code> in beiden Therapieempfehlungs-Profilen. Die Slices unterschieden sich nur durch <code class="language-plaintext highlighter-rouge">.system</code> beziehungsweise ein required-Binding — beides kann der jeweils gesetzte Discriminator nicht auswerten</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Logical Model reaktiviert; sein Canonical ist das Ziel des Mappings jedes Profils, womit 22 unauflösbare Links verschwinden</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> 31 Mapping-Ziele zeigten auf nicht existierende Elemente, und die Ziele für <code class="language-plaintext highlighter-rouge">valueQuantity.value</code> und <code class="language-plaintext highlighter-rouge">effectiveDateTime</code> auf das BackboneElement statt auf Wert oder Datum. Alle 102 lösen jetzt auf</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> das Logical Model hat <code class="language-plaintext highlighter-rouge">familienanamnese.todDurchSE</code> und <code class="language-plaintext highlighter-rouge">familienanamnese.dokumentationsdatum</code> erhalten — beide Datenpunkte führt das Familienanamnese-Profil, das Modell kannte sie nicht</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> fünf Verweise auf <code class="language-plaintext highlighter-rouge">Patient/example-patient</code>, eine nie definierte Instanz</li>
+</ul>
+
+<h3 id="dokumentation">Dokumentation</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">docs</code> der Leitfaden zu klinischer und genetischer Diagnose zeigt statt FSH-Blöcken drei Diagramme (Strukturvergleich, Parallelmodell, Entscheidungsbaum). Der bisherige <code class="language-plaintext highlighter-rouge">plantuml</code>-Block wurde nie gerendert und war zudem syntaktisch defekt; der englischen Fassung fehlte der Entscheidungsbaum ganz</li>
+  <li><code class="language-plaintext highlighter-rouge">docs</code> die Datensatzseite rendert das Logical Model als Tabelle mit 71 Datenelementen, erzeugt durch <code class="language-plaintext highlighter-rouge">scripts/generate-lm-table.py</code></li>
+  <li><code class="language-plaintext highlighter-rouge">docs</code> neue Seite zum Neugeborenenscreening</li>
 </ul>
 
 <h3 id="governance">Governance</h3>
@@ -398,7 +433,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h2 id="änderungen-version-v202600-rc1-release-candidate-1">Änderungen Version v2026.0.0-rc.1 (Release Candidate 1)</h2>
 
-<h3 id="neue-funktionen">Neue Funktionen</h3>
+<h3 id="neue-funktionen-1">Neue Funktionen</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">feat</code> MetaProfile RuleSet für alle Beispiel-Instanzen mit versionierter Profil-URL hinzugefügt</li>
@@ -464,7 +499,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 2, 2026 14:33+0000">2026-09-02</span>
+          Erstellt <span title="Wed, Sep 2, 2026 15:16+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

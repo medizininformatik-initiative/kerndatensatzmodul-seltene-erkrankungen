@@ -85,7 +85,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
   "name" : "MII_LM_SE",
   "title" : "MII LM SE",
   "status" : "active",
-  "date" : "2026-09-02T14:33:43+00:00",
+  "date" : "2026-09-02T15:16:54+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -551,6 +551,39 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       "path" : "Seltene.koerperlicheUntersuchung.bauchumfang.datumBauchumfang",
       "short" : "Datum Bauchumfang",
       "definition" : "Datum der Bauchumfangsmessung.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }]
+    },
+    {
+      "id" : "Seltene.koerperlicheUntersuchung.taillenumfang",
+      "path" : "Seltene.koerperlicheUntersuchung.taillenumfang",
+      "short" : "Taillenumfang",
+      "definition" : "Taillenumfang",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.koerperlicheUntersuchung.taillenumfang.taillenumfang",
+      "path" : "Seltene.koerperlicheUntersuchung.taillenumfang.taillenumfang",
+      "short" : "Taillenumfang in cm",
+      "definition" : "Taillenumfang des SE-Patienten in cm. Abzugrenzen vom Bauchumfang, der auf Nabelhoehe gemessen wird.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }]
+    },
+    {
+      "id" : "Seltene.koerperlicheUntersuchung.taillenumfang.datumTaillenumfang",
+      "path" : "Seltene.koerperlicheUntersuchung.taillenumfang.datumTaillenumfang",
+      "short" : "Datum Taillenumfang",
+      "definition" : "Datum der Taillenumfangsmessung.",
       "min" : 0,
       "max" : "1",
       "type" : [{

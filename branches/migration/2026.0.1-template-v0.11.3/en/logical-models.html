@@ -346,82 +346,449 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </blockquote>
 
 <!-- BEGIN GENERATED: logical-model-table (scripts/generate-lm-table.py) -->
+
 <p>The table below is generated from the published logical model (<code class="language-plaintext highlighter-rouge">mii-lm-seltene</code>) and lists every data element with its cardinality, type and description. Indentation reflects nesting.</p>
 
-<p>| Element | Card. | Type | Description |
-| — | — | — | — |
-| <strong>anamneseUndDiagnostik</strong> | 0..* | BackboneElement | Diagnose |
-|     <strong>untersuchungsdatum</strong> | 0..1 | date | Datum der durchgeführten Untersuchung eines SE-Patienten. |
-|     <strong>untersuchungsanlass</strong> | 0..1 | code | Grund fuer den Besuch des SE-Patienten. |
-|     <strong>phaenotypisierung</strong> | 0..* | BackboneElement | Phaenotypisierung |
-|         <strong>hpoTerm</strong> | 0..* | code | Phaenotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC). |
-|         <strong>hpoExcluded</strong> | 0..1 | boolean | Gibt an, ob das HPO-Merkmal explizit ausgeschlossen wurde (negated finding). Abgeleitet aus valueCodeableConcept: LOINC LA9634-2 'Absent' = true, LA9633-4 'Present' = false. Folgt HL7 Phenomics IG Muster. |
-|         <strong>hpoStatus</strong> | 0..1 | code | Status oder Schweregrad des Phaenotyps (Present/Absent/Severity). |
-|         <strong>hpoVersion</strong> | 0..1 | code | Kennzeichnung der genutzten Version des ausgewaehlten HPO-Terms. |
-|         <strong>zeitraumSymptom</strong> | 0..* | BackboneElement | Zeitraum des Symptom |
-|             <strong>zeitraumSymptom</strong> | 0..* | dateTime | Startdatum und bei Bedarf Periode der ersten Symptome/Anzeichen. |
-|             <strong>lebensphase</strong> | 0..* | code | Lebensphase, in der das Symptom aufgetreten ist. |
-|             <strong>alterSymptom</strong> | 0..1 | integer | Alter beim Auftreten der ersten Symptome/Anzeichen. |
-|         <strong>verlaufSymptom</strong> | 0..1 | code | Aenderung des Verlaufs des Symptoms seit der vorherigen Untersuchung. |
-|     <strong>klinischeDiagnose</strong> | 0..* | BackboneElement | Zeitraum der klinischen SE-Diagnose |
-|         <strong>zeitpunktKlinischeDia</strong> | 0..1 | code | Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der klinsichen SE-Diagnose. |
-|         <strong>feststellungsdatumKlinischeDia</strong> | 0..1 | date | Datum, an dem die klinische SE-Diagnose festgestellt wurde. |
-|         <strong>alterKlinischeDia</strong> | 0..1 | integer | Alter, in dem die klinische SE-Diagnose gestellt wurde. |
-|     <strong>genetischeDiagnose</strong> | 0..* | BackboneElement | Zeitraum der genetischen SE-Diagnose |
-|         <strong>zeitpunktGenDia</strong> | 0..1 | code | Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der genetischen SE-Diagnose. |
-|         <strong>feststellungsdatumGenDia</strong> | 0..1 | date | Datum, an dem die genetische SE-Diagnose festgestellt wurde. |
-|         <strong>alterGenDia</strong> | 0..1 | integer | Alter, in dem die genetische SE-Diagnose gestellt wurde. |
-|     <strong>genDiaFehlendePenetranz</strong> | 0..* | code | Gibt an, ob bei einer genetischen Diagnose die Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) fehlt |
-|     <strong>methodeDiagnosestellung</strong> | 0..* | code | Gibt an, welche Methode zur Diagnosestellung verwendet wurde. |
-| <strong>koerperlicheUntersuchung</strong> | 0..* | BackboneElement | Körperliche Untersuchung |
-|     <strong>koerpergewicht</strong> | 0..* | BackboneElement | Körpergewicht |
-|         <strong>koerpergewicht</strong> | 0..1 | decimal | Körpergewicht des SE-Patienten in kg (aus MII ICU Modul). |
-|         <strong>datumKoerpergewicht</strong> | 0..1 | dateTime | Datum der Körpergewichtsmessung. |
-|     <strong>koerpergroesse</strong> | 0..* | BackboneElement | Körpergröße |
-|         <strong>koerpergroesse</strong> | 0..1 | decimal | Körpergröße des SE-Patienten in cm (aus MII ICU Modul). |
-|         <strong>datumKoerpergroesse</strong> | 0..1 | dateTime | Datum der Körpergrößenmessung. |
-|     <strong>bmi</strong> | 0..* | BackboneElement | BMI |
-|         <strong>bmi</strong> | 0..1 | decimal | BMI des SE-Patienten. |
-|         <strong>datumBMI</strong> | 0..1 | dateTime | Datum, an dem der BMI (Body Mass Index) berechnet wurde. |
-|     <strong>kopfumfang</strong> | 0..* | BackboneElement | Kopfumfang |
-|         <strong>kopfumfang</strong> | 0..1 | decimal | Kopfumfang des SE-Patienten in cm. |
-|         <strong>datumKopfumfang</strong> | 0..1 | dateTime | Datum der Kopfumfangsmessung. |
-|     <strong>bauchumfang</strong> | 0..* | BackboneElement | Bauchumfang |
-|         <strong>bauchumfang</strong> | 0..1 | decimal | Bauchumfang des SE-Patienten in cm. |
-|         <strong>datumBauchumfang</strong> | 0..1 | dateTime | Datum der Bauchumfangsmessung. |
-|     <strong>hueftumfang</strong> | 0..* | BackboneElement | Hüftumfang |
-|         <strong>hueftumfang</strong> | 0..1 | decimal | Hüftumfang des SE-Patienten in cm. |
-|         <strong>datumHueftumfang</strong> | 0..1 | dateTime | Datum der Hüftumfangsmessung. |
-|     <strong>blutgruppe</strong> | 0..1 | code | Blutgruppe des SE-Patienten (AB0 und Rhesusfaktor). |
-| <strong>persoenlicheInfosIndexpatient</strong> | 0..* | BackboneElement | Persoenliche Informationen des Indexpatienten |
-|     <strong>tod</strong> | 0..1 | BackboneElement | Tod |
-|         <strong>sterbedatum</strong> | 0..1 | date | Sterbedatum des Indexpatienten. |
-|         <strong>anSEVerstorben</strong> | 0..1 | code | Angabe, ob der Indexpatient an der SE verstorben ist. |
-|         <strong>andereTodesursache</strong> | 0..* | code | Kodierung der Todesursache soweit bekannt (ICD-10-GM, ORPHAcodes). |
-| <strong>familienanamnese</strong> | 0..* | BackboneElement | Familienanamnese |
-|     <strong>verwandtschaftsverhaeltnis</strong> | 0..1 | code | Biologisches Verwandtschaftsverhaeltnis des Familienmitglieds zum Indexpatienten. |
-|     <strong>geschlecht</strong> | 0..1 | code | Geschlecht des Familienmitglieds. |
-|     <strong>gleicheSE</strong> | 0..* | code | Gibt an, ob das Familienmitglied an der gleichen SE leidet wie der Indexpatient. |
-|     <strong>andereSE</strong> | 0..* | code | Gibt an, ob das Familienmitglied an einer anderen SE leidet als der Indexpatient. |
-|     <strong>penetranz</strong> | 0..1 | code | Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) die genetische Diagnose vorliegt. |
-|     <strong>familienmitgliedVerstorben</strong> | 0..1 | code | Gibt an, ob das Familienmitglied verstorben ist. |
-|     <strong>todDurchSE</strong> | 0..1 | code | Gibt an, ob die seltene Erkrankung zum Tod des Familienmitglieds beigetragen hat. Abzugrenzen von familienmitgliedVerstorben, das nur den Tod als solchen festhaelt. |
-|     <strong>dokumentationsdatum</strong> | 0..1 | date | Datum, an dem die Familienanamnese erhoben beziehungsweise dokumentiert wurde. |
-| <strong>therapieForschung</strong> | 0..* | BackboneElement | Therapie und Forschung |
-|     <strong>offLabel</strong> | 0..* | BackboneElement | Off-Label-Gabe |
-|         <strong>offLabelGabe</strong> | 0..1 | code | Gibt an, ob eine Off-Label-Gabe vorliegt. |
-|         <strong>offLabelMedikament</strong> | 0..* | code | Gibt an, welches Medikament Off-Label gegeben wurde. |
-|     <strong>studie</strong> | 0..* | BackboneElement | Studie |
-|         <strong>studienID</strong> | 0..1 | Identifier | Eindeutige Identifikation der Studie, an der der SE-Patient teilgenommen hat. |
-|         <strong>studienStatus</strong> | 0..1 | code | Aktueller Status der Studie, an der der SE-Patient teilgenommen hat (Abgeschlossen, Fortlaufend). |
-|         <strong>studienzeitraum</strong> | 0..1 | Extension | Zeitraum, in dem der SE-Patient an der Studie teilgenommen hat. |
-|     <strong>therapie</strong> | 0..* | BackboneElement | Therapie |
-|         <strong>therapieempfehlung</strong> | 0..* | code | Gibt an, welche Therapieempfehlung vorliegt. |
-|         <strong>durchgefuehrteTherapie</strong> | 0..* | code | Tatsaechlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention). |
-|         <strong>startdatumTherapie</strong> | 0..1 | date | Datum, an dem die Therapie begonnen hat. |
-|         <strong>enddatumTherapie</strong> | 0..1 | date | Datum, an dem die Therapie beendet wurde. |
-|         <strong>grundEndeTherapie</strong> | 0..* | code | Gibt an, warum die Therapie beendet wurde (z.B. Nebenwirkungen, keine Wirkung). |
-<!-- END GENERATED: logical-model-table --></p>
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Card.</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">anamneseUndDiagnostik</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Diagnose</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">untersuchungsdatum</code></td>
+      <td>0..1</td>
+      <td>date</td>
+      <td>Datum der durchgeführten Untersuchung eines SE-Patienten.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">untersuchungsanlass</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Grund fuer den Besuch des SE-Patienten.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">phaenotypisierung</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Phaenotypisierung</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">hpoTerm</code></td>
+      <td>0..*</td>
+      <td>code</td>
+      <td>Phaenotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC).</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">hpoExcluded</code></td>
+      <td>0..1</td>
+      <td>boolean</td>
+      <td>Gibt an, ob das HPO-Merkmal explizit ausgeschlossen wurde (negated finding). Abgeleitet aus valueCodeableConcept: LOINC LA9634-2 'Absent' = true, LA9633-4 'Present' = false. Folgt HL7 Phenomics IG Muster.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">hpoStatus</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Status oder Schweregrad des Phaenotyps (Present/Absent/Severity).</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">hpoVersion</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Kennzeichnung der genutzten Version des ausgewaehlten HPO-Terms.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">zeitraumSymptom</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Zeitraum des Symptom</td>
+    </tr>
+    <tr>
+      <td>            <code class="language-plaintext highlighter-rouge">zeitraumSymptom</code></td>
+      <td>0..*</td>
+      <td>dateTime</td>
+      <td>Startdatum und bei Bedarf Periode der ersten Symptome/Anzeichen.</td>
+    </tr>
+    <tr>
+      <td>            <code class="language-plaintext highlighter-rouge">lebensphase</code></td>
+      <td>0..*</td>
+      <td>code</td>
+      <td>Lebensphase, in der das Symptom aufgetreten ist.</td>
+    </tr>
+    <tr>
+      <td>            <code class="language-plaintext highlighter-rouge">alterSymptom</code></td>
+      <td>0..1</td>
+      <td>integer</td>
+      <td>Alter beim Auftreten der ersten Symptome/Anzeichen.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">verlaufSymptom</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Aenderung des Verlaufs des Symptoms seit der vorherigen Untersuchung.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">klinischeDiagnose</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Zeitraum der klinischen SE-Diagnose</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">zeitpunktKlinischeDia</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der klinsichen SE-Diagnose.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">feststellungsdatumKlinischeDia</code></td>
+      <td>0..1</td>
+      <td>date</td>
+      <td>Datum, an dem die klinische SE-Diagnose festgestellt wurde.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">alterKlinischeDia</code></td>
+      <td>0..1</td>
+      <td>integer</td>
+      <td>Alter, in dem die klinische SE-Diagnose gestellt wurde.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">genetischeDiagnose</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Zeitraum der genetischen SE-Diagnose</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">zeitpunktGenDia</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der genetischen SE-Diagnose.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">feststellungsdatumGenDia</code></td>
+      <td>0..1</td>
+      <td>date</td>
+      <td>Datum, an dem die genetische SE-Diagnose festgestellt wurde.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">alterGenDia</code></td>
+      <td>0..1</td>
+      <td>integer</td>
+      <td>Alter, in dem die genetische SE-Diagnose gestellt wurde.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">genDiaFehlendePenetranz</code></td>
+      <td>0..*</td>
+      <td>code</td>
+      <td>Gibt an, ob bei einer genetischen Diagnose die Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) fehlt</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">methodeDiagnosestellung</code></td>
+      <td>0..*</td>
+      <td>code</td>
+      <td>Gibt an, welche Methode zur Diagnosestellung verwendet wurde.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">koerperlicheUntersuchung</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Körperliche Untersuchung</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">koerpergewicht</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Körpergewicht</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">koerpergewicht</code></td>
+      <td>0..1</td>
+      <td>decimal</td>
+      <td>Körpergewicht des SE-Patienten in kg (aus MII ICU Modul).</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">datumKoerpergewicht</code></td>
+      <td>0..1</td>
+      <td>dateTime</td>
+      <td>Datum der Körpergewichtsmessung.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">koerpergroesse</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Körpergröße</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">koerpergroesse</code></td>
+      <td>0..1</td>
+      <td>decimal</td>
+      <td>Körpergröße des SE-Patienten in cm (aus MII ICU Modul).</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">datumKoerpergroesse</code></td>
+      <td>0..1</td>
+      <td>dateTime</td>
+      <td>Datum der Körpergrößenmessung.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">bmi</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>BMI</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">bmi</code></td>
+      <td>0..1</td>
+      <td>decimal</td>
+      <td>BMI des SE-Patienten.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">datumBMI</code></td>
+      <td>0..1</td>
+      <td>dateTime</td>
+      <td>Datum, an dem der BMI (Body Mass Index) berechnet wurde.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">kopfumfang</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Kopfumfang</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">kopfumfang</code></td>
+      <td>0..1</td>
+      <td>decimal</td>
+      <td>Kopfumfang des SE-Patienten in cm.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">datumKopfumfang</code></td>
+      <td>0..1</td>
+      <td>dateTime</td>
+      <td>Datum der Kopfumfangsmessung.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">bauchumfang</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Bauchumfang</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">bauchumfang</code></td>
+      <td>0..1</td>
+      <td>decimal</td>
+      <td>Bauchumfang des SE-Patienten in cm.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">datumBauchumfang</code></td>
+      <td>0..1</td>
+      <td>dateTime</td>
+      <td>Datum der Bauchumfangsmessung.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">hueftumfang</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Hüftumfang</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">hueftumfang</code></td>
+      <td>0..1</td>
+      <td>decimal</td>
+      <td>Hüftumfang des SE-Patienten in cm.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">datumHueftumfang</code></td>
+      <td>0..1</td>
+      <td>dateTime</td>
+      <td>Datum der Hüftumfangsmessung.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">blutgruppe</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Blutgruppe des SE-Patienten (AB0 und Rhesusfaktor).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">persoenlicheInfosIndexpatient</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Persoenliche Informationen des Indexpatienten</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">tod</code></td>
+      <td>0..1</td>
+      <td>BackboneElement</td>
+      <td>Tod</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">sterbedatum</code></td>
+      <td>0..1</td>
+      <td>date</td>
+      <td>Sterbedatum des Indexpatienten.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">anSEVerstorben</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Angabe, ob der Indexpatient an der SE verstorben ist.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">andereTodesursache</code></td>
+      <td>0..*</td>
+      <td>code</td>
+      <td>Kodierung der Todesursache soweit bekannt (ICD-10-GM, ORPHAcodes).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">familienanamnese</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Familienanamnese</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">verwandtschaftsverhaeltnis</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Biologisches Verwandtschaftsverhaeltnis des Familienmitglieds zum Indexpatienten.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">geschlecht</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Geschlecht des Familienmitglieds.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">gleicheSE</code></td>
+      <td>0..*</td>
+      <td>code</td>
+      <td>Gibt an, ob das Familienmitglied an der gleichen SE leidet wie der Indexpatient.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">andereSE</code></td>
+      <td>0..*</td>
+      <td>code</td>
+      <td>Gibt an, ob das Familienmitglied an einer anderen SE leidet als der Indexpatient.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">penetranz</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) die genetische Diagnose vorliegt.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">familienmitgliedVerstorben</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Gibt an, ob das Familienmitglied verstorben ist.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">todDurchSE</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Gibt an, ob die seltene Erkrankung zum Tod des Familienmitglieds beigetragen hat. Abzugrenzen von familienmitgliedVerstorben, das nur den Tod als solchen festhaelt.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">dokumentationsdatum</code></td>
+      <td>0..1</td>
+      <td>date</td>
+      <td>Datum, an dem die Familienanamnese erhoben beziehungsweise dokumentiert wurde.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">therapieForschung</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Therapie und Forschung</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">offLabel</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Off-Label-Gabe</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">offLabelGabe</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Gibt an, ob eine Off-Label-Gabe vorliegt.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">offLabelMedikament</code></td>
+      <td>0..*</td>
+      <td>code</td>
+      <td>Gibt an, welches Medikament Off-Label gegeben wurde.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">studie</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Studie</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">studienID</code></td>
+      <td>0..1</td>
+      <td>Identifier</td>
+      <td>Eindeutige Identifikation der Studie, an der der SE-Patient teilgenommen hat.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">studienStatus</code></td>
+      <td>0..1</td>
+      <td>code</td>
+      <td>Aktueller Status der Studie, an der der SE-Patient teilgenommen hat (Abgeschlossen, Fortlaufend).</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">studienzeitraum</code></td>
+      <td>0..1</td>
+      <td>Extension</td>
+      <td>Zeitraum, in dem der SE-Patient an der Studie teilgenommen hat.</td>
+    </tr>
+    <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">therapie</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Therapie</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">therapieempfehlung</code></td>
+      <td>0..*</td>
+      <td>code</td>
+      <td>Gibt an, welche Therapieempfehlung vorliegt.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">durchgefuehrteTherapie</code></td>
+      <td>0..*</td>
+      <td>code</td>
+      <td>Tatsaechlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention).</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">startdatumTherapie</code></td>
+      <td>0..1</td>
+      <td>date</td>
+      <td>Datum, an dem die Therapie begonnen hat.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">enddatumTherapie</code></td>
+      <td>0..1</td>
+      <td>date</td>
+      <td>Datum, an dem die Therapie beendet wurde.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">grundEndeTherapie</code></td>
+      <td>0..*</td>
+      <td>code</td>
+      <td>Gibt an, warum die Therapie beendet wurde (z.B. Nebenwirkungen, keine Wirkung).</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- END GENERATED: logical-model-table -->
 
 
 
@@ -448,7 +815,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 2, 2026 14:33+0000">2026-09-02</span>
+          Generated <span title="Wed, Sep 2, 2026 15:16+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -131,7 +131,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Hueftumfang",
   "title" : "MII PR SE Hüftumfang",
   "status" : "active",
-  "date" : "2026-09-02T14:33:43+00:00",
+  "date" : "2026-09-02T15:16:54+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -240,12 +240,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     {
       "id" : "Observation.code",
       "path" : "Observation.code",
-      "short" : "Hüftumfang an der maximalen Gesäßprotuberanz",
+      "short" : "Hüftumfang",
       "patternCodeableConcept" : {
         "coding" : [{
-          "system" : "http://loinc.org",
-          "code" : "56063-1",
-          "display" : "Circumference.at maximal protrusion of gluteus muscles Pelvis"
+          "system" : "http://snomed.info/sct",
+          "code" : "284472007",
+          "display" : "Hip circumference"
         }]
       },
       "mustSupport" : true

@@ -11,15 +11,42 @@ This page tracks the differences between versions, beginning with the difference
 
 ### Version 2027.0.0-ballot
 
+#### New features
+
+* `feat` **JARDIN data points** from the comparison of the European minimum data set with this module (issues #35, #36, #38). All three are concrete data requirements of a European reference network, and none of them is specific to rare diseases — the profiles say so in their own header comments 
+* `feat` pre-/perinatal data: `mii-pr-seltene-gestationsalter`, `mii-pr-seltene-geburtsgewicht`, `mii-pr-seltene-geburtslaenge`. No connected MII module covered them; multiple births and prenatally diagnosed malformations were deliberately **not** profiled, because `Patient.multipleBirth[x]` and the existing Condition profiles with HPO onset already carry them
+* `feat` `mii-pr-seltene-icf-assessment` with a code system and value sets for the qualifiers. The WHO qualifiers live in `component`, not in `value[x]`, because their number differs per ICF chapter — body structures take three, activities and participation take two (capacity **and** performance). Five invariants enforce chapter coherence
+* `feat` `mii-pr-seltene-registerteilnahme` for participation in ERN registries, derived from `ResearchSubject`
+ 
+* `feat` **Consanguinity** (`mii-pr-seltene-consanguinity`) with value set — parental consanguinity per RD-CDM v2.0.0 §6.4.4 (issue #37)
+* `feat` **Newborn screening**: seven value sets, five derived from the LOINC-SNOMED ontology via ECL, one curated against the G-BA Kinder-Richtlinie and one defined intensionally over LOINC's own `SYSTEM` property (608 dried blood spot codes), plus a dedicated terminology page
+* `feat` logical model `mii-lm-seltene` back in the build and rendered in full as a table on the data set page
+* `feat` 13 new example instances, anchored on the existing SMA case example
+
 #### Breaking changes
 
-* `remove` extension `mii-ex-seltene-empfehlung-evidenzgraduierung` removed from this module, along with its use in the three Therapieempfehlung profiles. It was a copy of the MTB module's extension and was never finished: its `system` discriminator carried no value, so the mandatory `Evidenzgrad 1..1` slice could not be satisfied by any instance — the extension shipped in 2026.0.1 but was unusable, and no example ever used it. Which evidence scale applies is tracked in ballot ticket HDB-543 and is framed in oncological terms (NCT m1A–m4, ESMO, ASCO); the question was never answered for rare diseases. Rather than importing a tumour scale, the topic stays with the MTB module. Removal is therefore not expected to affect any conformant implementation
+* `remove` extension `mii-ex-seltene-empfehlung-evidenzgraduierung` removed, along with its use in the three Therapieempfehlung profiles. It was a copy from the MTB module whose `system` discriminator never carried a value — the mandatory `Evidenzgrad 1..1` slice could not be satisfied by any instance. Published but unusable, and used by no example. Which evidence scale applies is tracked in ballot ticket HDB-543 and framed in oncological terms; for rare diseases it was never answered
+* `change` element names of the logical model moved to lowerCamelCase. PascalCase violates the FHIR rule `eld-20` and produced 195 warnings. 62 segment names renamed with acronyms handled correctly (`HPOTerm` → `hpoTerm`, `BMI` → `bmi`), and the 90 mapping targets in 11 profiles moved with them. **Element paths therefore changed**
+* `change` codes of `mii-pr-seltene-taillenumfang` (LOINC `8280-0` → SNOMED `276361009`) and `mii-pr-seltene-hueftumfang` (LOINC `56063-1` → SNOMED `284472007`). **Consumers querying by the old codes will no longer match**
+* `change` example instance `example` renamed to `mii-exa-seltene-patient`, profiled on `MII_PR_Person_Patient`
 
 #### Bug fixes
 
-* `fix` value set `mii-vs-seltene-penetrance` corrected — three of four codes were wrong (issue #31). `HP:0025169`, published as "Complete penetrance", is in fact **Left ventricular systolic dysfunction**, and is replaced by `HP:0034950`. `HP:0003828`, published as "Variable penetrance", is **Variable expressivity** — a different concept — and is dropped; the graded terms `HP:4000158/59/60` (high/moderate/low) now provide that dimension. `HP:0003829` carried an outdated display. All codes verified against the HPO API. Note that the graded terms are subtypes of **incomplete** penetrance, not alternatives to complete penetrance
-* `fix` slicing discriminator on `mii-pr-seltene-blutgruppe` `value[x].coding` changed from `#pattern`/`$this` to `#value`/`system` (issue #25). The slices differ only by code system and set `.system`, which yields a `patternUri` on the child element rather than a `patternCoding` on the coding itself, so the discriminator had nothing to match
-* `fix` same defect repaired on `category` in `mii-pr-seltene-therapieempfehlung` and `mii-pr-seltene-therapieempfehlung-nicht-medikamentoes` (found by an audit, not previously reported). Both slices were distinguished solely by a required binding to different value sets, which no FHIR R4 discriminator can evaluate; `coding.system` is now pinned per slice
+* `fix` **the waist circumference profile carried a code for the abdominal circumference.** LOINC offers waist circumference only measured **at the umbilicus** (`8280-0`, `8281-8`) — the landmark of the abdominal circumference, not the waist, which is defined at the narrowest point or at the midpoint between the lowest rib and the iliac crest. The profile therefore said something other than its name. SNOMED separates the two; `1162535003` and `1162536002` remain available for a landmark-specific statement. This matters because the module models a waist-to-hip ratio: using the abdominal circumference as the numerator yields a wrong ratio
+* `fix` the logical model gained a `taillenumfang` element. It knew only `bauchumfang`, so the waist circumference profile mapped onto the abdominal circumference
+* `fix` the (commented-out) profile `mii-pr-seltene-waist-to-hip-ratio` carried LOINC `8280-0`, wrong twice over — the circumference instead of the ratio, and the same code as the waist profile. Corrected to SNOMED `248367009 |Waist/hip ratio|`. The profile remains inactive; that the ratio of all things is commented out explains why the confusion went unnoticed for so long
+* `fix` value set `mii-vs-seltene-penetrance` corrected — three of four codes were wrong (issue #31). `HP:0025169`, published as "Complete penetrance", is **Left ventricular systolic dysfunction**; `HP:0003828`, published as "Variable penetrance", is **Variable expressivity**. All codes verified against the HPO API. Note that the graded terms are subtypes of **incomplete** penetrance
+* `fix` slicing discriminators on `mii-pr-seltene-blutgruppe` and on `category` in both Therapieempfehlung profiles. The slices differed only by `.system` or by a required binding — neither is something the discriminator in place could evaluate
+* `fix` logical model reactivated; its canonical is the target of the mapping every profile carries, so 22 unresolvable links disappear
+* `fix` 31 mapping targets pointed at elements that do not exist, and the targets for `valueQuantity.value` and `effectiveDateTime` pointed at the backbone element instead of the value or the date. All 102 now resolve
+* `fix` the logical model gained `familienanamnese.todDurchSE` and `familienanamnese.dokumentationsdatum` — both data points are carried by the family history profile, the model did not define them
+* `fix` five references to `Patient/example-patient`, an instance that was never defined
+
+#### Documentation
+
+* `docs` the clinical-versus-genetic diagnosis guide now shows three diagrams instead of FSH blocks (structural comparison, parallel model, decision tree). The previous `plantuml` block was never rendered and was syntactically broken besides; the English version had no decision tree at all
+* `docs` the data set page renders the logical model as a table of 71 data elements, generated by `scripts/generate-lm-table.py`
+* `docs` new page on newborn screening
 
 #### Governance
 
