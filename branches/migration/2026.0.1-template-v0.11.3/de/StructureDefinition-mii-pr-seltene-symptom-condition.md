@@ -188,7 +188,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Symptom_Condition",
   "title" : "MII Profile SE Symptom Condition",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -260,7 +260,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "Condition",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "Phänotypisierung als Condition"
       }]
     },
@@ -319,7 +319,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom",
         "comment" : "Schweregrad/Verlauf"
       }]
     },
@@ -363,7 +363,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
         "comment" : "HPO-Term des Symptoms"
       }]
     },
@@ -396,7 +396,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "SNOMED CT Symptom"
       }]
     },
@@ -429,7 +429,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "ICD-10-GM Symptom"
       }]
     },
@@ -462,7 +462,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "MONDO Symptom (internationale Interoperabilität)"
       }]
     },
@@ -510,7 +510,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Untersuchungskontakt"
       }]
     },
@@ -540,7 +540,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
         "comment" : "Startdatum des Symptoms"
       }]
     },
@@ -559,7 +559,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "Condition.onset[x].start",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
         "comment" : "Beginn Symptomzeitraum"
       }]
     },
@@ -568,7 +568,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "Condition.onset[x].end",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
         "comment" : "Ende Symptomzeitraum"
       }]
     },
@@ -583,7 +583,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.alterSymptom",
         "comment" : "Alter bei Symptombeginn"
       }]
     },
@@ -598,7 +598,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase",
         "comment" : "Lebensphase Symptom"
       }]
     },
@@ -638,7 +638,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Dokumentationsdatum"
       }]
     },
@@ -680,7 +680,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
         "comment" : "Unterstützende HPO-Symptome"
       }]
     },
@@ -696,7 +696,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "Verweis auf Beobachtungen"
       }]
     },

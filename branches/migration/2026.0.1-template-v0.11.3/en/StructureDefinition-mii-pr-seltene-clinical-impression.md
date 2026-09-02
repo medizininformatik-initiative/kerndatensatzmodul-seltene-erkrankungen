@@ -108,7 +108,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
   "name" : "MII_PR_Seltene_ClinicalImpression",
   "title" : "MII Profile SE Clinical Impression",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -170,7 +170,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "ClinicalImpression",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik",
+        "map" : "anamneseUndDiagnostik",
         "comment" : "Anamnese und Diagnostik"
       }]
     },
@@ -207,7 +207,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsanlass",
+        "map" : "anamneseUndDiagnostik.untersuchungsanlass",
         "comment" : "Untersuchungsanlass"
       }]
     },
@@ -240,7 +240,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Untersuchungskontakt"
       }]
     },
@@ -270,7 +270,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Untersuchungsdatum"
       }]
     },
@@ -289,7 +289,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "ClinicalImpression.effective[x].start",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Beginn der Untersuchung"
       }]
     },
@@ -298,7 +298,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "ClinicalImpression.effective[x].end",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Ende der Untersuchung"
       }]
     },
@@ -317,7 +317,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.KlinischeDiagnose",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose",
         "comment" : "Klinische Diagnose/Verdacht"
       }]
     },
@@ -334,7 +334,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.MethodeDiagnosestellung",
+        "map" : "anamneseUndDiagnostik.methodeDiagnosestellung",
         "comment" : "Methode der Diagnosestellung"
       }]
     },
@@ -352,7 +352,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "Durchgeführte Untersuchungen"
       }]
     },
@@ -380,7 +380,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
         "comment" : "HPO-Term des Symptoms"
       }]
     },
@@ -395,7 +395,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "Verweis auf Phänotypisierung"
       }]
     },

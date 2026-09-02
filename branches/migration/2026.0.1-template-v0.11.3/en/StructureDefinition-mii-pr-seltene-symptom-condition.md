@@ -124,7 +124,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
   "name" : "MII_PR_Seltene_Symptom_Condition",
   "title" : "MII Profile SE Symptom Condition",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -196,7 +196,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "path" : "Condition",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "Phänotypisierung als Condition"
       }]
     },
@@ -255,7 +255,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom",
         "comment" : "Schweregrad/Verlauf"
       }]
     },
@@ -299,7 +299,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
         "comment" : "HPO-Term des Symptoms"
       }]
     },
@@ -332,7 +332,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "SNOMED CT Symptom"
       }]
     },
@@ -365,7 +365,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "ICD-10-GM Symptom"
       }]
     },
@@ -398,7 +398,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "MONDO Symptom (internationale Interoperabilität)"
       }]
     },
@@ -446,7 +446,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Untersuchungskontakt"
       }]
     },
@@ -476,7 +476,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
         "comment" : "Startdatum des Symptoms"
       }]
     },
@@ -495,7 +495,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "path" : "Condition.onset[x].start",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
         "comment" : "Beginn Symptomzeitraum"
       }]
     },
@@ -504,7 +504,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "path" : "Condition.onset[x].end",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
         "comment" : "Ende Symptomzeitraum"
       }]
     },
@@ -519,7 +519,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.alterSymptom",
         "comment" : "Alter bei Symptombeginn"
       }]
     },
@@ -534,7 +534,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase",
         "comment" : "Lebensphase Symptom"
       }]
     },
@@ -574,7 +574,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Dokumentationsdatum"
       }]
     },
@@ -616,7 +616,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
         "comment" : "Unterstützende HPO-Symptome"
       }]
     },
@@ -632,7 +632,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "Verweis auf Beobachtungen"
       }]
     },

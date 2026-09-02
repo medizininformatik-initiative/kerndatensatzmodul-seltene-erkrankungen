@@ -66,7 +66,7 @@
   <name value="MII_PR_Seltene_Symptom_Condition"/>
   <title value="MII Profile SE Symptom Condition"/>
   <status value="active"/>
-  <date value="2026-09-02T09:29:03+00:00"/>
+  <date value="2026-09-02T14:14:40+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -214,7 +214,7 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="Phänotypisierung als Condition"/>
       </mapping>
       <mapping>
@@ -727,7 +727,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom"/>
         <comment value="Schweregrad/Verlauf"/>
       </mapping>
       <mapping>
@@ -962,7 +962,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.hpoTerm"/>
         <comment value="HPO-Term des Symptoms"/>
       </mapping>
       <mapping>
@@ -1280,7 +1280,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="SNOMED CT Symptom"/>
       </mapping>
       <mapping>
@@ -1598,7 +1598,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="ICD-10-GM Symptom"/>
       </mapping>
       <mapping>
@@ -1916,7 +1916,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="MONDO Symptom (internationale Interoperabilität)"/>
       </mapping>
       <mapping>
@@ -2373,7 +2373,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Untersuchungskontakt"/>
       </mapping>
       <mapping>
@@ -2484,7 +2484,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom"/>
         <comment value="Startdatum des Symptoms"/>
       </mapping>
       <mapping>
@@ -2648,7 +2648,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom"/>
         <comment value="Beginn Symptomzeitraum"/>
       </mapping>
       <mapping>
@@ -2689,7 +2689,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom"/>
         <comment value="Ende Symptomzeitraum"/>
       </mapping>
       <mapping>
@@ -2729,7 +2729,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.alterSymptom"/>
         <comment value="Alter bei Symptombeginn"/>
       </mapping>
       <mapping>
@@ -2777,7 +2777,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase"/>
         <comment value="Lebensphase Symptom"/>
       </mapping>
       <mapping>
@@ -2921,7 +2921,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Dokumentationsdatum"/>
       </mapping>
       <mapping>
@@ -3450,7 +3450,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.hpoTerm"/>
         <comment value="Unterstützende HPO-Symptome"/>
       </mapping>
       <mapping>
@@ -3500,7 +3500,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="Verweis auf Beobachtungen"/>
       </mapping>
       <mapping>
@@ -3556,7 +3556,7 @@
       <path value="Condition"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="Phänotypisierung als Condition"/>
       </mapping>
     </element>
@@ -3608,7 +3608,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom"/>
         <comment value="Schweregrad/Verlauf"/>
       </mapping>
     </element>
@@ -3649,7 +3649,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.hpoTerm"/>
         <comment value="HPO-Term des Symptoms"/>
       </mapping>
     </element>
@@ -3678,7 +3678,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="SNOMED CT Symptom"/>
       </mapping>
     </element>
@@ -3707,7 +3707,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="ICD-10-GM Symptom"/>
       </mapping>
     </element>
@@ -3736,7 +3736,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="MONDO Symptom (internationale Interoperabilität)"/>
       </mapping>
     </element>
@@ -3778,7 +3778,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Untersuchungskontakt"/>
       </mapping>
     </element>
@@ -3806,7 +3806,7 @@
       </type>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom"/>
         <comment value="Startdatum des Symptoms"/>
       </mapping>
     </element>
@@ -3823,7 +3823,7 @@
       <path value="Condition.onset[x].start"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom"/>
         <comment value="Beginn Symptomzeitraum"/>
       </mapping>
     </element>
@@ -3831,7 +3831,7 @@
       <path value="Condition.onset[x].end"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom"/>
         <comment value="Ende Symptomzeitraum"/>
       </mapping>
     </element>
@@ -3845,7 +3845,7 @@
       </type>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.alterSymptom"/>
         <comment value="Alter bei Symptombeginn"/>
       </mapping>
     </element>
@@ -3859,7 +3859,7 @@
       </type>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase"/>
         <comment value="Lebensphase Symptom"/>
       </mapping>
     </element>
@@ -3896,7 +3896,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Dokumentationsdatum"/>
       </mapping>
     </element>
@@ -3933,7 +3933,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.hpoTerm"/>
         <comment value="Unterstützende HPO-Symptome"/>
       </mapping>
     </element>
@@ -3948,7 +3948,7 @@
       </type>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="Verweis auf Beobachtungen"/>
       </mapping>
     </element>

@@ -11,7 +11,7 @@
   "name" : "MII_PR_Seltene_Familienanamnese",
   "title" : "MII PR SE Familienanamnese",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -126,7 +126,7 @@
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese",
+        "map" : "familienanamnese",
         "comment" : "Familienanamnese"
       },
       {
@@ -431,7 +431,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.GleicheSE",
+        "map" : "familienanamnese.gleicheSE",
         "comment" : "Gleiche SE"
       }]
     },
@@ -924,7 +924,7 @@
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.Verwandtschaftsverhaeltnis",
+        "map" : "familienanamnese.verwandtschaftsverhaeltnis",
         "comment" : "Verwandtschaftsverhältnis"
       },
       {
@@ -1744,7 +1744,7 @@
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.Geschlecht",
+        "map" : "familienanamnese.geschlecht",
         "comment" : "Geschlecht"
       },
       {
@@ -1967,7 +1967,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.FamilienmitgliedVerstorben",
+        "map" : "familienanamnese.familienmitgliedVerstorben",
         "comment" : "Familienmitglied verstorben"
       },
       {
@@ -2007,7 +2007,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.FamilienmitgliedVerstorben",
+        "map" : "familienanamnese.familienmitgliedVerstorben",
         "comment" : "Sterbedatum"
       },
       {
@@ -2047,7 +2047,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.FamilienmitgliedVerstorben",
+        "map" : "familienanamnese.familienmitgliedVerstorben",
         "comment" : "Alter bei Tod"
       },
       {
@@ -2097,7 +2097,7 @@
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Grund/Erkrankung des Familienmitglieds"
       },
       {
@@ -4043,7 +4043,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.Penetranz",
+        "map" : "familienanamnese.penetranz",
         "comment" : "Penetranz"
       }]
     },
@@ -4332,7 +4332,7 @@
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Andere SE (ICD-10-GM)"
       },
       {
@@ -5224,7 +5224,7 @@
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Andere SE (SNOMED CT)"
       },
       {
@@ -5596,7 +5596,7 @@
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Andere SE (Orpha-Code)"
       },
       {
@@ -6399,7 +6399,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.TodDurchSE",
+        "map" : "familienanamnese.TodDurchSE",
         "comment" : "Tod durch seltene Erkrankung"
       },
       {
@@ -6548,7 +6548,7 @@
       "path" : "FamilyMemberHistory",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese",
+        "map" : "familienanamnese",
         "comment" : "Familienanamnese"
       }]
     },
@@ -6572,7 +6572,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.GleicheSE",
+        "map" : "familienanamnese.gleicheSE",
         "comment" : "Gleiche SE"
       }]
     },
@@ -6599,7 +6599,7 @@
       "path" : "FamilyMemberHistory.relationship",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.Verwandtschaftsverhaeltnis",
+        "map" : "familienanamnese.verwandtschaftsverhaeltnis",
         "comment" : "Verwandtschaftsverhältnis"
       }]
     },
@@ -6608,7 +6608,7 @@
       "path" : "FamilyMemberHistory.sex",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.Geschlecht",
+        "map" : "familienanamnese.geschlecht",
         "comment" : "Geschlecht"
       }]
     },
@@ -6646,7 +6646,7 @@
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.FamilienmitgliedVerstorben",
+        "map" : "familienanamnese.familienmitgliedVerstorben",
         "comment" : "Familienmitglied verstorben"
       }]
     },
@@ -6661,7 +6661,7 @@
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.FamilienmitgliedVerstorben",
+        "map" : "familienanamnese.familienmitgliedVerstorben",
         "comment" : "Sterbedatum"
       }]
     },
@@ -6676,7 +6676,7 @@
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.FamilienmitgliedVerstorben",
+        "map" : "familienanamnese.familienmitgliedVerstorben",
         "comment" : "Alter bei Tod"
       }]
     },
@@ -6685,7 +6685,7 @@
       "path" : "FamilyMemberHistory.reasonCode",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Grund/Erkrankung des Familienmitglieds"
       }]
     },
@@ -6704,7 +6704,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.Penetranz",
+        "map" : "familienanamnese.penetranz",
         "comment" : "Penetranz"
       }]
     },
@@ -6714,7 +6714,7 @@
       "sliceName" : "icd10-gm",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Andere SE (ICD-10-GM)"
       }]
     },
@@ -6724,7 +6724,7 @@
       "sliceName" : "sct",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Andere SE (SNOMED CT)"
       }]
     },
@@ -6734,7 +6734,7 @@
       "sliceName" : "orphanet",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Andere SE (Orpha-Code)"
       }]
     },
@@ -6774,7 +6774,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.TodDurchSE",
+        "map" : "familienanamnese.TodDurchSE",
         "comment" : "Tod durch seltene Erkrankung"
       }]
     },

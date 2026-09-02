@@ -165,7 +165,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
   "name" : "MII_PR_Seltene_ClinicalDiagnosis",
   "title" : "MII PR SE Clinical Diagnosis",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -241,7 +241,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "Condition",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.KlinischeDiagnose",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose",
         "comment" : "Klinische Diagnose"
       }]
     },
@@ -255,7 +255,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "Condition.extension.value[x]",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia",
         "comment" : "Feststellungsdatum klinische SE-Diagnose"
       }]
     },
@@ -276,7 +276,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "sliceName" : "icd10-gm",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.KlinischeDiagnose",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose",
         "comment" : "ICD-10-GM Diagnose"
       }]
     },
@@ -286,7 +286,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "sliceName" : "orphanet",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.KlinischeDiagnose",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose",
         "comment" : "Orpha-Code Diagnose"
       }]
     },
@@ -309,7 +309,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
         "comment" : "HPO-Term des Symptoms"
       }]
     },
@@ -344,7 +344,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "Condition.encounter",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Untersuchungsdatum"
       }]
     },
@@ -353,7 +353,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "Condition.onset[x]",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose.alterKlinischeDia",
         "comment" : "Alter/Zeitpunkt bei klinischer SE-Diagnose"
       }]
     },
@@ -366,7 +366,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia",
         "comment" : "Feststellungsdatum klinische SE-Diagnose"
       }]
     },
@@ -414,7 +414,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
         "comment" : "Unterstützende HPO-Symptome"
       }]
     },
@@ -437,7 +437,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "Verweis auf Phänotypisierung"
       }]
     }]

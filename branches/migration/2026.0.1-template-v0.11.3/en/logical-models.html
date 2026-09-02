@@ -350,75 +350,75 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>| Element | Card. | Type | Description |
 | — | — | — | — |
-| <strong>AnamneseUndDiagnostik</strong> | 0..* | BackboneElement | Diagnose |
-|     <strong>Untersuchungsdatum</strong> | 0..1 | date | Datum der durchgeführten Untersuchung eines SE-Patienten. |
-|     <strong>Untersuchungsanlass</strong> | 0..1 | code | Grund fuer den Besuch des SE-Patienten. |
-|     <strong>Phaenotypisierung</strong> | 0..* | BackboneElement | Phaenotypisierung |
-|         <strong>HPOTerm</strong> | 0..* | code | Phaenotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC). |
-|         <strong>HPOExcluded</strong> | 0..1 | boolean | Gibt an, ob das HPO-Merkmal explizit ausgeschlossen wurde (negated finding). Abgeleitet aus valueCodeableConcept: LOINC LA9634-2 'Absent' = true, LA9633-4 'Present' = false. Folgt HL7 Phenomics IG Muster. |
-|         <strong>HPOStatus</strong> | 0..1 | code | Status oder Schweregrad des Phaenotyps (Present/Absent/Severity). |
-|         <strong>HPOVersion</strong> | 0..1 | code | Kennzeichnung der genutzten Version des ausgewaehlten HPO-Terms. |
-|         <strong>ZeitraumSymptom</strong> | 0..* | BackboneElement | Zeitraum des Symptom |
-|             <strong>ZeitraumSymptom</strong> | 0..* | dateTime | Startdatum und bei Bedarf Periode der ersten Symptome/Anzeichen. |
-|             <strong>Lebensphase</strong> | 0..* | code | Lebensphase, in der das Symptom aufgetreten ist. |
-|             <strong>AlterSymptom</strong> | 0..1 | integer | Alter beim Auftreten der ersten Symptome/Anzeichen. |
-|         <strong>VerlaufSymptom</strong> | 0..1 | code | Aenderung des Verlaufs des Symptoms seit der vorherigen Untersuchung. |
-|     <strong>KlinischeDiagnose</strong> | 0..* | BackboneElement | Zeitraum der klinischen SE-Diagnose |
-|         <strong>ZeitpunktKlinischeDia</strong> | 0..1 | code | Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der klinsichen SE-Diagnose. |
-|         <strong>FeststellungsdatumKlinischeDia</strong> | 0..1 | date | Datum, an dem die klinische SE-Diagnose festgestellt wurde. |
-|         <strong>AlterKlinischeDia</strong> | 0..1 | integer | Alter, in dem die klinische SE-Diagnose gestellt wurde. |
-|     <strong>GenetischeDiagnose</strong> | 0..* | BackboneElement | Zeitraum der genetischen SE-Diagnose |
-|         <strong>ZeitpunktGenDia</strong> | 0..1 | code | Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der genetischen SE-Diagnose. |
-|         <strong>FeststellungsdatumGenDia</strong> | 0..1 | date | Datum, an dem die genetische SE-Diagnose festgestellt wurde. |
-|         <strong>AlterGenDia</strong> | 0..1 | integer | Alter, in dem die genetische SE-Diagnose gestellt wurde. |
-|     <strong>GenDiaFehlendePenetranz</strong> | 0..* | code | Gibt an, ob bei einer genetischen Diagnose die Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) fehlt |
-|     <strong>MethodeDiagnosestellung</strong> | 0..* | code | Gibt an, welche Methode zur Diagnosestellung verwendet wurde. |
-| <strong>KoerperlicheUntersuchung</strong> | 0..* | BackboneElement | Körperliche Untersuchung |
-|     <strong>Koerpergewicht</strong> | 0..* | BackboneElement | Körpergewicht |
-|         <strong>Koerpergewicht</strong> | 0..1 | decimal | Körpergewicht des SE-Patienten in kg (aus MII ICU Modul). |
-|         <strong>DatumKoerpergewicht</strong> | 0..1 | dateTime | Datum der Körpergewichtsmessung. |
-|     <strong>Koerpergroesse</strong> | 0..* | BackboneElement | Körpergröße |
-|         <strong>Koerpergroesse</strong> | 0..1 | decimal | Körpergröße des SE-Patienten in cm (aus MII ICU Modul). |
-|         <strong>DatumKoerpergroesse</strong> | 0..1 | dateTime | Datum der Körpergrößenmessung. |
-|     <strong>BMI</strong> | 0..* | BackboneElement | BMI |
-|         <strong>BMI</strong> | 0..1 | decimal | BMI des SE-Patienten. |
-|         <strong>DatumBMI</strong> | 0..1 | dateTime | Datum, an dem der BMI (Body Mass Index) berechnet wurde. |
-|     <strong>Kopfumfang</strong> | 0..* | BackboneElement | Kopfumfang |
-|         <strong>Kopfumfang</strong> | 0..1 | decimal | Kopfumfang des SE-Patienten in cm. |
-|         <strong>DatumKopfumfang</strong> | 0..1 | dateTime | Datum der Kopfumfangsmessung. |
-|     <strong>Bauchumfang</strong> | 0..* | BackboneElement | Bauchumfang |
-|         <strong>Bauchumfang</strong> | 0..1 | decimal | Bauchumfang des SE-Patienten in cm. |
-|         <strong>DatumBauchumfang</strong> | 0..1 | dateTime | Datum der Bauchumfangsmessung. |
-|     <strong>Hueftumfang</strong> | 0..* | BackboneElement | Hüftumfang |
-|         <strong>Hueftumfang</strong> | 0..1 | decimal | Hüftumfang des SE-Patienten in cm. |
-|         <strong>DatumHueftumfang</strong> | 0..1 | dateTime | Datum der Hüftumfangsmessung. |
-|     <strong>Blutgruppe</strong> | 0..1 | code | Blutgruppe des SE-Patienten (AB0 und Rhesusfaktor). |
-| <strong>PersoenlicheInfosIndexpatient</strong> | 0..* | BackboneElement | Persoenliche Informationen des Indexpatienten |
-|     <strong>Tod</strong> | 0..1 | BackboneElement | Tod |
-|         <strong>Sterbedatum</strong> | 0..1 | date | Sterbedatum des Indexpatienten. |
-|         <strong>AnSEVerstorben</strong> | 0..1 | code | Angabe, ob der Indexpatient an der SE verstorben ist. |
-|         <strong>AndereTodesursache</strong> | 0..* | code | Kodierung der Todesursache soweit bekannt (ICD-10-GM, ORPHAcodes). |
-| <strong>Familienanamnese</strong> | 0..* | BackboneElement | Familienanamnese |
-|     <strong>Verwandtschaftsverhaeltnis</strong> | 0..1 | code | Biologisches Verwandtschaftsverhaeltnis des Familienmitglieds zum Indexpatienten. |
-|     <strong>Geschlecht</strong> | 0..1 | code | Geschlecht des Familienmitglieds. |
-|     <strong>GleicheSE</strong> | 0..* | code | Gibt an, ob das Familienmitglied an der gleichen SE leidet wie der Indexpatient. |
-|     <strong>AndereSE</strong> | 0..* | code | Gibt an, ob das Familienmitglied an einer anderen SE leidet als der Indexpatient. |
-|     <strong>Penetranz</strong> | 0..1 | code | Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) die genetische Diagnose vorliegt. |
-|     <strong>FamilienmitgliedVerstorben</strong> | 0..1 | code | Gibt an, ob das Familienmitglied verstorben ist. |
-| <strong>TherapieForschung</strong> | 0..* | BackboneElement | Therapie und Forschung |
-|     <strong>OffLabel</strong> | 0..* | BackboneElement | Off-Label-Gabe |
-|         <strong>OffLabelGabe</strong> | 0..1 | code | Gibt an, ob eine Off-Label-Gabe vorliegt. |
-|         <strong>OffLabelMedikament</strong> | 0..* | code | Gibt an, welches Medikament Off-Label gegeben wurde. |
-|     <strong>Studie</strong> | 0..* | BackboneElement | Studie |
-|         <strong>StudienID</strong> | 0..1 | Identifier | Eindeutige Identifikation der Studie, an der der SE-Patient teilgenommen hat. |
-|         <strong>StudienStatus</strong> | 0..1 | code | Aktueller Status der Studie, an der der SE-Patient teilgenommen hat (Abgeschlossen, Fortlaufend). |
-|         <strong>Studienzeitraum</strong> | 0..1 | Extension | Zeitraum, in dem der SE-Patient an der Studie teilgenommen hat. |
-|     <strong>Therapie</strong> | 0..* | BackboneElement | Therapie |
-|         <strong>Therapieempfehlung</strong> | 0..* | code | Gibt an, welche Therapieempfehlung vorliegt. |
-|         <strong>DurchgefuehrteTherapie</strong> | 0..* | code | Tatsaechlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention). |
-|         <strong>StartdatumTherapie</strong> | 0..1 | date | Datum, an dem die Therapie begonnen hat. |
-|         <strong>EnddatumTherapie</strong> | 0..1 | date | Datum, an dem die Therapie beendet wurde. |
-|         <strong>GrundEndeTherapie</strong> | 0..* | code | Gibt an, warum die Therapie beendet wurde (z.B. Nebenwirkungen, keine Wirkung). |
+| <strong>anamneseUndDiagnostik</strong> | 0..* | BackboneElement | Diagnose |
+|     <strong>untersuchungsdatum</strong> | 0..1 | date | Datum der durchgeführten Untersuchung eines SE-Patienten. |
+|     <strong>untersuchungsanlass</strong> | 0..1 | code | Grund fuer den Besuch des SE-Patienten. |
+|     <strong>phaenotypisierung</strong> | 0..* | BackboneElement | Phaenotypisierung |
+|         <strong>hpoTerm</strong> | 0..* | code | Phaenotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC). |
+|         <strong>hpoExcluded</strong> | 0..1 | boolean | Gibt an, ob das HPO-Merkmal explizit ausgeschlossen wurde (negated finding). Abgeleitet aus valueCodeableConcept: LOINC LA9634-2 'Absent' = true, LA9633-4 'Present' = false. Folgt HL7 Phenomics IG Muster. |
+|         <strong>hpoStatus</strong> | 0..1 | code | Status oder Schweregrad des Phaenotyps (Present/Absent/Severity). |
+|         <strong>hpoVersion</strong> | 0..1 | code | Kennzeichnung der genutzten Version des ausgewaehlten HPO-Terms. |
+|         <strong>zeitraumSymptom</strong> | 0..* | BackboneElement | Zeitraum des Symptom |
+|             <strong>zeitraumSymptom</strong> | 0..* | dateTime | Startdatum und bei Bedarf Periode der ersten Symptome/Anzeichen. |
+|             <strong>lebensphase</strong> | 0..* | code | Lebensphase, in der das Symptom aufgetreten ist. |
+|             <strong>alterSymptom</strong> | 0..1 | integer | Alter beim Auftreten der ersten Symptome/Anzeichen. |
+|         <strong>verlaufSymptom</strong> | 0..1 | code | Aenderung des Verlaufs des Symptoms seit der vorherigen Untersuchung. |
+|     <strong>klinischeDiagnose</strong> | 0..* | BackboneElement | Zeitraum der klinischen SE-Diagnose |
+|         <strong>zeitpunktKlinischeDia</strong> | 0..1 | code | Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der klinsichen SE-Diagnose. |
+|         <strong>feststellungsdatumKlinischeDia</strong> | 0..1 | date | Datum, an dem die klinische SE-Diagnose festgestellt wurde. |
+|         <strong>alterKlinischeDia</strong> | 0..1 | integer | Alter, in dem die klinische SE-Diagnose gestellt wurde. |
+|     <strong>genetischeDiagnose</strong> | 0..* | BackboneElement | Zeitraum der genetischen SE-Diagnose |
+|         <strong>zeitpunktGenDia</strong> | 0..1 | code | Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der genetischen SE-Diagnose. |
+|         <strong>feststellungsdatumGenDia</strong> | 0..1 | date | Datum, an dem die genetische SE-Diagnose festgestellt wurde. |
+|         <strong>alterGenDia</strong> | 0..1 | integer | Alter, in dem die genetische SE-Diagnose gestellt wurde. |
+|     <strong>genDiaFehlendePenetranz</strong> | 0..* | code | Gibt an, ob bei einer genetischen Diagnose die Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) fehlt |
+|     <strong>methodeDiagnosestellung</strong> | 0..* | code | Gibt an, welche Methode zur Diagnosestellung verwendet wurde. |
+| <strong>koerperlicheUntersuchung</strong> | 0..* | BackboneElement | Körperliche Untersuchung |
+|     <strong>koerpergewicht</strong> | 0..* | BackboneElement | Körpergewicht |
+|         <strong>koerpergewicht</strong> | 0..1 | decimal | Körpergewicht des SE-Patienten in kg (aus MII ICU Modul). |
+|         <strong>datumKoerpergewicht</strong> | 0..1 | dateTime | Datum der Körpergewichtsmessung. |
+|     <strong>koerpergroesse</strong> | 0..* | BackboneElement | Körpergröße |
+|         <strong>koerpergroesse</strong> | 0..1 | decimal | Körpergröße des SE-Patienten in cm (aus MII ICU Modul). |
+|         <strong>datumKoerpergroesse</strong> | 0..1 | dateTime | Datum der Körpergrößenmessung. |
+|     <strong>bmi</strong> | 0..* | BackboneElement | BMI |
+|         <strong>bmi</strong> | 0..1 | decimal | BMI des SE-Patienten. |
+|         <strong>datumBMI</strong> | 0..1 | dateTime | Datum, an dem der BMI (Body Mass Index) berechnet wurde. |
+|     <strong>kopfumfang</strong> | 0..* | BackboneElement | Kopfumfang |
+|         <strong>kopfumfang</strong> | 0..1 | decimal | Kopfumfang des SE-Patienten in cm. |
+|         <strong>datumKopfumfang</strong> | 0..1 | dateTime | Datum der Kopfumfangsmessung. |
+|     <strong>bauchumfang</strong> | 0..* | BackboneElement | Bauchumfang |
+|         <strong>bauchumfang</strong> | 0..1 | decimal | Bauchumfang des SE-Patienten in cm. |
+|         <strong>datumBauchumfang</strong> | 0..1 | dateTime | Datum der Bauchumfangsmessung. |
+|     <strong>hueftumfang</strong> | 0..* | BackboneElement | Hüftumfang |
+|         <strong>hueftumfang</strong> | 0..1 | decimal | Hüftumfang des SE-Patienten in cm. |
+|         <strong>datumHueftumfang</strong> | 0..1 | dateTime | Datum der Hüftumfangsmessung. |
+|     <strong>blutgruppe</strong> | 0..1 | code | Blutgruppe des SE-Patienten (AB0 und Rhesusfaktor). |
+| <strong>persoenlicheInfosIndexpatient</strong> | 0..* | BackboneElement | Persoenliche Informationen des Indexpatienten |
+|     <strong>tod</strong> | 0..1 | BackboneElement | Tod |
+|         <strong>sterbedatum</strong> | 0..1 | date | Sterbedatum des Indexpatienten. |
+|         <strong>anSEVerstorben</strong> | 0..1 | code | Angabe, ob der Indexpatient an der SE verstorben ist. |
+|         <strong>andereTodesursache</strong> | 0..* | code | Kodierung der Todesursache soweit bekannt (ICD-10-GM, ORPHAcodes). |
+| <strong>familienanamnese</strong> | 0..* | BackboneElement | Familienanamnese |
+|     <strong>verwandtschaftsverhaeltnis</strong> | 0..1 | code | Biologisches Verwandtschaftsverhaeltnis des Familienmitglieds zum Indexpatienten. |
+|     <strong>geschlecht</strong> | 0..1 | code | Geschlecht des Familienmitglieds. |
+|     <strong>gleicheSE</strong> | 0..* | code | Gibt an, ob das Familienmitglied an der gleichen SE leidet wie der Indexpatient. |
+|     <strong>andereSE</strong> | 0..* | code | Gibt an, ob das Familienmitglied an einer anderen SE leidet als der Indexpatient. |
+|     <strong>penetranz</strong> | 0..1 | code | Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) die genetische Diagnose vorliegt. |
+|     <strong>familienmitgliedVerstorben</strong> | 0..1 | code | Gibt an, ob das Familienmitglied verstorben ist. |
+| <strong>therapieForschung</strong> | 0..* | BackboneElement | Therapie und Forschung |
+|     <strong>offLabel</strong> | 0..* | BackboneElement | Off-Label-Gabe |
+|         <strong>offLabelGabe</strong> | 0..1 | code | Gibt an, ob eine Off-Label-Gabe vorliegt. |
+|         <strong>offLabelMedikament</strong> | 0..* | code | Gibt an, welches Medikament Off-Label gegeben wurde. |
+|     <strong>studie</strong> | 0..* | BackboneElement | Studie |
+|         <strong>studienID</strong> | 0..1 | Identifier | Eindeutige Identifikation der Studie, an der der SE-Patient teilgenommen hat. |
+|         <strong>studienStatus</strong> | 0..1 | code | Aktueller Status der Studie, an der der SE-Patient teilgenommen hat (Abgeschlossen, Fortlaufend). |
+|         <strong>studienzeitraum</strong> | 0..1 | Extension | Zeitraum, in dem der SE-Patient an der Studie teilgenommen hat. |
+|     <strong>therapie</strong> | 0..* | BackboneElement | Therapie |
+|         <strong>therapieempfehlung</strong> | 0..* | code | Gibt an, welche Therapieempfehlung vorliegt. |
+|         <strong>durchgefuehrteTherapie</strong> | 0..* | code | Tatsaechlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention). |
+|         <strong>startdatumTherapie</strong> | 0..1 | date | Datum, an dem die Therapie begonnen hat. |
+|         <strong>enddatumTherapie</strong> | 0..1 | date | Datum, an dem die Therapie beendet wurde. |
+|         <strong>grundEndeTherapie</strong> | 0..* | code | Gibt an, warum die Therapie beendet wurde (z.B. Nebenwirkungen, keine Wirkung). |
 <!-- END GENERATED: logical-model-table --></p>
 
 
@@ -446,7 +446,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 2, 2026 09:29+0000">2026-09-02</span>
+          Generated <span title="Wed, Sep 2, 2026 14:14+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

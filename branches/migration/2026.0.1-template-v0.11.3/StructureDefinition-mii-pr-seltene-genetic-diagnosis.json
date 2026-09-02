@@ -115,7 +115,7 @@
   "name" : "MII_PR_Seltene_GeneticDiagnosis",
   "title" : "MII PR SE Genetic Diagnosis",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -293,7 +293,7 @@
       "isSummary" : false,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "Genetische Diagnose"
       },
       {
@@ -1182,7 +1182,7 @@
       "isSummary" : false,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia",
         "comment" : "Feststellungsdatum genetische SE-Diagnose"
       },
       {
@@ -1228,7 +1228,7 @@
       "isSummary" : false,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenDiaFehlendePenetranz",
+        "map" : "anamneseUndDiagnostik.genDiaFehlendePenetranz",
         "comment" : "Genetische Diagnose mit fehlender Penetranz"
       }]
     },
@@ -2862,7 +2862,7 @@
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "ICD-10-GM Diagnose"
       },
       {
@@ -5554,7 +5554,7 @@
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "Orpha-Code Diagnose"
       },
       {
@@ -5891,7 +5891,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "OMIM-Code Diagnose"
       },
       {
@@ -7268,7 +7268,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Untersuchungsdatum"
       },
       {
@@ -7594,7 +7594,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.alterGenDia",
         "comment" : "Alter/Zeitpunkt bei genetischer SE-Diagnose"
       },
       {
@@ -7648,7 +7648,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia",
         "comment" : "Feststellungsdatum genetische SE-Diagnose"
       },
       {
@@ -11087,7 +11087,7 @@
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.MethodeDiagnosestellung",
+        "map" : "anamneseUndDiagnostik.methodeDiagnosestellung",
         "comment" : "Methode der Diagnosestellung"
       },
       {
@@ -11470,7 +11470,7 @@
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "Genetische Diagnose"
       }]
     },
@@ -11484,7 +11484,7 @@
       "path" : "Condition.extension.value[x]",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia",
         "comment" : "Feststellungsdatum genetische SE-Diagnose"
       }]
     },
@@ -11503,7 +11503,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenDiaFehlendePenetranz",
+        "map" : "anamneseUndDiagnostik.genDiaFehlendePenetranz",
         "comment" : "Genetische Diagnose mit fehlender Penetranz"
       }]
     },
@@ -11538,7 +11538,7 @@
       "sliceName" : "icd10-gm",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "ICD-10-GM Diagnose"
       }]
     },
@@ -11548,7 +11548,7 @@
       "sliceName" : "orphanet",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "Orpha-Code Diagnose"
       }]
     },
@@ -11566,7 +11566,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "OMIM-Code Diagnose"
       }]
     },
@@ -11601,7 +11601,7 @@
       "path" : "Condition.encounter",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Untersuchungsdatum"
       }]
     },
@@ -11610,7 +11610,7 @@
       "path" : "Condition.onset[x]",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.alterGenDia",
         "comment" : "Alter/Zeitpunkt bei genetischer SE-Diagnose"
       }]
     },
@@ -11623,7 +11623,7 @@
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia",
         "comment" : "Feststellungsdatum genetische SE-Diagnose"
       }]
     },
@@ -11661,7 +11661,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.MethodeDiagnosestellung",
+        "map" : "anamneseUndDiagnostik.methodeDiagnosestellung",
         "comment" : "Methode der Diagnosestellung"
       }]
     },

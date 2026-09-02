@@ -30,7 +30,7 @@
   <name value="MII_PR_Seltene_Bodymassindex"/>
   <title value="Body Mass Index (BMI) of the patient"/>
   <status value="active"/>
-  <date value="2026-09-02T09:29:03+00:00"/>
+  <date value="2026-09-02T14:14:40+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -169,7 +169,7 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.BMI"/>
+        <map value="Messbefunde.bmi"/>
         <comment value="BMI"/>
       </mapping>
       <mapping>
@@ -1154,7 +1154,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.BMI"/>
+        <map value="Messbefunde.bmi"/>
         <comment value="BMI-Code (LOINC 39156-5)"/>
       </mapping>
       <mapping>
@@ -1354,7 +1354,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.BMI.DatumBMI"/>
+        <map value="Messbefunde.bmi.datumBMI"/>
         <comment value="Datum des BMI"/>
       </mapping>
       <mapping>
@@ -1606,7 +1606,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.BMI.BMI"/>
+        <map value="Messbefunde.bmi.bmi"/>
         <comment value="BMI SE-Patient"/>
       </mapping>
       <mapping>
@@ -2940,7 +2940,7 @@
       <path value="Observation"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.BMI"/>
+        <map value="Messbefunde.bmi"/>
         <comment value="BMI"/>
       </mapping>
     </element>
@@ -2980,7 +2980,7 @@
       </patternCodeableConcept>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.BMI"/>
+        <map value="Messbefunde.bmi"/>
         <comment value="BMI-Code (LOINC 39156-5)"/>
       </mapping>
     </element>
@@ -3005,7 +3005,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.BMI.DatumBMI"/>
+        <map value="Messbefunde.bmi.datumBMI"/>
         <comment value="Datum des BMI"/>
       </mapping>
     </element>
@@ -3020,7 +3020,7 @@
       <path value="Observation.value[x].value"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.BMI.BMI"/>
+        <map value="Messbefunde.bmi.bmi"/>
         <comment value="BMI SE-Patient"/>
       </mapping>
     </element>

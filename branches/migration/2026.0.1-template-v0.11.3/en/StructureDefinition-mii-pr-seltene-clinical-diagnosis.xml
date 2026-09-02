@@ -131,7 +131,7 @@
   <name value="MII_PR_Seltene_ClinicalDiagnosis"/>
   <title value="MII PR SE Clinical Diagnosis"/>
   <status value="active"/>
-  <date value="2026-09-02T09:29:03+00:00"/>
+  <date value="2026-09-02T14:14:40+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -283,7 +283,7 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.KlinischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.klinischeDiagnose"/>
         <comment value="Klinische Diagnose"/>
       </mapping>
       <mapping>
@@ -1089,7 +1089,7 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia"/>
+        <map value="anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia"/>
         <comment value="Feststellungsdatum klinische SE-Diagnose"/>
       </mapping>
       <mapping>
@@ -2481,7 +2481,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.KlinischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.klinischeDiagnose"/>
         <comment value="ICD-10-GM Diagnose"/>
       </mapping>
       <mapping>
@@ -4951,7 +4951,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.KlinischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.klinischeDiagnose"/>
         <comment value="Orpha-Code Diagnose"/>
       </mapping>
       <mapping>
@@ -5282,7 +5282,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.hpoTerm"/>
         <comment value="HPO-Term des Symptoms"/>
       </mapping>
       <mapping>
@@ -6474,7 +6474,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Untersuchungsdatum"/>
       </mapping>
       <mapping>
@@ -6742,7 +6742,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia"/>
+        <map value="anamneseUndDiagnostik.klinischeDiagnose.alterKlinischeDia"/>
         <comment value="Alter/Zeitpunkt bei klinischer SE-Diagnose"/>
       </mapping>
       <mapping>
@@ -6795,7 +6795,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia"/>
+        <map value="anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia"/>
         <comment value="Feststellungsdatum klinische SE-Diagnose"/>
       </mapping>
       <mapping>
@@ -10072,7 +10072,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.hpoTerm"/>
         <comment value="Unterstützende HPO-Symptome"/>
       </mapping>
       <mapping>
@@ -10279,7 +10279,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="Verweis auf Phänotypisierung"/>
       </mapping>
       <mapping>
@@ -10339,7 +10339,7 @@
       <path value="Condition"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.KlinischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.klinischeDiagnose"/>
         <comment value="Klinische Diagnose"/>
       </mapping>
     </element>
@@ -10351,7 +10351,7 @@
       <path value="Condition.extension.value[x]"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia"/>
+        <map value="anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia"/>
         <comment value="Feststellungsdatum klinische SE-Diagnose"/>
       </mapping>
     </element>
@@ -10369,7 +10369,7 @@
       <sliceName value="icd10-gm"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.KlinischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.klinischeDiagnose"/>
         <comment value="ICD-10-GM Diagnose"/>
       </mapping>
     </element>
@@ -10378,7 +10378,7 @@
       <sliceName value="orphanet"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.KlinischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.klinischeDiagnose"/>
         <comment value="Orpha-Code Diagnose"/>
       </mapping>
     </element>
@@ -10400,7 +10400,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.hpoTerm"/>
         <comment value="HPO-Term des Symptoms"/>
       </mapping>
     </element>
@@ -10430,7 +10430,7 @@
       <path value="Condition.encounter"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Untersuchungsdatum"/>
       </mapping>
     </element>
@@ -10438,7 +10438,7 @@
       <path value="Condition.onset[x]"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia"/>
+        <map value="anamneseUndDiagnostik.klinischeDiagnose.alterKlinischeDia"/>
         <comment value="Alter/Zeitpunkt bei klinischer SE-Diagnose"/>
       </mapping>
     </element>
@@ -10450,7 +10450,7 @@
       </type>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia"/>
+        <map value="anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia"/>
         <comment value="Feststellungsdatum klinische SE-Diagnose"/>
       </mapping>
     </element>
@@ -10490,7 +10490,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.hpoTerm"/>
         <comment value="Unterstützende HPO-Symptome"/>
       </mapping>
     </element>
@@ -10511,7 +10511,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="Verweis auf Phänotypisierung"/>
       </mapping>
     </element>

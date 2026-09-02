@@ -156,7 +156,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
   "name" : "MII_PR_Seltene_Familienanamnese",
   "title" : "MII PR SE Familienanamnese",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -207,7 +207,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "path" : "FamilyMemberHistory",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese",
+        "map" : "familienanamnese",
         "comment" : "Familienanamnese"
       }]
     },
@@ -231,7 +231,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.GleicheSE",
+        "map" : "familienanamnese.gleicheSE",
         "comment" : "Gleiche SE"
       }]
     },
@@ -258,7 +258,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "path" : "FamilyMemberHistory.relationship",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.Verwandtschaftsverhaeltnis",
+        "map" : "familienanamnese.verwandtschaftsverhaeltnis",
         "comment" : "Verwandtschaftsverhältnis"
       }]
     },
@@ -267,7 +267,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "path" : "FamilyMemberHistory.sex",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.Geschlecht",
+        "map" : "familienanamnese.geschlecht",
         "comment" : "Geschlecht"
       }]
     },
@@ -305,7 +305,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.FamilienmitgliedVerstorben",
+        "map" : "familienanamnese.familienmitgliedVerstorben",
         "comment" : "Familienmitglied verstorben"
       }]
     },
@@ -320,7 +320,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.FamilienmitgliedVerstorben",
+        "map" : "familienanamnese.familienmitgliedVerstorben",
         "comment" : "Sterbedatum"
       }]
     },
@@ -335,7 +335,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.FamilienmitgliedVerstorben",
+        "map" : "familienanamnese.familienmitgliedVerstorben",
         "comment" : "Alter bei Tod"
       }]
     },
@@ -344,7 +344,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "path" : "FamilyMemberHistory.reasonCode",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Grund/Erkrankung des Familienmitglieds"
       }]
     },
@@ -363,7 +363,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.Penetranz",
+        "map" : "familienanamnese.penetranz",
         "comment" : "Penetranz"
       }]
     },
@@ -373,7 +373,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "sliceName" : "icd10-gm",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Andere SE (ICD-10-GM)"
       }]
     },
@@ -383,7 +383,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "sliceName" : "sct",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Andere SE (SNOMED CT)"
       }]
     },
@@ -393,7 +393,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "sliceName" : "orphanet",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Andere SE (Orpha-Code)"
       }]
     },
@@ -433,7 +433,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.TodDurchSE",
+        "map" : "familienanamnese.TodDurchSE",
         "comment" : "Tod durch seltene Erkrankung"
       }]
     },

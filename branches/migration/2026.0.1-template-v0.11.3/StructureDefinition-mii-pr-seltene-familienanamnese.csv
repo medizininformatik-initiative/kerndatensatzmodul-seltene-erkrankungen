@@ -1,7 +1,7 @@
 "Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: Mapping FHIR zu Seltene Erkrankungen Logical Model","Mapping: MII KDS Mapping"
 "FamilyMemberHistory","FamilyMemberHistory","","","",0,*,"","","","null {[]} {[]}
 ","Information about patient's relatives, relevant for patient","Significant health conditions for a person related to the patient relevant in the context of care for the patient.","","","","","","","","","",,,,,"",,,,"FamilyMemberHistory",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
-dom-4:If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated {contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()}dom-3:If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource {contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()}dom-6:A resource should have narrative for robust management {text.`div`.exists()}dom-5:If a resource is contained in another resource, it SHALL NOT have a security label {contained.meta.security.empty()}fhs-2:Can only have estimatedAge if age[x] is present {age.exists() or estimatedAge.empty()}fhs-1:Can have age[x] or born[x], but not both {age.empty() or born.empty()}","Familienanamnese","mide-dataelement-1740"
+dom-4:If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated {contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()}dom-3:If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource {contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()}dom-6:A resource should have narrative for robust management {text.`div`.exists()}dom-5:If a resource is contained in another resource, it SHALL NOT have a security label {contained.meta.security.empty()}fhs-2:Can only have estimatedAge if age[x] is present {age.exists() or estimatedAge.empty()}fhs-1:Can have age[x] or born[x], but not both {age.empty() or born.empty()}","familienanamnese","mide-dataelement-1740"
 "FamilyMemberHistory.id","FamilyMemberHistory.id","","","",0,1,"","","Y","id {[]} {[]}
 ","Logical id of this artifact","The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.","The only time that a resource does not have an id is when it is being submitted to the server using a create operation.","","","","","","","","",,,,,"",,,,"Resource.id",0,1,"",""
 "FamilyMemberHistory.meta","FamilyMemberHistory.meta","","","",0,1,"","","Y","Meta {[]} {[]}
@@ -32,7 +32,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "FamilyMemberHistory.extension:vonSEBetroffen","FamilyMemberHistory.extension","vonSEBetroffen","","",1,1,"Y","","","Extension {[CanonicalType[https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen]]} {[]}
 ","Gibt an, ob das Familienmitglied von der gleichen seltenen Erkrankung betroffen ist","Extension zur Angabe, ob ein Familienmitglied von der gleichen seltenen Erkrankung betroffen ist wie der Patient","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Familienanamnese.GleicheSE"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","familienanamnese.gleicheSE"
 "FamilyMemberHistory.modifierExtension","FamilyMemberHistory.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
@@ -77,7 +77,7 @@ ref-1:SHALL have a contained resource if a local reference is provided {referenc
 "FamilyMemberHistory.relationship","FamilyMemberHistory.relationship","","","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","Verwandtschaftsbeziehung","Die Art der Verwandtschaft zum Patienten","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","","","","","","","","",,"example","The nature of the relationship between the patient and the related person being described in the family member history.","http://terminology.hl7.org/ValueSet/v3-FamilyMember","",,,,"FamilyMemberHistory.relationship",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","Familienanamnese.Verwandtschaftsverhaeltnis"
+","familienanamnese.verwandtschaftsverhaeltnis"
 "FamilyMemberHistory.relationship.id","FamilyMemberHistory.relationship.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
 "FamilyMemberHistory.relationship.extension","FamilyMemberHistory.relationship.extension","","extensions
@@ -153,7 +153,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "FamilyMemberHistory.sex","FamilyMemberHistory.sex","","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","Geschlecht","Das Geschlecht des Familienangehörigen","This element should ideally reflect whether the individual is genetically male or female.  However, as reported information based on the knowledge of the patient or reporting friend/relative, there may be situations where the reported sex might not be totally accurate.  E.g. 'Aunt Sue' might be XY rather than XX.  Questions soliciting this information should be phrased to encourage capture of genetic sex where known.  However, systems performing analysis should also allow for the possibility of imprecision with this element.","Not all relationship codes imply sex and the relative's sex can be relevant for risk assessments.","","","","","","","",,"extensible","Codes describing the sex assigned at birth as documented on the birth registration.","http://hl7.org/fhir/ValueSet/administrative-gender","",,,,"FamilyMemberHistory.sex",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","Familienanamnese.Geschlecht"
+","familienanamnese.geschlecht"
 "FamilyMemberHistory.born[x]","FamilyMemberHistory.born[x]","","","",0,1,"Y","","","Period {[]} {[]}
 date {[]} {[]}string {[]} {[]}","(approximate) date of birth","The actual or approximate date of birth of the relative.","","Allows calculation of the relative's age.","","","","","","","",,,,,"",,,,"FamilyMemberHistory.born[x]",0,1,"ele-1
 fhs-1","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -174,19 +174,19 @@ Age {[]} {[]}Range {[]} {[]}date {[]} {[]}string {[]} {[]}","Dead? How old/when?
 "FamilyMemberHistory.deceased[x]:deceasedBoolean","FamilyMemberHistory.deceased[x]","deceasedBoolean","","",0,1,"","","Y","boolean {[]} {[]}
 ","Dead? How old/when?","Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.","","","","","","","","","",,,,,"",,,,"FamilyMemberHistory.deceased[x]",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","Familienanamnese.FamilienmitgliedVerstorben"
+","familienanamnese.familienmitgliedVerstorben"
 "FamilyMemberHistory.deceased[x]:deceasedDate","FamilyMemberHistory.deceased[x]","deceasedDate","","",0,1,"","","Y","date {[]} {[]}
 ","Dead? How old/when?","Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.","","","","","","","","","",,,,,"",,,,"FamilyMemberHistory.deceased[x]",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","Familienanamnese.FamilienmitgliedVerstorben"
+","familienanamnese.familienmitgliedVerstorben"
 "FamilyMemberHistory.deceased[x]:deceasedAge","FamilyMemberHistory.deceased[x]","deceasedAge","","",0,1,"","","Y","Age {[]} {[]}
 ","Dead? How old/when?","Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.","","","","","","","","","",,,,,"",,,,"FamilyMemberHistory.deceased[x]",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","Familienanamnese.FamilienmitgliedVerstorben"
+","familienanamnese.familienmitgliedVerstorben"
 "FamilyMemberHistory.reasonCode","FamilyMemberHistory.reasonCode","","","",0,*,"Y","","Y","CodeableConcept {[]} {[]}
 ","Grund der Erhebung","Der Grund für die Erhebung dieser Familienanamnese","Textual reasons can be captured using reasonCode.text.","","","","","","","","",,"example","Codes indicating why the family member history was done.","http://hl7.org/fhir/ValueSet/clinical-findings","",,,,"FamilyMemberHistory.reasonCode",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","Familienanamnese.AndereSE"
+","familienanamnese.andereSE"
 "FamilyMemberHistory.reasonCode.id","FamilyMemberHistory.reasonCode.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
 "FamilyMemberHistory.reasonCode.extension","FamilyMemberHistory.reasonCode.extension","","extensions
@@ -363,7 +363,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "FamilyMemberHistory.condition.extension:penetrance","FamilyMemberHistory.condition.extension","penetrance","","",0,1,"Y","","","Extension {[CanonicalType[https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance]]} {[]}
 ","Penetranz der genetischen Variante beim Familienmitglied","Angabe zur Penetranz der genetischen Variante bei der Erkrankung des Familienmitglieds","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Familienanamnese.Penetranz"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","familienanamnese.penetranz"
 "FamilyMemberHistory.condition.modifierExtension","FamilyMemberHistory.condition.modifierExtension","","extensions
 user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 ","Extensions that cannot be ignored even if unrecognized","May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
@@ -393,7 +393,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
   <system value=""http://fhir.de/CodeSystem/bfarm/icd-10-gm""/>
 </valueCoding>","","","",,"required","","https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm","",,,,"CodeableConcept.coding",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","Familienanamnese.AndereSE"
+","familienanamnese.andereSE"
 "FamilyMemberHistory.condition.code.coding:icd10-gm.id","FamilyMemberHistory.condition.code.coding.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
 "FamilyMemberHistory.condition.code.coding:icd10-gm.extension","FamilyMemberHistory.condition.code.coding.extension","","extensions
@@ -477,7 +477,7 @@ Hierdurch wird der Tatsache Rechnung getragen, dass jede der jährlich neu ersch
   <system value=""http://snomed.info/sct""/>
 </valueCoding>","","","",,"required","","https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct","",,,,"CodeableConcept.coding",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","Familienanamnese.AndereSE"
+","familienanamnese.andereSE"
 "FamilyMemberHistory.condition.code.coding:sct.id","FamilyMemberHistory.condition.code.coding.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
 "FamilyMemberHistory.condition.code.coding:sct.extension","FamilyMemberHistory.condition.code.coding.extension","","extensions
@@ -511,7 +511,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
   <system value=""http://www.orpha.net""/>
 </valueCoding>","","","",,"required","","https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet","",,,,"CodeableConcept.coding",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","Familienanamnese.AndereSE"
+","familienanamnese.andereSE"
 "FamilyMemberHistory.condition.code.coding:orphanet.id","FamilyMemberHistory.condition.code.coding.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
 "FamilyMemberHistory.condition.code.coding:orphanet.extension","FamilyMemberHistory.condition.code.coding.extension","","extensions
@@ -579,7 +579,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "FamilyMemberHistory.condition.contributedToDeath","FamilyMemberHistory.condition.contributedToDeath","","","",0,1,"Y","","","boolean {[]} {[]}
 ","Tod durch diese Erkrankung","Gibt an, ob diese Erkrankung zum Tod des Familienmitglieds beigetragen hat. Relevant für die Dokumentation von Todesfällen durch seltene Erkrankungen in der Familie.","","","","","","","","","",,,,,"",,,,"FamilyMemberHistory.condition.contributedToDeath",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","Familienanamnese.TodDurchSE"
+","familienanamnese.TodDurchSE"
 "FamilyMemberHistory.condition.onset[x]","FamilyMemberHistory.condition.onset[x]","","","",0,1,"Y","","","Age {[]} {[]}
 Range {[]} {[]}Period {[]} {[]}string {[]} {[]}","When condition first manifested","Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.","","Age of onset of a condition in relatives is predictive of risk for the patient.","","","","","","","",,,,,"","type:$this}
 ","",,"open","FamilyMemberHistory.condition.onset[x]",0,1,"ele-1

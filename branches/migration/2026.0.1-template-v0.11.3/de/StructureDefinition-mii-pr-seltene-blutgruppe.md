@@ -125,7 +125,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Blutgruppe",
   "title" : "MII PR SE Blutgruppe",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -197,7 +197,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "Observation",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe"
       }]
     },
@@ -375,7 +375,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe"
       }]
     },
@@ -404,7 +404,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe (LOINC)"
       }]
     },
@@ -423,7 +423,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe (SNOMED CT)"
       }]
     },
@@ -439,7 +439,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe (Text)"
       }]
     }]

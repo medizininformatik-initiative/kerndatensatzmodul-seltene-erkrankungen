@@ -179,7 +179,7 @@
   <name value="MII_PR_Seltene_GeneticDiagnosis"/>
   <title value="MII PR SE Genetic Diagnosis"/>
   <status value="active"/>
-  <date value="2026-09-02T09:29:03+00:00"/>
+  <date value="2026-09-02T14:14:40+00:00"/>
   <publisher value="Medizininformatik Initiative">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
@@ -347,7 +347,7 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenetischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.genetischeDiagnose"/>
         <comment value="Genetische Diagnose"/>
       </mapping>
       <mapping>
@@ -1187,7 +1187,7 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia"/>
+        <map value="anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia"/>
         <comment value="Feststellungsdatum genetische SE-Diagnose"/>
       </mapping>
       <mapping>
@@ -1232,7 +1232,7 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenDiaFehlendePenetranz"/>
+        <map value="anamneseUndDiagnostik.genDiaFehlendePenetranz"/>
         <comment value="Genetische Diagnose mit fehlender Penetranz"/>
       </mapping>
     </element>
@@ -2763,7 +2763,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenetischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.genetischeDiagnose"/>
         <comment value="ICD-10-GM Diagnose"/>
       </mapping>
       <mapping>
@@ -5335,7 +5335,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenetischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.genetischeDiagnose"/>
         <comment value="Orpha-Code Diagnose"/>
       </mapping>
       <mapping>
@@ -5662,7 +5662,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenetischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.genetischeDiagnose"/>
         <comment value="OMIM-Code Diagnose"/>
       </mapping>
       <mapping>
@@ -6956,7 +6956,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Untersuchungsdatum"/>
       </mapping>
       <mapping>
@@ -7258,7 +7258,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia"/>
+        <map value="anamneseUndDiagnostik.genetischeDiagnose.alterGenDia"/>
         <comment value="Alter/Zeitpunkt bei genetischer SE-Diagnose"/>
       </mapping>
       <mapping>
@@ -7311,7 +7311,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia"/>
+        <map value="anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia"/>
         <comment value="Feststellungsdatum genetische SE-Diagnose"/>
       </mapping>
       <mapping>
@@ -10620,7 +10620,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.MethodeDiagnosestellung"/>
+        <map value="anamneseUndDiagnostik.methodeDiagnosestellung"/>
         <comment value="Methode der Diagnosestellung"/>
       </mapping>
       <mapping>
@@ -10979,7 +10979,7 @@
       </constraint>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenetischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.genetischeDiagnose"/>
         <comment value="Genetische Diagnose"/>
       </mapping>
     </element>
@@ -10991,7 +10991,7 @@
       <path value="Condition.extension.value[x]"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia"/>
+        <map value="anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia"/>
         <comment value="Feststellungsdatum genetische SE-Diagnose"/>
       </mapping>
     </element>
@@ -11009,7 +11009,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenDiaFehlendePenetranz"/>
+        <map value="anamneseUndDiagnostik.genDiaFehlendePenetranz"/>
         <comment value="Genetische Diagnose mit fehlender Penetranz"/>
       </mapping>
     </element>
@@ -11040,7 +11040,7 @@
       <sliceName value="icd10-gm"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenetischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.genetischeDiagnose"/>
         <comment value="ICD-10-GM Diagnose"/>
       </mapping>
     </element>
@@ -11049,7 +11049,7 @@
       <sliceName value="orphanet"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenetischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.genetischeDiagnose"/>
         <comment value="Orpha-Code Diagnose"/>
       </mapping>
     </element>
@@ -11066,7 +11066,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenetischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.genetischeDiagnose"/>
         <comment value="OMIM-Code Diagnose"/>
       </mapping>
     </element>
@@ -11096,7 +11096,7 @@
       <path value="Condition.encounter"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Untersuchungsdatum"/>
       </mapping>
     </element>
@@ -11104,7 +11104,7 @@
       <path value="Condition.onset[x]"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia"/>
+        <map value="anamneseUndDiagnostik.genetischeDiagnose.alterGenDia"/>
         <comment value="Alter/Zeitpunkt bei genetischer SE-Diagnose"/>
       </mapping>
     </element>
@@ -11116,7 +11116,7 @@
       </type>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia"/>
+        <map value="anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia"/>
         <comment value="Feststellungsdatum genetische SE-Diagnose"/>
       </mapping>
     </element>
@@ -11148,7 +11148,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.MethodeDiagnosestellung"/>
+        <map value="anamneseUndDiagnostik.methodeDiagnosestellung"/>
         <comment value="Methode der Diagnosestellung"/>
       </mapping>
     </element>

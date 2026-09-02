@@ -11,7 +11,7 @@
   "name" : "MII_PR_Seltene_Bodymassindex",
   "title" : "Body Mass Index (BMI) of the patient",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -154,7 +154,7 @@
       "isSummary" : false,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.BMI",
+        "map" : "Messbefunde.bmi",
         "comment" : "BMI"
       },
       {
@@ -1175,7 +1175,7 @@
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.BMI",
+        "map" : "Messbefunde.bmi",
         "comment" : "BMI-Code (LOINC 39156-5)"
       },
       {
@@ -1379,7 +1379,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.BMI.DatumBMI",
+        "map" : "Messbefunde.bmi.datumBMI",
         "comment" : "Datum des BMI"
       },
       {
@@ -1638,7 +1638,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.BMI.BMI",
+        "map" : "Messbefunde.bmi.bmi",
         "comment" : "BMI SE-Patient"
       },
       {
@@ -3018,7 +3018,7 @@
       "path" : "Observation",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.BMI",
+        "map" : "Messbefunde.bmi",
         "comment" : "BMI"
       }]
     },
@@ -3064,7 +3064,7 @@
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.BMI",
+        "map" : "Messbefunde.bmi",
         "comment" : "BMI-Code (LOINC 39156-5)"
       }]
     },
@@ -3091,7 +3091,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.BMI.DatumBMI",
+        "map" : "Messbefunde.bmi.datumBMI",
         "comment" : "Datum des BMI"
       }]
     },
@@ -3108,7 +3108,7 @@
       "path" : "Observation.value[x].value",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.BMI.BMI",
+        "map" : "Messbefunde.bmi.bmi",
         "comment" : "BMI SE-Patient"
       }]
     },

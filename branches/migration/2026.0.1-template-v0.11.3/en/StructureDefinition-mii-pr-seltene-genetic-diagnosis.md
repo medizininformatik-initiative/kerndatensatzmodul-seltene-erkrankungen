@@ -165,7 +165,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
   "name" : "MII_PR_Seltene_GeneticDiagnosis",
   "title" : "MII PR SE Genetic Diagnosis",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -248,7 +248,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "Genetische Diagnose"
       }]
     },
@@ -262,7 +262,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "path" : "Condition.extension.value[x]",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia",
         "comment" : "Feststellungsdatum genetische SE-Diagnose"
       }]
     },
@@ -281,7 +281,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenDiaFehlendePenetranz",
+        "map" : "anamneseUndDiagnostik.genDiaFehlendePenetranz",
         "comment" : "Genetische Diagnose mit fehlender Penetranz"
       }]
     },
@@ -316,7 +316,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "sliceName" : "icd10-gm",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "ICD-10-GM Diagnose"
       }]
     },
@@ -326,7 +326,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "sliceName" : "orphanet",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "Orpha-Code Diagnose"
       }]
     },
@@ -344,7 +344,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "OMIM-Code Diagnose"
       }]
     },
@@ -379,7 +379,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "path" : "Condition.encounter",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Untersuchungsdatum"
       }]
     },
@@ -388,7 +388,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "path" : "Condition.onset[x]",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.alterGenDia",
         "comment" : "Alter/Zeitpunkt bei genetischer SE-Diagnose"
       }]
     },
@@ -401,7 +401,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia",
         "comment" : "Feststellungsdatum genetische SE-Diagnose"
       }]
     },
@@ -439,7 +439,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.MethodeDiagnosestellung",
+        "map" : "anamneseUndDiagnostik.methodeDiagnosestellung",
         "comment" : "Methode der Diagnosestellung"
       }]
     },

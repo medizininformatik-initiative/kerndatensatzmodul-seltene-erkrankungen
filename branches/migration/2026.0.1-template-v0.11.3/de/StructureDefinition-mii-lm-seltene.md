@@ -85,7 +85,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
   "name" : "MII_LM_SE",
   "title" : "MII LM SE",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -129,8 +129,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       "definition" : "MII LogicalModel Modul Seltene Erkraknungen"
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik",
-      "path" : "Seltene.AnamneseUndDiagnostik",
+      "id" : "Seltene.anamneseUndDiagnostik",
+      "path" : "Seltene.anamneseUndDiagnostik",
       "short" : "Diagnose",
       "definition" : "Diagnose",
       "min" : 0,
@@ -140,8 +140,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.Untersuchungsdatum",
-      "path" : "Seltene.AnamneseUndDiagnostik.Untersuchungsdatum",
+      "id" : "Seltene.anamneseUndDiagnostik.untersuchungsdatum",
+      "path" : "Seltene.anamneseUndDiagnostik.untersuchungsdatum",
       "short" : "Untersuchungsdatum",
       "definition" : "Datum der durchgeführten Untersuchung eines SE-Patienten.",
       "min" : 0,
@@ -151,8 +151,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.Untersuchungsanlass",
-      "path" : "Seltene.AnamneseUndDiagnostik.Untersuchungsanlass",
+      "id" : "Seltene.anamneseUndDiagnostik.untersuchungsanlass",
+      "path" : "Seltene.anamneseUndDiagnostik.untersuchungsanlass",
       "short" : "Untersuchungsanlass",
       "definition" : "Grund fuer den Besuch des SE-Patienten.",
       "min" : 0,
@@ -162,8 +162,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung",
-      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung",
+      "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung",
+      "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung",
       "short" : "Phaenotypisierung",
       "definition" : "Phaenotypisierung",
       "min" : 0,
@@ -173,8 +173,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
-      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+      "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
+      "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
       "short" : "HPO-Term des Symptoms",
       "definition" : "Phaenotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC).",
       "min" : 0,
@@ -184,8 +184,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded",
-      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded",
+      "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoExcluded",
+      "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoExcluded",
       "short" : "HPO-Term ausgeschlossen",
       "definition" : "Gibt an, ob das HPO-Merkmal explizit ausgeschlossen wurde (negated finding). Abgeleitet aus valueCodeableConcept: LOINC LA9634-2 'Absent' = true, LA9633-4 'Present' = false. Folgt HL7 Phenomics IG Muster.",
       "min" : 0,
@@ -195,8 +195,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
-      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
+      "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoStatus",
+      "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoStatus",
       "short" : "Status HPO-Term",
       "definition" : "Status oder Schweregrad des Phaenotyps (Present/Absent/Severity).",
       "min" : 0,
@@ -206,8 +206,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOVersion",
-      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOVersion",
+      "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoVersion",
+      "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoVersion",
       "short" : "Version HPO-Term",
       "definition" : "Kennzeichnung der genutzten Version des ausgewaehlten HPO-Terms.",
       "min" : 0,
@@ -217,8 +217,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom",
-      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom",
+      "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom",
+      "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom",
       "short" : "Zeitraum des Symptom",
       "definition" : "Zeitraum des Symptom",
       "min" : 0,
@@ -228,8 +228,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
-      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+      "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
+      "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
       "short" : "Startdatum des Symptoms",
       "definition" : "Startdatum und bei Bedarf Periode der ersten Symptome/Anzeichen.",
       "min" : 0,
@@ -239,8 +239,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase",
-      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase",
+      "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase",
+      "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase",
       "short" : "Lebensphase Symptom",
       "definition" : "Lebensphase, in der das Symptom aufgetreten ist.",
       "min" : 0,
@@ -250,8 +250,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom",
-      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom",
+      "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.alterSymptom",
+      "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.alterSymptom",
       "short" : "Alter Symptom",
       "definition" : "Alter beim Auftreten der ersten Symptome/Anzeichen.",
       "min" : 0,
@@ -261,8 +261,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom",
-      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom",
+      "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom",
+      "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom",
       "short" : "Verlauf Symptom",
       "definition" : "Aenderung des Verlaufs des Symptoms seit der vorherigen Untersuchung.",
       "min" : 0,
@@ -272,8 +272,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose",
-      "path" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose",
+      "id" : "Seltene.anamneseUndDiagnostik.klinischeDiagnose",
+      "path" : "Seltene.anamneseUndDiagnostik.klinischeDiagnose",
       "short" : "Zeitraum der klinischen SE-Diagnose",
       "definition" : "Zeitraum der klinischen SE-Diagnose",
       "min" : 0,
@@ -283,8 +283,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.ZeitpunktKlinischeDia",
-      "path" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.ZeitpunktKlinischeDia",
+      "id" : "Seltene.anamneseUndDiagnostik.klinischeDiagnose.zeitpunktKlinischeDia",
+      "path" : "Seltene.anamneseUndDiagnostik.klinischeDiagnose.zeitpunktKlinischeDia",
       "short" : "Zeitpunkt klinische SE-Diagnose",
       "definition" : "Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der klinsichen SE-Diagnose.",
       "min" : 0,
@@ -294,8 +294,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
-      "path" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+      "id" : "Seltene.anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia",
+      "path" : "Seltene.anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia",
       "short" : "Feststellungsdatum klinische SE-Diagnose",
       "definition" : "Datum, an dem die klinische SE-Diagnose festgestellt wurde.",
       "min" : 0,
@@ -305,8 +305,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia",
-      "path" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia",
+      "id" : "Seltene.anamneseUndDiagnostik.klinischeDiagnose.alterKlinischeDia",
+      "path" : "Seltene.anamneseUndDiagnostik.klinischeDiagnose.alterKlinischeDia",
       "short" : "Alter bei klinischer SE-Diagnose",
       "definition" : "Alter, in dem die klinische SE-Diagnose gestellt wurde.",
       "min" : 0,
@@ -316,8 +316,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose",
-      "path" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose",
+      "id" : "Seltene.anamneseUndDiagnostik.genetischeDiagnose",
+      "path" : "Seltene.anamneseUndDiagnostik.genetischeDiagnose",
       "short" : "Zeitraum der genetischen SE-Diagnose",
       "definition" : "Zeitraum der genetischen SE-Diagnose",
       "min" : 0,
@@ -327,8 +327,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.ZeitpunktGenDia",
-      "path" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.ZeitpunktGenDia",
+      "id" : "Seltene.anamneseUndDiagnostik.genetischeDiagnose.zeitpunktGenDia",
+      "path" : "Seltene.anamneseUndDiagnostik.genetischeDiagnose.zeitpunktGenDia",
       "short" : "Zeitpunkt genetische SE-Diagnose",
       "definition" : "Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der genetischen SE-Diagnose.",
       "min" : 0,
@@ -338,8 +338,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
-      "path" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+      "id" : "Seltene.anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia",
+      "path" : "Seltene.anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia",
       "short" : "Feststellungsdatum genetische SE-Diagnose",
       "definition" : "Datum, an dem die genetische SE-Diagnose festgestellt wurde.",
       "min" : 0,
@@ -349,8 +349,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
-      "path" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
+      "id" : "Seltene.anamneseUndDiagnostik.genetischeDiagnose.alterGenDia",
+      "path" : "Seltene.anamneseUndDiagnostik.genetischeDiagnose.alterGenDia",
       "short" : "Alter bei genetischer SE-Diagnose",
       "definition" : "Alter, in dem die genetische SE-Diagnose gestellt wurde.",
       "min" : 0,
@@ -360,8 +360,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.GenDiaFehlendePenetranz",
-      "path" : "Seltene.AnamneseUndDiagnostik.GenDiaFehlendePenetranz",
+      "id" : "Seltene.anamneseUndDiagnostik.genDiaFehlendePenetranz",
+      "path" : "Seltene.anamneseUndDiagnostik.genDiaFehlendePenetranz",
       "short" : "Genetische Diagnose mit fehlender Penetranz",
       "definition" : "Gibt an, ob bei einer genetischen Diagnose die Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) fehlt",
       "min" : 0,
@@ -371,8 +371,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.AnamneseUndDiagnostik.MethodeDiagnosestellung",
-      "path" : "Seltene.AnamneseUndDiagnostik.MethodeDiagnosestellung",
+      "id" : "Seltene.anamneseUndDiagnostik.methodeDiagnosestellung",
+      "path" : "Seltene.anamneseUndDiagnostik.methodeDiagnosestellung",
       "short" : "Methode der Diagnosestellung",
       "definition" : "Gibt an, welche Methode zur Diagnosestellung verwendet wurde.",
       "min" : 0,
@@ -382,8 +382,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung",
-      "path" : "Seltene.KoerperlicheUntersuchung",
+      "id" : "Seltene.koerperlicheUntersuchung",
+      "path" : "Seltene.koerperlicheUntersuchung",
       "short" : "Körperliche Untersuchung",
       "definition" : "Körperliche Untersuchung",
       "min" : 0,
@@ -393,8 +393,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Koerpergewicht",
-      "path" : "Seltene.KoerperlicheUntersuchung.Koerpergewicht",
+      "id" : "Seltene.koerperlicheUntersuchung.koerpergewicht",
+      "path" : "Seltene.koerperlicheUntersuchung.koerpergewicht",
       "short" : "Körpergewicht",
       "definition" : "Körpergewicht",
       "min" : 0,
@@ -404,8 +404,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Koerpergewicht.Koerpergewicht",
-      "path" : "Seltene.KoerperlicheUntersuchung.Koerpergewicht.Koerpergewicht",
+      "id" : "Seltene.koerperlicheUntersuchung.koerpergewicht.koerpergewicht",
+      "path" : "Seltene.koerperlicheUntersuchung.koerpergewicht.koerpergewicht",
       "short" : "Körpergewicht in kg",
       "definition" : "Körpergewicht des SE-Patienten in kg (aus MII ICU Modul).",
       "min" : 0,
@@ -415,8 +415,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Koerpergewicht.DatumKoerpergewicht",
-      "path" : "Seltene.KoerperlicheUntersuchung.Koerpergewicht.DatumKoerpergewicht",
+      "id" : "Seltene.koerperlicheUntersuchung.koerpergewicht.datumKoerpergewicht",
+      "path" : "Seltene.koerperlicheUntersuchung.koerpergewicht.datumKoerpergewicht",
       "short" : "Datum Körpergewicht",
       "definition" : "Datum der Körpergewichtsmessung.",
       "min" : 0,
@@ -426,8 +426,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Koerpergroesse",
-      "path" : "Seltene.KoerperlicheUntersuchung.Koerpergroesse",
+      "id" : "Seltene.koerperlicheUntersuchung.koerpergroesse",
+      "path" : "Seltene.koerperlicheUntersuchung.koerpergroesse",
       "short" : "Körpergröße",
       "definition" : "Körpergröße",
       "min" : 0,
@@ -437,8 +437,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Koerpergroesse.Koerpergroesse",
-      "path" : "Seltene.KoerperlicheUntersuchung.Koerpergroesse.Koerpergroesse",
+      "id" : "Seltene.koerperlicheUntersuchung.koerpergroesse.koerpergroesse",
+      "path" : "Seltene.koerperlicheUntersuchung.koerpergroesse.koerpergroesse",
       "short" : "Körpergröße in cm",
       "definition" : "Körpergröße des SE-Patienten in cm (aus MII ICU Modul).",
       "min" : 0,
@@ -448,8 +448,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Koerpergroesse.DatumKoerpergroesse",
-      "path" : "Seltene.KoerperlicheUntersuchung.Koerpergroesse.DatumKoerpergroesse",
+      "id" : "Seltene.koerperlicheUntersuchung.koerpergroesse.datumKoerpergroesse",
+      "path" : "Seltene.koerperlicheUntersuchung.koerpergroesse.datumKoerpergroesse",
       "short" : "Datum Körpergröße",
       "definition" : "Datum der Körpergrößenmessung.",
       "min" : 0,
@@ -459,8 +459,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.BMI",
-      "path" : "Seltene.KoerperlicheUntersuchung.BMI",
+      "id" : "Seltene.koerperlicheUntersuchung.bmi",
+      "path" : "Seltene.koerperlicheUntersuchung.bmi",
       "short" : "BMI",
       "definition" : "BMI",
       "min" : 0,
@@ -470,8 +470,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.BMI.BMI",
-      "path" : "Seltene.KoerperlicheUntersuchung.BMI.BMI",
+      "id" : "Seltene.koerperlicheUntersuchung.bmi.bmi",
+      "path" : "Seltene.koerperlicheUntersuchung.bmi.bmi",
       "short" : "BMI SE-Patient",
       "definition" : "BMI des SE-Patienten.",
       "min" : 0,
@@ -481,8 +481,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.BMI.DatumBMI",
-      "path" : "Seltene.KoerperlicheUntersuchung.BMI.DatumBMI",
+      "id" : "Seltene.koerperlicheUntersuchung.bmi.datumBMI",
+      "path" : "Seltene.koerperlicheUntersuchung.bmi.datumBMI",
       "short" : "Datum des BMI",
       "definition" : "Datum, an dem der BMI (Body Mass Index) berechnet wurde.",
       "min" : 0,
@@ -492,8 +492,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Kopfumfang",
-      "path" : "Seltene.KoerperlicheUntersuchung.Kopfumfang",
+      "id" : "Seltene.koerperlicheUntersuchung.kopfumfang",
+      "path" : "Seltene.koerperlicheUntersuchung.kopfumfang",
       "short" : "Kopfumfang",
       "definition" : "Kopfumfang",
       "min" : 0,
@@ -503,8 +503,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Kopfumfang.Kopfumfang",
-      "path" : "Seltene.KoerperlicheUntersuchung.Kopfumfang.Kopfumfang",
+      "id" : "Seltene.koerperlicheUntersuchung.kopfumfang.kopfumfang",
+      "path" : "Seltene.koerperlicheUntersuchung.kopfumfang.kopfumfang",
       "short" : "Kopfumfang in cm",
       "definition" : "Kopfumfang des SE-Patienten in cm.",
       "min" : 0,
@@ -514,8 +514,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Kopfumfang.DatumKopfumfang",
-      "path" : "Seltene.KoerperlicheUntersuchung.Kopfumfang.DatumKopfumfang",
+      "id" : "Seltene.koerperlicheUntersuchung.kopfumfang.datumKopfumfang",
+      "path" : "Seltene.koerperlicheUntersuchung.kopfumfang.datumKopfumfang",
       "short" : "Datum Kopfumfang",
       "definition" : "Datum der Kopfumfangsmessung.",
       "min" : 0,
@@ -525,8 +525,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Bauchumfang",
-      "path" : "Seltene.KoerperlicheUntersuchung.Bauchumfang",
+      "id" : "Seltene.koerperlicheUntersuchung.bauchumfang",
+      "path" : "Seltene.koerperlicheUntersuchung.bauchumfang",
       "short" : "Bauchumfang",
       "definition" : "Bauchumfang",
       "min" : 0,
@@ -536,8 +536,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Bauchumfang.Bauchumfang",
-      "path" : "Seltene.KoerperlicheUntersuchung.Bauchumfang.Bauchumfang",
+      "id" : "Seltene.koerperlicheUntersuchung.bauchumfang.bauchumfang",
+      "path" : "Seltene.koerperlicheUntersuchung.bauchumfang.bauchumfang",
       "short" : "Bauchumfang in cm",
       "definition" : "Bauchumfang des SE-Patienten in cm.",
       "min" : 0,
@@ -547,8 +547,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Bauchumfang.DatumBauchumfang",
-      "path" : "Seltene.KoerperlicheUntersuchung.Bauchumfang.DatumBauchumfang",
+      "id" : "Seltene.koerperlicheUntersuchung.bauchumfang.datumBauchumfang",
+      "path" : "Seltene.koerperlicheUntersuchung.bauchumfang.datumBauchumfang",
       "short" : "Datum Bauchumfang",
       "definition" : "Datum der Bauchumfangsmessung.",
       "min" : 0,
@@ -558,8 +558,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Hueftumfang",
-      "path" : "Seltene.KoerperlicheUntersuchung.Hueftumfang",
+      "id" : "Seltene.koerperlicheUntersuchung.hueftumfang",
+      "path" : "Seltene.koerperlicheUntersuchung.hueftumfang",
       "short" : "Hüftumfang",
       "definition" : "Hüftumfang",
       "min" : 0,
@@ -569,8 +569,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Hueftumfang.Hueftumfang",
-      "path" : "Seltene.KoerperlicheUntersuchung.Hueftumfang.Hueftumfang",
+      "id" : "Seltene.koerperlicheUntersuchung.hueftumfang.hueftumfang",
+      "path" : "Seltene.koerperlicheUntersuchung.hueftumfang.hueftumfang",
       "short" : "Hüftumfang in cm",
       "definition" : "Hüftumfang des SE-Patienten in cm.",
       "min" : 0,
@@ -580,8 +580,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Hueftumfang.DatumHueftumfang",
-      "path" : "Seltene.KoerperlicheUntersuchung.Hueftumfang.DatumHueftumfang",
+      "id" : "Seltene.koerperlicheUntersuchung.hueftumfang.datumHueftumfang",
+      "path" : "Seltene.koerperlicheUntersuchung.hueftumfang.datumHueftumfang",
       "short" : "Datum Hüftumfang",
       "definition" : "Datum der Hüftumfangsmessung.",
       "min" : 0,
@@ -591,8 +591,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.KoerperlicheUntersuchung.Blutgruppe",
-      "path" : "Seltene.KoerperlicheUntersuchung.Blutgruppe",
+      "id" : "Seltene.koerperlicheUntersuchung.blutgruppe",
+      "path" : "Seltene.koerperlicheUntersuchung.blutgruppe",
       "short" : "Blutgruppe",
       "definition" : "Blutgruppe des SE-Patienten (AB0 und Rhesusfaktor).",
       "min" : 0,
@@ -602,8 +602,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.PersoenlicheInfosIndexpatient",
-      "path" : "Seltene.PersoenlicheInfosIndexpatient",
+      "id" : "Seltene.persoenlicheInfosIndexpatient",
+      "path" : "Seltene.persoenlicheInfosIndexpatient",
       "short" : "Persoenliche Informationen des Indexpatienten",
       "definition" : "Persoenliche Informationen des Indexpatienten",
       "min" : 0,
@@ -613,8 +613,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.PersoenlicheInfosIndexpatient.Tod",
-      "path" : "Seltene.PersoenlicheInfosIndexpatient.Tod",
+      "id" : "Seltene.persoenlicheInfosIndexpatient.tod",
+      "path" : "Seltene.persoenlicheInfosIndexpatient.tod",
       "short" : "Tod",
       "definition" : "Tod",
       "min" : 0,
@@ -624,8 +624,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.PersoenlicheInfosIndexpatient.Tod.Sterbedatum",
-      "path" : "Seltene.PersoenlicheInfosIndexpatient.Tod.Sterbedatum",
+      "id" : "Seltene.persoenlicheInfosIndexpatient.tod.sterbedatum",
+      "path" : "Seltene.persoenlicheInfosIndexpatient.tod.sterbedatum",
       "short" : "Sterbedatum",
       "definition" : "Sterbedatum des Indexpatienten.",
       "min" : 0,
@@ -635,8 +635,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.PersoenlicheInfosIndexpatient.Tod.AnSEVerstorben",
-      "path" : "Seltene.PersoenlicheInfosIndexpatient.Tod.AnSEVerstorben",
+      "id" : "Seltene.persoenlicheInfosIndexpatient.tod.anSEVerstorben",
+      "path" : "Seltene.persoenlicheInfosIndexpatient.tod.anSEVerstorben",
       "short" : "An der SE verstorben",
       "definition" : "Angabe, ob der Indexpatient an der SE verstorben ist.",
       "min" : 0,
@@ -646,8 +646,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.PersoenlicheInfosIndexpatient.Tod.AndereTodesursache",
-      "path" : "Seltene.PersoenlicheInfosIndexpatient.Tod.AndereTodesursache",
+      "id" : "Seltene.persoenlicheInfosIndexpatient.tod.andereTodesursache",
+      "path" : "Seltene.persoenlicheInfosIndexpatient.tod.andereTodesursache",
       "short" : "Todesursache",
       "definition" : "Kodierung der Todesursache soweit bekannt (ICD-10-GM, ORPHAcodes).",
       "min" : 0,
@@ -657,8 +657,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.Familienanamnese",
-      "path" : "Seltene.Familienanamnese",
+      "id" : "Seltene.familienanamnese",
+      "path" : "Seltene.familienanamnese",
       "short" : "Familienanamnese",
       "definition" : "Familienanamnese",
       "min" : 0,
@@ -668,8 +668,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.Familienanamnese.Verwandtschaftsverhaeltnis",
-      "path" : "Seltene.Familienanamnese.Verwandtschaftsverhaeltnis",
+      "id" : "Seltene.familienanamnese.verwandtschaftsverhaeltnis",
+      "path" : "Seltene.familienanamnese.verwandtschaftsverhaeltnis",
       "short" : "Verwandtschaftsverhaeltnis",
       "definition" : "Biologisches Verwandtschaftsverhaeltnis des Familienmitglieds zum Indexpatienten.",
       "min" : 0,
@@ -679,8 +679,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.Familienanamnese.Geschlecht",
-      "path" : "Seltene.Familienanamnese.Geschlecht",
+      "id" : "Seltene.familienanamnese.geschlecht",
+      "path" : "Seltene.familienanamnese.geschlecht",
       "short" : "Geschlecht",
       "definition" : "Geschlecht des Familienmitglieds.",
       "min" : 0,
@@ -690,8 +690,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.Familienanamnese.GleicheSE",
-      "path" : "Seltene.Familienanamnese.GleicheSE",
+      "id" : "Seltene.familienanamnese.gleicheSE",
+      "path" : "Seltene.familienanamnese.gleicheSE",
       "short" : "Gleiche SE",
       "definition" : "Gibt an, ob das Familienmitglied an der gleichen SE leidet wie der Indexpatient.",
       "min" : 0,
@@ -701,8 +701,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.Familienanamnese.AndereSE",
-      "path" : "Seltene.Familienanamnese.AndereSE",
+      "id" : "Seltene.familienanamnese.andereSE",
+      "path" : "Seltene.familienanamnese.andereSE",
       "short" : "Andere SE",
       "definition" : "Gibt an, ob das Familienmitglied an einer anderen SE leidet als der Indexpatient.",
       "min" : 0,
@@ -712,8 +712,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.Familienanamnese.Penetranz",
-      "path" : "Seltene.Familienanamnese.Penetranz",
+      "id" : "Seltene.familienanamnese.penetranz",
+      "path" : "Seltene.familienanamnese.penetranz",
       "short" : "Penetranz",
       "definition" : "Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) die genetische Diagnose vorliegt.",
       "min" : 0,
@@ -723,8 +723,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.Familienanamnese.FamilienmitgliedVerstorben",
-      "path" : "Seltene.Familienanamnese.FamilienmitgliedVerstorben",
+      "id" : "Seltene.familienanamnese.familienmitgliedVerstorben",
+      "path" : "Seltene.familienanamnese.familienmitgliedVerstorben",
       "short" : "Familienmitglied verstorben",
       "definition" : "Gibt an, ob das Familienmitglied verstorben ist.",
       "min" : 0,
@@ -734,8 +734,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.TherapieForschung",
-      "path" : "Seltene.TherapieForschung",
+      "id" : "Seltene.therapieForschung",
+      "path" : "Seltene.therapieForschung",
       "short" : "Therapie und Forschung",
       "definition" : "Therapie und Forschung",
       "min" : 0,
@@ -745,8 +745,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.TherapieForschung.OffLabel",
-      "path" : "Seltene.TherapieForschung.OffLabel",
+      "id" : "Seltene.therapieForschung.offLabel",
+      "path" : "Seltene.therapieForschung.offLabel",
       "short" : "Off-Label-Gabe",
       "definition" : "Off-Label-Gabe",
       "min" : 0,
@@ -756,8 +756,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.TherapieForschung.OffLabel.OffLabelGabe",
-      "path" : "Seltene.TherapieForschung.OffLabel.OffLabelGabe",
+      "id" : "Seltene.therapieForschung.offLabel.offLabelGabe",
+      "path" : "Seltene.therapieForschung.offLabel.offLabelGabe",
       "short" : "Off-Label-Gabe",
       "definition" : "Gibt an, ob eine Off-Label-Gabe vorliegt.",
       "min" : 0,
@@ -767,8 +767,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.TherapieForschung.OffLabel.OffLabelMedikament",
-      "path" : "Seltene.TherapieForschung.OffLabel.OffLabelMedikament",
+      "id" : "Seltene.therapieForschung.offLabel.offLabelMedikament",
+      "path" : "Seltene.therapieForschung.offLabel.offLabelMedikament",
       "short" : "Off-Label-Medikament",
       "definition" : "Gibt an, welches Medikament Off-Label gegeben wurde.",
       "min" : 0,
@@ -778,8 +778,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.TherapieForschung.Studie",
-      "path" : "Seltene.TherapieForschung.Studie",
+      "id" : "Seltene.therapieForschung.studie",
+      "path" : "Seltene.therapieForschung.studie",
       "short" : "Studie",
       "definition" : "Studie",
       "min" : 0,
@@ -789,8 +789,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.TherapieForschung.Studie.StudienID",
-      "path" : "Seltene.TherapieForschung.Studie.StudienID",
+      "id" : "Seltene.therapieForschung.studie.studienID",
+      "path" : "Seltene.therapieForschung.studie.studienID",
       "short" : "Studien-ID",
       "definition" : "Eindeutige Identifikation der Studie, an der der SE-Patient teilgenommen hat.",
       "min" : 0,
@@ -800,8 +800,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.TherapieForschung.Studie.StudienStatus",
-      "path" : "Seltene.TherapieForschung.Studie.StudienStatus",
+      "id" : "Seltene.therapieForschung.studie.studienStatus",
+      "path" : "Seltene.therapieForschung.studie.studienStatus",
       "short" : "Studienstatus",
       "definition" : "Aktueller Status der Studie, an der der SE-Patient teilgenommen hat (Abgeschlossen, Fortlaufend).",
       "min" : 0,
@@ -811,8 +811,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.TherapieForschung.Studie.Studienzeitraum",
-      "path" : "Seltene.TherapieForschung.Studie.Studienzeitraum",
+      "id" : "Seltene.therapieForschung.studie.studienzeitraum",
+      "path" : "Seltene.therapieForschung.studie.studienzeitraum",
       "short" : "Studienzeitraum",
       "definition" : "Zeitraum, in dem der SE-Patient an der Studie teilgenommen hat.",
       "min" : 0,
@@ -823,8 +823,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.TherapieForschung.Therapie",
-      "path" : "Seltene.TherapieForschung.Therapie",
+      "id" : "Seltene.therapieForschung.therapie",
+      "path" : "Seltene.therapieForschung.therapie",
       "short" : "Therapie",
       "definition" : "Therapie",
       "min" : 0,
@@ -834,8 +834,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.TherapieForschung.Therapie.Therapieempfehlung",
-      "path" : "Seltene.TherapieForschung.Therapie.Therapieempfehlung",
+      "id" : "Seltene.therapieForschung.therapie.therapieempfehlung",
+      "path" : "Seltene.therapieForschung.therapie.therapieempfehlung",
       "short" : "Eine Therapieempfehlung beschreibt eine spezifische Maßnahme oder Strategie. Sie kann eigenständig vorliegen oder referenziert einem Therapieplan zugeordnet werden. Art der Therapieempfehlung",
       "definition" : "Gibt an, welche Therapieempfehlung vorliegt.",
       "min" : 0,
@@ -845,8 +845,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.TherapieForschung.Therapie.DurchgefuehrteTherapie",
-      "path" : "Seltene.TherapieForschung.Therapie.DurchgefuehrteTherapie",
+      "id" : "Seltene.therapieForschung.therapie.durchgefuehrteTherapie",
+      "path" : "Seltene.therapieForschung.therapie.durchgefuehrteTherapie",
       "short" : "Durchgefuehrte Therapie",
       "definition" : "Tatsaechlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention).",
       "min" : 0,
@@ -856,8 +856,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.TherapieForschung.Therapie.StartdatumTherapie",
-      "path" : "Seltene.TherapieForschung.Therapie.StartdatumTherapie",
+      "id" : "Seltene.therapieForschung.therapie.startdatumTherapie",
+      "path" : "Seltene.therapieForschung.therapie.startdatumTherapie",
       "short" : "Startdatum Therapie",
       "definition" : "Datum, an dem die Therapie begonnen hat.",
       "min" : 0,
@@ -867,8 +867,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.TherapieForschung.Therapie.EnddatumTherapie",
-      "path" : "Seltene.TherapieForschung.Therapie.EnddatumTherapie",
+      "id" : "Seltene.therapieForschung.therapie.enddatumTherapie",
+      "path" : "Seltene.therapieForschung.therapie.enddatumTherapie",
       "short" : "Enddatum Therapie",
       "definition" : "Datum, an dem die Therapie beendet wurde.",
       "min" : 0,
@@ -878,8 +878,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       }]
     },
     {
-      "id" : "Seltene.TherapieForschung.Therapie.GrundEndeTherapie",
-      "path" : "Seltene.TherapieForschung.Therapie.GrundEndeTherapie",
+      "id" : "Seltene.therapieForschung.therapie.grundEndeTherapie",
+      "path" : "Seltene.therapieForschung.therapie.grundEndeTherapie",
       "short" : "Grund Ende Therapie",
       "definition" : "Gibt an, warum die Therapie beendet wurde (z.B. Nebenwirkungen, keine Wirkung).",
       "min" : 0,

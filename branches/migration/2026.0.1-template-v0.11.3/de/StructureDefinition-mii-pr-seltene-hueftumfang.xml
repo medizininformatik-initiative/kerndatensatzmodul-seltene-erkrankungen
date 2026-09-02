@@ -30,7 +30,7 @@
   <name value="MII_PR_Seltene_Hueftumfang"/>
   <title value="MII PR SE Hüftumfang"/>
   <status value="active"/>
-  <date value="2026-09-02T09:29:03+00:00"/>
+  <date value="2026-09-02T14:14:40+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -169,7 +169,7 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.Hueftumfang"/>
+        <map value="Messbefunde.hueftumfang"/>
         <comment value="Hüftumfang"/>
       </mapping>
       <mapping>
@@ -1350,7 +1350,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.Hueftumfang.Datum"/>
+        <map value="Messbefunde.hueftumfang.Datum"/>
         <comment value="Datum der Messung"/>
       </mapping>
       <mapping>
@@ -1602,7 +1602,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.Hueftumfang"/>
+        <map value="Messbefunde.hueftumfang"/>
         <comment value="Hüftumfang in cm"/>
       </mapping>
       <mapping>
@@ -2936,7 +2936,7 @@
       <path value="Observation"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.Hueftumfang"/>
+        <map value="Messbefunde.hueftumfang"/>
         <comment value="Hüftumfang"/>
       </mapping>
     </element>
@@ -2999,7 +2999,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.Hueftumfang.Datum"/>
+        <map value="Messbefunde.hueftumfang.Datum"/>
         <comment value="Datum der Messung"/>
       </mapping>
     </element>
@@ -3014,7 +3014,7 @@
       <path value="Observation.value[x].value"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.Hueftumfang"/>
+        <map value="Messbefunde.hueftumfang"/>
         <comment value="Hüftumfang in cm"/>
       </mapping>
     </element>

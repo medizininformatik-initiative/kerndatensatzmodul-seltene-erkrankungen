@@ -39,7 +39,7 @@
   <name value="MII_PR_Seltene_ClinicalImpression"/>
   <title value="MII Profile SE Clinical Impression"/>
   <status value="active"/>
-  <date value="2026-09-02T09:29:03+00:00"/>
+  <date value="2026-09-02T14:14:40+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -147,7 +147,7 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik"/>
+        <map value="anamneseUndDiagnostik"/>
         <comment value="Anamnese und Diagnostik"/>
       </mapping>
       <mapping>
@@ -579,7 +579,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsanlass"/>
+        <map value="anamneseUndDiagnostik.untersuchungsanlass"/>
         <comment value="Untersuchungsanlass"/>
       </mapping>
       <mapping>
@@ -695,7 +695,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Untersuchungskontakt"/>
       </mapping>
       <mapping>
@@ -785,7 +785,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Untersuchungsdatum"/>
       </mapping>
       <mapping>
@@ -941,7 +941,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Beginn der Untersuchung"/>
       </mapping>
       <mapping>
@@ -982,7 +982,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Ende der Untersuchung"/>
       </mapping>
       <mapping>
@@ -1120,7 +1120,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.KlinischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.klinischeDiagnose"/>
         <comment value="Klinische Diagnose/Verdacht"/>
       </mapping>
       <mapping>
@@ -1301,7 +1301,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.MethodeDiagnosestellung"/>
+        <map value="anamneseUndDiagnostik.methodeDiagnosestellung"/>
         <comment value="Methode der Diagnosestellung"/>
       </mapping>
     </element>
@@ -1337,7 +1337,7 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="Durchgeführte Untersuchungen"/>
       </mapping>
       <mapping>
@@ -1564,7 +1564,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.hpoTerm"/>
         <comment value="HPO-Term des Symptoms"/>
       </mapping>
       <mapping>
@@ -1600,7 +1600,7 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="Verweis auf Phänotypisierung"/>
       </mapping>
       <mapping>
@@ -1763,7 +1763,7 @@
       <path value="ClinicalImpression"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik"/>
+        <map value="anamneseUndDiagnostik"/>
         <comment value="Anamnese und Diagnostik"/>
       </mapping>
     </element>
@@ -1795,7 +1795,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsanlass"/>
+        <map value="anamneseUndDiagnostik.untersuchungsanlass"/>
         <comment value="Untersuchungsanlass"/>
       </mapping>
     </element>
@@ -1825,7 +1825,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Untersuchungskontakt"/>
       </mapping>
     </element>
@@ -1853,7 +1853,7 @@
       </type>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Untersuchungsdatum"/>
       </mapping>
     </element>
@@ -1870,7 +1870,7 @@
       <path value="ClinicalImpression.effective[x].start"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Beginn der Untersuchung"/>
       </mapping>
     </element>
@@ -1878,7 +1878,7 @@
       <path value="ClinicalImpression.effective[x].end"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Untersuchungsdatum"/>
+        <map value="anamneseUndDiagnostik.untersuchungsdatum"/>
         <comment value="Ende der Untersuchung"/>
       </mapping>
     </element>
@@ -1895,7 +1895,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.KlinischeDiagnose"/>
+        <map value="anamneseUndDiagnostik.klinischeDiagnose"/>
         <comment value="Klinische Diagnose/Verdacht"/>
       </mapping>
     </element>
@@ -1910,7 +1910,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.MethodeDiagnosestellung"/>
+        <map value="anamneseUndDiagnostik.methodeDiagnosestellung"/>
         <comment value="Methode der Diagnosestellung"/>
       </mapping>
     </element>
@@ -1927,7 +1927,7 @@
       </type>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="Durchgeführte Untersuchungen"/>
       </mapping>
     </element>
@@ -1952,7 +1952,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung.hpoTerm"/>
         <comment value="HPO-Term des Symptoms"/>
       </mapping>
     </element>
@@ -1966,7 +1966,7 @@
       </type>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="AnamneseUndDiagnostik.Phaenotypisierung"/>
+        <map value="anamneseUndDiagnostik.phaenotypisierung"/>
         <comment value="Verweis auf Phänotypisierung"/>
       </mapping>
     </element>

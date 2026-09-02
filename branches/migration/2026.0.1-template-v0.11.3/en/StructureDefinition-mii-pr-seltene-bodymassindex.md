@@ -60,7 +60,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bo
   "name" : "MII_PR_Seltene_Bodymassindex",
   "title" : "Body Mass Index (BMI) of the patient",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -132,7 +132,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bo
       "path" : "Observation",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.BMI",
+        "map" : "Messbefunde.bmi",
         "comment" : "BMI"
       }]
     },
@@ -178,7 +178,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bo
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.BMI",
+        "map" : "Messbefunde.bmi",
         "comment" : "BMI-Code (LOINC 39156-5)"
       }]
     },
@@ -205,7 +205,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bo
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.BMI.DatumBMI",
+        "map" : "Messbefunde.bmi.datumBMI",
         "comment" : "Datum des BMI"
       }]
     },
@@ -222,7 +222,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bo
       "path" : "Observation.value[x].value",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.BMI.BMI",
+        "map" : "Messbefunde.bmi.bmi",
         "comment" : "BMI SE-Patient"
       }]
     },

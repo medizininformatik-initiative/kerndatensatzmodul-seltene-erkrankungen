@@ -10,7 +10,7 @@
   "name" : "MII_PR_Seltene_Blutgruppe",
   "title" : "MII PR SE Blutgruppe",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -166,7 +166,7 @@
       "isSummary" : false,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe"
       },
       {
@@ -1771,7 +1771,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe"
       },
       {
@@ -1950,7 +1950,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe (LOINC)"
       },
       {
@@ -2275,7 +2275,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe (SNOMED CT)"
       },
       {
@@ -2603,7 +2603,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe (Text)"
       },
       {
@@ -3827,7 +3827,7 @@
       "path" : "Observation",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe"
       }]
     },
@@ -4005,7 +4005,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe"
       }]
     },
@@ -4034,7 +4034,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe (LOINC)"
       }]
     },
@@ -4053,7 +4053,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe (SNOMED CT)"
       }]
     },
@@ -4069,7 +4069,7 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "Messbefunde.blutgruppe",
         "comment" : "Blutgruppe (Text)"
       }]
     }]

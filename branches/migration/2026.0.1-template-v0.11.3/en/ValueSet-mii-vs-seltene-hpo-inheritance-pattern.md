@@ -41,7 +41,7 @@ Value set containing HPO terms for modes of inheritance
   "name" : "HPOInheritancePatternValueSet",
   "title" : "MII VS SE HPO Inheritance Pattern",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

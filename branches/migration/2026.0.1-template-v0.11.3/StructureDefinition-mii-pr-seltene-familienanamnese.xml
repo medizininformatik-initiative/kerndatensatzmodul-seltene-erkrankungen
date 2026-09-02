@@ -77,7 +77,7 @@
   <name value="MII_PR_Seltene_Familienanamnese"/>
   <title value="MII PR SE Familienanamnese"/>
   <status value="active"/>
-  <date value="2026-09-02T09:29:03+00:00"/>
+  <date value="2026-09-02T14:14:40+00:00"/>
   <publisher value="Medizininformatik Initiative">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
@@ -197,7 +197,7 @@
       </constraint>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese"/>
+        <map value="familienanamnese"/>
         <comment value="Familienanamnese"/>
       </mapping>
       <mapping>
@@ -491,7 +491,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.GleicheSE"/>
+        <map value="familienanamnese.gleicheSE"/>
         <comment value="Gleiche SE"/>
       </mapping>
     </element>
@@ -1043,7 +1043,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.Verwandtschaftsverhaeltnis"/>
+        <map value="familienanamnese.verwandtschaftsverhaeltnis"/>
         <comment value="Verwandtschaftsverhältnis"/>
       </mapping>
       <mapping>
@@ -1913,7 +1913,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.Geschlecht"/>
+        <map value="familienanamnese.geschlecht"/>
         <comment value="Geschlecht"/>
       </mapping>
       <mapping>
@@ -2131,7 +2131,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.FamilienmitgliedVerstorben"/>
+        <map value="familienanamnese.familienmitgliedVerstorben"/>
         <comment value="Familienmitglied verstorben"/>
       </mapping>
       <mapping>
@@ -2170,7 +2170,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.FamilienmitgliedVerstorben"/>
+        <map value="familienanamnese.familienmitgliedVerstorben"/>
         <comment value="Sterbedatum"/>
       </mapping>
       <mapping>
@@ -2209,7 +2209,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.FamilienmitgliedVerstorben"/>
+        <map value="familienanamnese.familienmitgliedVerstorben"/>
         <comment value="Alter bei Tod"/>
       </mapping>
       <mapping>
@@ -2275,7 +2275,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.AndereSE"/>
+        <map value="familienanamnese.andereSE"/>
         <comment value="Grund/Erkrankung des Familienmitglieds"/>
       </mapping>
       <mapping>
@@ -4456,7 +4456,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.Penetranz"/>
+        <map value="familienanamnese.penetranz"/>
         <comment value="Penetranz"/>
       </mapping>
     </element>
@@ -4791,7 +4791,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.AndereSE"/>
+        <map value="familienanamnese.andereSE"/>
         <comment value="Andere SE (ICD-10-GM)"/>
       </mapping>
       <mapping>
@@ -5786,7 +5786,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.AndereSE"/>
+        <map value="familienanamnese.andereSE"/>
         <comment value="Andere SE (SNOMED CT)"/>
       </mapping>
       <mapping>
@@ -6202,7 +6202,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.AndereSE"/>
+        <map value="familienanamnese.andereSE"/>
         <comment value="Andere SE (Orpha-Code)"/>
       </mapping>
       <mapping>
@@ -7026,7 +7026,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.TodDurchSE"/>
+        <map value="familienanamnese.TodDurchSE"/>
         <comment value="Tod durch seltene Erkrankung"/>
       </mapping>
       <mapping>
@@ -7171,7 +7171,7 @@
       <path value="FamilyMemberHistory"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese"/>
+        <map value="familienanamnese"/>
         <comment value="Familienanamnese"/>
       </mapping>
     </element>
@@ -7193,7 +7193,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.GleicheSE"/>
+        <map value="familienanamnese.gleicheSE"/>
         <comment value="Gleiche SE"/>
       </mapping>
     </element>
@@ -7217,7 +7217,7 @@
       <path value="FamilyMemberHistory.relationship"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.Verwandtschaftsverhaeltnis"/>
+        <map value="familienanamnese.verwandtschaftsverhaeltnis"/>
         <comment value="Verwandtschaftsverhältnis"/>
       </mapping>
     </element>
@@ -7225,7 +7225,7 @@
       <path value="FamilyMemberHistory.sex"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.Geschlecht"/>
+        <map value="familienanamnese.geschlecht"/>
         <comment value="Geschlecht"/>
       </mapping>
     </element>
@@ -7259,7 +7259,7 @@
       </type>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.FamilienmitgliedVerstorben"/>
+        <map value="familienanamnese.familienmitgliedVerstorben"/>
         <comment value="Familienmitglied verstorben"/>
       </mapping>
     </element>
@@ -7273,7 +7273,7 @@
       </type>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.FamilienmitgliedVerstorben"/>
+        <map value="familienanamnese.familienmitgliedVerstorben"/>
         <comment value="Sterbedatum"/>
       </mapping>
     </element>
@@ -7287,7 +7287,7 @@
       </type>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.FamilienmitgliedVerstorben"/>
+        <map value="familienanamnese.familienmitgliedVerstorben"/>
         <comment value="Alter bei Tod"/>
       </mapping>
     </element>
@@ -7295,7 +7295,7 @@
       <path value="FamilyMemberHistory.reasonCode"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.AndereSE"/>
+        <map value="familienanamnese.andereSE"/>
         <comment value="Grund/Erkrankung des Familienmitglieds"/>
       </mapping>
     </element>
@@ -7313,7 +7313,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.Penetranz"/>
+        <map value="familienanamnese.penetranz"/>
         <comment value="Penetranz"/>
       </mapping>
     </element>
@@ -7322,7 +7322,7 @@
       <sliceName value="icd10-gm"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.AndereSE"/>
+        <map value="familienanamnese.andereSE"/>
         <comment value="Andere SE (ICD-10-GM)"/>
       </mapping>
     </element>
@@ -7331,7 +7331,7 @@
       <sliceName value="sct"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.AndereSE"/>
+        <map value="familienanamnese.andereSE"/>
         <comment value="Andere SE (SNOMED CT)"/>
       </mapping>
     </element>
@@ -7340,7 +7340,7 @@
       <sliceName value="orphanet"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.AndereSE"/>
+        <map value="familienanamnese.andereSE"/>
         <comment value="Andere SE (Orpha-Code)"/>
       </mapping>
     </element>
@@ -7375,7 +7375,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Familienanamnese.TodDurchSE"/>
+        <map value="familienanamnese.TodDurchSE"/>
         <comment value="Tod durch seltene Erkrankung"/>
       </mapping>
     </element>

@@ -131,7 +131,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Hueftumfang",
   "title" : "MII PR SE Hüftumfang",
   "status" : "active",
-  "date" : "2026-09-02T09:29:03+00:00",
+  "date" : "2026-09-02T14:14:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -203,7 +203,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "Observation",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Hueftumfang",
+        "map" : "Messbefunde.hueftumfang",
         "comment" : "Hüftumfang"
       }]
     },
@@ -274,7 +274,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Hueftumfang.Datum",
+        "map" : "Messbefunde.hueftumfang.Datum",
         "comment" : "Datum der Messung"
       }]
     },
@@ -291,7 +291,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "Observation.value[x].value",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Hueftumfang",
+        "map" : "Messbefunde.hueftumfang",
         "comment" : "Hüftumfang in cm"
       }]
     },
