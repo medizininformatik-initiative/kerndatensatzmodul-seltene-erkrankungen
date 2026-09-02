@@ -24,7 +24,7 @@ class "MII_PR_Seltene_ClinicalDiagnosis" as C {
   code.coding[orphanet]
   code.coding[**hpo**]      << eigener Slice >>
   --
-  category : SCT#47367009 Syndrome  (optional)
+  category : ClinicalDiagnosisCategoryVS  (extensible)
   --
   evidence.detail → **HPO-Symptom-Observation**
   --

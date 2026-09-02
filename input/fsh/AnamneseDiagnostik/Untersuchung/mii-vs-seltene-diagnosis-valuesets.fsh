@@ -9,14 +9,23 @@ Description: "Value set for categorizing clinical diagnoses of rare diseases"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
+// KORRIGIERT 2026-09-02. Vier der acht urspruenglichen Codes waren falsch oder
+// existierten nicht — geprueft per CodeSystem/$lookup auf tx.fhir.org:
+//   363358000 stand als "Clinical finding" und ist Malignant neoplasm of lung
+//   47367009  stand als "Syndrome" und ist Exocrine pancreatic insufficiency
+//   84757009  stand als "Rare disease" und ist Epilepsy
+//   381406004 stand als "Congenital disorder" und existiert nicht
+// Zwei liessen sich ersetzen (404684003 Clinical finding, 66091009 Congenital
+// disease). Fuer "Syndrome" und "Rare disease" gibt es in SNOMED CT KEIN
+// generisches Konzept; beide sind daher ersatzlos entfallen statt auf etwas
+// Aehnliches umgebogen zu werden. Wer die Seltenheit als solche kodieren will,
+// tut das ueber den Orpha-Code der Diagnose, nicht ueber die Kategorie.
 * $SCT#439401001 "Diagnosis"
-* $SCT#363358000 "Clinical finding"
+* $SCT#404684003 "Clinical finding"
 * $SCT#64572001 "Disease"
+* $SCT#66091009 "Congenital disease"
 * $SCT#609328004 "Allergic disposition"
 * $SCT#85828009 "Autoimmune disease"
-* $SCT#47367009 "Syndrome"
-* $SCT#381406004 "Congenital disorder"
-* $SCT#84757009 "Rare disease"
 
 // HPO Age of Onset Value Set
 ValueSet: HPOAgeOfOnsetValueSet

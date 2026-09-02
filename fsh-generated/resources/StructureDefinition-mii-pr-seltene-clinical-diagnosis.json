@@ -175,7 +175,11 @@
         "id": "Condition.category",
         "path": "Condition.category",
         "min": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category"
+        }
       },
       {
         "id": "Condition.severity",

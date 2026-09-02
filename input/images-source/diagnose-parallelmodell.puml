@@ -17,7 +17,7 @@ skinparam rectangle {
 title Paralleles Diagnosemodell — Verdacht, klinisch, genetisch
 
 rectangle "**Verdachtsdiagnose**\n<size:11>Condition</size>\n<size:11>verificationStatus = **provisional**</size>\n<size:11>category = encounter-diagnosis</size>" as V #fff8e1
-rectangle "**Klinische Diagnose**\n<size:11>MII_PR_Seltene_ClinicalDiagnosis</size>\n<size:11>verificationStatus = **confirmed**</size>\n<size:11>category = SCT#47367009 Syndrome</size>\n<size:11>evidence → HPO-Observations</size>" as K #e8f5e9
+rectangle "**Klinische Diagnose**\n<size:11>MII_PR_Seltene_ClinicalDiagnosis</size>\n<size:11>verificationStatus = **confirmed**</size>\n<size:11>category aus ClinicalDiagnosisCategoryVS</size>\n<size:11>evidence → HPO-Observations</size>" as K #e8f5e9
 rectangle "**Genetische Diagnose**\n<size:11>MII_PR_Seltene_GeneticDiagnosis</size>\n<size:11>verificationStatus = **confirmed**</size>\n<size:11>category = SCT#782964007 Genetic disease</size>\n<size:11>evidence → MolGen-Variante</size>" as G #e3f2fd
 
 V -down-> K : phaenotypische\nAbklaerung
