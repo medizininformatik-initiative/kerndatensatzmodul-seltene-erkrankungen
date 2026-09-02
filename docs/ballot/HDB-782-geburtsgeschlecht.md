@@ -2,7 +2,7 @@ Rückmeldung aus der Umsetzung im Modul Seltene Erkrankungen — mit einem begr�
 
 **Vorschlag: den Datenpunkt am MII-Patient-Profil führen (`mii-pr-person-patient`, Linie 2027), nicht im Modul SE.**
 
-Entschieden am 2026-09-02. Konkreter Ort: `medizininformatik-initiative/kerndatensatz-basis`, Datei `input/fsh/profiles/MII_PR_Person_Patient.fsh`, ausgeliefert im Paket `de.medizininformatikinitiative.kerndatensatz.base` — bereits Dependency aller aufsetzenden Module, unter anderem des Moduls SE.
+Entschieden am 2026-09-02. Im Base-Repository ist die Aufnahme der Extension bereits als Issue registriert — kerndatensatz-basis#81 „Patient - Person Recorded Sex Or Gender", eröffnet 2026-07-23; die hier zusammengetragenen Befunde sind dort als Kommentar ergänzt. Konkreter Ort: `medizininformatik-initiative/kerndatensatz-basis`, Datei `input/fsh/profiles/MII_PR_Person_Patient.fsh`, ausgeliefert im Paket `de.medizininformatikinitiative.kerndatensatz.base` — bereits Dependency aller aufsetzenden Module, unter anderem des Moduls SE.
 
 Der Ticketvorschlag lautet, das Geburtsgeschlecht „über das MII KDS Modul SE" zu ergänzen. Bei der Umsetzung im Modul SE hat sich gezeigt, dass das der falsche Ort ist:
 
