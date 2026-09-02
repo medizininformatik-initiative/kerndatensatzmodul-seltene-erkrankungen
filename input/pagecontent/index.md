@@ -20,7 +20,7 @@ This guide has been created within the framework of the Medical Informatics Init
 ### Contacts
 
 * Josef Schepers, Berlin Institute of Health (Charité) — module speaker
-* Michele Zoch, Uniklinik Dresden — module speaker
+* Michéle Zoch, Uniklinik Dresden — module speaker
 * Martin Bartos, Klinikum Chemnitz — module speaker
 * Thomas Debertshäuser, Berlin Institute of Health (Charité)
 * Miriam Hübner, Berlin Institute of Health (Charité)

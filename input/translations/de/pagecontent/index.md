@@ -18,7 +18,7 @@ Dieser Leitfaden ist im Rahmen der Medizininformatik Initiative erstellt worden 
 
 ## Ansprechpartner
 * Josef Schepers, Berlin Institute of Health (Charité) - Modulsprecher
-* Michele Zoch, Uniklinik Dresden - Modulsprecher
+* Michéle Zoch, Uniklinik Dresden - Modulsprecher
 * Martin Bartos, Klinikum Chemnitz - Modulsprecher
 * Thomas Debertshäuser, Berlin Institute of Health (Charité)
 * Miriam Hübner, Berlin Institute of Health (Charité)
