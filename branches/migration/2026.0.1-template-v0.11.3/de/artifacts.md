@@ -65,16 +65,10 @@ Diese definieren Einschränkungen für FHIR-Datentypen für Systeme, die mit die
 
 | | |
 | :--- | :--- |
-| [ MII EX SE Age of Onset  ](StructureDefinition-mii-ex-seltene-age-of-onset.md) | Extension to capture the age of onset of a rare disease using structured HPO age of onset terms |
 | [ MII EX SE Empfehlung Priorität  ](StructureDefinition-mii-ex-seltene-empfehlung-prioritaet.md) | Priorität der (einzelnen) Empfehlung |
 | [ MII EX SE Empfehlung Publikation  ](StructureDefinition-mii-ex-seltene-empfehlung-publikation.md) | Verweis auf Publikation der (einzelnen) Empfehlung |
-| [ MII EX SE Genetic Basis  ](StructureDefinition-mii-ex-seltene-genetic-basis.md) | Extension to describe the genetic basis of a rare disease |
-| [ MII EX SE Inheritance Pattern  ](StructureDefinition-mii-ex-seltene-inheritance-pattern.md) | Extension to capture the mode of inheritance of a rare disease |
 | [ MII EX SE Penetrance  ](StructureDefinition-mii-ex-seltene-penetrance.md) | Extension to capture the penetrance of genetic variants associated with a rare disease |
 | [ MII EX SE Register  ](StructureDefinition-mii-ex-seltene-register.md) | Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt. |
-| [ Onset Age Extension  ](StructureDefinition-mii-ext-seltene-onset-age.md) | Extension to capture the age at onset of a condition. This backports the onsetAge functionality from FHIR R5 to R4. |
-| [ Phenotypic Pattern Extension  ](StructureDefinition-mii-ext-seltene-phenotypic-pattern.md) | Extension to link syndrome diagnoses to characteristic phenotypic patterns or symptom clusters |
-| [ Syndrome Category Extension  ](StructureDefinition-mii-ext-seltene-syndrome-category.md) | Extension to categorize syndrome types for rare diseases (genetic, metabolic, developmental, etc.) |
 | [ VonSEBetroffen  ](StructureDefinition-von-seltene-betroffen.md) | Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist. |
 
 ### Terminologie: ValueSets 

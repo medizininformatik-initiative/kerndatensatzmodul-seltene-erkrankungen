@@ -2326,18 +2326,6 @@
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/mii-ex-seltene-age-of-onset"
-      },
-      "name" : "MII EX SE Age of Onset",
-      "description" : "Extension to capture the age of onset of a rare disease using structured HPO age of onset terms",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
         "reference" : "StructureDefinition/mii-ex-seltene-empfehlung-prioritaet"
       },
       "name" : "MII EX SE Empfehlung Priorität",
@@ -2354,30 +2342,6 @@
       },
       "name" : "MII EX SE Empfehlung Publikation",
       "description" : "Verweis auf Publikation der (einzelnen) Empfehlung",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/mii-ex-seltene-genetic-basis"
-      },
-      "name" : "MII EX SE Genetic Basis",
-      "description" : "Extension to describe the genetic basis of a rare disease",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/mii-ex-seltene-inheritance-pattern"
-      },
-      "name" : "MII EX SE Inheritance Pattern",
-      "description" : "Extension to capture the mode of inheritance of a rare disease",
       "exampleBoolean" : false
     },
     {
@@ -3090,30 +3054,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/mii-ext-seltene-onset-age"
-      },
-      "name" : "Onset Age Extension",
-      "description" : "Extension to capture the age at onset of a condition. This backports the onsetAge functionality from FHIR R5 to R4.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/mii-ext-seltene-phenotypic-pattern"
-      },
-      "name" : "Phenotypic Pattern Extension",
-      "description" : "Extension to link syndrome diagnoses to characteristic phenotypic patterns or symptom clusters",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Condition"
       }],
       "reference" : {
@@ -3314,18 +3254,6 @@
       "name" : "Stationärer Aufenthalt zur Gentherapie",
       "description" : "Stationäre Aufnahme für Gentherapie",
       "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/mii-ext-seltene-syndrome-category"
-      },
-      "name" : "Syndrome Category Extension",
-      "description" : "Extension to categorize syndrome types for rare diseases (genetic, metabolic, developmental, etc.)",
-      "exampleBoolean" : false
     },
     {
       "extension" : [{

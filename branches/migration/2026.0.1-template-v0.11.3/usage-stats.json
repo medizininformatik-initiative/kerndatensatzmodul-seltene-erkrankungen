@@ -5,13 +5,6 @@
   "jurisdiction": "DE",
   "extensions": [
     {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-age-of-onset",
-      "title": "MII EX SE Age of Onset",
-      "types": [
-        "CodeableConcept"
-      ]
-    },
-    {
       "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-prioritaet",
       "title": "MII EX SE Empfehlung Priorität",
       "types": [
@@ -40,20 +33,6 @@
       ]
     },
     {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-genetic-basis",
-      "title": "MII EX SE Genetic Basis",
-      "types": [
-        "CodeableConcept"
-      ]
-    },
-    {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-inheritance-pattern",
-      "title": "MII EX SE Inheritance Pattern",
-      "types": [
-        "CodeableConcept"
-      ]
-    },
-    {
       "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance",
       "title": "MII EX SE Penetrance",
       "types": [
@@ -75,34 +54,6 @@
       "title": "MII EX SE Register",
       "types": [
         "Reference"
-      ]
-    },
-    {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-onset-age",
-      "title": "Onset Age Extension",
-      "types": [
-        "Age",
-        "string",
-        "Extension",
-        "decimal",
-        "code",
-        "string",
-        "uri",
-        "code"
-      ]
-    },
-    {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-phenotypic-pattern",
-      "title": "Phenotypic Pattern Extension",
-      "types": [
-        "Reference"
-      ]
-    },
-    {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-syndrome-category",
-      "title": "Syndrome Category Extension",
-      "types": [
-        "CodeableConcept"
       ]
     },
     {

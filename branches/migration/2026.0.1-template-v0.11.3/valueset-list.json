@@ -51,10 +51,7 @@
     "name" : "GeneticBasisValueSet",
     "title" : "MII VS SE Genetic Basis",
     "description" : "Value set for types of genetic basis of rare diseases",
-    "systems" : ["http://snomed.info/sct"],
-    "uses" : {
-    },
-    "StructureDefinition-mii-ex-seltene-genetic-basis.html" : "MII EX SE Genetic Basis"
+    "systems" : ["http://snomed.info/sct"]
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-age-of-onset",
@@ -63,10 +60,7 @@
     "name" : "HPOAgeOfOnsetValueSet",
     "title" : "MII VS SE HPO Age of Onset",
     "description" : "Value set containing HPO terms for age of onset of diseases",
-    "systems" : ["http://human-phenotype-ontology.org"],
-    "uses" : {
-    },
-    "StructureDefinition-mii-ex-seltene-age-of-onset.html" : "MII EX SE Age of Onset"
+    "systems" : ["http://human-phenotype-ontology.org"]
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-change-status",
@@ -84,10 +78,7 @@
     "name" : "HPOInheritancePatternValueSet",
     "title" : "MII VS SE HPO Inheritance Pattern",
     "description" : "Value set containing HPO terms for modes of inheritance",
-    "systems" : ["http://human-phenotype-ontology.org"],
-    "uses" : {
-    },
-    "StructureDefinition-mii-ex-seltene-inheritance-pattern.html" : "MII EX SE Inheritance Pattern"
+    "systems" : ["http://human-phenotype-ontology.org"]
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes",
@@ -257,10 +248,7 @@
     "name" : "SyndromeCategoryVS",
     "title" : "Syndrome Category Value Set",
     "description" : "Categories for classifying syndrome types in rare diseases",
-    "systems" : ["http://snomed.info/sct"],
-    "uses" : {
-    },
-    "StructureDefinition-mii-ext-seltene-syndrome-category.html" : "Syndrome Category Extension"
+    "systems" : ["http://snomed.info/sct"]
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie",
@@ -305,8 +293,8 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie"
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/von-seltene-betroffen-vs",
