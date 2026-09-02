@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "von-seltene-betroffen",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen",
+  "id": "mii-ex-von-se-betroffen",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen",
   "name": "VonSEBetroffen",
   "status": "active",
   "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
@@ -32,7 +32,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen"
+        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen"
       },
       {
         "id": "Extension.value[x]",
