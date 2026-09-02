@@ -487,6 +487,10 @@
     <valueCanonical value="http://hl7.org/fhir/StructureDefinition/Library|4.0.1"/>
   </parameter>
   <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/von-seltene-betroffen-vs|2027.0.0-ballot"/>
+  </parameter>
+  <parameter>
     <name value="default-canonical-version"/>
     <valueCanonical value="http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0"/>
   </parameter>
@@ -517,6 +521,10 @@
   <parameter>
     <name value="default-canonical-version"/>
     <valueCanonical value="http://hl7.org/fhir/StructureDefinition/condition-assertedDate|5.3.0"/>
+  </parameter>
+  <parameter>
+    <name value="default-valueset-version"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category|2027.0.0-ballot"/>
   </parameter>
   <parameter>
     <name value="default-canonical-version"/>
@@ -612,7 +620,7 @@
   </parameter>
   <parameter>
     <name value="default-canonical-version"/>
-    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen|2027.0.0-ballot"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen|2027.0.0-ballot"/>
   </parameter>
   <parameter>
     <name value="default-canonical-version"/>
@@ -1053,9 +1061,5 @@
   <parameter>
     <name value="default-valueset-version"/>
     <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-empfehlung-status-begruendung|2027.0.0-ballot"/>
-  </parameter>
-  <parameter>
-    <name value="default-valueset-version"/>
-    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/von-seltene-betroffen-vs|2027.0.0-ballot"/>
   </parameter>
 </Parameters>

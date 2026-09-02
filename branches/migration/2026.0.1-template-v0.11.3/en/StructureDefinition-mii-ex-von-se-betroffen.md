@@ -1,15 +1,15 @@
 # VonSEBetroffen - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
-* [**Inhaltsverzeichnis**](toc.md)
-* [**Artefaktübersicht**](artifacts.md)
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
 * **VonSEBetroffen**
 
 ## Extension: 
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:VonSEBetroffen |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-02 | *Computable Name*:VonSEBetroffen |
 
 Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.
 
@@ -22,52 +22,15 @@ Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familie
 * Use this Extension: [MII PR SE Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md)
 * Examples for this Extension: [Bundle/bundle-sma-complete](Bundle-bundle-sma-complete.md), [FamilyMemberHistory/family-history-001](FamilyMemberHistory-family-history-001.md) and [FamilyMemberHistory/mii-exa-seltene-familienanamnese](FamilyMemberHistory-mii-exa-seltene-familienanamnese.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-von-seltene-betroffen.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-ex-von-se-betroffen.json)
 
-### Formale Ansichten des Extension-Inhalts
+### Formal Views of Extension Content
 
- [Beschreibung von Profilen, Differentials, Snapshots und deren Repräsentationen](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
-
-*  [Differential-Tabelle](#tabs-diff) 
-*  [Snapshot-Tabelle](#tabs-snap) 
-*  [Statistiken/Referenzen](#tabs-summ) 
-*  [AlleAll](#tabs-all) 
-
-Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) 
-
-#### Terminology Bindings (Differential)
-
-#### Terminology Bindings
-
-#### Constraints
-
-Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) 
-
-** Summary **
-
-Simple Extension with the type CodeableConcept: Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.
-
- **Differential-AnsichtDifferential View** 
-
-Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) 
-
-#### Terminology Bindings (Differential)
-
- **Snapshot-Ansicht** 
-
-#### Terminology Bindings
-
-#### Constraints
-
-Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) 
-
-** Summary **
-
-Simple Extension with the type CodeableConcept: Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
  
 
-Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-von-seltene-betroffen.csv), [Excel](../StructureDefinition-von-seltene-betroffen.xlsx), [Schematron](../StructureDefinition-von-seltene-betroffen.sch) 
+Other representations of profile: [CSV](../StructureDefinition-mii-ex-von-se-betroffen.csv), [Excel](../StructureDefinition-mii-ex-von-se-betroffen.xlsx), [Schematron](../StructureDefinition-mii-ex-von-se-betroffen.sch) 
 
 
 
@@ -76,12 +39,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-von-seltene-
 ```json
 {
   "resourceType" : "StructureDefinition",
-  "id" : "von-seltene-betroffen",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen",
+  "id" : "mii-ex-von-se-betroffen",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen",
   "version" : "2027.0.0-ballot",
   "name" : "VonSEBetroffen",
   "status" : "active",
-  "date" : "2026-09-02T16:52:58+00:00",
+  "date" : "2026-09-02T17:07:58+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -135,7 +98,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-von-seltene-
     {
       "id" : "Extension.url",
       "path" : "Extension.url",
-      "fixedUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen"
+      "fixedUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen"
     },
     {
       "id" : "Extension.value[x]",

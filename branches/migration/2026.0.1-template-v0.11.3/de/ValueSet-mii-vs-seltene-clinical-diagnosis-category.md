@@ -16,7 +16,7 @@ Value set for categorizing clinical diagnoses of rare diseases
 
  **References** 
 
-This value set is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
+* [MII PR SE Clinical Diagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md)
 
 ### Logical Definition (CLD)
 
@@ -41,7 +41,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "ClinicalDiagnosisCategoryVS",
   "title" : "MII VS SE Clinical Diagnosis Category",
   "status" : "active",
-  "date" : "2026-09-02T16:52:58+00:00",
+  "date" : "2026-09-02T17:07:58+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -79,12 +79,16 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
         "display" : "Diagnosis"
       },
       {
-        "code" : "363358000",
+        "code" : "404684003",
         "display" : "Clinical finding"
       },
       {
         "code" : "64572001",
         "display" : "Disease"
+      },
+      {
+        "code" : "66091009",
+        "display" : "Congenital disease"
       },
       {
         "code" : "609328004",
@@ -93,18 +97,6 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       {
         "code" : "85828009",
         "display" : "Autoimmune disease"
-      },
-      {
-        "code" : "47367009",
-        "display" : "Syndrome"
-      },
-      {
-        "code" : "381406004",
-        "display" : "Congenital disorder"
-      },
-      {
-        "code" : "84757009",
-        "display" : "Rare disease"
       }]
     }]
   }

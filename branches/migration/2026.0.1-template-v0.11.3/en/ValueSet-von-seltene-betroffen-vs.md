@@ -16,7 +16,7 @@ ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Ver
 
  **References** 
 
-* [VonSEBetroffen](StructureDefinition-von-seltene-betroffen.md)
+* [VonSEBetroffen](StructureDefinition-mii-ex-von-se-betroffen.md)
 
 ### Logical Definition (CLD)
 
@@ -42,7 +42,7 @@ ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Ver
   "title" : "Von SE betroffen Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T16:52:58+00:00",
+  "date" : "2026-09-02T17:07:58+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

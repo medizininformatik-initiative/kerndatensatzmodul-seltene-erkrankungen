@@ -166,7 +166,7 @@ Mandatory: 2 elements(2 nested mandatory elements)
 
 This structure refers to these extensions:
 
-* [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen](StructureDefinition-von-seltene-betroffen.md)
+* [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen](StructureDefinition-mii-ex-von-se-betroffen.md)
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance](StructureDefinition-mii-ex-seltene-penetrance.md)
 
 **Slices**
@@ -203,7 +203,7 @@ Mandatory: 2 elements(2 nested mandatory elements)
 
 This structure refers to these extensions:
 
-* [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen](StructureDefinition-von-seltene-betroffen.md)
+* [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen](StructureDefinition-mii-ex-von-se-betroffen.md)
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance](StructureDefinition-mii-ex-seltene-penetrance.md)
 
 **Slices**
@@ -230,7 +230,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Familienanamnese",
   "title" : "MII PR SE Familienanamnese",
   "status" : "active",
-  "date" : "2026-09-02T16:52:58+00:00",
+  "date" : "2026-09-02T17:07:58+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -300,7 +300,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "max" : "1",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen"]
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen"]
       }],
       "mustSupport" : true,
       "mapping" : [{
