@@ -136,17 +136,22 @@ dependencies:
   # (2026.0.x / 1.5.x) sind auf die am 2026-08-28 aufgelösten Registry-Stände
   # gepinnt, weil Template-CI (convention-check) floating Versionen ablehnt —
   # Auflösung geloggt in migration-log/run.log 2.1) ──────────────────────────
-  de.basisprofil.r4: 1.5.4 # Quelle: 1.5.x
+  de.basisprofil.r4: 1.6.0 # war 1.5.4 (Nutzerentscheid 2026-09-02; keine 2027er Linie, 1.6.0 ist der aktuelle Stand)
   # 2027er Ballot-RCs, VORLAEUFIG (Gate A ① / A-3, Nutzerentscheid 2026-09-02):
   # Die MII harmonisiert derzeit 20+ Packages auf die 2027er Linie, das geschieht
   # in mehreren Schritten. Diese beiden Pins ziehen mit, sobald hoehere RCs oder
   # finale Staende erscheinen — sie sind ausdruecklich KEIN Endzustand.
   # Getestet 2026-09-02: SUSHI 0 Errors / 0 Warnings, Ressourcenzahlen
   # unveraendert (meta 173, base 36), es fehlt also nichts.
+  # Zweiter Schritt 2026-09-02: studie -> 2027.0.0-ballot.rc1, basisprofil -> 1.6.0.
+  # NICHT mitgezogen: icu bietet zwar ein 2027.0.0 an, aber ohne Herausgeber-Signal —
+  # die package.json traegt weder Datum noch Titel, und dist-tags.latest steht auf
+  # 2026.0.2, also nicht einmal auf dem neuesten 2026er Stand. molgen und medikation
+  # haben noch keine 2027er Linie, sie folgen laut Modulverantwortlichem in Kuerze.
   de.medizininformatikinitiative.kerndatensatz.meta: 2027.0.0-ballot.rc3 # war 2026.0.0
   de.medizininformatikinitiative.kerndatensatz.molgen: 2026.0.4 # Quelle: 2026.0.x
   de.medizininformatikinitiative.kerndatensatz.icu: 2026.0.3 # Quelle: 2026.0.x
-  de.medizininformatikinitiative.kerndatensatz.studie: 2026.0.2 # Quelle: exakt
+  de.medizininformatikinitiative.kerndatensatz.studie: 2027.0.0-ballot.rc1 # war 2026.0.2
   de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot.rc1 # war 2026.0.1
   de.medizininformatikinitiative.kerndatensatz.medikation: 2026.0.1 # Quelle: 2026.0.x
   # ── Template-Maschinerie (Gate A dokumentiert, Skill Schritt 3) ────────────
