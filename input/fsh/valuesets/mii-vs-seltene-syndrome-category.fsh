@@ -8,9 +8,16 @@ Id: mii-vs-seltene-syndrome-category
 Title: "Syndrome Category Value Set"
 Description: "Categories for classifying syndrome types in rare diseases"
 * ^status = #active
-* $SCT#32895009 "Genetic disorder"
+// KORRIGIERT 2026-09-02 nach systematischer Pruefung gegen tx.fhir.org:
+//   32895009  hiess "Genetic disorder" und heisst tatsaechlich "Hereditary
+//             disease" — Code richtig, Display veraltet. Genau das hatte auch
+//             der IG-Publisher gemeldet ("Wrong Display Name").
+//   371097004 "Developmental disorder" existiert nicht; der Begriff ist 5294002.
+//   254829008 "Degenerative disorder" existiert nicht; der Begriff ist 362975008.
+// Die uebrigen drei Codes wurden bestaetigt.
+* $SCT#32895009 "Hereditary disease"
 * $SCT#75934005 "Metabolic disease"
 * $SCT#128139000 "Inflammatory disorder"
 * $SCT#276654001 "Congenital malformation"
-* $SCT#371097004 "Developmental disorder"
-* $SCT#254829008 "Degenerative disorder"
+* $SCT#5294002 "Developmental disorder"
+* $SCT#362975008 "Degenerative disorder"

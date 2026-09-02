@@ -22,16 +22,56 @@ import argparse
 import glob
 import json
 import os
+import ssl
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOCAL_PREFIX = "https://www.medizininformatik-initiative.de/"
 
+# HPO kennt tx.fhir.org nicht (404 auf jeden Code). Die Ontologie-API von JAX
+# beantwortet dieselbe Frage und wird fuer dieses System stattdessen befragt —
+# sonst blieben 35 Codes stillschweigend ungeprueft und die Bilanz saehe
+# besser aus, als sie ist.
+HPO = "http://human-phenotype-ontology.org"
+HPO_API = "https://ontology.jax.org/api/hp/terms/%s"
 
-def lookup(tx, system, code, attempts=3):
+# SNOMED-Semantik-Tags: das ValueSet fuehrt oft den Fully Specified Name
+# ("... (finding)"), der Server den Preferred Term. Beides bezeichnet dasselbe
+# Konzept; ohne diese Normalisierung meldet das Skript Fehlalarme.
+SEMANTIC_TAGS = (
+    "(finding)", "(disorder)", "(procedure)", "(observable entity)",
+    "(qualifier value)", "(situation)", "(body structure)", "(substance)",
+    "(regime/therapy)", "(morphologic abnormality)", "(event)", "(person)",
+)
+
+
+def opener(cert=None, key=None):
+    """urlopen-Opener, optional mit Client-Zertifikat (mTLS)."""
+    if not cert:
+        return urllib.request.build_opener()
+    ctx = ssl.create_default_context()
+    ctx.load_cert_chain(certfile=cert, keyfile=key or cert)
+    return urllib.request.build_opener(urllib.request.HTTPSHandler(context=ctx))
+
+
+def lookup_hpo(code, op):
+    req = urllib.request.Request(HPO_API % code)
+    try:
+        with op.open(req, timeout=25) as r:
+            return json.loads(r.read().decode("utf-8")).get("name"), None, False
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return None, None, True
+        return None, None, None
+    except Exception:
+        return None, None, None
+
+
+def lookup(tx, system, code, op, attempts=3):
     """(display, status, fehlt) — Transportfehler werden wiederholt.
 
     Ein Timeout ist kein Beweis, dass ein Code ungueltig ist; ohne die
@@ -45,7 +85,7 @@ def lookup(tx, system, code, attempts=3):
     last = None
     for i in range(attempts):
         try:
-            with urllib.request.urlopen(req, timeout=30) as r:
+            with op.open(req, timeout=30) as r:
                 d = json.loads(r.read().decode("utf-8"))
             if d.get("resourceType") == "OperationOutcome":
                 return None, None, True
@@ -59,6 +99,14 @@ def lookup(tx, system, code, attempts=3):
                     if parts.get("code") == "STATUS":
                         status = parts.get("value")
             return disp, status, False
+        except urllib.error.HTTPError as e:
+            # 404 auf $lookup heisst: diesen Code gibt es im System nicht. Das
+            # ist ein BEFUND, kein Transportfehler — frueher wurde es als
+            # "nicht pruefbar" abgetan und verschwand aus der Bilanz.
+            if e.code == 404:
+                return None, None, True
+            last = e
+            time.sleep(1 + i)
         except Exception as e:  # Transport, nicht Terminologie
             last = e
             time.sleep(1 + i)
@@ -67,13 +115,22 @@ def lookup(tx, system, code, attempts=3):
 
 
 def norm(s):
-    return " ".join((s or "").split()).lower()
+    s = " ".join((s or "").split()).lower()
+    for tag in SEMANTIC_TAGS:
+        if s.endswith(tag):
+            s = s[: -len(tag)].strip()
+    return s
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--tx", default="https://tx.fhir.org/r4")
+    ap.add_argument("--tx", default="https://tx.fhir.org/r4",
+                    help="Terminologieserver. Fuer den MII-eigenen: "
+                         "https://ontoserver.mii-termserv.de/fhir (braucht --cert)")
+    ap.add_argument("--cert", help="Client-Zertifikat (PEM) fuer mTLS, z.B. SU-TermServ")
+    ap.add_argument("--key", help="Zugehoeriger Schluessel, falls nicht im Zertifikat")
     args = ap.parse_args()
+    op = opener(args.cert, args.key)
 
     findings = []
     checked = skipped = 0
@@ -89,7 +146,10 @@ def main():
                 continue
             for c in inc.get("concept", []):
                 code, want = c.get("code"), c.get("display")
-                got, status, missing = lookup(args.tx, system, code)
+                if system == HPO:
+                    got, status, missing = lookup_hpo(code, op)
+                else:
+                    got, status, missing = lookup(args.tx, system, code, op)
                 if missing is None:
                     continue
                 checked += 1
