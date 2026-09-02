@@ -68,7 +68,7 @@ Mandatory: 2 elements(1 nested mandatory element)
 
 This structure refers to these other structures:
 
-* [MII PR Studie Studie (https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.studie@2026.0.2&canonical=https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)
+* [MII PR Studie Studie (https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.studie@2027.0.0-ballot.rc1&canonical=https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)
 
 **Extensions**
 
@@ -112,7 +112,7 @@ Mandatory: 2 elements(1 nested mandatory element)
 
 This structure refers to these other structures:
 
-* [MII PR Studie Studie (https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.studie@2026.0.2&canonical=https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)
+* [MII PR Studie Studie (https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.studie@2027.0.0-ballot.rc1&canonical=https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)
 
 **Extensions**
 
@@ -145,7 +145,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Studieneinschluss_Anfrage",
   "title" : "MII PR SE Studieneinschluss Anfrage",
   "status" : "active",
-  "date" : "2026-09-02T04:00:55+00:00",
+  "date" : "2026-09-02T06:41:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

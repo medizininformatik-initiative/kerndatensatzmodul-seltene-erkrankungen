@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2026.0.1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2026.0.1)
+Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2026.0.1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2026.0.1)
 
 **Condition Asserted Date**: 2024-10-01
 
@@ -30,9 +30,9 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **recordedDate**: 2024-10-01
 
-> **evidence****code**: Laktat normal**detail**: [Observation/lactate-normal](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/lactate-normal)
+> **evidence****code**: Laktat normal**detail**: [Observation/lactate-normal](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/lactate-normal)
 
-> **evidence****code**: Muskelbiopsie unauffällig**detail**: [DiagnosticReport/muscle-biopsy-normal](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/DiagnosticReport/muscle-biopsy-normal)
+> **evidence****code**: Muskelbiopsie unauffällig**detail**: [DiagnosticReport/muscle-biopsy-normal](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/DiagnosticReport/muscle-biopsy-normal)
 
 **note**: 
 

@@ -76,6 +76,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "version" : "3.0.0",
         "code" : "package",
         "display" : "Package"
       }]
@@ -156,7 +157,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis",
@@ -164,7 +165,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
   "name" : "MII_PR_Seltene_GeneticDiagnosis",
   "title" : "MII PR SE Genetic Diagnosis",
   "status" : "active",
-  "date" : "2026-09-02T04:00:55+00:00",
+  "date" : "2026-09-02T06:41:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

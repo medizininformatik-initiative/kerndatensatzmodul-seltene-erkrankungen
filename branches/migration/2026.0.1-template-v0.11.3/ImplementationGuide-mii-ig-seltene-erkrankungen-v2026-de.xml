@@ -14,7 +14,7 @@
 </div></div></div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
-    <valueDate value="2026-08-28"/>
+    <valueDate value="2026-09-02"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
     <valueCode value="shareable"/>
@@ -136,7 +136,7 @@
   </title>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-08-28"/>
+  <date value="2026-09-02"/>
   <publisher value="Medizininformatik Initiative">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
@@ -168,12 +168,12 @@
   <dependsOn id="de_basisprofil_r4">
     <uri value="http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4"/>
     <packageId value="de.basisprofil.r4"/>
-    <version value="1.5.4"/>
+    <version value="1.6.0"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_meta">
     <uri value="https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.meta"/>
-    <version value="2026.0.0"/>
+    <version value="2027.0.0-ballot.rc3"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_molgen">
     <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.molgen/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.molgen"/>
@@ -186,14 +186,14 @@
     <version value="2026.0.3"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_studie">
-    <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.studie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.studie"/>
+    <uri value="https://www.medizininformatik-initiative.de/fhir/modul-studie/ImplementationGuide/mii-ig-studie"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.studie"/>
-    <version value="2026.0.2"/>
+    <version value="2027.0.0-ballot.rc1"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_base">
     <uri value="https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.base"/>
-    <version value="2026.0.1"/>
+    <version value="2027.0.0-ballot.rc1"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_medikation">
     <uri value="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ImplementationGuide/mii-ig-medikation"/>

@@ -42,7 +42,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "MII VS Seltene Erkrankungen NBS Aminosäuren (Trockenblut)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T04:00:55+00:00",
+  "date" : "2026-09-02T06:41:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

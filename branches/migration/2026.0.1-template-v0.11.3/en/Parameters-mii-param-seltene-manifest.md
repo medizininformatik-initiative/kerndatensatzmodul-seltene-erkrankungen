@@ -275,7 +275,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie|2026.0.1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-canonical-version",
@@ -383,15 +383,15 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-task-reasoncode|2026.0.0"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-task-reasoncode|2027.0.0-ballot.rc3"
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-task-reasonreference|2026.0.0"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-task-reasonreference|2027.0.0-ballot.rc3"
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-task-for|2026.0.0"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-task-for|2027.0.0-ballot.rc3"
   },
   {
     "name" : "default-canonical-version",
@@ -427,7 +427,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-familymemberhistory-reasonreference|2026.0.0"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-familymemberhistory-reasonreference|2027.0.0-ballot.rc3"
   },
   {
     "name" : "default-canonical-version",
@@ -535,7 +535,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2026.0.1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-canonical-version",
@@ -547,59 +547,63 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "http://fhir.de/StructureDefinition/CodingICD10GM|1.5.4"
+    "valueCanonical" : "http://fhir.de/StructureDefinition/CodingICD10GM|1.6.0"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm|2026.0.1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen|1.5.4"
+    "valueCanonical" : "http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen|1.6.0"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "http://fhir.de/ValueSet/icd-10-gm-mehrfachcodierungs-kennzeichen|1.5.4"
+    "valueCanonical" : "http://fhir.de/ValueSet/icd-10-gm-mehrfachcodierungs-kennzeichen|1.6.0"
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "http://fhir.de/StructureDefinition/seitenlokalisation|1.5.4"
+    "valueCanonical" : "http://fhir.de/StructureDefinition/seitenlokalisation|1.6.0"
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit|1.5.4"
+    "valueCanonical" : "http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit|1.6.0"
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "http://fhir.de/StructureDefinition/CodingAlphaID|1.5.4"
+    "valueCanonical" : "http://fhir.de/StructureDefinition/CodingAlphaID|1.6.0"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid|2026.0.1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct|2026.0.1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet|2026.0.1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes|2027.0.0-ballot"
   },
   {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/bodySite|5.3.0"
+  },
+  {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-bodystructure-snomed|2026.0.1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-bodystructure-snomed|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "http://fhir.de/StructureDefinition/lebensphase|1.5.4"
+    "valueCanonical" : "http://fhir.de/StructureDefinition/lebensphase|1.6.0"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "http://fhir.de/ValueSet/lebensphase-de|1.5.4"
+    "valueCanonical" : "http://fhir.de/ValueSet/lebensphase-de|1.6.0"
   },
   {
     "name" : "default-valueset-version",
@@ -743,7 +747,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "http://fhir.de/StructureDefinition/observation-de-vitalsign|1.5.4"
+    "valueCanonical" : "http://fhir.de/StructureDefinition/observation-de-vitalsign|1.6.0"
   },
   {
     "name" : "default-canonical-version",
@@ -791,7 +795,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "http://fhir.de/ValueSet/VitalSignDE-Kopfumfang-SNOMED-CT|1.5.4"
+    "valueCanonical" : "http://fhir.de/ValueSet/VitalSignDE-Kopfumfang-SNOMED-CT|1.6.0"
   },
   {
     "name" : "default-canonical-version",
@@ -823,11 +827,11 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "http://fhir.de/ValueSet/VitalSignDE_Body_Length_UCUM|1.5.4"
+    "valueCanonical" : "http://fhir.de/ValueSet/VitalSignDE_Body_Length_UCUM|1.6.0"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "http://fhir.de/ValueSet/UcumVitalsCommonDE|1.5.4"
+    "valueCanonical" : "http://fhir.de/ValueSet/UcumVitalsCommonDE|1.6.0"
   },
   {
     "name" : "default-valueset-version",
