@@ -15,6 +15,25 @@ This page tracks the differences between versions, beginning with the difference
 - `fix` slicing discriminator on `mii-pr-seltene-blutgruppe` `value[x].coding` changed from `#pattern`/`$this` to `#value`/`system` (issue #25). The slices differ only by code system and set `.system`, which yields a `patternUri` on the child element rather than a `patternCoding` on the coding itself, so the discriminator had nothing to match
 - `fix` same defect repaired on `category` in `mii-pr-seltene-therapieempfehlung` and `mii-pr-seltene-therapieempfehlung-nicht-medikamentoes` (found by an audit, not previously reported). Both slices were distinguished solely by a required binding to different value sets, which no FHIR R4 discriminator can evaluate; `coding.system` is now pinned per slice
 
+#### Breaking changes (continued)
+
+- `change` element names of the logical model `mii-lm-seltene` moved to lowerCamelCase. The model had used PascalCase throughout (`Seltene.AnamneseUndDiagnostik.Untersuchungsdatum`), which violates the FHIR element naming rule `eld-20` — every path segment after the first must begin lowercase — and produced 195 warnings once the model was back in the build. 62 segment names were renamed with acronyms handled correctly (`HPOTerm` → `hpoTerm`, `BMI` → `bmi`, `StudienID` → `studienID`), and the 90 mapping targets in 11 profiles were moved with them. **Element paths therefore changed**; this is a breaking change to the model, deliberate for a new major line
+- `change` example instance `example` renamed to `mii-exa-seltene-patient` and profiled on `MII_PR_Person_Patient` from the base module. A generic `example` is not a viable published instance id and did not follow the module's `mii-exa-seltene-*` convention
+- `remove` profile code of `mii-pr-seltene-taillenumfang` changed from LOINC `8280-0` to SNOMED `276361009 |Waist circumference|`, and `mii-pr-seltene-hueftumfang` from LOINC `56063-1` to SNOMED `284472007 |Hip circumference|`. **Consumers querying by the old codes will no longer match**
+
+#### Bug fixes (continued)
+
+- `fix` **the waist circumference profile carried a code for the abdominal circumference.** LOINC offers waist circumference only measured *at the umbilicus* (`8280-0`, `8281-8`) — which is the landmark of the abdominal circumference, not the waist, defined at the narrowest point or at the midpoint between the lowest rib and the iliac crest. The profile therefore said something other than its name. SNOMED separates the two, and the generic `276361009` is now used so that the profile does not commit to a measurement protocol; `1162535003` and `1162536002` remain available for those who must record the landmark. This matters because the module models a waist-to-hip ratio: using the abdominal circumference as the numerator yields a different and larger value, and thus a wrong ratio
+- `fix` the logical model gained a `taillenumfang` element. It knew only `bauchumfang`, so the waist circumference profile mapped onto the abdominal circumference — the same conflation as above, one level down
+- `fix` logical model `mii-lm-seltene` reactivated. It had been parked as `disabled/mii-lm-seltene.fsh.disabled` and builds without error; its canonical is the target of the mapping every profile carries, so 22 unresolvable links are resolved
+- `fix` 31 mapping targets in the logical-model mappings pointed at elements that do not exist (`Messbefunde.*` for what is called `koerperlicheUntersuchung`, `Patient` for `persoenlicheInfosIndexpatient`), and the targets for `valueQuantity.value` and `effectiveDateTime` pointed at the backbone element instead of the value or the date. All 102 mapping targets now resolve
+- `fix` the logical model gained `familienanamnese.todDurchSE` and `familienanamnese.dokumentationsdatum`. Both data points are carried by the family history profile; the model did not define them, so those mappings pointed nowhere
+- `fix` five references to `Patient/example-patient`, an instance that was never defined
+
+#### Documentation
+
+- `docs` the data set page now renders the full logical model as a table (71 data elements, both language trees), generated from the published snapshot by `scripts/generate-lm-table.py`
+
 #### Governance
 
 - `chore` licence declared as `CC-BY-4.0` at IG level (Gate A decision). The module previously declared no licence anywhere in `sushi-config.yaml`, `package.json` or a LICENSE file; the artefact level already applied CC-BY-4.0 through `LicenseCodeableCCBY40`

@@ -1,0 +1,64 @@
+@startuml
+' Klinische gegen genetische Diagnose — ersetzt die beiden langen FSH-Instanzen
+' auf der Seite clinical-genetic-diagnosis-guide durch einen Strukturvergleich.
+' Sprachneutral gehalten: nur FHIR-Elementnamen, Profil-IDs und Codes.
+left to right direction
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 12
+skinparam ArrowColor #555555
+skinparam class {
+  BorderColor #4a86e8
+  BackgroundColor #ffffff
+  HeaderBackgroundColor #eef4fd
+  FontColor #1a1a1a
+}
+
+title Was die beiden Profile unterscheidet
+
+class "MII_PR_Seltene_ClinicalDiagnosis" as C {
+  verificationStatus : **provisional** | differential
+  --
+  code.coding[icd10-gm]
+  code.coding[orphanet]
+  code.coding[**hpo**]      << eigener Slice >>
+  --
+  category : SCT#47367009 Syndrome  (optional)
+  --
+  evidence.detail → **HPO-Symptom-Observation**
+  --
+  extension[ageOfOnset]
+  extension[inheritancePattern]
+}
+
+class "MII_PR_Seltene_GeneticDiagnosis" as G {
+  verificationStatus : **confirmed**
+  --
+  code.coding[icd10-gm]
+  code.coding[orphanet]
+  code.coding[**omim**]     << eigener Slice >>
+  --
+  category : SCT#782964007 Genetic disease  **(Pflicht)**
+  --
+  evidence.detail → **MolGen-Variante**
+  evidence.detail → **MolGen-DiagnostischeImplikation**
+  --
+  extension[geneticBasis]
+  extension[inheritancePattern]
+  extension[penetrance]
+}
+
+C -[hidden]right-> G
+
+note bottom of C
+  Belegt sich mit **Phaenotyp** (HPO).
+  Kategorie ist optional.
+end note
+
+note bottom of G
+  Belegt sich mit **Molekulargenetik**.
+  Kategorie ist **Pflicht**.
+end note
+
+@enduml

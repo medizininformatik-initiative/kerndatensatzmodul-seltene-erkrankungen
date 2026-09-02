@@ -26,21 +26,9 @@ The clinical diagnosis is used when:
 
 #### FSH example
 
-```fsh
-Instance: marfan-clinical-diagnosis
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
-* verificationStatus = $condition-ver-status#provisional
-* category[+] = $condition-category#encounter-diagnosis
-* category[clinical] = $SCT#47367009 "Syndrome"
-* code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
-* code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
-* code.coding[omim] = http://omim.org#154700 "Marfan syndrome"
-* evidence[+].detail = Reference(observation-aortic-dilatation)  // HPO: HP:0002616
-* evidence[+].detail = Reference(observation-lens-dislocation)   // HPO: HP:0001083
-* evidence[+].detail = Reference(observation-tall-stature)       // HPO: HP:0000098
-* extension[ageOfOnset].valueCodeableConcept = http://hpo.jax.org/app/#HP:0003577 "Congenital onset"
-* extension[inheritancePattern].valueCodeableConcept = http://hpo.jax.org/app/#HP:0000006 "Autosomal dominant"
-```
+![Clinical versus genetic diagnosis — structural comparison](diagnose-klinisch-vs-genetisch.svg)
+
+The spelled-out instances live with the profiles themselves; what matters here is the difference, not the syntax.
 
 ### Genetic diagnosis
 
@@ -63,51 +51,23 @@ The genetic diagnosis is used when:
 
 #### FSH example
 
-```fsh
-Instance: sma-genetic-diagnosis
-InstanceOf: MII_PR_SE_GeneticDiagnosis
-* verificationStatus = $condition-ver-status#confirmed
-* category[+] = $condition-category#encounter-diagnosis
-* category[genetic] = $SCT#782964007 "Genetic disease"
-* code.coding[icd10-gm] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie, Typ I"
-* code.coding[orphanet] = http://www.orpha.net#83330 "SMA type 1"
-* code.coding[omim] = http://omim.org#253300 "Spinal muscular atrophy, type I"
-* evidence[+].code = $SCT#106221001 "Genetic finding"
-* evidence[=].detail = Reference(variant-smn1-deletion)  // MolGen Variante
-* evidence[+].detail = Reference(diagnostic-report-sma)   // MolGen DiagnostischeImplikation
-* extension[geneticBasis].valueCodeableConcept = $SCT#264530000 "Single gene disorder"
-* extension[inheritancePattern].valueCodeableConcept = http://hpo.jax.org/app/#HP:0000007 "Autosomal recessive"
-* extension[penetrance].valueCodeableConcept = http://hpo.jax.org/app/#HP:0025169 "Complete penetrance"
-```
-
 ### Parallel diagnosis model
 
 In rare diseases, clinical and genetic diagnoses exist **in parallel**:
 
 #### 1. Suspected diagnosis (screening/initial)
 
-```fsh
-* verificationStatus = #provisional
-* category = #encounter-diagnosis
-```
+![Parallel diagnosis model](diagnose-parallelmodell.svg)
 
 #### 2. Clinical diagnosis
 
-```fsh
-* verificationStatus = #confirmed
-* category[clinical] = "clinical"
-```
-
 #### 3. Genetic diagnosis (parallel to the clinical one)
-
-```fsh
-* verificationStatus = #confirmed
-* category[genetic] = $SCT#782964007 "Genetic disease"
-```
 
 **Important:** The genetic diagnosis does NOT replace the clinical diagnosis. Both exist in parallel and complement each other.
 
 ### Decision tree
+
+![Decision tree: which diagnosis profile when](diagnose-entscheidungsbaum.svg)
 
 The decision flow (rare disease suspected → ClinicalImpression → examinations → phenotypic analysis leading to `MII_PR_SE_ClinicalDiagnosis` with HPO codes and linked HPO symptoms, and/or genetic analysis leading to `MII_PR_SE_GeneticDiagnosis` with OMIM code, linked MolGen variant and diagnostic implication — each ending in status "confirmed") is visualized in the German version of this page as a PlantUML source. The ClinicalImpression links: problem → suspected diagnosis, finding → clinical diagnosis, finding → genetic diagnosis, investigation → examinations. Clinical and genetic diagnoses exist **in parallel** and complement each other.
 
@@ -131,16 +91,6 @@ The **ClinicalImpression** links the different diagnostic stages:
 1. **problem**: reference to the suspected diagnosis (reason for the examination)
 2. **finding**: references to the confirmed diagnoses (clinical AND genetic)
 3. **investigation**: references to the examinations performed
-
-```fsh
-Instance: clinical-impression-se
-InstanceOf: ClinicalImpression
-* problem[+] = Reference(condition-verdacht)  // starting point
-* finding[+].itemReference = Reference(condition-klinisch)  // result
-* finding[+].itemReference = Reference(condition-genetisch) // result
-* investigation[+].item = Reference(observation-hpo-symptom)
-* investigation[+].item = Reference(observation-genetic-variant)
-```
 
 Both diagnoses remain as independent resources and document different aspects of the same disease.
 
@@ -185,31 +135,7 @@ For rare diseases, the documentation of excluded diagnoses is essential for:
 
 ##### Clinically excluded
 
-```fsh
-Instance: marfan-excluded-clinical
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
-* verificationStatus = $condition-ver-status#refuted
-* clinicalStatus = $condition-clinical#inactive
-* category[clinical] = $SCT#47367009 "Syndrome"
-* code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
-* code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
-* note.text = "Marfan-Syndrom klinisch ausgeschlossen. Ghent-Kriterien nicht erfüllt."
-```
-
 ##### Genetically excluded
-
-```fsh
-Instance: sma-excluded-genetic
-InstanceOf: MII_PR_SE_GeneticDiagnosis
-* verificationStatus = $condition-ver-status#refuted
-* clinicalStatus = $condition-clinical#inactive
-* category[genetic] = $SCT#782964007 "Genetic disease"
-* code.coding[orphanet] = http://www.orpha.net#83330 "SMA"
-* code.coding[omim] = http://omim.org#253300 "SMA type I"
-* evidence[+].code = $SCT#106221001 "Genetic finding"
-* evidence[=].detail = Reference(molgen-smn1-normal)
-* note.text = "SMN1-Gen normal (2 Kopien). SMA ausgeschlossen."
-```
 
 #### Best practices for excluded diagnoses
 

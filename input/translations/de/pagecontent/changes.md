@@ -15,6 +15,25 @@ Auf dieser Seite werden die Unterschiede zwischen den Versionen nachgehalten, be
 - `fix` Slicing-Discriminator auf `mii-pr-seltene-blutgruppe` `value[x].coding` von `#pattern`/`$this` auf `#value`/`system` umgestellt (Issue #25). Die Slices unterscheiden sich nur durch ihr Codesystem und setzen dafür `.system` — das erzeugt ein `patternUri` auf dem Kindelement statt eines `patternCoding` auf dem Coding selbst, sodass der Discriminator ins Leere zeigte
 - `fix` derselbe Defekt bei `category` in `mii-pr-seltene-therapieempfehlung` und `mii-pr-seltene-therapieempfehlung-nicht-medikamentoes` behoben (durch eine Prüfung gefunden, vorher nicht gemeldet). Beide Slices wurden ausschließlich über ein required-Binding auf verschiedene ValueSets unterschieden, was kein FHIR-R4-Discriminator auswerten kann; `coding.system` ist nun je Slice festgelegt
 
+### Breaking Changes (Fortsetzung)
+
+- `change` Elementnamen des Logical Models `mii-lm-seltene` auf lowerCamelCase umgestellt. Das Modell verwendete durchgehend PascalCase (`Seltene.AnamneseUndDiagnostik.Untersuchungsdatum`), was gegen die FHIR-Regel `eld-20` verstößt — jedes Pfadsegment nach dem ersten muss klein beginnen — und nach der Reaktivierung 195 Warnungen erzeugte. 62 Segmentnamen umbenannt, Akronyme korrekt behandelt (`HPOTerm` → `hpoTerm`, `BMI` → `bmi`, `StudienID` → `studienID`), die 90 Mapping-Ziele in 11 Profilen mitgezogen. **Die Elementpfade ändern sich damit**; das ist ein Bruch am Modell, für eine neue Major-Linie bewusst in Kauf genommen
+- `change` Beispielinstanz `example` umbenannt in `mii-exa-seltene-patient` und auf `MII_PR_Person_Patient` aus dem Base-Modul profiliert. Ein generisches `example` ist als publizierte Instanz-ID nicht tragfähig und folgte nicht der Konvention `mii-exa-seltene-*`
+- `remove` Code von `mii-pr-seltene-taillenumfang` von LOINC `8280-0` auf SNOMED `276361009 |Waist circumference|` geändert, `mii-pr-seltene-hueftumfang` von LOINC `56063-1` auf SNOMED `284472007 |Hip circumference|`. **Abfragen auf die alten Codes greifen nicht mehr**
+
+### Fehlerbehebungen (Fortsetzung)
+
+- `fix` **das Taillenumfang-Profil trug den Code des Bauchumfangs.** LOINC bietet den Taillenumfang ausschließlich auf Nabelhöhe an (`8280-0`, `8281-8`) — das ist die Landmarke des Bauchumfangs, nicht der Taille, die an der schmalsten Stelle beziehungsweise am Mittelpunkt zwischen unterster Rippe und Beckenkamm definiert ist. Das Profil sagte damit etwas anderes, als es hieß. SNOMED trennt beides; verwendet wird nun der generische `276361009`, damit sich das Profil auf keine Messvorschrift festlegt, `1162535003` und `1162536002` bleiben für die landmarkengenaue Angabe verfügbar. Das ist relevant, weil das Modul ein Taille-Hüfte-Verhältnis führt: mit dem Bauchumfang als Zähler ergibt sich ein anderer, größerer Wert und damit ein falsches Verhältnis
+- `fix` das Logical Model hat ein Element `taillenumfang` erhalten. Es kannte nur `bauchumfang`, wodurch das Taillenumfang-Profil auf den Bauchumfang mappte — dieselbe Verwechslung eine Ebene tiefer
+- `fix` Logical Model `mii-lm-seltene` reaktiviert. Es lag als `disabled/mii-lm-seltene.fsh.disabled` und baut fehlerfrei; sein Canonical ist das Ziel des Mappings, das jedes Profil trägt, womit 22 unauflösbare Links verschwinden
+- `fix` 31 Mapping-Ziele zeigten auf nicht existierende Elemente (`Messbefunde.*` für `koerperlicheUntersuchung`, `Patient` für `persoenlicheInfosIndexpatient`), und die Ziele für `valueQuantity.value` und `effectiveDateTime` zeigten auf das BackboneElement statt auf Wert oder Datum. Alle 102 Mapping-Ziele lösen jetzt auf
+- `fix` das Logical Model hat `familienanamnese.todDurchSE` und `familienanamnese.dokumentationsdatum` erhalten. Beide Datenpunkte führt das Familienanamnese-Profil, das Modell kannte sie nicht
+- `fix` fünf Verweise auf `Patient/example-patient`, eine nie definierte Instanz
+
+### Dokumentation
+
+- `docs` die Datensatzseite rendert das Logical Model jetzt vollständig als Tabelle (71 Datenelemente, beide Sprachbäume), erzeugt aus dem publizierten Snapshot durch `scripts/generate-lm-table.py`
+
 ### Governance
 
 - `chore` Lizenz auf IG-Ebene als `CC-BY-4.0` deklariert (Gate-A-Entscheidung). Das Modul deklarierte zuvor weder in `sushi-config.yaml` noch in `package.json` noch als LICENSE-Datei eine Lizenz; auf Artefakt-Ebene war CC-BY-4.0 über `LicenseCodeableCCBY40` bereits in Gebrauch

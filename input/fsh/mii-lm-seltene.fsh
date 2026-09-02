@@ -45,6 +45,17 @@ Description: "MII LogicalModel Modul Seltene Erkraknungen"
   * bauchumfang 0..* BackboneElement "Bauchumfang"
     * bauchumfang 0..1 decimal "Bauchumfang in cm" "Bauchumfang des SE-Patienten in cm."
     * datumBauchumfang 0..1 dateTime "Datum Bauchumfang" "Datum der Bauchumfangsmessung."
+  // Ergaenzt 2026-09-02: Taillen- und Bauchumfang sind NICHT dasselbe. Sie werden
+  // an verschiedenen Landmarken gemessen — die Taille an der schmalsten Stelle
+  // beziehungsweise am Mittelpunkt zwischen unterster Rippe und Beckenkamm, der
+  // Bauchumfang auf Nabelhoehe. Fuer das Taille-Huefte-Verhaeltnis muss der
+  // Zaehler die Taille sein; mit dem Bauchumfang ergaebe sich ein anderer, meist
+  // groesserer Wert und damit ein falsches Verhaeltnis. Das Modul fuehrt beide
+  // Profile getrennt, das Modell kannte bisher nur den Bauchumfang, weshalb das
+  // Mapping des Taillenumfangs faelschlich dorthin zeigte.
+  * taillenumfang 0..* BackboneElement "Taillenumfang"
+    * taillenumfang 0..1 decimal "Taillenumfang in cm" "Taillenumfang des SE-Patienten in cm. Abzugrenzen vom Bauchumfang, der auf Nabelhoehe gemessen wird."
+    * datumTaillenumfang 0..1 dateTime "Datum Taillenumfang" "Datum der Taillenumfangsmessung."
   * hueftumfang 0..* BackboneElement "Hüftumfang"
     * hueftumfang 0..1 decimal "Hüftumfang in cm" "Hüftumfang des SE-Patienten in cm."
     * datumHueftumfang 0..1 dateTime "Datum Hüftumfang" "Datum der Hüftumfangsmessung."

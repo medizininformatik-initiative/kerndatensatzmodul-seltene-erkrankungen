@@ -1,0 +1,52 @@
+@startuml
+' Entscheidungsbaum: welches Diagnoseprofil wann.
+' Neu geschrieben 2026-09-02 — die vorherige Fassung lag als ```plantuml-Block
+' in der Seite, wurde vom Renderer NICHT als Diagramm erkannt (sie erschien als
+' roher Codeblock) und war ausserdem an einer note-Konstruktion syntaktisch
+' defekt. Jetzt als Aktivitaetsdiagramm, nach SVG gerendert und als Bild
+' eingebunden.
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 12
+skinparam ArrowColor #555555
+skinparam activity {
+  BorderColor #4a86e8
+  BackgroundColor #eef4fd
+  DiamondBorderColor #b8860b
+  DiamondBackgroundColor #fff8e1
+  FontColor #1a1a1a
+}
+
+title Welches Diagnoseprofil wann?
+
+start
+:Befund oder Verdacht liegt vor;
+
+if (Molekulargenetischer\nBefund vorhanden?) then (nein)
+  :**Klinische Diagnose**\nMII_PR_Seltene_ClinicalDiagnosis;
+  :code.coding[hpo] setzen;
+  :evidence.detail → HPO-Observation;
+  if (Diagnose gesichert?) then (nein)
+    :verificationStatus = provisional;
+  else (ja)
+    :verificationStatus = confirmed;
+  endif
+else (ja)
+  :**Genetische Diagnose**\nMII_PR_Seltene_GeneticDiagnosis;
+  :category = SCT#782964007\nGenetic disease  (Pflicht);
+  :code.coding[omim] setzen;
+  :evidence.detail → MolGen-Variante;
+  :verificationStatus = confirmed;
+  note right
+    Eine bereits bestehende
+    klinische Diagnose bleibt
+    erhalten — sie wird nicht
+    ersetzt.
+  end note
+endif
+
+:ClinicalImpression verknuepft beide\nueber problem und finding;
+stop
+
+@enduml

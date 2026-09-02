@@ -16,8 +16,14 @@ Description: "Profil zur Dokumentation des Hüftumfangs (maximale Gesäßprotube
 * category.coding.display = "Vital Signs"
 
 * code MS
-* code = $LNC#56063-1 "Circumference.at maximal protrusion of gluteus muscles Pelvis"
-* code ^short = "Hüftumfang an der maximalen Gesäßprotuberanz"
+// Generischer SNOMED-Code, aus Konsistenz mit dem Taillenumfang (Nutzerentscheid
+// 2026-09-02). Der bisherige LOINC 56063-1 "Circumference.at maximal protrusion
+// of gluteus muscles Pelvis" war inhaltlich RICHTIG — anders als beim
+// Taillenumfang gab es hier keinen Widerspruch. Beide Profile tragen nun
+// dieselbe Terminologie, damit das Taille-Huefte-Verhaeltnis aus zwei Werten
+// derselben Herkunft gebildet wird.
+* code = $SCT#284472007 "Hip circumference"
+* code ^short = "Hüftumfang"
 
 * subject MS
 * subject 1..1
@@ -43,7 +49,7 @@ Description: "Beispiel einer Hüftumfang-Messung bei einem Patienten mit seltene
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
 * category.coding.display = "Vital Signs"
-* code = $LNC#56063-1 "Circumference.at maximal protrusion of gluteus muscles Pelvis"
+* code = $SCT#284472007 "Hip circumference"
 * subject = Reference(mii-exa-seltene-patient)
 * subject.display = "Beispielpatient"
 * effectiveDateTime = "2024-08-08T10:00:00+02:00"

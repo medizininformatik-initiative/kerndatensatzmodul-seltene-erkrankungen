@@ -16,8 +16,19 @@ Description: "Profil zur Dokumentation des Taillenumfangs (Bauchumfang auf Nabel
 * category.coding.display = "Vital Signs"
 
 * code MS
-* code = $LNC#8280-0 "Waist Circumference at umbilicus by Tape measure"
-* code ^short = "Taillenumfang auf Nabelhöhe"
+// Generischer SNOMED-Code statt LOINC 8280-0 (Nutzerentscheid 2026-09-02).
+// LOINC bietet fuer den Taillenumfang ausschliesslich Varianten AUF NABELHOEHE
+// an (8280-0 "Waist Circumference at umbilicus", 8281-8 dasselbe per Ultraschall),
+// also die Landmarke des BAUCHumfangs — nicht die schmalste Stelle beziehungsweise
+// den Mittelpunkt zwischen unterster Rippe und Beckenkamm, die den Taillenumfang
+// definieren. Das Profil hiess damit anders, als sein Code aussagte.
+// SNOMED trennt das sauber: 1162535003 (Mittelpunkt Rippe/Beckenkamm, WHO-Landmarke)
+// und 1162536002 (schmalste Stelle) neben dem generischen 276361009. Bewusst der
+// generische Code, damit das Profil sich nicht auf eine Messvorschrift festlegt,
+// die die Standorte unterschiedlich handhaben.
+* code = $SCT#276361009 "Waist circumference"
+* code ^short = "Taillenumfang"
+* code ^comment = "Die Messvorschrift ist bewusst offen gelassen. Wer die Landmarke festhalten muss, kann statt des generischen Codes 1162535003 (Mittelpunkt zwischen unterster Rippe und Beckenkamm) oder 1162536002 (schmalste Stelle) verwenden."
 
 * subject MS
 * subject 1..1
@@ -43,7 +54,7 @@ Description: "Beispiel einer Taillenumfang-Messung bei einem Patienten mit selte
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
 * category.coding.display = "Vital Signs"
-* code = $LNC#8280-0 "Waist Circumference at umbilicus by Tape measure"
+* code = $SCT#276361009 "Waist circumference"
 * subject = Reference(mii-exa-seltene-patient)
 * subject.display = "Beispielpatient"
 * effectiveDateTime = "2024-08-08T10:00:00+02:00"
@@ -58,8 +69,8 @@ Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_Taillenumfang
 Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
-* -> "koerperlicheUntersuchung.bauchumfang" "Taillenumfang"
-* valueQuantity.value -> "koerperlicheUntersuchung.bauchumfang.bauchumfang" "Taillenumfang in cm"
-* effectiveDateTime -> "koerperlicheUntersuchung.bauchumfang.datumBauchumfang" "Datum der Messung"
+* -> "koerperlicheUntersuchung.taillenumfang" "Taillenumfang"
+* valueQuantity.value -> "koerperlicheUntersuchung.taillenumfang.taillenumfang" "Taillenumfang in cm"
+* effectiveDateTime -> "koerperlicheUntersuchung.taillenumfang.datumTaillenumfang" "Datum der Messung"
 * subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
 * status -> "Status der Messung" "Beobachtungsstatus"

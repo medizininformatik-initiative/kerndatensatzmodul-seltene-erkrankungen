@@ -74,14 +74,19 @@ def build_rows(elements):
         if el.get("min") is not None or el.get("max"):
             card = "%s..%s" % (el.get("min", ""), el.get("max", ""))
         desc = el.get("definition") or el.get("short") or ""
-        label = ("&nbsp;" * 4 * depth) + "**" + cell(name) + "**"
+        label = ("&nbsp;" * 4 * depth) + "`" + cell(name) + "`"
         rows.append((label, cell(card), cell(types), cell(desc)))
     return rows
 
 
 def render(rows, lang):
     head = HEAD[lang]
-    out = [INTRO[lang], "", "| %s | %s | %s | %s |" % head, "| --- | --- | --- | --- |"]
+    # Die Trennzeile MUSS "|---|" ohne Leerzeichen lauten. Mit Leerzeichen
+    # (" --- ") greift die Typografie-Ersetzung des Renderers und macht daraus
+    # Geviertstriche ("—"), womit die Tabellensyntax zerstoert wird und die
+    # Tabelle als Absatz mit literalen Pipes erscheint. Genau so macht es auch
+    # das Modul Medikation, dessen Tabelle korrekt rendert.
+    out = [INTRO[lang], "", "| %s | %s | %s | %s |" % head, "|---|---|---|---|"]
     out += ["| %s | %s | %s | %s |" % r for r in rows]
     return "\n".join(out)
 
@@ -100,7 +105,7 @@ def main():
             print("  übersprungen (fehlt): %s" % page.relative_to(ROOT))
             continue
         text = page.read_text(encoding="utf-8")
-        block = "%s\n%s\n%s" % (BEGIN, render(rows, lang), END)
+        block = "%s\n\n%s\n\n%s" % (BEGIN, render(rows, lang), END)
         if BEGIN in text and END in text:
             text = re.sub(
                 re.escape(BEGIN) + r".*?" + re.escape(END), block, text, flags=re.S
