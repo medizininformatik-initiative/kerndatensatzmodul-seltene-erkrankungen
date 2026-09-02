@@ -41,7 +41,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
   "name" : "MII_LM_SE",
   "title" : "MII LM SE",
   "status" : "active",
-  "date" : "2026-09-02T15:16:54+00:00",
+  "date" : "2026-09-02T16:13:05+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -110,7 +110,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
       "id" : "Seltene.anamneseUndDiagnostik.untersuchungsanlass",
       "path" : "Seltene.anamneseUndDiagnostik.untersuchungsanlass",
       "short" : "Untersuchungsanlass",
-      "definition" : "Grund fuer den Besuch des SE-Patienten.",
+      "definition" : "Grund für den Besuch des SE-Patienten.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -120,8 +120,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
     {
       "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung",
       "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung",
-      "short" : "Phaenotypisierung",
-      "definition" : "Phaenotypisierung",
+      "short" : "Phänotypisierung",
+      "definition" : "Phänotypisierung",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -132,7 +132,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
       "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
       "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
       "short" : "HPO-Term des Symptoms",
-      "definition" : "Phaenotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC).",
+      "definition" : "Phänotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC).",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -154,7 +154,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
       "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoStatus",
       "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoStatus",
       "short" : "Status HPO-Term",
-      "definition" : "Status oder Schweregrad des Phaenotyps (Present/Absent/Severity).",
+      "definition" : "Status oder Schweregrad des Phänotyps (Present/Absent/Severity).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -165,7 +165,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
       "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoVersion",
       "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoVersion",
       "short" : "Version HPO-Term",
-      "definition" : "Kennzeichnung der genutzten Version des ausgewaehlten HPO-Terms.",
+      "definition" : "Kennzeichnung der genutzten Version des ausgewählten HPO-Terms.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -220,7 +220,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
       "id" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom",
       "path" : "Seltene.anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom",
       "short" : "Verlauf Symptom",
-      "definition" : "Aenderung des Verlaufs des Symptoms seit der vorherigen Untersuchung.",
+      "definition" : "Änderung des Verlaufs des Symptoms seit der vorherigen Untersuchung.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -319,7 +319,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
       "id" : "Seltene.anamneseUndDiagnostik.genDiaFehlendePenetranz",
       "path" : "Seltene.anamneseUndDiagnostik.genDiaFehlendePenetranz",
       "short" : "Genetische Diagnose mit fehlender Penetranz",
-      "definition" : "Gibt an, ob bei einer genetischen Diagnose die Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) fehlt",
+      "definition" : "Gibt an, ob bei einer genetischen Diagnose die Penetranz (Wahrscheinlichkeit Genotyp bildet Phänotyp aus) fehlt",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -528,7 +528,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
       "id" : "Seltene.koerperlicheUntersuchung.taillenumfang.taillenumfang",
       "path" : "Seltene.koerperlicheUntersuchung.taillenumfang.taillenumfang",
       "short" : "Taillenumfang in cm",
-      "definition" : "Taillenumfang des SE-Patienten in cm. Abzugrenzen vom Bauchumfang, der auf Nabelhoehe gemessen wird.",
+      "definition" : "Taillenumfang des SE-Patienten in cm. Abzugrenzen vom Bauchumfang, der auf Nabelhöhe gemessen wird.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -593,8 +593,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
     {
       "id" : "Seltene.persoenlicheInfosIndexpatient",
       "path" : "Seltene.persoenlicheInfosIndexpatient",
-      "short" : "Persoenliche Informationen des Indexpatienten",
-      "definition" : "Persoenliche Informationen des Indexpatienten",
+      "short" : "Persönliche Informationen des Indexpatienten",
+      "definition" : "Persönliche Informationen des Indexpatienten",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -659,8 +659,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
     {
       "id" : "Seltene.familienanamnese.verwandtschaftsverhaeltnis",
       "path" : "Seltene.familienanamnese.verwandtschaftsverhaeltnis",
-      "short" : "Verwandtschaftsverhaeltnis",
-      "definition" : "Biologisches Verwandtschaftsverhaeltnis des Familienmitglieds zum Indexpatienten.",
+      "short" : "Verwandtschaftsverhältnis",
+      "definition" : "Biologisches Verwandtschaftsverhältnis des Familienmitglieds zum Indexpatienten.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -704,7 +704,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
       "id" : "Seltene.familienanamnese.penetranz",
       "path" : "Seltene.familienanamnese.penetranz",
       "short" : "Penetranz",
-      "definition" : "Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) die genetische Diagnose vorliegt.",
+      "definition" : "Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phänotyp aus) die genetische Diagnose vorliegt.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -726,7 +726,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
       "id" : "Seltene.familienanamnese.todDurchSE",
       "path" : "Seltene.familienanamnese.todDurchSE",
       "short" : "Tod durch seltene Erkrankung",
-      "definition" : "Gibt an, ob die seltene Erkrankung zum Tod des Familienmitglieds beigetragen hat. Abzugrenzen von familienmitgliedVerstorben, das nur den Tod als solchen festhaelt.",
+      "definition" : "Gibt an, ob die seltene Erkrankung zum Tod des Familienmitglieds beigetragen hat. Abzugrenzen von familienmitgliedVerstorben, das nur den Tod als solchen festhält.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -858,8 +858,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
     {
       "id" : "Seltene.therapieForschung.therapie.durchgefuehrteTherapie",
       "path" : "Seltene.therapieForschung.therapie.durchgefuehrteTherapie",
-      "short" : "Durchgefuehrte Therapie",
-      "definition" : "Tatsaechlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention).",
+      "short" : "Durchgeführte Therapie",
+      "definition" : "Tatsächlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention).",
       "min" : 0,
       "max" : "*",
       "type" : [{

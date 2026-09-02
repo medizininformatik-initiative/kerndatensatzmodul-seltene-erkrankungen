@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ext-seltene-p
   "name" : "PhenotypicPattern",
   "title" : "Phenotypic Pattern Extension",
   "status" : "active",
-  "date" : "2026-09-02T15:16:54+00:00",
+  "date" : "2026-09-02T16:13:05+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

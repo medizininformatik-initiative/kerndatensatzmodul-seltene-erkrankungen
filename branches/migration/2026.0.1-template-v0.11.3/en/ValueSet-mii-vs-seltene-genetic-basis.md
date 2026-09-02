@@ -41,7 +41,7 @@ Value set for types of genetic basis of rare diseases
   "name" : "GeneticBasisValueSet",
   "title" : "MII VS SE Genetic Basis",
   "status" : "active",
-  "date" : "2026-09-02T15:16:54+00:00",
+  "date" : "2026-09-02T16:13:05+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

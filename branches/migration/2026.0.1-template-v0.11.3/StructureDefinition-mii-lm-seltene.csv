@@ -29,9 +29,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Seltene.anamneseUndDiagnostik.untersuchungsdatum","Seltene.anamneseUndDiagnostik.untersuchungsdatum","","","",0,1,"","","","date {[]} {[]}
 ","Untersuchungsdatum","Datum der durchgeführten Untersuchung eines SE-Patienten.","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.untersuchungsdatum",0,1,"",""
 "Seltene.anamneseUndDiagnostik.untersuchungsanlass","Seltene.anamneseUndDiagnostik.untersuchungsanlass","","","",0,1,"","","","code {[]} {[]}
-","Untersuchungsanlass","Grund fuer den Besuch des SE-Patienten.","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.untersuchungsanlass",0,1,"",""
+","Untersuchungsanlass","Grund für den Besuch des SE-Patienten.","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.untersuchungsanlass",0,1,"",""
 "Seltene.anamneseUndDiagnostik.phaenotypisierung","Seltene.anamneseUndDiagnostik.phaenotypisierung","","","",0,*,"","","","BackboneElement {[]} {[]}
-","Phaenotypisierung","Phaenotypisierung","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.phaenotypisierung",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Phänotypisierung","Phänotypisierung","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.phaenotypisierung",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Seltene.anamneseUndDiagnostik.phaenotypisierung.id","Seltene.anamneseUndDiagnostik.phaenotypisierung.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -47,13 +47,13 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoTerm","Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoTerm","","","",0,*,"","","","code {[]} {[]}
-","HPO-Term des Symptoms","Phaenotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC).","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoTerm",0,*,"",""
+","HPO-Term des Symptoms","Phänotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC).","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoTerm",0,*,"",""
 "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoExcluded","Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoExcluded","","","",0,1,"","","","boolean {[]} {[]}
 ","HPO-Term ausgeschlossen","Gibt an, ob das HPO-Merkmal explizit ausgeschlossen wurde (negated finding). Abgeleitet aus valueCodeableConcept: LOINC LA9634-2 'Absent' = true, LA9633-4 'Present' = false. Folgt HL7 Phenomics IG Muster.","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoExcluded",0,1,"",""
 "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoStatus","Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoStatus","","","",0,1,"","","","code {[]} {[]}
-","Status HPO-Term","Status oder Schweregrad des Phaenotyps (Present/Absent/Severity).","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoStatus",0,1,"",""
+","Status HPO-Term","Status oder Schweregrad des Phänotyps (Present/Absent/Severity).","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoStatus",0,1,"",""
 "Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoVersion","Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoVersion","","","",0,1,"","","","code {[]} {[]}
-","Version HPO-Term","Kennzeichnung der genutzten Version des ausgewaehlten HPO-Terms.","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoVersion",0,1,"",""
+","Version HPO-Term","Kennzeichnung der genutzten Version des ausgewählten HPO-Terms.","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.phaenotypisierung.hpoVersion",0,1,"",""
 "Seltene.anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom","Seltene.anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Zeitraum des Symptom","Zeitraum des Symptom","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -77,7 +77,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Seltene.anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.alterSymptom","Seltene.anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.alterSymptom","","","",0,1,"","","","integer {[]} {[]}
 ","Alter Symptom","Alter beim Auftreten der ersten Symptome/Anzeichen.","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.alterSymptom",0,1,"",""
 "Seltene.anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom","Seltene.anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom","","","",0,1,"","","","code {[]} {[]}
-","Verlauf Symptom","Aenderung des Verlaufs des Symptoms seit der vorherigen Untersuchung.","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom",0,1,"",""
+","Verlauf Symptom","Änderung des Verlaufs des Symptoms seit der vorherigen Untersuchung.","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom",0,1,"",""
 "Seltene.anamneseUndDiagnostik.klinischeDiagnose","Seltene.anamneseUndDiagnostik.klinischeDiagnose","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Zeitraum der klinischen SE-Diagnose","Zeitraum der klinischen SE-Diagnose","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.klinischeDiagnose",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -123,7 +123,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Seltene.anamneseUndDiagnostik.genetischeDiagnose.alterGenDia","Seltene.anamneseUndDiagnostik.genetischeDiagnose.alterGenDia","","","",0,1,"","","","integer {[]} {[]}
 ","Alter bei genetischer SE-Diagnose","Alter, in dem die genetische SE-Diagnose gestellt wurde.","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.genetischeDiagnose.alterGenDia",0,1,"",""
 "Seltene.anamneseUndDiagnostik.genDiaFehlendePenetranz","Seltene.anamneseUndDiagnostik.genDiaFehlendePenetranz","","","",0,*,"","","","code {[]} {[]}
-","Genetische Diagnose mit fehlender Penetranz","Gibt an, ob bei einer genetischen Diagnose die Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) fehlt","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.genDiaFehlendePenetranz",0,*,"",""
+","Genetische Diagnose mit fehlender Penetranz","Gibt an, ob bei einer genetischen Diagnose die Penetranz (Wahrscheinlichkeit Genotyp bildet Phänotyp aus) fehlt","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.genDiaFehlendePenetranz",0,*,"",""
 "Seltene.anamneseUndDiagnostik.methodeDiagnosestellung","Seltene.anamneseUndDiagnostik.methodeDiagnosestellung","","","",0,*,"","","","code {[]} {[]}
 ","Methode der Diagnosestellung","Gibt an, welche Methode zur Diagnosestellung verwendet wurde.","","","","","","","","","",,,,,"",,,,"Seltene.anamneseUndDiagnostik.methodeDiagnosestellung",0,*,"",""
 "Seltene.koerperlicheUntersuchung","Seltene.koerperlicheUntersuchung","","","",0,*,"","","","BackboneElement {[]} {[]}
@@ -259,7 +259,7 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Seltene.koerperlicheUntersuchung.taillenumfang.taillenumfang","Seltene.koerperlicheUntersuchung.taillenumfang.taillenumfang","","","",0,1,"","","","decimal {[]} {[]}
-","Taillenumfang in cm","Taillenumfang des SE-Patienten in cm. Abzugrenzen vom Bauchumfang, der auf Nabelhoehe gemessen wird.","","","","","","","","","",,,,,"",,,,"Seltene.koerperlicheUntersuchung.taillenumfang.taillenumfang",0,1,"",""
+","Taillenumfang in cm","Taillenumfang des SE-Patienten in cm. Abzugrenzen vom Bauchumfang, der auf Nabelhöhe gemessen wird.","","","","","","","","","",,,,,"",,,,"Seltene.koerperlicheUntersuchung.taillenumfang.taillenumfang",0,1,"",""
 "Seltene.koerperlicheUntersuchung.taillenumfang.datumTaillenumfang","Seltene.koerperlicheUntersuchung.taillenumfang.datumTaillenumfang","","","",0,1,"","","","dateTime {[]} {[]}
 ","Datum Taillenumfang","Datum der Taillenumfangsmessung.","","","","","","","","","",,,,,"",,,,"Seltene.koerperlicheUntersuchung.taillenumfang.datumTaillenumfang",0,1,"",""
 "Seltene.koerperlicheUntersuchung.hueftumfang","Seltene.koerperlicheUntersuchung.hueftumfang","","","",0,*,"","","","BackboneElement {[]} {[]}
@@ -285,7 +285,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Seltene.koerperlicheUntersuchung.blutgruppe","Seltene.koerperlicheUntersuchung.blutgruppe","","","",0,1,"","","","code {[]} {[]}
 ","Blutgruppe","Blutgruppe des SE-Patienten (AB0 und Rhesusfaktor).","","","","","","","","","",,,,,"",,,,"Seltene.koerperlicheUntersuchung.blutgruppe",0,1,"",""
 "Seltene.persoenlicheInfosIndexpatient","Seltene.persoenlicheInfosIndexpatient","","","",0,*,"","","","BackboneElement {[]} {[]}
-","Persoenliche Informationen des Indexpatienten","Persoenliche Informationen des Indexpatienten","","","","","","","","","",,,,,"",,,,"Seltene.persoenlicheInfosIndexpatient",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Persönliche Informationen des Indexpatienten","Persönliche Informationen des Indexpatienten","","","","","","","","","",,,,,"",,,,"Seltene.persoenlicheInfosIndexpatient",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Seltene.persoenlicheInfosIndexpatient.id","Seltene.persoenlicheInfosIndexpatient.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -339,7 +339,7 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Seltene.familienanamnese.verwandtschaftsverhaeltnis","Seltene.familienanamnese.verwandtschaftsverhaeltnis","","","",0,1,"","","","code {[]} {[]}
-","Verwandtschaftsverhaeltnis","Biologisches Verwandtschaftsverhaeltnis des Familienmitglieds zum Indexpatienten.","","","","","","","","","",,,,,"",,,,"Seltene.familienanamnese.verwandtschaftsverhaeltnis",0,1,"",""
+","Verwandtschaftsverhältnis","Biologisches Verwandtschaftsverhältnis des Familienmitglieds zum Indexpatienten.","","","","","","","","","",,,,,"",,,,"Seltene.familienanamnese.verwandtschaftsverhaeltnis",0,1,"",""
 "Seltene.familienanamnese.geschlecht","Seltene.familienanamnese.geschlecht","","","",0,1,"","","","code {[]} {[]}
 ","Geschlecht","Geschlecht des Familienmitglieds.","","","","","","","","","",,,,,"",,,,"Seltene.familienanamnese.geschlecht",0,1,"",""
 "Seltene.familienanamnese.gleicheSE","Seltene.familienanamnese.gleicheSE","","","",0,*,"","","","code {[]} {[]}
@@ -347,11 +347,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Seltene.familienanamnese.andereSE","Seltene.familienanamnese.andereSE","","","",0,*,"","","","code {[]} {[]}
 ","Andere SE","Gibt an, ob das Familienmitglied an einer anderen SE leidet als der Indexpatient.","","","","","","","","","",,,,,"",,,,"Seltene.familienanamnese.andereSE",0,*,"",""
 "Seltene.familienanamnese.penetranz","Seltene.familienanamnese.penetranz","","","",0,1,"","","","code {[]} {[]}
-","Penetranz","Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) die genetische Diagnose vorliegt.","","","","","","","","","",,,,,"",,,,"Seltene.familienanamnese.penetranz",0,1,"",""
+","Penetranz","Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phänotyp aus) die genetische Diagnose vorliegt.","","","","","","","","","",,,,,"",,,,"Seltene.familienanamnese.penetranz",0,1,"",""
 "Seltene.familienanamnese.familienmitgliedVerstorben","Seltene.familienanamnese.familienmitgliedVerstorben","","","",0,1,"","","","code {[]} {[]}
 ","Familienmitglied verstorben","Gibt an, ob das Familienmitglied verstorben ist.","","","","","","","","","",,,,,"",,,,"Seltene.familienanamnese.familienmitgliedVerstorben",0,1,"",""
 "Seltene.familienanamnese.todDurchSE","Seltene.familienanamnese.todDurchSE","","","",0,1,"","","","code {[]} {[]}
-","Tod durch seltene Erkrankung","Gibt an, ob die seltene Erkrankung zum Tod des Familienmitglieds beigetragen hat. Abzugrenzen von familienmitgliedVerstorben, das nur den Tod als solchen festhaelt.","","","","","","","","","",,,,,"",,,,"Seltene.familienanamnese.todDurchSE",0,1,"",""
+","Tod durch seltene Erkrankung","Gibt an, ob die seltene Erkrankung zum Tod des Familienmitglieds beigetragen hat. Abzugrenzen von familienmitgliedVerstorben, das nur den Tod als solchen festhält.","","","","","","","","","",,,,,"",,,,"Seltene.familienanamnese.todDurchSE",0,1,"",""
 "Seltene.familienanamnese.dokumentationsdatum","Seltene.familienanamnese.dokumentationsdatum","","","",0,1,"","","","date {[]} {[]}
 ","Dokumentationsdatum","Datum, an dem die Familienanamnese erhoben beziehungsweise dokumentiert wurde.","","","","","","","","","",,,,,"",,,,"Seltene.familienanamnese.dokumentationsdatum",0,1,"",""
 "Seltene.therapieForschung","Seltene.therapieForschung","","","",0,*,"","","","BackboneElement {[]} {[]}
@@ -431,7 +431,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Seltene.therapieForschung.therapie.therapieempfehlung","Seltene.therapieForschung.therapie.therapieempfehlung","","","",0,*,"","","","code {[]} {[]}
 ","Eine Therapieempfehlung beschreibt eine spezifische Maßnahme oder Strategie. Sie kann eigenständig vorliegen oder referenziert einem Therapieplan zugeordnet werden. Art der Therapieempfehlung","Gibt an, welche Therapieempfehlung vorliegt.","","","","","","","","","",,,,,"",,,,"Seltene.therapieForschung.therapie.therapieempfehlung",0,*,"",""
 "Seltene.therapieForschung.therapie.durchgefuehrteTherapie","Seltene.therapieForschung.therapie.durchgefuehrteTherapie","","","",0,*,"","","","code {[]} {[]}
-","Durchgefuehrte Therapie","Tatsaechlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention).","","","","","","","","","",,,,,"",,,,"Seltene.therapieForschung.therapie.durchgefuehrteTherapie",0,*,"",""
+","Durchgeführte Therapie","Tatsächlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention).","","","","","","","","","",,,,,"",,,,"Seltene.therapieForschung.therapie.durchgefuehrteTherapie",0,*,"",""
 "Seltene.therapieForschung.therapie.startdatumTherapie","Seltene.therapieForschung.therapie.startdatumTherapie","","","",0,1,"","","","date {[]} {[]}
 ","Startdatum Therapie","Datum, an dem die Therapie begonnen hat.","","","","","","","","","",,,,,"",,,,"Seltene.therapieForschung.therapie.startdatumTherapie",0,1,"",""
 "Seltene.therapieForschung.therapie.enddatumTherapie","Seltene.therapieForschung.therapie.enddatumTherapie","","","",0,1,"","","","date {[]} {[]}

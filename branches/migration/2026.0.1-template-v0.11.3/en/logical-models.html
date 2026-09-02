@@ -375,19 +375,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>    <code class="language-plaintext highlighter-rouge">untersuchungsanlass</code></td>
       <td>0..1</td>
       <td>code</td>
-      <td>Grund fuer den Besuch des SE-Patienten.</td>
+      <td>Grund für den Besuch des SE-Patienten.</td>
     </tr>
     <tr>
       <td>    <code class="language-plaintext highlighter-rouge">phaenotypisierung</code></td>
       <td>0..*</td>
       <td>BackboneElement</td>
-      <td>Phaenotypisierung</td>
+      <td>Phänotypisierung</td>
     </tr>
     <tr>
       <td>        <code class="language-plaintext highlighter-rouge">hpoTerm</code></td>
       <td>0..*</td>
       <td>code</td>
-      <td>Phaenotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC).</td>
+      <td>Phänotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC).</td>
     </tr>
     <tr>
       <td>        <code class="language-plaintext highlighter-rouge">hpoExcluded</code></td>
@@ -399,13 +399,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>        <code class="language-plaintext highlighter-rouge">hpoStatus</code></td>
       <td>0..1</td>
       <td>code</td>
-      <td>Status oder Schweregrad des Phaenotyps (Present/Absent/Severity).</td>
+      <td>Status oder Schweregrad des Phänotyps (Present/Absent/Severity).</td>
     </tr>
     <tr>
       <td>        <code class="language-plaintext highlighter-rouge">hpoVersion</code></td>
       <td>0..1</td>
       <td>code</td>
-      <td>Kennzeichnung der genutzten Version des ausgewaehlten HPO-Terms.</td>
+      <td>Kennzeichnung der genutzten Version des ausgewählten HPO-Terms.</td>
     </tr>
     <tr>
       <td>        <code class="language-plaintext highlighter-rouge">zeitraumSymptom</code></td>
@@ -435,7 +435,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>        <code class="language-plaintext highlighter-rouge">verlaufSymptom</code></td>
       <td>0..1</td>
       <td>code</td>
-      <td>Aenderung des Verlaufs des Symptoms seit der vorherigen Untersuchung.</td>
+      <td>Änderung des Verlaufs des Symptoms seit der vorherigen Untersuchung.</td>
     </tr>
     <tr>
       <td>    <code class="language-plaintext highlighter-rouge">klinischeDiagnose</code></td>
@@ -489,7 +489,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>    <code class="language-plaintext highlighter-rouge">genDiaFehlendePenetranz</code></td>
       <td>0..*</td>
       <td>code</td>
-      <td>Gibt an, ob bei einer genetischen Diagnose die Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) fehlt</td>
+      <td>Gibt an, ob bei einer genetischen Diagnose die Penetranz (Wahrscheinlichkeit Genotyp bildet Phänotyp aus) fehlt</td>
     </tr>
     <tr>
       <td>    <code class="language-plaintext highlighter-rouge">methodeDiagnosestellung</code></td>
@@ -594,6 +594,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Datum der Bauchumfangsmessung.</td>
     </tr>
     <tr>
+      <td>    <code class="language-plaintext highlighter-rouge">taillenumfang</code></td>
+      <td>0..*</td>
+      <td>BackboneElement</td>
+      <td>Taillenumfang</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">taillenumfang</code></td>
+      <td>0..1</td>
+      <td>decimal</td>
+      <td>Taillenumfang des SE-Patienten in cm. Abzugrenzen vom Bauchumfang, der auf Nabelhöhe gemessen wird.</td>
+    </tr>
+    <tr>
+      <td>        <code class="language-plaintext highlighter-rouge">datumTaillenumfang</code></td>
+      <td>0..1</td>
+      <td>dateTime</td>
+      <td>Datum der Taillenumfangsmessung.</td>
+    </tr>
+    <tr>
       <td>    <code class="language-plaintext highlighter-rouge">hueftumfang</code></td>
       <td>0..*</td>
       <td>BackboneElement</td>
@@ -621,7 +639,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">persoenlicheInfosIndexpatient</code></td>
       <td>0..*</td>
       <td>BackboneElement</td>
-      <td>Persoenliche Informationen des Indexpatienten</td>
+      <td>Persönliche Informationen des Indexpatienten</td>
     </tr>
     <tr>
       <td>    <code class="language-plaintext highlighter-rouge">tod</code></td>
@@ -657,7 +675,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>    <code class="language-plaintext highlighter-rouge">verwandtschaftsverhaeltnis</code></td>
       <td>0..1</td>
       <td>code</td>
-      <td>Biologisches Verwandtschaftsverhaeltnis des Familienmitglieds zum Indexpatienten.</td>
+      <td>Biologisches Verwandtschaftsverhältnis des Familienmitglieds zum Indexpatienten.</td>
     </tr>
     <tr>
       <td>    <code class="language-plaintext highlighter-rouge">geschlecht</code></td>
@@ -681,7 +699,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>    <code class="language-plaintext highlighter-rouge">penetranz</code></td>
       <td>0..1</td>
       <td>code</td>
-      <td>Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) die genetische Diagnose vorliegt.</td>
+      <td>Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phänotyp aus) die genetische Diagnose vorliegt.</td>
     </tr>
     <tr>
       <td>    <code class="language-plaintext highlighter-rouge">familienmitgliedVerstorben</code></td>
@@ -693,7 +711,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>    <code class="language-plaintext highlighter-rouge">todDurchSE</code></td>
       <td>0..1</td>
       <td>code</td>
-      <td>Gibt an, ob die seltene Erkrankung zum Tod des Familienmitglieds beigetragen hat. Abzugrenzen von familienmitgliedVerstorben, das nur den Tod als solchen festhaelt.</td>
+      <td>Gibt an, ob die seltene Erkrankung zum Tod des Familienmitglieds beigetragen hat. Abzugrenzen von familienmitgliedVerstorben, das nur den Tod als solchen festhält.</td>
     </tr>
     <tr>
       <td>    <code class="language-plaintext highlighter-rouge">dokumentationsdatum</code></td>
@@ -765,7 +783,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>        <code class="language-plaintext highlighter-rouge">durchgefuehrteTherapie</code></td>
       <td>0..*</td>
       <td>code</td>
-      <td>Tatsaechlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention).</td>
+      <td>Tatsächlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention).</td>
     </tr>
     <tr>
       <td>        <code class="language-plaintext highlighter-rouge">startdatumTherapie</code></td>
@@ -815,7 +833,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 2, 2026 15:16+0000">2026-09-02</span>
+          Generated <span title="Wed, Sep 2, 2026 16:13+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
