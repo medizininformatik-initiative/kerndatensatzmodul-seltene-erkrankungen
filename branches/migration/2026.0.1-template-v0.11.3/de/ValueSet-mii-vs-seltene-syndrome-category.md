@@ -41,7 +41,7 @@ Categories for classifying syndrome types in rare diseases
   "name" : "SyndromeCategoryVS",
   "title" : "Syndrome Category Value Set",
   "status" : "active",
-  "date" : "2026-09-02T16:13:05+00:00",
+  "date" : "2026-09-02T16:35:11+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

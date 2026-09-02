@@ -4723,10 +4723,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "examples.html"
+          "valueUrl" : "sma-example-annotations.html"
         }],
-        "nameUrl" : "examples.html",
-        "title" : "Examples",
+        "nameUrl" : "sma-example-annotations.html",
+        "title" : "Case Example Spinal Muscular Atrophy (SMA)",
         "_title" : {
           "extension" : [{
             "extension" : [{
@@ -4735,56 +4735,34 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
             },
             {
               "url" : "content",
-              "valueString" : "Beispiele"
+              "valueString" : "Fallbeispiel Spinale Muskelatrophie (SMA)"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
         },
-        "generation" : "markdown",
-        "page" : [{
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "marfan-example-annotations.html"
+        }],
+        "nameUrl" : "marfan-example-annotations.html",
+        "title" : "Case Example Marfan Syndrome",
+        "_title" : {
           "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "sma-example-annotations.html"
-          }],
-          "nameUrl" : "sma-example-annotations.html",
-          "title" : "Case Example Spinal Muscular Atrophy (SMA)",
-          "_title" : {
             "extension" : [{
-              "extension" : [{
-                "url" : "lang",
-                "valueCode" : "de"
-              },
-              {
-                "url" : "content",
-                "valueString" : "Fallbeispiel Spinale Muskelatrophie (SMA)"
-              }],
-              "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-            }]
-          },
-          "generation" : "markdown"
+              "url" : "lang",
+              "valueCode" : "de"
+            },
+            {
+              "url" : "content",
+              "valueString" : "Fallbeispiel Marfan-Syndrom"
+            }],
+            "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+          }]
         },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "marfan-example-annotations.html"
-          }],
-          "nameUrl" : "marfan-example-annotations.html",
-          "title" : "Case Example Marfan Syndrome",
-          "_title" : {
-            "extension" : [{
-              "extension" : [{
-                "url" : "lang",
-                "valueCode" : "de"
-              },
-              {
-                "url" : "content",
-                "valueString" : "Fallbeispiel Marfan-Syndrom"
-              }],
-              "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-            }]
-          },
-          "generation" : "markdown"
-        }]
+        "generation" : "markdown"
       },
       {
         "extension" : [{

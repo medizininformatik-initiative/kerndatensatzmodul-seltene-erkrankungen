@@ -81,7 +81,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-von-seltene-
   "version" : "2027.0.0-ballot",
   "name" : "VonSEBetroffen",
   "status" : "active",
-  "date" : "2026-09-02T16:13:05+00:00",
+  "date" : "2026-09-02T16:35:11+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

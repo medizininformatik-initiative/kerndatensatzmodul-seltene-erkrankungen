@@ -3253,54 +3253,37 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="examples.html"/>
+          <valueUrl value="sma-example-annotations.html"/>
         </extension>
-        <nameUrl value="examples.html"/>
-        <title value="Examples">
+        <nameUrl value="sma-example-annotations.html"/>
+        <title value="Case Example Spinal Muscular Atrophy (SMA)">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
               <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Beispiele"/>
+              <valueString value="Fallbeispiel Spinale Muskelatrophie (SMA)"/>
             </extension>
           </extension>
         </title>
         <generation value="markdown"/>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="sma-example-annotations.html"/>
-          </extension>
-          <nameUrl value="sma-example-annotations.html"/>
-          <title value="Case Example Spinal Muscular Atrophy (SMA)">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-              <extension url="lang">
-                <valueCode value="de"/>
-              </extension>
-              <extension url="content">
-                <valueString value="Fallbeispiel Spinale Muskelatrophie (SMA)"/>
-              </extension>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="marfan-example-annotations.html"/>
+        </extension>
+        <nameUrl value="marfan-example-annotations.html"/>
+        <title value="Case Example Marfan Syndrome">
+          <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+            <extension url="lang">
+              <valueCode value="de"/>
             </extension>
-          </title>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="marfan-example-annotations.html"/>
-          </extension>
-          <nameUrl value="marfan-example-annotations.html"/>
-          <title value="Case Example Marfan Syndrome">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-              <extension url="lang">
-                <valueCode value="de"/>
-              </extension>
-              <extension url="content">
-                <valueString value="Fallbeispiel Marfan-Syndrom"/>
-              </extension>
+            <extension url="content">
+              <valueString value="Fallbeispiel Marfan-Syndrom"/>
             </extension>
-          </title>
-          <generation value="markdown"/>
-        </page>
+          </extension>
+        </title>
+        <generation value="markdown"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
