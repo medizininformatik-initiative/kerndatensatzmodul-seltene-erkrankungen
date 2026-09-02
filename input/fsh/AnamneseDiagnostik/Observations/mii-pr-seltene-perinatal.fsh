@@ -29,6 +29,23 @@
 //
 // Alle LOINC-Codes am 2026-09-01 per CodeSystem/$lookup auf tx.fhir.org
 // bestätigt (Status ACTIVE, Displays wörtlich übernommen).
+//
+// ZUSTAENDIGKEIT — bewusst hier, aber nicht selbstverstaendlich:
+// Dieser Datenpunkt ist NICHT auf seltene Erkrankungen beschraenkt. Gestationsalter, Geburtsgewicht und Geburtslaenge werden fuer jedes
+// Neugeborene erhoben, unabhaengig von einer seltenen Erkrankung.
+// Modelliert wird er hier, weil der Bedarf hier konkret entstanden ist: der
+// JARDIN-MDS-Entwurf ist der Datenbedarf eines europaeischen Referenznetzwerks
+// mit Termin, kein Wunschzettel, und kein angebundenes MII-Modul deckt ihn ab
+// (geprueft 2026-09-01: kein Modul Neonatologie, ICU fuehrt nur
+// Koerpergewicht/-groesse/-laenge).
+//
+// Die Zustaendigkeitsfrage bleibt damit offen, nicht beantwortet. Beim
+// Geburtsgeschlecht (Issue #34, HDB-782) ist dieselbe Abwaegung anders
+// ausgegangen: dort gab es mit der Gender-Harmony-Extension bereits einen
+// Standard und mit MII_PR_Person_Patient bereits einen Ort, also wurde der
+// Punkt an das Base-Modul verwiesen statt hier modelliert. Fuer diesen
+// Datenpunkt gab es beides nicht. Sollte ein allgemeineres Modul ihn
+// aufnehmen, gehoert er dorthin.
 // -----------------------------------------------------------------------------
 
 Profile:     MII_PR_Seltene_Gestationsalter

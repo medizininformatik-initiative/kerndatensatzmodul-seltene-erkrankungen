@@ -49,6 +49,22 @@
 // tx.fhir.org serves 2017a under the SAME canonical URI, and an expansion there
 // returned 1616 concepts. Same URI, roughly 120 concepts apart. A required
 // binding must not straddle both silently, so the edition needs pinning.
+//
+// OWNERSHIP — deliberately here, but not self-evident:
+// This data point is NOT specific to rare diseases. Functioning and disability
+// are graded for stroke, oncology and geriatric patients alike; the ICF is a
+// WHO classification for the whole of health, not for one indication.
+//
+// It is modelled here because the need arose here and is concrete: the JARDIN
+// MDS draft is the data requirement of a European reference network with a
+// deadline, not a wish list, and no connected MII module covers it.
+//
+// That leaves the ownership question open rather than answered. The same
+// weighing came out differently for sex at birth (issue #34, HDB-782): there,
+// HL7 Gender Harmony already provided the standard and MII_PR_Person_Patient
+// already provided the place, so the point was referred to the base module
+// instead of modelled here. For this one, neither existed. Should a more
+// general module take it on, it belongs there.
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
