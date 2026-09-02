@@ -360,6 +360,14 @@
       },
       {
         "reference": {
+          "reference": "Consent/mii-exa-seltene-register-einwilligung"
+        },
+        "name": "Beispiel Einwilligung zur Registerteilnahme",
+        "description": "Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusaetzliche Huerde.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "ServiceRequest/example-nutrition-therapy-recommendation"
         },
         "name": "Beispiel Ernährungstherapie-Empfehlung",
@@ -376,6 +384,22 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-seltene-geburtsgewicht"
+        },
+        "name": "Beispiel Geburtsgewicht",
+        "description": "Geburtsgewicht im Normbereich. Ausgangswert für die Beurteilung der bei SMA Typ 1 häufigen späteren Gedeihstörung.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geburtsgewicht"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-geburtslaenge"
+        },
+        "name": "Beispiel Geburtslänge",
+        "description": "Körperlänge bei Geburt, gemessen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geburtslaenge"
+      },
+      {
+        "reference": {
           "reference": "ServiceRequest/mii-exa-seltene-therapieempfehlung-genetische-beratung"
         },
         "name": "Beispiel Genetische Beratung",
@@ -389,6 +413,14 @@
         "name": "Beispiel Gentherapie bei SMA",
         "description": "Beispiel einer medikamentösen Therapieempfehlung für Gentherapie bei Spinaler Muskelatrophie",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-gestationsalter"
+        },
+        "name": "Beispiel Gestationsalter bei Geburt",
+        "description": "Reifgeborenes in der 38. Woche. Bei SMA Typ 1 wichtig als Abgrenzung: die Muskelschwäche ist nicht durch Frühgeburtlichkeit erklärbar.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-gestationsalter"
       },
       {
         "reference": {
@@ -421,6 +453,30 @@
         "name": "Beispiel Physiotherapie bei SMA",
         "description": "Beispiel einer nicht-medikamentösen Therapieempfehlung für Physiotherapie bei Spinaler Muskelatrophie",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes"
+      },
+      {
+        "reference": {
+          "reference": "ResearchStudy/mii-exa-seltene-register-euro-nmd"
+        },
+        "name": "Beispiel Register als ResearchStudy — ERN EURO-NMD",
+        "description": "Das Register des European Reference Network für neuromuskuläre Erkrankungen, als ResearchStudy geführt. Ein Register ist inhaltlich eine Beobachtungsstudie; das ist keine Verlegenheitslösung, sondern die Voraussetzung dafür, dass ResearchSubject.study überhaupt darauf zeigen kann.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Library/mii-exa-seltene-register-katalog-euro-nmd"
+        },
+        "name": "Beispiel Register-Katalogeintrag (Library)",
+        "description": "Derselbe Registerbestand als Katalogeintrag nach dem Profil mii-pr-studie-register des Moduls Studie. Steht neben der ResearchStudy, nicht an ihrer Stelle — eine Library kann kein Ziel von ResearchSubject.study sein.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ResearchSubject/mii-exa-seltene-registerteilnahme"
+        },
+        "name": "Beispiel Registerteilnahme — ERN EURO-NMD",
+        "description": "Teilnahme des SMA-Kindes am EURO-NMD-Register. Die Kennung ist das registereigene Pseudonym, nicht die Patienten-ID des Standorts.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-registerteilnahme"
       },
       {
         "reference": {
@@ -696,6 +752,38 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-seltene-icf-aktivitaet"
+        },
+        "name": "ICF example — activities and participation (chapter d), capacity vs performance",
+        "description": "Eating in SMA type 1, and the reason chapter d takes two qualifiers rather than one. Without assistance the child cannot feed orally at all — capacity is a complete problem. With a gastrostomy in place, nutrition in daily life is only moderately impaired — performance is markedly better. The gap between the two IS the measured effect of the assistive device; a model with a single value would have had to discard one of the two numbers and would have said something false either way.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-icf-koerperfunktion"
+        },
+        "name": "ICF example — body function (chapter b), one qualifier",
+        "description": "Muscle power functions in SMA type 1, graded as a complete problem. Chapter b takes exactly one qualifier; invariant mii-icf-1 rejects any other component here.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-icf-koerperstruktur"
+        },
+        "name": "ICF example — body structure (chapter s), three qualifiers",
+        "description": "Spinal cord in SMA type 1: degeneration of the anterior horn cells. The only chapter that takes three qualifiers at once — extent, nature of the change and anatomical location. This is the case a single value[x] could never have carried, which is why the profile uses components.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-icf-umweltfaktor"
+        },
+        "name": "ICF example — environmental factor (chapter e), facilitator",
+        "description": "Assistive products for mobility, graded as a substantial FACILITATOR. Environmental factors are the one chapter with a two-sided scale, and BfArM resolves it by putting the sign into the code itself: facilitators run +0 to +4, barriers .0 to .4. Invariant mii-icf-5 forbids grading the same factor as both at once.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment"
+      },
+      {
+        "reference": {
           "reference": "Encounter/encounter-cardiology"
         },
         "name": "Kardiologische Erstvorstellung",
@@ -880,6 +968,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal"
+        },
+        "name": "MII CS SE ICF Qualifier Kind",
+        "description": "Names which ICF qualifier a component carries. This is a slot name, not a scale — the scales themselves are the seven BfArM code systems. Defined locally because neither the ICF nor BfArM publishes identifiers for the qualifier positions, and because capacity and performance share one scale and can only be told apart here.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"
         },
         "name": "MII CS SE Therapieempfehlung Strategie",
@@ -960,6 +1056,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-ex-seltene-register"
+        },
+        "name": "MII EX SE Register",
+        "description": "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Condition/mii-exa-seltene-symptom-condition"
         },
         "name": "MII Example SE Symptom Condition",
@@ -1000,10 +1104,34 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-geburtsgewicht"
+        },
+        "name": "MII PR SE Geburtsgewicht",
+        "description": "Gemessenes Geburtsgewicht. Bei seltenen Erkrankungen ein Ausgangswert für die Beurteilung von Gedeihstörungen, Makrosomie und intrauteriner Wachstumsrestriktion.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-geburtslaenge"
+        },
+        "name": "MII PR SE Geburtslänge",
+        "description": "Gemessene Körperlänge bei Geburt. Zusammen mit Geburtsgewicht und Kopfumfang der anthropometrische Ausgangsbefund, gegen den spätere Wachstumsverläufe bewertet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-seltene-genetic-diagnosis"
         },
         "name": "MII PR SE Genetic Diagnosis",
         "description": "Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and links to MolGen variant/diagnostic implication resources. This profile is used when a rare disease diagnosis has been confirmed through genetic testing.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-gestationsalter"
+        },
+        "name": "MII PR SE Gestationsalter bei Geburt",
+        "description": "Gestationsalter bei Geburt (Schwangerschaftsdauer bis zur Entbindung). Bei seltenen Erkrankungen relevant, weil Frühgeburtlichkeit sowohl Folge einer Grunderkrankung als auch Störgröße bei der Bewertung von Wachstums- und Entwicklungsparametern sein kann.",
         "exampleBoolean": false
       },
       {
@@ -1016,10 +1144,26 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-icf-assessment"
+        },
+        "name": "MII PR SE ICF Assessment",
+        "description": "Observation profile grading a single ICF category for a patient, as required by the JARDIN MDS draft and the ERDRI-CDS. Observation.code carries the ICF category; the WHO qualifiers are carried as components, because body structures take three of them and activities/participation take two (capacity and performance).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-seltene-kopfumfang"
         },
         "name": "MII PR SE Kopfumfang",
         "description": "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom MII ICU Kopfumfang-Profil.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-seltene-registerteilnahme"
+        },
+        "name": "MII PR SE Registerteilnahme",
+        "description": "Teilnahme einer Person an einem Register für seltene Erkrankungen, insbesondere an einem Register eines European Reference Network (ERN). Gedacht für die Dokumentation aus zweiter Hand im Versorgungskontext: festgehalten wird, dass die Person teilnimmt. Nah am Probanden-Profil des MII KDS Moduls Studie, aber bewusst nicht davon abgeleitet, weil dessen Pflichtangabe consent den Sekundärfall ausschließt.",
         "exampleBoolean": false
       },
       {
@@ -1148,6 +1292,22 @@
         },
         "name": "MII VS SE HPO Inheritance Pattern",
         "description": "Value set containing HPO terms for modes of inheritance",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-icf"
+        },
+        "name": "MII VS SE ICF Categories",
+        "description": "All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. German display text comes from the BfArM language supplement, so the value set does not need a German twin.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-seltene-icf-beurteilungsmerkmal"
+        },
+        "name": "MII VS SE ICF Qualifier Kind",
+        "description": "All qualifier kinds usable as a component code in the ICF assessment profile.",
         "exampleBoolean": false
       },
       {
