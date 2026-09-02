@@ -71,7 +71,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ta
   "name" : "MII_PR_Seltene_Taillenumfang",
   "title" : "MII PR SE Taillenumfang",
   "status" : "active",
-  "date" : "2026-09-02T14:14:40+00:00",
+  "date" : "2026-09-02T14:33:43+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -143,7 +143,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ta
       "path" : "Observation",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Taillenumfang",
+        "map" : "koerperlicheUntersuchung.bauchumfang",
         "comment" : "Taillenumfang"
       }]
     },
@@ -201,7 +201,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ta
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Patient",
+        "map" : "persoenlicheInfosIndexpatient",
         "comment" : "Patient/Indexpatient"
       }]
     },
@@ -214,7 +214,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ta
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Taillenumfang.Datum",
+        "map" : "koerperlicheUntersuchung.bauchumfang.datumBauchumfang",
         "comment" : "Datum der Messung"
       }]
     },
@@ -231,7 +231,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ta
       "path" : "Observation.value[x].value",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Taillenumfang",
+        "map" : "koerperlicheUntersuchung.bauchumfang.bauchumfang",
         "comment" : "Taillenumfang in cm"
       }]
     },

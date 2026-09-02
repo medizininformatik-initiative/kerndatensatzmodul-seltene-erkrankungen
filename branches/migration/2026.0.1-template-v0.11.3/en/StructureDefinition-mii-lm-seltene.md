@@ -41,7 +41,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
   "name" : "MII_LM_SE",
   "title" : "MII LM SE",
   "status" : "active",
-  "date" : "2026-09-02T14:14:40+00:00",
+  "date" : "2026-09-02T14:33:43+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -687,6 +687,28 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
       "max" : "1",
       "type" : [{
         "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.familienanamnese.todDurchSE",
+      "path" : "Seltene.familienanamnese.todDurchSE",
+      "short" : "Tod durch seltene Erkrankung",
+      "definition" : "Gibt an, ob die seltene Erkrankung zum Tod des Familienmitglieds beigetragen hat. Abzugrenzen von familienmitgliedVerstorben, das nur den Tod als solchen festhaelt.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.familienanamnese.dokumentationsdatum",
+      "path" : "Seltene.familienanamnese.dokumentationsdatum",
+      "short" : "Dokumentationsdatum",
+      "definition" : "Datum, an dem die Familienanamnese erhoben beziehungsweise dokumentiert wurde.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
       }]
     },
     {

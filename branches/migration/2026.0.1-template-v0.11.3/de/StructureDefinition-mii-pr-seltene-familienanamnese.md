@@ -230,7 +230,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Familienanamnese",
   "title" : "MII PR SE Familienanamnese",
   "status" : "active",
-  "date" : "2026-09-02T14:14:40+00:00",
+  "date" : "2026-09-02T14:33:43+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -314,7 +314,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "FamilyMemberHistory.patient",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Patient",
+        "map" : "persoenlicheInfosIndexpatient",
         "comment" : "Patient/Indexpatient"
       }]
     },
@@ -323,7 +323,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "FamilyMemberHistory.date",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Dokumentationsdatum",
+        "map" : "familienanamnese.dokumentationsdatum",
         "comment" : "Datum der Familienanamnese"
       }]
     },
@@ -507,7 +507,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "familienanamnese.TodDurchSE",
+        "map" : "familienanamnese.todDurchSE",
         "comment" : "Tod durch seltene Erkrankung"
       }]
     },

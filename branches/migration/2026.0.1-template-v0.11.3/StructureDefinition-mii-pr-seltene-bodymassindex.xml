@@ -48,7 +48,7 @@
   <name value="MII_PR_Seltene_Bodymassindex"/>
   <title value="Body Mass Index (BMI) of the patient"/>
   <status value="active"/>
-  <date value="2026-09-02T14:14:40+00:00"/>
+  <date value="2026-09-02T14:33:43+00:00"/>
   <publisher value="Medizininformatik Initiative">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
@@ -196,7 +196,7 @@
       <isSummary value="false"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.bmi"/>
+        <map value="koerperlicheUntersuchung.bmi"/>
         <comment value="BMI"/>
       </mapping>
       <mapping>
@@ -1181,7 +1181,7 @@
       </binding>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.bmi"/>
+        <map value="koerperlicheUntersuchung.bmi"/>
         <comment value="BMI-Code (LOINC 39156-5)"/>
       </mapping>
       <mapping>
@@ -1239,7 +1239,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Patient"/>
+        <map value="persoenlicheInfosIndexpatient"/>
         <comment value="Patient/Indexpatient"/>
       </mapping>
       <mapping>
@@ -1381,7 +1381,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.bmi.datumBMI"/>
+        <map value="koerperlicheUntersuchung.bmi.datumBMI"/>
         <comment value="Datum des BMI"/>
       </mapping>
       <mapping>
@@ -1633,7 +1633,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.bmi.bmi"/>
+        <map value="koerperlicheUntersuchung.bmi.bmi"/>
         <comment value="BMI SE-Patient"/>
       </mapping>
       <mapping>
@@ -2967,7 +2967,7 @@
       <path value="Observation"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.bmi"/>
+        <map value="koerperlicheUntersuchung.bmi"/>
         <comment value="BMI"/>
       </mapping>
     </element>
@@ -3007,7 +3007,7 @@
       </patternCodeableConcept>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.bmi"/>
+        <map value="koerperlicheUntersuchung.bmi"/>
         <comment value="BMI-Code (LOINC 39156-5)"/>
       </mapping>
     </element>
@@ -3020,7 +3020,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Patient"/>
+        <map value="persoenlicheInfosIndexpatient"/>
         <comment value="Patient/Indexpatient"/>
       </mapping>
     </element>
@@ -3032,7 +3032,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.bmi.datumBMI"/>
+        <map value="koerperlicheUntersuchung.bmi.datumBMI"/>
         <comment value="Datum des BMI"/>
       </mapping>
     </element>
@@ -3047,7 +3047,7 @@
       <path value="Observation.value[x].value"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.bmi.bmi"/>
+        <map value="koerperlicheUntersuchung.bmi.bmi"/>
         <comment value="BMI SE-Patient"/>
       </mapping>
     </element>

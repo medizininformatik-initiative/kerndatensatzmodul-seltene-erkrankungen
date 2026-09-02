@@ -57,7 +57,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
   "name" : "MII_PR_Seltene_Blutgruppe",
   "title" : "MII PR SE Blutgruppe",
   "status" : "active",
-  "date" : "2026-09-02T14:14:40+00:00",
+  "date" : "2026-09-02T14:33:43+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -129,7 +129,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
       "path" : "Observation",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.blutgruppe",
+        "map" : "koerperlicheUntersuchung.blutgruppe",
         "comment" : "Blutgruppe"
       }]
     },
@@ -247,7 +247,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Patient",
+        "map" : "persoenlicheInfosIndexpatient",
         "comment" : "Patient/Indexpatient"
       }]
     },
@@ -307,7 +307,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.blutgruppe",
+        "map" : "koerperlicheUntersuchung.blutgruppe",
         "comment" : "Blutgruppe"
       }]
     },
@@ -336,7 +336,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.blutgruppe",
+        "map" : "koerperlicheUntersuchung.blutgruppe",
         "comment" : "Blutgruppe (LOINC)"
       }]
     },
@@ -355,7 +355,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.blutgruppe",
+        "map" : "koerperlicheUntersuchung.blutgruppe",
         "comment" : "Blutgruppe (SNOMED CT)"
       }]
     },
@@ -371,7 +371,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.blutgruppe",
+        "map" : "koerperlicheUntersuchung.blutgruppe",
         "comment" : "Blutgruppe (Text)"
       }]
     }]

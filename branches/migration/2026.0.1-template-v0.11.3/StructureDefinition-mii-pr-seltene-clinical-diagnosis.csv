@@ -531,7 +531,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Condition.subject","Condition.subject","","patient
 ","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/Group|4.0.1]]}
 ","Who has the condition?","Indicates the patient or group who the condition record is associated with.","","Group is typically used for veterinary or public health use cases.","","","","","","","",,,,,"",,,,"Condition.subject",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","Patient","Event.subject","PID-3","FiveWs.subject[x]","FiveWs.subject"
+","persoenlicheInfosIndexpatient","Event.subject","PID-3","FiveWs.subject[x]","FiveWs.subject"
 "Condition.subject.id","Condition.subject.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
 "Condition.subject.extension","Condition.subject.extension","","extensions

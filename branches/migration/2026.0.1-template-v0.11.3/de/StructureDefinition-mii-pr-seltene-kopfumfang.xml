@@ -20,7 +20,7 @@
   <name value="MII_PR_Seltene_Kopfumfang"/>
   <title value="MII PR SE Kopfumfang"/>
   <status value="active"/>
-  <date value="2026-09-02T14:14:40+00:00"/>
+  <date value="2026-09-02T14:33:43+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -139,7 +139,7 @@
       </constraint>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.kopfumfang"/>
+        <map value="koerperlicheUntersuchung.kopfumfang"/>
         <comment value="Kopfumfang"/>
       </mapping>
       <mapping>
@@ -2693,7 +2693,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Patient"/>
+        <map value="persoenlicheInfosIndexpatient"/>
         <comment value="Patient/Indexpatient"/>
       </mapping>
       <mapping>
@@ -2950,7 +2950,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.kopfumfang.Datum"/>
+        <map value="koerperlicheUntersuchung.kopfumfang.datumKopfumfang"/>
         <comment value="Datum der Messung"/>
       </mapping>
       <mapping>
@@ -3330,7 +3330,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.kopfumfang"/>
+        <map value="koerperlicheUntersuchung.kopfumfang.kopfumfang"/>
         <comment value="Kopfumfang in cm"/>
       </mapping>
       <mapping>
@@ -5838,7 +5838,7 @@
       <path value="Observation"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.kopfumfang"/>
+        <map value="koerperlicheUntersuchung.kopfumfang"/>
         <comment value="Kopfumfang"/>
       </mapping>
     </element>
@@ -5858,7 +5858,7 @@
       <path value="Observation.subject"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Patient"/>
+        <map value="persoenlicheInfosIndexpatient"/>
         <comment value="Patient/Indexpatient"/>
       </mapping>
     </element>
@@ -5870,7 +5870,7 @@
       </type>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.kopfumfang.Datum"/>
+        <map value="koerperlicheUntersuchung.kopfumfang.datumKopfumfang"/>
         <comment value="Datum der Messung"/>
       </mapping>
     </element>
@@ -5885,7 +5885,7 @@
       <path value="Observation.value[x].value"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Messbefunde.kopfumfang"/>
+        <map value="koerperlicheUntersuchung.kopfumfang.kopfumfang"/>
         <comment value="Kopfumfang in cm"/>
       </mapping>
     </element>

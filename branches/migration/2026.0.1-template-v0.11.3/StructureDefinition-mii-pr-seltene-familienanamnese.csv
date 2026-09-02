@@ -65,11 +65,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient]]}
 ","Patient","Der Patient zu dem die Familienanamnese gehört","References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.","","","","","","","","",,,,,"",,,,"FamilyMemberHistory.patient",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}","Patient"
+ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}","persoenlicheInfosIndexpatient"
 "FamilyMemberHistory.date","FamilyMemberHistory.date","","","",0,1,"Y","","Y","dateTime {[]} {[]}
 ","Datum","Datum der Erfassung der Familienanamnese","This should be captured even if the same as the date on the List aggregating the full family history.","Allows determination of how current the summary is.","","","","","","","",,,,,"",,,,"FamilyMemberHistory.date",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","Dokumentationsdatum"
+","familienanamnese.dokumentationsdatum"
 "FamilyMemberHistory.name","FamilyMemberHistory.name","","","",0,1,"","","Y","string {[]} {[]}
 ","The family member described","This will either be a name or a description; e.g. ""Aunt Susan"", ""my cousin with the red hair"".","Note that FHIR strings SHALL NOT exceed 1MB in size","Allows greater ease in ensuring the same person is being talked about.","","","","","","","",,,,,"",,,,"FamilyMemberHistory.name",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -579,7 +579,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "FamilyMemberHistory.condition.contributedToDeath","FamilyMemberHistory.condition.contributedToDeath","","","",0,1,"Y","","","boolean {[]} {[]}
 ","Tod durch diese Erkrankung","Gibt an, ob diese Erkrankung zum Tod des Familienmitglieds beigetragen hat. Relevant für die Dokumentation von Todesfällen durch seltene Erkrankungen in der Familie.","","","","","","","","","",,,,,"",,,,"FamilyMemberHistory.condition.contributedToDeath",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","familienanamnese.TodDurchSE"
+","familienanamnese.todDurchSE"
 "FamilyMemberHistory.condition.onset[x]","FamilyMemberHistory.condition.onset[x]","","","",0,1,"Y","","","Age {[]} {[]}
 Range {[]} {[]}Period {[]} {[]}string {[]} {[]}","When condition first manifested","Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.","","Age of onset of a condition in relatives is predictive of risk for the patient.","","","","","","","",,,,,"","type:$this}
 ","",,"open","FamilyMemberHistory.condition.onset[x]",0,1,"ele-1

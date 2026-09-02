@@ -139,7 +139,7 @@
   <name value="MII_PR_Seltene_GeneticDiagnosis"/>
   <title value="MII PR SE Genetic Diagnosis"/>
   <status value="active"/>
-  <date value="2026-09-02T14:14:40+00:00"/>
+  <date value="2026-09-02T14:33:43+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -6274,7 +6274,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Patient"/>
+        <map value="persoenlicheInfosIndexpatient"/>
         <comment value="Patient/Indexpatient"/>
       </mapping>
       <mapping>
@@ -10563,7 +10563,7 @@
       <path value="Condition.subject"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Patient"/>
+        <map value="persoenlicheInfosIndexpatient"/>
         <comment value="Patient/Indexpatient"/>
       </mapping>
     </element>

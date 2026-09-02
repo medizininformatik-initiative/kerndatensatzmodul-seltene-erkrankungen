@@ -41,7 +41,7 @@
   <name value="MII_PR_Seltene_Familienanamnese"/>
   <title value="MII PR SE Familienanamnese"/>
   <status value="active"/>
-  <date value="2026-09-02T14:14:40+00:00"/>
+  <date value="2026-09-02T14:33:43+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -782,7 +782,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Patient"/>
+        <map value="persoenlicheInfosIndexpatient"/>
         <comment value="Patient/Indexpatient"/>
       </mapping>
       <mapping>
@@ -839,7 +839,7 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Dokumentationsdatum"/>
+        <map value="familienanamnese.dokumentationsdatum"/>
         <comment value="Datum der Familienanamnese"/>
       </mapping>
       <mapping>
@@ -6252,7 +6252,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="familienanamnese.TodDurchSE"/>
+        <map value="familienanamnese.todDurchSE"/>
         <comment value="Tod durch seltene Erkrankung"/>
       </mapping>
       <mapping>
@@ -6427,7 +6427,7 @@
       <path value="FamilyMemberHistory.patient"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Patient"/>
+        <map value="persoenlicheInfosIndexpatient"/>
         <comment value="Patient/Indexpatient"/>
       </mapping>
     </element>
@@ -6435,7 +6435,7 @@
       <path value="FamilyMemberHistory.date"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="Dokumentationsdatum"/>
+        <map value="familienanamnese.dokumentationsdatum"/>
         <comment value="Datum der Familienanamnese"/>
       </mapping>
     </element>
@@ -6601,7 +6601,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="SE-LogicalModel"/>
-        <map value="familienanamnese.TodDurchSE"/>
+        <map value="familienanamnese.todDurchSE"/>
         <comment value="Tod durch seltene Erkrankung"/>
       </mapping>
     </element>
