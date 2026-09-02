@@ -57,7 +57,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
   "name" : "MII_PR_Seltene_Blutgruppe",
   "title" : "MII PR SE Blutgruppe",
   "status" : "active",
-  "date" : "2026-09-02T03:14:53+00:00",
+  "date" : "2026-09-02T03:38:58+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

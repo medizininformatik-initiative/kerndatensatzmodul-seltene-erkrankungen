@@ -18,8 +18,6 @@
 
 **status**: Active
 
-**category**: Research study
-
 **description**: 
 
 Registry of the European Reference Network for Rare Neuromuscular Diseases.
@@ -38,13 +36,6 @@ Registry of the European Reference Network for Rare Neuromuscular Diseases.
   }],
   "title" : "ERN EURO-NMD Patient Registry",
   "status" : "active",
-  "category" : [{
-    "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "415145008",
-      "display" : "Research study"
-    }]
-  }],
   "description" : "Registry of the European Reference Network for Rare Neuromuscular Diseases."
 }
 

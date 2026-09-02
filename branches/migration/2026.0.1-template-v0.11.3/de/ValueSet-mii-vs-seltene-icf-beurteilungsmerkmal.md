@@ -42,7 +42,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "MII VS SE ICF Qualifier Kind",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T03:14:53+00:00",
+  "date" : "2026-09-02T03:38:58+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
