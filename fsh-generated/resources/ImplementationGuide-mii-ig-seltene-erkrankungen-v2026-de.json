@@ -480,14 +480,6 @@
       },
       {
         "reference": {
-          "reference": "Patient/example"
-        },
-        "name": "Beispielpatient",
-        "description": "Generischer Beispielpatient für Testzwecke",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
           "reference": "Observation/mii-exa-seltene-bodymassindex"
         },
         "name": "Body Mass Index (BMI) Example",
@@ -1064,11 +1056,27 @@
       },
       {
         "reference": {
+          "reference": "Patient/mii-exa-seltene-patient"
+        },
+        "name": "MII EXA SE Beispielpatient",
+        "description": "Generischer Beispielpatient des Moduls Seltene Erkrankungen, referenziert von den Beispielen, die keinen eigenen Fallbezug haben. Fuer die ausgearbeiteten Fallbeispiele siehe patient-sma-001 und patient-marfan-001.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Condition/mii-exa-seltene-symptom-condition"
         },
         "name": "MII Example SE Symptom Condition",
         "description": "Example of a symptom condition in the context of rare diseases using HPO codes",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-lm-seltene"
+        },
+        "name": "MII LM SE",
+        "description": "MII LogicalModel Modul Seltene Erkraknungen",
+        "exampleBoolean": false
       },
       {
         "reference": {

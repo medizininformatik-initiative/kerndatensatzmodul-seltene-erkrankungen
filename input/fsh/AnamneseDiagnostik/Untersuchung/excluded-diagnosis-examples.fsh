@@ -20,7 +20,7 @@ Description: "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose"
 * code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
 * code.coding[+] = http://omim.org#154700 "Marfan syndrome"
 * code.text = "Marfan-Syndrom (ausgeschlossen)"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * encounter = Reference(Encounter/cardiology-consultation)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-12-15"
@@ -47,7 +47,7 @@ Description: "Differentialdiagnose EDS ausgeschlossen"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#98249 "Ehlers-Danlos syndrome"
 * code.text = "Ehlers-Danlos-Syndrom (ausgeschlossen)"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-11-20"
 * recordedDate = "2024-11-20"
@@ -73,7 +73,7 @@ Description: "Spinale Muskelatrophie genetisch ausgeschlossen"
 * code.coding[orphanet] = http://www.orpha.net#83330 "Spinal muscular atrophy"
 * code.coding[+] = http://omim.org#253300 "Spinal muscular atrophy, type I"
 * code.text = "Spinale Muskelatrophie (genetisch ausgeschlossen)"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-07-26"
 * recordedDate = "2024-07-26"
@@ -100,7 +100,7 @@ Description: "Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muske
 * code.coding[orphanet] = http://www.orpha.net#98896 "Duchenne muscular dystrophy"
 * code.coding[+] = http://omim.org#310200 "Duchenne muscular dystrophy"
 * code.text = "Duchenne-Muskeldystrophie (ausgeschlossen)"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-09-15"
 * recordedDate = "2024-09-15"
@@ -124,7 +124,7 @@ Description: "CF nach auffälligem Neugeborenenscreening genetisch ausgeschlosse
 * code.coding[orphanet] = http://www.orpha.net#586 "Cystic fibrosis"
 * code.coding[+] = http://omim.org#219700 "Cystic fibrosis"
 * code.text = "Mukoviszidose (ausgeschlossen)"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-08-25"
 * recordedDate = "2024-08-25"
@@ -153,7 +153,7 @@ Description: "Metabolische Myopathie als Differentialdiagnose ausgeschlossen"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#206966 "Mitochondrial myopathy"
 * code.text = "Metabolische Myopathie (ausgeschlossen)"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-10-01"
 * recordedDate = "2024-10-01"
@@ -176,7 +176,7 @@ Description: "Normale Aortenwurzel, schließt Marfan aus"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#imaging
 * code = $LNC#78176-5 "Aorta root Diameter by US 2D"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-12-15"
 * valueQuantity = 32 'mm' "mm"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
@@ -193,7 +193,7 @@ Description: "2 Kopien SMN1 - schließt SMA aus"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * code = $LNC#69548-6 "Genetic variant assessment"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-07-26"
 * valueCodeableConcept = $SCT#280413001 "Normal result"
 * component[+].code = $LNC#48018-6 "Gene studied [ID]"
@@ -211,7 +211,7 @@ Description: "Genetischer Test schließt SMA aus"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * code = $LNC#51969-4 "Genetic analysis report"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-07-26"
 * result[+] = Reference(molgen-smn1-normal-copies)
 * conclusion = "SMN1-Gen: 2 Kopien (Normalbefund). SMN2-Gen: 2 Kopien. Spinale Muskelatrophie ausgeschlossen."

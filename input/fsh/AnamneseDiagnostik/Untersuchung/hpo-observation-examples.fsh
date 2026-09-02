@@ -17,7 +17,7 @@ Description: "Echokardiographisch nachgewiesene Aortenwurzeldilatation"
 * code.coding[+] = $HPO#HP:0002616 "Aortic root aneurysm"
 * code.coding[+] = $SCT#251036003 "Aortic root dilatation"
 * code.text = "Aortenwurzeldilatation"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-12-15"
 * component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H "High"
@@ -35,7 +35,7 @@ Description: "Ectopia lentis bei Marfan-Syndrom"
 * code.coding[+] = $HPO#HP:0001083 "Ectopia lentis"
 * code.coding[+] = $SCT#65814009 "Partial dislocation of lens"
 * code.text = "Linsenluxation"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-10-15"
 * component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
@@ -52,7 +52,7 @@ Description: "Pathologisch erhöhte Körpergröße"
 * code.coding[+] = $HPO#HP:0000098 "Tall stature"
 * code.coding[+] = $LNC#8302-2 "Body height"
 * code.text = "Hochwuchs"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-12-15"
 * component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H "High"
@@ -69,7 +69,7 @@ Description: "Spinnenfingrigkeit bei Marfan-Syndrom"
 * code.coding[+] = $HPO#HP:0001166 "Arachnodactyly"
 * code.coding[+] = $SCT#62250003 "Arachnodactyly"
 * code.text = "Arachnodaktylie"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-12-15"
 * component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
@@ -90,7 +90,7 @@ Description: "Vergrößerter Augenabstand"
 * code.coding[+] = $HPO#HP:0000316 "Hypertelorism"
 * code.coding[+] = $SCT#22006008 "Hypertelorism"
 * code.text = "Hypertelorismus"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-10-20"
 * component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
@@ -106,7 +106,7 @@ Description: "Nach oben gerichtete Nasenlöcher"
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
 * code.coding[+] = $HPO#HP:0000463 "Anteverted nares"
 * code.text = "Antevertierte Nasenlöcher"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-10-20"
 * component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
@@ -122,7 +122,7 @@ Description: "Angeborener Ventrikelseptumdefekt"
 * code.coding[+] = $HPO#HP:0001629 "Ventricular septal defect"
 * code.coding[+] = $SCT#30288003 "Ventricular septal defect"
 * code.text = "Ventrikelseptumdefekt"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-10-20"
 * component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
@@ -140,7 +140,7 @@ Description: "Peripheres Lymphödem"
 * code.coding[+] = $HPO#HP:0001004 "Lymphedema"
 * code.coding[+] = $SCT#234097001 "Lymphedema"
 * code.text = "Lymphödem"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-10-20"
 * component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
@@ -162,7 +162,7 @@ Description: "Häufige respiratorische Infektionen bei CF"
 * code.coding[+] = $HPO#HP:0002099 "Asthma"
 * code.coding[+] = $SCT#195708003 "Recurrent upper respiratory tract infection"
 * code.text = "Rezidivierende Atemwegsinfektionen"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-08-10"
 * component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
@@ -179,7 +179,7 @@ Description: "Chronische Durchfälle bei CF"
 * code.coding[+] = $HPO#HP:0002028 "Chronic diarrhea"
 * code.coding[+] = $SCT#236071009 "Chronic diarrhea"
 * code.text = "Chronische Diarrhoe"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-08-10"
 * component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
@@ -196,7 +196,7 @@ Description: "Mangelhafte Gewichtszunahme"
 * code.coding[+] = $HPO#HP:0001508 "Failure to thrive"
 * code.coding[+] = $SCT#54840006 "Failure to thrive"
 * code.text = "Gedeihstörung"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-08-10"
 * component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"

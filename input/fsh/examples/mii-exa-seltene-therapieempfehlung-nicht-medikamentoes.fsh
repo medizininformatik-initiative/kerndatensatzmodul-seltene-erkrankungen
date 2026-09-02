@@ -59,7 +59,7 @@ Description: "Beispiel einer nicht-medikamentösen Therapieempfehlung für genet
 * category[MVGenomSeqTherapieTyp].coding = MII_CS_Seltene_TherapieempfehlungTyp#symptomatic "Symptomatisch"
 * code.coding[snomed] = $SCT#409063005 "Counseling"
 * code.text = "Humangenetische Beratung"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * authoredOn = "2024-11-01"
 * reasonCode.coding = $SCT#429962007 "Family history of hereditary disease"
 * note.text = "Beratung bezüglich Vererbungsmodus und Wiederholungsrisiko"

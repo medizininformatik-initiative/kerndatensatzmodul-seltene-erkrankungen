@@ -7,7 +7,7 @@ Description: "Beispiel: Bei einem Indexpatienten mit Verdacht auf eine autosomal
 * status = #final
 * category[socialHistory] = $observation-category#social-history
 * code = $SCT#842009 "Consanguinity"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-11-15"
 * valueCodeableConcept = $SCT#373066001 "Yes"
 * valueCodeableConcept.text = "Eltern blutsverwandt (Cousins 1. Grades)"

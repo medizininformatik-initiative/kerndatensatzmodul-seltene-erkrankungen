@@ -21,7 +21,7 @@ Description: "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend a
 * code.coding[sct] = $SCT#19346006 "Marfan syndrome"
 * code.coding[+] = http://omim.org#154700 "Marfan syndrome"
 * code.text = "Marfan-Syndrom, klinisch diagnostiziert"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * encounter = Reference(Encounter/cardiology-consultation)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-12-15"
@@ -58,7 +58,7 @@ Description: "Beispiel einer klinischen Diagnose des Noonan-Syndroms"
 * code.coding[orphanet] = http://www.orpha.net#648 "Noonan syndrome"
 * code.coding[sct] = $SCT#205824006 "Noonan syndrome"
 * code.text = "Noonan-Syndrom"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-10-20"
 * recordedDate = "2024-10-20"
@@ -94,7 +94,7 @@ Description: "Beispiel einer genetisch bestätigten Diagnose der spinalen Muskel
 * code.coding[sct] = $SCT#64383006 "Werdnig-Hoffmann disease"
 * code.coding[+] = http://omim.org#253300 "Spinal muscular atrophy, type I"
 * code.text = "Spinale Muskelatrophie Typ 1, genetisch bestätigt"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * encounter = Reference(Encounter/genetic-consultation)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-07-26"
@@ -125,7 +125,7 @@ Description: "Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie"
 * code.coding[sct] = $SCT#76670001 "Duchenne muscular dystrophy"
 * code.coding[+] = http://omim.org#310200 "Duchenne muscular dystrophy"
 * code.text = "Duchenne-Muskeldystrophie"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-09-15"
 * recordedDate = "2024-09-15"
@@ -153,7 +153,7 @@ Description: "Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom"
 * code.coding[sct] = $SCT#718220008 "Hereditary breast and ovarian cancer syndrome"
 * code.coding[+] = http://omim.org#604370 "Breast-ovarian cancer, familial, 1"
 * code.text = "Hereditäres Mamma- und Ovarialkarzinom-Syndrom (BRCA1)"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-11-01"
 * recordedDate = "2024-11-01"
@@ -184,7 +184,7 @@ Description: "Initiale klinische Verdachtsdiagnose Mukoviszidose"
 * code.coding[icd10-gm].version = "2024"
 * code.coding[orphanet] = http://www.orpha.net#586 "Cystic fibrosis"
 * code.coding[+] = http://omim.org#219700 "Cystic fibrosis"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-08-10"
 * recordedDate = "2024-08-10"
@@ -211,7 +211,7 @@ Description: "Genetisch bestätigte Mukoviszidose"
 * code.coding[orphanet] = http://www.orpha.net#586 "Cystic fibrosis"
 * code.coding[sct] = $SCT#190905008 "Cystic fibrosis"
 * code.coding[+] = http://omim.org#219700 "Cystic fibrosis"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-08-25"
 * recordedDate = "2024-08-25"

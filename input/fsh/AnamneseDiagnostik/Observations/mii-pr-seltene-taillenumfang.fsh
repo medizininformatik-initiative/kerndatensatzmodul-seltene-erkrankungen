@@ -44,7 +44,7 @@ Description: "Beispiel einer Taillenumfang-Messung bei einem Patienten mit selte
 * category.coding.code = #vital-signs
 * category.coding.display = "Vital Signs"
 * code = $LNC#8280-0 "Waist Circumference at umbilicus by Tape measure"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * subject.display = "Beispielpatient"
 * effectiveDateTime = "2024-08-08T10:00:00+02:00"
 * valueQuantity.value = 82.0

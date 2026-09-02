@@ -100,3 +100,6 @@ Alias: $icf-q-lokalisation = https://terminologien.bfarm.de/fhir/ValueSet/icf-q-
 Alias: $icf-q-leistung = https://terminologien.bfarm.de/fhir/ValueSet/icf-q-leistungsfaehigkeit-und-leistung
 Alias: $icf-q-barrieren = https://terminologien.bfarm.de/fhir/ValueSet/icf-q-barrieren
 Alias: $icf-q-foerderfaktoren = https://terminologien.bfarm.de/fhir/ValueSet/icf-q-foerderfaktoren
+
+// MII-Patient aus dem Base-Modul (Canonical unter modul-person, ausgeliefert im Paket base)
+Alias: $mii-pr-person-patient = https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient

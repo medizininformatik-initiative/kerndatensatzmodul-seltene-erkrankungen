@@ -44,7 +44,7 @@ Description: "Beispiel einer Hüftumfang-Messung bei einem Patienten mit seltene
 * category.coding.code = #vital-signs
 * category.coding.display = "Vital Signs"
 * code = $LNC#56063-1 "Circumference.at maximal protrusion of gluteus muscles Pelvis"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * subject.display = "Beispielpatient"
 * effectiveDateTime = "2024-08-08T10:00:00+02:00"
 * valueQuantity.value = 98.0

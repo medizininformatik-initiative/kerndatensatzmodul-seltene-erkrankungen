@@ -13,7 +13,7 @@ Description: "Homozygote Deletion des SMN1-Gens bei SMA"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * code = $LNC#69548-6 "Genetic variant assessment"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-07-26"
 * valueCodeableConcept = $SCT#10828004 "Positive"
 * component[+].code = $LNC#48018-6 "Gene studied [ID]"
@@ -36,7 +36,7 @@ Description: "Diagnostischer Bericht zur SMA-Genetik"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * code = $LNC#51969-4 "Genetic analysis report"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-07-26"
 * result[+] = Reference(molgen-variant-smn1-deletion)
 * conclusion = "Homozygote Deletion des SMN1-Gens nachgewiesen. Diagnose: Spinale Muskelatrophie. 2 Kopien des SMN2-Gens vorhanden, vereinbar mit schwerem Phänotyp (Typ 1)."
@@ -54,7 +54,7 @@ Description: "Out-of-frame Deletion im DMD-Gen"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * code = $LNC#69548-6 "Genetic variant assessment"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-09-15"
 * valueCodeableConcept = $SCT#10828004 "Positive"
 * component[+].code = $LNC#48018-6 "Gene studied [ID]"
@@ -78,7 +78,7 @@ Description: "Diagnostischer Bericht Duchenne-Muskeldystrophie"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * code = $LNC#51969-4 "Genetic analysis report"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-09-15"
 * result[+] = Reference(molgen-variant-dmd-deletion-exon45-47)
 * conclusion = "Out-of-frame Deletion der Exons 45-47 im DMD-Gen. Diese Mutation führt zu einem vorzeitigen Stopcodon und komplettem Verlust des funktionsfähigen Dystrophin-Proteins. Diagnose: Duchenne-Muskeldystrophie."
@@ -96,7 +96,7 @@ Description: "Pathogene BRCA1-Variante"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * code = $LNC#69548-6 "Genetic variant assessment"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-11-01"
 * valueCodeableConcept = $SCT#10828004 "Positive"
 * component[+].code = $LNC#48018-6 "Gene studied [ID]"
@@ -122,7 +122,7 @@ Description: "Hereditäres Karzinom-Panel"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * code = $LNC#81247-9 "Master HL7 genetic variant reporting panel"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-11-01"
 * result[+] = Reference(molgen-variant-brca1-pathogenic)
 * conclusion = "Pathogene Variante c.68_69del (p.Glu23Valfs*17) in BRCA1 nachgewiesen. Diese Frameshift-Mutation führt zu einem vorzeitigen Stopcodon. Erhöhtes Risiko für Mamma- und Ovarialkarzinom. Lebenszeitrisiko Mammakarzinom: 60-72%, Ovarialkarzinom: 40-44%."
@@ -140,7 +140,7 @@ Description: "Homozygote F508del Mutation bei Mukoviszidose"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * code = $LNC#69548-6 "Genetic variant assessment"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-08-25"
 * valueCodeableConcept = $SCT#10828004 "Positive"
 * component[+].code = $LNC#48018-6 "Gene studied [ID]"
@@ -166,7 +166,7 @@ Description: "Mukoviszidose genetischer Befund"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * code = $LNC#51969-4 "Genetic analysis report"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-08-25"
 * result[+] = Reference(molgen-variant-cftr-f508del-homozygous)
 * conclusion = "Homozygot für die F508del-Mutation (p.Phe508del, c.1521_1523delCTT) im CFTR-Gen. Dies ist die häufigste CF-verursachende Mutation. Bei Homozygotie ist mit einem klassischen, schweren CF-Phänotyp zu rechnen."

@@ -99,7 +99,7 @@ Description: "Example of a Therapieplan for a patient."
 * status = #draft
 * created = 2023-03-28
 * description = "Therapieplan für den Patienten"
-* subject = Reference(Patient/example-patient)
+* subject = Reference(mii-exa-seltene-patient)
 * intent = #proposal
 * activity[MedikamentoesTherapie].reference = Reference(MedicationRequest/example-therapieempfehlung)
 * activity[NichtMedikamentoesTherapie].reference = Reference(ServiceRequest/example-nichtmed-therapie)

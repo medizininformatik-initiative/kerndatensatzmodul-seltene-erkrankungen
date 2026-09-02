@@ -165,7 +165,7 @@ Description: "Genetisch bestätigte Phenylketonurie (PKU)"
 * code.coding[sct] = $SCT#7573000 "Classical phenylketonuria"
 * code.coding[+] = http://omim.org#261600 "Phenylketonuria"
 * code.text = "Phenylketonurie"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * recordedDate = "2024-01-01"
 * evidence[+].code.coding = $LNC#81247-9 "Master HL7 genetic variant reporting panel"
 * evidence[=].code.text = "PAH-Gen Mutation c.1222C>T (p.R408W)"
@@ -186,7 +186,7 @@ Description: "Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie"
 * category[MVGenomSeqTherapieTyp].coding = MII_CS_Seltene_TherapieempfehlungTyp#causal "Kausal"
 * code.coding[snomed] = $SCT#61310001 "Nutrition education"
 * code.text = "Phenylalaninreduzierte Diät bei Phenylketonurie"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * occurrencePeriod.start = "2024-01-01"
 // * requester = Reference(Practitioner/example) // Optional field, not required in MII
 * reasonReference = Reference(Condition/condition-pku-diagnosis)
