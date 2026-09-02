@@ -148,7 +148,12 @@ Description: "Das Register des European Reference Network für neuromuskuläre E
 * identifier.value = "EURO-NMD-REG"
 * title = "ERN EURO-NMD Patient Registry"
 * status = #active
-* category = $SCT#415145008 "Research study"
+// category bewusst NICHT gesetzt: der zunaechst verwendete Code $SCT#415145008
+// "Research study" existiert nicht (weder auf tx.fhir.org noch auf SU-TermServ) —
+// gefunden hat das der IG-Publisher, nicht die Recherche. Ein passendes
+// SNOMED-Konzept fuer "Register" oder "Studie" als Kategorie liess sich nicht
+// finden; ResearchStudy.category ist 0..* mit example-Bindung, also bleibt das
+// Feld leer. Dass es sich um ein Register handelt, sagen title und description.
 * description = "Registry of the European Reference Network for Rare Neuromuscular Diseases."
 
 Instance:    mii-exa-seltene-register-katalog-euro-nmd

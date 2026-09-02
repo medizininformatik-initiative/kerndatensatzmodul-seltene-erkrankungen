@@ -58,6 +58,12 @@
 // not define. Note the ICF's own ordering convention for chapter d: the FIRST
 // qualifier is performance, the SECOND is capacity — the slice order below is
 // alphabetical and carries no meaning.
+//
+// Written as explicit != chains rather than with subsetOf(): the validator
+// rejects a String collection there ("The parameter type System.String is not
+// legal for subsetOf"). SUSHI does not evaluate FHIRPath, so the first version
+// passed the build and failed only in the IG Publisher — mii-icf-1 always
+// worked because it already used this form.
 // -----------------------------------------------------------------------------
 Invariant:   mii-icf-1
 Description: "Body functions (chapter b) take only the extent-of-impairment qualifier."
@@ -67,17 +73,17 @@ Expression:  "code.coding.where(system='http://hl7.org/fhir/sid/icf').code.first
 Invariant:   mii-icf-2
 Description: "Body structures (chapter s) take only extent, nature of change and anatomical location."
 Severity:    #error
-Expression:  "code.coding.where(system='http://hl7.org/fhir/sid/icf').code.first().startsWith('s') implies component.where(code.coding.code.subsetOf('extent-of-impairment-structure' | 'nature-of-change' | 'anatomical-location').not()).empty()"
+Expression:  "code.coding.where(system='http://hl7.org/fhir/sid/icf').code.first().startsWith('s') implies component.where(code.coding.code != 'extent-of-impairment-structure' and code.coding.code != 'nature-of-change' and code.coding.code != 'anatomical-location').empty()"
 
 Invariant:   mii-icf-3
 Description: "Activities and participation (chapter d) take only capacity and performance."
 Severity:    #error
-Expression:  "code.coding.where(system='http://hl7.org/fhir/sid/icf').code.first().startsWith('d') implies component.where(code.coding.code.subsetOf('capacity' | 'performance').not()).empty()"
+Expression:  "code.coding.where(system='http://hl7.org/fhir/sid/icf').code.first().startsWith('d') implies component.where(code.coding.code != 'capacity' and code.coding.code != 'performance').empty()"
 
 Invariant:   mii-icf-4
 Description: "Environmental factors (chapter e) take only the barrier or facilitator qualifier."
 Severity:    #error
-Expression:  "code.coding.where(system='http://hl7.org/fhir/sid/icf').code.first().startsWith('e') implies component.where(code.coding.code.subsetOf('barrier' | 'facilitator').not()).empty()"
+Expression:  "code.coding.where(system='http://hl7.org/fhir/sid/icf').code.first().startsWith('e') implies component.where(code.coding.code != 'barrier' and code.coding.code != 'facilitator').empty()"
 
 Invariant:   mii-icf-5
 Description: "An environmental factor is graded as a barrier or as a facilitator, not as both at once."
