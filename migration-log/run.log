@@ -2,13 +2,8 @@
     Every line below belongs to run 1; the lines above are earlier invocations.
     Per-step raw logs (migration-log/<ACTION>.log) hold THIS run only -- `run`
     truncates each one and rolls the previous attempt over to <ACTION>.prev.log.
-2026-08-28T12:20:53Z  INFO   1  preflight-analysis  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/preflight-analysis.json`  raw_log=migration-log/preflight-analysis.log
-2026-08-28T12:20:54Z  INFO   1  preflight-analysis  done  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/preflight-analysis.json`  exit=0 raw_log=migration-log/preflight-analysis.log raw_log_lines=1
-2026-08-28T12:21:40Z  INFO   1  qa-baseline  source-QA = CI auf feat/2026@64c3cfd (2026-07-28): 'CI (FHIR Validation)' failure — JAVA_FHIR_VALIDATION rot (tx-Server-False-Positives, advisor.json-Triage in Commits 4f8acf4/a120efc/64c3cfd dokumentiert), DOTNET success; 'Build and Publish IG' (fhir2-basis-Stil) success. Kein Simplifier-Guide-QA vorhanden
-2026-08-28T12:21:40Z  INFO   1  source-decision  decision: Rendered-Guide-Harvest entfällt — Narrativ-Quelle ist input/pagecontent (15 dt. Seiten, Content-Migration PR #41, aktuellster Stand 2026.0.1) + Original-Simplifier-Baum implementation-guides/ImplementationGuide-2026.x-DE (authoritative tree fuer Union-Set, eingefroren/retained); rendered Guide https://simplifier.net/guide/mii-ig-seltene-erkrankungen-v2026-de (Version 2026.0.1) als Referenz
 2026-08-28T12:21:40Z  INFO   pre.2  classify-source-shape  Shape A (SUSHI-Projekt: sushi-config.yaml + input/fsh mit 64 FSH-Dateien), hybrid (Simplifier implementation-guides/ 1 Guide-Baum + basis-style IG-Publisher-Dateien ig.ini/fhir2+4 Workflows aus frueherer Migration); decision: in-place auf Branch migration/2026.0.1-template-v0.11.3 ab feat/2026
 2026-08-28T12:21:40Z  INFO   pre.5  toolchain  node v24.10.0, npx 11.6.0, java temurin 17.0.17; SUSHI=npx --yes fsh-sushi@3.20.0 (Skill-Pin), goFSH nicht benoetigt (Shape A, reine FSH-Quelle), IG Publisher 2.3.2 (SHA-verifizierter jar sha256=07c576024df917cc1f879b6b5a64147cd0222d5b4129688e8f0ad9ccce58b1d5, Scratchpad-Kopie)
-2026-08-28T12:21:58Z  INFO   1  source-inventory  geschrieben: migration-log/source-inventory.json — 1 Guide-Baum (authoritative), Seitenzahlen und FSH-Pfade siehe Datei
 2026-08-28T12:22:47Z  INFO   2.1  read  identity-claim  field=id value=mii-ig-seltene-erkrankungen-v2026-de tier=S source=sushi-config.yaml
 2026-08-28T12:22:47Z  INFO   2.1  read  identity-claim  field=canonical value=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene tier=S source=sushi-config.yaml==package.json(canonical)
 2026-08-28T12:22:47Z  INFO   2.1  read  identity-claim  field=packageId value=de.medizininformatikinitiative.kerndatensatz.seltene tier=S source=package.json(name); sushi-config traegt kein packageId-Feld (SUSHI-Default=id? nein: publiziertes Paket bestaetigt)
@@ -36,7 +31,6 @@
 2026-08-28T12:31:40Z  INFO   5.2  fsh-scaffold  kopiert: crmi.fsh extension-context.fsh license.fsh test-data-label.fsh rulesets/README.md parameters/manifest.fsh(auskommentiert, JSON authoritativ) fsh/README.md; per-File geskippt (Modul gewinnt): license-terms.fsh(Verlust LicenseCodeableCC0) publisher.fsh translation.fsh(Verlust Add*CodingTranslation-Varianten des Templates) version.fsh(Verlust CRMIPackageSource* -> ①) cps-rules.fsh+meta-profile.fsh(Definitions-Kollision); aliases.fsh: 42 Template-Definitionen appended (per-Definition-Merge)
 2026-08-28T12:31:40Z  INFO   5.2  placeholder-census  AKTIV alle ersetzt: sushi-config (neu geschrieben, Identitaet Quelle-gewinnt, license AUSGELASSEN, deps Quelle+Registry-Pins 2026-08-28+crmi 2.0.0+THO 7.3.0+extensions.r4 5.3.0, manualSliceOrdering false wie Quelle, M9-Seiten entfernt, 6 TODO:REVIEW: description/date/approvalDate/Autor-E-Mail/NCI-C4873/publication-request), ig.ini (P5), publication-request.json, Parameters-manifest.json, crmi.fsh, Starterseiten EN+DE (46+28 Ersetzungen), 3 platzhalter-benannte Dateien umbenannt (.md EN+DE, .po); VERBLEIBEND nur Doku (input/README, translations/README, resources/README, scripts/, docs/, tests/, ig-template/, demo/, index-Banner wird in Schritt 5 ersetzt)
 2026-08-28T12:31:40Z  INFO   5.2  p5-check  ig.ini ig= zeigt auf existierende SUSHI-Ausgabe ImplementationGuide-mii-ig-seltene-erkrankungen-v2026-de.json (id-abgeleitet); SUSHI 0 Errors 0 Warnings; Artefakt-Zaehler == Preflight-generated (18 Profile, 11 Ext, 20 VS, 5 CS, 1 CapStmt, 106 Beispiele; declared-19-vs-generated-18-Mismatch ist VORBESTEHEND in der Quelle, ③-Triage)
-2026-08-28T12:31:40Z  INFO   4  transfer-acceptance  in-place Shape A: Quell-FSH unveraendert an Ort und Stelle (input/fsh/, 64 Quelldateien) — comm-3 leer bis auf gelogte Scaffold-Additions (crmi/extension-context/license/test-data-label/parameters-manifest/READMEs/aliases-Append); keine Quelldatei veraendert oder verschoben, IDs/URLs unveraendert; Narrativ-Quellseiten nach migration-log/source-pagecontent/ gestaged (git mv, Historie erhalten)
 2026-08-28T12:31:40Z  WARN   gate-A  open  Gate A OFFEN (autonomer Lauf): zu pruefen sind Lizenz (nirgends deklariert!), title/description TODO:REVIEW, Registry-Pins der floating deps, Autor-E-Mail, NCI-Topic C4873, date/approvalDate, id-v2026-Suffix bei Ziel 2027.0.0-ballot, manualSliceOrdering-Folgearbeit, tests-Fixtures, qc/custom.rules-Abgleich — alles in ①-Queue des Reports
 2026-08-28T12:32:23Z  INFO   5.4  fql-scan  start  cmd=`bash /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/fql-scan.sh --strict`  raw_log=migration-log/fql-scan.log
 2026-08-28T12:32:23Z  INFO   5.4  fql-scan  params  rules=/Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/references/fql-rules.tsv  targets=input/pagecontent implementation-guides  defaulted=1
@@ -1467,8 +1461,6 @@
 2026-08-28T12:36:32Z  INFO   5.4b  security-privacy-decision  M11: Quelle traegt KEINE Security/Privacy-Seite -> Template-Seite security-and-privacy.md (EN+DE) bleibt als DERIVED Template-Boilerplate stehen, TODO:REVIEW-markiert (Gate B); kein Quelltext vorhanden, nichts erfunden — Standard-KDS-Verweis auf uebergreifende MII-Regelungen
 2026-08-28T12:51:33Z  INFO   5.4  narrative-transfer  Transfer gemaess page-map.tsv abgeschlossen: 17 DE-Intro-Notes (input/translations/de/intro-notes, Direktiven gestript, verwaiste Mapping-/Beispiel-Fragmente durch Pointer ersetzt, .page.md-Links auf Artefakt-HTML umgeschrieben, BMI-_profile-Beispiel Onko-Copy-Paste-Fehler korrigiert) + 17 EN-Intro-Notes (input/intro-notes, Maschinenuebersetzung TODO:REVIEW, Suchparameter-Boilerplate mechanisch uebersetzt); 22 DE-Seiten (input/translations/de/pagecontent: 14 Modul-Inhalt gemaess Map inkl. Merges index+module-description, implementer-guidance=context+TI-Index+references, profiles=overview+7 Familien-Sektionen mit Level-Demotion, logical-models=datasets+LM-Hinweis, uml/changes/code-systems/capability/examples, 4 eigene Seiten; 8 Template-DE-Starter unveraendert) + EN-Spiegel; SMA/Marfan-Case-Diagramme aus implementation-guides/Images nach input/images restauriert und in beide Sprachfassungen eingebunden; kaputter excluded-diagnosis-examples-Link entfernt (Ziel existierte nie)
 2026-08-28T12:51:33Z  INFO   5.4d  derived-scan  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/derived-scan.py --target . --out migration-log/derived-content.tsv`  raw_log=migration-log/derived-scan.log
-2026-08-28T12:51:33Z  INFO   11  derived-scan  params  target=. out=migration-log/derived-content.tsv markdown=no
-2026-08-28T12:51:33Z  INFO   11  derived-scan  result  files=82 markers=0 gates=A:0,B:0,C:0 kinds=- langs=- findings=0 (none) out=migration-log/derived-content.tsv exit=0
 2026-08-28T12:51:33Z  INFO   5.4d  derived-scan  done  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/derived-scan.py --target . --out migration-log/derived-content.tsv`  exit=0 raw_log=migration-log/derived-scan.log raw_log_lines=2
 2026-08-28T12:51:33Z  INFO   5.4  fql-scan-migrated  start  cmd=`bash /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/fql-scan.sh --strict --only input/pagecontent input/intro-notes input/translations`  raw_log=migration-log/fql-scan-migrated.log
 2026-08-28T12:51:33Z  INFO   5.4  fql-scan  params  rules=/Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/references/fql-rules.tsv  targets= --only input/pagecontent input/intro-notes input/translations  defaulted=0
@@ -1487,8 +1479,6 @@
     to the report's decision queue (spec §10.3).
 2026-08-28T12:53:26Z  INFO   5.4b  security-privacy-decision  M11 UMGESETZT: modulspezifische Security/Privacy-Aspekte GESCHRIEBEN (DERIVED:suggestion gate=B, EN+DE): erhoehtes Re-Identifikationsrisiko durch kleine Fallzahlen (ORPHA-Diagnosen + HPO-Profile), Drittbetroffenheit der Familienanamnese/genetischen Daten, Einwilligungspflicht fuer Register-Uebermittlung (NARSE/ERDRI); ILLUSTRATIVE-EXAMPLE-Box in beiden Sprachen entfernt
 2026-08-28T12:53:26Z  INFO   5.4d  derived-scan  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/derived-scan.py --target . --out migration-log/derived-content.tsv`  raw_log=migration-log/derived-scan.log prev_raw_log=migration-log/derived-scan.prev.log
-2026-08-28T12:53:26Z  INFO   11  derived-scan  params  target=. out=migration-log/derived-content.tsv markdown=no
-2026-08-28T12:53:26Z  INFO   11  derived-scan  result  files=82 markers=10 gates=A:2,B:8,C:0 kinds=bridge:4,stand-in:2,suggestion:4 langs=default,de findings=0 (none) out=migration-log/derived-content.tsv exit=0
 2026-08-28T12:53:26Z  INFO   5.4d  derived-scan  done  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/derived-scan.py --target . --out migration-log/derived-content.tsv`  exit=0 raw_log=migration-log/derived-scan.log raw_log_lines=2
 2026-08-28T12:53:26Z  INFO   5.4  fql-scan-migrated  start  cmd=`bash /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/fql-scan.sh --strict --only input/pagecontent input/intro-notes input/translations`  raw_log=migration-log/fql-scan-migrated.log prev_raw_log=migration-log/fql-scan-migrated.prev.log
 2026-08-28T12:53:26Z  INFO   5.4  fql-scan  params  rules=/Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/references/fql-rules.tsv  targets= --only input/pagecontent input/intro-notes input/translations  defaulted=0
@@ -1527,23 +1517,124 @@
     same-module verification can run; its IDENTISCH lines are the evidence, not
     this line.
 2026-08-28T13:04:24Z  INFO   5.6a  sibling-skill-check  done  cmd=`bash /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/sibling-skill-check.sh --skill-dir /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration`  exit=0 raw_log=migration-log/sibling-skill-check.log raw_log_lines=4
-2026-08-28T13:04:24Z  INFO   7  postflight-analysis  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/postflight-analysis.json`  raw_log=migration-log/postflight-analysis.log
-2026-08-28T13:04:25Z  INFO   7  postflight-analysis  done  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/postflight-analysis.json`  exit=0 raw_log=migration-log/postflight-analysis.log raw_log_lines=1
-2026-08-28T13:04:25Z  INFO   1  preflight-analysis-source  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-seltene-erkrankungen/ea25fbf8-c4f3-4c5a-be9a-d2c220301297/scratchpad/seltene-source-unmigrated -o migration-log/preflight-analysis.json`  raw_log=migration-log/preflight-analysis-source.log
-2026-08-28T13:04:25Z  INFO   1  preflight-analysis-source  done  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-seltene-erkrankungen/ea25fbf8-c4f3-4c5a-be9a-d2c220301297/scratchpad/seltene-source-unmigrated -o migration-log/preflight-analysis.json`  exit=0 raw_log=migration-log/preflight-analysis-source.log raw_log_lines=1
-2026-08-28T13:04:34Z  INFO   7  prepost-delta  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/prepost-delta.py --pre migration-log/preflight-analysis.json --post migration-log/postflight-analysis.json --out migration-log/prepost-delta.md --tsv migration-log/prepost-delta.tsv`  raw_log=migration-log/prepost-delta.log
-2026-08-28T13:04:34Z  INFO   7  prepost-delta  params  pre=migration-log/preflight-analysis.json post=migration-log/postflight-analysis.json out=migration-log/prepost-delta.md tsv=migration-log/prepost-delta.tsv
-2026-08-28T13:04:34Z  ERROR  7  prepost-delta  delta-regression: identity.version  pre=2026.0.1 post=2027.0.0-ballot
     why: machine-identity field changed -- the migrated package is no longer the same package
-2026-08-28T13:04:34Z  INFO   7  prepost-delta  result  rows=33 unchanged=27 improved=1 expected-change=4 regression=1 not-measurable=0 out=migration-log/prepost-delta.md tsv=migration-log/prepost-delta.tsv exit=1
-2026-08-28T13:04:34Z  WARN   7  prepost-delta  prepost-delta: 1 regression(s) -- a property of the module got WORSE between the pre- and post-measurement.
     Every regression above names its property and both values.
     The reports were still written: they are the artefact, not the verdict.
-2026-08-28T13:04:34Z  WARN   7  prepost-delta  anticipated-nonzero-exit: REGRESSION-Zeilen werden triagiert  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/prepost-delta.py --pre migration-log/preflight-analysis.json --post migration-log/postflight-analysis.json --out migration-log/prepost-delta.md --tsv migration-log/prepost-delta.tsv`  exit=1 raw_log=migration-log/prepost-delta.log raw_log_lines=7
     This non-zero status is this step's ANTICIPATED, documented outcome, not a
     failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
     §5.1b.4). Escalated, not ignored: every item behind it belongs in the
     report's ① decision queue, named individually (spec §10.3, §10.6).
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    exit 1 = at least one DIVERGIERT; exit 3 = none, but verification is INCOMPLETE
+    because a check could not be mechanised. Neither is a pass.
+    This non-zero status is this step's ANTICIPATED, documented outcome, not a
+    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
+    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
+    report's ① decision queue, named individually (spec §10.3, §10.6).
+2026-08-28T13:15:03Z  INFO   2.1  read-identity  Identitaet aus der Quelle GELESEN (nicht erfunden), Einzel-Claims siehe die 2.1-read-Zeilen oben: id/canonical/name/title/packageId/publisher/status/releaseLabel/fhirVersion/copyrightYear Tier S aus sushi-config.yaml+package.json der Quelle, unveraendert uebernommen; license nirgends deklariert (Gate A ①, NICHT gedefaultet); einzige Human-Decision: Ziel-Version 2027.0.0-ballot (User 2026-08-28)
+2026-08-28T13:15:03Z  INFO   5.2  skeleton-vendored  ref=v0.11.3 (mii-kds-module-template Release-Tag, Struktur-Achse); ig-template-Paket vendored: siehe ig-template/package/package.json; Quelle: git clone --depth 1 --branch v0.11.3 https://github.com/forschungsgruppe-digital-health/mii-kds-module-template; Datei-Ebene siehe 5.2 vendor-template/vendor-skips/fsh-scaffold
+2026-08-28T13:15:03Z  INFO   5.3  transfer-artefacts  in-place Shape A: die 64 Quell-FSH-Dateien bleiben unveraendert an Ort und Stelle in input/fsh/ (keine Datei veraendert, verschoben oder umbenannt; IDs und Canonicals unveraendert, Guardrail 1). Bewegt wurde ausschliesslich das Narrativ (input/pagecontent -> migration-log/source-pagecontent via git mv, Historie erhalten) sowie additive Scaffold-Dateien; Akzeptanz siehe 4 transfer-acceptance, SUSHI-Zaehler siehe 5.2 p5-check (18 Profile/11 Ext/20 VS/5 CS/1 CapStmt/106 Beispiele == Preflight)
+2026-08-28T13:19:33Z  INFO   5.6  plantuml-recovery  INHALTS-RETTUNG: die beiden PlantUML-Zeitverlaufsdiagramme der Fallbeispiele (Marfan 191 Zeilen, SMA 153 Zeilen) waren im Simplifier-Baum inline gerendert, im pagecontent-Port aber nur als '*(Diagramm folgt.)*' vorhanden. Quellen unveraendert nach input/images-source/{Marfan,SMA}_Case_Timeline_Diagram.puml extrahiert (mit Provenienz-Header), zusammen mit den 4 bereits vorhandenen .puml aus input/fsh/Beispiel_*; alle mit plantuml -tsvg nach input/images/ gerendert und in beide Sprachfassungen der Fallbeispiel-Seiten eingebunden. Die Platzhalter '(Diagramm folgt.)' sind entfallen.
+2026-08-28T13:19:52Z  INFO   5.6  ig-publisher  start  cmd=`java -Xmx6g -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -jar /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-seltene-erkrankungen/ea25fbf8-c4f3-4c5a-be9a-d2c220301297/scratchpad/publisher.jar -ig ig.ini -tx https://tx.fhir.org/r4`  raw_log=migration-log/ig-publisher.log prev_raw_log=migration-log/ig-publisher.prev.log
+2026-08-28T13:23:27Z  INFO   5.6  ig-publisher  done  cmd=`java -Xmx6g -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -jar /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-seltene-erkrankungen/ea25fbf8-c4f3-4c5a-be9a-d2c220301297/scratchpad/publisher.jar -ig ig.ini -tx https://tx.fhir.org/r4`  exit=0 raw_log=migration-log/ig-publisher.log raw_log_lines=16411
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+    exit 1 = at least one DIVERGIERT; exit 3 = none, but verification is INCOMPLETE
+    because a check could not be mechanised. Neither is a pass.
+    This non-zero status is this step's ANTICIPATED, documented outcome, not a
+    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
+    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
+    report's ① decision queue, named individually (spec §10.3, §10.6).
+    why: machine-identity field changed -- the migrated package is no longer the same package
+    Every regression above names its property and both values.
+    The reports were still written: they are the artefact, not the verdict.
+    This non-zero status is this step's ANTICIPATED, documented outcome, not a
+    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
+    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
+    report's ① decision queue, named individually (spec §10.3, §10.6).
+    The exit status is preserved and returned -- this step did NOT meet its
+    acceptance criterion. Read migration-log/qa-checklist.log, then either fix and re-run or take it
+    to the report's decision queue (spec §10.3).
+    The exit status is preserved and returned -- this step did NOT meet its
+    acceptance criterion. Read migration-log/comparison-table.log, then either fix and re-run or take it
+    to the report's decision queue (spec §10.3).
+2026-08-28T12:20:53Z  INFO   1  preflight-analysis  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/preflight-analysis.json`  raw_log=migration-log/preflight-analysis.log
+2026-08-28T12:20:54Z  INFO   1  preflight-analysis  done  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/preflight-analysis.json`  exit=0 raw_log=migration-log/preflight-analysis.log raw_log_lines=1
+2026-08-28T12:21:40Z  INFO   1  qa-baseline  source-QA = CI auf feat/2026@64c3cfd (2026-07-28): 'CI (FHIR Validation)' failure — JAVA_FHIR_VALIDATION rot (tx-Server-False-Positives, advisor.json-Triage in Commits 4f8acf4/a120efc/64c3cfd dokumentiert), DOTNET success; 'Build and Publish IG' (fhir2-basis-Stil) success. Kein Simplifier-Guide-QA vorhanden
+2026-08-28T12:21:40Z  INFO   1  source-decision  decision: Rendered-Guide-Harvest entfällt — Narrativ-Quelle ist input/pagecontent (15 dt. Seiten, Content-Migration PR #41, aktuellster Stand 2026.0.1) + Original-Simplifier-Baum implementation-guides/ImplementationGuide-2026.x-DE (authoritative tree fuer Union-Set, eingefroren/retained); rendered Guide https://simplifier.net/guide/mii-ig-seltene-erkrankungen-v2026-de (Version 2026.0.1) als Referenz
+2026-08-28T12:21:58Z  INFO   1  source-inventory  geschrieben: migration-log/source-inventory.json — 1 Guide-Baum (authoritative), Seitenzahlen und FSH-Pfade siehe Datei
+2026-08-28T12:31:40Z  INFO   4  transfer-acceptance  in-place Shape A: Quell-FSH unveraendert an Ort und Stelle (input/fsh/, 64 Quelldateien) — comm-3 leer bis auf gelogte Scaffold-Additions (crmi/extension-context/license/test-data-label/parameters-manifest/READMEs/aliases-Append); keine Quelldatei veraendert oder verschoben, IDs/URLs unveraendert; Narrativ-Quellseiten nach migration-log/source-pagecontent/ gestaged (git mv, Historie erhalten)
+2026-08-28T12:51:33Z  INFO   11  derived-scan  params  target=. out=migration-log/derived-content.tsv markdown=no
+2026-08-28T12:51:33Z  INFO   11  derived-scan  result  files=82 markers=0 gates=A:0,B:0,C:0 kinds=- langs=- findings=0 (none) out=migration-log/derived-content.tsv exit=0
+2026-08-28T12:53:26Z  INFO   11  derived-scan  params  target=. out=migration-log/derived-content.tsv markdown=no
+2026-08-28T12:53:26Z  INFO   11  derived-scan  result  files=82 markers=10 gates=A:2,B:8,C:0 kinds=bridge:4,stand-in:2,suggestion:4 langs=default,de findings=0 (none) out=migration-log/derived-content.tsv exit=0
+2026-08-28T13:04:24Z  INFO   7  postflight-analysis  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/postflight-analysis.json`  raw_log=migration-log/postflight-analysis.log
+2026-08-28T13:04:25Z  INFO   1  preflight-analysis-source  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-seltene-erkrankungen/ea25fbf8-c4f3-4c5a-be9a-d2c220301297/scratchpad/seltene-source-unmigrated -o migration-log/preflight-analysis.json`  raw_log=migration-log/preflight-analysis-source.log
+2026-08-28T13:04:25Z  INFO   1  preflight-analysis-source  done  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-seltene-erkrankungen/ea25fbf8-c4f3-4c5a-be9a-d2c220301297/scratchpad/seltene-source-unmigrated -o migration-log/preflight-analysis.json`  exit=0 raw_log=migration-log/preflight-analysis-source.log raw_log_lines=1
+2026-08-28T13:04:25Z  INFO   7  postflight-analysis  done  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/postflight-analysis.json`  exit=0 raw_log=migration-log/postflight-analysis.log raw_log_lines=1
+2026-08-28T13:04:34Z  INFO   7  prepost-delta  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/prepost-delta.py --pre migration-log/preflight-analysis.json --post migration-log/postflight-analysis.json --out migration-log/prepost-delta.md --tsv migration-log/prepost-delta.tsv`  raw_log=migration-log/prepost-delta.log
+2026-08-28T13:04:34Z  INFO   7  prepost-delta  params  pre=migration-log/preflight-analysis.json post=migration-log/postflight-analysis.json out=migration-log/prepost-delta.md tsv=migration-log/prepost-delta.tsv
+2026-08-28T13:04:34Z  ERROR  7  prepost-delta  delta-regression: identity.version  pre=2026.0.1 post=2027.0.0-ballot
+2026-08-28T13:04:34Z  INFO   7  prepost-delta  result  rows=33 unchanged=27 improved=1 expected-change=4 regression=1 not-measurable=0 out=migration-log/prepost-delta.md tsv=migration-log/prepost-delta.tsv exit=1
+2026-08-28T13:04:34Z  WARN   7  prepost-delta  prepost-delta: 1 regression(s) -- a property of the module got WORSE between the pre- and post-measurement.
+2026-08-28T13:04:34Z  WARN   7  prepost-delta  anticipated-nonzero-exit: REGRESSION-Zeilen werden triagiert  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/prepost-delta.py --pre migration-log/preflight-analysis.json --post migration-log/postflight-analysis.json --out migration-log/prepost-delta.md --tsv migration-log/prepost-delta.tsv`  exit=1 raw_log=migration-log/prepost-delta.log raw_log_lines=7
 2026-08-28T13:13:51Z  INFO   7  prepost-delta-triage  1 REGRESSION-Zeile: identity.version 2026.0.1 -> 2027.0.0-ballot = BEWUSSTER User-Entscheid vom 2026-08-28 (Ziel-Version der Migration, analog Modul Bildgebung 2027.0.0-ballot), keine Verschlechterung; der Analyzer kennt die Absicht nicht und wertet jede Identitaets-Aenderung als Regression. Alle uebrigen Properties unchanged/improved (Artefaktzahl 163 == 163, Inhalts-Seiten 54 -> 66 improved).
 2026-08-28T13:14:02Z  INFO   11  verify-migration  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/verify-migration.py --target . --source /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-seltene-erkrankungen/ea25fbf8-c4f3-4c5a-be9a-d2c220301297/scratchpad/seltene-source-unmigrated --rendered output --source-lang de --template-latest v0.11.3`  raw_log=migration-log/verify-migration.log
 2026-08-28T13:14:02Z  INFO   11  verify-migration  params  target=. source=/private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-seltene-erkrankungen/ea25fbf8-c4f3-4c5a-be9a-d2c220301297/scratchpad/seltene-source-unmigrated guide_tree=ImplementationGuide-2026.x-DE rendered=output log=./migration-log/run.log layers=conservation,fidelity,provenance,rendering,log
@@ -1552,60 +1643,35 @@
 2026-08-28T13:14:04Z  INFO   11  verify-migration  conservation C3  identisch=56 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:14:04Z  INFO   11  verify-migration  conservation C4  identisch=6 divergiert=31 nicht_pruefbar=19
 2026-08-28T13:14:04Z  WARN   11  verify-migration  verification-divergence: conservation C4  count=31 subjects=Beispiele-fuer-Seltene-Erkrankungen/Index.page.md, Beschreibung-Modul.page.md, Beschreibung-von-Szenarien-fuer-die-Anwendung-des-Moduls-SE.page.md …
-    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
 2026-08-28T13:14:04Z  WARN   11  verify-migration  not-mechanisable: conservation C4  count=19 subjects=Anwendungsfaelle-Informationsmodell/Index.page.md, Blutgruppe-Observation.page.md, Body-Mass-Index-Observation.page.md …
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:14:04Z  INFO   11  verify-migration  conservation C5  identisch=3 divergiert=7 nicht_pruefbar=0
 2026-08-28T13:14:04Z  WARN   11  verify-migration  verification-divergence: conservation C5  count=7 subjects=input/pagecontent/marfan-example-annotations.md, input/pagecontent/operations.md, input/pagecontent/rendering-artifacts.md …
-    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
 2026-08-28T13:14:04Z  INFO   11  verify-migration  conservation C6  identisch=41 divergiert=0 nicht_pruefbar=13
 2026-08-28T13:14:04Z  WARN   11  verify-migration  not-mechanisable: conservation C6  count=13 subjects=Beschreibung-Modul.page.md, Beschreibung-von-Szenarien-fuer-die-Anwendung-des-Moduls-SE.page.md, CapabilityStatement.page.md …
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:14:04Z  INFO   11  verify-migration  conservation C7  identisch=0 divergiert=15 nicht_pruefbar=18
 2026-08-28T13:14:04Z  WARN   11  verify-migration  verification-divergence: conservation C7  count=15 subjects=profiles, implementer-guidance, profiles …
-    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
 2026-08-28T13:14:04Z  WARN   11  verify-migration  not-mechanisable: conservation C7  count=18 subjects=Blutgruppe-Observation.page.md, Body-Mass-Index-Observation.page.md, Familienanamnese-FamilyMemberHistory.page.md …
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:14:04Z  INFO   11  verify-migration  fidelity F1  identisch=7 divergiert=1 nicht_pruefbar=1
 2026-08-28T13:14:04Z  WARN   11  verify-migration  verification-divergence: fidelity F1  count=1 subjects=license
-    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
 2026-08-28T13:14:04Z  WARN   11  verify-migration  not-mechanisable: fidelity F1  count=1 subjects=version
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:14:04Z  INFO   11  verify-migration  fidelity F2  identisch=1 divergiert=6 nicht_pruefbar=3
 2026-08-28T13:14:04Z  WARN   11  verify-migration  verification-divergence: fidelity F2  count=6 subjects=de.basisprofil.r4, de.medizininformatikinitiative.kerndatensatz.base, de.medizininformatikinitiative.kerndatensatz.icu …
-    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
 2026-08-28T13:14:04Z  WARN   11  verify-migration  not-mechanisable: fidelity F2  count=3 subjects=hl7.fhir.uv.crmi, hl7.fhir.uv.extensions.r4, hl7.terminology.r4
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:14:04Z  INFO   11  verify-migration  fidelity F3  identisch=1 divergiert=1 nicht_pruefbar=0
 2026-08-28T13:14:04Z  WARN   11  verify-migration  verification-divergence: fidelity F3  count=1 subjects=license
-    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
 2026-08-28T13:14:04Z  INFO   11  verify-migration  fidelity F4  identisch=1 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:14:04Z  INFO   11  verify-migration  provenance P1  identisch=1 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:14:04Z  INFO   11  verify-migration  provenance P2  identisch=0 divergiert=0 nicht_pruefbar=1
 2026-08-28T13:14:04Z  WARN   11  verify-migration  not-mechanisable: provenance P2  count=1 subjects=vendored template ref
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:14:04Z  INFO   11  verify-migration  provenance P3  identisch=1 divergiert=0 nicht_pruefbar=1
 2026-08-28T13:14:04Z  WARN   11  verify-migration  not-mechanisable: provenance P3  count=1 subjects=IG Publisher currency
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:14:04Z  INFO   11  verify-migration  provenance P4  identisch=0 divergiert=0 nicht_pruefbar=1
 2026-08-28T13:14:04Z  WARN   11  verify-migration  not-mechanisable: provenance P4  count=1 subjects=source guide version
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:14:04Z  INFO   11  verify-migration  provenance P5  identisch=1 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:14:04Z  INFO   11  verify-migration  rendering R1  identisch=2 divergiert=0 nicht_pruefbar=1
 2026-08-28T13:14:04Z  WARN   11  verify-migration  not-mechanisable: rendering R1  count=1 subjects=source-versus-target rendering
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:14:04Z  INFO   11  verify-migration  rendering R2  identisch=0 divergiert=2 nicht_pruefbar=0
 2026-08-28T13:14:04Z  WARN   11  verify-migration  verification-divergence: rendering R2  count=2 subjects=output/de id="ig-status" [{{], output/en id="ig-status" [{{]
-    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
 2026-08-28T13:14:04Z  INFO   11  verify-migration  rendering R3  identisch=1 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:14:04Z  INFO   11  verify-migration  rendering R4  identisch=1 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:14:04Z  INFO   11  verify-migration  rendering R5  identisch=1 divergiert=0 nicht_pruefbar=0
@@ -1613,33 +1679,16 @@
 2026-08-28T13:14:04Z  INFO   11  verify-migration  log L1  identisch=1 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:14:04Z  INFO   11  verify-migration  log L2  identisch=16 divergiert=3 nicht_pruefbar=10
 2026-08-28T13:14:04Z  WARN   11  verify-migration  verification-divergence: log L2  count=3 subjects=2.1 read-identity, 5.2 skeleton-vendored, 5.3 transfer-artefacts
-    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
 2026-08-28T13:14:04Z  WARN   11  verify-migration  not-mechanisable: log L2  count=10 subjects=2.1 package-identity, 2.1 repo-identity, 5.1c simplifier-discover …
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:14:04Z  INFO   11  verify-migration  log L3  identisch=2 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:14:04Z  INFO   11  verify-migration  log L4  identisch=1 divergiert=0 nicht_pruefbar=2
 2026-08-28T13:14:04Z  WARN   11  verify-migration  not-mechanisable: log L4  count=2 subjects=conversion count, page count
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:14:04Z  WARN   11  verify-migration  result  identisch=148 divergiert=66 nicht_pruefbar=70 findings=./migration-log/verification-findings.tsv markdown=./migration-log/verification.md exit=1
-    exit 1 = at least one DIVERGIERT; exit 3 = none, but verification is INCOMPLETE
-    because a check could not be mechanised. Neither is a pass.
 2026-08-28T13:14:04Z  WARN   11  verify-migration  anticipated-nonzero-exit: Findings sind der Output dieses Schritts (1 = DIVERGIERT, 3 = NICHT PRUEFBAR)  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/verify-migration.py --target . --source /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-seltene-erkrankungen/ea25fbf8-c4f3-4c5a-be9a-d2c220301297/scratchpad/seltene-source-unmigrated --rendered output --source-lang de --template-latest v0.11.3`  exit=1 raw_log=migration-log/verify-migration.log raw_log_lines=79
-    This non-zero status is this step's ANTICIPATED, documented outcome, not a
-    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
-    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
-    report's ① decision queue, named individually (spec §10.3, §10.6).
-2026-08-28T13:15:03Z  INFO   2.1  read-identity  Identitaet aus der Quelle GELESEN (nicht erfunden), Einzel-Claims siehe die 2.1-read-Zeilen oben: id/canonical/name/title/packageId/publisher/status/releaseLabel/fhirVersion/copyrightYear Tier S aus sushi-config.yaml+package.json der Quelle, unveraendert uebernommen; license nirgends deklariert (Gate A ①, NICHT gedefaultet); einzige Human-Decision: Ziel-Version 2027.0.0-ballot (User 2026-08-28)
-2026-08-28T13:15:03Z  INFO   5.2  skeleton-vendored  ref=v0.11.3 (mii-kds-module-template Release-Tag, Struktur-Achse); ig-template-Paket vendored: siehe ig-template/package/package.json; Quelle: git clone --depth 1 --branch v0.11.3 https://github.com/forschungsgruppe-digital-health/mii-kds-module-template; Datei-Ebene siehe 5.2 vendor-template/vendor-skips/fsh-scaffold
-2026-08-28T13:15:03Z  INFO   5.3  transfer-artefacts  in-place Shape A: die 64 Quell-FSH-Dateien bleiben unveraendert an Ort und Stelle in input/fsh/ (keine Datei veraendert, verschoben oder umbenannt; IDs und Canonicals unveraendert, Guardrail 1). Bewegt wurde ausschliesslich das Narrativ (input/pagecontent -> migration-log/source-pagecontent via git mv, Historie erhalten) sowie additive Scaffold-Dateien; Akzeptanz siehe 4 transfer-acceptance, SUSHI-Zaehler siehe 5.2 p5-check (18 Profile/11 Ext/20 VS/5 CS/1 CapStmt/106 Beispiele == Preflight)
 2026-08-28T13:19:33Z  INFO   11  verification-triage-c4c7  C4 (31) + C7 (15) TRIAGIERT — Ursache ist die SPRACHINVERSION, nicht Textverlust: die Quelle ist deutsch, die Default-Sprache des Ziels ist englisch, also findet der Verifier den deutschen Quelltext nicht in input/pagecontent (dort steht die Maschinenuebersetzung), sondern in input/translations/de. GEGENMESSUNG durchgefuehrt (1030 Quell-Textlaeufe aus allen 41 Baumseiten gegen input/translations/de/{pagecontent,intro-notes}): 986 gefunden = 95,7% Erhalt; die 44 Ausnahmen sind klassifiziert und ALLE erklaert: 7 raw.githubusercontent-Bild-Hotlinks (bewusst durch lokale Bilder ersetzt, fql-scan-Empfehlung img-hotlink), 3 Profilnamen-Listen (Port nutzt 'MII PR SE' statt 'MII PR Seltene'), 1 leere RETIRED-Seite, 24 umgeschriebene .page.md-Verwandte-Profile-Links (jetzt Artefakt-HTML-Links), 6 leere Beispiel-Ueberschriften (durch Pointer 'Beispielinstanzen sind auf der Profilseite verlinkt' ersetzt), 2 verwaiste FQL-Tabellenkoepfe, 1 veralteter Marfan-Status ('Ressourcen in Entwicklung' — Ressourcen existieren inzwischen), 1 WHR-Seite (RETIRED, Profil auskommentiert). C7 folgt mechanisch aus C4 und ist damit ebenfalls erklaert: profiles/implementer-guidance tragen MOVED content (Familien-Index-Seiten 1:1, nur Ueberschriften-Demotion) — laut Skill-Kontrakt traegt MOVED/SPLIT-Inhalt KEINEN DERIVED-Marker.
 2026-08-28T13:19:33Z  INFO   11  verification-triage-c5  C5 (7) — 2 ECHTE MIGRATIONSDEFEKTE GEFUNDEN UND BEHOBEN: (1) die vier M9-Seiten operations/rendering-artifacts/researcher-guidance/search-parameters.md waren NOCH VORHANDEN — das git rm in Schritt 3 war wegen lokaler Modifikationen stillschweigend fehlgeschlagen (Fehler durch 2>/dev/null verschluckt), jetzt geloescht; (2) sma-/marfan-example-annotations waren in keinem Menueintrag (nur ueber URL erreichbar) — Eintraege im Artefakte-Dropdown EN+DE ergaenzt, href-Paritaet 30/30 geprueft.
 2026-08-28T13:19:33Z  INFO   11  verification-triage-r2  R2 (2) — Template-Artefakt, kein Migrationsdefekt: 'output/{de,en} id=ig-status [{{]' auf searchform.html ist der clientseitige JS-Platzhalter {{title}} des IG-Publisher-Suchformulars. IDENTISCHER Befund (gleiche Finding-IDs R2-48ed52/R2-d1da9a) in den Migrationen Onkologie und Bildgebung -> ③
 2026-08-28T13:19:33Z  INFO   11  verification-triage-f1f2f3  F1/F3 (license) + F2 (6 dependency-pins) — die dokumentierten Gate-A-Entscheidungen, keine Defekte: license ist in der Quelle NIRGENDS deklariert und wird bewusst NICHT gedefaultet (siehe 2.1 identity-claim license); die 6 Pins sind die am 2026-08-28 aufgeloesten Registry-Staende der floating Quell-Pins (2026.0.x/1.5.x), weil der Template-convention-check floating Versionen ablehnt (siehe 2.1 floating-pins) — beides gehoert in die ①-Queue, nicht in die Fehlerliste.
-2026-08-28T13:19:33Z  INFO   5.6  plantuml-recovery  INHALTS-RETTUNG: die beiden PlantUML-Zeitverlaufsdiagramme der Fallbeispiele (Marfan 191 Zeilen, SMA 153 Zeilen) waren im Simplifier-Baum inline gerendert, im pagecontent-Port aber nur als '*(Diagramm folgt.)*' vorhanden. Quellen unveraendert nach input/images-source/{Marfan,SMA}_Case_Timeline_Diagram.puml extrahiert (mit Provenienz-Header), zusammen mit den 4 bereits vorhandenen .puml aus input/fsh/Beispiel_*; alle mit plantuml -tsvg nach input/images/ gerendert und in beide Sprachfassungen der Fallbeispiel-Seiten eingebunden. Die Platzhalter '(Diagramm folgt.)' sind entfallen.
-2026-08-28T13:19:52Z  INFO   5.6  ig-publisher  start  cmd=`java -Xmx6g -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -jar /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-seltene-erkrankungen/ea25fbf8-c4f3-4c5a-be9a-d2c220301297/scratchpad/publisher.jar -ig ig.ini -tx https://tx.fhir.org/r4`  raw_log=migration-log/ig-publisher.log prev_raw_log=migration-log/ig-publisher.prev.log
-2026-08-28T13:23:27Z  INFO   5.6  ig-publisher  done  cmd=`java -Xmx6g -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -jar /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-seltene-erkrankungen/ea25fbf8-c4f3-4c5a-be9a-d2c220301297/scratchpad/publisher.jar -ig ig.ini -tx https://tx.fhir.org/r4`  exit=0 raw_log=migration-log/ig-publisher.log raw_log_lines=16411
 2026-08-28T13:23:39Z  INFO   11  verify-migration  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/verify-migration.py --target . --source /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-seltene-erkrankungen/ea25fbf8-c4f3-4c5a-be9a-d2c220301297/scratchpad/seltene-source-unmigrated --rendered output --source-lang de --template-latest v0.11.3`  raw_log=migration-log/verify-migration.log prev_raw_log=migration-log/verify-migration.prev.log
 2026-08-28T13:23:39Z  INFO   11  verify-migration  params  target=. source=/private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-seltene-erkrankungen/ea25fbf8-c4f3-4c5a-be9a-d2c220301297/scratchpad/seltene-source-unmigrated guide_tree=ImplementationGuide-2026.x-DE rendered=output log=./migration-log/run.log layers=conservation,fidelity,provenance,rendering,log
 2026-08-28T13:23:42Z  INFO   11  verify-migration  conservation C1  identisch=1 divergiert=0 nicht_pruefbar=0
@@ -1647,115 +1696,66 @@
 2026-08-28T13:23:42Z  INFO   11  verify-migration  conservation C3  identisch=56 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:23:42Z  INFO   11  verify-migration  conservation C4  identisch=6 divergiert=31 nicht_pruefbar=19
 2026-08-28T13:23:42Z  WARN   11  verify-migration  verification-divergence: conservation C4  count=31 subjects=Beispiele-fuer-Seltene-Erkrankungen/Index.page.md, Beschreibung-Modul.page.md, Beschreibung-von-Szenarien-fuer-die-Anwendung-des-Moduls-SE.page.md …
-    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
 2026-08-28T13:23:42Z  WARN   11  verify-migration  not-mechanisable: conservation C4  count=19 subjects=Anwendungsfaelle-Informationsmodell/Index.page.md, Blutgruppe-Observation.page.md, Body-Mass-Index-Observation.page.md …
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:23:42Z  INFO   11  verify-migration  conservation C5  identisch=3 divergiert=0 nicht_pruefbar=1
 2026-08-28T13:23:42Z  WARN   11  verify-migration  not-mechanisable: conservation C5  count=1 subjects=target pages without a source counterpart
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:23:42Z  INFO   11  verify-migration  conservation C6  identisch=41 divergiert=0 nicht_pruefbar=13
 2026-08-28T13:23:42Z  WARN   11  verify-migration  not-mechanisable: conservation C6  count=13 subjects=Beschreibung-Modul.page.md, Beschreibung-von-Szenarien-fuer-die-Anwendung-des-Moduls-SE.page.md, CapabilityStatement.page.md …
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:23:42Z  INFO   11  verify-migration  conservation C7  identisch=0 divergiert=15 nicht_pruefbar=18
 2026-08-28T13:23:42Z  WARN   11  verify-migration  verification-divergence: conservation C7  count=15 subjects=profiles, implementer-guidance, profiles …
-    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
 2026-08-28T13:23:42Z  WARN   11  verify-migration  not-mechanisable: conservation C7  count=18 subjects=Blutgruppe-Observation.page.md, Body-Mass-Index-Observation.page.md, Familienanamnese-FamilyMemberHistory.page.md …
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:23:42Z  INFO   11  verify-migration  fidelity F1  identisch=7 divergiert=1 nicht_pruefbar=1
 2026-08-28T13:23:42Z  WARN   11  verify-migration  verification-divergence: fidelity F1  count=1 subjects=license
-    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
 2026-08-28T13:23:42Z  WARN   11  verify-migration  not-mechanisable: fidelity F1  count=1 subjects=version
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:23:42Z  INFO   11  verify-migration  fidelity F2  identisch=1 divergiert=6 nicht_pruefbar=3
 2026-08-28T13:23:42Z  WARN   11  verify-migration  verification-divergence: fidelity F2  count=6 subjects=de.basisprofil.r4, de.medizininformatikinitiative.kerndatensatz.base, de.medizininformatikinitiative.kerndatensatz.icu …
-    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
 2026-08-28T13:23:42Z  WARN   11  verify-migration  not-mechanisable: fidelity F2  count=3 subjects=hl7.fhir.uv.crmi, hl7.fhir.uv.extensions.r4, hl7.terminology.r4
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:23:42Z  INFO   11  verify-migration  fidelity F3  identisch=1 divergiert=1 nicht_pruefbar=0
 2026-08-28T13:23:42Z  WARN   11  verify-migration  verification-divergence: fidelity F3  count=1 subjects=license
-    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
 2026-08-28T13:23:42Z  INFO   11  verify-migration  fidelity F4  identisch=1 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:23:42Z  INFO   11  verify-migration  provenance P1  identisch=1 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:23:42Z  INFO   11  verify-migration  provenance P2  identisch=1 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:23:42Z  INFO   11  verify-migration  provenance P3  identisch=1 divergiert=0 nicht_pruefbar=1
 2026-08-28T13:23:42Z  WARN   11  verify-migration  not-mechanisable: provenance P3  count=1 subjects=IG Publisher currency
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:23:42Z  INFO   11  verify-migration  provenance P4  identisch=0 divergiert=0 nicht_pruefbar=1
 2026-08-28T13:23:42Z  WARN   11  verify-migration  not-mechanisable: provenance P4  count=1 subjects=source guide version
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:23:42Z  INFO   11  verify-migration  provenance P5  identisch=1 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:23:42Z  INFO   11  verify-migration  rendering R1  identisch=2 divergiert=0 nicht_pruefbar=1
 2026-08-28T13:23:42Z  WARN   11  verify-migration  not-mechanisable: rendering R1  count=1 subjects=source-versus-target rendering
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:23:42Z  INFO   11  verify-migration  rendering R2  identisch=0 divergiert=2 nicht_pruefbar=0
 2026-08-28T13:23:42Z  WARN   11  verify-migration  verification-divergence: rendering R2  count=2 subjects=output/de id="ig-status" [{{], output/en id="ig-status" [{{]
-    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
 2026-08-28T13:23:42Z  INFO   11  verify-migration  rendering R3  identisch=1 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:23:42Z  INFO   11  verify-migration  rendering R4  identisch=0 divergiert=0 nicht_pruefbar=1
 2026-08-28T13:23:42Z  WARN   11  verify-migration  not-mechanisable: rendering R4  count=1 subjects=template example links
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:23:42Z  INFO   11  verify-migration  rendering R5  identisch=1 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:23:42Z  INFO   11  verify-migration  log L0  identisch=1 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:23:42Z  INFO   11  verify-migration  log L1  identisch=1 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:23:42Z  INFO   11  verify-migration  log L2  identisch=19 divergiert=0 nicht_pruefbar=10
 2026-08-28T13:23:42Z  WARN   11  verify-migration  not-mechanisable: log L2  count=10 subjects=2.1 package-identity, 2.1 repo-identity, 5.1c simplifier-discover …
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:23:42Z  INFO   11  verify-migration  log L3  identisch=2 divergiert=0 nicht_pruefbar=0
 2026-08-28T13:23:42Z  INFO   11  verify-migration  log L4  identisch=1 divergiert=0 nicht_pruefbar=2
 2026-08-28T13:23:42Z  WARN   11  verify-migration  not-mechanisable: log L4  count=2 subjects=conversion count, page count
-    NOT a pass. Each names the human action it needs; they belong in the
-    report's decision queue, and the exit status distinguishes them (3).
 2026-08-28T13:23:42Z  WARN   11  verify-migration  result  identisch=151 divergiert=56 nicht_pruefbar=71 findings=./migration-log/verification-findings.tsv markdown=./migration-log/verification.md exit=1
-    exit 1 = at least one DIVERGIERT; exit 3 = none, but verification is INCOMPLETE
-    because a check could not be mechanised. Neither is a pass.
 2026-08-28T13:23:42Z  WARN   11  verify-migration  anticipated-nonzero-exit: Findings sind der Output; C4/C7 sind die triagierte Sprachinversion  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/verify-migration.py --target . --source /private/tmp/claude-501/-Users-thome-code-fhir-profiling-kerndatensatzmodul-seltene-erkrankungen/ea25fbf8-c4f3-4c5a-be9a-d2c220301297/scratchpad/seltene-source-unmigrated --rendered output --source-lang de --template-latest v0.11.3`  exit=1 raw_log=migration-log/verify-migration.log raw_log_lines=78
-    This non-zero status is this step's ANTICIPATED, documented outcome, not a
-    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
-    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
-    report's ① decision queue, named individually (spec §10.3, §10.6).
-2026-08-28T13:24:07Z  INFO   11  verification-summary  Lauf 2 nach den Fixes: identisch=151 divergiert=56 nicht_pruefbar=71 (Lauf 1: 148/66/70). BEHOBEN: C5 7->0 (M9-Seiten geloescht, Fallbeispiel-Menueintraege ergaenzt), L2 3->0 (read-identity/skeleton-vendored/transfer-artefacts nachgetragen). GRUEN: C1/C2 Artefakt-Konservierung+Erreichbarkeit, C3 Seiten-Abdeckung 56/56 gegen page-map.tsv, P1-P5 Provenienz vollstaendig (inkl. P5 id-vs-slug), R3/R4/R5 Sprachparitaet, L0/L1/L3/L4 Log. VERBLEIBENDE 56 DIVERGIERT vollstaendig triagiert: 31 C4 + 15 C7 = Sprachinversion (Gegenmessung 95,7% Textlauf-Erhalt in der DE-Fassung, siehe verification-triage-c4c7), 6 F2 = Registry-Pins (Gate A), 2 R2 = searchform-Template-Artefakt (auch in Onko/Bildgebung), 1 F1 + 1 F3 = nicht deklarierte Lizenz (Gate A). Kein unerklaerter Befund.
 2026-08-28T13:24:07Z  INFO   7  postflight-analysis  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/postflight-analysis.json`  raw_log=migration-log/postflight-analysis.log prev_raw_log=migration-log/postflight-analysis.prev.log
+2026-08-28T13:24:07Z  INFO   11  verification-summary  Lauf 2 nach den Fixes: identisch=151 divergiert=56 nicht_pruefbar=71 (Lauf 1: 148/66/70). BEHOBEN: C5 7->0 (M9-Seiten geloescht, Fallbeispiel-Menueintraege ergaenzt), L2 3->0 (read-identity/skeleton-vendored/transfer-artefacts nachgetragen). GRUEN: C1/C2 Artefakt-Konservierung+Erreichbarkeit, C3 Seiten-Abdeckung 56/56 gegen page-map.tsv, P1-P5 Provenienz vollstaendig (inkl. P5 id-vs-slug), R3/R4/R5 Sprachparitaet, L0/L1/L3/L4 Log. VERBLEIBENDE 56 DIVERGIERT vollstaendig triagiert: 31 C4 + 15 C7 = Sprachinversion (Gegenmessung 95,7% Textlauf-Erhalt in der DE-Fassung, siehe verification-triage-c4c7), 6 F2 = Registry-Pins (Gate A), 2 R2 = searchform-Template-Artefakt (auch in Onko/Bildgebung), 1 F1 + 1 F3 = nicht deklarierte Lizenz (Gate A). Kein unerklaerter Befund.
 2026-08-28T13:24:08Z  INFO   7  postflight-analysis  done  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/postflight-analysis.json`  exit=0 raw_log=migration-log/postflight-analysis.log raw_log_lines=1
 2026-08-28T13:24:08Z  INFO   7  prepost-delta  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/prepost-delta.py --pre migration-log/preflight-analysis.json --post migration-log/postflight-analysis.json --out migration-log/prepost-delta.md --tsv migration-log/prepost-delta.tsv`  raw_log=migration-log/prepost-delta.log prev_raw_log=migration-log/prepost-delta.prev.log
 2026-08-28T13:24:08Z  INFO   7  prepost-delta  params  pre=migration-log/preflight-analysis.json post=migration-log/postflight-analysis.json out=migration-log/prepost-delta.md tsv=migration-log/prepost-delta.tsv
 2026-08-28T13:24:08Z  ERROR  7  prepost-delta  delta-regression: identity.version  pre=2026.0.1 post=2027.0.0-ballot
-    why: machine-identity field changed -- the migrated package is no longer the same package
 2026-08-28T13:24:08Z  INFO   7  prepost-delta  result  rows=33 unchanged=27 improved=1 expected-change=4 regression=1 not-measurable=0 out=migration-log/prepost-delta.md tsv=migration-log/prepost-delta.tsv exit=1
 2026-08-28T13:24:08Z  WARN   7  prepost-delta  prepost-delta: 1 regression(s) -- a property of the module got WORSE between the pre- and post-measurement.
-    Every regression above names its property and both values.
-    The reports were still written: they are the artefact, not the verdict.
 2026-08-28T13:24:08Z  WARN   7  prepost-delta  anticipated-nonzero-exit: einzige REGRESSION = bewusste Zielversion  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/prepost-delta.py --pre migration-log/preflight-analysis.json --post migration-log/postflight-analysis.json --out migration-log/prepost-delta.md --tsv migration-log/prepost-delta.tsv`  exit=1 raw_log=migration-log/prepost-delta.log raw_log_lines=7
-    This non-zero status is this step's ANTICIPATED, documented outcome, not a
-    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
-    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
-    report's ① decision queue, named individually (spec §10.3, §10.6).
 2026-08-28T13:24:43Z  INFO   8  qa-checklist  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/qa-checklist.py --target . --out migration-log/qa-checklist.md`  raw_log=migration-log/qa-checklist.log
 2026-08-28T13:24:43Z  ERROR  8  qa-checklist  failed  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/qa-checklist.py --target . --out migration-log/qa-checklist.md`  exit=2 raw_log=migration-log/qa-checklist.log raw_log_lines=4
-    The exit status is preserved and returned -- this step did NOT meet its
-    acceptance criterion. Read migration-log/qa-checklist.log, then either fix and re-run or take it
-    to the report's decision queue (spec §10.3).
 2026-08-28T13:24:43Z  INFO   8  comparison-table  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/comparison-table.py --target . --out migration-log/comparison-table.md --rendered-source https://simplifier.net/guide/mii-ig-seltene-erkrankungen-v2026-de --rendered-target https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen/branches/migration/2026.0.1-template-v0.11.3`  raw_log=migration-log/comparison-table.log
 2026-08-28T13:24:43Z  ERROR  8  comparison-table  failed  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/comparison-table.py --target . --out migration-log/comparison-table.md --rendered-source https://simplifier.net/guide/mii-ig-seltene-erkrankungen-v2026-de --rendered-target https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen/branches/migration/2026.0.1-template-v0.11.3`  exit=2 raw_log=migration-log/comparison-table.log raw_log_lines=7
-    The exit status is preserved and returned -- this step did NOT meet its
-    acceptance criterion. Read migration-log/comparison-table.log, then either fix and re-run or take it
-    to the report's decision queue (spec §10.3).
 2026-08-28T13:24:53Z  INFO   8  qa-checklist  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/qa-checklist.py --log-dir migration-log --out migration-log/qa-checklist.md`  raw_log=migration-log/qa-checklist.log prev_raw_log=migration-log/qa-checklist.prev.log
 2026-08-28T13:24:53Z  INFO   8  qa-checklist  done  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/qa-checklist.py --log-dir migration-log --out migration-log/qa-checklist.md`  exit=0 raw_log=migration-log/qa-checklist.log raw_log_lines=1
 2026-08-28T13:24:53Z  INFO   8  comparison-table  start  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/comparison-table.py --log-dir migration-log --map migration-log/page-map.tsv --preview-url https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen/branches/migration/2026.0.1-template-v0.11.3 --source-guide-url https://simplifier.net/guide/mii-ig-seltene-erkrankungen-v2026-de --source-repo-url https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen --out migration-log/comparison-table.md`  raw_log=migration-log/comparison-table.log prev_raw_log=migration-log/comparison-table.prev.log
 2026-08-28T13:24:54Z  INFO   8  comparison-table  done  cmd=`python3 /Users/thome/code/fhir-profiling/kerndatensatzmodul-onkologie/.claude/skills/mii-ig-migration/scripts/comparison-table.py --log-dir migration-log --map migration-log/page-map.tsv --preview-url https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen/branches/migration/2026.0.1-template-v0.11.3 --source-guide-url https://simplifier.net/guide/mii-ig-seltene-erkrankungen-v2026-de --source-repo-url https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen --out migration-log/comparison-table.md`  exit=0 raw_log=migration-log/comparison-table.log raw_log_lines=1
-2026-08-28T13:29:05Z  INFO   9  pages-config  Repo-Settings geprueft und ergaenzt: Pages build_type=workflow, var PAGES_ACTIONS_ENABLED=true, Environments github-pages+publication, gh-pages-Branch vorhanden — alles bereits aus der frueheren basis-style Migration da und exakt das, was der Template-Workflow im Modus 'true' braucht. ERGAENZT: deployment-branch-policy 'migration/*' im github-pages-Environment (vorher NUR 'dev' erlaubt -> der Deploy-Job des Migrations-Branches waere an der Environment-Protection gescheitert, der im Skill dokumentierte Stolperstein). Scoped, KEIN Blanket-Allow.
 2026-08-28T13:29:05Z  INFO   8  report  migration-log/migration-report.md geschrieben (aus references/migration-report-template.md); qa-checklist.md (53 Checkboxen, 4 Gates) und comparison-table.md (56 Map-Zeilen) generiert und verlinkt, nicht abgetippt
+2026-08-28T13:29:05Z  INFO   9  pages-config  Repo-Settings geprueft und ergaenzt: Pages build_type=workflow, var PAGES_ACTIONS_ENABLED=true, Environments github-pages+publication, gh-pages-Branch vorhanden — alles bereits aus der frueheren basis-style Migration da und exakt das, was der Template-Workflow im Modus 'true' braucht. ERGAENZT: deployment-branch-policy 'migration/*' im github-pages-Environment (vorher NUR 'dev' erlaubt -> der Deploy-Job des Migrations-Branches waere an der Environment-Protection gescheitert, der im Skill dokumentierte Stolperstein). Scoped, KEIN Blanket-Allow.
 2026-08-28T13:29:50Z  INFO   9  pull-request  PR #44 eroeffnet: https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/pull/44 — base=dev (Repo-Konvention: alle gemergten PRs ausser dem Release-PR #29 basieren auf dev; dev ist zugleich der Default-Branch). Body = Report bis einschliesslich QA-Triage (21k), Voll-Report im Branch verlinkt. NICHT publiziert (Guardrail 4). Erwartete Preview-URL nach gruenem Build: https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen/branches/migration/2026.0.1-template-v0.11.3/
 2026-08-28T13:32:16Z  INFO   9  ci-triage  PR-CI Lauf 1: convention-check FAIL mit 4 Befunden, sync-ig-template FAIL, security-scan+sync-skills PASS. BEHOBEN: M10 (6 Template-Starterseiten EN+DE trugen eine erste Ueberschrift, die den Seitentitel wiederholt — der Publisher rendert den Titel selbst; entfernt) und M11 (der EN-Kommentarkopf von security-and-privacy.md nannte noch den ILLUSTRATIVE-EXAMPLE-Marker, die DE-Fassung nicht -> der Check las das als 'en=marked, de=unmarked'; Kopf an den tatsaechlichen Zustand angepasst: Box entfernt, modulspezifische Aspekte geschrieben und derived-markiert). Ausserdem behoben: 18 IG-Publisher-Laufzeit-Caches (.index.db/.index.json) waren beim Vendoring mit eingecheckt worden und liessen sync-ig-template gegen den Upstream divergieren — aus dem Index entfernt und in .gitignore aufgenommen. VERBLEIBEND als ①-Queue-Konflikte (Quelle gewinnt, NICHT normalisiert): M3 name=MIIIGModulSelteneErkrankungen entspricht nicht dem Muster MII_IG_<Name>, M6 version=2027.0.0-ballot ist kein reines CalVer (identischer Befund im Modul Bildgebung, dort DEC-13); sync-ig-template vergleicht zusaetzlich gegen ig-template-mii-kds@dev (Paket 1.3.3) waehrend wir das Release v0.11.3 (Paket 1.3.2) gepinnt vendorieren — ein bewegliches Ziel gegen einen bewussten Pin, ebenfalls ①
 2026-08-28T13:35:51Z  INFO   9  ci-triage  PR-CI Lauf 2: M10+M11 jetzt PASS, sync-ig-template auf die reine Versionsdifferenz reduziert. NEUER Befund und behoben: der additive .gitignore-Merge beim Vendoring hatte die Template-Zeile 'fsh-generated/' uebernommen — dieses Modul COMMITTET seine SUSHI-Ausgabe aber (162 getrackte Dateien), und der .NET-Job von validation.yml versucht sie auf PRs zurueckzucommitten und scheitert hart an der Ignore-Regel ('The following paths are ignored by one of your .gitignore files: fsh-generated'). Zeile entfernt, Begruendung im .gitignore dokumentiert; Quelle gewinnt, und die Schwestermodule Onkologie (632 getrackte Dateien) und Bildgebung (73) tracken fsh-generated ebenfalls. VERBLEIBEN als ①: convention-check M3 (name-Muster) + M6 (CalVer) und sync-ig-template (Pin 1.3.2 vs bewegliches @dev 1.3.3 — systemisch, Onkologie zeigt heute denselben Fehlschlag)
@@ -1765,3 +1765,5 @@
 2026-08-28T13:50:07Z  INFO   10  log-committed  BEFUND UND FIX: migration-log/run.log war durch die Template-Regel '*.log' in .gitignore ausgeschlossen und lag damit NICHT im Branch — obwohl der Skill es ausdruecklich als 'append-only, committed with the branch' fordert, der Report es als Beweismittel zitiert und Schritt 7b es als zweites Orakel zurueckliest. Reviewer haetten auf ein Protokoll verwiesen bekommen, das im PR nicht existiert. Negativ-Ausnahme '!migration-log/run.log' ergaenzt (die per-Schritt-Rohlogs bleiben ignoriert, sie werden bei jedem Lauf neu geschrieben). Die Schwestermodule Onkologie und Bildgebung tracken ihr run.log ebenfalls.
 2026-08-31T00:00:00Z  INFO   11  gate-a-decided  GATE A ① / A-1 ENTSCHIEDEN durch den Modulverantwortlichen: license = CC-BY-4.0. Die Migration hatte das Feld bewusst leer gelassen (Guardrail: das Template-Default CC-BY-4.0 NICHT stillschweigend uebernehmen, weil eine Quelle ohne Lizenzangabe sonst versehentlich relizenziert wird). Die Entscheidung faellt nun auf denselben Wert, aber als Entscheidung und nicht als Default — und sie deckt sich mit der bereits gelebten Artefakt-Ebene (LicenseCodeableCCBY40 in input/fsh/rulesets/license-terms.fsh) sowie mit dem Index-Seiten-Statement zur freien Nachnutzung. sushi-config.yaml: license: CC-BY-4.0 gesetzt, Begruendungskommentar ersetzt. migration-report.md: A-1 auf DECIDED, Identitaetstabelle und F1/F3-Zeile nachgezogen. SUSHI 0 Errors / 0 Warnings; generierte ImplementationGuide-Ressource traegt license CC-BY-4.0. Damit bleiben in der ①-Queue A-2 bis A-13 offen.
 2026-08-31T00:10:00Z  INFO   12  qa-fixes  QA-FIXES auf Branch fix/slicing-penetranz-evidenz (Basis: Migrationsbranch). (1) Issue #31 mii-vs-seltene-penetrance: drei von vier HPO-Codes falsch, gegen ontology.jax.org mit Label UND Definition geprueft — HP:0025169 ist 'Left ventricular systolic dysfunction' und wurde als 'Complete penetrance' publiziert (ersetzt durch HP:0034950), HP:0003828 ist 'Variable expressivity' nicht Penetranz (entfaellt, Abstufung uebernehmen HP:4000158/59/60), HP:0003829 hatte veraltetes Display. HP:0003831 bleibt: Label spricht von Onset, die HPO-Definition nennt aber ausdruecklich altersabhaengige Penetranz. Hierarchie-Hinweis dokumentiert: die abgestuften Terme sind Kinder von 'incomplete', keine Geschwister von 'complete'. (2) Issue #25 Blutgruppe: Discriminator #pattern/$this -> #value/system; Ursache war, dass '.system = ...' ein patternUri auf dem Kindelement erzeugt und kein patternCoding auf dem Coding, waehrend code.coding in derselben Datei per Ganz-Coding-Zuweisung ein echtes patternCoding bekommt und deshalb validiert. (3) SWEEP-BEFUND, in keinem Issue: dieselbe Klasse bei category in mii-pr-seltene-therapieempfehlung und -nicht-medikamentoes; beide Slices wurden nur ueber required-Bindings auf verschiedene ValueSets unterschieden, was in R4 kein zulaessiger Discriminator ist (value|exists|pattern|type|profile, kein binding) — coding.system je Slice festgenagelt. Der Sweep lief gegen die Snapshots des publizierten 2026.0.1-Pakets, weil der lokale SUSHI-Output keine Snapshots erzeugt; 29 Profile geprueft, 37 Extension-Slices korrekt als Fehlalarm verworfen (URL liegt legitim im type.profile), 8 echte Befunde in 4 Profilen. (4) Extension mii-ex-seltene-empfehlung-evidenzgraduierung entfernt (Entscheid Modulverantwortlicher) samt drei Verwendungen; Begruendung im Changelog beider Sprachen. SUSHI 0 Errors / 0 Warnings, Extensions 11 -> 10.
+2026-09-01T02:00:00Z  INFO   15  termserv-secrets  BEFUND UND FIX: Die CI hat SU-TermServ nie erreicht. Die vier Workflows (ig-publisher, go-publish, module-release, validation) lasen ausschliesslich die Repo-Secrets SU_TERMSERV_CLIENT_CERT/_KEY/_PASSWORD, die MII hinterlegt das Client-Zertifikat aber zentral als Org-Secrets CDS_DEV_CLIENT_CERT/_KEY/_CERT_PASSWORD. Belegt am Build 33398625719: '::notice No SU-TermServ client certificate configured - falling back to the public HL7 terminology server https://tx.fhir.org'. Zweiter, groesserer Effekt in validation.yml: der Guard java-validation-guard prueft dieselben leeren Secrets und setzt has_cert=false, wodurch der HL7-Java-Validator KOMPLETT UEBERSPRUNGEN wurde - stillschweigend, als 'skipped', nicht als Fehler. Beleg fuer die Namenskonvention: von 13 Schwestermodulen nutzen kerndatensatz-basis, -kardiologie, -meta, proms und proms-subsettest CDS_DEV_*, Onkologie und GenetischeTests lesen BEIDE, Senologie/Therapieziele nutzen noch MII_TERMSERV_*. Der Kommentar in der eigenen validation.yml sagt es sogar ausdruecklich: 'If your organisation already provisions CDS_DEV_CLIENT_* centrally, replace this block with secrets: inherit'. FIX auf Vorschlag des Nutzers per Actions-Expression statt per Bash-Aufloesung (wie Onkologie es macht): secrets.SU_TERMSERV_X || secrets.CDS_DEV_X direkt im env-Block, dadurch bleiben alle Variablennamen und die gesamte Bash-Logik darunter unveraendert und der Diff minimal. Reihenfolge nach Nutzervorgabe: Repo-Secret gewinnt, Org-Secret als Rueckfall. ACHTUNG Asymmetrie: das Passwort heisst auf Org-Seite CDS_DEV_CLIENT_CERT_PASSWORD, nicht _PASSWORD. Alle 12 Workflows nach dem Patch als YAML geparst, keine verbleibende SU_TERMSERV-Referenz ohne Rueckfall.
+2026-09-01T02:30:00Z  INFO   16  java-validator-unblocked  BELEG UND FOLGEBEFUND zum Secret-Fix. Der erste Lauf nach dem Patch (Run 33556445849) zeigt: der Guard findet das Zertifikat jetzt (has_cert=true), der Java-Validator wird NICHT MEHR UEBERSPRUNGEN, der nginx-Proxy baut die mTLS-Verbindung auf und SU-TermServ antwortet — im Log steht die CapabilityStatement von https://ontoserver.mii-termserv.de/fhir/metadata (Ontoserver 6.25.3.1788145813800, 'MII Service Unit Terminological Services'). Der Secret-Fix ist damit end-to-end bewiesen, nicht nur plausibel. Der Job schlaegt aber weiterhin fehl, aus einer ZWEITEN, unabhaengigen Ursache: der wiederverwendete Workflow ci_java_validation.yml liest die IG-Abhaengigkeiten NICHT aus sushi-config.yaml, sondern per jq aus package.json — und dort standen noch die floating Pins der Quelle. Logzeile: 'IG_DEPENDENCIES: -ig de.basisprofil.r4#1.5.x -ig ...meta#2026.0.x -ig ...molgen#2026.0.x'. '#1.5.x' ist keine aufloesbare Paketversion, der Validator bricht mit exit 1 ab und erzeugt weder validation.json noch txlog.html; der nachgelagerte Renderer scheitert dann an ENOENT './validation.json'. Die Migration hatte die Pins nur in sushi-config.yaml aufgeloest (A-3), package.json blieb unberuehrt — die Divergenz fiel nie auf, WEIL der Validator uebersprungen wurde. Zwei Fehler haben sich gegenseitig verdeckt. FIX: package.json dependencies aus sushi-config.yaml synchronisiert (sieben Quell-Pins aufgeloest, drei Template-Dependencies crmi/terminology/extensions ergaenzt). NICHT ANGEFASST, weil Identitaetsfelder und damit Gate A: package.json version steht auf 2026.0.1 gegen 2027.0.0-ballot im IG, und description beschreibt woertlich das alte Patch-Release samt Simplifier-Release-Notes-Link. Beides gehoert in die A-Queue.
