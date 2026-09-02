@@ -41,7 +41,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "SyndromeCategoryVS",
   "title" : "Syndrome Category Value Set",
   "status" : "active",
-  "date" : "2026-09-02T17:52:03+00:00",
+  "date" : "2026-09-02T18:22:51+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -76,7 +76,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       "system" : "http://snomed.info/sct",
       "concept" : [{
         "code" : "32895009",
-        "display" : "Genetic disorder"
+        "display" : "Hereditary disease"
       },
       {
         "code" : "75934005",
@@ -91,11 +91,11 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
         "display" : "Congenital malformation"
       },
       {
-        "code" : "371097004",
+        "code" : "5294002",
         "display" : "Developmental disorder"
       },
       {
-        "code" : "254829008",
+        "code" : "362975008",
         "display" : "Degenerative disorder"
       }]
     }]
