@@ -46,4 +46,17 @@ Anders als damals muss dafür **keine neue Extension geprägt werden**: `individ
 
 Damit erben alle Module, die auf den Basisprofilen aufsetzen, den Datenpunkt — einschließlich Person und SE — ohne dass ein Modul in die Zuständigkeit eines anderen hineinprofiliert.
 
+**Der Anwendungsort in der MII ist ebenfalls schon vorhanden, und das Muster dort ebenfalls.** Das Paket `de.medizininformatikinitiative.kerndatensatz.base` liefert `mii-pr-person-patient` (Canonical `.../core/modul-person/StructureDefinition/Patient`) — und dieses Profil wendet die Basisprofil-Extension bereits genau so an, wie hier vorgeschlagen: es slict `Patient.gender.extension` und bindet den Slice `other-amtlich` an `gender-amtlich-de`. Die Arbeitsteilung — Basisprofile definieren die Extension, das MII-Patient-Profil wendet sie als benannten Slice an — ist also nicht neu zu erfinden, sondern gelebte Praxis.
+
+Für das Geburtsgeschlecht sähe der Slice analog aus, mit einem Unterschied: `gender-amtlich-de` hat `context = Patient.gender` und verfeinert damit das Gender-Element, während `individual-recordedSexOrGender` `context = Patient` hat und deshalb auf `Patient.extension` sitzt. Skizze:
+
+```
+* extension contains
+    $individual-recordedSexOrGender named geburtsgeschlecht 0..1 MS
+* extension[geburtsgeschlecht].extension[type].valueCodeableConcept = $LNC#76689-9
+* extension[geburtsgeschlecht].extension[value].valueCodeableConcept from <nationales VS> (required)
+```
+
+Der `type`-Slice ist dabei nicht Zierde: `individual-recordedSexOrGender` ist wiederholbar und trägt verschiedene Arten erfassten Geschlechts, `type` grenzt den Geburtsgeschlecht-Eintrag von den übrigen ab.
+
 **Konsequenz im Modul SE:** Der Datenpunkt wurde dort testweise als eigenständige Observation modelliert und nach dieser Abwägung wieder entfernt. Das Modul SE führt ihn nicht. Die übrigen JARDIN-Punkte aus derselben Gegenüberstellung (prä-/perinatale Angaben, ICF, Registerteilnahme) sind im Modul SE umgesetzt, weil sie dort inhaltlich hingehören.
