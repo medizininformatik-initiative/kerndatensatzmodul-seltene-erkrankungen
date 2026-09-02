@@ -5,34 +5,41 @@ Auf dieser Seite werden die Unterschiede zwischen den Versionen nachgehalten, be
 
 ## Version 2027.0.0-ballot
 
+### Neue Funktionen
+
+- `feat` **JARDIN-Datenpunkte** aus der Gegenüberstellung des europäischen Minimaldatensatzes mit dem Modul (Issues #35, #36, #38). Alle drei sind konkrete Datenbedarfe eines europäischen Referenznetzwerks, keiner davon ist auf seltene Erkrankungen beschränkt — die Profile sagen das im Kopfkommentar auch selbst
+  - `feat` prä-/perinatale Angaben: `mii-pr-seltene-gestationsalter`, `mii-pr-seltene-geburtsgewicht`, `mii-pr-seltene-geburtslaenge`. Kein angebundenes MII-Modul deckte sie ab; Mehrlingsschwangerschaften und pränatal diagnostizierte Fehlbildungen wurden bewusst **nicht** profiliert, weil `Patient.multipleBirth[x]` und die bestehenden Condition-Profile mit HPO-Onset das leisten
+  - `feat` `mii-pr-seltene-icf-assessment` mit CodeSystem und ValueSets für die Beurteilungsmerkmale. Die WHO-Qualifier liegen in `component`, nicht in `value[x]`, weil ihre Zahl je ICF-Kapitel verschieden ist — Körperstrukturen tragen drei, Aktivitäten und Partizipation zwei (Leistungsfähigkeit *und* Leistung). Fünf Invarianten erzwingen die Kapitelkohärenz
+  - `feat` `mii-pr-seltene-registerteilnahme` für die Teilnahme an ERN-Registern, abgeleitet von `ResearchSubject`
+- `feat` **Consanguinity** (`mii-pr-seltene-consanguinity`) mit ValueSet — Blutsverwandtschaft der Eltern nach RD-CDM v2.0.0 §6.4.4 (Issue #37)
+- `feat` **Neugeborenenscreening**: sieben ValueSets, davon fünf aus der LOINC-SNOMED-Ontologie per ECL abgeleitet, eines kuratiert nach G-BA-Kinder-Richtlinie und eines intensional über die LOINC-Eigenschaft `SYSTEM` (608 Trockenblut-Codes), dazu eine eigene Terminologieseite
+- `feat` Logical Model `mii-lm-seltene` wieder im Build und auf der Datensatzseite vollständig als Tabelle gerendert
+- `feat` 13 neue Beispielinstanzen, angebunden an das bestehende SMA-Fallbeispiel
+
 ### Breaking Changes
 
-- `remove` Extension `mii-ex-seltene-empfehlung-evidenzgraduierung` aus diesem Modul entfernt, samt ihrer Verwendung in den drei Therapieempfehlungs-Profilen. Sie war eine Kopie der Extension aus dem MTB-Modul und von Anfang an unfertig: ihr `system`-Discriminator trug nie einen Wert, wodurch der Pflicht-Slice `Evidenzgrad 1..1` von keiner Instanz erfüllbar war — die Extension wurde in 2026.0.1 publiziert, war aber unbenutzbar, und kein Beispiel hat sie je verwendet. Welche Evidenzskala hier gilt, wird im Ballot-Ticket HDB-543 verhandelt und ist onkologisch geprägt (NCT m1A–m4, ESMO, ASCO); für seltene Erkrankungen wurde die Frage nie beantwortet. Statt eine Tumorskala zu importieren, bleibt das Thema beim MTB-Modul. Die Entfernung dürfte daher keine konforme Implementierung betreffen
+- `remove` Extension `mii-ex-seltene-empfehlung-evidenzgraduierung` entfernt, samt ihrer Verwendung in den drei Therapieempfehlungs-Profilen. Sie war eine Kopie aus dem MTB-Modul, deren `system`-Discriminator nie einen Wert trug — der Pflicht-Slice `Evidenzgrad 1..1` war von keiner Instanz erfüllbar. Publiziert, aber unbenutzbar, und von keinem Beispiel verwendet. Die Skalenfrage verhandelt Ballot-Ticket HDB-543 und ist onkologisch geprägt; für seltene Erkrankungen wurde sie nie beantwortet
+- `change` Elementnamen des Logical Models auf lowerCamelCase. PascalCase verstößt gegen die FHIR-Regel `eld-20` und erzeugte 195 Warnungen. 62 Segmentnamen umbenannt, Akronyme korrekt behandelt (`HPOTerm` → `hpoTerm`, `BMI` → `bmi`), die 90 Mapping-Ziele in 11 Profilen mitgezogen. **Die Elementpfade ändern sich damit**
+- `change` Codes von `mii-pr-seltene-taillenumfang` (LOINC `8280-0` → SNOMED `276361009`) und `mii-pr-seltene-hueftumfang` (LOINC `56063-1` → SNOMED `284472007`). **Abfragen auf die alten Codes greifen nicht mehr**
+- `change` Beispielinstanz `example` umbenannt in `mii-exa-seltene-patient`, profiliert auf `MII_PR_Person_Patient`
 
 ### Fehlerbehebungen
 
-- `fix` ValueSet `mii-vs-seltene-penetrance` korrigiert — drei von vier Codes waren falsch (Issue #31). `HP:0025169`, publiziert als „Complete penetrance", ist tatsächlich *Left ventricular systolic dysfunction* und wird durch `HP:0034950` ersetzt. `HP:0003828`, publiziert als „Variable penetrance", ist *Variable expressivity* — ein anderes Konzept — und entfällt; die Abstufung leisten nun `HP:4000158/59/60` (hoch/mittel/niedrig). `HP:0003829` trug ein veraltetes Display. Alle Codes gegen die HPO-API geprüft. Zu beachten: die abgestuften Terme sind Untertypen der *unvollständigen* Penetranz, nicht Alternativen zur vollständigen
-- `fix` Slicing-Discriminator auf `mii-pr-seltene-blutgruppe` `value[x].coding` von `#pattern`/`$this` auf `#value`/`system` umgestellt (Issue #25). Die Slices unterscheiden sich nur durch ihr Codesystem und setzen dafür `.system` — das erzeugt ein `patternUri` auf dem Kindelement statt eines `patternCoding` auf dem Coding selbst, sodass der Discriminator ins Leere zeigte
-- `fix` derselbe Defekt bei `category` in `mii-pr-seltene-therapieempfehlung` und `mii-pr-seltene-therapieempfehlung-nicht-medikamentoes` behoben (durch eine Prüfung gefunden, vorher nicht gemeldet). Beide Slices wurden ausschließlich über ein required-Binding auf verschiedene ValueSets unterschieden, was kein FHIR-R4-Discriminator auswerten kann; `coding.system` ist nun je Slice festgelegt
-
-### Breaking Changes (Fortsetzung)
-
-- `change` Elementnamen des Logical Models `mii-lm-seltene` auf lowerCamelCase umgestellt. Das Modell verwendete durchgehend PascalCase (`Seltene.AnamneseUndDiagnostik.Untersuchungsdatum`), was gegen die FHIR-Regel `eld-20` verstößt — jedes Pfadsegment nach dem ersten muss klein beginnen — und nach der Reaktivierung 195 Warnungen erzeugte. 62 Segmentnamen umbenannt, Akronyme korrekt behandelt (`HPOTerm` → `hpoTerm`, `BMI` → `bmi`, `StudienID` → `studienID`), die 90 Mapping-Ziele in 11 Profilen mitgezogen. **Die Elementpfade ändern sich damit**; das ist ein Bruch am Modell, für eine neue Major-Linie bewusst in Kauf genommen
-- `change` Beispielinstanz `example` umbenannt in `mii-exa-seltene-patient` und auf `MII_PR_Person_Patient` aus dem Base-Modul profiliert. Ein generisches `example` ist als publizierte Instanz-ID nicht tragfähig und folgte nicht der Konvention `mii-exa-seltene-*`
-- `remove` Code von `mii-pr-seltene-taillenumfang` von LOINC `8280-0` auf SNOMED `276361009 |Waist circumference|` geändert, `mii-pr-seltene-hueftumfang` von LOINC `56063-1` auf SNOMED `284472007 |Hip circumference|`. **Abfragen auf die alten Codes greifen nicht mehr**
-
-### Fehlerbehebungen (Fortsetzung)
-
-- `fix` **das Taillenumfang-Profil trug den Code des Bauchumfangs.** LOINC bietet den Taillenumfang ausschließlich auf Nabelhöhe an (`8280-0`, `8281-8`) — das ist die Landmarke des Bauchumfangs, nicht der Taille, die an der schmalsten Stelle beziehungsweise am Mittelpunkt zwischen unterster Rippe und Beckenkamm definiert ist. Das Profil sagte damit etwas anderes, als es hieß. SNOMED trennt beides; verwendet wird nun der generische `276361009`, damit sich das Profil auf keine Messvorschrift festlegt, `1162535003` und `1162536002` bleiben für die landmarkengenaue Angabe verfügbar. Das ist relevant, weil das Modul ein Taille-Hüfte-Verhältnis führt: mit dem Bauchumfang als Zähler ergibt sich ein anderer, größerer Wert und damit ein falsches Verhältnis
-- `fix` das Logical Model hat ein Element `taillenumfang` erhalten. Es kannte nur `bauchumfang`, wodurch das Taillenumfang-Profil auf den Bauchumfang mappte — dieselbe Verwechslung eine Ebene tiefer
-- `fix` Logical Model `mii-lm-seltene` reaktiviert. Es lag als `disabled/mii-lm-seltene.fsh.disabled` und baut fehlerfrei; sein Canonical ist das Ziel des Mappings, das jedes Profil trägt, womit 22 unauflösbare Links verschwinden
-- `fix` 31 Mapping-Ziele zeigten auf nicht existierende Elemente (`Messbefunde.*` für `koerperlicheUntersuchung`, `Patient` für `persoenlicheInfosIndexpatient`), und die Ziele für `valueQuantity.value` und `effectiveDateTime` zeigten auf das BackboneElement statt auf Wert oder Datum. Alle 102 Mapping-Ziele lösen jetzt auf
-- `fix` das Logical Model hat `familienanamnese.todDurchSE` und `familienanamnese.dokumentationsdatum` erhalten. Beide Datenpunkte führt das Familienanamnese-Profil, das Modell kannte sie nicht
+- `fix` **das Taillenumfang-Profil trug den Code des Bauchumfangs.** LOINC bietet den Taillenumfang ausschließlich auf Nabelhöhe an (`8280-0`, `8281-8`) — die Landmarke des Bauchumfangs, nicht der Taille, die an der schmalsten Stelle beziehungsweise am Mittelpunkt zwischen unterster Rippe und Beckenkamm definiert ist. Das Profil sagte damit etwas anderes, als es hieß. SNOMED trennt beides; `1162535003` und `1162536002` bleiben für die landmarkengenaue Angabe verfügbar. Relevant, weil das Modul ein Taille-Hüfte-Verhältnis führt: mit dem Bauchumfang als Zähler ergibt sich ein falsches Verhältnis
+- `fix` das Logical Model hat ein `taillenumfang` erhalten. Es kannte nur `bauchumfang`, wodurch das Taillenumfang-Profil auf den Bauchumfang mappte
+- `fix` das (auskommentierte) Profil `mii-pr-seltene-waist-to-hip-ratio` trug mit LOINC `8280-0` einen doppelt falschen Code — den Umfang statt des Verhältnisses, und denselben wie das Taillenumfang-Profil. Korrigiert auf SNOMED `248367009 |Waist/hip ratio|`. Das Profil ist weiterhin inaktiv; dass ausgerechnet das Verhältnis auskommentiert ist, erklärt, warum die Verwechslung so lange unauffällig blieb
+- `fix` ValueSet `mii-vs-seltene-penetrance` korrigiert — drei von vier Codes waren falsch (Issue #31). `HP:0025169`, publiziert als „Complete penetrance", ist *Left ventricular systolic dysfunction*; `HP:0003828`, publiziert als „Variable penetrance", ist *Variable expressivity*. Alle Codes gegen die HPO-API geprüft. Zu beachten: die abgestuften Terme sind Untertypen der *unvollständigen* Penetranz
+- `fix` Slicing-Discriminatoren auf `mii-pr-seltene-blutgruppe` sowie auf `category` in beiden Therapieempfehlungs-Profilen. Die Slices unterschieden sich nur durch `.system` beziehungsweise ein required-Binding — beides kann der jeweils gesetzte Discriminator nicht auswerten
+- `fix` Logical Model reaktiviert; sein Canonical ist das Ziel des Mappings jedes Profils, womit 22 unauflösbare Links verschwinden
+- `fix` 31 Mapping-Ziele zeigten auf nicht existierende Elemente, und die Ziele für `valueQuantity.value` und `effectiveDateTime` auf das BackboneElement statt auf Wert oder Datum. Alle 102 lösen jetzt auf
+- `fix` das Logical Model hat `familienanamnese.todDurchSE` und `familienanamnese.dokumentationsdatum` erhalten — beide Datenpunkte führt das Familienanamnese-Profil, das Modell kannte sie nicht
 - `fix` fünf Verweise auf `Patient/example-patient`, eine nie definierte Instanz
 
 ### Dokumentation
 
-- `docs` die Datensatzseite rendert das Logical Model jetzt vollständig als Tabelle (71 Datenelemente, beide Sprachbäume), erzeugt aus dem publizierten Snapshot durch `scripts/generate-lm-table.py`
+- `docs` der Leitfaden zu klinischer und genetischer Diagnose zeigt statt FSH-Blöcken drei Diagramme (Strukturvergleich, Parallelmodell, Entscheidungsbaum). Der bisherige `plantuml`-Block wurde nie gerendert und war zudem syntaktisch defekt; der englischen Fassung fehlte der Entscheidungsbaum ganz
+- `docs` die Datensatzseite rendert das Logical Model als Tabelle mit 71 Datenelementen, erzeugt durch `scripts/generate-lm-table.py`
+- `docs` neue Seite zum Neugeborenenscreening
 
 ### Governance
 
