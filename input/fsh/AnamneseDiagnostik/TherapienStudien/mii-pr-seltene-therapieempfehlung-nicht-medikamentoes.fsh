@@ -27,8 +27,16 @@ Description: "Therapieempfehlung für nicht-medikamentöse Interventionen bei se
 
 // Category slice for therapy strategy type (specific for Modellvorhaben GenomSeq)
 * category 1..* MS
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this"
+// Discriminator auf #value/coding.system statt #pattern/$this (Sweep-Befund, in
+// keinem Issue gemeldet). Die beiden Slices unterschieden sich bisher AUSSCHLIESSLICH
+// durch ihr required-Binding auf zwei verschiedene ValueSets — und ein Binding ist in
+// FHIR R4 kein auswertbares Unterscheidungsmerkmal: die zulaessigen Discriminator-Typen
+// sind value, exists, pattern, type und profile, kein binding. Beide Slices sind
+// CodeableConcept ohne Pattern, der Validator kann eine Instanz also keinem von beiden
+// zuordnen. Da die beiden ValueSets aus zwei getrennten CodeSystems ziehen, genuegt es,
+// coding.system je Slice festzunageln.
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "coding.system"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Slice für Therapiestrategie-Kategorisierung aus Modellvorhaben GenomSeq"
 * category contains
@@ -40,6 +48,7 @@ Description: "Therapieempfehlung für nicht-medikamentöse Interventionen bei se
 * category[MVGenomSeqTherapieStrategie] ^comment = "Dieses Feld ist spezifisch für die Integration mit Modellvorhaben GenomSeq. Es ermöglicht die Kategorisierung gemäß RareDiseasesPlan.recommendedTherapies.strategy. Nur für nicht-medikamentöse Strategien: prophylactic, early-detection, nutrition, other."
 * category[MVGenomSeqTherapieStrategie].coding 1..1
 * category[MVGenomSeqTherapieStrategie].coding.system 1..
+* category[MVGenomSeqTherapieStrategie].coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"
 * category[MVGenomSeqTherapieStrategie].coding.code 1..
 * category[MVGenomSeqTherapieTyp] from MII_VS_Seltene_TherapieempfehlungTyp (required)
 * category[MVGenomSeqTherapieTyp] ^short = "Modellvorhaben GenomSeq Therapietyp (Kausal/Symptomatisch)"
@@ -47,6 +56,7 @@ Description: "Therapieempfehlung für nicht-medikamentöse Interventionen bei se
 * category[MVGenomSeqTherapieTyp] ^comment = "Dieses Feld ermöglicht die Unterscheidung, ob die Therapie die zugrundeliegende Ursache der Erkrankung adressiert (kausal) oder Symptome und Manifestationen behandelt (symptomatisch). Entspricht RareDiseasesPlan.recommendedTherapies.therapyType aus MV GenomSeq."
 * category[MVGenomSeqTherapieTyp].coding 1..1
 * category[MVGenomSeqTherapieTyp].coding.system 1..
+* category[MVGenomSeqTherapieTyp].coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ"
 * category[MVGenomSeqTherapieTyp].coding.code 1..
 
 // Code for the specific service being requested
@@ -108,9 +118,16 @@ Description: "Therapieempfehlung für nicht-medikamentöse Interventionen bei se
 * note ^short = "Zusätzliche Anmerkungen zur Therapieempfehlung"
 
 // Extensions from MV GenomSeq alignment
+// Die Extension MII_EX_Seltene_Empfehlung_Evidenzgraduierung wurde hier entfernt
+// (Modulverantwortlicher, 2026-08-31; GitHub-Issues #25/#27, Ballot-Ticket HDB-543).
+// Sie war eine Kopie der MTB-Fassung und seit ihrer ersten Fassung unfertig: der
+// system-Discriminator hatte nie einen Wert, wodurch der Pflicht-Slice Evidenzgrad 1..1
+// von keiner Instanz erfuellbar war — die Extension war publiziert, aber unbenutzbar.
+// Die offene Frage, welche Skala hier gilt, gehoert zu HDB-543 und ist onkologisch
+// gepraegt (NCT m1A-m4, ESMO, ASCO); fuer dieses Modul war sie nie beantwortet.
+// Statt eine Tumorskala zu importieren, faellt der Punkt hier weg und bleibt bei MTB.
 * extension contains
     MII_EX_Seltene_Empfehlung_Prioritaet named Prioritaet 0..1 MS and
-    MII_EX_Seltene_Empfehlung_Evidenzgraduierung named Evidenzgraduierung 0..1 MS and
     MII_EX_Seltene_Empfehlung_Publikation named Publikation 0..* MS
 
 // Example Instance for Early Detection Program

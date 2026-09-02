@@ -920,14 +920,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung"
-        },
-        "name": "MII EX SE Empfehlung Evidenzgraduierung",
-        "description": "Evidenzgraduierung der (einzelnen) Empfehlung",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/mii-ex-seltene-empfehlung-prioritaet"
         },
         "name": "MII EX SE Empfehlung Priorität",
@@ -1163,7 +1155,7 @@
           "reference": "ValueSet/mii-vs-seltene-penetrance"
         },
         "name": "MII VS SE Penetrance",
-        "description": "Value set for qualitative descriptions of genetic penetrance",
+        "description": "Value set for qualitative descriptions of genetic penetrance, drawn from the HPO branch Inheritance qualifier (HP:0034335). Note that the graded terms (high/moderate/low penetrance) are subtypes of incomplete penetrance, not alternatives to complete penetrance.",
         "exampleBoolean": false
       },
       {

@@ -57,22 +57,6 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.extension:Evidenzgraduierung",
-        "path": "MedicationRequest.extension",
-        "sliceName": "Evidenzgraduierung",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "MedicationRequest.extension:Publikation",
         "path": "MedicationRequest.extension",
         "sliceName": "Publikation",
@@ -107,8 +91,8 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
-              "path": "$this"
+              "type": "value",
+              "path": "coding.system"
             }
           ],
           "rules": "open",
@@ -140,7 +124,8 @@
       {
         "id": "MedicationRequest.category:MVGenomSeqTherapieStrategie.coding.system",
         "path": "MedicationRequest.category.coding.system",
-        "min": 1
+        "min": 1,
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"
       },
       {
         "id": "MedicationRequest.category:MVGenomSeqTherapieStrategie.coding.code",
@@ -171,7 +156,8 @@
       {
         "id": "MedicationRequest.category:MVGenomSeqTherapieTyp.coding.system",
         "path": "MedicationRequest.category.coding.system",
-        "min": 1
+        "min": 1,
+        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ"
       },
       {
         "id": "MedicationRequest.category:MVGenomSeqTherapieTyp.coding.code",
