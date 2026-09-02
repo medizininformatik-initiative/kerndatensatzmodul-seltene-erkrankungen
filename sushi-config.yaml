@@ -136,7 +136,8 @@ dependencies:
   # (2026.0.x / 1.5.x) sind auf die am 2026-08-28 aufgelösten Registry-Stände
   # gepinnt, weil Template-CI (convention-check) floating Versionen ablehnt —
   # Auflösung geloggt in migration-log/run.log 2.1) ──────────────────────────
-  de.basisprofil.r4: 1.6.0 # war 1.5.4 (Nutzerentscheid 2026-09-02; keine 2027er Linie, 1.6.0 ist der aktuelle Stand)
+  # war 1.5.4 (Nutzerentscheid 2026-09-02; keine 2027er Linie, 1.6.0 ist der aktuelle Stand)
+  de.basisprofil.r4: 1.6.0
   # 2027er Ballot-RCs, VORLAEUFIG (Gate A ① / A-3, Nutzerentscheid 2026-09-02):
   # Die MII harmonisiert derzeit 20+ Packages auf die 2027er Linie, das geschieht
   # in mehreren Schritten. Diese beiden Pins ziehen mit, sobald hoehere RCs oder
@@ -148,12 +149,18 @@ dependencies:
   # die package.json traegt weder Datum noch Titel, und dist-tags.latest steht auf
   # 2026.0.2, also nicht einmal auf dem neuesten 2026er Stand. molgen und medikation
   # haben noch keine 2027er Linie, sie folgen laut Modulverantwortlichem in Kuerze.
-  de.medizininformatikinitiative.kerndatensatz.meta: 2027.0.0-ballot.rc3 # war 2026.0.0
-  de.medizininformatikinitiative.kerndatensatz.molgen: 2026.0.4 # Quelle: 2026.0.x
-  de.medizininformatikinitiative.kerndatensatz.icu: 2026.0.3 # Quelle: 2026.0.x
-  de.medizininformatikinitiative.kerndatensatz.studie: 2027.0.0-ballot.rc1 # war 2026.0.2
-  de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot.rc1 # war 2026.0.1
-  de.medizininformatikinitiative.kerndatensatz.medikation: 2026.0.1 # Quelle: 2026.0.x
+  # war 2026.0.0
+  de.medizininformatikinitiative.kerndatensatz.meta: 2027.0.0-ballot.rc3
+  # Quelle: 2026.0.x
+  de.medizininformatikinitiative.kerndatensatz.molgen: 2026.0.4
+  # Quelle: 2026.0.x
+  de.medizininformatikinitiative.kerndatensatz.icu: 2026.0.3
+  # war 2026.0.2
+  de.medizininformatikinitiative.kerndatensatz.studie: 2027.0.0-ballot.rc1
+  # war 2026.0.1
+  de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot.rc1
+  # Quelle: 2026.0.x
+  de.medizininformatikinitiative.kerndatensatz.medikation: 2026.0.1
   # ── Template-Maschinerie (Gate A dokumentiert, Skill Schritt 3) ────────────
   # CRMI — verlangt von den meta.profile-Claims oben.
   hl7.fhir.uv.crmi: 2.0.0
