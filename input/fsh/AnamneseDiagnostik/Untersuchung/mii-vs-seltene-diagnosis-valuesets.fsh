@@ -48,18 +48,29 @@ Description: "Value set containing HPO terms for age of onset of diseases"
 * insert Publisher
 * ^status = #active
 * include codes from system http://human-phenotype-ontology.org where concept is-a #HP:0003674 "Onset"
-// Common age of onset codes
+// KORRIGIERT 2026-09-02. Vier Codes waren systematisch verschoben — geprueft
+// gegen die HPO-API (ontology.jax.org), jeder Code einzeln:
+//   HP:0003596 stand als "Neonatal onset" und bedeutet MIDDLE AGE ONSET.
+//              In einem Modul fuer seltene Erkrankungen ist das die Umkehrung
+//              der Aussage. Neonatal onset ist HP:0003623.
+//   HP:0025708 stand als "Middle age onset" und ist Early young adult onset.
+//   HP:0034198 stand als "Fetal onset" und ist Second trimester onset.
+//              Fetal onset ist HP:0011461.
+//   HP:0034199 stand als "Embryonal onset" und ist Late first trimester onset.
+//              Embryonal onset ist HP:0011460.
+// Die uebrigen sieben Codes wurden bestaetigt.
+* http://human-phenotype-ontology.org#HP:0011460 "Embryonal onset"
+* http://human-phenotype-ontology.org#HP:0011461 "Fetal onset"
 * http://human-phenotype-ontology.org#HP:0003577 "Congenital onset"
+* http://human-phenotype-ontology.org#HP:0003623 "Neonatal onset"
 * http://human-phenotype-ontology.org#HP:0003593 "Infantile onset"
 * http://human-phenotype-ontology.org#HP:0011463 "Childhood onset"
 * http://human-phenotype-ontology.org#HP:0003621 "Juvenile onset"
-* http://human-phenotype-ontology.org#HP:0003581 "Adult onset"
-* http://human-phenotype-ontology.org#HP:0003584 "Late onset"
 * http://human-phenotype-ontology.org#HP:0011462 "Young adult onset"
-* http://human-phenotype-ontology.org#HP:0025708 "Middle age onset"
-* http://human-phenotype-ontology.org#HP:0003596 "Neonatal onset"
-* http://human-phenotype-ontology.org#HP:0034198 "Fetal onset"
-* http://human-phenotype-ontology.org#HP:0034199 "Embryonal onset"
+* http://human-phenotype-ontology.org#HP:0025708 "Early young adult onset"
+* http://human-phenotype-ontology.org#HP:0003581 "Adult onset"
+* http://human-phenotype-ontology.org#HP:0003596 "Middle age onset"
+* http://human-phenotype-ontology.org#HP:0003584 "Late onset"
 
 // HPO Inheritance Pattern Value Set
 ValueSet: HPOInheritancePatternValueSet
@@ -78,23 +89,40 @@ Description: "Value set containing HPO terms for modes of inheritance"
 * http://human-phenotype-ontology.org#HP:0001419 "X-linked recessive inheritance"
 * http://human-phenotype-ontology.org#HP:0001423 "X-linked dominant inheritance"
 * http://human-phenotype-ontology.org#HP:0001427 "Mitochondrial inheritance"
-* http://human-phenotype-ontology.org#HP:0001428 "Somatic mutation"
+// HP:0001428 heisst "Typified by somatic mosaicism", nicht "Somatic mutation".
+* http://human-phenotype-ontology.org#HP:0001428 "Typified by somatic mosaicism"
 * http://human-phenotype-ontology.org#HP:0003745 "Sporadic"
-* http://human-phenotype-ontology.org#HP:0010983 "Oligogenic"
-* http://human-phenotype-ontology.org#HP:0010982 "Polygenic"
-* http://human-phenotype-ontology.org#HP:0001426 "Multifactorial inheritance"
+* http://human-phenotype-ontology.org#HP:0010983 "Oligogenic inheritance"
+* http://human-phenotype-ontology.org#HP:0010982 "Polygenic inheritance"
+// HP:0001426 heisst "Non-Mendelian inheritance"; ein HPO-Konzept "Multifactorial
+// inheritance" gibt es nicht, der naechstliegende Begriff ist HP:0010982.
+* http://human-phenotype-ontology.org#HP:0001426 "Non-Mendelian inheritance"
 * http://human-phenotype-ontology.org#HP:0012275 "Autosomal dominant inheritance with maternal imprinting"
 * http://human-phenotype-ontology.org#HP:0012274 "Autosomal dominant inheritance with paternal imprinting"
 
-// Genetic Basis Value Set
+// RETIRED 2026-09-02. Von neun Codes war EINER richtig (409709004 Chromosomal
+// disorder). Geprueft per CodeSystem/$lookup auf tx.fhir.org:
+//   264530000       stand als "Single gene disorder"  -> Hereditary disease
+//   16402000        stand als "Mitochondrial disorder" -> SICKLE CELL TRAIT
+//   268298002       "Polygenic disorder"               -> existiert nicht
+//   429962007       stand als "copy number variation"  -> Family history of hereditary disease
+//   718211000119104 "trinucleotide repeat expansion"   -> existiert nicht
+//   416010008       stand als "uniparental disomy"     -> HYPOSPADIAS
+//   429252008       "genomic imprinting"               -> existiert nicht
+//   363235000       stand als "Multifactorial disorder"-> Hereditary disorder of nervous system
+// Das ist nicht reparabel, sondern neu zu bauen: acht Konzepte muessten in
+// SNOMED erst gefunden werden, und fuer mehrere gibt es womoeglich kein
+// Gegenstueck. Die Extension, die es band (mii-ex-seltene-genetic-basis), wurde
+// am selben Tag entfernt, weil sie nie an ein Profil angeschlossen war.
+// Nicht geloescht, sondern retired: die URL ist seit 2026.0.1 publiziert.
 ValueSet: GeneticBasisValueSet
 Id: mii-vs-seltene-genetic-basis
-Title: "MII VS SE Genetic Basis"
-Description: "Value set for types of genetic basis of rare diseases"
+Title: "MII VS SE Genetic Basis (retired)"
+Description: "RETIRED. Nicht verwenden. Acht der neun enthaltenen SNOMED-Codes bezeichnen etwas anderes als ihr Display behauptet oder existieren nicht; das ValueSet muss neu erstellt werden."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-genetic-basis"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #active
+* ^status = #retired
 * $SCT#409709004 "Chromosomal disorder"
 * $SCT#264530000 "Single gene disorder"
 * $SCT#16402000 "Mitochondrial disorder"

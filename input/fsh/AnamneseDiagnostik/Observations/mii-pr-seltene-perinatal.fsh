@@ -24,7 +24,7 @@
 //     gehören in die bestehenden Condition-Profile dieses Moduls. Der pränatale
 //     Zeitbezug wird über Condition.onset[x] ausgedrückt; für den Beginn "vor
 //     der Geburt" bietet die HPO-Onset-Achse dieses Moduls bereits
-//     HP:0034198 |Fetal onset| und HP:0034199 |Embryonal onset|
+//     HP:0011461 |Fetal onset| und HP:0011460 |Embryonal onset|
 //     (siehe mii-vs-seltene-hpo-age-of-onset).
 //
 // Alle LOINC-Codes am 2026-09-01 per CodeSystem/$lookup auf tx.fhir.org
