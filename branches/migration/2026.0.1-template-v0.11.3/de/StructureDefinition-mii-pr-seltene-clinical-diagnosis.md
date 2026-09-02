@@ -215,7 +215,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_ClinicalDiagnosis",
   "title" : "MII PR SE Clinical Diagnosis",
   "status" : "active",
-  "date" : "2026-09-02T17:07:58+00:00",
+  "date" : "2026-09-02T17:34:23+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -313,11 +313,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "id" : "Condition.category",
       "path" : "Condition.category",
       "min" : 1,
-      "mustSupport" : true,
-      "binding" : {
-        "strength" : "extensible",
-        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category"
-      }
+      "mustSupport" : true
     },
     {
       "id" : "Condition.severity",

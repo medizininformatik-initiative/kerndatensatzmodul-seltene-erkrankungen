@@ -83,7 +83,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hu
   "name" : "MII_PR_Seltene_Hueftumfang",
   "title" : "MII PR SE Hüftumfang",
   "status" : "active",
-  "date" : "2026-09-02T17:07:58+00:00",
+  "date" : "2026-09-02T17:34:23+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -2714,8 +2714,8 @@
       "reference" : {
         "reference" : "ValueSet/mii-vs-seltene-clinical-diagnosis-category"
       },
-      "name" : "MII VS SE Clinical Diagnosis Category",
-      "description" : "Value set for categorizing clinical diagnoses of rare diseases",
+      "name" : "MII VS SE Clinical Diagnosis Category (retired)",
+      "description" : "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code.",
       "exampleBoolean" : false
     },
     {

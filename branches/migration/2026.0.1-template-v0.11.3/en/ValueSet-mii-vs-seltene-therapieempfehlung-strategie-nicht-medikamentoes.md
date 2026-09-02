@@ -41,7 +41,7 @@ ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profi
   "name" : "MII_VS_Seltene_TherapieempfehlungStrategieNichtMedikamentoes",
   "title" : "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
   "status" : "active",
-  "date" : "2026-09-02T17:07:58+00:00",
+  "date" : "2026-09-02T17:34:23+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

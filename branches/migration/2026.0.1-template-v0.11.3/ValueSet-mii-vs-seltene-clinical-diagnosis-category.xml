@@ -8,9 +8,9 @@
   <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category"/>
   <version value="2027.0.0-ballot"/>
   <name value="ClinicalDiagnosisCategoryVS"/>
-  <title value="MII VS SE Clinical Diagnosis Category"/>
-  <status value="active"/>
-  <date value="2026-09-02T17:07:58+00:00"/>
+  <title value="MII VS SE Clinical Diagnosis Category (retired)"/>
+  <status value="retired"/>
+  <date value="2026-09-02T17:34:23+00:00"/>
   <publisher value="Medizininformatik Initiative">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
@@ -28,7 +28,7 @@
       <value value="https://www.medizininformatik-initiative.de/"/>
     </telecom>
   </contact>
-  <description value="Value set for categorizing clinical diagnoses of rare diseases"/>
+  <description value="RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

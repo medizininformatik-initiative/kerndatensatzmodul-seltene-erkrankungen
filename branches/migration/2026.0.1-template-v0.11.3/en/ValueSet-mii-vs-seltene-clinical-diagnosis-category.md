@@ -1,28 +1,30 @@
-# MII VS SE Clinical Diagnosis Category - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# MII VS SE Clinical Diagnosis Category (retired) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **MII VS SE Clinical Diagnosis Category**
+* **MII VS SE Clinical Diagnosis Category (retired)**
 
-## ValueSet: MII VS SE Clinical Diagnosis Category 
+## ValueSet: MII VS SE Clinical Diagnosis Category (retired) 
 
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-02 | *Computable Name*:ClinicalDiagnosisCategoryVS |
+| Retired as of 2026-09-02 | *Computable Name*:ClinicalDiagnosisCategoryVS |
 
  
-Value set for categorizing clinical diagnoses of rare diseases 
+RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code. 
 
  **References** 
 
-* [MII PR SE Clinical Diagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md)
+This value set is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
 
 ### Logical Definition (CLD)
 
  
 
 ### Expansion
+
+Expansions are not generated for retired value sets
 
 -------
 
@@ -39,9 +41,9 @@ Value set for categorizing clinical diagnoses of rare diseases
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category",
   "version" : "2027.0.0-ballot",
   "name" : "ClinicalDiagnosisCategoryVS",
-  "title" : "MII VS SE Clinical Diagnosis Category",
-  "status" : "active",
-  "date" : "2026-09-02T17:07:58+00:00",
+  "title" : "MII VS SE Clinical Diagnosis Category (retired)",
+  "status" : "retired",
+  "date" : "2026-09-02T17:34:23+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -63,7 +65,7 @@ Value set for categorizing clinical diagnoses of rare diseases
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Value set for categorizing clinical diagnoses of rare diseases",
+  "description" : "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -79,7 +79,7 @@ These define sets of codes used by systems conforming to this implementation gui
 | [ HPO Phenotypic Observation Codes  ](ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.md) | Human Phenotype Ontology codes for phenotypic observations |
 | [ HPO Severity  ](ValueSet-mii-vs-seltene-hpo-severity.md) | HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Phenomics IG component pattern. |
 | [ MII VS SE Blutgruppe  ](ValueSet-mii-vs-seltene-blutgruppe.md) | ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List für 882-1 |
-| [ MII VS SE Clinical Diagnosis Category  ](ValueSet-mii-vs-seltene-clinical-diagnosis-category.md) | Value set for categorizing clinical diagnoses of rare diseases |
+| [ MII VS SE Clinical Diagnosis Category (retired)  ](ValueSet-mii-vs-seltene-clinical-diagnosis-category.md) | RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code. |
 | [ MII VS SE Empfehlung Status Begründung  ](ValueSet-mii-vs-seltene-empfehlung-status-begruendung.md) | ValueSet für Begründung bei fehlender Empfehlung |
 | [ MII VS SE Genetic Basis  ](ValueSet-mii-vs-seltene-genetic-basis.md) | Value set for types of genetic basis of rare diseases |
 | [ MII VS SE HPO Age of Onset  ](ValueSet-mii-vs-seltene-hpo-age-of-onset.md) | Value set containing HPO terms for age of onset of diseases |

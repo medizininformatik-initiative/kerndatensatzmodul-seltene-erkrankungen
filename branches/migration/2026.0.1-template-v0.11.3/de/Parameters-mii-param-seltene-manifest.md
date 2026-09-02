@@ -534,10 +534,6 @@
     "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate|5.3.0"
   },
   {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category|2027.0.0-ballot"
-  },
-  {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://fhir.de/StructureDefinition/CodingICD10GM|1.6.0"
   },
