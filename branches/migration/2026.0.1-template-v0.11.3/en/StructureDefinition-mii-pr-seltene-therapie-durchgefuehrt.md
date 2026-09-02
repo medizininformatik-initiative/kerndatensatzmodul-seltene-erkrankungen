@@ -110,7 +110,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
   "name" : "MII_PR_Seltene_TherapieDurchgefuehrt",
   "title" : "MII PR Seltene Erkrankungen Therapie Durchgeführt",
   "status" : "active",
-  "date" : "2026-09-02T06:41:45+00:00",
+  "date" : "2026-09-02T06:59:28+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
