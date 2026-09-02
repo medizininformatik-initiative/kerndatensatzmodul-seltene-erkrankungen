@@ -24,7 +24,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **code**: Spinale Muskelatrophie Typ 1, genetisch bestätigt
 
-**subject**: [Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-example.md)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **encounter**: [Encounter/genetic-consultation](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/genetic-consultation)
 
@@ -34,7 +34,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 > **evidence****code**: Genetic finding**detail**: [Observation Genetic variant assessment](Observation-molgen-variant-smn1-deletion.md)
 
-> **evidence****code**: Genetic test**detail**: [Diagnostic Report for 'Genetic analysis report' for '->Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'](DiagnosticReport-molgen-diagnostic-implication-sma.md)
+> **evidence****code**: Genetic test**detail**: [Diagnostic Report for 'Genetic analysis report' for '->Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'](DiagnosticReport-molgen-diagnostic-implication-sma.md)
 
 **note**: 
 
@@ -97,7 +97,7 @@ Homozygote Deletion des SMN1-Gens nachgewiesen. 0 Kopien SMN1, 2 Kopien SMN2. Di
     "text" : "Spinale Muskelatrophie Typ 1, genetisch bestätigt"
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "encounter" : {
     "reference" : "Encounter/genetic-consultation"

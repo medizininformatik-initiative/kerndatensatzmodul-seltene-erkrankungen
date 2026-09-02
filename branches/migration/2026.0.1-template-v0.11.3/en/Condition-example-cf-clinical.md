@@ -24,7 +24,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **code**: Cystic fibrosis
 
-**subject**: [Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-example.md)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **recordedDate**: 2024-08-10
 
@@ -88,7 +88,7 @@ Schweißtest positiv (Chlorid 85 mmol/l). Klinisches Bild vereinbar mit CF. Gene
     }]
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "recordedDate" : "2024-08-10",
   "evidence" : [{

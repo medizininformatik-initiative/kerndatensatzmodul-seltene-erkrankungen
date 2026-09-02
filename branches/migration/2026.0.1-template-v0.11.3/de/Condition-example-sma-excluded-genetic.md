@@ -24,7 +24,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **code**: Spinale Muskelatrophie (genetisch ausgeschlossen)
 
-**subject**: [Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-example.md)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **abatement**: 2024-07-26
 
@@ -32,7 +32,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 > **evidence****code**: Genetic finding**detail**: [Observation Genetic variant assessment](Observation-molgen-smn1-normal-copies.md)
 
-> **evidence****code**: Genetic test**detail**: [Diagnostic Report for 'Genetic analysis report' for '->Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'](DiagnosticReport-molgen-sma-negative.md)
+> **evidence****code**: Genetic test**detail**: [Diagnostic Report for 'Genetic analysis report' for '->Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'](DiagnosticReport-molgen-sma-negative.md)
 
 **note**: 
 
@@ -84,7 +84,7 @@ SMN1-Gen: 2 Kopien nachgewiesen (Normalbefund). SMN2-Gen: 2 Kopien. SMA genetisc
     "text" : "Spinale Muskelatrophie (genetisch ausgeschlossen)"
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "abatementDateTime" : "2024-07-26",
   "recordedDate" : "2024-07-26",

@@ -24,13 +24,13 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **code**: Cystic fibrosis
 
-**subject**: [Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-example.md)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **recordedDate**: 2024-08-25
 
 > **evidence****code**: Genetic finding**detail**: [Observation Genetic variant assessment](Observation-molgen-variant-cftr-f508del-homozygous.md)
 
-> **evidence****code**: Genetic test**detail**: [Diagnostic Report for 'Genetic analysis report' for '->Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'](DiagnosticReport-molgen-cf-diagnostic.md)
+> **evidence****code**: Genetic test**detail**: [Diagnostic Report for 'Genetic analysis report' for '->Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'](DiagnosticReport-molgen-cf-diagnostic.md)
 
 **note**: 
 
@@ -92,7 +92,7 @@ Homozygot für F508del (c.1521_1523delCTT) im CFTR-Gen. Schwerer Phänotyp zu er
     }]
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "recordedDate" : "2024-08-25",
   "evidence" : [{

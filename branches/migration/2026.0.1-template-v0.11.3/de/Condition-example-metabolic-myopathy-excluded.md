@@ -24,7 +24,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **code**: Metabolische Myopathie (ausgeschlossen)
 
-**subject**: [Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-example.md)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **abatement**: 2024-10-01
 
@@ -89,7 +89,7 @@ Metabolische Myopathie ausgeschlossen. Laktat in Ruhe und unter Belastung normwe
     "text" : "Metabolische Myopathie (ausgeschlossen)"
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "abatementDateTime" : "2024-10-01",
   "recordedDate" : "2024-10-01",

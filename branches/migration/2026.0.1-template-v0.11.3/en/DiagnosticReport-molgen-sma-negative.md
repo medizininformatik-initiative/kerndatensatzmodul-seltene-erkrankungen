@@ -16,7 +16,7 @@
 
 | | |
 | :--- | :--- |
-| Subject | Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345) |
+| Subject | Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345) |
 | Relevant Time | 2024-07-26 |
 
 **Report Details**
@@ -56,7 +56,7 @@ SMN1-Gen: 2 Kopien (Normalbefund). SMN2-Gen: 2 Kopien. Spinale Muskelatrophie au
     }]
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "effectiveDateTime" : "2024-07-26",
   "result" : [{

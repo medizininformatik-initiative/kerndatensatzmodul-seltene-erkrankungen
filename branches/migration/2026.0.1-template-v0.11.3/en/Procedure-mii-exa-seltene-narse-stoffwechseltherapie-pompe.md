@@ -18,7 +18,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **code**: Stoffwechseltherapie
 
-**subject**: [Pompe Patient](Patient-example.md)
+**subject**: [Pompe Patient](Patient-mii-exa-seltene-patient.md)
 
 **performed**: 2024-01-15 --> (ongoing)
 
@@ -42,7 +42,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
     }]
   },
   "subject" : {
-    "reference" : "Patient/example",
+    "reference" : "Patient/mii-exa-seltene-patient",
     "display" : "Pompe Patient"
   },
   "performedPeriod" : {

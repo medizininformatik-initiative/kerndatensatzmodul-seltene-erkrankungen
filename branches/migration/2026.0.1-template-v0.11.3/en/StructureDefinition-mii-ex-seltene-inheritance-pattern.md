@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-in
   "name" : "InheritancePattern",
   "title" : "MII EX SE Inheritance Pattern",
   "status" : "active",
-  "date" : "2026-09-02T06:59:28+00:00",
+  "date" : "2026-09-02T09:29:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -18,7 +18,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **code**: Arachnodactyly
 
-**subject**: [Patient/example-patient](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-patient)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **effective**: 2024-01-15
 
@@ -56,7 +56,7 @@ Arachnodactyly explicitly excluded during clinical examination. Arm span/height 
     }]
   },
   "subject" : {
-    "reference" : "Patient/example-patient"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "effectiveDateTime" : "2024-01-15",
   "note" : [{

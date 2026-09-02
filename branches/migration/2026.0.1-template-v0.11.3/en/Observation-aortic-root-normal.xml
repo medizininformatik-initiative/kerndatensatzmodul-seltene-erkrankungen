@@ -4,7 +4,7 @@
   <id value="aortic-root-normal"/>
   <language value="en"/>
   <text>
-    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation aortic-root-normal</b></p><a name="aortic-root-normal"> </a><a name="hcaortic-root-normal"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category imaging}">Imaging</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 78176-5}">Aorta root Diameter by US 2D</span></p><p><b>subject</b>: <a href="Patient-example.html">Max Mustermann  Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>effective</b>: 2024-12-15</p><p><b>value</b>: 32 mm<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm = 'mm')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style="display: none">*</td><td>29 mm</td><td>37 mm</td></tr></table></div>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation aortic-root-normal</b></p><a name="aortic-root-normal"> </a><a name="hcaortic-root-normal"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category imaging}">Imaging</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 78176-5}">Aorta root Diameter by US 2D</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient.html">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>effective</b>: 2024-12-15</p><p><b>value</b>: 32 mm<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm = 'mm')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style="display: none">*</td><td>29 mm</td><td>37 mm</td></tr></table></div>
   </text>
   <status value="final"/>
   <category>
@@ -21,7 +21,7 @@
     </coding>
   </code>
   <subject>
-    <reference value="Patient/example"/>
+    <reference value="Patient/mii-exa-seltene-patient"/>
   </subject>
   <effectiveDateTime value="2024-12-15"/>
   <valueQuantity>

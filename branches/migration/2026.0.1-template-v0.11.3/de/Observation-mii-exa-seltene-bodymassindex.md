@@ -20,7 +20,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **code**: Body mass index (BMI) [Ratio]
 
-**subject**: [Example Patient](Patient-example.md)
+**subject**: [Example Patient](Patient-mii-exa-seltene-patient.md)
 
 **effective**: 2024-08-08 10:00:00+0200
 
@@ -53,7 +53,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
     }]
   },
   "subject" : {
-    "reference" : "Patient/example",
+    "reference" : "Patient/mii-exa-seltene-patient",
     "display" : "Example Patient"
   },
   "effectiveDateTime" : "2024-08-08T10:00:00+02:00",

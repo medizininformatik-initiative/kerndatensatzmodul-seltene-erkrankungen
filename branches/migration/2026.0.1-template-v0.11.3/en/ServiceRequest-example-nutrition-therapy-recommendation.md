@@ -24,7 +24,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **code**: Phenylalaninreduzierte Diät bei Phenylketonurie
 
-**subject**: [Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-example.md)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **occurrence**: 2024-01-01 --> (ongoing)
 
@@ -74,7 +74,7 @@ Lebenslange phenylalaninarme Diät erforderlich, regelmäßige Kontrolle der Phe
     "text" : "Phenylalaninreduzierte Diät bei Phenylketonurie"
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "occurrencePeriod" : {
     "start" : "2024-01-01"

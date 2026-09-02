@@ -338,12 +338,88 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <!-- TODO:REVIEW machine translation of source page datasets.md (de) — Migration 2026-08-28, page-map.tsv -->
 <p>Note that the logical model aims purely at representing the data elements and their descriptions. The data types and cardinalities used are not to be regarded as binding; these are conclusively defined by the FHIR profiles. For every element within the logical model there is a 1:1 mapping to an element of a concrete FHIR resource.</p>
 
-<p>The associated logical model can be found in the artifact overview (see <a href="artifacts.html">Artifacts</a>).</p>
+<p>The associated logical model can be found in the artifact overview (see <a href="artifacts.html">Artifacts</a>); its data elements are listed in full below.</p>
 
 <!-- DERIVED:suggestion source=none gate=B -->
 <blockquote class="ig-highlight ig-highlight-blue">
-  <p><strong>Written during migration - review before release.</strong> The module's logical model is currently not part of the build (source: <code class="language-plaintext highlighter-rouge">disabled/mii-lm-seltene.fsh.disabled</code>); the data set description above is authoritative.</p>
+  <p><strong>Written during migration - review before release.</strong> The logical model was reactivated on 2026-09-02 (it had been parked as <code class="language-plaintext highlighter-rouge">disabled/mii-lm-seltene.fsh.disabled</code> and builds without error). It is therefore part of the build again, and the 22 unresolvable mapping links every profile carried are resolved.</p>
 </blockquote>
+
+<!-- BEGIN GENERATED: logical-model-table (scripts/generate-lm-table.py) -->
+<p>The table below is generated from the published logical model (<code class="language-plaintext highlighter-rouge">mii-lm-seltene</code>) and lists every data element with its cardinality, type and description. Indentation reflects nesting.</p>
+
+<p>| Element | Card. | Type | Description |
+| — | — | — | — |
+| <strong>AnamneseUndDiagnostik</strong> | 0..* | BackboneElement | Diagnose |
+|     <strong>Untersuchungsdatum</strong> | 0..1 | date | Datum der durchgeführten Untersuchung eines SE-Patienten. |
+|     <strong>Untersuchungsanlass</strong> | 0..1 | code | Grund fuer den Besuch des SE-Patienten. |
+|     <strong>Phaenotypisierung</strong> | 0..* | BackboneElement | Phaenotypisierung |
+|         <strong>HPOTerm</strong> | 0..* | code | Phaenotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC). |
+|         <strong>HPOExcluded</strong> | 0..1 | boolean | Gibt an, ob das HPO-Merkmal explizit ausgeschlossen wurde (negated finding). Abgeleitet aus valueCodeableConcept: LOINC LA9634-2 'Absent' = true, LA9633-4 'Present' = false. Folgt HL7 Phenomics IG Muster. |
+|         <strong>HPOStatus</strong> | 0..1 | code | Status oder Schweregrad des Phaenotyps (Present/Absent/Severity). |
+|         <strong>HPOVersion</strong> | 0..1 | code | Kennzeichnung der genutzten Version des ausgewaehlten HPO-Terms. |
+|         <strong>ZeitraumSymptom</strong> | 0..* | BackboneElement | Zeitraum des Symptom |
+|             <strong>ZeitraumSymptom</strong> | 0..* | dateTime | Startdatum und bei Bedarf Periode der ersten Symptome/Anzeichen. |
+|             <strong>Lebensphase</strong> | 0..* | code | Lebensphase, in der das Symptom aufgetreten ist. |
+|             <strong>AlterSymptom</strong> | 0..1 | integer | Alter beim Auftreten der ersten Symptome/Anzeichen. |
+|         <strong>VerlaufSymptom</strong> | 0..1 | code | Aenderung des Verlaufs des Symptoms seit der vorherigen Untersuchung. |
+|     <strong>KlinischeDiagnose</strong> | 0..* | BackboneElement | Zeitraum der klinischen SE-Diagnose |
+|         <strong>ZeitpunktKlinischeDia</strong> | 0..1 | code | Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der klinsichen SE-Diagnose. |
+|         <strong>FeststellungsdatumKlinischeDia</strong> | 0..1 | date | Datum, an dem die klinische SE-Diagnose festgestellt wurde. |
+|         <strong>AlterKlinischeDia</strong> | 0..1 | integer | Alter, in dem die klinische SE-Diagnose gestellt wurde. |
+|     <strong>GenetischeDiagnose</strong> | 0..* | BackboneElement | Zeitraum der genetischen SE-Diagnose |
+|         <strong>ZeitpunktGenDia</strong> | 0..1 | code | Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der genetischen SE-Diagnose. |
+|         <strong>FeststellungsdatumGenDia</strong> | 0..1 | date | Datum, an dem die genetische SE-Diagnose festgestellt wurde. |
+|         <strong>AlterGenDia</strong> | 0..1 | integer | Alter, in dem die genetische SE-Diagnose gestellt wurde. |
+|     <strong>GenDiaFehlendePenetranz</strong> | 0..* | code | Gibt an, ob bei einer genetischen Diagnose die Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) fehlt |
+|     <strong>MethodeDiagnosestellung</strong> | 0..* | code | Gibt an, welche Methode zur Diagnosestellung verwendet wurde. |
+| <strong>KoerperlicheUntersuchung</strong> | 0..* | BackboneElement | Körperliche Untersuchung |
+|     <strong>Koerpergewicht</strong> | 0..* | BackboneElement | Körpergewicht |
+|         <strong>Koerpergewicht</strong> | 0..1 | decimal | Körpergewicht des SE-Patienten in kg (aus MII ICU Modul). |
+|         <strong>DatumKoerpergewicht</strong> | 0..1 | dateTime | Datum der Körpergewichtsmessung. |
+|     <strong>Koerpergroesse</strong> | 0..* | BackboneElement | Körpergröße |
+|         <strong>Koerpergroesse</strong> | 0..1 | decimal | Körpergröße des SE-Patienten in cm (aus MII ICU Modul). |
+|         <strong>DatumKoerpergroesse</strong> | 0..1 | dateTime | Datum der Körpergrößenmessung. |
+|     <strong>BMI</strong> | 0..* | BackboneElement | BMI |
+|         <strong>BMI</strong> | 0..1 | decimal | BMI des SE-Patienten. |
+|         <strong>DatumBMI</strong> | 0..1 | dateTime | Datum, an dem der BMI (Body Mass Index) berechnet wurde. |
+|     <strong>Kopfumfang</strong> | 0..* | BackboneElement | Kopfumfang |
+|         <strong>Kopfumfang</strong> | 0..1 | decimal | Kopfumfang des SE-Patienten in cm. |
+|         <strong>DatumKopfumfang</strong> | 0..1 | dateTime | Datum der Kopfumfangsmessung. |
+|     <strong>Bauchumfang</strong> | 0..* | BackboneElement | Bauchumfang |
+|         <strong>Bauchumfang</strong> | 0..1 | decimal | Bauchumfang des SE-Patienten in cm. |
+|         <strong>DatumBauchumfang</strong> | 0..1 | dateTime | Datum der Bauchumfangsmessung. |
+|     <strong>Hueftumfang</strong> | 0..* | BackboneElement | Hüftumfang |
+|         <strong>Hueftumfang</strong> | 0..1 | decimal | Hüftumfang des SE-Patienten in cm. |
+|         <strong>DatumHueftumfang</strong> | 0..1 | dateTime | Datum der Hüftumfangsmessung. |
+|     <strong>Blutgruppe</strong> | 0..1 | code | Blutgruppe des SE-Patienten (AB0 und Rhesusfaktor). |
+| <strong>PersoenlicheInfosIndexpatient</strong> | 0..* | BackboneElement | Persoenliche Informationen des Indexpatienten |
+|     <strong>Tod</strong> | 0..1 | BackboneElement | Tod |
+|         <strong>Sterbedatum</strong> | 0..1 | date | Sterbedatum des Indexpatienten. |
+|         <strong>AnSEVerstorben</strong> | 0..1 | code | Angabe, ob der Indexpatient an der SE verstorben ist. |
+|         <strong>AndereTodesursache</strong> | 0..* | code | Kodierung der Todesursache soweit bekannt (ICD-10-GM, ORPHAcodes). |
+| <strong>Familienanamnese</strong> | 0..* | BackboneElement | Familienanamnese |
+|     <strong>Verwandtschaftsverhaeltnis</strong> | 0..1 | code | Biologisches Verwandtschaftsverhaeltnis des Familienmitglieds zum Indexpatienten. |
+|     <strong>Geschlecht</strong> | 0..1 | code | Geschlecht des Familienmitglieds. |
+|     <strong>GleicheSE</strong> | 0..* | code | Gibt an, ob das Familienmitglied an der gleichen SE leidet wie der Indexpatient. |
+|     <strong>AndereSE</strong> | 0..* | code | Gibt an, ob das Familienmitglied an einer anderen SE leidet als der Indexpatient. |
+|     <strong>Penetranz</strong> | 0..1 | code | Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) die genetische Diagnose vorliegt. |
+|     <strong>FamilienmitgliedVerstorben</strong> | 0..1 | code | Gibt an, ob das Familienmitglied verstorben ist. |
+| <strong>TherapieForschung</strong> | 0..* | BackboneElement | Therapie und Forschung |
+|     <strong>OffLabel</strong> | 0..* | BackboneElement | Off-Label-Gabe |
+|         <strong>OffLabelGabe</strong> | 0..1 | code | Gibt an, ob eine Off-Label-Gabe vorliegt. |
+|         <strong>OffLabelMedikament</strong> | 0..* | code | Gibt an, welches Medikament Off-Label gegeben wurde. |
+|     <strong>Studie</strong> | 0..* | BackboneElement | Studie |
+|         <strong>StudienID</strong> | 0..1 | Identifier | Eindeutige Identifikation der Studie, an der der SE-Patient teilgenommen hat. |
+|         <strong>StudienStatus</strong> | 0..1 | code | Aktueller Status der Studie, an der der SE-Patient teilgenommen hat (Abgeschlossen, Fortlaufend). |
+|         <strong>Studienzeitraum</strong> | 0..1 | Extension | Zeitraum, in dem der SE-Patient an der Studie teilgenommen hat. |
+|     <strong>Therapie</strong> | 0..* | BackboneElement | Therapie |
+|         <strong>Therapieempfehlung</strong> | 0..* | code | Gibt an, welche Therapieempfehlung vorliegt. |
+|         <strong>DurchgefuehrteTherapie</strong> | 0..* | code | Tatsaechlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention). |
+|         <strong>StartdatumTherapie</strong> | 0..1 | date | Datum, an dem die Therapie begonnen hat. |
+|         <strong>EnddatumTherapie</strong> | 0..1 | date | Datum, an dem die Therapie beendet wurde. |
+|         <strong>GrundEndeTherapie</strong> | 0..* | code | Gibt an, warum die Therapie beendet wurde (z.B. Nebenwirkungen, keine Wirkung). |
+<!-- END GENERATED: logical-model-table --></p>
 
 
 
@@ -370,7 +446,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 2, 2026 06:59+0000">2026-09-02</span>
+          Generated <span title="Wed, Sep 2, 2026 09:29+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

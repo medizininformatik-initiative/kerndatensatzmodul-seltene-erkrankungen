@@ -16,7 +16,7 @@
 
 | | |
 | :--- | :--- |
-| Subject | Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345) |
+| Subject | Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345) |
 | Relevant Time | 2024-11-01 |
 
 **Report Details**
@@ -55,7 +55,7 @@ Pathogene Variante c.68_69del (p.Glu23Valfs*17) in BRCA1 nachgewiesen. Diese Fra
     }]
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "effectiveDateTime" : "2024-11-01",
   "result" : [{

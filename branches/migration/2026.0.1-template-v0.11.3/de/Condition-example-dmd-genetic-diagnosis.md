@@ -24,13 +24,13 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **code**: Duchenne-Muskeldystrophie
 
-**subject**: [Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-example.md)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **recordedDate**: 2024-09-15
 
 > **evidence****code**: Genetic finding**detail**: [Observation Genetic variant assessment](Observation-molgen-variant-dmd-deletion-exon45-47.md)
 
-> **evidence****code**: Genetic test**detail**: [Diagnostic Report for 'Genetic analysis report' for '->Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'](DiagnosticReport-molgen-diagnostic-dmd.md)
+> **evidence****code**: Genetic test**detail**: [Diagnostic Report for 'Genetic analysis report' for '->Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'](DiagnosticReport-molgen-diagnostic-dmd.md)
 
 **note**: 
 
@@ -93,7 +93,7 @@ Deletion der Exons 45-47 im DMD-Gen nachgewiesen. Out-of-frame Deletion führt z
     "text" : "Duchenne-Muskeldystrophie"
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "recordedDate" : "2024-09-15",
   "evidence" : [{

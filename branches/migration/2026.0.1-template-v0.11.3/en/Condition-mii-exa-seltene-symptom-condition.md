@@ -26,7 +26,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **bodySite**: Skeletal muscle
 
-**subject**: [Example Patient](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-patient)
+**subject**: [Example Patient](Patient-mii-exa-seltene-patient.md)
 
 **onset**: 15 years (Details: UCUM codea = 'a')
 
@@ -103,7 +103,7 @@ Patient reports progressive muscle weakness affecting daily activities, particul
     "text" : "Skeletal muscle"
   }],
   "subject" : {
-    "reference" : "Patient/example-patient",
+    "reference" : "Patient/mii-exa-seltene-patient",
     "display" : "Example Patient"
   },
   "onsetAge" : {

@@ -24,7 +24,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **code**: Mukoviszidose (ausgeschlossen)
 
-**subject**: [Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-example.md)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **abatement**: 2024-08-25
 
@@ -93,7 +93,7 @@ Heterozygoter Anlageträger für F508del. Zweite Mutation ausgeschlossen. IRT-Er
     "text" : "Mukoviszidose (ausgeschlossen)"
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "abatementDateTime" : "2024-08-25",
   "recordedDate" : "2024-08-25",

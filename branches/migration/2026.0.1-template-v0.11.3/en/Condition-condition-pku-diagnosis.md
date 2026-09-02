@@ -22,7 +22,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **code**: Phenylketonurie
 
-**subject**: [Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-example.md)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **recordedDate**: 2024-01-01
 
@@ -90,7 +90,7 @@ Klassische PKU mit PAH-Gen Mutation c.1222C>T, erfordert lebenslange phenylalani
     "text" : "Phenylketonurie"
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "recordedDate" : "2024-01-01",
   "evidence" : [{

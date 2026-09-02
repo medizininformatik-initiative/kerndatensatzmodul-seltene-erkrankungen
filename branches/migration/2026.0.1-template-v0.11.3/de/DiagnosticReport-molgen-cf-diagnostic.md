@@ -16,7 +16,7 @@
 
 | | |
 | :--- | :--- |
-| Subject | Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345) |
+| Subject | Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345) |
 | Relevant Time | 2024-08-25 |
 
 **Report Details**
@@ -55,7 +55,7 @@ Homozygot für die F508del-Mutation (p.Phe508del, c.1521_1523delCTT) im CFTR-Gen
     }]
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "effectiveDateTime" : "2024-08-25",
   "result" : [{

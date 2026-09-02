@@ -17,6 +17,14 @@ Die folgenden Artefakte definieren die spezifischen Fähigkeiten, die verschiede
 | :--- | :--- |
 | [ MII CPS Seltene Erkrankungen CapabilityStatement  ](CapabilityStatement-mii-cps-seltene-capabilitystatement.md) | Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Seltene Erkrankungen der Medizininformatik Initiative zu implementieren. |
 
+### Strukturen: Logische Modelle 
+
+Diese definieren Datenmodelle, die den von diesem Implementierungsleitfaden abgedeckten Bereich in geschäftsfreundlicheren Begriffen darstellen als die zugrunde liegenden FHIR-Ressourcen.
+
+| | |
+| :--- | :--- |
+| [ MII LM SE  ](StructureDefinition-mii-lm-seltene.md) | MII LogicalModel Modul Seltene Erkraknungen |
+
 ### Strukturen: Ressourcenprofile 
 
 Diese definieren Einschränkungen für FHIR-Ressourcen für Systeme, die mit dem Implementierungsleitfaden konform sind.
@@ -154,7 +162,6 @@ Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Sy
 | [ Beispiel Register als ResearchStudy — ERN EURO-NMD  ](ResearchStudy-mii-exa-seltene-register-euro-nmd.md) | Das Register des European Reference Network für neuromuskuläre Erkrankungen, als ResearchStudy geführt. Ein Register ist inhaltlich eine Beobachtungsstudie; das ist keine Verlegenheitslösung, sondern die Voraussetzung dafür, dass ResearchSubject.study überhaupt darauf zeigen kann. |
 | [ Beispiel Register-Katalogeintrag (Library)  ](Library-mii-exa-seltene-register-katalog-euro-nmd.md) | Derselbe Registerbestand als Katalogeintrag nach dem Profil mii-pr-studie-register des Moduls Studie. Steht neben der ResearchStudy, nicht an ihrer Stelle — eine Library kann kein Ziel von ResearchSubject.study sein. |
 | [ Beispiel Registerteilnahme — ERN EURO-NMD  ](ResearchSubject-mii-exa-seltene-registerteilnahme.md) | Teilnahme des SMA-Kindes am EURO-NMD-Register. Die Kennung ist das registereigene Pseudonym, nicht die Patienten-ID des Standorts. |
-| [ Beispielpatient  ](Patient-example.md) | Generischer Beispielpatient für Testzwecke |
 | [ Body Mass Index (BMI) Example  ](Observation-mii-exa-seltene-bodymassindex.md) | Example of a Body Mass Index (BMI) observation for a patient. |
 | [ CF Diagnostische Implikation - MolGen  ](DiagnosticReport-molgen-cf-diagnostic.md) | Mukoviszidose genetischer Befund |
 | [ CFTR F508del Homozygot - MolGen Variante  ](Observation-molgen-variant-cftr-f508del-homozygous.md) | Homozygote F508del Mutation bei Mukoviszidose |
@@ -199,6 +206,7 @@ Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Sy
 | [ Linsenluxation - HPO-kodiert  ](Observation-lens-dislocation.md) | Ectopia lentis bei Marfan-Syndrom |
 | [ Losartan Therapie  ](MedicationStatement-medication-losartan.md) | Losartan zur Progressionshemmung der Aortenwurzeldilatation |
 | [ Lymphödem - HPO-kodiert  ](Observation-lymphedema.md) | Peripheres Lymphödem |
+| [ MII EXA SE Beispielpatient  ](Patient-mii-exa-seltene-patient.md) | Generischer Beispielpatient des Moduls Seltene Erkrankungen, referenziert von den Beispielen, die keinen eigenen Fallbezug haben. Fuer die ausgearbeiteten Fallbeispiele siehe patient-sma-001 und patient-marfan-001. |
 | [ MII Example SE Symptom Condition  ](Condition-mii-exa-seltene-symptom-condition.md) | Example of a symptom condition in the context of rare diseases using HPO codes |
 | [ Marfan Patient - 19-jähriger Mann  ](Patient-patient-marfan-001.md) | 19-jähriger männlicher Patient mit bestätigtem Marfan-Syndrom |
 | [ Marfan-Syndrom - Genetische Diagnose  ](Condition-condition-marfan-genetic.md) | Genetisch bestätigtes Marfan-Syndrom mit FBN1-Mutation |

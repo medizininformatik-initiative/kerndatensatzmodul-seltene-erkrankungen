@@ -24,13 +24,13 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **code**: Hereditäres Mamma- und Ovarialkarzinom-Syndrom (BRCA1)
 
-**subject**: [Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-example.md)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **recordedDate**: 2024-11-01
 
 > **evidence****code**: Genetic finding**detail**: [Observation Genetic variant assessment](Observation-molgen-variant-brca1-pathogenic.md)
 
-> **evidence****code**: Genetic test**detail**: [Diagnostic Report for 'Master HL7 genetic variant reporting panel' for '->Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'](DiagnosticReport-molgen-brca-panel.md)
+> **evidence****code**: Genetic test**detail**: [Diagnostic Report for 'Master HL7 genetic variant reporting panel' for '->Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'](DiagnosticReport-molgen-brca-panel.md)
 
 **note**: 
 
@@ -93,7 +93,7 @@ Pathogene Variante c.68_69del (p.Glu23Valfs*17) in BRCA1 nachgewiesen. Penetranz
     "text" : "Hereditäres Mamma- und Ovarialkarzinom-Syndrom (BRCA1)"
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "recordedDate" : "2024-11-01",
   "evidence" : [{

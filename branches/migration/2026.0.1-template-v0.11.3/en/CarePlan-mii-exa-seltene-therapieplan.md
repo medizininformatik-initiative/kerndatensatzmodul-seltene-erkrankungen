@@ -20,7 +20,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
 
 **description**: Therapieplan für den Patienten
 
-**subject**: [Patient/example-patient](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-patient)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **created**: 2023-03-28
 
@@ -45,7 +45,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
   "intent" : "proposal",
   "description" : "Therapieplan für den Patienten",
   "subject" : {
-    "reference" : "Patient/example-patient"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "created" : "2023-03-28",
   "activity" : [{

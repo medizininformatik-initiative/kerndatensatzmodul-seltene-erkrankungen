@@ -1,0 +1,850 @@
+# MII LM SE - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII LM SE**
+
+## Logical Model: MII LM SE 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-02 | *Computable Name*:MII_LM_SE |
+
+ 
+MII LogicalModel Modul Seltene Erkraknungen 
+
+**Usages:**
+
+* This Logical Model is not used by any profiles in this Specification
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-lm-seltene.json)
+
+### Formal Views of Profile Content
+
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+ 
+
+Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.csv), [Excel](../StructureDefinition-mii-lm-seltene.xlsx) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "mii-lm-seltene",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_LM_SE",
+  "title" : "MII LM SE",
+  "status" : "active",
+  "date" : "2026-09-02T09:29:03+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "MII LogicalModel Modul Seltene Erkraknungen",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "kind" : "logical",
+  "abstract" : false,
+  "type" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation" : "specialization",
+  "differential" : {
+    "element" : [{
+      "id" : "Seltene",
+      "path" : "Seltene",
+      "short" : "MII LM SE",
+      "definition" : "MII LogicalModel Modul Seltene Erkraknungen"
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik",
+      "path" : "Seltene.AnamneseUndDiagnostik",
+      "short" : "Diagnose",
+      "definition" : "Diagnose",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.Untersuchungsdatum",
+      "path" : "Seltene.AnamneseUndDiagnostik.Untersuchungsdatum",
+      "short" : "Untersuchungsdatum",
+      "definition" : "Datum der durchgeführten Untersuchung eines SE-Patienten.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.Untersuchungsanlass",
+      "path" : "Seltene.AnamneseUndDiagnostik.Untersuchungsanlass",
+      "short" : "Untersuchungsanlass",
+      "definition" : "Grund fuer den Besuch des SE-Patienten.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung",
+      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung",
+      "short" : "Phaenotypisierung",
+      "definition" : "Phaenotypisierung",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+      "short" : "HPO-Term des Symptoms",
+      "definition" : "Phaenotypisierung des SE-Patienten mittels HPO-Term (Human Phenotype Ontology) oder anderer Terminologien (SNOMED CT, ICD-10, LOINC).",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded",
+      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded",
+      "short" : "HPO-Term ausgeschlossen",
+      "definition" : "Gibt an, ob das HPO-Merkmal explizit ausgeschlossen wurde (negated finding). Abgeleitet aus valueCodeableConcept: LOINC LA9634-2 'Absent' = true, LA9633-4 'Present' = false. Folgt HL7 Phenomics IG Muster.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "boolean"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
+      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
+      "short" : "Status HPO-Term",
+      "definition" : "Status oder Schweregrad des Phaenotyps (Present/Absent/Severity).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOVersion",
+      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.HPOVersion",
+      "short" : "Version HPO-Term",
+      "definition" : "Kennzeichnung der genutzten Version des ausgewaehlten HPO-Terms.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom",
+      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom",
+      "short" : "Zeitraum des Symptom",
+      "definition" : "Zeitraum des Symptom",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+      "short" : "Startdatum des Symptoms",
+      "definition" : "Startdatum und bei Bedarf Periode der ersten Symptome/Anzeichen.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "dateTime"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase",
+      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase",
+      "short" : "Lebensphase Symptom",
+      "definition" : "Lebensphase, in der das Symptom aufgetreten ist.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom",
+      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom",
+      "short" : "Alter Symptom",
+      "definition" : "Alter beim Auftreten der ersten Symptome/Anzeichen.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "integer"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom",
+      "path" : "Seltene.AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom",
+      "short" : "Verlauf Symptom",
+      "definition" : "Aenderung des Verlaufs des Symptoms seit der vorherigen Untersuchung.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose",
+      "path" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose",
+      "short" : "Zeitraum der klinischen SE-Diagnose",
+      "definition" : "Zeitraum der klinischen SE-Diagnose",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.ZeitpunktKlinischeDia",
+      "path" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.ZeitpunktKlinischeDia",
+      "short" : "Zeitpunkt klinische SE-Diagnose",
+      "definition" : "Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der klinsichen SE-Diagnose.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+      "path" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+      "short" : "Feststellungsdatum klinische SE-Diagnose",
+      "definition" : "Datum, an dem die klinische SE-Diagnose festgestellt wurde.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia",
+      "path" : "Seltene.AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia",
+      "short" : "Alter bei klinischer SE-Diagnose",
+      "definition" : "Alter, in dem die klinische SE-Diagnose gestellt wurde.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "integer"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose",
+      "path" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose",
+      "short" : "Zeitraum der genetischen SE-Diagnose",
+      "definition" : "Zeitraum der genetischen SE-Diagnose",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.ZeitpunktGenDia",
+      "path" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.ZeitpunktGenDia",
+      "short" : "Zeitpunkt genetische SE-Diagnose",
+      "definition" : "Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der genetischen SE-Diagnose.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+      "path" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+      "short" : "Feststellungsdatum genetische SE-Diagnose",
+      "definition" : "Datum, an dem die genetische SE-Diagnose festgestellt wurde.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
+      "path" : "Seltene.AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
+      "short" : "Alter bei genetischer SE-Diagnose",
+      "definition" : "Alter, in dem die genetische SE-Diagnose gestellt wurde.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "integer"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.GenDiaFehlendePenetranz",
+      "path" : "Seltene.AnamneseUndDiagnostik.GenDiaFehlendePenetranz",
+      "short" : "Genetische Diagnose mit fehlender Penetranz",
+      "definition" : "Gibt an, ob bei einer genetischen Diagnose die Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) fehlt",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.AnamneseUndDiagnostik.MethodeDiagnosestellung",
+      "path" : "Seltene.AnamneseUndDiagnostik.MethodeDiagnosestellung",
+      "short" : "Methode der Diagnosestellung",
+      "definition" : "Gibt an, welche Methode zur Diagnosestellung verwendet wurde.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung",
+      "path" : "Seltene.KoerperlicheUntersuchung",
+      "short" : "Körperliche Untersuchung",
+      "definition" : "Körperliche Untersuchung",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Koerpergewicht",
+      "path" : "Seltene.KoerperlicheUntersuchung.Koerpergewicht",
+      "short" : "Körpergewicht",
+      "definition" : "Körpergewicht",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Koerpergewicht.Koerpergewicht",
+      "path" : "Seltene.KoerperlicheUntersuchung.Koerpergewicht.Koerpergewicht",
+      "short" : "Körpergewicht in kg",
+      "definition" : "Körpergewicht des SE-Patienten in kg (aus MII ICU Modul).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Koerpergewicht.DatumKoerpergewicht",
+      "path" : "Seltene.KoerperlicheUntersuchung.Koerpergewicht.DatumKoerpergewicht",
+      "short" : "Datum Körpergewicht",
+      "definition" : "Datum der Körpergewichtsmessung.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Koerpergroesse",
+      "path" : "Seltene.KoerperlicheUntersuchung.Koerpergroesse",
+      "short" : "Körpergröße",
+      "definition" : "Körpergröße",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Koerpergroesse.Koerpergroesse",
+      "path" : "Seltene.KoerperlicheUntersuchung.Koerpergroesse.Koerpergroesse",
+      "short" : "Körpergröße in cm",
+      "definition" : "Körpergröße des SE-Patienten in cm (aus MII ICU Modul).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Koerpergroesse.DatumKoerpergroesse",
+      "path" : "Seltene.KoerperlicheUntersuchung.Koerpergroesse.DatumKoerpergroesse",
+      "short" : "Datum Körpergröße",
+      "definition" : "Datum der Körpergrößenmessung.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.BMI",
+      "path" : "Seltene.KoerperlicheUntersuchung.BMI",
+      "short" : "BMI",
+      "definition" : "BMI",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.BMI.BMI",
+      "path" : "Seltene.KoerperlicheUntersuchung.BMI.BMI",
+      "short" : "BMI SE-Patient",
+      "definition" : "BMI des SE-Patienten.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.BMI.DatumBMI",
+      "path" : "Seltene.KoerperlicheUntersuchung.BMI.DatumBMI",
+      "short" : "Datum des BMI",
+      "definition" : "Datum, an dem der BMI (Body Mass Index) berechnet wurde.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Kopfumfang",
+      "path" : "Seltene.KoerperlicheUntersuchung.Kopfumfang",
+      "short" : "Kopfumfang",
+      "definition" : "Kopfumfang",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Kopfumfang.Kopfumfang",
+      "path" : "Seltene.KoerperlicheUntersuchung.Kopfumfang.Kopfumfang",
+      "short" : "Kopfumfang in cm",
+      "definition" : "Kopfumfang des SE-Patienten in cm.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Kopfumfang.DatumKopfumfang",
+      "path" : "Seltene.KoerperlicheUntersuchung.Kopfumfang.DatumKopfumfang",
+      "short" : "Datum Kopfumfang",
+      "definition" : "Datum der Kopfumfangsmessung.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Bauchumfang",
+      "path" : "Seltene.KoerperlicheUntersuchung.Bauchumfang",
+      "short" : "Bauchumfang",
+      "definition" : "Bauchumfang",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Bauchumfang.Bauchumfang",
+      "path" : "Seltene.KoerperlicheUntersuchung.Bauchumfang.Bauchumfang",
+      "short" : "Bauchumfang in cm",
+      "definition" : "Bauchumfang des SE-Patienten in cm.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Bauchumfang.DatumBauchumfang",
+      "path" : "Seltene.KoerperlicheUntersuchung.Bauchumfang.DatumBauchumfang",
+      "short" : "Datum Bauchumfang",
+      "definition" : "Datum der Bauchumfangsmessung.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Hueftumfang",
+      "path" : "Seltene.KoerperlicheUntersuchung.Hueftumfang",
+      "short" : "Hüftumfang",
+      "definition" : "Hüftumfang",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Hueftumfang.Hueftumfang",
+      "path" : "Seltene.KoerperlicheUntersuchung.Hueftumfang.Hueftumfang",
+      "short" : "Hüftumfang in cm",
+      "definition" : "Hüftumfang des SE-Patienten in cm.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Hueftumfang.DatumHueftumfang",
+      "path" : "Seltene.KoerperlicheUntersuchung.Hueftumfang.DatumHueftumfang",
+      "short" : "Datum Hüftumfang",
+      "definition" : "Datum der Hüftumfangsmessung.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }]
+    },
+    {
+      "id" : "Seltene.KoerperlicheUntersuchung.Blutgruppe",
+      "path" : "Seltene.KoerperlicheUntersuchung.Blutgruppe",
+      "short" : "Blutgruppe",
+      "definition" : "Blutgruppe des SE-Patienten (AB0 und Rhesusfaktor).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.PersoenlicheInfosIndexpatient",
+      "path" : "Seltene.PersoenlicheInfosIndexpatient",
+      "short" : "Persoenliche Informationen des Indexpatienten",
+      "definition" : "Persoenliche Informationen des Indexpatienten",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.PersoenlicheInfosIndexpatient.Tod",
+      "path" : "Seltene.PersoenlicheInfosIndexpatient.Tod",
+      "short" : "Tod",
+      "definition" : "Tod",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.PersoenlicheInfosIndexpatient.Tod.Sterbedatum",
+      "path" : "Seltene.PersoenlicheInfosIndexpatient.Tod.Sterbedatum",
+      "short" : "Sterbedatum",
+      "definition" : "Sterbedatum des Indexpatienten.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "Seltene.PersoenlicheInfosIndexpatient.Tod.AnSEVerstorben",
+      "path" : "Seltene.PersoenlicheInfosIndexpatient.Tod.AnSEVerstorben",
+      "short" : "An der SE verstorben",
+      "definition" : "Angabe, ob der Indexpatient an der SE verstorben ist.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.PersoenlicheInfosIndexpatient.Tod.AndereTodesursache",
+      "path" : "Seltene.PersoenlicheInfosIndexpatient.Tod.AndereTodesursache",
+      "short" : "Todesursache",
+      "definition" : "Kodierung der Todesursache soweit bekannt (ICD-10-GM, ORPHAcodes).",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.Familienanamnese",
+      "path" : "Seltene.Familienanamnese",
+      "short" : "Familienanamnese",
+      "definition" : "Familienanamnese",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.Familienanamnese.Verwandtschaftsverhaeltnis",
+      "path" : "Seltene.Familienanamnese.Verwandtschaftsverhaeltnis",
+      "short" : "Verwandtschaftsverhaeltnis",
+      "definition" : "Biologisches Verwandtschaftsverhaeltnis des Familienmitglieds zum Indexpatienten.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.Familienanamnese.Geschlecht",
+      "path" : "Seltene.Familienanamnese.Geschlecht",
+      "short" : "Geschlecht",
+      "definition" : "Geschlecht des Familienmitglieds.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.Familienanamnese.GleicheSE",
+      "path" : "Seltene.Familienanamnese.GleicheSE",
+      "short" : "Gleiche SE",
+      "definition" : "Gibt an, ob das Familienmitglied an der gleichen SE leidet wie der Indexpatient.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.Familienanamnese.AndereSE",
+      "path" : "Seltene.Familienanamnese.AndereSE",
+      "short" : "Andere SE",
+      "definition" : "Gibt an, ob das Familienmitglied an einer anderen SE leidet als der Indexpatient.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.Familienanamnese.Penetranz",
+      "path" : "Seltene.Familienanamnese.Penetranz",
+      "short" : "Penetranz",
+      "definition" : "Gibt an, ob bei fehlender klinscher Penetranz (Wahrscheinlichkeit Genotyp bildet Phaenotyp aus) die genetische Diagnose vorliegt.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.Familienanamnese.FamilienmitgliedVerstorben",
+      "path" : "Seltene.Familienanamnese.FamilienmitgliedVerstorben",
+      "short" : "Familienmitglied verstorben",
+      "definition" : "Gibt an, ob das Familienmitglied verstorben ist.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.TherapieForschung",
+      "path" : "Seltene.TherapieForschung",
+      "short" : "Therapie und Forschung",
+      "definition" : "Therapie und Forschung",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.TherapieForschung.OffLabel",
+      "path" : "Seltene.TherapieForschung.OffLabel",
+      "short" : "Off-Label-Gabe",
+      "definition" : "Off-Label-Gabe",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.TherapieForschung.OffLabel.OffLabelGabe",
+      "path" : "Seltene.TherapieForschung.OffLabel.OffLabelGabe",
+      "short" : "Off-Label-Gabe",
+      "definition" : "Gibt an, ob eine Off-Label-Gabe vorliegt.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.TherapieForschung.OffLabel.OffLabelMedikament",
+      "path" : "Seltene.TherapieForschung.OffLabel.OffLabelMedikament",
+      "short" : "Off-Label-Medikament",
+      "definition" : "Gibt an, welches Medikament Off-Label gegeben wurde.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.TherapieForschung.Studie",
+      "path" : "Seltene.TherapieForschung.Studie",
+      "short" : "Studie",
+      "definition" : "Studie",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.TherapieForschung.Studie.StudienID",
+      "path" : "Seltene.TherapieForschung.Studie.StudienID",
+      "short" : "Studien-ID",
+      "definition" : "Eindeutige Identifikation der Studie, an der der SE-Patient teilgenommen hat.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Identifier"
+      }]
+    },
+    {
+      "id" : "Seltene.TherapieForschung.Studie.StudienStatus",
+      "path" : "Seltene.TherapieForschung.Studie.StudienStatus",
+      "short" : "Studienstatus",
+      "definition" : "Aktueller Status der Studie, an der der SE-Patient teilgenommen hat (Abgeschlossen, Fortlaufend).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.TherapieForschung.Studie.Studienzeitraum",
+      "path" : "Seltene.TherapieForschung.Studie.Studienzeitraum",
+      "short" : "Studienzeitraum",
+      "definition" : "Zeitraum, in dem der SE-Patient an der Studie teilgenommen hat.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/organization-period"]
+      }]
+    },
+    {
+      "id" : "Seltene.TherapieForschung.Therapie",
+      "path" : "Seltene.TherapieForschung.Therapie",
+      "short" : "Therapie",
+      "definition" : "Therapie",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.TherapieForschung.Therapie.Therapieempfehlung",
+      "path" : "Seltene.TherapieForschung.Therapie.Therapieempfehlung",
+      "short" : "Eine Therapieempfehlung beschreibt eine spezifische Maßnahme oder Strategie. Sie kann eigenständig vorliegen oder referenziert einem Therapieplan zugeordnet werden. Art der Therapieempfehlung",
+      "definition" : "Gibt an, welche Therapieempfehlung vorliegt.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.TherapieForschung.Therapie.DurchgefuehrteTherapie",
+      "path" : "Seltene.TherapieForschung.Therapie.DurchgefuehrteTherapie",
+      "short" : "Durchgefuehrte Therapie",
+      "definition" : "Tatsaechlich durchgeführte Therapie des SE-Patienten (mit oder ohne Studie mit heilender Intention).",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.TherapieForschung.Therapie.StartdatumTherapie",
+      "path" : "Seltene.TherapieForschung.Therapie.StartdatumTherapie",
+      "short" : "Startdatum Therapie",
+      "definition" : "Datum, an dem die Therapie begonnen hat.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "Seltene.TherapieForschung.Therapie.EnddatumTherapie",
+      "path" : "Seltene.TherapieForschung.Therapie.EnddatumTherapie",
+      "short" : "Enddatum Therapie",
+      "definition" : "Datum, an dem die Therapie beendet wurde.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "Seltene.TherapieForschung.Therapie.GrundEndeTherapie",
+      "path" : "Seltene.TherapieForschung.Therapie.GrundEndeTherapie",
+      "short" : "Grund Ende Therapie",
+      "definition" : "Gibt an, warum die Therapie beendet wurde (z.B. Nebenwirkungen, keine Wirkung).",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }]
+    }]
+  }
+}
+
+```
