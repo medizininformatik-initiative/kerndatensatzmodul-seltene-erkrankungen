@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geburtslaenge | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_PR_Seltene_Geburtslaenge |
+| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_Seltene_Geburtslaenge |
 
  
 Gemessene Körperlänge bei Geburt. Zusammen mit Geburtsgewicht und Kopfumfang der anthropometrische Ausgangsbefund, gegen den spätere Wachstumsverläufe bewertet werden. 
@@ -99,7 +99,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Geburtslaenge",
   "title" : "MII PR SE Geburtslänge",
   "status" : "active",
-  "date" : "2026-09-01T21:46:35+00:00",
+  "date" : "2026-09-02T02:40:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/von-seltene-betroffen-vs | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-01 | *Computable Name*:VonSEBetroffenVS |
+| Active as of 2026-09-02 | *Computable Name*:VonSEBetroffenVS |
 
  
 ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Verwendet SNOMED CT codes für internationale Interoperabilität. 
@@ -44,7 +44,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "Von SE betroffen Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-01T21:46:35+00:00",
+  "date" : "2026-09-02T02:40:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

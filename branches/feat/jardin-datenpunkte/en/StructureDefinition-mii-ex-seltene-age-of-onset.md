@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-age-of-onset | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-01 | *Computable Name*:AgeOfOnset |
+| Active as of 2026-09-02 | *Computable Name*:AgeOfOnset |
 
 Extension to capture the age of onset of a rare disease using structured HPO age of onset terms
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-ag
   "name" : "AgeOfOnset",
   "title" : "MII EX SE Age of Onset",
   "status" : "active",
-  "date" : "2026-09-01T21:46:35+00:00",
+  "date" : "2026-09-02T02:40:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

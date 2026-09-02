@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-01 | *Computable Name*:MII_PR_Seltene_HPO_Assessment |
+| Active as of 2026-09-02 | *Computable Name*:MII_PR_Seltene_HPO_Assessment |
 
  
 Profile for HPO-based phenotypic observations in the context of rare diseases. This profile uses the Human Phenotype Ontology (HPO) to describe clinical symptoms and phenotypic abnormalities. 
@@ -220,7 +220,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
   "name" : "MII_PR_Seltene_HPO_Assessment",
   "title" : "MII Profile SE HPO Assessment",
   "status" : "active",
-  "date" : "2026-09-01T21:46:35+00:00",
+  "date" : "2026-09-02T02:40:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

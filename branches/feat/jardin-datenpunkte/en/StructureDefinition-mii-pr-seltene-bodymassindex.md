@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-01 | *Computable Name*:MII_PR_Seltene_Bodymassindex |
+| Active as of 2026-09-02 | *Computable Name*:MII_PR_Seltene_Bodymassindex |
 
  
 Describes the Body Mass Index (BMI) of the patient. 
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bo
   "name" : "MII_PR_Seltene_Bodymassindex",
   "title" : "Body Mass Index (BMI) of the patient",
   "status" : "active",
-  "date" : "2026-09-01T21:46:35+00:00",
+  "date" : "2026-09-02T02:40:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

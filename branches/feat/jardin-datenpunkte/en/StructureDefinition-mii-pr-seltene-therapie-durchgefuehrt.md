@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-01 | *Computable Name*:MII_PR_Seltene_TherapieDurchgefuehrt |
+| Active as of 2026-09-02 | *Computable Name*:MII_PR_Seltene_TherapieDurchgefuehrt |
 
  
 Minimales Profil zur Dokumentation durchgeführter Therapien bei Seltenen Erkrankungen gemäß NARSE-Klassifikation. Dieses Profil erfasst Therapien unabhängig vom Durchführungsort (ambulant, stationär, außerhalb des Krankenhauses). 
@@ -110,7 +110,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
   "name" : "MII_PR_Seltene_TherapieDurchgefuehrt",
   "title" : "MII PR Seltene Erkrankungen Therapie Durchgeführt",
   "status" : "active",
-  "date" : "2026-09-01T21:46:35+00:00",
+  "date" : "2026-09-02T02:40:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-01 | *Computable Name*:MII_PR_Seltene_ClinicalImpression |
+| Active as of 2026-09-02 | *Computable Name*:MII_PR_Seltene_ClinicalImpression |
 
  
 Profile for clinical impressions in the context of rare diseases. This profile captures clinical assessments and suspected diagnoses based on phenotypic findings and symptoms. 
@@ -108,7 +108,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
   "name" : "MII_PR_Seltene_ClinicalImpression",
   "title" : "MII Profile SE Clinical Impression",
   "status" : "active",
-  "date" : "2026-09-01T21:46:35+00:00",
+  "date" : "2026-09-02T02:40:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

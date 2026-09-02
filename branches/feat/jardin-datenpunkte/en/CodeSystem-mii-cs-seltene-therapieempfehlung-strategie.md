@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-01 | *Computable Name*:MII_CS_Seltene_TherapieempfehlungStrategie |
+| Active as of 2026-09-02 | *Computable Name*:MII_CS_Seltene_TherapieempfehlungStrategie |
 
  
 Strategietypen für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq 
@@ -37,7 +37,7 @@ This Code system is referenced in the definition of the following value sets:
   "name" : "MII_CS_Seltene_TherapieempfehlungStrategie",
   "title" : "MII CS SE Therapieempfehlung Strategie",
   "status" : "active",
-  "date" : "2026-09-01T21:46:35+00:00",
+  "date" : "2026-09-02T02:40:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

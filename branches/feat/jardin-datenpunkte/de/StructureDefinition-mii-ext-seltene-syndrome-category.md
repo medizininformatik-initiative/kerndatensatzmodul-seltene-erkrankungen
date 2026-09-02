@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-syndrome-category | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:SyndromeCategory |
+| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:SyndromeCategory |
 
 Extension to categorize syndrome types for rare diseases (genetic, metabolic, developmental, etc.)
 
@@ -81,7 +81,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ext-selt
   "name" : "SyndromeCategory",
   "title" : "Syndrome Category Extension",
   "status" : "active",
-  "date" : "2026-09-01T21:46:35+00:00",
+  "date" : "2026-09-02T02:40:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
