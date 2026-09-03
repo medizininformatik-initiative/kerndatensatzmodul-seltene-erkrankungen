@@ -3,8 +3,8 @@
 
 In the modeling of rare diseases we distinguish between two kinds of diagnosis:
 
-1. **Clinical diagnosis** (`MII_PR_SE_ClinicalDiagnosis`) — based on phenotypic features
-2. **Genetic diagnosis** (`MII_PR_SE_GeneticDiagnosis`) — molecularly confirmed
+1. **Clinical diagnosis** (`MII_PR_Seltene_ClinicalDiagnosis`) — based on phenotypic features
+2. **Genetic diagnosis** (`MII_PR_Seltene_GeneticDiagnosis`) — molecularly confirmed
 
 This distinction is important because many rare diseases are first suspected clinically and later confirmed genetically.
 
@@ -19,12 +19,17 @@ The clinical diagnosis is used when:
 
 #### Specifics
 
-- **HPO codes**: additional slice for Human Phenotype Ontology codes
+- **HPO codes**: additional slice `code.coding[hpo]` (0..*), required-bound to the
+  HPO phenotype code value set
 - **Phenotypic evidence**: evidence.detail references HPO-coded symptom observations
-- **Verification status**: typically "provisional" or "differential"
-- **Category**: optional specific categorization (e.g. "Syndrome", "Rare disease")
+- **Verification status**: **not** constrained by the profile (0..1, inherited required
+  binding to `condition-ver-status`); "provisional" or "differential" are recommended
+  while genetic confirmation is pending
+- **Category**: `category` is mandatory (1..*), but its value is not fixed. It states the
+  role in the record (`problem-list-item` or `encounter-diagnosis`), not the kind of
+  disease — a module-wide binding to disease kinds would be conceptually wrong here.
 
-#### FSH example
+#### Structural comparison
 
 ![Clinical versus genetic diagnosis — structural comparison](diagnose-klinisch-vs-genetisch.svg)
 
@@ -42,26 +47,26 @@ The genetic diagnosis is used when:
 #### Specifics
 
 - **OMIM codes**: additional slice for Online Mendelian Inheritance in Man codes
-- **MolGen evidence**: evidence.detail MUST reference MolGen resources:
+- **Genetic evidence**: `evidence` is mandatory (1..*), `evidence.detail` (1..*) references
+  an Observation or DiagnosticReport. The profile does not constrain the target profiles;
+  the MolGen resources are recommended:
   - `MII_PR_MolGen_Variante` for individual variants
   - `MII_PR_MolGen_DiagnostischeImplikation` for comprehensive genetic reports
-- **Verification status**: typically "confirmed"
-- **Additional genetic information**: penetrance, genetic basis
+- **Genetic evidence marker**: `evidence.code.coding[geneticEvidence]` carries
+  `106221001 | Genetic finding |`
+- **Verification status**: **not** constrained by the profile; "confirmed" is recommended
+- **Additional genetic information**: `penetrance` extension
 - **Category**: MANDATORY: `782964007 | Genetic disease |` for unambiguous labeling
-
-#### FSH example
 
 ### Parallel diagnosis model
 
 In rare diseases, clinical and genetic diagnoses exist **in parallel**:
 
-#### 1. Suspected diagnosis (screening/initial)
-
 ![Parallel diagnosis model](diagnose-parallelmodell.svg)
 
-#### 2. Clinical diagnosis
-
-#### 3. Genetic diagnosis (parallel to the clinical one)
+The diagram shows all three stages: the suspected diagnosis from screening or first
+contact, the clinical diagnosis after phenotypic work-up, and the genetic diagnosis
+after molecular confirmation.
 
 **Important:** The genetic diagnosis does NOT replace the clinical diagnosis. Both exist in parallel and complement each other.
 
@@ -69,7 +74,8 @@ In rare diseases, clinical and genetic diagnoses exist **in parallel**:
 
 ![Decision tree: which diagnosis profile when](diagnose-entscheidungsbaum.svg)
 
-The decision flow (rare disease suspected → ClinicalImpression → examinations → phenotypic analysis leading to `MII_PR_SE_ClinicalDiagnosis` with HPO codes and linked HPO symptoms, and/or genetic analysis leading to `MII_PR_SE_GeneticDiagnosis` with OMIM code, linked MolGen variant and diagnostic implication — each ending in status "confirmed") is visualized in the German version of this page as a PlantUML source. The ClinicalImpression links: problem → suspected diagnosis, finding → clinical diagnosis, finding → genetic diagnosis, investigation → examinations. Clinical and genetic diagnoses exist **in parallel** and complement each other.
+The ClinicalImpression links the stages: problem → suspected diagnosis, finding →
+clinical diagnosis, finding → genetic diagnosis, investigation → examinations.
 
 ### Practical notes
 
@@ -108,16 +114,19 @@ Both diagnoses remain as independent resources and document different aspects of
 
 ### Validation
 
-#### Mandatory fields, clinical diagnosis
-- [ ] At least one HPO code in the code.coding slice
-- [ ] Evidence.detail with reference to phenotypic observations
-- [ ] Appropriate verificationStatus
+#### Checklist, clinical diagnosis
+- [ ] `category` set — **mandatory** (1..*)
+- [ ] HPO code in `code.coding[hpo]` where the phenotype is known (the profile does not
+      enforce it, but for rare diseases it carries the actual content)
+- [ ] `evidence.detail` referencing phenotypic observations
+- [ ] Appropriate `verificationStatus`
 
-#### Mandatory fields, genetic diagnosis
+#### Checklist, genetic diagnosis
+- [ ] `category` = `782964007 | Genetic disease |` — **mandatory**, fixed value
+- [ ] At least one `evidence` with `evidence.detail` — **mandatory** (1..*)
 - [ ] OMIM code if available
-- [ ] At least one evidence.detail to a MolGen resource
-- [ ] verificationStatus = confirmed (for a confirmed diagnosis)
-- [ ] evidence.code with "Genetic finding"
+- [ ] `evidence.code.coding[geneticEvidence]` = `106221001 | Genetic finding |`
+- [ ] `verificationStatus = confirmed` for a confirmed diagnosis
 
 ### Excluded diagnoses
 
@@ -133,9 +142,15 @@ For rare diseases, the documentation of excluded diagnoses is essential for:
 
 #### Modeling excluded diagnoses
 
-##### Clinically excluded
+Excluded diagnoses use the same profile as confirmed ones; only the status differs:
 
-##### Genetically excluded
+| Field | Clinically excluded | Genetically excluded |
+|---|---|---|
+| Profile | `MII_PR_Seltene_ClinicalDiagnosis` | `MII_PR_Seltene_GeneticDiagnosis` |
+| `verificationStatus` | `refuted` | `refuted` |
+| `clinicalStatus` | `inactive` | `inactive` |
+| Justification | `note.text` | `note.text` |
+| Evidence | negative phenotypic finding | negative molecular finding |
 
 #### Best practices for excluded diagnoses
 
