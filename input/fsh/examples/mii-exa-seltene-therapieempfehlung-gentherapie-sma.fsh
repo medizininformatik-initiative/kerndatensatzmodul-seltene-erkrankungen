@@ -14,7 +14,7 @@ Description: "Beispiel einer medikamentösen Therapieempfehlung für Gentherapie
 * medicationCodeableConcept.coding[=].display = "ONASEMNOGENE ABEPARVOVEC"
 * medicationCodeableConcept.text = "Zolgensma"
 * subject = Reference(mii-exa-seltene-patient-sma-001)
-* reasonReference = Reference(Condition/sma-diagnosis)
+* reasonReference = Reference(Condition/mii-exa-seltene-condition-sma-genetic)
 * reasonReference.display = "Spinale Muskelatrophie Typ 1"
 * note.text = "Einmalige intravenöse Infusion der Gentherapie"
 

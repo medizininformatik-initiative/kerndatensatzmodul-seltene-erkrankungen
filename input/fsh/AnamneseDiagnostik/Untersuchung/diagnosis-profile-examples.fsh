@@ -22,7 +22,7 @@ Description: "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend a
 * code.coding[+] = http://omim.org#154700 "Marfan syndrome"
 * code.text = "Marfan-Syndrom, klinisch diagnostiziert"
 * subject = Reference(mii-exa-seltene-patient)
-* encounter = Reference(Encounter/cardiology-consultation)
+* encounter = Reference(Encounter/mii-exa-seltene-encounter-cardiology-consultation)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-12-15"
 * recordedDate = "2024-12-15"
@@ -95,7 +95,7 @@ Description: "Beispiel einer genetisch bestätigten Diagnose der spinalen Muskel
 * code.coding[+] = http://omim.org#253300 "Spinal muscular atrophy, type I"
 * code.text = "Spinale Muskelatrophie Typ 1, genetisch bestätigt"
 * subject = Reference(mii-exa-seltene-patient)
-* encounter = Reference(Encounter/genetic-consultation)
+* encounter = Reference(Encounter/mii-exa-seltene-encounter-genetic-consultation)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-07-26"
 * recordedDate = "2024-07-26"
@@ -131,12 +131,12 @@ Description: "Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie"
 * recordedDate = "2024-09-15"
 // Link to MolGen resources
 * evidence[+].code = $SCT#106221001 "Genetic finding"
-* evidence[=].detail = Reference(Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47)
+* evidence[=].detail = Reference(Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45)
 * evidence[+].code = $SCT#405824009 "Genetic test"
-* evidence[=].detail = Reference(DiagnosticReport/mii-exa-seltene-molgen-diagnostic-dmd)
+* evidence[=].detail = Reference(DiagnosticReport/mii-exa-seltene-molgen-diagnostic-dmd-duchenne)
 // Genetic characteristics
 // Genetic extensions would go here if defined in profile
-* note.text = "Deletion der Exons 45-47 im DMD-Gen nachgewiesen. Out-of-frame Deletion führt zu komplettem Funktionsverlust des Dystrophin-Proteins."
+* note.text = "Deletion des Exons 45 im DMD-Gen nachgewiesen. Out-of-frame Deletion mit Leserasterverschiebung, kein funktionsfaehiges Dystrophin. (Bis 2026-09-03 stand hier die Deletion der Exons 45-47 — die ist in-frame und fuehrt zu Becker, nicht zu Duchenne.)"
 
 // Example 5: BRCA1-associated Breast Cancer - Genetic Diagnosis
 Instance: mii-exa-seltene-example-brca1-genetic-diagnosis

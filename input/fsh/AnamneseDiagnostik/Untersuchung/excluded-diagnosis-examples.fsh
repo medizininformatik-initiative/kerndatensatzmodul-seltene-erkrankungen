@@ -21,7 +21,7 @@ Description: "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose"
 * code.coding[+] = http://omim.org#154700 "Marfan syndrome"
 * code.text = "Marfan-Syndrom (ausgeschlossen)"
 * subject = Reference(mii-exa-seltene-patient)
-* encounter = Reference(Encounter/cardiology-consultation)
+* encounter = Reference(Encounter/mii-exa-seltene-encounter-cardiology-consultation)
 * extension[+].url = $condition-assertedDate
 * extension[=].valueDateTime = "2024-12-15"
 * recordedDate = "2024-12-15"
@@ -30,7 +30,7 @@ Description: "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose"
 * evidence[+].code.text = "Normale Aortenwurzel"
 * evidence[=].detail = Reference(Observation/mii-exa-seltene-aortic-root-normal)
 * evidence[+].code.text = "Keine Linsenluxation"
-* evidence[=].detail = Reference(Observation/lens-examination-normal)
+* evidence[=].detail = Reference(Observation/mii-exa-seltene-lens-examination-normal)
 * note.text = "Marfan-Syndrom klinisch ausgeschlossen. Ghent-Kriterien nicht erfüllt. Aortenwurzel normwertig, keine ophthalmologischen Manifestationen, Körpergröße im Normbereich."
 
 // Example 2: Ehlers-Danlos Syndrome - Clinically Excluded
@@ -53,7 +53,7 @@ Description: "Differentialdiagnose EDS ausgeschlossen"
 * recordedDate = "2024-11-20"
 * abatementDateTime = "2024-11-20"
 * evidence[+].code.text = "Beighton-Score niedrig"
-* evidence[=].detail = Reference(Observation/beighton-score-low)
+* evidence[=].detail = Reference(Observation/mii-exa-seltene-beighton-score-low)
 * note.text = "EDS als Differentialdiagnose ausgeschlossen. Beighton-Score 2/9, keine Hauthyperextensibilität, keine atrophen Narben."
 
 // ============================================
@@ -106,7 +106,9 @@ Description: "Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muske
 * recordedDate = "2024-09-15"
 * abatementDateTime = "2024-09-15"
 * evidence[+].code = $SCT#106221001 "Genetic finding"
-* evidence[=].detail = Reference(Observation/molgen-dmd-in-frame-deletion)
+* evidence[=].detail = Reference(Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47)
+* evidence[+].code = $SCT#405824009 "Genetic test"
+* evidence[=].detail = Reference(DiagnosticReport/mii-exa-seltene-molgen-diagnostic-dmd)
 * note.text = "In-frame Deletion Exon 45-47 im DMD-Gen nachgewiesen. Vereinbar mit Becker-Muskeldystrophie, NICHT Duchenne. Duchenne-Muskeldystrophie ausgeschlossen."
 
 // Example 5: Cystic Fibrosis - Excluded after positive screening
@@ -132,7 +134,7 @@ Description: "CF nach auffälligem Neugeborenenscreening genetisch ausgeschlosse
 // Note: This rules out the previous suspected diagnosis
 * note[+].text = "Ausschluss der vorherigen Verdachtsdiagnose (cf-suspected-screening)"
 * evidence[+].code = $SCT#106221001 "Genetic finding"
-* evidence[=].detail = Reference(Observation/molgen-cftr-heterozygous-carrier)
+* evidence[=].detail = Reference(Observation/mii-exa-seltene-molgen-cftr-heterozygous-carrier)
 * note.text = "Heterozygoter Anlageträger für F508del. Zweite Mutation ausgeschlossen. IRT-Erhöhung im Screening war transient. Mukoviszidose ausgeschlossen."
 
 // ============================================
@@ -159,9 +161,9 @@ Description: "Metabolische Myopathie als Differentialdiagnose ausgeschlossen"
 * recordedDate = "2024-10-01"
 * abatementDateTime = "2024-10-01"
 * evidence[+].code.text = "Laktat normal"
-* evidence[=].detail = Reference(Observation/lactate-normal)
+* evidence[=].detail = Reference(Observation/mii-exa-seltene-lactate-normal)
 * evidence[+].code.text = "Muskelbiopsie unauffällig"
-* evidence[=].detail = Reference(DiagnosticReport/muscle-biopsy-normal)
+* evidence[=].detail = Reference(DiagnosticReport/mii-exa-seltene-muscle-biopsy-normal)
 * note.text = "Metabolische Myopathie ausgeschlossen. Laktat in Ruhe und unter Belastung normwertig. Muskelbiopsie ohne Hinweise auf mitochondriale Pathologie."
 
 // ============================================
@@ -216,3 +218,104 @@ Description: "Genetischer Test schließt SMA aus"
 * result[+] = Reference(mii-exa-seltene-molgen-smn1-normal-copies)
 * conclusion = "SMN1-Gen: 2 Kopien (Normalbefund). SMN2-Gen: 2 Kopien. Spinale Muskelatrophie ausgeschlossen."
 * conclusionCode = $SCT#280413001 "Normal result"
+
+// --------------------------------------------
+// Ergaenzt 2026-09-03: Die Ausschlussbeispiele oben zitierten fuenf Belege,
+// die es nie gab — die evidence.detail-Referenzen liefen ins Leere. Gerade
+// hier ist das misslich, weil die Seite den Ausschluss als dokumentations-
+// pflichtig herausstellt und dann Beispiele zeigt, deren Beleg fehlt. Werte
+// und Datumsangaben stammen aus den note.text-Feldern der jeweiligen Diagnose,
+// damit Beleg und Begruendung zusammenpassen.
+//
+// Zwei der Belege nutzen bewusst das modul-eigene Muster fuer AUSGESCHLOSSENE
+// Phaenotypen (MII_PR_Seltene_HPO_Assessment mit component[status] = Absent)
+// statt eigener SNOMED-Codes: fuer "keine Linsenluxation" und "keine
+// generalisierte Hypermobilitaet" fuehrt SNOMED keine brauchbaren Konzepte.
+// Der erste Versuch stand hier mit 1263812009 (existiert nicht) und 420112009
+// (ist Pediatric bone marrow transplantation) — also genau die Fehlerklasse,
+// die das Modul im August durchgehend hatte. Alle Codes unten sind am
+// 2026-09-03 gegen tx.fhir.org bzw. die HPO-API geprueft.
+// --------------------------------------------
+
+Instance: mii-exa-seltene-lens-examination-normal
+InstanceOf: MII_PR_Seltene_HPO_Assessment
+Usage: #example
+Title: "Linsenluxation - ausgeschlossen"
+Description: "Ectopia lentis spaltlampenmikroskopisch ausgeschlossen; Ghent-Kriterium nicht erfuellt"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment)
+* code = $HPO#HP:0001083 "Ectopia lentis"
+* subject = Reference(mii-exa-seltene-patient)
+* encounter = Reference(mii-exa-seltene-encounter-cardiology-consultation)
+* status = #final
+* effectiveDateTime = "2024-12-15"
+* component[status].code = $SCT#260411009 "Presence findings"
+* component[status].valueCodeableConcept = $LNC#LA9634-2 "Absent"
+* note.text = "Spaltlampenuntersuchung ohne Hinweis auf Ectopia lentis. Ghent-Kriterium nicht erfuellt."
+
+Instance: mii-exa-seltene-beighton-score-low
+InstanceOf: MII_PR_Seltene_HPO_Assessment
+Usage: #example
+Title: "Generalisierte Hypermobilitaet - ausgeschlossen"
+Description: "Beighton-Score 2/9; generalisierte Gelenkhypermobilitaet ausgeschlossen"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment)
+* code = $HPO#HP:0001382 "Joint hypermobility"
+* subject = Reference(mii-exa-seltene-patient)
+* status = #final
+* effectiveDateTime = "2024-11-20"
+* component[status].code = $SCT#260411009 "Presence findings"
+* component[status].valueCodeableConcept = $LNC#LA9634-2 "Absent"
+* note.text = "Beighton-Score 2/9 — unterhalb der Schwelle fuer eine generalisierte Hypermobilitaet. Keine Hauthyperextensibilitaet, keine atrophen Narben."
+
+Instance: mii-exa-seltene-lactate-normal
+InstanceOf: Observation
+Usage: #example
+Title: "Laktat - Normalbefund"
+Description: "Laktat in Ruhe normwertig; spricht gegen metabolische Myopathie"
+* status = #final
+* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
+* code = $LNC#2524-7 "Lactate [Moles/volume] in Serum or Plasma"
+* subject = Reference(mii-exa-seltene-patient)
+* effectiveDateTime = "2024-10-01"
+* valueQuantity = 1.4 'mmol/L' "mmol/L"
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* referenceRange.low.value = 0.5
+* referenceRange.high.value = 2.2
+* referenceRange.low.unit = "mmol/L"
+* referenceRange.high.unit = "mmol/L"
+* note.text = "Laktat in Ruhe und unter Belastung normwertig."
+
+Instance: mii-exa-seltene-muscle-biopsy-normal
+InstanceOf: DiagnosticReport
+Usage: #example
+Title: "Muskelbiopsie - Normalbefund"
+Description: "Muskelbiopsie ohne Hinweis auf mitochondriale Pathologie"
+* status = #final
+* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
+* code = $LNC#60567-5 "Comprehensive pathology report panel"
+* subject = Reference(mii-exa-seltene-patient)
+* effectiveDateTime = "2024-10-01"
+* conclusion = "Regelrechte Faserstruktur, keine ragged-red fibers, Atmungskettenenzyme unauffaellig. Kein Hinweis auf mitochondriale Pathologie."
+* conclusionCode = $SCT#17621005 "Normal"
+
+Instance: mii-exa-seltene-molgen-cftr-heterozygous-carrier
+InstanceOf: Observation
+Usage: #example
+Title: "CFTR F508del - heterozygoter Anlagetraeger"
+Description: "Nur eine CFTR-Mutation nachweisbar; schliesst Mukoviszidose aus"
+* status = #final
+* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
+* code = $LNC#69548-6 "Genetic variant assessment"
+* subject = Reference(mii-exa-seltene-patient)
+* effectiveDateTime = "2024-08-25"
+* valueCodeableConcept = $SCT#10828004 "Positive"
+* component[+].code = $LNC#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept.coding = http://www.genenames.org/geneId#HGNC:1884 "CFTR"
+* component[+].code = $LNC#48002-0 "Genomic source class"
+* component[=].valueCodeableConcept = $LNC#LA6683-2 "Germline"
+* component[+].code = $LNC#48004-6 "DNA change (c.HGVS)"
+* component[=].valueCodeableConcept.text = "c.1521_1523del"
+* component[+].code = $LNC#48005-3 "Amino acid change (pHGVS)"
+* component[=].valueCodeableConcept.text = "p.Phe508del"
+* component[+].code = $LNC#53034-5 "Allelic state"
+* component[=].valueCodeableConcept = $LNC#LA6706-1 "Heterozygous"
+* note.text = "Heterozygoter Anlagetraeger fuer F508del. Eine zweite CFTR-Mutation wurde bei vollstaendiger Genanalyse nicht gefunden. Mukoviszidose damit ausgeschlossen; die IRT-Erhoehung im Screening war transient."

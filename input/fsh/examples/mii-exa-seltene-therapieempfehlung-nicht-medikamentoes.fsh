@@ -41,7 +41,7 @@ Description: "Beispiel einer nicht-medikamentösen Therapieempfehlung für Physi
 * occurrenceTiming.repeat.period = 1
 * occurrenceTiming.repeat.periodUnit = #wk
 * authoredOn = "2024-07-29"
-* reasonReference = Reference(Condition/sma-diagnosis)
+* reasonReference = Reference(Condition/mii-exa-seltene-condition-sma-genetic)
 * reasonReference.display = "Infantile Spinale Muskelatrophie Typ 1"
 * note.text = "Regelmäßige Physiotherapie 2x wöchentlich zur Kontrakturprophylaxe und Erhaltung der Restfunktion"
 

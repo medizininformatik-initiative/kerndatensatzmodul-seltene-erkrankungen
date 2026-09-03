@@ -169,7 +169,7 @@ Description: "Genetisch bestätigte Phenylketonurie (PKU)"
 * recordedDate = "2024-01-01"
 * evidence[+].code.coding = $LNC#81247-9 "Master HL7 genetic variant reporting panel"
 * evidence[=].code.text = "PAH-Gen Mutation c.1222C>T (p.R408W)"
-* evidence[=].detail = Reference(Observation/pku-genetic-variant)
+* evidence[=].detail = Reference(Observation/mii-exa-seltene-molgen-variant-pah-pku)
 * note.text = "Klassische PKU mit PAH-Gen Mutation c.1222C>T, erfordert lebenslange phenylalaninarme Diät"
 
 // Example Instance for Nutrition Therapy

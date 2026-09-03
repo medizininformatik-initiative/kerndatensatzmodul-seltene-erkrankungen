@@ -1,6 +1,6 @@
 {
   "resourceType": "DiagnosticReport",
-  "id": "mii-exa-seltene-molgen-diagnostic-dmd",
+  "id": "mii-exa-seltene-molgen-diagnostic-dmd-duchenne",
   "status": "final",
   "category": [
     {
@@ -28,17 +28,17 @@
   "effectiveDateTime": "2024-09-15",
   "result": [
     {
-      "reference": "Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47"
+      "reference": "Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45"
     }
   ],
-  "conclusion": "In-frame Deletion der Exons 45-47 im DMD-Gen (c.6439-?_6912+?del, 474 Basen — durch drei teilbar, das Leseraster bleibt erhalten). Es entsteht ein verkürztes, aber teilfunktionsfähiges Dystrophin. Vereinbar mit Becker-Muskeldystrophie; Duchenne-Muskeldystrophie ist damit ausgeschlossen.",
+  "conclusion": "Out-of-frame Deletion des Exons 45 im DMD-Gen. Leserasterverschiebung mit vorzeitigem Stopcodon und komplettem Verlust des funktionsfaehigen Dystrophins. Diagnose: Duchenne-Muskeldystrophie.",
   "conclusionCode": [
     {
       "coding": [
         {
-          "code": "300376",
+          "code": "310200",
           "system": "http://omim.org",
-          "display": "Becker muscular dystrophy"
+          "display": "Duchenne muscular dystrophy"
         }
       ]
     }

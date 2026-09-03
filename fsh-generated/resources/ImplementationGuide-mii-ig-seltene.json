@@ -520,6 +520,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-seltene-molgen-cftr-heterozygous-carrier"
+        },
+        "name": "CFTR F508del - heterozygoter Anlagetraeger",
+        "description": "Nur eine CFTR-Mutation nachweisbar; schliesst Mukoviszidose aus",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-seltene-molgen-variant-cftr-f508del-homozygous"
         },
         "name": "CFTR F508del Homozygot - MolGen Variante",
@@ -544,10 +552,26 @@
       },
       {
         "reference": {
+          "reference": "DiagnosticReport/mii-exa-seltene-molgen-diagnostic-dmd-duchenne"
+        },
+        "name": "DMD Exon 45 - Diagnostische Implikation (Duchenne)",
+        "description": "Diagnostischer Bericht Duchenne-Muskeldystrophie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45"
+        },
+        "name": "DMD Exon 45 Deletion - MolGen Variante",
+        "description": "Out-of-frame Deletion im DMD-Gen (Exon 45) — fuehrt zu Duchenne",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "DiagnosticReport/mii-exa-seltene-molgen-diagnostic-dmd"
         },
-        "name": "DMD Diagnostische Implikation",
-        "description": "Diagnostischer Bericht Duchenne-Muskeldystrophie",
+        "name": "DMD Exon 45-47 - Diagnostische Implikation (Becker)",
+        "description": "Diagnostischer Bericht: in-frame Deletion, Becker- statt Duchenne-Muskeldystrophie",
         "exampleBoolean": true
       },
       {
@@ -555,7 +579,7 @@
           "reference": "Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47"
         },
         "name": "DMD Exon 45-47 Deletion - MolGen Variante",
-        "description": "Out-of-frame Deletion im DMD-Gen",
+        "description": "In-frame Deletion im DMD-Gen (Exons 45-47) — vereinbar mit Becker, nicht mit Duchenne",
         "exampleBoolean": true
       },
       {
@@ -628,6 +652,14 @@
         },
         "name": "Gedeihstörung - HPO-kodiert",
         "description": "Mangelhafte Gewichtszunahme",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-beighton-score-low"
+        },
+        "name": "Generalisierte Hypermobilitaet - ausgeschlossen",
+        "description": "Beighton-Score 2/9; generalisierte Gelenkhypermobilitaet ausgeschlossen",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
@@ -728,6 +760,14 @@
       },
       {
         "reference": {
+          "reference": "Encounter/mii-exa-seltene-encounter-genetic-consultation"
+        },
+        "name": "Humangenetische Beratung (generisch)",
+        "description": "Ambulante humangenetische Beratung des generischen Beispielpatienten",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-seltene-hypertelorism"
         },
         "name": "Hypertelorismus - HPO-kodiert",
@@ -780,6 +820,14 @@
         },
         "name": "Kardiologische Erstvorstellung",
         "description": "Ambulante kardiologische Erstvorstellung bei Thoraxschmerzen",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/mii-exa-seltene-encounter-cardiology-consultation"
+        },
+        "name": "Kardiologische Vorstellung (generisch)",
+        "description": "Ambulante kardiologische Vorstellung des generischen Beispielpatienten",
         "exampleBoolean": true
       },
       {
@@ -853,6 +901,22 @@
         "name": "Körpergröße - Hochwuchs",
         "description": "Pathologisch erhöhte Körpergröße bei Marfan-Syndrom",
         "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-lactate-normal"
+        },
+        "name": "Laktat - Normalbefund",
+        "description": "Laktat in Ruhe normwertig; spricht gegen metabolische Myopathie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-lens-examination-normal"
+        },
+        "name": "Linsenluxation - ausgeschlossen",
+        "description": "Ectopia lentis spaltlampenmikroskopisch ausgeschlossen; Ghent-Kriterium nicht erfuellt",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment"
       },
       {
         "reference": {
@@ -1479,6 +1543,14 @@
       },
       {
         "reference": {
+          "reference": "DiagnosticReport/mii-exa-seltene-muscle-biopsy-normal"
+        },
+        "name": "Muskelbiopsie - Normalbefund",
+        "description": "Muskelbiopsie ohne Hinweis auf mitochondriale Pathologie",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Encounter/mii-exa-seltene-encounter-screening-001"
         },
         "name": "Neugeborenenscreening",
@@ -1492,6 +1564,14 @@
         "name": "Noonan-Syndrom - Klinische Diagnose",
         "description": "Beispiel einer klinischen Diagnose des Noonan-Syndroms",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-molgen-variant-pah-pku"
+        },
+        "name": "PAH c.1222C>T - MolGen Variante",
+        "description": "Pathogene PAH-Variante p.Arg408Trp bei Phenylketonurie",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -1628,6 +1708,14 @@
         "name": "Stationärer Aufenthalt zur Gentherapie",
         "description": "Stationäre Aufnahme für Gentherapie",
         "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/mii-exa-seltene-studieneinschluss-anfrage"
+        },
+        "name": "Studieneinschlussempfehlung",
+        "description": "Empfehlung, den Patienten fuer eine Studie zu evaluieren",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage"
       },
       {
         "reference": {
