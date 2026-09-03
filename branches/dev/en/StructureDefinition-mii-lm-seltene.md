@@ -41,7 +41,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
   "name" : "MII_LM_Seltene",
   "title" : "MII LM SE",
   "status" : "active",
-  "date" : "2026-09-03T10:43:48+00:00",
+  "date" : "2026-09-03T17:01:55+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
