@@ -131,7 +131,7 @@ Description: "Therapieempfehlung für nicht-medikamentöse Interventionen bei se
     MII_EX_Seltene_Empfehlung_Publikation named Publikation 0..* MS
 
 // Example Instance for Early Detection Program
-Instance: example-early-detection-recommendation
+Instance: mii-exa-seltene-example-early-detection-recommendation
 InstanceOf: MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes
 Usage: #example
 Title: "Beispiel Früherkennungsprogramm-Empfehlung"
@@ -144,13 +144,13 @@ Description: "Beispiel einer Empfehlung für regelmäßige Früherkennungsunters
 * category[MVGenomSeqTherapieTyp].coding = MII_CS_Seltene_TherapieempfehlungTyp#symptomatic "Symptomatisch"
 * code.coding[snomed] = $SCT#312851005 "Screening for disorder"
 * code.text = "Jährliche kardiologische Kontrolle bei Marfan-Syndrom"
-* subject = Reference(Patient/patient-marfan-001)
+* subject = Reference(Patient/mii-exa-seltene-patient-marfan-001)
 // * requester = Reference(Practitioner/example) // Optional field, not required in MII
-* reasonReference = Reference(Condition/condition-marfan-clinical)
+* reasonReference = Reference(Condition/mii-exa-seltene-condition-marfan-clinical)
 * note.text = "Jährliche Echokardiographie zur Früherkennung von Aortenwurzeldilatation empfohlen"
 
 // PKU Condition Example for Nutrition Therapy
-Instance: condition-pku-diagnosis
+Instance: mii-exa-seltene-condition-pku-diagnosis
 InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Phenylketonurie - Genetische Diagnose"
@@ -173,7 +173,7 @@ Description: "Genetisch bestätigte Phenylketonurie (PKU)"
 * note.text = "Klassische PKU mit PAH-Gen Mutation c.1222C>T, erfordert lebenslange phenylalaninarme Diät"
 
 // Example Instance for Nutrition Therapy
-Instance: example-nutrition-therapy-recommendation
+Instance: mii-exa-seltene-example-nutrition-therapy-recommendation
 InstanceOf: MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes
 Usage: #example
 Title: "Beispiel Ernährungstherapie-Empfehlung"
@@ -189,5 +189,5 @@ Description: "Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie"
 * subject = Reference(mii-exa-seltene-patient)
 * occurrencePeriod.start = "2024-01-01"
 // * requester = Reference(Practitioner/example) // Optional field, not required in MII
-* reasonReference = Reference(Condition/condition-pku-diagnosis)
+* reasonReference = Reference(Condition/mii-exa-seltene-condition-pku-diagnosis)
 * note.text = "Lebenslange phenylalaninarme Diät erforderlich, regelmäßige Kontrolle der Phe-Spiegel"

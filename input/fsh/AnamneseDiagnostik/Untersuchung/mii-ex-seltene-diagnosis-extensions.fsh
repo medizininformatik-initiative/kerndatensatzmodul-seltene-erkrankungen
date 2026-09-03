@@ -9,7 +9,7 @@
 // mii-ext-seltene-onset-age. Ihre ValueSets bleiben bestehen, sie sind auch
 // eigenstaendig brauchbar.
 
-Extension: Penetrance
+Extension: MII_EX_Seltene_Penetrance
 Id: mii-ex-seltene-penetrance
 Title: "MII EX SE Penetrance"
 Description: "Extension to capture the penetrance of genetic variants associated with a rare disease"
@@ -22,7 +22,7 @@ Description: "Extension to capture the penetrance of genetic variants associated
 * ^context[+].type = #element
 * ^context[=].expression = "FamilyMemberHistory.condition"
 * value[x] only CodeableConcept or Quantity
-* valueCodeableConcept from PenetranceValueSet (extensible)
+* valueCodeableConcept from MII_VS_Seltene_Penetrance (extensible)
 * valueCodeableConcept ^short = "Qualitative penetrance description"
 * valueQuantity ^short = "Quantitative penetrance percentage"
 * valueQuantity.unit = "%"

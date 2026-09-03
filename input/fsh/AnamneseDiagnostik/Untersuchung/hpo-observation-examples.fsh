@@ -6,7 +6,7 @@
 // MARFAN SYNDROME PHENOTYPIC OBSERVATIONS
 // ============================================
 
-Instance: aortic-root-dilatation
+Instance: mii-exa-seltene-aortic-root-dilatation
 InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "Aortenwurzeldilatation - HPO-kodiert"
@@ -24,7 +24,7 @@ Description: "Echokardiographisch nachgewiesene Aortenwurzeldilatation"
 * method = $SCT#40701008 "Echocardiography"
 * note.text = "Aortenwurzeldurchmesser 48mm (Referenz <40mm)"
 
-Instance: lens-dislocation
+Instance: mii-exa-seltene-lens-dislocation
 InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "Linsenluxation - HPO-kodiert"
@@ -41,7 +41,7 @@ Description: "Ectopia lentis bei Marfan-Syndrom"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
 * bodySite = $SCT#81745001 "Eye structure"
 
-Instance: tall-stature
+Instance: mii-exa-seltene-tall-stature
 InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "Hochwuchs - HPO-kodiert"
@@ -58,7 +58,7 @@ Description: "Pathologisch erhöhte Körpergröße"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H "High"
 * note.text = "213cm - >99. Perzentile für Alter und Geschlecht"
 
-Instance: arachnodactyly
+Instance: mii-exa-seltene-arachnodactyly
 InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "Arachnodaktylie - HPO-kodiert"
@@ -79,7 +79,7 @@ Description: "Spinnenfingrigkeit bei Marfan-Syndrom"
 // NOONAN SYNDROME PHENOTYPIC OBSERVATIONS
 // ============================================
 
-Instance: hypertelorism
+Instance: mii-exa-seltene-hypertelorism
 InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "Hypertelorismus - HPO-kodiert"
@@ -96,7 +96,7 @@ Description: "Vergrößerter Augenabstand"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
 * note.text = "Interpupillardistanz 42mm (Referenz <35mm)"
 
-Instance: anteverted-nares
+Instance: mii-exa-seltene-anteverted-nares
 InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "Antevertierte Nares - HPO-kodiert"
@@ -111,7 +111,7 @@ Description: "Nach oben gerichtete Nasenlöcher"
 * component[status].valueCodeableConcept = $LNC#LA9633-4 "Present"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
 
-Instance: vsd
+Instance: mii-exa-seltene-vsd
 InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "Ventrikelseptumdefekt - HPO-kodiert"
@@ -129,7 +129,7 @@ Description: "Angeborener Ventrikelseptumdefekt"
 * method = $SCT#40701008 "Echocardiography"
 * note.text = "Perimembranöser VSD, Defektgröße 4mm"
 
-Instance: lymphedema
+Instance: mii-exa-seltene-lymphedema
 InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "Lymphödem - HPO-kodiert"
@@ -151,7 +151,7 @@ Description: "Peripheres Lymphödem"
 // CYSTIC FIBROSIS PHENOTYPIC OBSERVATIONS
 // ============================================
 
-Instance: recurrent-respiratory-infections
+Instance: mii-exa-seltene-recurrent-respiratory-infections
 InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "Rezidivierende Atemwegsinfekte - HPO-kodiert"
@@ -168,7 +168,7 @@ Description: "Häufige respiratorische Infektionen bei CF"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
 * note.text = ">6 Episoden/Jahr, Erreger: Pseudomonas aeruginosa"
 
-Instance: chronic-diarrhea
+Instance: mii-exa-seltene-chronic-diarrhea
 InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "Chronische Diarrhoe - HPO-kodiert"
@@ -185,7 +185,7 @@ Description: "Chronische Durchfälle bei CF"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A "Abnormal"
 * note.text = "Fettstühle, Malabsorption"
 
-Instance: failure-to-thrive
+Instance: mii-exa-seltene-failure-to-thrive
 InstanceOf: MII_PR_Seltene_HPO_Assessment
 Usage: #example
 Title: "Gedeihstörung - HPO-kodiert"

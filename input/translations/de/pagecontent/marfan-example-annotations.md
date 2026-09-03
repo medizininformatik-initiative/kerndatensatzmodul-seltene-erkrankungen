@@ -163,50 +163,50 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 #### Patient und Phänotyp
 | Ressource ID | Typ | Beschreibung | Datum | Status/Details |
 |--------------|-----|--------------|-------|----------------|
-| `patient-marfan-001` | Patient | 19-jähriger Mann | Geburt: ~2005 | ID: MRF-2024-001 |
-| `observation-height-001` | Observation | Körpergröße | 15.12.2024 | 2,13 m (HPO:0000098) |
-| `observation-leg-asymmetry` | Observation | Beinlängendifferenz | 15.12.2024 | Rechts verkürzt (HPO:0100559) |
+| `mii-exa-seltene-patient-marfan-001` | Patient | 19-jähriger Mann | Geburt: ~2005 | ID: MRF-2024-001 |
+| `mii-exa-seltene-observation-height-001` | Observation | Körpergröße | 15.12.2024 | 2,13 m (HPO:0000098) |
+| `mii-exa-seltene-observation-leg-asymmetry` | Observation | Beinlängendifferenz | 15.12.2024 | Rechts verkürzt (HPO:0100559) |
 
 #### Symptome und Befunde
 | Ressource ID | Typ | Beschreibung | Datum | HPO Code | Schweregrad |
 |--------------|-----|--------------|-------|----------|-------------|
-| `symptom-chest-pain` | Observation | Thoraxschmerzen | 15.12.2024 | HP:0100749 | Akut |
-| `symptom-aortic-root` | Observation | Aortenwurzeldilatation | 15.12.2024 | HP:0002616 | 48mm |
-| `symptom-aortic-regurg` | Observation | Aortenklappeninsuffizienz | 15.12.2024 | HP:0001659 | Grad II |
-| `symptom-mitral-regurg` | Observation | Mitralklappeninsuffizienz | 15.12.2024 | HP:0001653 | Grad I |
-| `symptom-cataract` | Observation | Katarakt bilateral | 15.10.2024 | HP:0000518 | Bilateral |
+| `mii-exa-seltene-symptom-chest-pain` | Observation | Thoraxschmerzen | 15.12.2024 | HP:0100749 | Akut |
+| `mii-exa-seltene-symptom-aortic-root` | Observation | Aortenwurzeldilatation | 15.12.2024 | HP:0002616 | 48mm |
+| `mii-exa-seltene-symptom-aortic-regurg` | Observation | Aortenklappeninsuffizienz | 15.12.2024 | HP:0001659 | Grad II |
+| `mii-exa-seltene-symptom-mitral-regurg` | Observation | Mitralklappeninsuffizienz | 15.12.2024 | HP:0001653 | Grad I |
+| `mii-exa-seltene-symptom-cataract` | Observation | Katarakt bilateral | 15.10.2024 | HP:0000518 | Bilateral |
 
 #### Diagnosen
 | Ressource ID | Typ | Beschreibung | Feststellungsdatum | ICD-10 | Orpha |
 |--------------|-----|--------------|-------------------|---------|-------|
 | `condition-marfan-confirmed` | Condition | Marfan-Syndrom | 15.12.2024 | Q87.4 | 558 |
-| `condition-cataract` | Condition | Katarakt bilateral | 15.10.2024 | H26.9 | - |
+| `mii-exa-seltene-condition-cataract` | Condition | Katarakt bilateral | 15.10.2024 | H26.9 | - |
 
 #### Prozeduren
 | Ressource ID | Typ | Beschreibung | Datum | OPS Code | Status |
 |--------------|-----|--------------|-------|----------|---------|
-| `procedure-cataract-surgery` | Procedure | Phakoemulsifikation mit IOL | 12.11.2024 | 5-144.5a | Abgeschlossen |
-| `procedure-aortic-planned` | Procedure | Aortenwurzelersatz (David-OP) | 15.03.2025 | 5-354.0a | Geplant |
+| `mii-exa-seltene-procedure-cataract-surgery` | Procedure | Phakoemulsifikation mit IOL | 12.11.2024 | 5-144.5a | Abgeschlossen |
+| `mii-exa-seltene-procedure-aortic-planned` | Procedure | Aortenwurzelersatz (David-OP) | 15.03.2025 | 5-354.0a | Geplant |
 
 #### Medikation
 | Ressource ID | Typ | Medikament | Dosierung | Start | Indikation |
 |--------------|-----|------------|-----------|-------|------------|
-| `medication-losartan` | MedicationStatement | Losartan | 50mg 1x täglich | 15.12.2024 | Aortenprotektion |
+| `mii-exa-seltene-medication-losartan` | MedicationStatement | Losartan | 50mg 1x täglich | 15.12.2024 | Aortenprotektion |
 
 #### Diagnostik
 | Ressource ID | Typ | Untersuchung | Datum | Wichtige Befunde |
 |--------------|-----|--------------|-------|------------------|
-| `observation-echo-aortic` | Observation | Aortenwurzel-Echo | 15.12.2024 | 48mm (pathologisch) |
-| `observation-echo-av` | Observation | AK-Insuffizienz Echo | 15.12.2024 | Grad II |
-| `observation-echo-mv` | Observation | MK-Insuffizienz Echo | 15.12.2024 | Grad I |
+| `mii-exa-seltene-observation-echo-aortic` | Observation | Aortenwurzel-Echo | 15.12.2024 | 48mm (pathologisch) |
+| `mii-exa-seltene-observation-echo-av` | Observation | AK-Insuffizienz Echo | 15.12.2024 | Grad II |
+| `mii-exa-seltene-observation-echo-mv` | Observation | MK-Insuffizienz Echo | 15.12.2024 | Grad I |
 
 #### Behandlungskontakte
 | Ressource ID | Typ | Beschreibung | Datum | Setting | Fachbereich |
 |--------------|-----|--------------|-------|---------|-------------|
-| `encounter-ophthalmology` | Encounter | Augenärztliche Konsultation | 15.10.2024 | Ambulant | Ophthalmologie |
-| `encounter-cataract-surgery` | Encounter | Katarakt-OP | 12.11.2024 | Tagesklinik | Ophthalmologie |
-| `encounter-cardiology` | Encounter | Kardiologische Erstvorstellung | 15.12.2024 | Ambulant | Kardiologie |
-| `encounter-surgery-planned` | Encounter | Geplante Herzchirurgie | 15.03.2025 | Stationär | Herzchirurgie |
+| `mii-exa-seltene-encounter-ophthalmology` | Encounter | Augenärztliche Konsultation | 15.10.2024 | Ambulant | Ophthalmologie |
+| `mii-exa-seltene-encounter-cataract-surgery` | Encounter | Katarakt-OP | 12.11.2024 | Tagesklinik | Ophthalmologie |
+| `mii-exa-seltene-encounter-cardiology` | Encounter | Kardiologische Erstvorstellung | 15.12.2024 | Ambulant | Kardiologie |
+| `mii-exa-seltene-encounter-surgery-planned` | Encounter | Geplante Herzchirurgie | 15.03.2025 | Stationär | Herzchirurgie |
 
 #### Klinische Beurteilungen
 | Ressource ID | Typ | Beschreibung | Datum | Wichtige Aspekte |
@@ -216,7 +216,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 ### Bundle
 | Ressource ID | Typ | Beschreibung | Anzahl Einträge |
 |--------------|-----|--------------|-----------------|
-| `bundle-marfan-complete` | Bundle | Transaction Bundle mit allen Ressourcen | 20 Ressourcen |
+| `mii-exa-seltene-bundle-marfan-complete` | Bundle | Transaction Bundle mit allen Ressourcen | 20 Ressourcen |
 
 ## Implementierung
 

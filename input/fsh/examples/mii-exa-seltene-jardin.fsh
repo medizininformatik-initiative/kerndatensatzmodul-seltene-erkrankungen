@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 // Beispiele zu den JARDIN-Datenpunkten (Issues #34, #35, #36, #38)
 //
-// Angebunden an patient-sma-001 aus dem bestehenden SMA-Fallbeispiel: ein
+// Angebunden an mii-exa-seltene-patient-sma-001 aus dem bestehenden SMA-Fallbeispiel: ein
 // neugeborenes Mädchen mit im Screening entdeckter SMA Typ 1, geboren am
 // 2024-07-01. Das ist kein beliebiger Aufhänger — bei SMA Typ 1 sind die hier
 // modellierten Datenpunkte gleichzeitig einschlägig: perinatale Ausgangswerte als Bezug für
@@ -36,7 +36,7 @@ Description: "Reifgeborenes in der 38. Woche. Bei SMA Typ 1 wichtig als Abgrenzu
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-gestationsalter)
 * status = #final
 * code = $LNC#76516-4 "Gestational age--at birth"
-* subject = Reference(patient-sma-001)
+* subject = Reference(mii-exa-seltene-patient-sma-001)
 * effectiveDateTime = "2024-07-01"
 * valueQuantity = 38 'wk' "Wochen"
 
@@ -49,7 +49,7 @@ Description: "Geburtsgewicht im Normbereich. Ausgangswert für die Beurteilung d
 * status = #final
 * category[vitalSigns] = $observation-category#vital-signs
 * code = $LNC#8339-4 "Birth weight Measured"
-* subject = Reference(patient-sma-001)
+* subject = Reference(mii-exa-seltene-patient-sma-001)
 * effectiveDateTime = "2024-07-01"
 * valueQuantity = 3240 'g' "Gramm"
 
@@ -62,7 +62,7 @@ Description: "Körperlänge bei Geburt, gemessen."
 * status = #final
 * category[vitalSigns] = $observation-category#vital-signs
 * code = $LNC#89269-5 "Body height Measured --at birth"
-* subject = Reference(patient-sma-001)
+* subject = Reference(mii-exa-seltene-patient-sma-001)
 * effectiveDateTime = "2024-07-01"
 * valueQuantity = 50 'cm' "Zentimeter"
 
@@ -79,7 +79,7 @@ Description: "Muscle power functions in SMA type 1, graded as a complete problem
 * status = #final
 * category[survey] = $observation-category#survey
 * code.coding = $icf#b730 "Muscle power functions"
-* subject = Reference(patient-sma-001)
+* subject = Reference(mii-exa-seltene-patient-sma-001)
 * effectiveDateTime = "2025-07-01"
 * component[extentOfImpairment].code = MII_CS_Seltene_ICFBeurteilungsmerkmal#extent-of-impairment
 * component[extentOfImpairment].valueCodeableConcept = https://terminologien.bfarm.de/fhir/CodeSystem/icf-q-ausmass-der-schaedigung#.4 "Schädigung voll ausgeprägt (komplett, total ...) 96-100 %"
@@ -93,7 +93,7 @@ Description: "Spinal cord in SMA type 1: degeneration of the anterior horn cells
 * status = #final
 * category[survey] = $observation-category#survey
 * code.coding = $icf#s120 "Spinal cord and related structures"
-* subject = Reference(patient-sma-001)
+* subject = Reference(mii-exa-seltene-patient-sma-001)
 * effectiveDateTime = "2025-07-01"
 * component[extentOfImpairmentBodyStructure].code = MII_CS_Seltene_ICFBeurteilungsmerkmal#extent-of-impairment-structure
 * component[extentOfImpairmentBodyStructure].valueCodeableConcept = https://terminologien.bfarm.de/fhir/CodeSystem/icf-q-ausmass-der-schaedigung-s#.3 "Schädigung erheblich ausgeprägt (hoch, äußerst ...) 50-95 %"
@@ -111,7 +111,7 @@ Description: "Eating in SMA type 1, and the reason chapter d takes two qualifier
 * status = #final
 * category[survey] = $observation-category#survey
 * code.coding = $icf#d550 "Eating"
-* subject = Reference(patient-sma-001)
+* subject = Reference(mii-exa-seltene-patient-sma-001)
 * effectiveDateTime = "2025-07-01"
 * component[capacity].code = MII_CS_Seltene_ICFBeurteilungsmerkmal#capacity
 * component[capacity].valueCodeableConcept = https://terminologien.bfarm.de/fhir/CodeSystem/icf-q-leistungsfaehigkeit-und-leistung#.4 "Problem voll ausgeprägt (komplett, total ...) 96-100 %"
@@ -128,7 +128,7 @@ Description: "Assistive products for mobility, graded as a substantial FACILITAT
 * status = #final
 * category[survey] = $observation-category#survey
 * code.coding = $icf#e1201 "Assistive products and technology for personal indoor and outdoor mobility and transportation"
-* subject = Reference(patient-sma-001)
+* subject = Reference(mii-exa-seltene-patient-sma-001)
 * effectiveDateTime = "2025-07-01"
 * component[facilitator].code = MII_CS_Seltene_ICFBeurteilungsmerkmal#facilitator
 * component[facilitator].valueCodeableConcept = https://terminologien.bfarm.de/fhir/CodeSystem/icf-q-foerderfaktoren#+3 "Förderfaktor erheblich ausgeprägt (hoch, äußerst ...) 50-95%"
@@ -178,7 +178,7 @@ Description: "Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 �
 * status = #active
 * scope = http://terminology.hl7.org/CodeSystem/consentscope#research
 * category = http://terminology.hl7.org/CodeSystem/consentcategorycodes#research
-* patient = Reference(patient-sma-001)
+* patient = Reference(mii-exa-seltene-patient-sma-001)
 * dateTime = "2024-08-15"
 * policyRule = http://terminology.hl7.org/CodeSystem/consentpolicycodes#cric
 
@@ -194,5 +194,5 @@ Description: "Teilnahme des SMA-Kindes am EURO-NMD-Register. Die Kennung ist das
 * status = #on-study
 * period.start = "2024-08-15"
 * study = Reference(mii-exa-seltene-register-euro-nmd)
-* individual = Reference(patient-sma-001)
+* individual = Reference(mii-exa-seltene-patient-sma-001)
 * consent = Reference(mii-exa-seltene-register-einwilligung)

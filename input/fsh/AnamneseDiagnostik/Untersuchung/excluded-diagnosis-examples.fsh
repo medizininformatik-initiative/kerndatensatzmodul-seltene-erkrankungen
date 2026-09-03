@@ -6,7 +6,7 @@
 // ============================================
 
 // Example 1: Marfan Syndrome - Clinically Excluded
-Instance: example-marfan-excluded-clinical
+Instance: mii-exa-seltene-example-marfan-excluded-clinical
 InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Marfan-Syndrom - Klinisch ausgeschlossen"
@@ -28,13 +28,13 @@ Description: "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose"
 * abatementDateTime = "2024-12-15"  // When it was ruled out
 // Evidence showing why it was excluded
 * evidence[+].code.text = "Normale Aortenwurzel"
-* evidence[=].detail = Reference(Observation/aortic-root-normal)
+* evidence[=].detail = Reference(Observation/mii-exa-seltene-aortic-root-normal)
 * evidence[+].code.text = "Keine Linsenluxation"
 * evidence[=].detail = Reference(Observation/lens-examination-normal)
 * note.text = "Marfan-Syndrom klinisch ausgeschlossen. Ghent-Kriterien nicht erfüllt. Aortenwurzel normwertig, keine ophthalmologischen Manifestationen, Körpergröße im Normbereich."
 
 // Example 2: Ehlers-Danlos Syndrome - Clinically Excluded
-Instance: example-eds-excluded-clinical
+Instance: mii-exa-seltene-example-eds-excluded-clinical
 InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Ehlers-Danlos-Syndrom - Ausgeschlossen"
@@ -61,7 +61,7 @@ Description: "Differentialdiagnose EDS ausgeschlossen"
 // ============================================
 
 // Example 3: SMA - Genetically Excluded
-Instance: example-sma-excluded-genetic
+Instance: mii-exa-seltene-example-sma-excluded-genetic
 InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "SMA - Genetisch ausgeschlossen"
@@ -80,13 +80,13 @@ Description: "Spinale Muskelatrophie genetisch ausgeschlossen"
 * abatementDateTime = "2024-07-26"
 // Genetic evidence showing normal results
 * evidence[+].code = $SCT#106221001 "Genetic finding"
-* evidence[=].detail = Reference(Observation/molgen-smn1-normal-copies)
+* evidence[=].detail = Reference(Observation/mii-exa-seltene-molgen-smn1-normal-copies)
 * evidence[+].code = $SCT#405824009 "Genetic test"
-* evidence[=].detail = Reference(DiagnosticReport/molgen-sma-negative)
+* evidence[=].detail = Reference(DiagnosticReport/mii-exa-seltene-molgen-sma-negative)
 * note.text = "SMN1-Gen: 2 Kopien nachgewiesen (Normalbefund). SMN2-Gen: 2 Kopien. SMA genetisch ausgeschlossen."
 
 // Example 4: Duchenne MD - Genetically Excluded, Becker MD confirmed instead
-Instance: example-dmd-excluded-bmd-confirmed
+Instance: mii-exa-seltene-example-dmd-excluded-bmd-confirmed
 InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Duchenne ausgeschlossen - Becker bestätigt"
@@ -110,7 +110,7 @@ Description: "Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muske
 * note.text = "In-frame Deletion Exon 45-47 im DMD-Gen nachgewiesen. Vereinbar mit Becker-Muskeldystrophie, NICHT Duchenne. Duchenne-Muskeldystrophie ausgeschlossen."
 
 // Example 5: Cystic Fibrosis - Excluded after positive screening
-Instance: example-cf-excluded-after-screening
+Instance: mii-exa-seltene-example-cf-excluded-after-screening
 InstanceOf: MII_PR_Seltene_GeneticDiagnosis
 Usage: #example
 Title: "Mukoviszidose - Nach positivem Screening ausgeschlossen"
@@ -140,7 +140,7 @@ Description: "CF nach auffälligem Neugeborenenscreening genetisch ausgeschlosse
 // ============================================
 
 // Example 6: Multiple Excluded Differential Diagnoses
-Instance: example-metabolic-myopathy-excluded
+Instance: mii-exa-seltene-example-metabolic-myopathy-excluded
 InstanceOf: MII_PR_Seltene_ClinicalDiagnosis
 Usage: #example
 Title: "Metabolische Myopathie - Ausgeschlossen"
@@ -168,7 +168,7 @@ Description: "Metabolische Myopathie als Differentialdiagnose ausgeschlossen"
 // SUPPORTING OBSERVATIONS FOR EXCLUDED DIAGNOSES
 // ============================================
 
-Instance: aortic-root-normal
+Instance: mii-exa-seltene-aortic-root-normal
 InstanceOf: Observation
 Usage: #example
 Title: "Aortenwurzel - Normalbefund"
@@ -185,7 +185,7 @@ Description: "Normale Aortenwurzel, schließt Marfan aus"
 * referenceRange.low.unit = "mm"
 * referenceRange.high.unit = "mm"
 
-Instance: molgen-smn1-normal-copies
+Instance: mii-exa-seltene-molgen-smn1-normal-copies
 InstanceOf: Observation
 Usage: #example
 Title: "SMN1 - Normale Kopienanzahl"
@@ -203,7 +203,7 @@ Description: "2 Kopien SMN1 - schließt SMA aus"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
 * note.text = "Normale Kopienanzahl des SMN1-Gens. SMA ausgeschlossen."
 
-Instance: molgen-sma-negative
+Instance: mii-exa-seltene-molgen-sma-negative
 InstanceOf: DiagnosticReport
 Usage: #example
 Title: "SMA Genetik - Negativbefund"
@@ -213,6 +213,6 @@ Description: "Genetischer Test schließt SMA aus"
 * code = $LNC#51969-4 "Genetic analysis report"
 * subject = Reference(mii-exa-seltene-patient)
 * effectiveDateTime = "2024-07-26"
-* result[+] = Reference(molgen-smn1-normal-copies)
+* result[+] = Reference(mii-exa-seltene-molgen-smn1-normal-copies)
 * conclusion = "SMN1-Gen: 2 Kopien (Normalbefund). SMN2-Gen: 2 Kopien. Spinale Muskelatrophie ausgeschlossen."
 * conclusionCode = $SCT#280413001 "Normal result"

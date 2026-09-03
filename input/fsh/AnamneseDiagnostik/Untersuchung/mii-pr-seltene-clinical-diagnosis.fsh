@@ -13,7 +13,7 @@ Description: "Profile for clinical diagnosis of rare diseases with HPO phenotype
 * clinicalStatus MS
 * verificationStatus MS
 // category BEWUSST OHNE modulweite Bindung. Am 2026-09-02 war hier kurzzeitig
-// ClinicalDiagnosisCategoryVS extensible gebunden; die Bindung wurde noch am
+// MII_VS_Seltene_ClinicalDiagnosisCategory extensible gebunden; die Bindung wurde noch am
 // selben Tag zurueckgenommen, weil sie einen Denkfehler zementiert haette:
 // Condition.category beantwortet in FHIR die Frage nach der ROLLE der Condition
 // im Datensatz — der Kurztext lautet woertlich "problem-list-item |

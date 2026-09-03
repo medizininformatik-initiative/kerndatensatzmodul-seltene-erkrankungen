@@ -1,0 +1,55 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "mii-exa-seltene-example-early-detection-recommendation",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2027.0.0-ballot.rc1"
+    ]
+  },
+  "intent": "proposal",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
+          "code": "early-detection",
+          "display": "Früherkennung"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
+          "code": "symptomatic",
+          "display": "Symptomatisch"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "312851005",
+        "display": "Screening for disorder"
+      }
+    ],
+    "text": "Jährliche kardiologische Kontrolle bei Marfan-Syndrom"
+  },
+  "status": "draft",
+  "priority": "routine",
+  "subject": {
+    "reference": "Patient/mii-exa-seltene-patient-marfan-001"
+  },
+  "reasonReference": [
+    {
+      "reference": "Condition/mii-exa-seltene-condition-marfan-clinical"
+    }
+  ],
+  "note": [
+    {
+      "text": "Jährliche Echokardiographie zur Früherkennung von Aortenwurzeldilatation empfohlen"
+    }
+  ]
+}

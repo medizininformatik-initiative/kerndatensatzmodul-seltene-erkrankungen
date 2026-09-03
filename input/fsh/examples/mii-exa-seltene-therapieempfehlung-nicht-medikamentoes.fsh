@@ -15,10 +15,10 @@ Description: "Beispiel einer nicht-medikamentösen Therapieempfehlung für Aorte
 * code.coding[ops].display = "Andere Operationen an Herzklappen: Aortenklappe: Rekonstruktion der Aortenwurzel mit Implantation einer Gefäßprothese nach David"
 * code.coding[snomed] = $SCT#428179006 "Replacement of aortic root"
 * code.text = "Composite-Graft-Implantation (David-OP)"
-* subject = Reference(patient-marfan-001)
+* subject = Reference(mii-exa-seltene-patient-marfan-001)
 * occurrenceDateTime = "2025-03-15"
 * authoredOn = "2024-12-15"
-* reasonReference = Reference(Condition/condition-marfan-clinical)
+* reasonReference = Reference(Condition/mii-exa-seltene-condition-marfan-clinical)
 * reasonReference.display = "Progrediente Aortenwurzeldilatation bei Marfan-Syndrom"
 * note.text = "Geplanter elektiver Eingriff bei progredienter Aortenwurzeldilatation (48mm) zur Prävention einer Aortendissektion"
 
@@ -36,7 +36,7 @@ Description: "Beispiel einer nicht-medikamentösen Therapieempfehlung für Physi
 * category[MVGenomSeqTherapieTyp].coding = MII_CS_Seltene_TherapieempfehlungTyp#symptomatic "Symptomatisch"
 * code.coding[snomed] = $SCT#91251008 "Physical therapy procedure"
 * code.text = "Physiotherapie zur Erhaltung der motorischen Funktionen"
-* subject = Reference(patient-sma-001)
+* subject = Reference(mii-exa-seltene-patient-sma-001)
 * occurrenceTiming.repeat.frequency = 2
 * occurrenceTiming.repeat.period = 1
 * occurrenceTiming.repeat.periodUnit = #wk

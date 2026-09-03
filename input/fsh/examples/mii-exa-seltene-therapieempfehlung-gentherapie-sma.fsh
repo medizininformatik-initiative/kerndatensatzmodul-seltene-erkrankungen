@@ -13,7 +13,7 @@ Description: "Beispiel einer medikamentösen Therapieempfehlung für Gentherapie
 * medicationCodeableConcept.coding[=].code = #MLU3LU3EVV
 * medicationCodeableConcept.coding[=].display = "ONASEMNOGENE ABEPARVOVEC"
 * medicationCodeableConcept.text = "Zolgensma"
-* subject = Reference(patient-sma-001)
+* subject = Reference(mii-exa-seltene-patient-sma-001)
 * reasonReference = Reference(Condition/sma-diagnosis)
 * reasonReference.display = "Spinale Muskelatrophie Typ 1"
 * note.text = "Einmalige intravenöse Infusion der Gentherapie"
@@ -32,11 +32,11 @@ Description: "Beispiel einer medikamentösen Therapieempfehlung für Losartan zu
 * medicationCodeableConcept.coding[+].system = $ATC_DE
 * medicationCodeableConcept.coding[=].code = #C09CA01
 * medicationCodeableConcept.coding[=].display = "Losartan"
-* subject = Reference(patient-marfan-001)
+* subject = Reference(mii-exa-seltene-patient-marfan-001)
 * dosageInstruction[+].text = "50mg 1x täglich"
 * dosageInstruction[=].timing.repeat.frequency = 1
 * dosageInstruction[=].timing.repeat.period = 1
 * dosageInstruction[=].timing.repeat.periodUnit = #d
 * dosageInstruction[=].doseAndRate[+].doseQuantity = 50 'mg' "mg"
-* reasonReference = Reference(Condition/condition-marfan-clinical)
+* reasonReference = Reference(Condition/mii-exa-seltene-condition-marfan-clinical)
 * reasonReference.display = "Marfan-Syndrom mit Aortenwurzeldilatation"

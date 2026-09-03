@@ -76,7 +76,7 @@ Description: "Profile for HPO-based phenotypic observations in the context of ra
 * derivedFrom MS
 * derivedFrom ^short = "Verwandte Beobachtungen oder Bewertungen"
 
-ValueSet: HPOPhenotypicObservationCodes
+ValueSet: MII_VS_Seltene_HPOPhenotypicObservationCodes
 Id: mii-vs-seltene-hpo-phenotypic-observation-codes
 Title: "HPO Phenotypic Observation Codes"
 Description: "Human Phenotype Ontology codes for phenotypic observations"
@@ -84,7 +84,7 @@ Description: "Human Phenotype Ontology codes for phenotypic observations"
 * ^status = #active
 * codes from system $HPO
 
-ValueSet: HPOPresenceStatus
+ValueSet: MII_VS_Seltene_HPOPresenceStatus
 Id: mii-vs-seltene-hpo-presence-status
 Title: "HPO Phenotype Presence Status"
 Description: "LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern."
@@ -94,7 +94,7 @@ Description: "LOINC codes for indicating presence or absence of phenotypic featu
 * $LNC#LA9633-4 "Present"
 * $LNC#LA9634-2 "Absent"
 
-ValueSet: HPOSeverity
+ValueSet: MII_VS_Seltene_HPOSeverity
 Id: mii-vs-seltene-hpo-severity
 Title: "HPO Severity"
 Description: "HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Phenomics IG component pattern."

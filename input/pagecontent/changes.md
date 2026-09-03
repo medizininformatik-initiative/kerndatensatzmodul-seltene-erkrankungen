@@ -3,7 +3,7 @@ This page tracks the differences between versions, beginning with the difference
 
 ---
 
-### Version 2027.0.0-ballot
+### Version 2027.0.0-ballot.rc1
 
 #### New features
 
@@ -22,8 +22,14 @@ This page tracks the differences between versions, beginning with the difference
 - `remove` six extensions removed that were **never wired into any profile**: `mii-ex-seltene-age-of-onset`, `mii-ex-seltene-genetic-basis`, `mii-ex-seltene-inheritance-pattern`, `mii-ext-seltene-onset-age`, `mii-ext-seltene-phenotypic-pattern`, `mii-ext-seltene-syndrome-category`. The git history contains no commit that took any of them into a profile via `named`; they were published in 2026.0.1 nonetheless. `age-of-onset` and `onset-age` were also the same concept under two ids — created on 2025-07-31 and 2025-08-07, a week apart, the second batch recreating the first under the `mii-ex-` convention without removing it. Eleven extensions become five, and all five are in use. Their value sets remain, being useful on their own
 - `change` element names of the logical model moved to lowerCamelCase. PascalCase violates the FHIR rule `eld-20` and produced 195 warnings. 62 segment names renamed with acronyms handled correctly (`HPOTerm` → `hpoTerm`, `BMI` → `bmi`), and the 90 mapping targets in 11 profiles moved with them. **Element paths therefore changed**
 - `change` codes of `mii-pr-seltene-taillenumfang` (LOINC `8280-0` → SNOMED `276361009`) and `mii-pr-seltene-hueftumfang` (LOINC `56063-1` → SNOMED `284472007`). **Consumers querying by the old codes will no longer match**
-- `change` extension `von-seltene-betroffen` renamed to `mii-ex-von-se-betroffen`. It was the only extension without a prefix and followed neither of the two conventions present in the module. Since no `^url` was set, SUSHI derives the canonical from the id — **so the canonical changes with it**. Its value set keeps `von-seltene-betroffen-vs` for now, as it carries an explicit `^url`
+- `change` **naming brought in line with the module convention throughout.** The rules in `qc/custom.rules.yaml` require `mii-<type>-seltene-…` for ids and `MII_<TYPE>_Seltene_…` for names; both were only partly applied. Affected:
+  - 15 resource names, among them `HPOSeverity` → `MII_VS_Seltene_HPOSeverity`, `PenetranceValueSet` → `MII_VS_Seltene_Penetrance`, `MII_LM_SE` → `MII_LM_Seltene` and `MII_CPS_SE_CapabilityStatement` → `MII_CPS_Seltene_CapabilityStatement`. Names are not part of the canonical — **no URL changes here**
+  - two ids: the extension `von-seltene-betroffen` (briefly `mii-ex-von-se-betroffen` on 2026-09-02) is now `mii-ex-seltene-von-se-betroffen`, and its value set `von-seltene-betroffen-vs` is now `mii-vs-seltene-von-se-betroffen`. **Both canonicals change**
+  - 86 example instances gain the `mii-exa-seltene-` prefix, with all 281 cross-references and case-example page references carried along
+
+  The break is deliberate: the module is not implemented anywhere yet, and the run-up to the ballot is the last moment at which it is cheap
 - `change` example instance `example` renamed to `mii-exa-seltene-patient`, profiled on `MII_PR_Person_Patient`
+- `change` all conformance resources now carry `2027.0.0-ballot.rc1`. `sushi-config.yaml`, `input/fsh/rulesets/version.fsh` and `package.json` each claimed a different value; 56 resources carried the version of the already published predecessor `2026.0.1`, nine carried none at all. The `meta.profile` claims of the examples follow
 
 #### Bug fixes
 

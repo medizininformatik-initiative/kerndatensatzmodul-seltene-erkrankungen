@@ -9,7 +9,7 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * ^status = #active
 
 // Add SE-specific extension to the inherited MolGen profile
-* extension contains VonSEBetroffen named vonSEBetroffen 1..1 MS
+* extension contains MII_EX_Seltene_VonSEBetroffen named vonSEBetroffen 1..1 MS
 * extension[vonSEBetroffen] ^short = "Gibt an, ob das Familienmitglied von der gleichen seltenen Erkrankung betroffen ist"
 * extension[vonSEBetroffen] ^definition = "Extension zur Angabe, ob ein Familienmitglied von der gleichen seltenen Erkrankung betroffen ist wie der Patient"
 * status MS
@@ -98,7 +98,7 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * deceasedDate 0..1 MS
 
 // alternative extension that could be used by HL7: condition-ver-status
-* extension contains VonSEBetroffen named vonSEBetroffen 1..1 MS
+* extension contains MII_EX_Seltene_VonSEBetroffen named vonSEBetroffen 1..1 MS
 
 * reasonCode MS
 * reasonCode.coding 1.. MS

@@ -12,7 +12,7 @@
 // Verlust — die Seltenheit steht im Orpha-Code der Diagnose.
 // Nicht geloescht, sondern retired: die URL ist seit 2026.0.1 publiziert und
 // bleibt aufloesbar, der Status haelt Nachnutzer davon ab, sie erneut zu binden.
-ValueSet: ClinicalDiagnosisCategoryVS
+ValueSet: MII_VS_Seltene_ClinicalDiagnosisCategory
 Id: mii-vs-seltene-clinical-diagnosis-category
 Title: "MII VS SE Clinical Diagnosis Category (retired)"
 Description: "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code."
@@ -39,7 +39,7 @@ Description: "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung kli
 * $SCT#85828009 "Autoimmune disease"
 
 // HPO Age of Onset Value Set
-ValueSet: HPOAgeOfOnsetValueSet
+ValueSet: MII_VS_Seltene_HPOAgeOfOnset
 Id: mii-vs-seltene-hpo-age-of-onset
 Title: "MII VS SE HPO Age of Onset"
 Description: "Value set containing HPO terms for age of onset of diseases"
@@ -73,7 +73,7 @@ Description: "Value set containing HPO terms for age of onset of diseases"
 * http://human-phenotype-ontology.org#HP:0003584 "Late onset"
 
 // HPO Inheritance Pattern Value Set
-ValueSet: HPOInheritancePatternValueSet
+ValueSet: MII_VS_Seltene_HPOInheritancePattern
 Id: mii-vs-seltene-hpo-inheritance-pattern
 Title: "MII VS SE HPO Inheritance Pattern"
 Description: "Value set containing HPO terms for modes of inheritance"
@@ -115,7 +115,7 @@ Description: "Value set containing HPO terms for modes of inheritance"
 // Gegenstueck. Die Extension, die es band (mii-ex-seltene-genetic-basis), wurde
 // am selben Tag entfernt, weil sie nie an ein Profil angeschlossen war.
 // Nicht geloescht, sondern retired: die URL ist seit 2026.0.1 publiziert.
-ValueSet: GeneticBasisValueSet
+ValueSet: MII_VS_Seltene_GeneticBasis
 Id: mii-vs-seltene-genetic-basis
 Title: "MII VS SE Genetic Basis (retired)"
 Description: "RETIRED. Nicht verwenden. Acht der neun enthaltenen SNOMED-Codes bezeichnen etwas anderes als ihr Display behauptet oder existieren nicht; das ValueSet muss neu erstellt werden."
@@ -155,7 +155,7 @@ Description: "RETIRED. Nicht verwenden. Acht der neun enthaltenen SNOMED-Codes b
 // lautet "... in which age of onset is typically later in life and in which penetrance is
 // dependent on the age of the subject" und deckt damit die altersabhaengige Penetranz ab,
 // die die alte Fassung meinte.
-ValueSet: PenetranceValueSet
+ValueSet: MII_VS_Seltene_Penetrance
 Id: mii-vs-seltene-penetrance
 Title: "MII VS SE Penetrance"
 Description: "Value set for qualitative descriptions of genetic penetrance, drawn from the HPO branch Inheritance qualifier (HP:0034335). Note that the graded terms (high/moderate/low penetrance) are subtypes of incomplete penetrance, not alternatives to complete penetrance."

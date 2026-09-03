@@ -3,7 +3,7 @@
 // weil sie nie an ein Profil angeschlossen war; dieses ValueSet lag mit in
 // derselben Datei und waere sonst kommentarlos mitverschwunden, obwohl es in
 // 2026.0.1 publiziert ist und eigenstaendig brauchbar bleibt.
-ValueSet: SyndromeCategoryVS
+ValueSet: MII_VS_Seltene_SyndromeCategory
 Id: mii-vs-seltene-syndrome-category
 Title: "Syndrome Category Value Set"
 Description: "Categories for classifying syndrome types in rare diseases"

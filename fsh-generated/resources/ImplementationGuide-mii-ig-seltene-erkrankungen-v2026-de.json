@@ -156,7 +156,7 @@
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de",
   "version": "2027.0.0-ballot.rc1",
-  "name": "MIIIGModulSelteneErkrankungen",
+  "name": "MII_IG_Seltene_Erkrankungen",
   "title": "MII IG Kerndatensatz-Modul Seltene Erkrankungen",
   "status": "active",
   "experimental": false,
@@ -256,7 +256,7 @@
     "resource": [
       {
         "reference": {
-          "reference": "Observation/observation-alt-001"
+          "reference": "Observation/mii-exa-seltene-observation-alt-001"
         },
         "name": "ALT Labor - Post-therapeutisch",
         "description": "ALT Wert nach Gentherapie",
@@ -264,7 +264,7 @@
       },
       {
         "reference": {
-          "reference": "Encounter/encounter-ambulant-001"
+          "reference": "Encounter/mii-exa-seltene-encounter-ambulant-001"
         },
         "name": "Ambulante Erstvorstellung",
         "description": "Erstvorstellung im SMA-Zentrum",
@@ -272,7 +272,7 @@
       },
       {
         "reference": {
-          "reference": "Encounter/encounter-nachsorge-001"
+          "reference": "Encounter/mii-exa-seltene-encounter-nachsorge-001"
         },
         "name": "Ambulante Nachsorge",
         "description": "Erster Nachsorgetermin nach Gentherapie",
@@ -280,7 +280,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/anteverted-nares"
+          "reference": "Observation/mii-exa-seltene-anteverted-nares"
         },
         "name": "Antevertierte Nares - HPO-kodiert",
         "description": "Nach oben gerichtete Nasenlöcher",
@@ -288,7 +288,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/symptom-aortic-regurg"
+          "reference": "Observation/mii-exa-seltene-symptom-aortic-regurg"
         },
         "name": "Aortenklappeninsuffizienz",
         "description": "Moderate Aortenklappeninsuffizienz Grad II",
@@ -296,7 +296,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/aortic-root-normal"
+          "reference": "Observation/mii-exa-seltene-aortic-root-normal"
         },
         "name": "Aortenwurzel - Normalbefund",
         "description": "Normale Aortenwurzel, schließt Marfan aus",
@@ -304,7 +304,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/symptom-aortic-root"
+          "reference": "Observation/mii-exa-seltene-symptom-aortic-root"
         },
         "name": "Aortenwurzeldilatation",
         "description": "Pathologisch erweiterte Aortenwurzel",
@@ -312,7 +312,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/aortic-root-dilatation"
+          "reference": "Observation/mii-exa-seltene-aortic-root-dilatation"
         },
         "name": "Aortenwurzeldilatation - HPO-kodiert",
         "description": "Echokardiographisch nachgewiesene Aortenwurzeldilatation",
@@ -320,7 +320,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/arachnodactyly"
+          "reference": "Observation/mii-exa-seltene-arachnodactyly"
         },
         "name": "Arachnodaktylie - HPO-kodiert",
         "description": "Spinnenfingrigkeit bei Marfan-Syndrom",
@@ -328,7 +328,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/observation-ast-001"
+          "reference": "Observation/mii-exa-seltene-observation-ast-001"
         },
         "name": "AST Labor - Post-therapeutisch",
         "description": "AST Wert nach Gentherapie",
@@ -336,7 +336,7 @@
       },
       {
         "reference": {
-          "reference": "Encounter/encounter-ophthalmology"
+          "reference": "Encounter/mii-exa-seltene-encounter-ophthalmology"
         },
         "name": "Augenärztliche Konsultation",
         "description": "Erstvorstellung beim Augenarzt wegen Katarakt",
@@ -344,7 +344,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/observation-leg-asymmetry"
+          "reference": "Observation/mii-exa-seltene-observation-leg-asymmetry"
         },
         "name": "Beinlängendifferenz",
         "description": "Beinlängendifferenz mit rechts verkürztem Bein",
@@ -368,7 +368,7 @@
       },
       {
         "reference": {
-          "reference": "ServiceRequest/example-nutrition-therapy-recommendation"
+          "reference": "ServiceRequest/mii-exa-seltene-example-nutrition-therapy-recommendation"
         },
         "name": "Beispiel Ernährungstherapie-Empfehlung",
         "description": "Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie",
@@ -376,7 +376,7 @@
       },
       {
         "reference": {
-          "reference": "ServiceRequest/example-early-detection-recommendation"
+          "reference": "ServiceRequest/mii-exa-seltene-example-early-detection-recommendation"
         },
         "name": "Beispiel Früherkennungsprogramm-Empfehlung",
         "description": "Beispiel einer Empfehlung für regelmäßige Früherkennungsuntersuchungen",
@@ -496,7 +496,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/molgen-variant-brca1-pathogenic"
+          "reference": "Observation/mii-exa-seltene-molgen-variant-brca1-pathogenic"
         },
         "name": "BRCA1 Pathogene Variante - MolGen",
         "description": "Pathogene BRCA1-Variante",
@@ -504,7 +504,7 @@
       },
       {
         "reference": {
-          "reference": "DiagnosticReport/molgen-brca-panel"
+          "reference": "DiagnosticReport/mii-exa-seltene-molgen-brca-panel"
         },
         "name": "BRCA1/2 Panel - Diagnostische Implikation",
         "description": "Hereditäres Karzinom-Panel",
@@ -512,7 +512,7 @@
       },
       {
         "reference": {
-          "reference": "DiagnosticReport/molgen-cf-diagnostic"
+          "reference": "DiagnosticReport/mii-exa-seltene-molgen-cf-diagnostic"
         },
         "name": "CF Diagnostische Implikation - MolGen",
         "description": "Mukoviszidose genetischer Befund",
@@ -520,7 +520,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/molgen-variant-cftr-f508del-homozygous"
+          "reference": "Observation/mii-exa-seltene-molgen-variant-cftr-f508del-homozygous"
         },
         "name": "CFTR F508del Homozygot - MolGen Variante",
         "description": "Homozygote F508del Mutation bei Mukoviszidose",
@@ -528,7 +528,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/chronic-diarrhea"
+          "reference": "Observation/mii-exa-seltene-chronic-diarrhea"
         },
         "name": "Chronische Diarrhoe - HPO-kodiert",
         "description": "Chronische Durchfälle bei CF",
@@ -544,7 +544,7 @@
       },
       {
         "reference": {
-          "reference": "DiagnosticReport/molgen-diagnostic-dmd"
+          "reference": "DiagnosticReport/mii-exa-seltene-molgen-diagnostic-dmd"
         },
         "name": "DMD Diagnostische Implikation",
         "description": "Diagnostischer Bericht Duchenne-Muskeldystrophie",
@@ -552,7 +552,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/molgen-variant-dmd-deletion-exon45-47"
+          "reference": "Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47"
         },
         "name": "DMD Exon 45-47 Deletion - MolGen Variante",
         "description": "Out-of-frame Deletion im DMD-Gen",
@@ -560,7 +560,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/example-dmd-excluded-bmd-confirmed"
+          "reference": "Condition/mii-exa-seltene-example-dmd-excluded-bmd-confirmed"
         },
         "name": "Duchenne ausgeschlossen - Becker bestätigt",
         "description": "Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muskeldystrophie",
@@ -568,7 +568,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/example-dmd-genetic-diagnosis"
+          "reference": "Condition/mii-exa-seltene-example-dmd-genetic-diagnosis"
         },
         "name": "Duchenne-Muskeldystrophie - Genetisch bestätigt",
         "description": "Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie",
@@ -576,7 +576,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/observation-echo-av"
+          "reference": "Observation/mii-exa-seltene-observation-echo-av"
         },
         "name": "Echokardiographie - Aortenklappeninsuffizienz",
         "description": "Beurteilung der Aortenklappeninsuffizienz",
@@ -584,7 +584,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/observation-echo-aortic"
+          "reference": "Observation/mii-exa-seltene-observation-echo-aortic"
         },
         "name": "Echokardiographie - Aortenwurzeldurchmesser",
         "description": "Aortenwurzeldurchmesser in der Echokardiographie",
@@ -592,7 +592,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/observation-echo-mv"
+          "reference": "Observation/mii-exa-seltene-observation-echo-mv"
         },
         "name": "Echokardiographie - Mitralklappeninsuffizienz",
         "description": "Beurteilung der Mitralklappeninsuffizienz",
@@ -600,7 +600,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/example-eds-excluded-clinical"
+          "reference": "Condition/mii-exa-seltene-example-eds-excluded-clinical"
         },
         "name": "Ehlers-Danlos-Syndrom - Ausgeschlossen",
         "description": "Differentialdiagnose EDS ausgeschlossen",
@@ -608,7 +608,7 @@
       },
       {
         "reference": {
-          "reference": "FamilyMemberHistory/family-history-001"
+          "reference": "FamilyMemberHistory/mii-exa-seltene-family-history-001"
         },
         "name": "Familienanamnese - Urgroßmutter mit Muskelerkrankung",
         "description": "Urgroßmutter mit unbekannter Muskelerkrankung",
@@ -616,7 +616,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/variant-fbn1-001"
+          "reference": "Observation/mii-exa-seltene-variant-fbn1-001"
         },
         "name": "FBN1 Gen - Pathogene Mutation",
         "description": "Pathogene FBN1-Mutation bei Marfan-Syndrom",
@@ -624,7 +624,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/failure-to-thrive"
+          "reference": "Observation/mii-exa-seltene-failure-to-thrive"
         },
         "name": "Gedeihstörung - HPO-kodiert",
         "description": "Mangelhafte Gewichtszunahme",
@@ -632,7 +632,7 @@
       },
       {
         "reference": {
-          "reference": "Procedure/procedure-gentherapy-001"
+          "reference": "Procedure/mii-exa-seltene-procedure-gentherapy-001"
         },
         "name": "Gentherapie Verabreichung",
         "description": "Verabreichung des Gentherapeutikums für SMA",
@@ -640,7 +640,7 @@
       },
       {
         "reference": {
-          "reference": "Procedure/procedure-aortic-planned"
+          "reference": "Procedure/mii-exa-seltene-procedure-aortic-planned"
         },
         "name": "Geplante Aortenwurzelersatz-Operation",
         "description": "Geplante David-Operation (Valve-sparing root replacement)",
@@ -648,7 +648,7 @@
       },
       {
         "reference": {
-          "reference": "Encounter/encounter-surgery-planned"
+          "reference": "Encounter/mii-exa-seltene-encounter-surgery-planned"
         },
         "name": "Geplante Herzchirurgie",
         "description": "Geplanter stationärer Aufenthalt für Aortenwurzelersatz",
@@ -656,7 +656,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/example-brca1-genetic-diagnosis"
+          "reference": "Condition/mii-exa-seltene-example-brca1-genetic-diagnosis"
         },
         "name": "Hereditäres Mamma- und Ovarialkarzinom-Syndrom",
         "description": "Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom",
@@ -664,7 +664,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/tall-stature"
+          "reference": "Observation/mii-exa-seltene-tall-stature"
         },
         "name": "Hochwuchs - HPO-kodiert",
         "description": "Pathologisch erhöhte Körpergröße",
@@ -728,7 +728,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/hypertelorism"
+          "reference": "Observation/mii-exa-seltene-hypertelorism"
         },
         "name": "Hypertelorismus - HPO-kodiert",
         "description": "Vergrößerter Augenabstand",
@@ -776,7 +776,7 @@
       },
       {
         "reference": {
-          "reference": "Encounter/encounter-cardiology"
+          "reference": "Encounter/mii-exa-seltene-encounter-cardiology"
         },
         "name": "Kardiologische Erstvorstellung",
         "description": "Ambulante kardiologische Erstvorstellung bei Thoraxschmerzen",
@@ -784,7 +784,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/condition-cataract"
+          "reference": "Condition/mii-exa-seltene-condition-cataract"
         },
         "name": "Katarakt bilateral",
         "description": "Beidseitige Katarakt bei Marfan-Syndrom",
@@ -792,7 +792,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/symptom-cataract"
+          "reference": "Observation/mii-exa-seltene-symptom-cataract"
         },
         "name": "Katarakt bilateral",
         "description": "Beidseitige Katarakt als ophthalmologische Manifestation",
@@ -800,7 +800,7 @@
       },
       {
         "reference": {
-          "reference": "Procedure/procedure-cataract-surgery"
+          "reference": "Procedure/mii-exa-seltene-procedure-cataract-surgery"
         },
         "name": "Katarakt-Operation",
         "description": "Phakoemulsifikation mit Intraokularlinsenimplantation",
@@ -808,7 +808,7 @@
       },
       {
         "reference": {
-          "reference": "Encounter/encounter-cataract-surgery"
+          "reference": "Encounter/mii-exa-seltene-encounter-cataract-surgery"
         },
         "name": "Katarakt-Operation Aufenthalt",
         "description": "Tagesklinischer Aufenthalt für Katarakt-Operation",
@@ -816,7 +816,7 @@
       },
       {
         "reference": {
-          "reference": "ClinicalImpression/clinical-impression-erstvorstellung"
+          "reference": "ClinicalImpression/mii-exa-seltene-clinical-impression-erstvorstellung"
         },
         "name": "Klinische Beurteilung - Erstvorstellung",
         "description": "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum",
@@ -824,7 +824,7 @@
       },
       {
         "reference": {
-          "reference": "ClinicalImpression/clinical-impression-nachsorge"
+          "reference": "ClinicalImpression/mii-exa-seltene-clinical-impression-nachsorge"
         },
         "name": "Klinische Beurteilung - Nachsorge",
         "description": "Nachsorgeuntersuchung nach Gentherapie",
@@ -832,7 +832,7 @@
       },
       {
         "reference": {
-          "reference": "ClinicalImpression/clinical-impression-seltene-assessment"
+          "reference": "ClinicalImpression/mii-exa-seltene-clinical-impression-seltene-assessment"
         },
         "name": "Konsultation ZSE bei V.a. Marfan-Syndrom",
         "description": "Konsultation im Zentrum für Seltene Erkrankungen mit kardiologischer Mitbeurteilung bei V.a. Marfan-Syndrom",
@@ -848,7 +848,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/observation-height-001"
+          "reference": "Observation/mii-exa-seltene-observation-height-001"
         },
         "name": "Körpergröße - Hochwuchs",
         "description": "Pathologisch erhöhte Körpergröße bei Marfan-Syndrom",
@@ -856,7 +856,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/lens-dislocation"
+          "reference": "Observation/mii-exa-seltene-lens-dislocation"
         },
         "name": "Linsenluxation - HPO-kodiert",
         "description": "Ectopia lentis bei Marfan-Syndrom",
@@ -864,7 +864,7 @@
       },
       {
         "reference": {
-          "reference": "MedicationStatement/medication-losartan"
+          "reference": "MedicationStatement/mii-exa-seltene-medication-losartan"
         },
         "name": "Losartan Therapie",
         "description": "Losartan zur Progressionshemmung der Aortenwurzeldilatation",
@@ -872,7 +872,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/lymphedema"
+          "reference": "Observation/mii-exa-seltene-lymphedema"
         },
         "name": "Lymphödem - HPO-kodiert",
         "description": "Peripheres Lymphödem",
@@ -880,7 +880,7 @@
       },
       {
         "reference": {
-          "reference": "Patient/patient-marfan-001"
+          "reference": "Patient/mii-exa-seltene-patient-marfan-001"
         },
         "name": "Marfan Patient - 19-jähriger Mann",
         "description": "19-jähriger männlicher Patient mit bestätigtem Marfan-Syndrom",
@@ -888,7 +888,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/condition-marfan-genetic"
+          "reference": "Condition/mii-exa-seltene-condition-marfan-genetic"
         },
         "name": "Marfan-Syndrom - Genetische Diagnose",
         "description": "Genetisch bestätigtes Marfan-Syndrom mit FBN1-Mutation",
@@ -896,7 +896,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/example-marfan-excluded-clinical"
+          "reference": "Condition/mii-exa-seltene-example-marfan-excluded-clinical"
         },
         "name": "Marfan-Syndrom - Klinisch ausgeschlossen",
         "description": "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose",
@@ -904,7 +904,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/example-marfan-clinical-diagnosis"
+          "reference": "Condition/mii-exa-seltene-example-marfan-clinical-diagnosis"
         },
         "name": "Marfan-Syndrom - Klinische Diagnose",
         "description": "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend auf phänotypischen Merkmalen",
@@ -912,7 +912,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/condition-marfan-clinical"
+          "reference": "Condition/mii-exa-seltene-condition-marfan-clinical"
         },
         "name": "Marfan-Syndrom - Klinische Diagnose",
         "description": "Klinisch bestätigtes Marfan-Syndrom",
@@ -920,7 +920,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/condition-marfan-suspected"
+          "reference": "Condition/mii-exa-seltene-condition-marfan-suspected"
         },
         "name": "Marfan-Syndrom - Verdacht",
         "description": "Verdacht auf Marfan-Syndrom",
@@ -928,7 +928,7 @@
       },
       {
         "reference": {
-          "reference": "Bundle/bundle-marfan-complete"
+          "reference": "Bundle/mii-exa-seltene-bundle-marfan-complete"
         },
         "name": "Marfan-Syndrom Fallbeispiel - Vollständiges Transaction Bundle",
         "description": "Transaction Bundle mit allen Ressourcen für den Marfan-Syndrom Fall",
@@ -936,7 +936,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/example-metabolic-myopathy-excluded"
+          "reference": "Condition/mii-exa-seltene-example-metabolic-myopathy-excluded"
         },
         "name": "Metabolische Myopathie - Ausgeschlossen",
         "description": "Metabolische Myopathie als Differentialdiagnose ausgeschlossen",
@@ -1035,7 +1035,7 @@
           "reference": "Patient/mii-exa-seltene-patient"
         },
         "name": "MII EXA SE Beispielpatient",
-        "description": "Generischer Beispielpatient des Moduls Seltene Erkrankungen, referenziert von den Beispielen, die keinen eigenen Fallbezug haben. Fuer die ausgearbeiteten Fallbeispiele siehe patient-sma-001 und patient-marfan-001.",
+        "description": "Generischer Beispielpatient des Moduls Seltene Erkrankungen, referenziert von den Beispielen, die keinen eigenen Fallbezug haben. Fuer die ausgearbeiteten Fallbeispiele siehe mii-exa-seltene-patient-sma-001 und mii-exa-seltene-patient-marfan-001.",
         "exampleBoolean": true
       },
       {
@@ -1439,7 +1439,15 @@
       },
       {
         "reference": {
-          "reference": "Observation/symptom-mitral-regurg"
+          "reference": "StructureDefinition/mii-ex-seltene-von-se-betroffen"
+        },
+        "name": "MII_EX_Seltene_VonSEBetroffen",
+        "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-seltene-symptom-mitral-regurg"
         },
         "name": "Mitralklappeninsuffizienz",
         "description": "Milde Mitralklappeninsuffizienz Grad I",
@@ -1447,7 +1455,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/example-cf-genetic"
+          "reference": "Condition/mii-exa-seltene-example-cf-genetic"
         },
         "name": "Mukoviszidose - Genetisch bestätigt",
         "description": "Genetisch bestätigte Mukoviszidose",
@@ -1455,7 +1463,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/example-cf-clinical"
+          "reference": "Condition/mii-exa-seltene-example-cf-clinical"
         },
         "name": "Mukoviszidose - Klinischer Verdacht",
         "description": "Initiale klinische Verdachtsdiagnose Mukoviszidose",
@@ -1463,7 +1471,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/example-cf-excluded-after-screening"
+          "reference": "Condition/mii-exa-seltene-example-cf-excluded-after-screening"
         },
         "name": "Mukoviszidose - Nach positivem Screening ausgeschlossen",
         "description": "CF nach auffälligem Neugeborenenscreening genetisch ausgeschlossen",
@@ -1471,7 +1479,7 @@
       },
       {
         "reference": {
-          "reference": "Encounter/encounter-screening-001"
+          "reference": "Encounter/mii-exa-seltene-encounter-screening-001"
         },
         "name": "Neugeborenenscreening",
         "description": "Neugeborenenscreening mit SMA-Verdacht",
@@ -1479,7 +1487,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/example-noonan-clinical-diagnosis"
+          "reference": "Condition/mii-exa-seltene-example-noonan-clinical-diagnosis"
         },
         "name": "Noonan-Syndrom - Klinische Diagnose",
         "description": "Beispiel einer klinischen Diagnose des Noonan-Syndroms",
@@ -1487,7 +1495,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/condition-pku-diagnosis"
+          "reference": "Condition/mii-exa-seltene-condition-pku-diagnosis"
         },
         "name": "Phenylketonurie - Genetische Diagnose",
         "description": "Genetisch bestätigte Phenylketonurie (PKU)",
@@ -1495,7 +1503,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/recurrent-respiratory-infections"
+          "reference": "Observation/mii-exa-seltene-recurrent-respiratory-infections"
         },
         "name": "Rezidivierende Atemwegsinfekte - HPO-kodiert",
         "description": "Häufige respiratorische Infektionen bei CF",
@@ -1503,7 +1511,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/example-sma-excluded-genetic"
+          "reference": "Condition/mii-exa-seltene-example-sma-excluded-genetic"
         },
         "name": "SMA - Genetisch ausgeschlossen",
         "description": "Spinale Muskelatrophie genetisch ausgeschlossen",
@@ -1511,7 +1519,7 @@
       },
       {
         "reference": {
-          "reference": "DiagnosticReport/molgen-diagnostic-implication-sma"
+          "reference": "DiagnosticReport/mii-exa-seltene-molgen-diagnostic-implication-sma"
         },
         "name": "SMA Diagnostische Implikation - MolGen",
         "description": "Diagnostischer Bericht zur SMA-Genetik",
@@ -1519,7 +1527,7 @@
       },
       {
         "reference": {
-          "reference": "Bundle/bundle-sma-complete"
+          "reference": "Bundle/mii-exa-seltene-bundle-sma-complete"
         },
         "name": "SMA Fallbeispiel - Vollständiges Transaction Bundle",
         "description": "Transaction Bundle mit allen Ressourcen für den SMA Fall inkl. Diagnoseverlauf",
@@ -1527,7 +1535,7 @@
       },
       {
         "reference": {
-          "reference": "DiagnosticReport/molgen-sma-negative"
+          "reference": "DiagnosticReport/mii-exa-seltene-molgen-sma-negative"
         },
         "name": "SMA Genetik - Negativbefund",
         "description": "Genetischer Test schließt SMA aus",
@@ -1535,7 +1543,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/condition-sma-genetic"
+          "reference": "Condition/mii-exa-seltene-condition-sma-genetic"
         },
         "name": "SMA Genetische Diagnose",
         "description": "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion",
@@ -1543,7 +1551,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/condition-sma-clinical"
+          "reference": "Condition/mii-exa-seltene-condition-sma-clinical"
         },
         "name": "SMA Klinische Diagnose",
         "description": "Klinische Diagnose SMA Typ 1 bei Erstvorstellung",
@@ -1551,7 +1559,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/observation-sma-screening"
+          "reference": "Observation/mii-exa-seltene-observation-sma-screening"
         },
         "name": "SMA Neugeborenenscreening Ergebnis",
         "description": "Positives SMA-Screening beim Neugeborenenscreening",
@@ -1559,7 +1567,7 @@
       },
       {
         "reference": {
-          "reference": "Patient/patient-sma-001"
+          "reference": "Patient/mii-exa-seltene-patient-sma-001"
         },
         "name": "SMA Patient - Neugeborenes Mädchen",
         "description": "Neugeborenes Mädchen mit bestätigter SMA Typ 1",
@@ -1567,7 +1575,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/example-sma-genetic-diagnosis"
+          "reference": "Condition/mii-exa-seltene-example-sma-genetic-diagnosis"
         },
         "name": "SMA Typ 1 - Genetisch bestätigte Diagnose",
         "description": "Beispiel einer genetisch bestätigten Diagnose der spinalen Muskelatrophie Typ 1",
@@ -1575,7 +1583,7 @@
       },
       {
         "reference": {
-          "reference": "Condition/condition-sma-suspected"
+          "reference": "Condition/mii-exa-seltene-condition-sma-suspected"
         },
         "name": "SMA Verdacht - Neugeborenenscreening",
         "description": "Verdacht auf SMA beim Neugeborenenscreening",
@@ -1583,7 +1591,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/molgen-smn1-normal-copies"
+          "reference": "Observation/mii-exa-seltene-molgen-smn1-normal-copies"
         },
         "name": "SMN1 - Normale Kopienanzahl",
         "description": "2 Kopien SMN1 - schließt SMA aus",
@@ -1591,7 +1599,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/variant-smn1-001"
+          "reference": "Observation/mii-exa-seltene-variant-smn1-001"
         },
         "name": "SMN1 Gen - Homozygote Deletion",
         "description": "0 Kopien des SMN1-Gens nachgewiesen",
@@ -1599,7 +1607,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/molgen-variant-smn1-deletion"
+          "reference": "Observation/mii-exa-seltene-molgen-variant-smn1-deletion"
         },
         "name": "SMN1 Gen Deletion - MolGen Variante",
         "description": "Homozygote Deletion des SMN1-Gens bei SMA",
@@ -1607,7 +1615,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/variant-smn2-001"
+          "reference": "Observation/mii-exa-seltene-variant-smn2-001"
         },
         "name": "SMN2 Gen - Kopienanzahl",
         "description": "2 Kopien des SMN2-Gens nachgewiesen",
@@ -1615,7 +1623,7 @@
       },
       {
         "reference": {
-          "reference": "Encounter/encounter-stationaer-001"
+          "reference": "Encounter/mii-exa-seltene-encounter-stationaer-001"
         },
         "name": "Stationärer Aufenthalt zur Gentherapie",
         "description": "Stationäre Aufnahme für Gentherapie",
@@ -1647,7 +1655,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/symptom-chest-pain"
+          "reference": "Observation/mii-exa-seltene-symptom-chest-pain"
         },
         "name": "Thoraxschmerzen",
         "description": "Akute Thoraxschmerzen als Präsentationssymptom",
@@ -1655,7 +1663,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/observation-plt-001"
+          "reference": "Observation/mii-exa-seltene-observation-plt-001"
         },
         "name": "Thrombozytenzahl - Post-therapeutisch",
         "description": "Thrombozytenzahl nach Gentherapie",
@@ -1663,7 +1671,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/observation-troponin-003"
+          "reference": "Observation/mii-exa-seltene-observation-troponin-003"
         },
         "name": "Troponin T hs - 01.08.2024",
         "description": "Troponin T hochsensitiv nach Therapie",
@@ -1671,7 +1679,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/observation-troponin-004"
+          "reference": "Observation/mii-exa-seltene-observation-troponin-004"
         },
         "name": "Troponin T hs - 12.08.2024",
         "description": "Troponin T hochsensitiv bei Nachsorge",
@@ -1679,7 +1687,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/observation-troponin-001"
+          "reference": "Observation/mii-exa-seltene-observation-troponin-001"
         },
         "name": "Troponin T hs - 22.07.2024",
         "description": "Troponin T hochsensitiv Baseline",
@@ -1687,7 +1695,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/observation-troponin-002"
+          "reference": "Observation/mii-exa-seltene-observation-troponin-002"
         },
         "name": "Troponin T hs - 28.07.2024",
         "description": "Troponin T hochsensitiv vor Therapie",
@@ -1695,7 +1703,7 @@
       },
       {
         "reference": {
-          "reference": "Observation/vsd"
+          "reference": "Observation/mii-exa-seltene-vsd"
         },
         "name": "Ventrikelseptumdefekt - HPO-kodiert",
         "description": "Angeborener Ventrikelseptumdefekt",
@@ -1703,18 +1711,10 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/von-seltene-betroffen-vs"
+          "reference": "ValueSet/mii-vs-seltene-von-se-betroffen"
         },
         "name": "Von SE betroffen Value Set",
         "description": "ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Verwendet SNOMED CT codes für internationale Interoperabilität.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-ex-von-se-betroffen"
-        },
-        "name": "VonSEBetroffen",
-        "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
         "exampleBoolean": false
       }
     ],

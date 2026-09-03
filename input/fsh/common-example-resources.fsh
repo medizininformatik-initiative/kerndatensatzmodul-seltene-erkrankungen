@@ -18,7 +18,7 @@ Instance: mii-exa-seltene-patient
 InstanceOf: $mii-pr-person-patient
 Usage: #example
 Title: "MII EXA SE Beispielpatient"
-Description: "Generischer Beispielpatient des Moduls Seltene Erkrankungen, referenziert von den Beispielen, die keinen eigenen Fallbezug haben. Fuer die ausgearbeiteten Fallbeispiele siehe patient-sma-001 und patient-marfan-001."
+Description: "Generischer Beispielpatient des Moduls Seltene Erkrankungen, referenziert von den Beispielen, die keinen eigenen Fallbezug haben. Fuer die ausgearbeiteten Fallbeispiele siehe mii-exa-seltene-patient-sma-001 und mii-exa-seltene-patient-marfan-001."
 * identifier.system = "http://test-krankenhaus.de/fhir/sid/patienten"
 * identifier.value = "12345"
 * name[name].use = #official

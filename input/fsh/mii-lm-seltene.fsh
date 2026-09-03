@@ -1,4 +1,4 @@
-Logical: MII_LM_SE
+Logical: MII_LM_Seltene
 Parent: Element
 Id: mii-lm-seltene
 Title: "MII LM SE"
@@ -99,7 +99,7 @@ Description: "MII LogicalModel Modul Seltene Erkraknungen"
 Mapping: SE-vomLogicalModelzuFHIR
 Id: FHIR
 Title: "SE LogicalModel FHIR Mapping"
-Source: MII_LM_SE
+Source: MII_LM_Seltene
 Target: "http://hl7.org/fhir"
 * anamneseUndDiagnostik -> "Condition | Observation | ClinicalImpression"
   * untersuchungsdatum -> "ClinicalImpression.effectiveDateTime"
@@ -175,7 +175,7 @@ Target: "http://hl7.org/fhir"
 Mapping: SE-vomLogicalModelzuNARSE
 Id: NARSE
 Title: "SE LogicalModel NARSE Mapping"
-Source: MII_LM_SE
+Source: MII_LM_Seltene
 Target: "https://www.se-atlas.de/narse"
 * anamneseUndDiagnostik -> "-"
   * untersuchungsdatum -> "Nicht vorhanden"
@@ -248,7 +248,7 @@ Target: "https://www.se-atlas.de/narse"
 Mapping: SE-vomLogicalModelzumERDRICDS
 Id: ERDRICDS
 Title: "SE LogicalModel ERDRI CDS Mapping"
-Source: MII_LM_SE
+Source: MII_LM_Seltene
 Target: "https://eu-rd-platform.jrc.ec.europa.eu/set-of-common-data-elements_en"
 * anamneseUndDiagnostik -> "-"
   * untersuchungsdatum -> "Nicht vorhanden"
@@ -322,7 +322,7 @@ Target: "https://eu-rd-platform.jrc.ec.europa.eu/set-of-common-data-elements_en"
 Mapping: SE-vomLogicalModelzumModellvorhabenGenomsequenzierung
 Id: ModellvorhabenGenomsequenzierung
 Title: "SE LogicalModel ModellvorhabenGenomsequenzierung Mapping"
-Source: MII_LM_SE
+Source: MII_LM_Seltene
 Target: "https://www.medizininformatik-initiative.de/de/modellvorhaben-genomsequenzierung"
 * anamneseUndDiagnostik -> "-"
   * untersuchungsdatum -> "Nicht direkt vorhanden; gibt nur Daten für vergangene Diagnostik, Proben, etc."
