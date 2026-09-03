@@ -1,0 +1,45 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-seltene-hpo-presence-status",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-seltene-hpo-presence-status</b></p><a name=\"de-mii-vs-seltene-hpo-presence-status\"> </a><a name=\"de-hcmii-vs-seltene-hpo-presence-status\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/LA9633-4/\">LA9633-4</a></td><td>Present</td></tr><tr><td><a href=\"https://loinc.org/LA9634-2/\">LA9634-2</a></td><td>Absent</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status",
+  "version" : "2027.0.0-ballot",
+  "name" : "HPOPresenceStatus",
+  "title" : "HPO Phenotype Presence Status",
+  "status" : "active",
+  "date" : "2026-09-03T06:42:09+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "copyright" : "This value set includes content from LOINC which is copyrighted by Regenstrief Institute, Inc.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "LA9633-4",
+        "display" : "Present"
+      },
+      {
+        "code" : "LA9634-2",
+        "display" : "Absent"
+      }]
+    }]
+  }
+}

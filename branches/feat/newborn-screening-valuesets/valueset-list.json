@@ -1,0 +1,303 @@
+{
+  "codeSystems" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-blutgruppe",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_Blutgruppe",
+    "title" : "MII VS SE Blutgruppe",
+    "description" : "ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List für 882-1",
+    "systems" : ["http://loinc.org", "http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-seltene-blutgruppe.html" : "MII PR SE Blutgruppe"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "ClinicalDiagnosisCategoryVS",
+    "title" : "MII VS SE Clinical Diagnosis Category",
+    "description" : "Value set for categorizing clinical diagnoses of rare diseases",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-consanguinity",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_Consanguinity",
+    "title" : "MII VS Seltene Erkrankungen Consanguinity",
+    "description" : "ValueSet zur Angabe der Blutsverwandtschaft der Eltern (Consanguinity): Ja / Nein / Unbekannt / Nicht erfasst (SNOMED CT), entsprechend dem Consanguinity Value Set aus RD-CDM v2.0.0.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-seltene-consanguinity.html" : "MII PR SE Consanguinity"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-empfehlung-status-begruendung",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_Empfehlung_StatusBegruendung",
+    "title" : "MII VS SE Empfehlung Status Begründung",
+    "description" : "ValueSet für Begründung bei fehlender Empfehlung",
+    "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-empfehlung-status-begruendung"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-seltene-therapieplan.html" : "MII PR SE Therapieplan"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-genetic-basis",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "GeneticBasisValueSet",
+    "title" : "MII VS SE Genetic Basis",
+    "description" : "Value set for types of genetic basis of rare diseases",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-ex-seltene-genetic-basis.html" : "MII EX SE Genetic Basis"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-age-of-onset",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "HPOAgeOfOnsetValueSet",
+    "title" : "MII VS SE HPO Age of Onset",
+    "description" : "Value set containing HPO terms for age of onset of diseases",
+    "systems" : ["http://human-phenotype-ontology.org"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-ex-seltene-age-of-onset.html" : "MII EX SE Age of Onset"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-change-status",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_HPO_ChangeStatus",
+    "title" : "MII VS Seltene Erkrankungen HPO Change Status",
+    "description" : "ValueSet für Änderungsstatus von HPO-Phänotypen gemäß Modellvorhaben Genomsequenzierung",
+    "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status"]
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-inheritance-pattern",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "HPOInheritancePatternValueSet",
+    "title" : "MII VS SE HPO Inheritance Pattern",
+    "description" : "Value set containing HPO terms for modes of inheritance",
+    "systems" : ["http://human-phenotype-ontology.org"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-ex-seltene-inheritance-pattern.html" : "MII EX SE Inheritance Pattern"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "HPOPhenotypicObservationCodes",
+    "title" : "HPO Phenotypic Observation Codes",
+    "description" : "Human Phenotype Ontology codes for phenotypic observations",
+    "systems" : ["http://human-phenotype-ontology.org"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-seltene-clinical-impression.html" : "MII Profile SE Clinical Impression",
+    "StructureDefinition-mii-pr-seltene-symptom-condition.html" : "MII Profile SE Symptom Condition",
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
+    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "HPOPresenceStatus",
+    "title" : "HPO Phenotype Presence Status",
+    "description" : "LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern.",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "HPOSeverity",
+    "title" : "HPO Severity",
+    "description" : "HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Phenomics IG component pattern.",
+    "systems" : ["http://human-phenotype-ontology.org"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-seltene-symptom-condition.html" : "MII Profile SE Symptom Condition",
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-narse-therapietyp",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_NARSE_Therapietyp",
+    "title" : "MII VS Seltene Erkrankungen NARSE Therapietyp",
+    "description" : "ValueSet für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen",
+    "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-seltene-therapie-durchgefuehrt.html" : "MII PR Seltene Erkrankungen Therapie Durchgeführt"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-acylcarnitine-dbs",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_NBS_Acylcarnitine_DBS",
+    "title" : "MII VS Seltene Erkrankungen NBS Acylcarnitine (Trockenblut)",
+    "description" : "Acylcarnitin- und Carnitin-Analyte in Trockenblut (dried blood spot) — die Messgrößen des MS/MS-Acylcarnitinprofils im Neugeborenenscreening (Fettsäureoxidationsstörungen, Organoazidopathien, Carnitinzyklusdefekte). Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb NICHT vollständig gegenüber LOINC: enthalten ist der nach SNOMED gemappte Teil. Für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all.",
+    "systems" : ["http://loinc.org"]
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-aminoacid-dbs",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_NBS_AminoAcid_DBS",
+    "title" : "MII VS Seltene Erkrankungen NBS Aminosäuren (Trockenblut)",
+    "description" : "Aminosäure-Analyte in Trockenblut — die Messgrößen des MS/MS-Aminosäureprofils im Neugeborenenscreening (Phenylketonurie, Ahornsirupkrankheit, Homocystinurie, Tyrosinämie, Harnstoffzyklusdefekte). Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb NICHT vollständig gegenüber LOINC; für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all.",
+    "systems" : ["http://loinc.org"]
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-dbs-all",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_NBS_DBS_All",
+    "title" : "MII VS Seltene Erkrankungen NBS alle Trockenblut-Analyte (LOINC)",
+    "description" : "Alle LOINC-Codes, deren Untersuchungsmaterial Trockenblut (dried blood spot) ist — intensional über die LOINC-Eigenschaft SYSTEM definiert und damit vollständig. Enthält Analyte, Quotienten, Panels und Interpretationscodes nebeneinander sowie Analytik ausserhalb des Neugeborenenscreenings; für klinisch abgegrenzte Teilmengen dienen die gruppierten ValueSets mii-vs-seltene-nbs-*-dbs.",
+    "systems" : ["http://loinc.org"]
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-enzyme-activity-dbs",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_NBS_EnzymeActivity_DBS",
+    "title" : "MII VS Seltene Erkrankungen NBS Enzymaktivitäten (Trockenblut)",
+    "description" : "Enzymaktivitäten (katalytische Konzentration), die in Trockenblut bestimmt werden — u. a. Biotinidase und Galaktose-Enzyme des deutschen Neugeborenenscreenings sowie die Enzyme lysosomaler Speicherkrankheiten, die international gescreent werden.",
+    "systems" : ["http://loinc.org"]
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-hemoglobin-dbs",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_NBS_Hemoglobin_DBS",
+    "title" : "MII VS Seltene Erkrankungen NBS Hämoglobin-Fraktionen (Trockenblut)",
+    "description" : "Hämoglobin-Fraktionen in Trockenblut, bezogen auf das Gesamthämoglobin — die Messgrößen des Screenings auf Sichelzellkrankheit und weitere Hämoglobinopathien. Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb deutlich unvollständig gegenüber LOINC (rund ein Drittel der DBS-Hämoglobin-Codes); für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all.",
+    "systems" : ["http://loinc.org"]
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-ratio-dbs",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_NBS_Ratio_DBS",
+    "title" : "MII VS Seltene Erkrankungen NBS Quotienten (Trockenblut)",
+    "description" : "Diagnostische Quotienten aus Trockenblut-Analyten. Im Neugeborenenscreening tragen die Verhältnisse (z. B. C3/C2, Phe/Tyr) einen großen Teil der diagnostischen Trennschärfe, weil sie von der Probenqualität weniger abhängen als Einzelwerte.",
+    "systems" : ["http://loinc.org"]
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-target-analyte",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_NBS_TargetAnalyte",
+    "title" : "MII VS Seltene Erkrankungen NBS Leitanalyten der Zielkrankheiten",
+    "description" : "Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie § 17 Abs. 1 (20 Zielkrankheiten) und § 23 ff. (Mukoviszidose). Je Zielkrankheit der Analyt, über den sie im Screening erkannt wird.",
+    "systems" : ["http://loinc.org"]
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-penetrance",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "PenetranceValueSet",
+    "title" : "MII VS SE Penetrance",
+    "description" : "Value set for qualitative descriptions of genetic penetrance",
+    "systems" : ["http://human-phenotype-ontology.org"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-ex-seltene-penetrance.html" : "MII EX SE Penetrance"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-symptom-change-status-combined",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_Symptom_ChangeStatus_Combined",
+    "title" : "MII VS Seltene Erkrankungen Symptom Change Status (Combined)",
+    "description" : "ValueSet zur Dokumentation von Änderungen bei Symptomen/Phänotypen über Zeit. Kombiniert MVGenomSeq-spezifische Codes mit SNOMED CT-Codes für internationale Interoperabilität.",
+    "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status",
+    "http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-syndrome-category",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "SyndromeCategoryVS",
+    "title" : "Syndrome Category Value Set",
+    "description" : "Categories for classifying syndrome types in rare diseases",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-ext-seltene-syndrome-category.html" : "Syndrome Category Extension"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_TherapieempfehlungStrategie",
+    "title" : "MII VS SE Therapieempfehlung Strategie",
+    "description" : "ValueSet für Strategietypen von Therapieempfehlungen bei seltenen Erkrankungen (Modellvorhaben GenomSeq)",
+    "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"]
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-medikamentoes",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes",
+    "title" : "MII VS SE Therapieempfehlung Strategie - Medikamentös",
+    "description" : "ValueSet für medikamentöse Therapiestrategien (für MedicationRequest Profile) - Verwendet für MedicationRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq",
+    "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_TherapieempfehlungStrategieNichtMedikamentoes",
+    "title" : "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
+    "description" : "ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profile) - Verwendet für ServiceRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq",
+    "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-typ",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Seltene_TherapieempfehlungTyp",
+    "title" : "MII VS SE Therapieempfehlung Typ",
+    "description" : "ValueSet für Therapietypen (kausal/symptomatisch) bei seltenen Erkrankungen (Modellvorhaben GenomSeq)",
+    "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/von-seltene-betroffen-vs",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "VonSEBetroffenVS",
+    "title" : "Von SE betroffen Value Set",
+    "description" : "ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Verwendet SNOMED CT codes für internationale Interoperabilität.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0532",
+    "http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-von-seltene-betroffen.html" : "VonSEBetroffen"
+  }]
+}

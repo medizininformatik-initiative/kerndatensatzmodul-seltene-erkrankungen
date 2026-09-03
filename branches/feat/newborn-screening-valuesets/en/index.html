@@ -1,0 +1,614 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Home - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Network of University Medicine — Data Integration Center)" src="assets/images/logo-num-diz-en.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Font size">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Font size: default">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Font size: larger">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Font size: largest">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Back to top">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Seltene Erkrankungen</span>
+            <br/>
+            <span style="display:inline-block;">2027.0.0-ballot - 
+
+
+
+  <img alt="Germany flag" src="assets/images/deu.svg" height="16" title="Germany"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- Menu in the IG's DEFAULT language (English).
+     The IG Publisher renders the navigation from this file. To translate it,
+     ship a per-language copy at input/translations/<lang>/includes/menu.xml —
+     this is the mechanism the HL7 reference IG FHIR/multi-lang-test-ig uses and
+     the ONLY way to get a TRANSLATED menu: the `menu:` property in
+     sushi-config.yaml generates a single menu.xml that cannot be translated.
+     Rules: keep the href targets identical across languages; dropdown parents
+     must link to a REAL page (href="#" is rejected by the template's menu QA);
+     only one sub-menu level is supported.
+
+     STRUCTURE: this menu implements the TF-KDS-agreed module menu (see
+     docs/page-structure.md for the full structure with cardinalities).
+     Entries marked OPTIONAL (0..1) below may be removed per module — the
+     removal procedure per entry is in docs/optional-pages.md in this
+     repository. Entries without a marker are mandatory (1..1).
+
+     LINK-ONLY ENTRIES (no page of their own):
+     - "Datasets and Descriptions" points at the Logical Models page
+       (logical-models.html) — the module's datasets ARE its logical models.
+       NEITHER Artifacts-Summary anchor is usable for the TF-KDS "Sec.
+       15.0.2" target: the numeric #2 is POSITIONAL (grouping index — wrong
+       section whenever the artifact mix differs from the full standard set),
+       and the browser-generated NAMED AnchorJS anchor
+       (#structures-logical-models) is invisible to the IG Publisher's link
+       validator — it injects a marker anchor into the menu (rendered as an
+       EMPTY menu entry) and logs a broken-link ERROR on every page's QA.
+       Full analysis: docs/page-structure.md, "Datasets and Descriptions".
+     - The four Conformance entries point at the KDS-wide conformance rules of
+       the Meta module (kerndatensatz-meta). INTERIM: the Meta module has no
+       published IG rendering yet (only a CI build with no conformance pages),
+       so these link to the authoritative meta-wiki sections; switch them to
+       the Meta IG's menu entries once a stable rendering exists (Gate item in
+       docs/page-structure.md). -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Guidance<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Guidance</a></li>
+      <li><a href="implementer-guidance.html">Guidance for Implementers</a></li>
+      <li><a href="clinical-genetic-diagnosis-guide.html">Clinical vs. Genetic Diagnosis</a></li>
+      <li><a href="coding-best-practices.html">Coding Best Practices</a></li>
+      <li><a href="newborn-screening.html">Newborn Screening</a></li>
+      <!-- link-only entry: Logical-Models section of the Artifacts Summary (see header note) -->
+      <li><a href="logical-models.html">Datasets and Descriptions</a></li>
+      <li><a href="uml-diagrams.html">UML Diagrams</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <!-- The parent and the first four entries link to the KDS-wide conformance
+         rules of the Meta module (INTERIM: meta-wiki; see header note). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Conformance<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Conformance</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">General Requirements</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Handling Missing Data</a></li>
+      <li><a href="security-and-privacy.html">Security and Privacy</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artifacts<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artifacts Summary</a></li>
+      <li><a href="profiles.html">Profiles</a></li>
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="extensions.html">Extensions (optional)</a></li>
+      <li><a href="capability-statements.html">Capability Statements</a></li>
+      <li><a href="logical-models.html">Logical Models</a></li>
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="value-sets.html">Value Sets (optional)</a></li>
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="code-systems.html">Code Systems (optional)</a></li>
+      <li><a href="examples.html">Examples</a></li>
+      <li><a href="sma-example-annotations.html">Case Example SMA</a></li>
+      <li><a href="marfan-example-annotations.html">Case Example Marfan</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Changelog</a></li>
+  <li class="dropdown">
+    <!-- The parent deliberately links the MANDATORY child (Versioning): the
+         Metadata Overview page is optional, and a parent pointing at it would
+         have to be re-targeted when that page is removed. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadata<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="metadata.html">Metadata Overview (optional)</a></li>
+      <li><a href="version-history.html">Versioning</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/index.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Seltene Erkrankungen - Local Development build (v2027.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Home</h2>
+  
+
+
+
+
+
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">2027.0.0-ballot<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de|2027.0.0-ballot"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+
+            as of 
+2026-08-28
+
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">MIIIGModulSelteneErkrankungen</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#imprint" id="markdown-toc-imprint">Imprint</a></li>
+  <li><a href="#contacts" id="markdown-toc-contacts">Contacts</a></li>
+  <li><a href="#authors-in-alphabetical-order" id="markdown-toc-authors-in-alphabetical-order">Authors (in alphabetical order)</a></li>
+  <li><a href="#copyright-and-terms-of-use" id="markdown-toc-copyright-and-terms-of-use">Copyright and terms of use</a></li>
+  <li><a href="#disclaimer" id="markdown-toc-disclaimer">Disclaimer</a></li>
+  <li><a href="#module-description" id="markdown-toc-module-description">Module description</a>    <ul>
+      <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<!-- TODO:REVIEW machine translation of source pages index.md + module-description.md (de) — Migration 2026-08-28, page-map.tsv -->
+<p>This specification describes the FHIR representation of the Core Data Set (KDS) module Rare Diseases (Seltene Erkrankungen) of the German Medical Informatics Initiative (MII).
+The following pages describe the module's use cases as well as the associated FHIR profiles and terminology resources in their binding form.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Publication</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Date</td>
+      <td>TODO:REVIEW (ci-build)</td>
+    </tr>
+    <tr>
+      <td>Version</td>
+      <td>2027.0.0-ballot</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>Active</td>
+    </tr>
+    <tr>
+      <td>Realm</td>
+      <td>DE</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- DERIVED:stand-in source=index.md gate=A -->
+<blockquote class="ig-highlight ig-highlight-blue">
+  <p><strong>Written during migration - review before release.</strong> The publication date and version in the table above were updated to the 2027.0.0-ballot working state by the migration; the source page recorded the 2026.0.1 release (2026-03-30).</p>
+</blockquote>
+
+<h3 id="imprint">Imprint</h3>
+
+<p>This guide has been created within the framework of the Medical Informatics Initiative and is subject, per governance process, to the consultation procedure of the Interoperability Forum and the Technical Committees of HL7 Germany.</p>
+
+<h3 id="contacts">Contacts</h3>
+
+<ul>
+  <li>Josef Schepers, Berlin Institute of Health (Charité) — module speaker</li>
+  <li>Michele Zoch, Uniklinik Dresden — module speaker</li>
+  <li>Martin Bartos, Klinikum Chemnitz — module speaker</li>
+  <li>Thomas Debertshäuser, Berlin Institute of Health (Charité)</li>
+  <li>Miriam Hübner, Berlin Institute of Health (Charité)</li>
+  <li>Steffen Sander, Berlin Institute of Health (Charité)</li>
+  <li>Marco Scharschmidt, Berlin Institute of Health (Charité)</li>
+  <li>Claudia Finis, Berlin Institute of Health (Charité)</li>
+  <li>Stefanie Rudolph, Berlin Institute of Health (Charité)</li>
+  <li>Christine Mundlos, ACHSE e.V.</li>
+  <li>Clemens Hentrich, Uniklinik Dresden</li>
+  <li>Jessica Vasseur, Uniklinik Frankfurt am Main</li>
+  <li>Susanne Vorhagen, Uniklinik Köln</li>
+  <li>Romina Blasini, Uniklinik Gießen</li>
+  <li>Patrik Bovio, Uniklinik Freiburg</li>
+  <li>Karoline Buckow, TMF – Technologie- und Methodenplattform für die vernetzte medizinische Forschung e.V.</li>
+  <li>Franziska Klepka, TMF – Technologie- und Methodenplattform für die vernetzte medizinische Forschung e.V.</li>
+</ul>
+
+<p>Questions about this publication can be asked at any time at <a href="https://chat.fhir.org">chat.fhir.org</a> in the stream 'german/mi-initiative'.</p>
+
+<p>Comments and criticism are always welcome as issues in the <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/issues">GitHub project</a>.</p>
+
+<h3 id="authors-in-alphabetical-order">Authors (in alphabetical order)</h3>
+
+<ul>
+  <li>Thomas Debertshäuser, Berlin Institute of Health (Charité)</li>
+  <li>Miriam Hübner, Berlin Institute of Health (Charité)</li>
+  <li>Steffen Sander, Berlin Institute of Health (Charité)</li>
+  <li>Marco Scharschmidt, Berlin Institute of Health (Charité)</li>
+  <li>Josef Schepers, Berlin Institute of Health (Charité)</li>
+</ul>
+
+<h3 id="copyright-and-terms-of-use">Copyright and terms of use</h3>
+
+<p>Copyright © 2019+: TMF e. V., Charlottenstraße 42, 10117 Berlin</p>
+
+<p>The content of this specification is public. Rights of re-use and publication are not restricted.</p>
+
+<p>For the usage rights of the underlying FHIR technology, see the FHIR base specification.</p>
+
+<p>Some of the code systems used are published and maintained by other organizations. The copyright of the respective publishers listed there applies.</p>
+
+<h3 id="disclaimer">Disclaimer</h3>
+
+<p>The content of this document is public. Note that parts of this document are based on FHIR version R4, for which the copyright of HL7 International applies.</p>
+
+<h2 id="module-description">Module description</h2>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>Although it is estimated that around 4 million people in Germany (5% of the population) are affected by <strong>rare diseases (RD)</strong>, those affected are considered the orphans of medicine and of the MII. The German National Action League for People with Rare Diseases (NAMSE) therefore demands that the digitalization of the healthcare system must benefit this large population group to a particular degree.</p>
+
+<p>The major challenge with rare diseases arises from the multitude of very different <em>"disorders"</em> and <em>"subtypes of disorders"</em> (up to 10,000 are mentioned), each with only small case numbers per <em>"disorder"</em>.</p>
+
+<ul>
+  <li>In the European Union a disease is considered <strong>"rare"</strong> if fewer than <strong>5 in 10,000</strong> inhabitants are affected — i.e. at most 40,000 persons in Germany.</li>
+  <li>Diseases are considered <strong>"ultra-rare"</strong> if fewer than 1 in 50,000 persons are affected, although no official EU definition currently exists.</li>
+</ul>
+
+<p>With rare diseases — especially ultra-rare ones — years of diagnostic uncertainty regularly precede the actual diagnosis, which can also entail mistreatment. Even after the diagnosis has been established, a targeted therapy can be offered to only about 5% of patients, which is why further coordinated research for the small, scattered groups is particularly important.</p>
+
+<p>Making persons with rare diseases visible through exact coding of RD diagnoses with ORPHAcodes from the Orphanet Nomenclature of Rare Diseases can be regarded as the starting point of the improvement processes. This complements the coarser ICD classification and coding of diagnoses for the RD segment. According to the Robert Koch Institute (RKI) and the Federal Institute for Drugs and Medical Devices (BfArM), making RD visible strengthens the possibilities of diagnostics and therapy development as well as IT support for diagnosis and therapy selection.</p>
+
+<p>ORPHAcode coding has already been established in the <strong>DIAGNOSIS</strong> module as a possible complement to ICD coding. Its inclusion in the RD module underlines the importance of exact coding as the linchpin of the further RD elements in the MII KDS in general and in the RD module in particular.</p>
+
+<hr />
+
+<p>Like the other implementation guides (IG) of the MII KDS modules, the <strong>Rare Diseases module</strong> is intended to support the data integration centers in preparing existing patient data from the care context. The KDS module deliberately builds on existing modules of the MII KDS. Data elements and structures that have already been modeled are reused where possible instead of duplicating them. The RD KDS module is essentially a topic-specific "composite" that integrates various relevant data elements from different modules with small additions, without fully adopting or replacing the underlying modules. Due to overlapping content, a noticeable overlap with implementation rules of the modules <strong>DIAGNOSIS, SYMPTOM/PHENOTYPE</strong> and <strong>MOLECULAR GENETICS</strong> has been realized.</p>
+
+<p>For a comprehensive description of rare diseases, further MII KDS modules are relevant in addition to the content addressed in the RD module, including <strong>Laboratory</strong>, <strong>Molecular Genetics Report</strong> and <strong>PROMs</strong>. In the longer term, further KDS modules (e.g. <strong>case conference at a Center for Rare Diseases (ZSE), newborn screening</strong>) would also be useful. The present RD module, however, is deliberately kept lean and focuses on the reusable integration of already modeled data elements in order to facilitate implementability and interoperability.</p>
+
+<p>At the same time, the RD module is intended to serve as a guide to a uniform, semantically interoperable, standardized <strong>EU-compliant RD documentation</strong> at clinical workstations, which is also expressed in the synonym <strong>"German minimal base data set for rare diseases (MBDS-SE.de)"</strong>, indicating the semantic proximity to the French "Set de données minimal national maladies rares <strong>(SDM-MR.fr)</strong>" and to the Set of Common Data Elements of the European ERN registries <strong>(ERDRI CDS.eu)</strong>.</p>
+
+<blockquote>
+  <p><strong>Note on data completeness:</strong> The Rare Diseases module primarily models those data elements that are <strong>specific to rare diseases</strong>. Some data elements appear additionally because they had not yet been specified in other MII modules (e.g. BMI, blood group). All data from other modules (Person, Laboratory, Pathology, Molecular Genetics Report, etc.) can be used freely by derived research projects. The MII modules are conceptual constructs for data preparation and have no inherent meaning regarding completeness — a research project on rare diseases will typically combine data from several modules.</p>
+</blockquote>
+
+<hr />
+
+<p>The data collected at clinical workstations according to the RD module and prepared in data integration centers shall:</p>
+
+<ul>
+  <li>Be available at the <em>clinical workstations</em>, where they are collected as part of the <em>care documentation</em>, for local support of care,</li>
+  <li>Be available as KDS module "Rare Diseases" of the <a href="https://www.medizininformatik-initiative.de/de/der-kerndatensatz-der-medizininformatik-initiative" target="_blank">MII KDS</a> via the <em>data integration centers</em> in the MII and in the NUM for <strong>distributed and central analyses</strong>,</li>
+  <li>Be transmitted as <a href="https://eu-rd-platform.jrc.ec.europa.eu/sites/default/files/CDS/JRC-2018-00192-00-00-DE-TRA-00-Final.pdf" target="_blank">ERDRI CDS</a> (with the consent of those affected) to the relevant <em>registries</em> of the European Reference Networks,</li>
+  <li>Be transmitted as <a href="https://www.narse.de/fileadmin/narse/2025-01-30_NARSE_Datenelemente_DE_V1.2.pdf" target="_blank">NARSE data set</a> (with the consent of those affected) to the <em>central NARSE</em> for its application scenarios,</li>
+  <li>Form, as <em>MBDS-SE.de</em> following the European and French model, the initial core for the design of disease-group- and disease-specific documentation in the sense of a <em>federated NARSE network of a national health data space</em> for rare diseases (including the DIC of the university hospitals),</li>
+  <li>Be included as MBDS-SE.de in <em>patient-led documentation</em> in order to be able to link it with other documentation in the health data space for RD in the federated NARSE network,</li>
+  <li>Promote the <strong>networking of affected persons</strong> via the <a href="https://forschen-fuer-gesundheit.de/" target="_blank">Research Data Portal for Health (FDPG)</a> of MII/NUM, the <a href="https://vp.ejprarediseases.org/" target="_blank">Virtual Platform of the European Rare Disease Research Alliance (ERDERA)</a> and further platforms accredited by the data holders, support <strong>finding patients for research projects</strong>, and advance the <strong>consideration</strong> of rare diseases in German and European <strong>health reporting</strong>.</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Thu, Sep 3, 2026 06:42+0000">2026-09-03</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/en/legal-notice">Legal notice</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
