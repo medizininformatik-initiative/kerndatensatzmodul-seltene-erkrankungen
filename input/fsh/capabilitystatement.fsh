@@ -34,7 +34,7 @@ InstanceOf: CapabilityStatement
 Usage: #definition
 * insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata"
-* name = "MII_CPS_SE_CapabilityStatement"
+* name = "MII_CPS_Seltene_CapabilityStatement"
 * title = "MII CPS Seltene Erkrankungen CapabilityStatement"
 * status = #active
 * experimental = false

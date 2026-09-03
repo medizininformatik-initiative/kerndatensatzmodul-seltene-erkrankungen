@@ -1,234 +1,232 @@
-# Marfan-Syndrom Fallbeispiel - Semantische Annotationen
+<!-- TODO:REVIEW machine translation of source page marfan-example-annotations.md (de) — Migration 2026-08-28, page-map.tsv -->
+### Overview
 
-## Übersicht
-Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel eines Marfan-Syndroms bei einem 19-jährigen männlichen Patienten.
+This document contains the semantic annotations for a case example of Marfan syndrome in a 19-year-old male patient.
 
-## Zeitlicher Verlauf
+### Timeline
 
-### 1. Augenärztliche Vorstellung (15.10.2024)
-- **Anlass**: Katarakt-Konsultation
-- **Befund**: Katarakt beidseits
-- **Setting**: Ambulant
-- **Weiteres Vorgehen**: OP-Planung
+#### 1. Ophthalmological presentation (2024-10-15)
+- **Reason**: cataract consultation
+- **Finding**: bilateral cataract
+- **Setting**: outpatient
+- **Further procedure**: surgery planning
 
-### 2. Katarakt-Operation (12.11.2024)
-- **Prozedur**: Phakoemulsifikation mit Linsenimplantation
-- **Setting**: Ambulant/Tagesklinik
-- **Komplikationen**: Keine
-- **Befund**: Erfolgreiche Linsenimplantation
+#### 2. Cataract surgery (2024-11-12)
+- **Procedure**: phacoemulsification with lens implantation
+- **Setting**: outpatient/day clinic
+- **Complications**: none
+- **Finding**: successful lens implantation
 
-### 3. Kardiologische Erstvorstellung (15.12.2024)
-- **Einweisungsgrund**: Thoraxschmerzen, Verdacht auf Marfan-Syndrom
-- **Diagnose**: Marfan-Syndrom bestätigt
-- **Befunde**: 
-  - Aortenwurzeldilatation (48mm)
-  - Aortenklappeninsuffizienz Grad II
-  - Mitralklappeninsuffizienz Grad I
-- **Therapie**: Losartan 50mg 1x täglich initiiert
+#### 3. First cardiological presentation (2024-12-15)
+- **Reason for referral**: chest pain, suspected Marfan syndrome
+- **Diagnosis**: Marfan syndrome confirmed
+- **Findings**:
+  - Aortic root dilatation (48 mm)
+  - Aortic valve regurgitation grade II
+  - Mitral valve regurgitation grade I
+- **Therapy**: losartan 50 mg once daily initiated
 
-### 4. Geplante Aortenwurzelersatz-OP (15.03.2025)
-- **Prozedur**: Composite-Graft-Implantation (David-OP)
-- **Setting**: Stationär geplant
-- **Indikation**: Progrediente Aortenwurzeldilatation bei Marfan-Syndrom
+#### 4. Planned aortic root replacement surgery (2025-03-15)
+- **Procedure**: composite graft implantation (David procedure)
+- **Setting**: inpatient, planned
+- **Indication**: progressive aortic root dilatation in Marfan syndrome
 
-## Semantische Annotationen
+### Semantic annotations
 
-### Patient
-- **Geschlecht**: Männlich
-- **Geburtsdatum**: ~2005 (19 Jahre alt)
-- **Körpergröße**: 2,13 m (pathologisch erhöht)
-- **Besonderheiten**: 
-  - Beinlängendifferenz (rechts verkürzt)
-  - Marfanoider Habitus
+#### Patient
+- **Sex**: male
+- **Date of birth**: ~2005 (19 years old)
+- **Body height**: 2.13 m (pathologically increased)
+- **Characteristics**:
+  - Leg length discrepancy (right shortened)
+  - Marfanoid habitus
 
-### Phänotypische Merkmale
+#### Phenotypic features
 
-#### Skelettale Manifestationen
-1. **Hochwuchs**:
+##### Skeletal manifestations
+1. **Tall stature**:
    - **HPO**: HP:0000098 "Tall stature"
-   - **Wert**: 2,13 m
-   - **Perzentile**: >99. Perzentile
+   - **Value**: 2.13 m
+   - **Percentile**: >99th percentile
 
-2. **Beinlängendifferenz**:
+2. **Leg length discrepancy**:
    - **HPO**: HP:0100559 "Lower limb asymmetry"
-   - **Beschreibung**: Rechtes Bein verkürzt
+   - **Description**: right leg shortened
    - **SNOMED CT**: 707738004 "Leg length discrepancy"
 
-#### Kardiovaskuläre Manifestationen
-1. **Thoraxschmerzen**:
+##### Cardiovascular manifestations
+1. **Chest pain**:
    - **HPO**: HP:0100749 "Chest pain"
    - **SNOMED CT**: 29857009 "Chest pain"
-   - **Onset**: Akut
+   - **Onset**: acute
 
-2. **Aortenwurzeldilatation**:
+2. **Aortic root dilatation**:
    - **HPO**: HP:0002616 "Aortic root aneurysm"
    - **SNOMED CT**: 251036003 "Aortic root dilatation"
-   - **Messwert**: 48 mm (pathologisch erweitert)
+   - **Measurement**: 48 mm (pathologically dilated)
 
-3. **Aortenklappeninsuffizienz**:
+3. **Aortic valve regurgitation**:
    - **HPO**: HP:0001659 "Aortic regurgitation"
    - **SNOMED CT**: 60234000 "Aortic valve regurgitation"
-   - **Schweregrad**: Grad II (moderat)
+   - **Severity**: grade II (moderate)
 
-4. **Mitralklappeninsuffizienz**:
+4. **Mitral valve regurgitation**:
    - **HPO**: HP:0001653 "Mitral regurgitation"
    - **SNOMED CT**: 48724000 "Mitral valve regurgitation"
-   - **Schweregrad**: Grad I (mild)
+   - **Severity**: grade I (mild)
 
-#### Ophthalmologische Manifestationen
-1. **Katarakt**:
+##### Ophthalmological manifestations
+1. **Cataract**:
    - **HPO**: HP:0000518 "Cataract"
-   - **ICD-10-GM**: H26.9 "Katarakt, nicht näher bezeichnet"
+   - **ICD-10-GM**: H26.9 "Cataract, unspecified"
    - **SNOMED CT**: 193570009 "Cataract"
-   - **Lokalisation**: Bilateral
+   - **Localization**: bilateral
 
-### Diagnosen
-1. **Hauptdiagnose**:
-   - **Bezeichnung**: Marfan-Syndrom
-   - **ICD-10-GM**: Q87.4 "Marfan-Syndrom"
+#### Diagnoses
+1. **Main diagnosis**:
+   - **Name**: Marfan syndrome
+   - **ICD-10-GM**: Q87.4 "Marfan syndrome"
    - **Orpha**: 558 "Marfan syndrome"
    - **SNOMED CT**: 19346006 "Marfan syndrome"
    - **OMIM**: 154700
-   - **Status**: Klinisch bestätigt
-   - **Feststellungsdatum**: 15.12.2024
+   - **Status**: clinically confirmed
+   - **Date of determination**: 2024-12-15
 
-2. **Nebendiagnose**:
-   - **Bezeichnung**: Katarakt
-   - **ICD-10-GM**: H26.9 "Katarakt, nicht näher bezeichnet"
-   - **Status**: Operativ behandelt
+2. **Secondary diagnosis**:
+   - **Name**: cataract
+   - **ICD-10-GM**: H26.9 "Cataract, unspecified"
+   - **Status**: surgically treated
 
-### Prozeduren
-1. **Katarakt-Operation**:
-   - **OPS-Code**: 5-144.5a "Extrakapsuläre Extraktion der Linse [ECCE]: Phakoemulsifikation: Mit Einführung einer kapselfixierten Hinterkammerlinse, monofokale Intraokularlinse"
+#### Procedures
+1. **Cataract surgery**:
+   - **OPS code**: 5-144.5a "Extracapsular extraction of the lens [ECCE]: phacoemulsification: with insertion of a capsule-fixated posterior chamber lens, monofocal intraocular lens"
    - **SNOMED CT**: 54885007 "Phacoemulsification of cataract with intraocular lens implantation"
-   - **Datum**: 12.11.2024
-   - **Status**: Abgeschlossen
+   - **Date**: 2024-11-12
+   - **Status**: completed
 
-2. **Geplante Aortenwurzelersatz-OP**:
-   - **OPS-Code**: 5-354.0a "Andere Operationen an Herzklappen: Aortenklappe: Klappenrekonstruktion"
+2. **Planned aortic root replacement surgery**:
+   - **OPS code**: 5-354.0a "Other operations on heart valves: aortic valve: valve reconstruction"
    - **SNOMED CT**: 119564002 "Aortic root replacement"
-   - **Geplantes Datum**: 15.03.2025
-   - **Status**: Geplant
-   - **Technik**: David-Operation (Valve-sparing root replacement)
+   - **Planned date**: 2025-03-15
+   - **Status**: planned
+   - **Technique**: David procedure (valve-sparing root replacement)
 
-### Medikation
+#### Medication
 1. **Losartan**:
-   - **ATC-Code**: C09CA01
-   - **Dosierung**: 50 mg
-   - **Frequenz**: 1x täglich
-   - **Indikation**: Progressionshemmung der Aortenwurzeldilatation
-   - **Startdatum**: 15.12.2024
+   - **ATC code**: C09CA01
+   - **Dose**: 50 mg
+   - **Frequency**: once daily
+   - **Indication**: slowing the progression of aortic root dilatation
+   - **Start date**: 2024-12-15
    - **SNOMED CT**: 387069000 "Losartan"
 
-### Diagnostische Untersuchungen
+#### Diagnostic examinations
 
-#### Echokardiographie (15.12.2024)
-1. **Aortenwurzeldurchmesser**:
+##### Echocardiography (2024-12-15)
+1. **Aortic root diameter**:
    - **LOINC**: 79992-2 "Aortic root diameter by US"
-   - **Wert**: 48 mm
-   - **Interpretation**: Pathologisch erweitert
+   - **Value**: 48 mm
+   - **Interpretation**: pathologically dilated
 
-2. **Aortenklappeninsuffizienz-Grad**:
+2. **Aortic valve regurgitation grade**:
    - **LOINC**: 80140-5 "Aortic valve regurgitation severity by US"
-   - **Wert**: Grad II
-   - **Interpretation**: Moderat
+   - **Value**: grade II
+   - **Interpretation**: moderate
 
-3. **Mitralklappeninsuffizienz-Grad**:
+3. **Mitral valve regurgitation grade**:
    - **LOINC**: 80186-8 "Mitral valve regurgitation severity by US"
-   - **Wert**: Grad I
-   - **Interpretation**: Mild
+   - **Value**: grade I
+   - **Interpretation**: mild
 
-### Behandlungsplan
-- **Kardiologische Überwachung**: Alle 6 Monate Echokardiographie
-- **Medikamentöse Therapie**: Fortführung Losartan
-- **Operative Therapie**: Elektive Aortenwurzelersatz-OP am 15.03.2025
-- **Genetische Beratung**: Empfohlen für Familienplanung
-- **Ophthalmologische Nachsorge**: Post-operative Kontrollen
+#### Treatment plan
+- **Cardiological monitoring**: echocardiography every 6 months
+- **Drug therapy**: continuation of losartan
+- **Surgical therapy**: elective aortic root replacement surgery on 2025-03-15
+- **Genetic counseling**: recommended for family planning
+- **Ophthalmological follow-up**: post-operative check-ups
 
-## FHIR-Mapping
+### FHIR mapping
 
-### Verwendete Profile
+#### Profiles used
 - **Patient**: MII KDS Patient
-- **Diagnose**: MII PR SE Diagnose
-- **Symptom/Phänotyp**: MII PR SE Symptom
-- **Prozedur**: MII PR Prozedur
+- **Diagnosis**: MII PR SE Diagnose
+- **Symptom/phenotype**: MII PR SE Symptom
+- **Procedure**: MII PR Prozedur
 - **MedicationStatement**: MII PR Medikation MedicationStatement
 - **Observation**: MII PR Labor Observation
 - **Encounter**: MII PR Encounter
 - **ClinicalImpression**: MII PR SE ClinicalImpression
 
-### Ressourcen-Übersicht
+#### Resource overview
 
-#### Patient und Phänotyp
-| Ressource ID | Typ | Beschreibung | Datum | Status/Details |
+##### Patient and phenotype
+| Resource ID | Type | Description | Date | Status/details |
 |--------------|-----|--------------|-------|----------------|
-| `patient-marfan-001` | Patient | 19-jähriger Mann | Geburt: ~2005 | ID: MRF-2024-001 |
-| `observation-height-001` | Observation | Körpergröße | 15.12.2024 | 2,13 m (HPO:0000098) |
-| `observation-leg-asymmetry` | Observation | Beinlängendifferenz | 15.12.2024 | Rechts verkürzt (HPO:0100559) |
+| `mii-exa-seltene-patient-marfan-001` | Patient | 19-year-old man | Birth: ~2005 | ID: MRF-2024-001 |
+| `mii-exa-seltene-observation-height-001` | Observation | Body height | 2024-12-15 | 2.13 m (HPO:0000098) |
+| `mii-exa-seltene-observation-leg-asymmetry` | Observation | Leg length discrepancy | 2024-12-15 | Right shortened (HPO:0100559) |
 
-#### Symptome und Befunde
-| Ressource ID | Typ | Beschreibung | Datum | HPO Code | Schweregrad |
+##### Symptoms and findings
+| Resource ID | Type | Description | Date | HPO code | Severity |
 |--------------|-----|--------------|-------|----------|-------------|
-| `symptom-chest-pain` | Observation | Thoraxschmerzen | 15.12.2024 | HP:0100749 | Akut |
-| `symptom-aortic-root` | Observation | Aortenwurzeldilatation | 15.12.2024 | HP:0002616 | 48mm |
-| `symptom-aortic-regurg` | Observation | Aortenklappeninsuffizienz | 15.12.2024 | HP:0001659 | Grad II |
-| `symptom-mitral-regurg` | Observation | Mitralklappeninsuffizienz | 15.12.2024 | HP:0001653 | Grad I |
-| `symptom-cataract` | Observation | Katarakt bilateral | 15.10.2024 | HP:0000518 | Bilateral |
+| `mii-exa-seltene-symptom-chest-pain` | Observation | Chest pain | 2024-12-15 | HP:0100749 | Acute |
+| `mii-exa-seltene-symptom-aortic-root` | Observation | Aortic root dilatation | 2024-12-15 | HP:0002616 | 48 mm |
+| `mii-exa-seltene-symptom-aortic-regurg` | Observation | Aortic valve regurgitation | 2024-12-15 | HP:0001659 | Grade II |
+| `mii-exa-seltene-symptom-mitral-regurg` | Observation | Mitral valve regurgitation | 2024-12-15 | HP:0001653 | Grade I |
+| `mii-exa-seltene-symptom-cataract` | Observation | Bilateral cataract | 2024-10-15 | HP:0000518 | Bilateral |
 
-#### Diagnosen
-| Ressource ID | Typ | Beschreibung | Feststellungsdatum | ICD-10 | Orpha |
+##### Diagnoses
+| Resource ID | Type | Description | Date of determination | ICD-10 | Orpha |
 |--------------|-----|--------------|-------------------|---------|-------|
-| `condition-marfan-confirmed` | Condition | Marfan-Syndrom | 15.12.2024 | Q87.4 | 558 |
-| `condition-cataract` | Condition | Katarakt bilateral | 15.10.2024 | H26.9 | - |
+| `condition-marfan-confirmed` | Condition | Marfan syndrome | 2024-12-15 | Q87.4 | 558 |
+| `mii-exa-seltene-condition-cataract` | Condition | Bilateral cataract | 2024-10-15 | H26.9 | - |
 
-#### Prozeduren
-| Ressource ID | Typ | Beschreibung | Datum | OPS Code | Status |
+##### Procedures
+| Resource ID | Type | Description | Date | OPS code | Status |
 |--------------|-----|--------------|-------|----------|---------|
-| `procedure-cataract-surgery` | Procedure | Phakoemulsifikation mit IOL | 12.11.2024 | 5-144.5a | Abgeschlossen |
-| `procedure-aortic-planned` | Procedure | Aortenwurzelersatz (David-OP) | 15.03.2025 | 5-354.0a | Geplant |
+| `mii-exa-seltene-procedure-cataract-surgery` | Procedure | Phacoemulsification with IOL | 2024-11-12 | 5-144.5a | Completed |
+| `mii-exa-seltene-procedure-aortic-planned` | Procedure | Aortic root replacement (David procedure) | 2025-03-15 | 5-354.0a | Planned |
 
-#### Medikation
-| Ressource ID | Typ | Medikament | Dosierung | Start | Indikation |
+##### Medication
+| Resource ID | Type | Drug | Dose | Start | Indication |
 |--------------|-----|------------|-----------|-------|------------|
-| `medication-losartan` | MedicationStatement | Losartan | 50mg 1x täglich | 15.12.2024 | Aortenprotektion |
+| `mii-exa-seltene-medication-losartan` | MedicationStatement | Losartan | 50 mg once daily | 2024-12-15 | Aortic protection |
 
-#### Diagnostik
-| Ressource ID | Typ | Untersuchung | Datum | Wichtige Befunde |
+##### Diagnostics
+| Resource ID | Type | Examination | Date | Key findings |
 |--------------|-----|--------------|-------|------------------|
-| `observation-echo-aortic` | Observation | Aortenwurzel-Echo | 15.12.2024 | 48mm (pathologisch) |
-| `observation-echo-av` | Observation | AK-Insuffizienz Echo | 15.12.2024 | Grad II |
-| `observation-echo-mv` | Observation | MK-Insuffizienz Echo | 15.12.2024 | Grad I |
+| `mii-exa-seltene-observation-echo-aortic` | Observation | Aortic root echo | 2024-12-15 | 48 mm (pathological) |
+| `mii-exa-seltene-observation-echo-av` | Observation | AV regurgitation echo | 2024-12-15 | Grade II |
+| `mii-exa-seltene-observation-echo-mv` | Observation | MV regurgitation echo | 2024-12-15 | Grade I |
 
-#### Behandlungskontakte
-| Ressource ID | Typ | Beschreibung | Datum | Setting | Fachbereich |
+##### Encounters
+| Resource ID | Type | Description | Date | Setting | Specialty |
 |--------------|-----|--------------|-------|---------|-------------|
-| `encounter-ophthalmology` | Encounter | Augenärztliche Konsultation | 15.10.2024 | Ambulant | Ophthalmologie |
-| `encounter-cataract-surgery` | Encounter | Katarakt-OP | 12.11.2024 | Tagesklinik | Ophthalmologie |
-| `encounter-cardiology` | Encounter | Kardiologische Erstvorstellung | 15.12.2024 | Ambulant | Kardiologie |
-| `encounter-surgery-planned` | Encounter | Geplante Herzchirurgie | 15.03.2025 | Stationär | Herzchirurgie |
+| `mii-exa-seltene-encounter-ophthalmology` | Encounter | Ophthalmological consultation | 2024-10-15 | Outpatient | Ophthalmology |
+| `mii-exa-seltene-encounter-cataract-surgery` | Encounter | Cataract surgery | 2024-11-12 | Day clinic | Ophthalmology |
+| `mii-exa-seltene-encounter-cardiology` | Encounter | First cardiological presentation | 2024-12-15 | Outpatient | Cardiology |
+| `mii-exa-seltene-encounter-surgery-planned` | Encounter | Planned cardiac surgery | 2025-03-15 | Inpatient | Cardiac surgery |
 
-#### Klinische Beurteilungen
-| Ressource ID | Typ | Beschreibung | Datum | Wichtige Aspekte |
+##### Clinical assessments
+| Resource ID | Type | Description | Date | Key aspects |
 |--------------|-----|--------------|-------|------------------|
-| `clinical-impression-cardiology` | ClinicalImpression | Kardiologische Beurteilung | 15.12.2024 | Marfan bestätigt, OP-Indikation |
+| `clinical-impression-cardiology` | ClinicalImpression | Cardiological assessment | 2024-12-15 | Marfan confirmed, indication for surgery |
 
-### Bundle
-| Ressource ID | Typ | Beschreibung | Anzahl Einträge |
+#### Bundle
+| Resource ID | Type | Description | Number of entries |
 |--------------|-----|--------------|-----------------|
-| `bundle-marfan-complete` | Bundle | Transaction Bundle mit allen Ressourcen | 20 Ressourcen |
+| `mii-exa-seltene-bundle-marfan-complete` | Bundle | Transaction bundle with all resources | 20 resources |
 
-## Ressourcen-Diagramme
+### Resource diagrams
 
-### Gesamtübersicht aller Ressourcen und Beziehungen
+#### Overall view of all resources and their relationships
 
-*(Diagramm folgt.)*
+![Marfan case example resource overview](Marfan_Case_Resources_Diagram.svg)
 
-### Zeitlicher Verlauf
+#### Timeline
 
-*(Diagramm folgt.)*
+![Marfan case example timeline](Marfan_Case_Timeline_Diagram.svg)
 
-## Implementierung
+### Implementation
 
-Die vollständigen FHIR-Ressourcen sind in folgenden Dateien definiert:
-- **Einzelressourcen**: [`input/fsh/marfan-example-resources.fsh`](../fsh/marfan-example-resources.fsh)
-- **Transaction Bundle**: [`input/fsh/marfan-transaction-bundle.fsh`](../fsh/marfan-transaction-bundle.fsh)
+The complete FHIR resources are defined in the FSH sources of this module (`input/fsh/Beispiel_Marfan/`), including the transaction bundle.

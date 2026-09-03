@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-seltene-hueftumfang",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hueftumfang",
-  "version": "2026.0.1",
+  "version": "2027.0.0-ballot.rc1",
   "name": "MII_PR_Seltene_Hueftumfang",
   "title": "MII PR SE Hüftumfang",
   "status": "active",
@@ -39,7 +39,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Messbefunde.Hueftumfang",
+            "map": "koerperlicheUntersuchung.hueftumfang",
             "comment": "Hüftumfang"
           }
         ]
@@ -79,13 +79,13 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Hüftumfang an der maximalen Gesäßprotuberanz",
+        "short": "Hüftumfang",
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "56063-1",
-              "system": "http://loinc.org",
-              "display": "Circumference.at maximal protrusion of gluteus muscles Pelvis"
+              "code": "284472007",
+              "system": "http://snomed.info/sct",
+              "display": "Hip circumference"
             }
           ]
         },
@@ -107,7 +107,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Patient",
+            "map": "persoenlicheInfosIndexpatient",
             "comment": "Patient/Indexpatient"
           }
         ]
@@ -124,7 +124,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Messbefunde.Hueftumfang.Datum",
+            "map": "koerperlicheUntersuchung.hueftumfang.datumHueftumfang",
             "comment": "Datum der Messung"
           }
         ]
@@ -145,7 +145,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Messbefunde.Hueftumfang",
+            "map": "koerperlicheUntersuchung.hueftumfang.hueftumfang",
             "comment": "Hüftumfang in cm"
           }
         ]

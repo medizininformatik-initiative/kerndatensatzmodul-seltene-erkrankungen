@@ -1,0 +1,351 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="en" target-language="de" id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" original="Resource StructureDefinition-mii-pr-seltene-genetic-diagnosis" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.name">
+             <notes>
+               <note id="n1">A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.</note>
+             </notes>
+        <source>MII_PR_Seltene_GeneticDiagnosis</source>
+        <target>MII_PR_Seltene_GeneticDiagnosis</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.title">
+             <notes>
+               <note id="n1">A short, descriptive, user-friendly title for the structure definition.</note>
+             </notes>
+        <source>MII PR SE Genetic Diagnosis</source>
+        <target>MII PR SE Genetic Diagnosis</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.publisher">
+             <notes>
+               <note id="n1">The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.contact.name">
+             <notes>
+               <note id="n1">The name of an individual to contact.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.mapping.SE-LogicalModel/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Mapping FHIR zu Seltene Erkrankungen Logical Model</source>
+        <target>Mapping FHIR zu Seltene Erkrankungen Logical Model</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.mapping.LogicalModel/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>FHIR-Profil zu LogicalModel Mapping</source>
+        <target>FHIR-Profil zu LogicalModel Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.mapping.workflow/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Workflow Pattern</source>
+        <target>Workflow Pattern</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.mapping.sct-concept/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>SNOMED CT Concept Domain Binding</source>
+        <target>SNOMED CT Concept Domain Binding</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.mapping.v2/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>HL7 v2 Mapping</source>
+        <target>HL7 v2 Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.mapping.w5/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>FiveWs Pattern Mapping</source>
+        <target>FiveWs Pattern Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.mapping.sct-attr/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>SNOMED CT Attribute Binding</source>
+        <target>SNOMED CT Attribute Binding</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition/constraint">
+             <notes>
+               <note id="n1">Text that can be used to describe the constraint in messages identifying that the constraint has been violated.</note>
+             </notes>
+        <source>Genetic diagnosis must have at least one evidence.detail referencing a MolGen resource</source>
+        <target>Genetic diagnosis must have at least one evidence.detail referencing a MolGen resource</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.GenetischeDiagnose</source>
+        <target>AnamneseUndDiagnostik.GenetischeDiagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Genetische Diagnose</source>
+        <target>Genetische Diagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.extension:Feststellungsdatum.value[x]/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia</source>
+        <target>AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.extension:Feststellungsdatum.value[x]/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Feststellungsdatum genetische SE-Diagnose</source>
+        <target>Feststellungsdatum genetische SE-Diagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.extension:penetrance/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Penetranz der genetischen Variante</source>
+        <target>Penetranz der genetischen Variante</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.extension:penetrance/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Angabe zur Penetranz der genetischen Variante bei dieser Erkrankung</source>
+        <target>Angabe zur Penetranz der genetischen Variante bei dieser Erkrankung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.extension:penetrance/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.GenDiaFehlendePenetranz</source>
+        <target>AnamneseUndDiagnostik.GenDiaFehlendePenetranz</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.extension:penetrance/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Genetische Diagnose mit fehlender Penetranz</source>
+        <target>Genetische Diagnose mit fehlender Penetranz</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.verificationStatus/comment">
+             <notes>
+               <note id="n1">Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).</note>
+             </notes>
+        <source>For genetically confirmed diagnoses, verificationStatus should typically be 'confirmed'</source>
+        <target>For genetically confirmed diagnoses, verificationStatus should typically be 'confirmed'</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.category/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Kategorisierung als genetische Erkrankung</source>
+        <target>Kategorisierung als genetische Erkrankung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.category/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung</source>
+        <target>Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.code.coding:icd10-gm/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.GenetischeDiagnose</source>
+        <target>AnamneseUndDiagnostik.GenetischeDiagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.code.coding:icd10-gm/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>ICD-10-GM Diagnose</source>
+        <target>ICD-10-GM Diagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.code.coding:orphanet/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.GenetischeDiagnose</source>
+        <target>AnamneseUndDiagnostik.GenetischeDiagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.code.coding:orphanet/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Orpha-Code Diagnose</source>
+        <target>Orpha-Code Diagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.code.coding:omim/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>OMIM disease code</source>
+        <target>OMIM disease code</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.code.coding:omim/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Online Mendelian Inheritance in Man (OMIM) code for the genetic disease</source>
+        <target>Online Mendelian Inheritance in Man (OMIM) code for the genetic disease</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.code.coding:omim/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.GenetischeDiagnose</source>
+        <target>AnamneseUndDiagnostik.GenetischeDiagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.code.coding:omim/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>OMIM-Code Diagnose</source>
+        <target>OMIM-Code Diagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.subject/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>Patient</source>
+        <target>Patient</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.subject/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Patient/Indexpatient</source>
+        <target>Patient/Indexpatient</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.encounter/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Untersuchungsdatum</source>
+        <target>AnamneseUndDiagnostik.Untersuchungsdatum</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.encounter/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Untersuchungsdatum</source>
+        <target>Untersuchungsdatum</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.onset[x]/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia</source>
+        <target>AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.onset[x]/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Alter/Zeitpunkt bei genetischer SE-Diagnose</source>
+        <target>Alter/Zeitpunkt bei genetischer SE-Diagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.onset[x]:onsetDateTime/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia</source>
+        <target>AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.onset[x]:onsetDateTime/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Feststellungsdatum genetische SE-Diagnose</source>
+        <target>Feststellungsdatum genetische SE-Diagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.evidence/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Genetic evidence supporting the diagnosis</source>
+        <target>Genetic evidence supporting the diagnosis</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.evidence.code/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Type of genetic evidence</source>
+        <target>Type of genetic evidence</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.evidence.code/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.MethodeDiagnosestellung</source>
+        <target>AnamneseUndDiagnostik.MethodeDiagnosestellung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.evidence.code/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Methode der Diagnosestellung</source>
+        <target>Methode der Diagnosestellung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.evidence.code.coding:geneticEvidence/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Indicates genetic evidence</source>
+        <target>Indicates genetic evidence</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.evidence.detail/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Reference to MolGen Variant or Diagnostic Implication</source>
+        <target>Reference to MolGen Variant or Diagnostic Implication</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.evidence.detail/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Must reference either MII PR MolGen Variante or MII PR MolGen DiagnostischeImplikation resources that contain the genetic findings supporting this diagnosis</source>
+        <target>Must reference either MII PR MolGen Variante or MII PR MolGen DiagnostischeImplikation resources that contain the genetic findings supporting this diagnosis</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.evidence.detail/comment">
+             <notes>
+               <note id="n1">Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).</note>
+             </notes>
+        <source>Should reference: 1) MII PR MolGen Variante (Observation) for specific variant findings, or 2) MII PR MolGen DiagnostischeImplikation (DiagnosticReport) for comprehensive genetic diagnostic reports</source>
+        <target>Should reference: 1) MII PR MolGen Variante (Observation) for specific variant findings, or 2) MII PR MolGen DiagnostischeImplikation (DiagnosticReport) for comprehensive genetic diagnostic reports</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.evidence.detail/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>Verweis auf MolGen Variante/DiagnostischeImplikation</source>
+        <target>Verweis auf MolGen Variante/DiagnostischeImplikation</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-genetic-diagnosis" resname="StructureDefinition.element.Condition.evidence.detail/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Genetische Befunde</source>
+        <target>Genetische Befunde</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

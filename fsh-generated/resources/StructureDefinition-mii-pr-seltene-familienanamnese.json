@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-seltene-familienanamnese",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese",
-  "version": "2026.0.1",
+  "version": "2027.0.0-ballot.rc1",
   "name": "MII_PR_Seltene_Familienanamnese",
   "title": "MII PR SE Familienanamnese",
   "status": "active",
@@ -39,7 +39,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Familienanamnese",
+            "map": "familienanamnese",
             "comment": "Familienanamnese"
           }
         ]
@@ -61,7 +61,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-von-se-betroffen"
             ]
           }
         ],
@@ -69,7 +69,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Familienanamnese.GleicheSE",
+            "map": "familienanamnese.gleicheSE",
             "comment": "Gleiche SE"
           }
         ]
@@ -80,7 +80,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Patient",
+            "map": "persoenlicheInfosIndexpatient",
             "comment": "Patient/Indexpatient"
           }
         ]
@@ -91,7 +91,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Dokumentationsdatum",
+            "map": "familienanamnese.dokumentationsdatum",
             "comment": "Datum der Familienanamnese"
           }
         ]
@@ -102,7 +102,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Familienanamnese.Verwandtschaftsverhaeltnis",
+            "map": "familienanamnese.verwandtschaftsverhaeltnis",
             "comment": "Verwandtschaftsverhältnis"
           }
         ]
@@ -113,7 +113,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Familienanamnese.Geschlecht",
+            "map": "familienanamnese.geschlecht",
             "comment": "Geschlecht"
           }
         ]
@@ -157,7 +157,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Familienanamnese.FamilienmitgliedVerstorben",
+            "map": "familienanamnese.familienmitgliedVerstorben",
             "comment": "Familienmitglied verstorben"
           }
         ]
@@ -176,7 +176,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Familienanamnese.FamilienmitgliedVerstorben",
+            "map": "familienanamnese.familienmitgliedVerstorben",
             "comment": "Sterbedatum"
           }
         ]
@@ -195,7 +195,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Familienanamnese.FamilienmitgliedVerstorben",
+            "map": "familienanamnese.familienmitgliedVerstorben",
             "comment": "Alter bei Tod"
           }
         ]
@@ -206,7 +206,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Familienanamnese.AndereSE",
+            "map": "familienanamnese.andereSE",
             "comment": "Grund/Erkrankung des Familienmitglieds"
           }
         ]
@@ -231,7 +231,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Familienanamnese.Penetranz",
+            "map": "familienanamnese.penetranz",
             "comment": "Penetranz"
           }
         ]
@@ -243,7 +243,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Familienanamnese.AndereSE",
+            "map": "familienanamnese.andereSE",
             "comment": "Andere SE (ICD-10-GM)"
           }
         ]
@@ -255,7 +255,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Familienanamnese.AndereSE",
+            "map": "familienanamnese.andereSE",
             "comment": "Andere SE (SNOMED CT)"
           }
         ]
@@ -267,7 +267,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Familienanamnese.AndereSE",
+            "map": "familienanamnese.andereSE",
             "comment": "Andere SE (Orpha-Code)"
           }
         ]
@@ -309,7 +309,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Familienanamnese.TodDurchSE",
+            "map": "familienanamnese.todDurchSE",
             "comment": "Tod durch seltene Erkrankung"
           }
         ]

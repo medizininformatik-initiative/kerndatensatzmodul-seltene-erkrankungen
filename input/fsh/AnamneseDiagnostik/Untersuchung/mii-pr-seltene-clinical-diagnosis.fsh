@@ -12,6 +12,15 @@ Description: "Profile for clinical diagnosis of rare diseases with HPO phenotype
 // Inherit all constraints from parent Diagnose profile
 * clinicalStatus MS
 * verificationStatus MS
+// category BEWUSST OHNE modulweite Bindung. Am 2026-09-02 war hier kurzzeitig
+// MII_VS_Seltene_ClinicalDiagnosisCategory extensible gebunden; die Bindung wurde noch am
+// selben Tag zurueckgenommen, weil sie einen Denkfehler zementiert haette:
+// Condition.category beantwortet in FHIR die Frage nach der ROLLE der Condition
+// im Datensatz — der Kurztext lautet woertlich "problem-list-item |
+// encounter-diagnosis" — und nicht die Frage, was fuer eine Krankheit vorliegt.
+// Die Krankheitsart steht in Condition.code, wo sie ueber ICD-10-GM, Orpha und
+// OMIM ohnehin kodiert ist. Es bleibt bei der extensible-Bindung des
+// FHIR-Standards an condition-category.
 * category 1..* MS
 * severity MS
 * code MS
@@ -70,14 +79,14 @@ Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_ClinicalDiagnosis
 Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
-* -> "AnamneseUndDiagnostik.KlinischeDiagnose" "Klinische Diagnose"
-* code.coding[icd10-gm] -> "AnamneseUndDiagnostik.KlinischeDiagnose" "ICD-10-GM Diagnose"
-* code.coding[orphanet] -> "AnamneseUndDiagnostik.KlinischeDiagnose" "Orpha-Code Diagnose"
-* code.coding[hpo] -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm" "HPO-Term des Symptoms"
-* extension[assertedDate].valueDateTime -> "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia" "Feststellungsdatum klinische SE-Diagnose"
-* onset[x] -> "AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia" "Alter/Zeitpunkt bei klinischer SE-Diagnose"
-* onsetDateTime -> "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia" "Feststellungsdatum klinische SE-Diagnose"
-* evidence.code -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm" "Unterstützende HPO-Symptome"
-* evidence.detail -> "AnamneseUndDiagnostik.Phaenotypisierung" "Verweis auf Phänotypisierung"
-* subject -> "Patient" "Patient/Indexpatient"
-* encounter -> "AnamneseUndDiagnostik.Untersuchungsdatum" "Untersuchungsdatum"
+* -> "anamneseUndDiagnostik.klinischeDiagnose" "Klinische Diagnose"
+* code.coding[icd10-gm] -> "anamneseUndDiagnostik.klinischeDiagnose" "ICD-10-GM Diagnose"
+* code.coding[orphanet] -> "anamneseUndDiagnostik.klinischeDiagnose" "Orpha-Code Diagnose"
+* code.coding[hpo] -> "anamneseUndDiagnostik.phaenotypisierung.hpoTerm" "HPO-Term des Symptoms"
+* extension[assertedDate].valueDateTime -> "anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia" "Feststellungsdatum klinische SE-Diagnose"
+* onset[x] -> "anamneseUndDiagnostik.klinischeDiagnose.alterKlinischeDia" "Alter/Zeitpunkt bei klinischer SE-Diagnose"
+* onsetDateTime -> "anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia" "Feststellungsdatum klinische SE-Diagnose"
+* evidence.code -> "anamneseUndDiagnostik.phaenotypisierung.hpoTerm" "Unterstützende HPO-Symptome"
+* evidence.detail -> "anamneseUndDiagnostik.phaenotypisierung" "Verweis auf Phänotypisierung"
+* subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
+* encounter -> "anamneseUndDiagnostik.untersuchungsdatum" "Untersuchungsdatum"

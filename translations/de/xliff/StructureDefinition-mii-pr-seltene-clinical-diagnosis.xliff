@@ -1,0 +1,288 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="en" target-language="de" id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" original="Resource StructureDefinition-mii-pr-seltene-clinical-diagnosis" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.name">
+             <notes>
+               <note id="n1">A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.</note>
+             </notes>
+        <source>MII_PR_Seltene_ClinicalDiagnosis</source>
+        <target>MII_PR_Seltene_ClinicalDiagnosis</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.title">
+             <notes>
+               <note id="n1">A short, descriptive, user-friendly title for the structure definition.</note>
+             </notes>
+        <source>MII PR SE Clinical Diagnosis</source>
+        <target>MII PR SE Clinical Diagnosis</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.publisher">
+             <notes>
+               <note id="n1">The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.contact.name">
+             <notes>
+               <note id="n1">The name of an individual to contact.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.mapping.SE-LogicalModel/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Mapping FHIR zu Seltene Erkrankungen Logical Model</source>
+        <target>Mapping FHIR zu Seltene Erkrankungen Logical Model</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.mapping.LogicalModel/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>FHIR-Profil zu LogicalModel Mapping</source>
+        <target>FHIR-Profil zu LogicalModel Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.mapping.workflow/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Workflow Pattern</source>
+        <target>Workflow Pattern</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.mapping.sct-concept/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>SNOMED CT Concept Domain Binding</source>
+        <target>SNOMED CT Concept Domain Binding</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.mapping.v2/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>HL7 v2 Mapping</source>
+        <target>HL7 v2 Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.mapping.w5/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>FiveWs Pattern Mapping</source>
+        <target>FiveWs Pattern Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.mapping.sct-attr/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>SNOMED CT Attribute Binding</source>
+        <target>SNOMED CT Attribute Binding</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.KlinischeDiagnose</source>
+        <target>AnamneseUndDiagnostik.KlinischeDiagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Klinische Diagnose</source>
+        <target>Klinische Diagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.extension:Feststellungsdatum.value[x]/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia</source>
+        <target>AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.extension:Feststellungsdatum.value[x]/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Feststellungsdatum klinische SE-Diagnose</source>
+        <target>Feststellungsdatum klinische SE-Diagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.code.coding:icd10-gm/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.KlinischeDiagnose</source>
+        <target>AnamneseUndDiagnostik.KlinischeDiagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.code.coding:icd10-gm/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>ICD-10-GM Diagnose</source>
+        <target>ICD-10-GM Diagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.code.coding:orphanet/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.KlinischeDiagnose</source>
+        <target>AnamneseUndDiagnostik.KlinischeDiagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.code.coding:orphanet/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Orpha-Code Diagnose</source>
+        <target>Orpha-Code Diagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.code.coding:hpo/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>HPO Phenotype code</source>
+        <target>HPO Phenotype code</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.code.coding:hpo/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Human Phenotype Ontology code describing the phenotypic manifestation of the rare disease</source>
+        <target>Human Phenotype Ontology code describing the phenotypic manifestation of the rare disease</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.code.coding:hpo/comment">
+             <notes>
+               <note id="n1">Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).</note>
+             </notes>
+        <source>For rare diseases, HPO codes should be provided to describe the phenotypic presentation</source>
+        <target>For rare diseases, HPO codes should be provided to describe the phenotypic presentation</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.code.coding:hpo/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.code.coding:hpo/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>HPO-Term des Symptoms</source>
+        <target>HPO-Term des Symptoms</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.subject/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>Patient</source>
+        <target>Patient</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.subject/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Patient/Indexpatient</source>
+        <target>Patient/Indexpatient</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.encounter/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Untersuchungsdatum</source>
+        <target>AnamneseUndDiagnostik.Untersuchungsdatum</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.encounter/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Untersuchungsdatum</source>
+        <target>Untersuchungsdatum</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.onset[x]/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia</source>
+        <target>AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.onset[x]/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Alter/Zeitpunkt bei klinischer SE-Diagnose</source>
+        <target>Alter/Zeitpunkt bei klinischer SE-Diagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.onset[x]:onsetDateTime/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia</source>
+        <target>AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.onset[x]:onsetDateTime/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Feststellungsdatum klinische SE-Diagnose</source>
+        <target>Feststellungsdatum klinische SE-Diagnose</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.stage.assessment/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Reference to HPO-based severity assessment</source>
+        <target>Reference to HPO-based severity assessment</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.stage.type/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Stage type (e.g., severity, progression)</source>
+        <target>Stage type (e.g., severity, progression)</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.evidence.code/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Manifestation/symptom supporting the diagnosis</source>
+        <target>Manifestation/symptom supporting the diagnosis</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.evidence.code/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.evidence.code/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Unterstützende HPO-Symptome</source>
+        <target>Unterstützende HPO-Symptome</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.evidence.detail/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Reference to Observation resources containing HPO-coded symptoms</source>
+        <target>Reference to Observation resources containing HPO-coded symptoms</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.evidence.detail/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-clinical-diagnosis" resname="StructureDefinition.element.Condition.evidence.detail/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Verweis auf Phänotypisierung</source>
+        <target>Verweis auf Phänotypisierung</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

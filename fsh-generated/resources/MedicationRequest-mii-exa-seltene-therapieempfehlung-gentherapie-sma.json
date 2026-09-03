@@ -3,17 +3,15 @@
   "id": "mii-exa-seltene-therapieempfehlung-gentherapie-sma",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung|2026.0.1"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung|2027.0.0-ballot.rc1"
     ]
   },
-  "status": "active",
-  "intent": "proposal",
   "category": [
     {
       "coding": [
         {
-          "code": "gene-therapy",
           "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
+          "code": "gene-therapy",
           "display": "Gentherapie"
         }
       ]
@@ -21,13 +19,15 @@
     {
       "coding": [
         {
-          "code": "causal",
           "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
+          "code": "causal",
           "display": "Kausal"
         }
       ]
     }
   ],
+  "status": "active",
+  "intent": "proposal",
   "medicationCodeableConcept": {
     "coding": [
       {
@@ -39,11 +39,11 @@
     "text": "Zolgensma"
   },
   "subject": {
-    "reference": "Patient/patient-sma-001"
+    "reference": "Patient/mii-exa-seltene-patient-sma-001"
   },
   "reasonReference": [
     {
-      "reference": "Condition/sma-diagnosis",
+      "reference": "Condition/mii-exa-seltene-condition-sma-genetic",
       "display": "Spinale Muskelatrophie Typ 1"
     }
   ],

@@ -1,11 +1,12 @@
 {
   "resourceType": "ValueSet",
   "status": "active",
-  "name": "SyndromeCategoryVS",
+  "name": "MII_VS_Seltene_SyndromeCategory",
   "id": "mii-vs-seltene-syndrome-category",
   "title": "Syndrome Category Value Set",
   "description": "Categories for classifying syndrome types in rare diseases",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-syndrome-category",
+  "version": "2027.0.0-ballot.rc1",
   "compose": {
     "include": [
       {
@@ -13,7 +14,7 @@
         "concept": [
           {
             "code": "32895009",
-            "display": "Genetic disorder"
+            "display": "Hereditary disease"
           },
           {
             "code": "75934005",
@@ -28,11 +29,11 @@
             "display": "Congenital malformation"
           },
           {
-            "code": "371097004",
+            "code": "5294002",
             "display": "Developmental disorder"
           },
           {
-            "code": "254829008",
+            "code": "362975008",
             "display": "Degenerative disorder"
           }
         ]

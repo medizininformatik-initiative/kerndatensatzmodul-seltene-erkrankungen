@@ -40,7 +40,7 @@ Description: "Example of a Body Mass Index (BMI) observation for a patient."
 * category.coding.code = #vital-signs
 * category.coding.display = "Vital Signs"
 * code = http://loinc.org#39156-5 "Body mass index (BMI) [Ratio]"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * subject.display = "Example Patient"
 * effectiveDateTime = "2024-08-08T10:00:00+02:00"
 * valueQuantity.value = 22.5
@@ -54,9 +54,9 @@ Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_Bodymassindex
 Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
-* -> "Messbefunde.BMI" "BMI"
-* valueQuantity.value -> "Messbefunde.BMI.BMI" "BMI SE-Patient"
-* effectiveDateTime -> "Messbefunde.BMI.DatumBMI" "Datum des BMI"
-* subject -> "Patient" "Patient/Indexpatient"
+* -> "koerperlicheUntersuchung.bmi" "BMI"
+* valueQuantity.value -> "koerperlicheUntersuchung.bmi.bmi" "BMI SE-Patient"
+* effectiveDateTime -> "koerperlicheUntersuchung.bmi.datumBMI" "Datum des BMI"
+* subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
 * status -> "Status der Messung" "Beobachtungsstatus"
-* code -> "Messbefunde.BMI" "BMI-Code (LOINC 39156-5)"
+* code -> "koerperlicheUntersuchung.bmi" "BMI-Code (LOINC 39156-5)"

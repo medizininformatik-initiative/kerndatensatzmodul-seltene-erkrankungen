@@ -1,0 +1,36 @@
+{
+  "resourceType": "ResearchSubject",
+  "id": "mii-exa-seltene-registerteilnahme",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-registerteilnahme|2027.0.0-ballot.rc1"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register",
+      "valueReference": {
+        "reference": "Library/mii-exa-seltene-register-katalog-euro-nmd"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "https://ern-euro-nmd.eu/fhir/sid/subject",
+      "value": "NMD-DE-004712"
+    }
+  ],
+  "status": "on-study",
+  "period": {
+    "start": "2024-08-15"
+  },
+  "study": {
+    "reference": "ResearchStudy/mii-exa-seltene-register-euro-nmd"
+  },
+  "individual": {
+    "reference": "Patient/mii-exa-seltene-patient-sma-001"
+  },
+  "consent": {
+    "reference": "Consent/mii-exa-seltene-register-einwilligung"
+  }
+}

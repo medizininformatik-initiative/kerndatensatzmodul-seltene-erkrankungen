@@ -45,8 +45,17 @@ Description: "Observation-Profil für die Erfassung der Blutgruppe (AB0 und Rhes
 * valueCodeableConcept MS
 * valueCodeableConcept.coding MS
 * valueCodeableConcept.coding from MII_VS_Seltene_Blutgruppe (required)
-* valueCodeableConcept.coding ^slicing.discriminator.type = #pattern
-* valueCodeableConcept.coding ^slicing.discriminator.path = "$this"
+// Discriminator auf #value/system statt #pattern/$this (GitHub-Issue #25).
+// Die Slices unterscheiden sich ausschliesslich durch ihr Codesystem und setzen
+// dafuer .system — das erzeugt ein patternUri auf dem Kindelement, KEIN
+// patternCoding auf dem Coding selbst. Ein Discriminator vom Typ #pattern auf
+// $this sucht aber genau dort und findet nichts, daher
+// "Slicing cannot be evaluated: Could not match discriminator ($this)".
+// Gegenprobe in derselben Datei: code.coding weiter oben wird per
+// "* code.coding[loinc-abo-rh] = $LNC#882-1" als ganzes Coding zugewiesen,
+// bekommt dadurch ein echtes patternCoding und validiert mit #pattern/$this.
+* valueCodeableConcept.coding ^slicing.discriminator.type = #value
+* valueCodeableConcept.coding ^slicing.discriminator.path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains 
     loinc 0..1 MS and
@@ -63,12 +72,12 @@ Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_Blutgruppe
 Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
-* -> "Messbefunde.Blutgruppe" "Blutgruppe"
-* valueCodeableConcept -> "Messbefunde.Blutgruppe" "Blutgruppe"
-* valueCodeableConcept.coding[loinc] -> "Messbefunde.Blutgruppe" "Blutgruppe (LOINC)"
-* valueCodeableConcept.coding[snomed] -> "Messbefunde.Blutgruppe" "Blutgruppe (SNOMED CT)"
-* valueCodeableConcept.text -> "Messbefunde.Blutgruppe" "Blutgruppe (Text)"
+* -> "koerperlicheUntersuchung.blutgruppe" "Blutgruppe"
+* valueCodeableConcept -> "koerperlicheUntersuchung.blutgruppe" "Blutgruppe"
+* valueCodeableConcept.coding[loinc] -> "koerperlicheUntersuchung.blutgruppe" "Blutgruppe (LOINC)"
+* valueCodeableConcept.coding[snomed] -> "koerperlicheUntersuchung.blutgruppe" "Blutgruppe (SNOMED CT)"
+* valueCodeableConcept.text -> "koerperlicheUntersuchung.blutgruppe" "Blutgruppe (Text)"
 * effectiveDateTime -> "Datum der Blutgruppenbestimmung" "Bestimmungsdatum"
-* subject -> "Patient" "Patient/Indexpatient"
+* subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
 * status -> "Status der Messung" "Beobachtungsstatus"
 * code -> "Art der Blutgruppenbestimmung" "882-1 für AB0+Rh oder 883-9 für nur AB0"

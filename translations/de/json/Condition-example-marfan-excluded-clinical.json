@@ -1,0 +1,37 @@
+{
+  "id" : "Condition-example-marfan-excluded-clinical",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Marfan syndrome",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Marfan-Syndrom (ausgeschlossen)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Normale Aortenwurzel",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Keine Linsenluxation",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Marfan-Syndrom klinisch ausgeschlossen. Ghent-Kriterien nicht erfüllt. Aortenwurzel normwertig, keine ophthalmologischen Manifestationen, Körpergröße im Normbereich.",
+      "target" : null
+    }]
+  }]
+}

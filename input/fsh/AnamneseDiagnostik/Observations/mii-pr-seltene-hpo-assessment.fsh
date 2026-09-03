@@ -76,26 +76,29 @@ Description: "Profile for HPO-based phenotypic observations in the context of ra
 * derivedFrom MS
 * derivedFrom ^short = "Verwandte Beobachtungen oder Bewertungen"
 
-ValueSet: HPOPhenotypicObservationCodes
+ValueSet: MII_VS_Seltene_HPOPhenotypicObservationCodes
 Id: mii-vs-seltene-hpo-phenotypic-observation-codes
 Title: "HPO Phenotypic Observation Codes"
 Description: "Human Phenotype Ontology codes for phenotypic observations"
+* insert PR_CS_VS_Version
 * ^status = #active
 * codes from system $HPO
 
-ValueSet: HPOPresenceStatus
+ValueSet: MII_VS_Seltene_HPOPresenceStatus
 Id: mii-vs-seltene-hpo-presence-status
 Title: "HPO Phenotype Presence Status"
 Description: "LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern."
+* insert PR_CS_VS_Version
 * ^status = #active
 * ^copyright = "This value set includes content from LOINC which is copyrighted by Regenstrief Institute, Inc."
 * $LNC#LA9633-4 "Present"
 * $LNC#LA9634-2 "Absent"
 
-ValueSet: HPOSeverity
+ValueSet: MII_VS_Seltene_HPOSeverity
 Id: mii-vs-seltene-hpo-severity
 Title: "HPO Severity"
 Description: "HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Phenomics IG component pattern."
+* insert PR_CS_VS_Version
 * ^status = #active
 * ^copyright = "This value set includes content from Human Phenotype Ontology (HPO)."
 * $HPO#HP:0012828 "Severe"
@@ -111,7 +114,7 @@ Title: "HPO Symptom Observation Example"
 Description: "Example of an HPO-based phenotypic observation for intellectual disability."
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment)
 * code = $HPO#HP:0001249 "Intellectual disability"
-* subject = Reference(Patient/example-patient)
+* subject = Reference(mii-exa-seltene-patient)
 * status = #final
 * effectiveDateTime = "2024-01-15"
 * component[status].code = $SCT#260411009 "Presence findings"
@@ -125,7 +128,7 @@ Title: "HPO Assessment - Excluded Phenotype"
 Description: "Example of an explicitly excluded phenotype (arachnodactyly ruled out during Marfan syndrome workup)."
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment)
 * code = $HPO#HP:0001166 "Arachnodactyly"
-* subject = Reference(Patient/example-patient)
+* subject = Reference(mii-exa-seltene-patient)
 * status = #final
 * effectiveDateTime = "2024-01-15"
 * component[status].code = $SCT#260411009 "Presence findings"
@@ -139,7 +142,7 @@ Title: "HPO Assessment - Present with Severity"
 Description: "Example of a phenotype with both status (present) and severity grading. Demonstrates HL7 Phenomics IG component pattern."
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment)
 * code = $HPO#HP:0001638 "Cardiomyopathy"
-* subject = Reference(Patient/example-patient)
+* subject = Reference(mii-exa-seltene-patient)
 * status = #final
 * effectiveDateTime = "2024-01-15"
 * component[status].code = $SCT#260411009 "Presence findings"
@@ -154,18 +157,18 @@ Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_HPO_Assessment
 Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
-* -> "AnamneseUndDiagnostik.Phaenotypisierung" "Phänotypisierung"
-* code -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm" "HPO-Term des Symptoms"
-* code.coding.version -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOVersion" "Version HPO-Term"
-* component[status].valueCodeableConcept -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded" "HPO-Term ausgeschlossen (true wenn LA9634-2 'Absent', false wenn LA9633-4 'Present')"
-* component[status].valueCodeableConcept -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus" "Status HPO-Term (Present/Absent)"
-* component[severity].valueCodeableConcept -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus" "Schweregrad (Mild/Moderate/Severe/Profound/Borderline)"
-* component[status].interpretation -> "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom" "Verlauf Symptom"
-* component[status].interpretation.coding.code -> "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus" "Change Status"
-* effectiveDateTime -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Startdatum des Symptoms"
-* effectivePeriod.start -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Startdatum des Symptoms"
-* effectivePeriod.end -> "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom" "Enddatum des Symptoms"
-* method -> "AnamneseUndDiagnostik.MethodeDiagnosestellung" "Methode der Diagnosestellung"
-* subject -> "Patient" "Patient/Indexpatient"
-* encounter -> "AnamneseUndDiagnostik.Untersuchungsdatum" "Untersuchungsdatum"
+* -> "anamneseUndDiagnostik.phaenotypisierung" "Phänotypisierung"
+* code -> "anamneseUndDiagnostik.phaenotypisierung.hpoTerm" "HPO-Term des Symptoms"
+* code.coding.version -> "anamneseUndDiagnostik.phaenotypisierung.hpoVersion" "Version HPO-Term"
+* component[status].valueCodeableConcept -> "anamneseUndDiagnostik.phaenotypisierung.hpoExcluded" "HPO-Term ausgeschlossen (true wenn LA9634-2 'Absent', false wenn LA9633-4 'Present')"
+* component[status].valueCodeableConcept -> "anamneseUndDiagnostik.phaenotypisierung.hpoStatus" "Status HPO-Term (Present/Absent)"
+* component[severity].valueCodeableConcept -> "anamneseUndDiagnostik.phaenotypisierung.hpoStatus" "Schweregrad (Mild/Moderate/Severe/Profound/Borderline)"
+* component[status].interpretation -> "anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom" "Verlauf Symptom"
+* component[status].interpretation.coding.code -> "anamneseUndDiagnostik.phaenotypisierung.hpoStatus" "Change Status"
+* effectiveDateTime -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom" "Startdatum des Symptoms"
+* effectivePeriod.start -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom" "Startdatum des Symptoms"
+* effectivePeriod.end -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom" "Enddatum des Symptoms"
+* method -> "anamneseUndDiagnostik.methodeDiagnosestellung" "Methode der Diagnosestellung"
+* subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
+* encounter -> "anamneseUndDiagnostik.untersuchungsdatum" "Untersuchungsdatum"
 * derivedFrom -> "Verweis auf zugrunde liegende Befunde" "Laborbefunde oder Bildgebung"

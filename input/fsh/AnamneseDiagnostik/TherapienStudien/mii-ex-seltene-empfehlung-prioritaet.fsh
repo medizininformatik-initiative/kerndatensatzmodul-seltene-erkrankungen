@@ -3,6 +3,7 @@ Id: mii-ex-seltene-empfehlung-prioritaet
 Context: MedicationRequest, RequestGroup, ServiceRequest
 Title: "MII EX SE Empfehlung Priorität"
 Description: "Priorität der (einzelnen) Empfehlung"
+* insert PR_CS_VS_Version
 
 * value[x] only decimal or positiveInt
 * value[x] 1..1 MS

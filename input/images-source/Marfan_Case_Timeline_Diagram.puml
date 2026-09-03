@@ -1,0 +1,193 @@
+' Quelle: implementation-guides/ImplementationGuide-2026.x-DE/.../Marfan-Syndrom.page.md
+' (Simplifier-Guide 2026.0.1, unveraendert uebernommen bei der Migration 2026-08-28)
+@startuml
+!theme plain
+skinparam backgroundColor #ffffff
+
+' Timeline sequence diagram showing progression
+title Marfan-Syndrom Fall - Zeitlicher Verlauf und Ressourcen-Beziehungen
+
+participant "Patient\n(19-jähriger Mann)" as Patient #2563eb
+participant "Diagnosen" as Diagnosis #dc2626
+participant "Encounters" as Encounters #ea580c
+participant "Symptome/\nPhänotyp" as Symptoms #059669
+participant "Prozeduren" as Procedures #7c3aed
+participant "Medikation" as Medication #ec4899
+participant "Diagnostik" as Diagnostics #16a34a
+participant "Klinische\nBeurteilung" as ClinImp #facc15
+
+== 15.10.2024 - Augenärztliche Konsultation ==
+Encounters -> Patient: encounter-ophthalmology
+activate Encounters #ea580c
+Symptoms -> Patient: symptom-cataract
+activate Symptoms #059669
+note right of Symptoms
+  **Katarakt bilateral**
+  HPO: HP:0000518
+end note
+
+Encounters -> Diagnosis: Katarakt-Diagnose
+activate Diagnosis #dc2626
+note right of Diagnosis
+  **condition-cataract**
+  ICD-10: H26.9
+  Status: active
+end note
+deactivate Encounters
+
+== 12.11.2024 - Katarakt-Operation ==
+Encounters -> Patient: encounter-cataract-surgery
+activate Encounters #ea580c
+Procedures -> Patient: procedure-cataract-surgery
+activate Procedures #7c3aed
+note right of Procedures
+  **Phakoemulsifikation**
+  OPS: 5-144.5a
+  Mit IOL-Implantation
+  Status: completed
+end note
+deactivate Procedures
+
+Diagnosis -> Diagnosis: Katarakt resolved
+note right of Diagnosis
+  Status: resolved
+end note
+deactivate Encounters
+deactivate Symptoms
+
+== 15.12.2024 - Kardiologische Erstvorstellung ==
+Encounters -> Patient: encounter-cardiology
+activate Encounters #ea580c
+
+Patient -> Symptoms: Phänotypische Befunde
+activate Symptoms #059669
+note left of Patient
+  **Körperliche Untersuchung:**
+  - Größe: 2,13m
+  - Beinlängendifferenz
+  - Marfanoider Habitus
+end note
+
+Symptoms -> Patient: symptom-chest-pain
+note right of Symptoms
+  **Thoraxschmerzen**
+  HPO: HP:0100749
+  Akut
+end note
+
+Symptoms -> Patient: observation-height-001
+note right of Symptoms
+  **Hochwuchs**
+  HPO: HP:0000098
+  2,13 m
+end note
+
+Symptoms -> Patient: observation-leg-asymmetry
+note right of Symptoms
+  **Beinlängendifferenz**
+  HPO: HP:0100559
+  Rechts verkürzt
+end note
+
+Diagnostics -> Patient: Echokardiographie
+activate Diagnostics #16a34a
+note right of Diagnostics
+  **Echo-Befunde:**
+  - Aortenwurzel: 48mm ↑
+  - AKI: Grad II
+  - MKI: Grad I
+end note
+
+Diagnostics -> Symptoms: Kardiale Befunde
+Symptoms -> Patient: symptom-aortic-root
+note right of Symptoms
+  **Aortenwurzeldilatation**
+  HPO: HP:0002616
+  48 mm (pathologisch)
+end note
+
+Symptoms -> Patient: symptom-aortic-regurg
+note right of Symptoms
+  **Aortenklappeninsuffizienz**
+  HPO: HP:0001659
+  Grad II
+end note
+
+Symptoms -> Patient: symptom-mitral-regurg
+note right of Symptoms
+  **Mitralklappeninsuffizienz**
+  HPO: HP:0001653
+  Grad I
+end note
+deactivate Diagnostics
+
+Encounters -> Diagnosis: Marfan-Syndrom bestätigt
+note right of Diagnosis
+  **condition-marfan-confirmed**
+  ICD-10: Q87.4
+  Orpha: 558
+  Status: confirmed
+  Feststellungsdatum: 15.12.2024
+end note
+
+ClinImp -> Patient: clinical-impression-cardiology
+activate ClinImp #facc15
+note right of ClinImp
+  **Kardiologische Beurteilung:**
+  - Marfan-Syndrom bestätigt
+  - Aortenwurzel 48mm
+  - OP-Indikation gestellt
+  - Medikation eingeleitet
+end note
+
+Medication -> Patient: medication-losartan
+activate Medication #ec4899
+note right of Medication
+  **Losartan 50mg**
+  1x täglich
+  Indikation: Aortenprotektion
+  Start: 15.12.2024
+end note
+
+ClinImp -> Procedures: OP-Planung
+note right of ClinImp
+  David-OP geplant
+  für 15.03.2025
+end note
+deactivate ClinImp
+
+deactivate Encounters
+deactivate Symptoms
+
+== 15.03.2025 - Geplante Aortenwurzelersatz-OP ==
+Encounters -> Patient: encounter-surgery-planned
+activate Encounters #ea580c
+Procedures -> Patient: procedure-aortic-planned
+activate Procedures #7c3aed
+note right of Procedures
+  **Aortenwurzelersatz**
+  OPS: 5-354.0a
+  David-Operation
+  Status: planned
+  → reasonReference: condition-marfan-confirmed
+end note
+deactivate Procedures
+deactivate Encounters
+
+deactivate Diagnosis
+deactivate Medication
+
+legend bottom
+|= Ressourcen-Typen und Beziehungen |
+| <back:#2563eb>Patient</back> | Zentrale Patientenressource |
+| <back:#dc2626>Condition</back> | Diagnosen (2 Instanzen) |
+| <back:#ea580c>Encounter</back> | Behandlungskontakte (4 Instanzen) |
+| <back:#059669>Observation</back> | Symptome & Befunde (8 Instanzen) |
+| <back:#7c3aed>Procedure</back> | Prozeduren (2 Instanzen) |
+| <back:#ec4899>MedicationStatement</back> | Medikation (1 Instanz) |
+| <back:#16a34a>Diagnostic</back> | Echo-Untersuchung (3 Instanzen) |
+| <back:#facc15>ClinicalImpression</back> | Klinische Beurteilung (1 Instanz) |
+| → | Referenz zwischen Ressourcen |
+endlegend
+
+@enduml

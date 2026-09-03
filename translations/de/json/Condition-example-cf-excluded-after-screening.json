@@ -1,0 +1,37 @@
+{
+  "id" : "Condition-example-cf-excluded-after-screening",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Genetic disease",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Cystic fibrosis",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Mukoviszidose (ausgeschlossen)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Genetic finding",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Heterozygoter Anlageträger für F508del. Zweite Mutation ausgeschlossen. IRT-Erhöhung im Screening war transient. Mukoviszidose ausgeschlossen.",
+      "target" : null
+    }]
+  }]
+}

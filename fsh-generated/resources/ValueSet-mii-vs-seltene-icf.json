@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Seltene_ICF",
+  "id": "mii-vs-seltene-icf",
+  "title": "MII VS SE ICF Categories",
+  "description": "All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. German display text comes from the BfArM language supplement, so the value set does not need a German twin.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2027.0.0-ballot.rc1",
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icf"
+      }
+    ]
+  }
+}

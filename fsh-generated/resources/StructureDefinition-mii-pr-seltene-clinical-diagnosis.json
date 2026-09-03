@@ -24,6 +24,7 @@
         "coding": [
           {
             "system": "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+            "version": "3.0.0",
             "code": "package",
             "display": "Package"
           }
@@ -112,7 +113,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis",
-  "version": "2026.0.1",
+  "version": "2027.0.0-ballot.rc1",
   "name": "MII_PR_Seltene_ClinicalDiagnosis",
   "title": "MII PR SE Clinical Diagnosis",
   "status": "active",
@@ -149,7 +150,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.KlinischeDiagnose",
+            "map": "anamneseUndDiagnostik.klinischeDiagnose",
             "comment": "Klinische Diagnose"
           }
         ]
@@ -165,7 +166,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+            "map": "anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia",
             "comment": "Feststellungsdatum klinische SE-Diagnose"
           }
         ]
@@ -188,7 +189,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.KlinischeDiagnose",
+            "map": "anamneseUndDiagnostik.klinischeDiagnose",
             "comment": "ICD-10-GM Diagnose"
           }
         ]
@@ -200,7 +201,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.KlinischeDiagnose",
+            "map": "anamneseUndDiagnostik.klinischeDiagnose",
             "comment": "Orpha-Code Diagnose"
           }
         ]
@@ -225,7 +226,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+            "map": "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
             "comment": "HPO-Term des Symptoms"
           }
         ]
@@ -253,7 +254,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Patient",
+            "map": "persoenlicheInfosIndexpatient",
             "comment": "Patient/Indexpatient"
           }
         ]
@@ -264,7 +265,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Untersuchungsdatum",
+            "map": "anamneseUndDiagnostik.untersuchungsdatum",
             "comment": "Untersuchungsdatum"
           }
         ]
@@ -275,7 +276,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia",
+            "map": "anamneseUndDiagnostik.klinischeDiagnose.alterKlinischeDia",
             "comment": "Alter/Zeitpunkt bei klinischer SE-Diagnose"
           }
         ]
@@ -292,7 +293,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+            "map": "anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia",
             "comment": "Feststellungsdatum klinische SE-Diagnose"
           }
         ]
@@ -342,7 +343,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+            "map": "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
             "comment": "Unterstützende HPO-Symptome"
           }
         ]
@@ -371,7 +372,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung",
+            "map": "anamneseUndDiagnostik.phaenotypisierung",
             "comment": "Verweis auf Phänotypisierung"
           }
         ]

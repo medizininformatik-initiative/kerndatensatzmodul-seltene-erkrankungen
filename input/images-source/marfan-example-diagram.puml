@@ -1,0 +1,256 @@
+@startuml Marfan_Case_Resources_Diagram
+!define DARKBLUE #1e3a5f
+!define LIGHTBLUE #4a86e8
+!define GREEN #0d9488
+!define ORANGE #ea580c
+!define PURPLE #7c3aed
+!define RED #dc2626
+!define YELLOW #facc15
+!define PINK #ec4899
+
+skinparam backgroundColor #f8f9fa
+skinparam roundcorner 10
+skinparam shadowing true
+skinparam ArrowColor #666666
+skinparam ArrowThickness 2
+
+skinparam class {
+    BackgroundColor<<Patient>> DARKBLUE
+    BorderColor<<Patient>> DARKBLUE
+    FontColor<<Patient>> white
+    
+    BackgroundColor<<Condition>> RED
+    BorderColor<<Condition>> RED
+    FontColor<<Condition>> white
+    
+    BackgroundColor<<Observation>> GREEN
+    BorderColor<<Observation>> GREEN
+    FontColor<<Observation>> white
+    
+    BackgroundColor<<Procedure>> PURPLE
+    BorderColor<<Procedure>> PURPLE
+    FontColor<<Procedure>> white
+    
+    BackgroundColor<<Encounter>> ORANGE
+    BorderColor<<Encounter>> ORANGE
+    FontColor<<Encounter>> white
+    
+    BackgroundColor<<Medication>> PINK
+    BorderColor<<Medication>> PINK
+    FontColor<<Medication>> white
+    
+    BackgroundColor<<ClinicalImpression>> YELLOW
+    BorderColor<<ClinicalImpression>> YELLOW
+    FontColor<<ClinicalImpression>> black
+}
+
+' Layout hint - force left positioning
+together {
+    class "condition-cataract" <<Condition>> {
+        **Katarakt bilateral**
+        Status: resolved
+        ICD-10: H26.9
+        Erstdiagnose: 15.10.2024
+        Z.n. OP: 12.11.2024
+        → Anlass für ZSE-Vorstellung
+    }
+    
+    class "condition-marfan-suspected" <<Condition>> {
+        **Verdacht auf Marfan-Syndrom**
+        clinicalStatus: active
+        verificationStatus: provisional
+        ICD-10: Q87.4
+        Feststellung: 10.12.2024
+        Quelle: ZSE
+    }
+    
+    class "clinical-impression-001" <<ClinicalImpression>> {
+        **Konsultation ZSE**
+        Status: completed
+        Datum: 20.12.2024
+        Zusammenfassung: Bestätigtes Marfan
+        mit klinischen und genetischen Befunden
+    }
+    
+    class "encounter-cardiology" <<Encounter>> {
+        **Kardiologische Erstvorstellung**
+        Datum: 15.12.2024
+        Typ: Ambulant
+    }
+}
+
+' Patient at the center
+class "patient-marfan-001" <<Patient>> {
+    19-jähriger Mann
+    Geburt: ~2005
+    ID: MRF-2024-001
+    Größe: 2,13m
+}
+
+' Confirmed Diagnoses
+class "condition-marfan-clinical" <<Condition>> {
+    **Klinische Diagnose Marfan**
+    Category: clinical
+    clinicalStatus: active
+    verificationStatus: confirmed
+    ICD-10: Q87.4
+    Orpha: 558
+    Feststellung: 15.12.2024
+}
+
+class "condition-marfan-genetic" <<Condition>> {
+    **Genetische Diagnose Marfan**
+    Category: genetic
+    clinicalStatus: active
+    verificationStatus: confirmed
+    ICD-10: Q87.4
+    Orpha: 558
+    Feststellung: 20.12.2024
+    FBN1: homozygote Mutation
+}
+
+' Genetic findings (top)
+class "variant-fbn1-001" <<Observation>> {
+    **FBN1 Mutation**
+    c.3217G>A (p.Gly1073Arg)
+    Status: Pathologisch
+    Datum: 20.12.2024
+}
+
+' Treatments (right)
+class "procedure-aortic-planned" <<Procedure>> {
+    **Aortenwurzelersatz**
+    OPS: 5-354.0a
+    Datum: 15.03.2025
+    David-Operation
+}
+
+class "medication-losartan" <<Medication>> {
+    **Losartan**
+    50mg 1x täglich
+    Start: 15.12.2024
+}
+
+' Cardiac observations (bottom right)
+class "observation-aortic-series" <<Observation>> {
+    **Kardiologische Befunde**
+    Aortenwurzel: 48mm ↑
+    AKI: Grad II
+    MKI: Grad I
+    Thoraxschmerzen
+}
+
+' Skeletal observations (bottom left)
+class "observation-skeletal" <<Observation>> {
+    **Skelettale Merkmale**
+    Körpergröße: 2,13m
+    Beinlängendifferenz
+    Datum: 15.12.2024
+}
+
+
+' Other Encounters (bottom)
+class "encounter-ophthalmology" <<Encounter>> {
+    **Augenärztliche Konsultation**
+    Datum: 15.10.2024
+    Typ: Ambulant
+}
+
+class "encounter-surgery-planned" <<Encounter>> {
+    **Geplante Herzchirurgie**
+    Datum: 15.03.2025
+    Typ: Stationär
+}
+
+' Layout positioning with hidden arrows
+"condition-cataract" -[hidden]down-> "condition-marfan-suspected"
+"condition-marfan-suspected" -[hidden]down-> "clinical-impression-001"
+"clinical-impression-001" -[hidden]down-> "encounter-cardiology"
+"condition-cataract" -[hidden]right-> "patient-marfan-001"
+"condition-marfan-suspected" -[hidden]right-> "patient-marfan-001"
+"clinical-impression-001" -[hidden]right-> "patient-marfan-001"
+
+' Relationships - Patient at center
+"patient-marfan-001" <-- "condition-marfan-suspected" : subject
+"patient-marfan-001" <-- "condition-marfan-clinical" : subject
+"patient-marfan-001" <-- "condition-marfan-genetic" : subject
+"patient-marfan-001" <-- "clinical-impression-001" : subject
+"patient-marfan-001" <-- "variant-fbn1-001" : subject
+"patient-marfan-001" <-- "procedure-aortic-planned" : subject
+"patient-marfan-001" <-- "medication-losartan" : subject
+"patient-marfan-001" <-- "observation-aortic-series" : subject
+"patient-marfan-001" <-- "observation-skeletal" : subject
+"patient-marfan-001" <-- "condition-cataract" : subject
+
+' Cataract as trigger
+"condition-cataract" ..> "condition-marfan-suspected" : triggers evaluation
+
+' ClinicalImpression reason and results
+"clinical-impression-001" --> "condition-marfan-suspected" : problem
+"clinical-impression-001" --> "condition-marfan-clinical" : finding
+"clinical-impression-001" --> "condition-marfan-genetic" : finding
+"clinical-impression-001" --> "condition-cataract" : supportingInfo
+
+' ClinicalImpression investigations
+"clinical-impression-001" --> "variant-fbn1-001" : investigation
+"clinical-impression-001" --> "observation-aortic-series" : investigation
+"clinical-impression-001" --> "observation-skeletal" : investigation
+
+' Parallel diagnoses - both exist simultaneously
+"condition-marfan-suspected" ..> "condition-marfan-clinical" : leads to
+"condition-marfan-suspected" ..> "condition-marfan-genetic" : leads to
+
+' Evidence links
+"condition-marfan-genetic" --> "variant-fbn1-001" : evidence
+"condition-marfan-clinical" --> "observation-aortic-series" : evidence
+"condition-marfan-clinical" --> "observation-skeletal" : evidence
+
+' Procedure reasons
+"procedure-aortic-planned" --> "condition-marfan-clinical" : reasonReference
+"procedure-aortic-planned" --> "condition-marfan-genetic" : reasonReference
+
+' Medication reason
+"medication-losartan" --> "condition-marfan-clinical" : reasonReference
+
+' Encounter diagnosis links
+"encounter-cardiology" --> "condition-marfan-clinical" : diagnosis
+"encounter-ophthalmology" --> "condition-cataract" : diagnosis
+"encounter-surgery-planned" --> "condition-marfan-genetic" : diagnosis
+
+' Encounter patient links
+"patient-marfan-001" <-- "encounter-cardiology" : subject
+"patient-marfan-001" <-- "encounter-ophthalmology" : subject
+"patient-marfan-001" <-- "encounter-surgery-planned" : subject
+
+' ClinicalImpression encounter
+"clinical-impression-001" --> "encounter-cardiology" : encounter
+
+' Timeline annotation
+note right of "condition-cataract"
+  **Zeitlicher Verlauf:**
+  1. Katarakt (15.10) → ZSE-Vorstellung
+  2. Verdacht Marfan (10.12)
+  3. Klinische Diagnose (15.12)
+  4. Genetische Diagnose (20.12)
+  
+  Katarakt war Anlass für
+  weiterführende Diagnostik
+end note
+
+note left of "observation-aortic-series"
+  **Kardiale Manifestation**
+  bestätigt Marfan-Syndrom
+end note
+
+legend bottom center
+|Color|Type|Beschreibung|
+|<#1e3a5f>|Patient|Zentrale Patientenressource|
+|<#dc2626>|Condition|Diagnosen (Katarakt → Marfan)|
+|<#facc15>|ClinicalImpression|ZSE-Konsultation|
+|<#0d9488>|Observation|Befunde & Genetik|
+|<#7c3aed>|Procedure|Operationen|
+|<#ea580c>|Encounter|Kontakte|
+|<#ec4899>|Medication|Medikation|
+endlegend
+
+@enduml

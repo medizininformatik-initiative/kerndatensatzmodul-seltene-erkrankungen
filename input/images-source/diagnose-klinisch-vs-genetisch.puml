@@ -1,0 +1,83 @@
+@startuml
+' Klinische gegen genetische Diagnose — Strukturvergleich.
+' Sprachneutral: nur FHIR-Elementnamen, Profil-IDs und Codes.
+'
+' Korrigiert 2026-09-03. Die erste Fassung (2026-09-02) fuehrte vier
+' Extensions auf, die noch am selben Tag entfernt wurden (ageOfOnset,
+' inheritancePattern an beiden Profilen, geneticBasis an der genetischen),
+' und behauptete einen Unterschied "Kategorie optional gegen Pflicht", den
+' es nie gab: category ist in BEIDEN Profilen 1..*. Der wirkliche Unterschied
+' ist, dass die genetische Diagnose den WERT der Kategorie festlegt.
+' Ausserdem war verificationStatus als Profil-Constraint dargestellt — das
+' Modul schraenkt es an keiner Stelle ein, es erbt unveraendert 0..1 mit
+' required-Bindung an condition-ver-status. Die Empfehlung, welcher Status
+' wann zu setzen ist, steht im Parallelmodell-Diagramm, wo sie hingehoert.
+' Jede Zeile unten ist am 2026-09-03 gegen die generierten
+' StructureDefinitions geprueft.
+' KEIN 'left to right direction': das dreht die Semantik der Pfeilrichtung um,
+' wodurch aus '-[hidden]right->' ein Untereinander wird und der Vergleich seine
+' Nebeneinander-Anordnung verliert (so passiert am 2026-09-03).
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 12
+skinparam ArrowColor #555555
+skinparam class {
+  BorderColor #4a86e8
+  BackgroundColor #ffffff
+  HeaderBackgroundColor #eef4fd
+  FontColor #1a1a1a
+}
+
+title Was die beiden Profile unterscheidet
+
+class "MII_PR_Seltene_ClinicalDiagnosis" as C {
+  code.coding[icd10-gm]   << geerbt >>
+  code.coding[orphanet]   << geerbt >>
+  code.coding[**hpo**]  0..*   << eigener Slice >>
+  <size:11>required → hpo-phenotypic-observation-codes</size>
+  --
+  category  1..*   <size:11>Wert frei</size>
+  --
+  evidence  0..*
+  evidence.code.coding   <size:11>extensible → HPO</size>
+  evidence.detail → Observation
+}
+
+class "MII_PR_Seltene_GeneticDiagnosis" as G {
+  code.coding[icd10-gm]   << geerbt >>
+  code.coding[orphanet]   << geerbt >>
+  code.coding[**omim**]  0..*   << eigener Slice >>
+  --
+  category  1..*   <size:11>**fester Wert**</size>
+  <size:11>= SCT#782964007 Genetic disease</size>
+  --
+  evidence  **1..***   <size:11>Pflicht</size>
+  evidence.code.coding[**geneticEvidence**]
+  <size:11>= SCT#106221001 Genetic finding</size>
+  evidence.detail  1..* → Observation | DiagnosticReport
+  --
+  extension[**penetrance**]
+}
+
+C -[hidden]right-> G
+
+note bottom of C
+  Belegt sich mit **Phaenotyp** (HPO).
+  Nachweis ist optional.
+end note
+
+note bottom of G
+  Belegt sich mit **Molekulargenetik**.
+  Nachweis ist **Pflicht** (evidence 1..*),
+  empfohlen die MolGen-Variante.
+end note
+
+note as N
+  **Gleich in beiden:** verificationStatus erbt
+  unveraendert 0..1 (required, condition-ver-status);
+  das Modul schraenkt ihn nicht ein. Ebenso das
+  Feststellungsdatum (assertedDate) aus dem Parent.
+end note
+
+@enduml

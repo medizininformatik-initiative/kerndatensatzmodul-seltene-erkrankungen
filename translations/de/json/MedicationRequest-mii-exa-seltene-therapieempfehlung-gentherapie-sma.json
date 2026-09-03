@@ -1,0 +1,43 @@
+{
+  "id" : "MedicationRequest-mii-exa-seltene-therapieempfehlung-gentherapie-sma",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Gentherapie",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Kausal",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "ONASEMNOGENE ABEPARVOVEC",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Zolgensma",
+      "target" : null
+    },
+    {
+      "id" : "Reference.display",
+      "context" : "Reference.display",
+      "source" : "Spinale Muskelatrophie Typ 1",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Einmalige intravenöse Infusion der Gentherapie",
+      "target" : null
+    }]
+  }]
+}

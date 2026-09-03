@@ -1,12 +1,12 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
-  "name": "ClinicalDiagnosisCategoryVS",
+  "status": "retired",
+  "name": "MII_VS_Seltene_ClinicalDiagnosisCategory",
   "id": "mii-vs-seltene-clinical-diagnosis-category",
-  "title": "MII VS SE Clinical Diagnosis Category",
-  "description": "Value set for categorizing clinical diagnoses of rare diseases",
+  "title": "MII VS SE Clinical Diagnosis Category (retired)",
+  "description": "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code.",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category",
-  "version": "2026.0.1",
+  "version": "2027.0.0-ballot.rc1",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -28,12 +28,16 @@
             "display": "Diagnosis"
           },
           {
-            "code": "363358000",
+            "code": "404684003",
             "display": "Clinical finding"
           },
           {
             "code": "64572001",
             "display": "Disease"
+          },
+          {
+            "code": "66091009",
+            "display": "Congenital disease"
           },
           {
             "code": "609328004",
@@ -42,18 +46,6 @@
           {
             "code": "85828009",
             "display": "Autoimmune disease"
-          },
-          {
-            "code": "47367009",
-            "display": "Syndrome"
-          },
-          {
-            "code": "381406004",
-            "display": "Congenital disorder"
-          },
-          {
-            "code": "84757009",
-            "display": "Rare disease"
           }
         ]
       }

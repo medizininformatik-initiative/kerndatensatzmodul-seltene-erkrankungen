@@ -1,0 +1,253 @@
+@startuml SMA_Case_Resources_Diagram
+!define DARKBLUE #1e3a5f
+!define LIGHTBLUE #4a86e8
+!define GREEN #0d9488
+!define ORANGE #ea580c
+!define PURPLE #7c3aed
+!define RED #dc2626
+!define YELLOW #facc15
+
+skinparam backgroundColor #f8f9fa
+skinparam roundcorner 10
+skinparam shadowing true
+skinparam ArrowColor #666666
+skinparam ArrowThickness 2
+
+skinparam class {
+    BackgroundColor<<Patient>> DARKBLUE
+    BorderColor<<Patient>> DARKBLUE
+    FontColor<<Patient>> white
+    
+    BackgroundColor<<Condition>> RED
+    BorderColor<<Condition>> RED
+    FontColor<<Condition>> white
+    
+    BackgroundColor<<Observation>> GREEN
+    BorderColor<<Observation>> GREEN
+    FontColor<<Observation>> white
+    
+    BackgroundColor<<Procedure>> PURPLE
+    BorderColor<<Procedure>> PURPLE
+    FontColor<<Procedure>> white
+    
+    BackgroundColor<<Encounter>> ORANGE
+    BorderColor<<Encounter>> ORANGE
+    FontColor<<Encounter>> white
+    
+    BackgroundColor<<FamilyHistory>> LIGHTBLUE
+    BorderColor<<FamilyHistory>> LIGHTBLUE
+    FontColor<<FamilyHistory>> white
+    
+    BackgroundColor<<ClinicalImpression>> YELLOW
+    BorderColor<<ClinicalImpression>> YELLOW
+    FontColor<<ClinicalImpression>> black
+}
+
+' Layout hint - force left positioning
+together {
+    class "condition-sma-suspected" <<Condition>> {
+        **Verdacht auf SMA**
+        clinicalStatus: active
+        verificationStatus: provisional
+        Feststellung: 18.07.2024
+        Quelle: Neugeborenenscreening
+    }
+    
+    class "clinical-impression-001" <<ClinicalImpression>> {
+        **Klinische Beurteilung SMA**
+        Status: completed
+        Datum: 26.07.2024
+        Zusammenfassung: Bestätigte SMA Typ 1
+        mit klinischen und genetischen Befunden
+    }
+    
+    class "encounter-screening-001" <<Encounter>> {
+        **Neugeborenenscreening**
+        Datum: 18.07.2024
+        Typ: Screening
+    }
+}
+
+' Patient at the center
+class "patient-sma-001" <<Patient>> {
+    Neugeborenes Mädchen
+    Geburt: ~01.07.2024
+    ID: SMA-2024-001
+}
+
+' Confirmed Diagnoses
+class "condition-sma-clinical" <<Condition>> {
+    **Klinische Diagnose SMA Typ 1**
+    Category: clinical
+    clinicalStatus: active
+    verificationStatus: confirmed
+    ICD-10: G12.0
+    Orpha: 83330
+    Feststellung: 22.07.2024
+    Onset: Neonatal
+}
+
+class "condition-sma-genetic" <<Condition>> {
+    **Genetische Diagnose SMA Typ 1**
+    Category: genetic
+    clinicalStatus: active
+    verificationStatus: confirmed
+    ICD-10: G12.0
+    Orpha: 83330
+    Feststellung: 26.07.2024
+    SMN1: homozygote Deletion
+}
+
+' Genetic findings (top)
+class "variant-smn1-001" <<Observation>> {
+    **SMN1 Deletion**
+    Kopien: 0 (homozygot)
+    Status: Pathologisch
+    Datum: 26.07.2024
+}
+
+class "variant-smn2-001" <<Observation>> {
+    **SMN2 Kopienanzahl**
+    Kopien: 2
+    Modifikator
+    Datum: 26.07.2024
+}
+
+' Gene therapy (right)
+class "procedure-gentherapy-001" <<Procedure>> {
+    **Gentherapie**
+    OPS: 6-00d.0
+    Datum: 29.07.2024
+    Mit Prednisolon
+}
+
+' Family history (bottom left)
+class "family-history-001" <<FamilyHistory>> {
+    **Urgroßmutter**
+    Unbekannte Muskelerkrankung
+    Relation: unsicher
+    Datum: 22.07.2024
+}
+
+' Other Encounters (bottom)
+class "encounter-ambulant-001" <<Encounter>> {
+    **Erstvorstellung**
+    Datum: 22.07.2024
+    Typ: Ambulant
+    SMA-Zentrum
+}
+
+class "encounter-stationaer-001" <<Encounter>> {
+    **Stationär für Gentherapie**
+    Datum: 29-30.07.2024
+    Typ: Stationär
+}
+
+class "encounter-nachsorge-001" <<Encounter>> {
+    **Nachsorge**
+    Datum: 12.08.2024
+    Typ: Ambulant
+}
+
+' Lab observations (right side)
+class "observation-troponin-series" <<Observation>> {
+    **Troponin T hs**
+    22.07: 92 ng/l ↑
+    28.07: 58 ng/l ↑
+    01.08: 57 ng/l ↑
+    12.08: 106 ng/l ↑
+}
+
+class "observation-liver-plt" <<Observation>> {
+    **ALT, AST, Thrombozyten**
+    Post-therapeutisch
+    Status: Normwertig
+    Datum: 29.07.2024
+}
+
+' Layout positioning - force left-to-right flow and vertical arrangement
+"condition-sma-suspected" -[hidden]down-> "clinical-impression-001"
+"clinical-impression-001" -[hidden]down-> "encounter-screening-001"
+"condition-sma-suspected" -[hidden]right-> "patient-sma-001"
+"clinical-impression-001" -[hidden]right-> "patient-sma-001"
+
+' Relationships - Patient at center
+"patient-sma-001" <-- "condition-sma-suspected" : subject
+"patient-sma-001" <-- "condition-sma-clinical" : subject
+"patient-sma-001" <-- "condition-sma-genetic" : subject
+"patient-sma-001" <-- "clinical-impression-001" : subject
+"patient-sma-001" <-- "variant-smn1-001" : subject
+"patient-sma-001" <-- "variant-smn2-001" : subject
+"patient-sma-001" <-- "procedure-gentherapy-001" : subject
+"patient-sma-001" <-- "family-history-001" : patient
+"patient-sma-001" <-- "observation-troponin-series" : subject
+"patient-sma-001" <-- "observation-liver-plt" : subject
+
+' ClinicalImpression reason and results
+"clinical-impression-001" --> "condition-sma-suspected" : reasonReference
+"clinical-impression-001" --> "condition-sma-clinical" : finding (result)
+"clinical-impression-001" --> "condition-sma-genetic" : finding (result)
+
+' ClinicalImpression investigations
+"clinical-impression-001" --> "variant-smn1-001" : investigation
+"clinical-impression-001" --> "variant-smn2-001" : investigation
+"clinical-impression-001" --> "observation-troponin-series" : investigation
+"clinical-impression-001" --> "family-history-001" : investigation
+
+' Parallel diagnoses - both exist simultaneously
+"condition-sma-suspected" ..> "condition-sma-clinical" : leads to
+"condition-sma-suspected" ..> "condition-sma-genetic" : leads to
+
+' Evidence links
+"condition-sma-genetic" --> "variant-smn1-001" : evidence
+"condition-sma-genetic" --> "variant-smn2-001" : evidence
+"condition-sma-clinical" --> "observation-troponin-series" : evidence
+
+' Procedure reasons - both diagnoses support treatment
+"procedure-gentherapy-001" --> "condition-sma-clinical" : reasonReference
+"procedure-gentherapy-001" --> "condition-sma-genetic" : reasonReference
+
+' Encounter diagnosis links
+"encounter-screening-001" ..> "condition-sma-suspected" : identifies
+"encounter-ambulant-001" --> "condition-sma-clinical" : diagnosis
+"encounter-stationaer-001" --> "condition-sma-genetic" : diagnosis
+"encounter-nachsorge-001" --> "condition-sma-clinical" : diagnosis
+"encounter-nachsorge-001" --> "condition-sma-genetic" : diagnosis
+
+' Encounter patient links
+"patient-sma-001" <-- "encounter-screening-001" : subject
+"patient-sma-001" <-- "encounter-ambulant-001" : subject
+"patient-sma-001" <-- "encounter-stationaer-001" : subject
+"patient-sma-001" <-- "encounter-nachsorge-001" : subject
+
+' Procedure encounter link
+"encounter-stationaer-001" <.. "procedure-gentherapy-001" : context
+
+' Timeline annotation
+note right of "condition-sma-suspected"
+  **Parallele Diagnosen:**
+  1. Verdacht (18.07)
+  2. Klinische Diagnose (22.07)
+  3. Genetische Diagnose (26.07)
+  
+  Beide Diagnosen existieren
+  parallel und ergänzen sich
+end note
+
+note left of "observation-troponin-series"
+  **Troponin bereits**
+  **prätherapeutisch erhöht**
+end note
+
+legend bottom center
+|Color|Type|Beschreibung|
+|<#1e3a5f>|Patient|Zentrale Patientenressource|
+|<#dc2626>|Condition|Parallele Diagnosen (Klinisch & Genetisch)|
+|<#facc15>|ClinicalImpression|Klinische Beurteilung|
+|<#0d9488>|Observation|Labor & Genetik|
+|<#7c3aed>|Procedure|Gentherapie|
+|<#ea580c>|Encounter|Kontakte|
+|<#4a86e8>|FamilyHistory|Familienanamnese|
+endlegend
+
+@enduml

@@ -25,7 +25,7 @@ Description: "Beispiel einer Kopfumfang-Messung bei einem Patienten mit seltener
 * category[VSCat].coding.display = "Vital Signs"
 * code.coding[loinc] = $LNC#9843-4 "Head Occipital-frontal circumference"
 * code.coding[snomed] = $SCT#363812007
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * subject.display = "Beispielpatient"
 * effectiveDateTime = "2024-08-08T10:00:00+02:00"
 * valueQuantity.value = 54.5
@@ -39,8 +39,8 @@ Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_Kopfumfang
 Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
-* -> "Messbefunde.Kopfumfang" "Kopfumfang"
-* valueQuantity.value -> "Messbefunde.Kopfumfang" "Kopfumfang in cm"
-* effectiveDateTime -> "Messbefunde.Kopfumfang.Datum" "Datum der Messung"
-* subject -> "Patient" "Patient/Indexpatient"
+* -> "koerperlicheUntersuchung.kopfumfang" "Kopfumfang"
+* valueQuantity.value -> "koerperlicheUntersuchung.kopfumfang.kopfumfang" "Kopfumfang in cm"
+* effectiveDateTime -> "koerperlicheUntersuchung.kopfumfang.datumKopfumfang" "Datum der Messung"
+* subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
 * status -> "Status der Messung" "Beobachtungsstatus"

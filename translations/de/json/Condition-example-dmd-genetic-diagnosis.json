@@ -1,0 +1,43 @@
+{
+  "id" : "Condition-example-dmd-genetic-diagnosis",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Genetic disease",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Duchenne muscular dystrophy",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Duchenne-Muskeldystrophie",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Genetic finding",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Genetic test",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Deletion der Exons 45-47 im DMD-Gen nachgewiesen. Out-of-frame Deletion führt zu komplettem Funktionsverlust des Dystrophin-Proteins.",
+      "target" : null
+    }]
+  }]
+}
