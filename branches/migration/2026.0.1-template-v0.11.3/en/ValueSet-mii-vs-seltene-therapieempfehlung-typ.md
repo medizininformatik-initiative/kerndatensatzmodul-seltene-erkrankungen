@@ -1,4 +1,4 @@
-# MII VS SE Therapieempfehlung Typ - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# MII VS SE Therapieempfehlung Typ - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-typ | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-typ | *Version*:2027.0.0-ballot.rc1 |
 | Active as of 2026-09-03 | *Computable Name*:MII_VS_Seltene_TherapieempfehlungTyp |
 
  
@@ -38,11 +38,11 @@ ValueSet für Therapietypen (kausal/symptomatisch) bei seltenen Erkrankungen (Mo
   "resourceType" : "ValueSet",
   "id" : "mii-vs-seltene-therapieempfehlung-typ",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-typ",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Seltene_TherapieempfehlungTyp",
   "title" : "MII VS SE Therapieempfehlung Typ",
   "status" : "active",
-  "date" : "2026-09-03T06:59:35+00:00",
+  "date" : "2026-09-03T07:17:59+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

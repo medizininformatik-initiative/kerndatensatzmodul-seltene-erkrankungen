@@ -1,4 +1,4 @@
-# Katarakt bilateral - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# Katarakt bilateral - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)

@@ -1,4 +1,4 @@
-# Beispiel Registerteilnahme — ERN EURO-NMD - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# Beispiel Registerteilnahme — ERN EURO-NMD - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-registerteilnahme|2026.0.1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-registerteilnahme|2026.0.1)
+Profile: [MII PR SE Registerteilnahme](StructureDefinition-mii-pr-seltene-registerteilnahme.md) version: 2027.0.0-ballot.rc1
 
 **MII EX SE Register**: [ERN EURO-NMD Patient Registry — Katalogeintrag](Library-mii-exa-seltene-register-katalog-euro-nmd.md)
 
@@ -37,7 +37,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
   "resourceType" : "ResearchSubject",
   "id" : "mii-exa-seltene-registerteilnahme",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-registerteilnahme|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-registerteilnahme|2027.0.0-ballot.rc1"]
   },
   "extension" : [{
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register",

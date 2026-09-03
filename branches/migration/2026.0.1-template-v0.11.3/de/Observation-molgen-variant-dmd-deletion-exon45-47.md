@@ -1,4 +1,4 @@
-# DMD Exon 45-47 Deletion - MolGen Variante - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# DMD Exon 45-47 Deletion - MolGen Variante - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)

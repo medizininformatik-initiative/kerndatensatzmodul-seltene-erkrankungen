@@ -1,4 +1,4 @@
-# Beispiel Losartan bei Marfan-Syndrom - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# Beispiel Losartan bei Marfan-Syndrom - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung|2026.0.1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung|2026.0.1)
+Profile: [MII PR SE Therapieempfehlung Systemische Therapie](StructureDefinition-mii-pr-seltene-therapieempfehlung.md) version: 2027.0.0-ballot.rc1
 
 **status**: Active
 
@@ -45,7 +45,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
   "resourceType" : "MedicationRequest",
   "id" : "mii-exa-seltene-therapieempfehlung-losartan-marfan",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung|2027.0.0-ballot.rc1"]
   },
   "status" : "active",
   "intent" : "proposal",

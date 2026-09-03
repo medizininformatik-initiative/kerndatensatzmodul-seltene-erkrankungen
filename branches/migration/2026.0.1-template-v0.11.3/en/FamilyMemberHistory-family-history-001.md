@@ -1,4 +1,4 @@
-# Familienanamnese - Urgroßmutter mit Muskelerkrankung - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# Familienanamnese - Urgroßmutter mit Muskelerkrankung - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese|2026.0.1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese|2026.0.1)
+Profile: [MII PR SE Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md) version: 2027.0.0-ballot.rc1
 
 **VonSEBetroffen**: Unknown
 
@@ -40,7 +40,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
   "resourceType" : "FamilyMemberHistory",
   "id" : "family-history-001",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese|2027.0.0-ballot.rc1"]
   },
   "extension" : [{
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen",

@@ -1,4 +1,4 @@
-# MII ImplementationGuide Resource - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# MII ImplementationGuide Resource - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * **MII ImplementationGuide Resource**
@@ -291,7 +291,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MIIIGModulSelteneErkrankungen",
   "title" : "MII IG Kerndatensatz-Modul Seltene Erkrankungen",
   "_title" : {

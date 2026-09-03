@@ -1,4 +1,4 @@
-# MII PR SE Hüftumfang - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# MII PR SE Hüftumfang - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hueftumfang | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hueftumfang | *Version*:2027.0.0-ballot.rc1 |
 | Active as of 2026-09-03 | *Computable Name*:MII_PR_Seltene_Hueftumfang |
 
  
@@ -79,11 +79,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hu
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-seltene-hueftumfang",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hueftumfang",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Seltene_Hueftumfang",
   "title" : "MII PR SE Hüftumfang",
   "status" : "active",
-  "date" : "2026-09-03T06:59:35+00:00",
+  "date" : "2026-09-03T07:17:59+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

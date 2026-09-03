@@ -1,4 +1,4 @@
-# Fallbeispiel Spinale Muskelatrophie (SMA) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# Fallbeispiel Spinale Muskelatrophie (SMA) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Fallbeispiel Spinale Muskelatrophie (SMA)**

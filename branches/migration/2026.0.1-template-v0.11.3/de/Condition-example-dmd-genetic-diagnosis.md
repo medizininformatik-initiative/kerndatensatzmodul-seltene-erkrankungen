@@ -1,4 +1,4 @@
-# Duchenne-Muskeldystrophie - Genetisch bestätigt - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# Duchenne-Muskeldystrophie - Genetisch bestätigt - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2026.0.1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2026.0.1)
+Profile: [MII PR SE Genetic Diagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md) version: 2027.0.0-ballot.rc1
 
 **Condition Asserted Date**: 2024-09-15
 
@@ -48,7 +48,7 @@ Deletion der Exons 45-47 im DMD-Gen nachgewiesen. Out-of-frame Deletion führt z
   "resourceType" : "Condition",
   "id" : "example-dmd-genetic-diagnosis",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2027.0.0-ballot.rc1"]
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",

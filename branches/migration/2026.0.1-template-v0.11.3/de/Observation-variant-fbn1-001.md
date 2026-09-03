@@ -1,4 +1,4 @@
-# FBN1 Gen - Pathogene Mutation - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# FBN1 Gen - Pathogene Mutation - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)

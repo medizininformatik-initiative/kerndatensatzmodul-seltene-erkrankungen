@@ -1,4 +1,4 @@
-# Beispiel NARSE Stoffwechseltherapie bei Morbus Pompe - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# Beispiel NARSE Stoffwechseltherapie bei Morbus Pompe - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt|2026.0.1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt|2026.0.1)
+Profile: [MII PR Seltene Erkrankungen Therapie Durchgeführt](StructureDefinition-mii-pr-seltene-therapie-durchgefuehrt.md) version: 2027.0.0-ballot.rc1
 
 **status**: In Progress
 
@@ -31,7 +31,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
   "resourceType" : "Procedure",
   "id" : "mii-exa-seltene-narse-stoffwechseltherapie-pompe",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt|2027.0.0-ballot.rc1"]
   },
   "status" : "in-progress",
   "code" : {

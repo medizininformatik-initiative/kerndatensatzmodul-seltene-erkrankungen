@@ -1,4 +1,4 @@
-# Sicherheit und Datenschutz - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# Sicherheit und Datenschutz - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Sicherheit und Datenschutz**

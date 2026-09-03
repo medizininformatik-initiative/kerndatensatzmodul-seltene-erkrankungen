@@ -1,4 +1,4 @@
-# MII PR SE Consanguinity - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# MII PR SE Consanguinity - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-consanguinity | *Version*:2027.0.0-ballot |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-consanguinity | *Version*:2027.0.0-ballot.rc1 |
 | Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_Seltene_Consanguinity |
 
  
@@ -111,11 +111,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-seltene-consanguinity",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-consanguinity",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Seltene_Consanguinity",
   "title" : "MII PR SE Consanguinity",
   "status" : "active",
-  "date" : "2026-09-03T06:59:35+00:00",
+  "date" : "2026-09-03T07:17:59+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

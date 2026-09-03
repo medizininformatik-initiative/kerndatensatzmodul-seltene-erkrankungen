@@ -1,4 +1,4 @@
-# Therapieplan Example - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# Therapieplan Example - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan|2026.0.1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan|2026.0.1)
+Profile: [MII PR SE Therapieplan](StructureDefinition-mii-pr-seltene-therapieplan.md) version: 2027.0.0-ballot.rc1
 
 **status**: Draft
 
@@ -39,7 +39,7 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Str
   "resourceType" : "CarePlan",
   "id" : "mii-exa-seltene-therapieplan",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan|2027.0.0-ballot.rc1"]
   },
   "status" : "draft",
   "intent" : "proposal",

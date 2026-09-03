@@ -1,4 +1,4 @@
-# Konsultation ZSE bei V.a. Marfan-Syndrom - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# Konsultation ZSE bei V.a. Marfan-Syndrom - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2026.0.1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2026.0.1)
+Profile: [MII Profile SE Clinical Impression](StructureDefinition-mii-pr-seltene-clinical-impression.md) version: 2027.0.0-ballot.rc1
 
 **status**: Completed
 
@@ -74,7 +74,7 @@ Multidisziplinäre Betreuung im ZSE etabliert. Regelmäßige kardiologische Kont
   "resourceType" : "ClinicalImpression",
   "id" : "clinical-impression-seltene-assessment",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2027.0.0-ballot.rc1"]
   },
   "status" : "completed",
   "subject" : {

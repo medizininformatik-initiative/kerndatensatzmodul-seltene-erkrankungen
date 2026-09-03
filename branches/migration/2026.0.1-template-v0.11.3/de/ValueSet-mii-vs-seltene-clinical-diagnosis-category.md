@@ -1,4 +1,4 @@
-# MII VS SE Clinical Diagnosis Category (retired) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# MII VS SE Clinical Diagnosis Category (retired) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category | *Version*:2027.0.0-ballot |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category | *Version*:2027.0.0-ballot.rc1 |
 | Retired Stand: 2026-09-03 | *Maschinenlesbarer Name*:ClinicalDiagnosisCategoryVS |
 
  
@@ -39,11 +39,11 @@ Expansions are not generated for retired value sets
   "resourceType" : "ValueSet",
   "id" : "mii-vs-seltene-clinical-diagnosis-category",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "ClinicalDiagnosisCategoryVS",
   "title" : "MII VS SE Clinical Diagnosis Category (retired)",
   "status" : "retired",
-  "date" : "2026-09-03T06:59:35+00:00",
+  "date" : "2026-09-03T07:17:59+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

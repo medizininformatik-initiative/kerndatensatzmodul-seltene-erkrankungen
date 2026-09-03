@@ -1,4 +1,4 @@
-# MII CPS Seltene Erkrankungen CapabilityStatement - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# MII CPS Seltene Erkrankungen CapabilityStatement - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata | *Version*:2027.0.0-ballot.rc1 |
 | Active as of 2025-01-21 | *Computable Name*:MII_CPS_SE_CapabilityStatement |
 
  
@@ -25,7 +25,7 @@ Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktione
   "resourceType" : "CapabilityStatement",
   "id" : "mii-cps-seltene-capabilitystatement",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_CPS_SE_CapabilityStatement",
   "title" : "MII CPS Seltene Erkrankungen CapabilityStatement",
   "status" : "active",

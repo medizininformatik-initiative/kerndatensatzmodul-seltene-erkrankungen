@@ -1,4 +1,4 @@
-# Hinweise zur Übersetzung - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# Hinweise zur Übersetzung - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Hinweise zur Übersetzung**

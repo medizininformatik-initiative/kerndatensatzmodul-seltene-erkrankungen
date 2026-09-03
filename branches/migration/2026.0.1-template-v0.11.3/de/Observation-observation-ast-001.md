@@ -1,4 +1,4 @@
-# AST Labor - Post-therapeutisch - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# AST Labor - Post-therapeutisch - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)

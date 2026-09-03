@@ -1,4 +1,4 @@
-# Startseite - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# Startseite - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Startseite**
@@ -7,7 +7,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de | *Version*:2027.0.0-ballot |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de | *Version*:2027.0.0-ballot.rc1 |
 | Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MIIIGModulSelteneErkrankungen |
 
  Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde. Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie [hier](translationinfo.md). 

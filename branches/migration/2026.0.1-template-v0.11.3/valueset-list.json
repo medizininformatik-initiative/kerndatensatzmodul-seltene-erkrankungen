@@ -1,7 +1,7 @@
 {
   "codeSystems" : [{
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-blutgruppe",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_Blutgruppe",
     "title" : "MII VS SE Blutgruppe",
@@ -13,7 +13,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "retired",
     "name" : "ClinicalDiagnosisCategoryVS",
     "title" : "MII VS SE Clinical Diagnosis Category (retired)",
@@ -22,7 +22,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-consanguinity",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_Consanguinity",
     "title" : "MII VS Seltene Erkrankungen Consanguinity",
@@ -34,7 +34,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-empfehlung-status-begruendung",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_Empfehlung_StatusBegruendung",
     "title" : "MII VS SE Empfehlung Status Begründung",
@@ -46,7 +46,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-genetic-basis",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "retired",
     "name" : "GeneticBasisValueSet",
     "title" : "MII VS SE Genetic Basis (retired)",
@@ -55,7 +55,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-age-of-onset",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "HPOAgeOfOnsetValueSet",
     "title" : "MII VS SE HPO Age of Onset",
@@ -64,7 +64,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-change-status",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_HPO_ChangeStatus",
     "title" : "MII VS Seltene Erkrankungen HPO Change Status",
@@ -73,7 +73,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-inheritance-pattern",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "HPOInheritancePatternValueSet",
     "title" : "MII VS SE HPO Inheritance Pattern",
@@ -82,7 +82,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "HPOPhenotypicObservationCodes",
     "title" : "HPO Phenotypic Observation Codes",
@@ -90,14 +90,14 @@
     "systems" : ["http://human-phenotype-ontology.org"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-symptom-condition.html" : "MII Profile SE Symptom Condition",
     "StructureDefinition-mii-pr-seltene-clinical-impression.html" : "MII Profile SE Clinical Impression",
-    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis",
-    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment"
+    "StructureDefinition-mii-pr-seltene-symptom-condition.html" : "MII Profile SE Symptom Condition",
+    "StructureDefinition-mii-pr-seltene-hpo-assessment.html" : "MII Profile SE HPO Assessment",
+    "StructureDefinition-mii-pr-seltene-clinical-diagnosis.html" : "MII PR SE Clinical Diagnosis"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "HPOPresenceStatus",
     "title" : "HPO Phenotype Presence Status",
@@ -109,7 +109,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "HPOSeverity",
     "title" : "HPO Severity",
@@ -122,7 +122,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_ICF",
     "title" : "MII VS SE ICF Categories",
@@ -134,7 +134,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf-beurteilungsmerkmal",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_ICFBeurteilungsmerkmal",
     "title" : "MII VS SE ICF Qualifier Kind",
@@ -143,7 +143,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-narse-therapietyp",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_NARSE_Therapietyp",
     "title" : "MII VS Seltene Erkrankungen NARSE Therapietyp",
@@ -155,7 +155,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-acylcarnitine-dbs",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_NBS_Acylcarnitine_DBS",
     "title" : "MII VS Seltene Erkrankungen NBS Acylcarnitine (Trockenblut)",
@@ -164,7 +164,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-aminoacid-dbs",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_NBS_AminoAcid_DBS",
     "title" : "MII VS Seltene Erkrankungen NBS Aminosäuren (Trockenblut)",
@@ -173,7 +173,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-dbs-all",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_NBS_DBS_All",
     "title" : "MII VS Seltene Erkrankungen NBS alle Trockenblut-Analyte (LOINC)",
@@ -182,7 +182,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-enzyme-activity-dbs",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_NBS_EnzymeActivity_DBS",
     "title" : "MII VS Seltene Erkrankungen NBS Enzymaktivitäten (Trockenblut)",
@@ -191,7 +191,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-hemoglobin-dbs",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_NBS_Hemoglobin_DBS",
     "title" : "MII VS Seltene Erkrankungen NBS Hämoglobin-Fraktionen (Trockenblut)",
@@ -200,7 +200,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-ratio-dbs",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_NBS_Ratio_DBS",
     "title" : "MII VS Seltene Erkrankungen NBS Quotienten (Trockenblut)",
@@ -209,7 +209,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-target-analyte",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_NBS_TargetAnalyte",
     "title" : "MII VS Seltene Erkrankungen NBS Leitanalyten der Zielkrankheiten",
@@ -218,7 +218,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-penetrance",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "PenetranceValueSet",
     "title" : "MII VS SE Penetrance",
@@ -230,7 +230,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-symptom-change-status-combined",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_Symptom_ChangeStatus_Combined",
     "title" : "MII VS Seltene Erkrankungen Symptom Change Status (Combined)",
@@ -243,7 +243,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-syndrome-category",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "SyndromeCategoryVS",
     "title" : "Syndrome Category Value Set",
@@ -252,7 +252,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_TherapieempfehlungStrategie",
     "title" : "MII VS SE Therapieempfehlung Strategie",
@@ -261,7 +261,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-medikamentoes",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes",
     "title" : "MII VS SE Therapieempfehlung Strategie - Medikamentös",
@@ -273,7 +273,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_TherapieempfehlungStrategieNichtMedikamentoes",
     "title" : "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
@@ -285,7 +285,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-typ",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Seltene_TherapieempfehlungTyp",
     "title" : "MII VS SE Therapieempfehlung Typ",
@@ -293,12 +293,12 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie",
-    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös"
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
+    "StructureDefinition-mii-pr-seltene-therapieempfehlung.html" : "MII PR SE Therapieempfehlung Systemische Therapie"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/von-seltene-betroffen-vs",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "VonSEBetroffenVS",
     "title" : "Von SE betroffen Value Set",

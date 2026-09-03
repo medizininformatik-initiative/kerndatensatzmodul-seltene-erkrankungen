@@ -1,4 +1,4 @@
-# VonSEBetroffen - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# VonSEBetroffen - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen | *Version*:2027.0.0-ballot.rc1 |
 | Active as of 2026-09-03 | *Computable Name*:VonSEBetroffen |
 
 Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.
@@ -41,10 +41,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-von-se-bet
   "resourceType" : "StructureDefinition",
   "id" : "mii-ex-von-se-betroffen",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "VonSEBetroffen",
   "status" : "active",
-  "date" : "2026-09-03T06:59:35+00:00",
+  "date" : "2026-09-03T07:17:59+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -1,4 +1,4 @@
-# Metadata Overview - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# Metadata Overview - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * **Metadata Overview**

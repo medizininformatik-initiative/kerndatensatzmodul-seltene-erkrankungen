@@ -1,4 +1,4 @@
-# Troponin T hs - 01.08.2024 - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+# Troponin T hs - 01.08.2024 - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
