@@ -7,6 +7,7 @@ ValueSet: SyndromeCategoryVS
 Id: mii-vs-seltene-syndrome-category
 Title: "Syndrome Category Value Set"
 Description: "Categories for classifying syndrome types in rare diseases"
+* insert PR_CS_VS_Version
 * ^status = #active
 // KORRIGIERT 2026-09-02 nach systematischer Pruefung gegen tx.fhir.org:
 //   32895009  hiess "Genetic disorder" und heisst tatsaechlich "Hereditary

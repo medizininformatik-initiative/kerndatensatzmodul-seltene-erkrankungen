@@ -80,6 +80,7 @@ ValueSet: HPOPhenotypicObservationCodes
 Id: mii-vs-seltene-hpo-phenotypic-observation-codes
 Title: "HPO Phenotypic Observation Codes"
 Description: "Human Phenotype Ontology codes for phenotypic observations"
+* insert PR_CS_VS_Version
 * ^status = #active
 * codes from system $HPO
 
@@ -87,6 +88,7 @@ ValueSet: HPOPresenceStatus
 Id: mii-vs-seltene-hpo-presence-status
 Title: "HPO Phenotype Presence Status"
 Description: "LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern."
+* insert PR_CS_VS_Version
 * ^status = #active
 * ^copyright = "This value set includes content from LOINC which is copyrighted by Regenstrief Institute, Inc."
 * $LNC#LA9633-4 "Present"
@@ -96,6 +98,7 @@ ValueSet: HPOSeverity
 Id: mii-vs-seltene-hpo-severity
 Title: "HPO Severity"
 Description: "HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Phenomics IG component pattern."
+* insert PR_CS_VS_Version
 * ^status = #active
 * ^copyright = "This value set includes content from Human Phenotype Ontology (HPO)."
 * $HPO#HP:0012828 "Severe"
