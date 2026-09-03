@@ -1,20 +1,44 @@
-# MII PR SE Blutgruppe - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# MII PR SE Blutgruppe - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII PR SE Blutgruppe**
 
 ## Resource Profile: MII PR SE Blutgruppe 
 
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-blutgruppe | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Seltene_Blutgruppe |
+
  
 Observation-Profil für die Erfassung der Blutgruppe (AB0 und Rhesusfaktor) im Kontext seltener Erkrankungen 
+
+This profile describes the recording of the blood group (AB0 and Rhesus factor) in the context of rare diseases. The blood group can provide relevant information for certain rare diseases and is part of the basic diagnostic work-up. The profile is not specific to rare diseases but had not been implemented elsewhere so far.
+
+**Search parameters**
+
+The following search parameters are relevant for the Rare Diseases module, also in combination:
+
+1. The search parameter `_id` MUST be supported:Examples:`GET [base]/Observation?_id=1234`Usage notes: Further information on searching for "_id" can be found in the [FHIR base specification, section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "_profile" MUST be supported:Examples:`GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-blutgruppe`Usage notes: Further information on searching for "_profile" can be found in the [FHIR base specification, section "token"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "category" MUST be supported:Examples:`GET [base]/Observation?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory`Usage notes: Further information on searching for "category" can be found in the FHIR base specification, section "token".
+1. The search parameter "code" MUST be supported:Examples:`GET [base]/Observation?code=http://loinc.org|882-1`Usage notes: Further information on searching for "code" can be found in the FHIR base specification, section "token".
+1. The search parameter "subject" MUST be supported:Examples:`GET [base]/Observation?subject=Patient/example`Usage notes: Further information on searching for "subject" can be found in the FHIR base specification, section "reference".
+1. The search parameter "date" MUST be supported:Examples:`GET [base]/Observation?date=2024-02-08`Usage notes: Further information on searching for "date" can be found in the FHIR base specification, section "date".
+
+Example instances are linked in the "Examples" section of the profile page.
 
 **Usages:**
 
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 * This Profile is not used by any profiles in this Specification
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/mii-ig-seltene-erkrankungen-v2026-de|current/StructureDefinition/StructureDefinition-mii-pr-seltene-blutgruppe.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-blutgruppe.json)
 
 ### Formal Views of Profile Content
 
- [Description Differentials, Snapshots, and other representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
  
 
@@ -29,12 +53,25 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-seltene-blutgruppe",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-blutgruppe",
-  "version" : "2026.0.1",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Seltene_Blutgruppe",
   "title" : "MII PR SE Blutgruppe",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -43,6 +80,13 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
     }]
   }],
   "description" : "Observation-Profil für die Erfassung der Blutgruppe (AB0 und Rhesusfaktor) im Kontext seltener Erkrankungen",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "SE-LogicalModel",
@@ -65,11 +109,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
     "name" : "HL7 v2 Mapping"
   },
   {
-    "identity" : "rim",
-    "uri" : "http://hl7.org/v3",
-    "name" : "RIM Mapping"
-  },
-  {
     "identity" : "w5",
     "uri" : "http://hl7.org/fhir/fivews",
     "name" : "FiveWs Pattern Mapping"
@@ -90,7 +129,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
       "path" : "Observation",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "koerperlicheUntersuchung.blutgruppe",
         "comment" : "Blutgruppe"
       }]
     },
@@ -208,7 +247,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Patient",
+        "map" : "persoenlicheInfosIndexpatient",
         "comment" : "Patient/Indexpatient"
       }]
     },
@@ -268,7 +307,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "koerperlicheUntersuchung.blutgruppe",
         "comment" : "Blutgruppe"
       }]
     },
@@ -277,8 +316,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
       "path" : "Observation.value[x].coding",
       "slicing" : {
         "discriminator" : [{
-          "type" : "pattern",
-          "path" : "$this"
+          "type" : "value",
+          "path" : "system"
         }],
         "rules" : "open"
       },
@@ -297,13 +336,14 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "koerperlicheUntersuchung.blutgruppe",
         "comment" : "Blutgruppe (LOINC)"
       }]
     },
     {
       "id" : "Observation.value[x].coding:loinc.system",
       "path" : "Observation.value[x].coding.system",
+      "min" : 1,
       "patternUri" : "http://loinc.org"
     },
     {
@@ -315,13 +355,14 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "koerperlicheUntersuchung.blutgruppe",
         "comment" : "Blutgruppe (SNOMED CT)"
       }]
     },
     {
       "id" : "Observation.value[x].coding:snomed.system",
       "path" : "Observation.value[x].coding.system",
+      "min" : 1,
       "patternUri" : "http://snomed.info/sct"
     },
     {
@@ -330,7 +371,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Messbefunde.Blutgruppe",
+        "map" : "koerperlicheUntersuchung.blutgruppe",
         "comment" : "Blutgruppe (Text)"
       }]
     }]

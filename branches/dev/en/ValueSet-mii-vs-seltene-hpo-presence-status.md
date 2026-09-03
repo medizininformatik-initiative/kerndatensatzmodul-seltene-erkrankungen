@@ -1,6 +1,16 @@
-# HPO Phenotype Presence Status - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# HPO Phenotype Presence Status - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **HPO Phenotype Presence Status**
 
 ## ValueSet: HPO Phenotype Presence Status 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_VS_Seltene_HPOPresenceStatus |
+| **Copyright/Legal**: This value set includes content from LOINC which is copyrighted by Regenstrief Institute, Inc. | |
 
  
 LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern. 
@@ -28,12 +38,25 @@ LOINC codes for indicating presence or absence of phenotypic features. Follows H
   "resourceType" : "ValueSet",
   "id" : "mii-vs-seltene-hpo-presence-status",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status",
-  "version" : "2026.0.1",
-  "name" : "HPOPresenceStatus",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Seltene_HPOPresenceStatus",
   "title" : "HPO Phenotype Presence Status",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -42,6 +65,13 @@ LOINC codes for indicating presence or absence of phenotypic features. Follows H
     }]
   }],
   "description" : "LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "copyright" : "This value set includes content from LOINC which is copyrighted by Regenstrief Institute, Inc.",
   "compose" : {
     "include" : [{

@@ -1,13 +1,22 @@
-# MII VS SE HPO Age of Onset - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# MII VS SE HPO Age of Onset - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII VS SE HPO Age of Onset**
 
 ## ValueSet: MII VS SE HPO Age of Onset 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-age-of-onset | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_VS_Seltene_HPOAgeOfOnset |
 
  
 Value set containing HPO terms for age of onset of diseases 
 
  **References** 
 
-* [MII EX SE Age of Onset](StructureDefinition-mii-ex-seltene-age-of-onset.md)
+This value set is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
 
 ### Logical Definition (CLD)
 
@@ -28,12 +37,25 @@ Value set containing HPO terms for age of onset of diseases
   "resourceType" : "ValueSet",
   "id" : "mii-vs-seltene-hpo-age-of-onset",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-age-of-onset",
-  "version" : "2026.0.1",
-  "name" : "HPOAgeOfOnsetValueSet",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Seltene_HPOAgeOfOnset",
   "title" : "MII VS SE HPO Age of Onset",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -42,6 +64,13 @@ Value set containing HPO terms for age of onset of diseases
     }]
   }],
   "description" : "Value set containing HPO terms for age of onset of diseases",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "compose" : {
     "include" : [{
       "system" : "http://human-phenotype-ontology.org",
@@ -54,8 +83,20 @@ Value set containing HPO terms for age of onset of diseases
     {
       "system" : "http://human-phenotype-ontology.org",
       "concept" : [{
+        "code" : "HP:0011460",
+        "display" : "Embryonal onset"
+      },
+      {
+        "code" : "HP:0011461",
+        "display" : "Fetal onset"
+      },
+      {
         "code" : "HP:0003577",
         "display" : "Congenital onset"
+      },
+      {
+        "code" : "HP:0003623",
+        "display" : "Neonatal onset"
       },
       {
         "code" : "HP:0003593",
@@ -70,32 +111,24 @@ Value set containing HPO terms for age of onset of diseases
         "display" : "Juvenile onset"
       },
       {
-        "code" : "HP:0003581",
-        "display" : "Adult onset"
-      },
-      {
-        "code" : "HP:0003584",
-        "display" : "Late onset"
-      },
-      {
         "code" : "HP:0011462",
         "display" : "Young adult onset"
       },
       {
         "code" : "HP:0025708",
-        "display" : "Middle age onset"
+        "display" : "Early young adult onset"
+      },
+      {
+        "code" : "HP:0003581",
+        "display" : "Adult onset"
       },
       {
         "code" : "HP:0003596",
-        "display" : "Neonatal onset"
+        "display" : "Middle age onset"
       },
       {
-        "code" : "HP:0034198",
-        "display" : "Fetal onset"
-      },
-      {
-        "code" : "HP:0034199",
-        "display" : "Embryonal onset"
+        "code" : "HP:0003584",
+        "display" : "Late onset"
       }]
     }]
   }

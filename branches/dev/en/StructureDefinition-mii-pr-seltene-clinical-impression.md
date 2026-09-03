@@ -1,20 +1,95 @@
-# MII Profile SE Clinical Impression - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# MII Profile SE Clinical Impression - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII Profile SE Clinical Impression**
 
 ## Resource Profile: MII Profile SE Clinical Impression 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Seltene_ClinicalImpression |
 
  
 Profile for clinical impressions in the context of rare diseases. This profile captures clinical assessments and suspected diagnoses based on phenotypic findings and symptoms. 
 
+This profile describes the clinical assessment and documentation of interdisciplinary examinations in the diagnostics of rare diseases. It enables the structured recording of clinical impressions, findings and treatment recommendations.
+
+### Structuring the clinical assessment
+
+The ClinicalImpression uses three main elements to structure the clinical assessment:
+
+#### Problem (problem)
+
+Documents the **identified health problems or diagnoses**:
+
+* Confirmed diagnoses (ICD-10-GM, ORPHAcodes)
+* Suspected diagnoses
+* Symptom conditions (symptomatic states)
+* Example: "Suspected osteogenesis imperfecta" or "Confirmed von Willebrand disease"
+
+#### Investigation (investigation)
+
+Records **performed or planned examinations** for clarification:
+
+* Grouping of related diagnostics
+* Laboratory panels (e.g. coagulation diagnostics)
+* Imaging procedures
+* Genetic tests
+* Example: an investigation with code "basic diagnostics" contains references to CBC, PTT, bleeding time
+
+#### Finding (finding)
+
+Documents **concrete findings and observations**:
+
+* HPO-coded phenotypic features
+* Abnormal laboratory values
+* Imaging findings
+* Clinical observations
+* Example: "Increased PTT (409675001)", "Bruising susceptibility (HP:0000978)"
+
+### Usage example
+
+```
+ClinicalImpression (first presentation)
+├── problem: suspected von Willebrand syndrome
+├── investigation[0]:
+│   ├── code: "coagulation diagnostics"
+│   └── item: [PTT measurement, vWF activity, bleeding time]
+└── finding[0]: epistaxis (R04.0)
+└── finding[1]: bruising susceptibility (HP:0000978)
+└── finding[2]: PTT prolonged (409675001)
+
+```
+
+-------
+
+**Search parameters**
+
+The following search parameters are relevant for the Rare Diseases module, also in combination:
+
+1. The search parameter `_id` MUST be supported:Examples:`GET [base]/ClinicalImpression?_id=1234`Usage notes: Further information on searching for "_id" can be found in the [FHIR base specification, section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "_profile" MUST be supported:Examples:`GET [base]/ClinicalImpression?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression`Usage notes: Further information on searching for "_profile" can be found in the [FHIR base specification, section "token"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "status" MUST be supported:Examples:`GET [base]/ClinicalImpression?status=completed`Usage notes: Further information on searching for "status" can be found in the FHIR base specification, section "token".
+1. The search parameter "subject" MUST be supported:Examples:`GET [base]/ClinicalImpression?subject=Patient/example`Usage notes: Further information on searching for "subject" can be found in the FHIR base specification, section "reference".
+1. The search parameter "problem" MUST be supported:Examples:`GET [base]/ClinicalImpression?problem=Condition/example`Usage notes: Further information on searching for "problem" can be found in the FHIR base specification, section "reference".
+1. The search parameter "encounter" MUST be supported:Examples:`GET [base]/ClinicalImpression?encounter=Encounter/example`Usage notes: Further information on searching for "encounter" can be found in the FHIR base specification, section "reference".
+1. The search parameter "date" MUST be supported:Examples:`GET [base]/ClinicalImpression?date=2024-02-08`Usage notes: Further information on searching for "date" can be found in the FHIR base specification, section "date".
+1. The search parameter "finding-ref" MUST be supported:Examples:`GET [base]/ClinicalImpression?finding-ref=Observation/example`Usage notes: Further information on searching for "finding-ref" can be found in the FHIR base specification, section "reference".
+
+Example instances are linked in the "Examples" section of the profile page.
+
 **Usages:**
 
-* Examples for this Profile: [ClinicalImpression/clinical-impression-erstvorstellung](ClinicalImpression-clinical-impression-erstvorstellung.md), [ClinicalImpression/clinical-impression-nachsorge](ClinicalImpression-clinical-impression-nachsorge.md) and [ClinicalImpression/clinical-impression-seltene-assessment](ClinicalImpression-clinical-impression-seltene-assessment.md)
+* Examples for this Profile: [ClinicalImpression/mii-exa-seltene-clinical-impression-erstvorstellung](ClinicalImpression-mii-exa-seltene-clinical-impression-erstvorstellung.md), [ClinicalImpression/mii-exa-seltene-clinical-impression-nachsorge](ClinicalImpression-mii-exa-seltene-clinical-impression-nachsorge.md) and [ClinicalImpression/mii-exa-seltene-clinical-impression-seltene-assessment](ClinicalImpression-mii-exa-seltene-clinical-impression-seltene-assessment.md)
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/mii-ig-seltene-erkrankungen-v2026-de|current/StructureDefinition/StructureDefinition-mii-pr-seltene-clinical-impression.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-clinical-impression.json)
 
 ### Formal Views of Profile Content
 
- [Description Differentials, Snapshots, and other representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
  
 
@@ -29,12 +104,25 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-seltene-clinical-impression",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression",
-  "version" : "2026.0.1",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Seltene_ClinicalImpression",
   "title" : "MII Profile SE Clinical Impression",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -43,6 +131,13 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
     }]
   }],
   "description" : "Profile for clinical impressions in the context of rare diseases. This profile captures clinical assessments and suspected diagnoses based on phenotypic findings and symptoms.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "SE-LogicalModel",
@@ -63,11 +158,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
     "identity" : "w5",
     "uri" : "http://hl7.org/fhir/fivews",
     "name" : "FiveWs Pattern Mapping"
-  },
-  {
-    "identity" : "rim",
-    "uri" : "http://hl7.org/v3",
-    "name" : "RIM Mapping"
   }],
   "kind" : "resource",
   "abstract" : false,
@@ -80,7 +170,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "ClinicalImpression",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik",
+        "map" : "anamneseUndDiagnostik",
         "comment" : "Anamnese und Diagnostik"
       }]
     },
@@ -117,7 +207,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsanlass",
+        "map" : "anamneseUndDiagnostik.untersuchungsanlass",
         "comment" : "Untersuchungsanlass"
       }]
     },
@@ -140,7 +230,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Patient",
+        "map" : "persoenlicheInfosIndexpatient",
         "comment" : "Patient/Indexpatient"
       }]
     },
@@ -150,7 +240,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Untersuchungskontakt"
       }]
     },
@@ -180,7 +270,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Untersuchungsdatum"
       }]
     },
@@ -199,7 +289,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "ClinicalImpression.effective[x].start",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Beginn der Untersuchung"
       }]
     },
@@ -208,7 +298,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "ClinicalImpression.effective[x].end",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Ende der Untersuchung"
       }]
     },
@@ -227,7 +317,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.KlinischeDiagnose",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose",
         "comment" : "Klinische Diagnose/Verdacht"
       }]
     },
@@ -244,7 +334,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.MethodeDiagnosestellung",
+        "map" : "anamneseUndDiagnostik.methodeDiagnosestellung",
         "comment" : "Methode der Diagnosestellung"
       }]
     },
@@ -262,7 +352,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "Durchgeführte Untersuchungen"
       }]
     },
@@ -290,7 +380,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
         "comment" : "HPO-Term des Symptoms"
       }]
     },
@@ -305,7 +395,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "Verweis auf Phänotypisierung"
       }]
     },

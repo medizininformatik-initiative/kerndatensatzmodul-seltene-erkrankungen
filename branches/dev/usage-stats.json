@@ -1,42 +1,9 @@
 {
-  "package": "mii-ig-seltene-erkrankungen-v2026-de",
-  "version": "2026.0.1",
+  "package": "de.medizininformatikinitiative.kerndatensatz.seltene",
+  "version": "2027.0.0-ballot.rc1",
   "fhirVersion": "4.0.1",
+  "jurisdiction": "DE",
   "extensions": [
-    {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-age-of-onset",
-      "title": "MII EX SE Age of Onset",
-      "types": [
-        "CodeableConcept"
-      ]
-    },
-    {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung",
-      "title": "MII EX SE Empfehlung Evidenzgraduierung",
-      "types": [
-        "CodeableConcept",
-        "string",
-        "Extension",
-        "Coding",
-        "Coding",
-        "string",
-        "Extension",
-        "uri",
-        "string",
-        "code",
-        "string",
-        "boolean",
-        "Coding",
-        "string",
-        "Extension",
-        "uri",
-        "string",
-        "code",
-        "string",
-        "boolean",
-        "string"
-      ]
-    },
     {
       "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-prioritaet",
       "title": "MII EX SE Empfehlung Priorität",
@@ -66,20 +33,6 @@
       ]
     },
     {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-genetic-basis",
-      "title": "MII EX SE Genetic Basis",
-      "types": [
-        "CodeableConcept"
-      ]
-    },
-    {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-inheritance-pattern",
-      "title": "MII EX SE Inheritance Pattern",
-      "types": [
-        "CodeableConcept"
-      ]
-    },
-    {
       "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance",
       "title": "MII EX SE Penetrance",
       "types": [
@@ -97,36 +50,15 @@
       ]
     },
     {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-onset-age",
-      "title": "Onset Age Extension",
-      "types": [
-        "Age",
-        "string",
-        "Extension",
-        "decimal",
-        "code",
-        "string",
-        "uri",
-        "code"
-      ]
-    },
-    {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-phenotypic-pattern",
-      "title": "Phenotypic Pattern Extension",
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register",
+      "title": "MII EX SE Register",
       "types": [
         "Reference"
       ]
     },
     {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ext-seltene-syndrome-category",
-      "title": "Syndrome Category Extension",
-      "types": [
-        "CodeableConcept"
-      ]
-    },
-    {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen",
-      "title": "VonSEBetroffen",
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-von-se-betroffen",
+      "title": "MII_EX_Seltene_VonSEBetroffen",
       "types": [
         "CodeableConcept"
       ]
@@ -155,6 +87,12 @@
       {
         "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese",
         "title": "MII PR SE Familienanamnese"
+      }
+    ],
+    "ResearchSubject": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-registerteilnahme",
+        "title": "MII PR SE Registerteilnahme"
       }
     ],
     "ServiceRequest": [
@@ -207,28 +145,42 @@
       "FamilyMemberHistory.condition.code.coding"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-author": [
+      "ImplementationGuide",
       "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-editor": [
+      "ImplementationGuide",
       "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-endorser": [
+      "ImplementationGuide",
       "StructureDefinition"
     ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-purpose": [
+      "ImplementationGuide"
+    ],
     "http://hl7.org/fhir/StructureDefinition/artifact-reviewer": [
+      "ImplementationGuide",
       "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-topic": [
+      "ImplementationGuide",
       "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-usage": [
+      "ImplementationGuide",
       "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm": [
+      "ImplementationGuide",
       "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy": [
+      "ImplementationGuide",
       "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/bodySite": [
+      "Condition.bodySite"
     ],
     "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
       "CapabilityStatement.rest.resource",
@@ -243,7 +195,11 @@
     "http://hl7.org/fhir/StructureDefinition/condition-related": [
       "Condition"
     ],
+    "http://hl7.org/fhir/StructureDefinition/cqf-expansionParameters": [
+      "ImplementationGuide"
+    ],
     "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability": [
+      "ImplementationGuide",
       "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
@@ -261,6 +217,12 @@
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
       "StructureDefinition.snapshot.element"
     ],
+    "http://hl7.org/fhir/StructureDefinition/organization-period": [
+      "Seltene.therapieForschung.studie"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/package-source": [
+      "ImplementationGuide"
+    ],
     "http://hl7.org/fhir/StructureDefinition/regex": [
       "StructureDefinition.snapshot.element.type"
     ],
@@ -268,9 +230,11 @@
       "ServiceRequest"
     ],
     "http://hl7.org/fhir/StructureDefinition/resource-approvalDate": [
+      "ImplementationGuide",
       "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod": [
+      "ImplementationGuide",
       "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
@@ -289,21 +253,31 @@
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/translation": [
+      "CapabilityStatement.publisher",
+      "CodeSystem.publisher",
+      "ImplementationGuide.definition.page.page.page.title",
+      "ImplementationGuide.definition.page.page.title",
+      "ImplementationGuide.definition.page.title",
+      "ImplementationGuide.publisher",
+      "ImplementationGuide.title",
+      "StructureDefinition.publisher",
       "StructureDefinition.snapshot.element.definition",
-      "StructureDefinition.snapshot.element.short"
+      "StructureDefinition.snapshot.element.short",
+      "ValueSet.publisher"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters": [
+      "ImplementationGuide.definition"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
       "ImplementationGuide.definition"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
       "ImplementationGuide.definition.page",
-      "ImplementationGuide.definition.page.page"
+      "ImplementationGuide.definition.page.page",
+      "ImplementationGuide.definition.page.page.page"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
       "ImplementationGuide.definition"
-    ],
-    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
-      "ImplementationGuide.dependsOn"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
@@ -320,11 +294,6 @@
     "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis": [
       "FamilyMemberHistory.relationship.coding"
     ],
-    "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung": [
-      "MedicationRequest",
-      "RequestGroup",
-      "ServiceRequest"
-    ],
     "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-prioritaet": [
       "MedicationRequest",
       "RequestGroup",
@@ -339,7 +308,10 @@
       "Condition",
       "FamilyMemberHistory.condition"
     ],
-    "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen": [
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register": [
+      "ResearchSubject"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-von-se-betroffen": [
       "Bundle.entry.resource",
       "FamilyMemberHistory"
     ],

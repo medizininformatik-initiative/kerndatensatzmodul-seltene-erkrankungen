@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-seltene-molgen-cftr-heterozygous-carrier"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-seltene-molgen-cftr-heterozygous-carrier</b></p><a name="mii-exa-seltene-molgen-cftr-heterozygous-carrier"> </a><a name="hcmii-exa-seltene-molgen-cftr-heterozygous-carrier"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 69548-6}">Genetic variant assessment</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient.html">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>effective</b>: 2024-08-25</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 10828004}">Positive</span></p><p><b>note</b>: </p><blockquote><div><p>Heterozygoter Anlagetraeger fuer F508del. Eine zweite CFTR-Mutation wurde bei vollstaendiger Genanalyse nicht gefunden. Mukoviszidose damit ausgeschlossen; die IRT-Erhoehung im Screening war transient.</p>
+</div></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48018-6}">Gene studied [ID]</span></p><p><b>value</b>: <span title="Codes:{http://www.genenames.org/geneId HGNC:1884}">CFTR</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48002-0}">Genomic source class</span></p><p><b>value</b>: <span title="Codes:{http://loinc.org LA6683-2}">Germline</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48004-6}">DNA change (c.HGVS)</span></p><p><b>value</b>: <span title="Codes:">c.1521_1523del</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48005-3}">Amino acid change (pHGVS)</span></p><p><b>value</b>: <span title="Codes:">p.Phe508del</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 53034-5}">Allelic state</span></p><p><b>value</b>: <span title="Codes:{http://loinc.org LA6706-1}">Heterozygous</span></p></blockquote></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-seltene-molgen-cftr-heterozygous-carrier</b></p><a name="de-mii-exa-seltene-molgen-cftr-heterozygous-carrier"> </a><a name="de-hcmii-exa-seltene-molgen-cftr-heterozygous-carrier"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 69548-6}">Genetic variant assessment</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient.html">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>effective</b>: 2024-08-25</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 10828004}">Positive</span></p><p><b>note</b>: </p><blockquote><div><p>Heterozygoter Anlagetraeger fuer F508del. Eine zweite CFTR-Mutation wurde bei vollstaendiger Genanalyse nicht gefunden. Mukoviszidose damit ausgeschlossen; die IRT-Erhoehung im Screening war transient.</p>
+</div></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48018-6}">Gene studied [ID]</span></p><p><b>value</b>: <span title="Codes:{http://www.genenames.org/geneId HGNC:1884}">CFTR</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48002-0}">Genomic source class</span></p><p><b>value</b>: <span title="Codes:{http://loinc.org LA6683-2}">Germline</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48004-6}">DNA change (c.HGVS)</span></p><p><b>value</b>: <span title="Codes:">c.1521_1523del</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48005-3}">Amino acid change (pHGVS)</span></p><p><b>value</b>: <span title="Codes:">p.Phe508del</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 53034-5}">Allelic state</span></p><p><b>value</b>: <span title="Codes:{http://loinc.org LA6706-1}">Heterozygous</span></p></blockquote></div></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="69548-6"/>
+      <display value="Genetic variant assessment"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-seltene-patient"/>
+  </subject>
+  <effectiveDateTime value="2024-08-25"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="10828004"/>
+      <display value="Positive"/>
+    </coding>
+  </valueCodeableConcept>
+  <note>
+    <text value="Heterozygoter Anlagetraeger fuer F508del. Eine zweite CFTR-Mutation wurde bei vollstaendiger Genanalyse nicht gefunden. Mukoviszidose damit ausgeschlossen; die IRT-Erhoehung im Screening war transient."/>
+  </note>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48018-6"/>
+        <display value="Gene studied [ID]"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.genenames.org/geneId"/>
+        <code value="HGNC:1884"/>
+        <display value="CFTR"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48002-0"/>
+        <display value="Genomic source class"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="LA6683-2"/>
+        <display value="Germline"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48004-6"/>
+        <display value="DNA change (c.HGVS)"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <text value="c.1521_1523del"/>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48005-3"/>
+        <display value="Amino acid change (pHGVS)"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <text value="p.Phe508del"/>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="53034-5"/>
+        <display value="Allelic state"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="LA6706-1"/>
+        <display value="Heterozygous"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>

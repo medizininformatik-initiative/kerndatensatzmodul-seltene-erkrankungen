@@ -1,12 +1,12 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
-
 
 
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Kodier-Empfehlungen - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1</title>
+    <title>Coding Best Practices - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -22,7 +22,29 @@
   	<link href="assets/css/prism.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
   	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
     <script type="text/javascript" src="assets/js/direction-management.js"> </script>
@@ -42,23 +64,88 @@
   </head>
   <body onload="document.body.style.opacity='1'">
 
-	  <script type="text/javascript" src="assets/js/prism.js"></script>
-	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
-	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"11"}
-    h3,h4,h5,h6{--heading-prefix:"11"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.4"}
+    h3,h4,h5,h6{--heading-prefix:"2.4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
-        <!-- Placeholder for child template header declarations -->
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Network of University Medicine — Data Integration Center)" src="assets/images/logo-num-diz-en.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Font size">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Font size: default">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Font size: larger">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Font size: largest">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Back to top">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
 
 
-        <div id="ig-status" data-fhir="generated">
+        <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Seltene Erkrankungen</span>
             <br/>
-            <span style="display:inline-block;">2026.0.1 - ci-build
+            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+
+
+
+  Germany
 
 
             </span>
@@ -67,7 +154,7 @@
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
       <div id="stripe"> </div>
       <div class="container">  <!-- container -->
         <!-- HEADER CONTENT -->
@@ -83,89 +170,119 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- menu.xml  -->
+              <!-- Menu in the IG's DEFAULT language (English).
+     The IG Publisher renders the navigation from this file. To translate it,
+     ship a per-language copy at input/translations/<lang>/includes/menu.xml —
+     this is the mechanism the HL7 reference IG FHIR/multi-lang-test-ig uses and
+     the ONLY way to get a TRANSLATED menu: the `menu:` property in
+     sushi-config.yaml generates a single menu.xml that cannot be translated.
+     Rules: keep the href targets identical across languages; dropdown parents
+     must link to a REAL page (href="#" is rejected by the template's menu QA);
+     only one sub-menu level is supported.
 
+     STRUCTURE: this menu implements the TF-KDS-agreed module menu (see
+     docs/page-structure.md for the full structure with cardinalities).
+     Entries marked OPTIONAL (0..1) below may be removed per module — the
+     removal procedure per entry is in docs/optional-pages.md in this
+     repository. Entries without a marker are mandatory (1..1).
+
+     LINK-ONLY ENTRIES (no page of their own):
+     - "Datasets and Descriptions" points at the Logical Models page
+       (logical-models.html) — the module's datasets ARE its logical models.
+       NEITHER Artifacts-Summary anchor is usable for the TF-KDS "Sec.
+       15.0.2" target: the numeric #2 is POSITIONAL (grouping index — wrong
+       section whenever the artifact mix differs from the full standard set),
+       and the browser-generated NAMED AnchorJS anchor
+       (#structures-logical-models) is invisible to the IG Publisher's link
+       validator — it injects a marker anchor into the menu (rendered as an
+       EMPTY menu entry) and logs a broken-link ERROR on every page's QA.
+       Full analysis: docs/page-structure.md, "Datasets and Descriptions".
+     - The four Conformance entries point at the KDS-wide conformance rules of
+       the Meta module (kerndatensatz-meta). INTERIM: the Meta module has no
+       published IG rendering yet (only a CI build with no conformance pages),
+       so these link to the authoritative meta-wiki sections; switch them to
+       the Meta IG's menu entries once a stable rendering exists (Gate item in
+       docs/page-structure.md). -->
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li>
-    <a href="index.html">Home</a>
-  </li>
+  <li><a href="index.html">Home</a></li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Modul
-      <b class="caret"></b>
-    </a>
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Guidance<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="module-description.html">Beschreibung des Moduls</a>
-      </li>
-      <li>
-        <a href="context.html">Kontext und Bezüge</a>
-      </li>
-      <li>
-        <a href="references.html">Referenzen</a>
-      </li>
-      <li>
-        <a href="release-notes.html">Release Notes</a>
-      </li>
+      <li><a href="guidance.html">Guidance</a></li>
+      <li><a href="implementer-guidance.html">Guidance for Implementers</a></li>
+      <li><a href="clinical-genetic-diagnosis-guide.html">Clinical vs. Genetic Diagnosis</a></li>
+      <li><a href="coding-best-practices.html">Coding Best Practices</a></li>
+      <li><a href="newborn-screening.html">Newborn Screening</a></li>
+      <!-- link-only entry: Logical-Models section of the Artifacts Summary (see header note) -->
+      <li><a href="logical-models.html">Datasets and Descriptions</a></li>
+      <li><a href="uml-diagrams.html">UML Diagrams</a></li>
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
-      <b class="caret"></b>
-    </a>
+    <!-- The parent and the first four entries link to the KDS-wide conformance
+         rules of the Meta module (INTERIM: meta-wiki; see header note). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Conformance<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="scenarios.html">Anwendungsszenarien</a>
-      </li>
-      <li>
-        <a href="datasets.html">Datensätze</a>
-      </li>
-      <li>
-        <a href="information-model.html">Informationsmodell (UML)</a>
-      </li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Conformance</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">General Requirements</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Handling Missing Data</a></li>
+      <li><a href="security-and-privacy.html">Security and Privacy</a></li>
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Umsetzung
-      <b class="caret"></b>
-    </a>
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artifacts<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="profiles-overview.html">FHIR-Profile</a>
-      </li>
-      <li>
-        <a href="terminology.html">Terminologien</a>
-      </li>
-      <li>
-        <a href="capability.html">CapabilityStatement</a>
-      </li>
+      <li><a href="artifacts.html">Artifacts Summary</a></li>
+      <li><a href="profiles.html">Profiles</a></li>
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="extensions.html">Extensions (optional)</a></li>
+      <li><a href="capability-statements.html">Capability Statements</a></li>
+      <li><a href="logical-models.html">Logical Models</a></li>
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="value-sets.html">Value Sets (optional)</a></li>
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="code-systems.html">Code Systems (optional)</a></li>
+      <li><a href="sma-example-annotations.html">Case Example SMA</a></li>
+      <li><a href="marfan-example-annotations.html">Case Example Marfan</a></li>
     </ul>
   </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Changelog</a></li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beispiele und Leitfäden
-      <b class="caret"></b>
-    </a>
+    <!-- The parent deliberately links the MANDATORY child (Versioning): the
+         Metadata Overview page is optional, and a parent pointing at it would
+         have to be re-targeted when that page is removed. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadata<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="sma-example-annotations.html">Beispiel SMA</a>
-      </li>
-      <li>
-        <a href="marfan-example-annotations.html">Beispiel Marfan</a>
-      </li>
-      <li>
-        <a href="clinical-genetic-diagnosis-guide.html">Klinisch-genetische Diagnose</a>
-      </li>
-      <li>
-        <a href="coding-best-practices.html">Kodier-Empfehlungen</a>
-      </li>
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="metadata.html">Metadata Overview (optional)</a></li>
+      <li><a href="version-history.html">Versioning</a></li>
     </ul>
-  </li>
-  <li>
-    <a href="artifacts.html">Artifacts</a>
   </li>
 </ul>
+
             </div>  <!-- /.nav-collapse -->
 
               
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/coding-best-practices.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
 
           </div>  <!-- /.container -->
         </nav>  <!-- /.navbar -->
@@ -174,10 +291,10 @@
     </div>  <!-- /segment-navbar -->
     <!--status-bar-->
 
-    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Kodier-Empfehlungen</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='guidance.html'><b>Guidance</b></a></li><li><b>Coding Best Practices</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -197,10 +314,9 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Seltene Erkrankungen - Local Development build (v2026.0.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Kodier-Empfehlungen</h2>
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Seltene Erkrankungen - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Coding Best Practices</h2>
   
-
 
 
 
@@ -216,114 +332,84 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#best-practices-für-kodierung-bei-seltenen-erkrankungen" id="markdown-toc-best-practices-für-kodierung-bei-seltenen-erkrankungen">Best Practices für Kodierung bei Seltenen Erkrankungen</a>    <ul>
-      <li><a href="#vermeidung-von-redundanz" id="markdown-toc-vermeidung-von-redundanz">Vermeidung von Redundanz</a>        <ul>
-          <li><a href="#problem" id="markdown-toc-problem">Problem</a></li>
-          <li><a href="#lösung-gezielte-kodierung" id="markdown-toc-lösung-gezielte-kodierung">Lösung: Gezielte Kodierung</a></li>
-        </ul>
-      </li>
-      <li><a href="#empfohlene-kodierungsstrategie" id="markdown-toc-empfohlene-kodierungsstrategie">Empfohlene Kodierungsstrategie</a>        <ul>
-          <li><a href="#1-primäre-kodiersysteme-nach-diagnosetyp" id="markdown-toc-1-primäre-kodiersysteme-nach-diagnosetyp">1. Primäre Kodiersysteme nach Diagnosetyp</a></li>
-          <li><a href="#2-kontextabhängige-kodiersysteme" id="markdown-toc-2-kontextabhängige-kodiersysteme">2. Kontextabhängige Kodiersysteme</a></li>
-        </ul>
-      </li>
-      <li><a href="#entscheidungsmatrix" id="markdown-toc-entscheidungsmatrix">Entscheidungsmatrix</a></li>
-      <li><a href="#praktische-beispiele" id="markdown-toc-praktische-beispiele">Praktische Beispiele</a>        <ul>
-          <li><a href="#-richtig-fokussierte-kodierung" id="markdown-toc--richtig-fokussierte-kodierung">✅ RICHTIG: Fokussierte Kodierung</a></li>
-          <li><a href="#-falsch-übermäßige-kodierung" id="markdown-toc--falsch-übermäßige-kodierung">❌ FALSCH: Übermäßige Kodierung</a></li>
-        </ul>
-      </li>
-      <li><a href="#spezielle-szenarien" id="markdown-toc-spezielle-szenarien">Spezielle Szenarien</a>        <ul>
-          <li><a href="#diagnose-progression" id="markdown-toc-diagnose-progression">Diagnose-Progression</a></li>
-          <li><a href="#rein-genetische-vs-klinisch-genetische-diagnosen" id="markdown-toc-rein-genetische-vs-klinisch-genetische-diagnosen">Rein genetische vs. Klinisch-genetische Diagnosen</a></li>
-        </ul>
-      </li>
-      <li><a href="#qualitätskriterien" id="markdown-toc-qualitätskriterien">Qualitätskriterien</a>        <ul>
-          <li><a href="#minimale-anforderungen" id="markdown-toc-minimale-anforderungen">Minimale Anforderungen</a></li>
-          <li><a href="#optimale-kodierung" id="markdown-toc-optimale-kodierung">Optimale Kodierung</a></li>
-        </ul>
-      </li>
-      <li><a href="#wann-icd-10-gm-bei-genetischen-diagnosen-verwenden" id="markdown-toc-wann-icd-10-gm-bei-genetischen-diagnosen-verwenden">Wann ICD-10-GM bei genetischen Diagnosen verwenden?</a>        <ul>
-          <li><a href="#-icd-10-gm-sinnvoll-bei" id="markdown-toc--icd-10-gm-sinnvoll-bei">✅ ICD-10-GM sinnvoll bei:</a></li>
-          <li><a href="#-icd-10-gm-weglassen-bei" id="markdown-toc--icd-10-gm-weglassen-bei">❌ ICD-10-GM weglassen bei:</a></li>
-        </ul>
-      </li>
-      <li><a href="#wichtiger-hinweis-ausgeschlossene-diagnosen" id="markdown-toc-wichtiger-hinweis-ausgeschlossene-diagnosen">Wichtiger Hinweis: Ausgeschlossene Diagnosen</a>        <ul>
-          <li><a href="#️-pflicht-dokumentation-ausgeschlossener-diagnosen" id="markdown-toc-️-pflicht-dokumentation-ausgeschlossener-diagnosen">⚠️ PFLICHT: Dokumentation ausgeschlossener Diagnosen</a></li>
-        </ul>
-      </li>
-      <li><a href="#zusammenfassung" id="markdown-toc-zusammenfassung">Zusammenfassung</a></li>
-    </ul>
-  </li>
+  <li><a href="#avoiding-redundancy" id="markdown-toc-avoiding-redundancy">Avoiding redundancy</a></li>
+  <li><a href="#recommended-coding-strategy" id="markdown-toc-recommended-coding-strategy">Recommended coding strategy</a></li>
+  <li><a href="#decision-matrix" id="markdown-toc-decision-matrix">Decision matrix</a></li>
+  <li><a href="#practical-examples" id="markdown-toc-practical-examples">Practical examples</a></li>
+  <li><a href="#special-scenarios" id="markdown-toc-special-scenarios">Special scenarios</a></li>
+  <li><a href="#quality-criteria" id="markdown-toc-quality-criteria">Quality criteria</a></li>
+  <li><a href="#when-to-use-icd-10-gm-for-genetic-diagnoses" id="markdown-toc-when-to-use-icd-10-gm-for-genetic-diagnoses">When to use ICD-10-GM for genetic diagnoses?</a></li>
+  <li><a href="#important-note-excluded-diagnoses" id="markdown-toc-important-note-excluded-diagnoses">Important note: excluded diagnoses</a></li>
+  <li><a href="#summary" id="markdown-toc-summary">Summary</a></li>
 </ul>
 
 </div>
-<h1 id="best-practices-für-kodierung-bei-seltenen-erkrankungen">Best Practices für Kodierung bei Seltenen Erkrankungen</h1>
+<!-- TODO:REVIEW machine translation of source page coding-best-practices.md (de) — Migration 2026-08-28, page-map.tsv -->
+<h3 id="avoiding-redundancy">Avoiding redundancy</h3>
 
-<h2 id="vermeidung-von-redundanz">Vermeidung von Redundanz</h2>
+<h4 id="problem">Problem</h4>
 
-<h3 id="problem">Problem</h3>
-<p>Nicht alle Diagnosen benötigen alle verfügbaren Kodiersysteme. Eine übermäßige Mehrfachkodierung kann zu:</p>
+<p>Not every diagnosis needs every available coding system. Excessive multiple coding can lead to:</p>
 <ul>
-  <li>Redundanz und Datenaufblähung führen</li>
-  <li>Inkonsistenzen zwischen verschiedenen Kodiersystemen verursachen</li>
-  <li>Die Wartbarkeit erschweren</li>
+  <li>Redundancy and data bloat</li>
+  <li>Inconsistencies between different coding systems</li>
+  <li>Reduced maintainability</li>
 </ul>
 
-<h3 id="lösung-gezielte-kodierung">Lösung: Gezielte Kodierung</h3>
+<h4 id="solution-targeted-coding">Solution: targeted coding</h4>
 
-<h2 id="empfohlene-kodierungsstrategie">Empfohlene Kodierungsstrategie</h2>
+<h3 id="recommended-coding-strategy">Recommended coding strategy</h3>
 
-<h3 id="1-primäre-kodiersysteme-nach-diagnosetyp">1. Primäre Kodiersysteme nach Diagnosetyp</h3>
+<h4 id="1-primary-coding-systems-by-diagnosis-type">1. Primary coding systems by diagnosis type</h4>
 
-<h4 id="für-klinische-diagnosen">Für KLINISCHE Diagnosen</h4>
+<h5 id="for-clinical-diagnoses">For CLINICAL diagnoses</h5>
 <ul>
-  <li><strong>ICD-10-GM:</strong> Pflicht (Abrechnung/Statistik im deutschen Gesundheitswesen)</li>
-  <li><strong>Orpha-Codes:</strong> Pflicht für seltene Erkrankungen</li>
-  <li><strong>HPO-Codes:</strong> Empfohlen für phänotypische Beschreibung</li>
+  <li><strong>ICD-10-GM:</strong> mandatory (billing/statistics in the German healthcare system)</li>
+  <li><strong>Orpha codes:</strong> mandatory for rare diseases</li>
+  <li><strong>HPO codes:</strong> recommended for phenotypic description</li>
 </ul>
 
-<h4 id="für-genetische-diagnosen">Für GENETISCHE Diagnosen</h4>
+<h5 id="for-genetic-diagnoses">For GENETIC diagnoses</h5>
 <ul>
-  <li><strong>Orpha-Codes:</strong> Pflicht für seltene Erkrankungen</li>
-  <li><strong>OMIM-Codes:</strong> Stark empfohlen für genetische Entitäten</li>
-  <li><strong>ICD-10-GM:</strong> Optional (oft unspezifisch für genetische Varianten)</li>
+  <li><strong>Orpha codes:</strong> mandatory for rare diseases</li>
+  <li><strong>OMIM codes:</strong> strongly recommended for genetic entities</li>
+  <li><strong>ICD-10-GM:</strong> optional (often unspecific for genetic variants)</li>
 </ul>
 
-<h3 id="2-kontextabhängige-kodiersysteme">2. Kontextabhängige Kodiersysteme</h3>
+<h4 id="2-context-dependent-coding-systems">2. Context-dependent coding systems</h4>
 
-<h4 id="hpo-codes">HPO-Codes</h4>
+<h5 id="hpo-codes">HPO codes</h5>
 <ul>
-  <li><strong>Verwenden bei:</strong> Klinischen Diagnosen (<code class="language-plaintext highlighter-rouge">MII_PR_SE_ClinicalDiagnosis</code>)</li>
-  <li><strong>Zweck:</strong> Phänotypische Beschreibung</li>
-  <li><strong>Optional bei:</strong> Genetischen Diagnosen (wenn Phänotyp relevant)</li>
+  <li><strong>Use for:</strong> clinical diagnoses (<code class="language-plaintext highlighter-rouge">MII_PR_SE_ClinicalDiagnosis</code>)</li>
+  <li><strong>Purpose:</strong> phenotypic description</li>
+  <li><strong>Optional for:</strong> genetic diagnoses (if the phenotype is relevant)</li>
 </ul>
 
-<h4 id="omim-codes">OMIM-Codes</h4>
+<h5 id="omim-codes">OMIM codes</h5>
 <ul>
-  <li><strong>Verwenden bei:</strong> Genetischen Diagnosen (<code class="language-plaintext highlighter-rouge">MII_PR_SE_GeneticDiagnosis</code>)</li>
-  <li><strong>Zweck:</strong> Genetische Krankheitsentität</li>
-  <li><strong>Nicht verwenden bei:</strong> Rein klinischen Diagnosen ohne genetische Bestätigung</li>
+  <li><strong>Use for:</strong> genetic diagnoses (<code class="language-plaintext highlighter-rouge">MII_PR_SE_GeneticDiagnosis</code>)</li>
+  <li><strong>Purpose:</strong> genetic disease entity</li>
+  <li><strong>Do not use for:</strong> purely clinical diagnoses without genetic confirmation</li>
 </ul>
 
-<h4 id="snomed-ct">SNOMED CT</h4>
+<h5 id="snomed-ct">SNOMED CT</h5>
 <ul>
-  <li><strong>Verwenden wenn:</strong>
+  <li><strong>Use when:</strong>
     <ul>
-      <li>Keine spezifischere Kodierung verfügbar</li>
-      <li>Internationale Interoperabilität erforderlich</li>
-      <li>Komplexe klinische Konzepte abgebildet werden müssen</li>
+      <li>No more specific coding is available</li>
+      <li>International interoperability is required</li>
+      <li>Complex clinical concepts need to be represented</li>
     </ul>
   </li>
-  <li><strong>Vermeiden wenn:</strong> Orpha/OMIM ausreichend</li>
+  <li><strong>Avoid when:</strong> Orpha/OMIM are sufficient</li>
 </ul>
 
-<h2 id="entscheidungsmatrix">Entscheidungsmatrix</h2>
+<h3 id="decision-matrix">Decision matrix</h3>
 
 <table>
   <thead>
     <tr>
-      <th>Diagnosetyp</th>
+      <th>Diagnosis type</th>
       <th>ICD-10-GM</th>
       <th>Orpha</th>
       <th>HPO</th>
@@ -333,64 +419,67 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td>Klinische SE-Diagnose</td>
-      <td>✅ Pflicht</td>
-      <td>✅ Pflicht</td>
-      <td>✅ Empfohlen</td>
-      <td>❌ Nicht verwenden</td>
+      <td>Clinical RD diagnosis</td>
+      <td>✅ Mandatory</td>
+      <td>✅ Mandatory</td>
+      <td>✅ Recommended</td>
+      <td>❌ Do not use</td>
       <td>⚠️ Optional</td>
     </tr>
     <tr>
-      <td>Genetische SE-Diagnose</td>
+      <td>Genetic RD diagnosis</td>
       <td>⚠️ Optional</td>
-      <td>✅ Pflicht</td>
+      <td>✅ Mandatory</td>
       <td>⚠️ Optional</td>
-      <td>✅ Stark empfohlen</td>
+      <td>✅ Strongly recommended</td>
       <td>⚠️ Optional</td>
     </tr>
     <tr>
-      <td>Verdachtsdiagnose</td>
-      <td>✅ Pflicht</td>
-      <td>⚠️ Wenn möglich</td>
-      <td>✅ Für Symptome</td>
-      <td>❌ Nicht verwenden</td>
+      <td>Suspected diagnosis</td>
+      <td>✅ Mandatory</td>
+      <td>⚠️ If possible</td>
+      <td>✅ For symptoms</td>
+      <td>❌ Do not use</td>
       <td>⚠️ Optional</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="praktische-beispiele">Praktische Beispiele</h2>
+<h3 id="practical-examples">Practical examples</h3>
 
-<h3 id="-richtig-fokussierte-kodierung">✅ RICHTIG: Fokussierte Kodierung</h3>
+<h4 id="-correct-focused-coding">✅ CORRECT: focused coding</h4>
 
-<h4 id="klinische-diagnose-icd-10-gm-erforderlich">Klinische Diagnose (ICD-10-GM erforderlich)</h4>
+<h5 id="clinical-diagnosis-icd-10-gm-required">Clinical diagnosis (ICD-10-GM required)</h5>
+
 <pre><code class="language-fsh">Instance: marfan-clinical-focused
 InstanceOf: MII_PR_SE_ClinicalDiagnosis
 * code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
 * code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
 * code.coding[omim] = http://omim.org#154700 "Marfan syndrome"
-// OMIM für genetische Kodierung verwendet
+// OMIM used for genetic coding
 </code></pre>
 
-<h4 id="genetische-diagnose-icd-10-gm-optional">Genetische Diagnose (ICD-10-GM optional)</h4>
+<h5 id="genetic-diagnosis-icd-10-gm-optional">Genetic diagnosis (ICD-10-GM optional)</h5>
+
 <pre><code class="language-fsh">Instance: sma-genetic-focused
 InstanceOf: MII_PR_SE_GeneticDiagnosis
 * code.coding[orphanet] = http://www.orpha.net#83330 "SMA type 1"
 * code.coding[omim] = http://omim.org#253300 "Spinal muscular atrophy, type I"
-// ICD-10-GM kann weggelassen werden bei rein genetischer Diagnose
-// HPO optional, nur wenn Phänotyp dokumentiert werden soll
+// ICD-10-GM can be omitted for a purely genetic diagnosis
+// HPO optional, only if the phenotype is to be documented
 </code></pre>
 
-<h4 id="genetische-diagnose-mit-icd-10-wenn-klinisch-relevant">Genetische Diagnose mit ICD-10 (wenn klinisch relevant)</h4>
+<h5 id="genetic-diagnosis-with-icd-10-if-clinically-relevant">Genetic diagnosis with ICD-10 (if clinically relevant)</h5>
+
 <pre><code class="language-fsh">Instance: cf-genetic-with-clinical
 InstanceOf: MII_PR_SE_GeneticDiagnosis
 * code.coding[icd10-gm] = $ICD10GM#E84.0 "Zystische Fibrose mit Lungenmanifestationen"
 * code.coding[orphanet] = http://www.orpha.net#586 "Cystic fibrosis"
 * code.coding[omim] = http://omim.org#219700 "Cystic fibrosis"
-// ICD-10 hier sinnvoll, da klinische Manifestation spezifiziert
+// ICD-10 useful here because the clinical manifestation is specified
 </code></pre>
 
-<h3 id="-falsch-übermäßige-kodierung">❌ FALSCH: Übermäßige Kodierung</h3>
+<h4 id="-wrong-excessive-coding">❌ WRONG: excessive coding</h4>
 
 <pre><code class="language-fsh">Instance: overencoded-diagnosis
 InstanceOf: Condition
@@ -400,149 +489,154 @@ InstanceOf: Condition
 * code.coding[3] = http://omim.org#154700 "Marfan syndrome"
 * code.coding[4] = $UMLS#C0024796 "Marfan Syndrome"
 * code.coding[5] = $MeSH#D008382 "Marfan Syndrome"
-// Zu viele redundante Codes!
+// Too many redundant codes!
 </code></pre>
 
-<h2 id="spezielle-szenarien">Spezielle Szenarien</h2>
+<h3 id="special-scenarios">Special scenarios</h3>
 
-<h3 id="diagnose-progression">Diagnose-Progression</h3>
-<p>Bei der Modellierung von Diagnose-Verläufen:</p>
+<h4 id="diagnosis-progression">Diagnosis progression</h4>
+
+<p>When modeling diagnostic courses:</p>
 
 <ol>
-  <li><strong>Verdacht</strong> (Screening)
+  <li><strong>Suspicion</strong> (screening)
     <ul>
-      <li>ICD-10-GM: Pflicht</li>
-      <li>Orpha: Wenn spezifischer SE-Verdacht</li>
-      <li>HPO: Für Symptombeschreibung</li>
-      <li>OMIM: Nicht verwenden</li>
+      <li>ICD-10-GM: mandatory</li>
+      <li>Orpha: if a specific RD is suspected</li>
+      <li>HPO: for symptom description</li>
+      <li>OMIM: do not use</li>
     </ul>
   </li>
-  <li><strong>Klinische Diagnose</strong>
+  <li><strong>Clinical diagnosis</strong>
     <ul>
-      <li>ICD-10-GM: Pflicht</li>
-      <li>Orpha: Pflicht</li>
-      <li>HPO: Empfohlen</li>
-      <li>OMIM: Nicht verwenden</li>
+      <li>ICD-10-GM: mandatory</li>
+      <li>Orpha: mandatory</li>
+      <li>HPO: recommended</li>
+      <li>OMIM: do not use</li>
     </ul>
   </li>
-  <li><strong>Genetisch bestätigt</strong>
+  <li><strong>Genetically confirmed</strong>
     <ul>
-      <li>ICD-10-GM: Optional (nur wenn klinisch relevant)</li>
-      <li>Orpha: Pflicht</li>
-      <li>HPO: Optional (wenn phänotypisch relevant)</li>
-      <li>OMIM: Stark empfohlen</li>
+      <li>ICD-10-GM: optional (only if clinically relevant)</li>
+      <li>Orpha: mandatory</li>
+      <li>HPO: optional (if phenotypically relevant)</li>
+      <li>OMIM: strongly recommended</li>
     </ul>
   </li>
 </ol>
 
-<h3 id="rein-genetische-vs-klinisch-genetische-diagnosen">Rein genetische vs. Klinisch-genetische Diagnosen</h3>
+<h4 id="purely-genetic-vs-clinical-genetic-diagnoses">Purely genetic vs. clinical-genetic diagnoses</h4>
 
-<h4 id="rein-genetische-befunde">Rein genetische Befunde</h4>
-<pre><code class="language-fsh">// Beispiel: Carrier-Status ohne Symptome
+<h5 id="purely-genetic-findings">Purely genetic findings</h5>
+
+<pre><code class="language-fsh">// Example: carrier status without symptoms
 Instance: carrier-status-sma
 InstanceOf: MII_PR_SE_GeneticDiagnosis
 * code.coding[orphanet] = http://www.orpha.net#83330 "SMA"
 * code.coding[omim] = http://omim.org#253300 "SMA type I"
 * code.text = "Heterozygote SMN1-Mutation (Anlageträger)"
-// Kein ICD-10, da keine klinische Manifestation
+// No ICD-10, since no clinical manifestation
 </code></pre>
 
-<h4 id="klinisch-genetische-diagnose">Klinisch-genetische Diagnose</h4>
-<pre><code class="language-fsh">// Beispiel: Symptomatischer Patient mit genetischer Bestätigung
+<h5 id="clinical-genetic-diagnosis">Clinical-genetic diagnosis</h5>
+
+<pre><code class="language-fsh">// Example: symptomatic patient with genetic confirmation
 Instance: symptomatic-genetic-diagnosis
 InstanceOf: MII_PR_SE_GeneticDiagnosis
 * code.coding[icd10-gm] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie"
 * code.coding[orphanet] = http://www.orpha.net#83330 "SMA type 1"
 * code.coding[omim] = http://omim.org#253300 "SMA type I"
-// ICD-10 sinnvoll, da klinische Manifestation vorhanden
+// ICD-10 useful, since a clinical manifestation is present
 </code></pre>
 
-<h2 id="qualitätskriterien">Qualitätskriterien</h2>
+<h3 id="quality-criteria">Quality criteria</h3>
 
-<h3 id="minimale-anforderungen">Minimale Anforderungen</h3>
+<h4 id="minimal-requirements">Minimal requirements</h4>
 
-<h4 id="klinische-diagnose">Klinische Diagnose</h4>
+<h5 id="clinical-diagnosis">Clinical diagnosis</h5>
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ICD-10-GM Code vorhanden</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Orpha-Code für seltene Erkrankung</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Angemessener verificationStatus</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ICD-10-GM code present</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Orpha code for the rare disease</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Appropriate verificationStatus</li>
 </ul>
 
-<h4 id="genetische-diagnose">Genetische Diagnose</h4>
+<h5 id="genetic-diagnosis">Genetic diagnosis</h5>
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Orpha-Code für seltene Erkrankung</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />OMIM-Code (wenn verfügbar)</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Evidence-Link zu MolGen-Ressourcen</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Angemessener verificationStatus (meist "confirmed")</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Orpha code for the rare disease</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />OMIM code (if available)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Evidence link to MolGen resources</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Appropriate verificationStatus (usually "confirmed")</li>
 </ul>
 
-<h3 id="optimale-kodierung">Optimale Kodierung</h3>
+<h4 id="optimal-coding">Optimal coding</h4>
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Keine redundanten Codes</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Kontextgerechte Verwendung von HPO/OMIM</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Klare Trennung zwischen klinischer und genetischer Diagnose</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Evidence-Verlinkung passend zum Diagnosetyp</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />No redundant codes</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Context-appropriate use of HPO/OMIM</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Clear separation between clinical and genetic diagnosis</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Evidence linking appropriate to the diagnosis type</li>
 </ul>
 
-<h2 id="wann-icd-10-gm-bei-genetischen-diagnosen-verwenden">Wann ICD-10-GM bei genetischen Diagnosen verwenden?</h2>
+<h3 id="when-to-use-icd-10-gm-for-genetic-diagnoses">When to use ICD-10-GM for genetic diagnoses?</h3>
 
-<h3 id="-icd-10-gm-sinnvoll-bei">✅ ICD-10-GM sinnvoll bei:</h3>
+<h4 id="-icd-10-gm-useful-for">✅ ICD-10-GM useful for:</h4>
 <ul>
-  <li>Symptomatischen Patienten</li>
-  <li>Klinisch manifesten Erkrankungen</li>
-  <li>Wenn spezifische klinische Subtypen kodiert werden (z.B. CF mit Lungenmanifestationen)</li>
-  <li>Abrechnungsrelevanten Diagnosen</li>
+  <li>Symptomatic patients</li>
+  <li>Clinically manifest diseases</li>
+  <li>When specific clinical subtypes are coded (e.g. CF with pulmonary manifestations)</li>
+  <li>Diagnoses relevant to billing</li>
 </ul>
 
-<h3 id="-icd-10-gm-weglassen-bei">❌ ICD-10-GM weglassen bei:</h3>
+<h4 id="-omit-icd-10-gm-for">❌ Omit ICD-10-GM for:</h4>
 <ul>
-  <li>Reinen Anlageträgern ohne Symptome</li>
-  <li>Prädiktiven genetischen Tests</li>
-  <li>Genetischen Varianten unklarer Signifikanz (VUS)</li>
-  <li>Wenn ICD-10 keine adäquate Spezifität bietet</li>
+  <li>Pure carriers without symptoms</li>
+  <li>Predictive genetic tests</li>
+  <li>Genetic variants of unclear significance (VUS)</li>
+  <li>When ICD-10 offers no adequate specificity</li>
 </ul>
 
-<h2 id="wichtiger-hinweis-ausgeschlossene-diagnosen">Wichtiger Hinweis: Ausgeschlossene Diagnosen</h2>
+<h3 id="important-note-excluded-diagnoses">Important note: excluded diagnoses</h3>
 
-<h3 id="️-pflicht-dokumentation-ausgeschlossener-diagnosen">⚠️ PFLICHT: Dokumentation ausgeschlossener Diagnosen</h3>
+<h4 id="️-mandatory-documentation-of-excluded-diagnoses">⚠️ MANDATORY: documentation of excluded diagnoses</h4>
 
-<p><strong>Ausgeschlossene Diagnosen (refuted) MÜSSEN ebenfalls kodiert und dokumentiert werden!</strong></p>
+<p><strong>Excluded diagnoses (refuted) MUST also be coded and documented!</strong></p>
 
-<p>Dies gilt insbesondere für:</p>
+<p>This applies in particular to:</p>
 <ul>
-  <li>Verdachtsdiagnosen, die widerlegt wurden</li>
-  <li>Differentialdiagnosen, die ausgeschlossen wurden</li>
-  <li>Negative genetische Testergebnisse für vermutete Erkrankungen</li>
+  <li>Suspected diagnoses that were refuted</li>
+  <li>Differential diagnoses that were excluded</li>
+  <li>Negative genetic test results for suspected diseases</li>
 </ul>
 
-<h4 id="kodierung-ausgeschlossener-diagnosen">Kodierung ausgeschlossener Diagnosen</h4>
+<h5 id="coding-excluded-diagnoses">Coding excluded diagnoses</h5>
+
 <pre><code class="language-fsh">* verificationStatus = #refuted
 * clinicalStatus = #inactive
-* code.coding[orphanet] = // Orpha-Code der ausgeschlossenen Erkrankung
-* note.text = // Begründung des Ausschlusses
+* code.coding[orphanet] = // Orpha code of the excluded disease
+* note.text = // justification of the exclusion
 </code></pre>
 
-<h4 id="warum-ist-das-wichtig">Warum ist das wichtig?</h4>
+<h5 id="why-is-this-important">Why is this important?</h5>
 <ul>
-  <li><strong>Vermeidung redundanter Diagnostik</strong>: Bereits durchgeführte Tests nicht wiederholen</li>
-  <li><strong>Vollständige Dokumentation</strong>: Diagnostischer Prozess nachvollziehbar</li>
-  <li><strong>Forschung</strong>: Wichtig für Epidemiologie und Differentialdiagnostik</li>
-  <li><strong>Patientensicherheit</strong>: Verhindert unnötige Untersuchungen</li>
+  <li><strong>Avoiding redundant diagnostics</strong>: tests already performed are not repeated</li>
+  <li><strong>Complete documentation</strong>: the diagnostic process remains traceable</li>
+  <li><strong>Research</strong>: important for epidemiology and differential diagnostics</li>
+  <li><strong>Patient safety</strong>: prevents unnecessary examinations</li>
 </ul>
 
-<h2 id="zusammenfassung">Zusammenfassung</h2>
+<h3 id="summary">Summary</h3>
 
-<p><strong>Grundprinzip:</strong> So viel wie nötig, so wenig wie möglich</p>
+<p><strong>Basic principle:</strong> as much as necessary, as little as possible</p>
 
 <ol>
-  <li><strong>Klinische Diagnose:</strong> ICD-10-GM + Orpha + HPO</li>
-  <li><strong>Genetische Diagnose:</strong> Orpha + OMIM (ICD-10-GM nur wenn klinisch relevant)</li>
-  <li><strong>Ausgeschlossene Diagnose:</strong> Gleiche Kodierung + verificationStatus = refuted</li>
-  <li><strong>SNOMED CT:</strong> Nur wenn Mehrwert vorhanden</li>
-  <li><strong>Andere Systeme:</strong> Nur in begründeten Ausnahmefällen</li>
+  <li><strong>Clinical diagnosis:</strong> ICD-10-GM + Orpha + HPO</li>
+  <li><strong>Genetic diagnosis:</strong> Orpha + OMIM (ICD-10-GM only if clinically relevant)</li>
+  <li><strong>Excluded diagnosis:</strong> same coding + verificationStatus = refuted</li>
+  <li><strong>SNOMED CT:</strong> only if it adds value</li>
+  <li><strong>Other systems:</strong> only in justified exceptional cases</li>
 </ol>
 
-<p>Die Wahl der Kodiersysteme sollte den Kontext der Diagnose (klinisch vs. genetisch) und den Verwendungszweck (Abrechnung, Forschung, Registrierung) berücksichtigen.</p>
+<p>The choice of coding systems should take into account the context of the diagnosis (clinical vs. genetic) and the purpose (billing, research, registration).</p>
+
 
 
 
@@ -557,11 +651,9 @@ InstanceOf: MII_PR_SE_GeneticDiagnosis
   <script type="text/javascript" src="assets/js/flags.js"> </script>
 
   <script type="text/javascript" src="assets/js/window-hash.js"> </script>
-  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
-  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
-    <div class="container" data-fhir="generated">  <!-- container -->
+    <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
@@ -569,18 +661,46 @@ InstanceOf: MII_PR_SE_GeneticDiagnosis
 
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
-          Package mii-ig-seltene-erkrankungen-v2026-de#2026.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated 
-  <span title="2026-07-24 06:29:00 +0000">
-    2026-07-24
-  </span>
-
+          Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Thu, Sep 3, 2026 10:43+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
-                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
                  
-                
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/en/legal-notice">Legal notice</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->

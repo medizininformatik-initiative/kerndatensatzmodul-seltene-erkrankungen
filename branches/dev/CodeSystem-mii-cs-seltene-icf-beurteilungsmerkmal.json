@@ -1,0 +1,87 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-seltene-icf-beurteilungsmerkmal",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-seltene-icf-beurteilungsmerkmal</b></p><a name=\"mii-cs-seltene-icf-beurteilungsmerkmal\"> </a><a name=\"hcmii-cs-seltene-icf-beurteilungsmerkmal\"> </a><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">extent-of-impairment<a name=\"mii-cs-seltene-icf-beurteilungsmerkmal-extent-of-impairment\"> </a></td><td>Extent of impairment (body functions)</td><td>First and only qualifier of chapter b.</td></tr><tr><td style=\"white-space:nowrap\">extent-of-impairment-structure<a name=\"mii-cs-seltene-icf-beurteilungsmerkmal-extent-of-impairment-structure\"> </a></td><td>Extent of impairment (body structures)</td><td>First qualifier of chapter s.</td></tr><tr><td style=\"white-space:nowrap\">nature-of-change<a name=\"mii-cs-seltene-icf-beurteilungsmerkmal-nature-of-change\"> </a></td><td>Nature of change (body structures)</td><td>Second qualifier of chapter s.</td></tr><tr><td style=\"white-space:nowrap\">anatomical-location<a name=\"mii-cs-seltene-icf-beurteilungsmerkmal-anatomical-location\"> </a></td><td>Anatomical location (body structures)</td><td>Third qualifier of chapter s; marked by the ICF as still under development.</td></tr><tr><td style=\"white-space:nowrap\">capacity<a name=\"mii-cs-seltene-icf-beurteilungsmerkmal-capacity\"> </a></td><td>Capacity</td><td>What the person can do in a standardised environment, chapter d.</td></tr><tr><td style=\"white-space:nowrap\">performance<a name=\"mii-cs-seltene-icf-beurteilungsmerkmal-performance\"> </a></td><td>Performance</td><td>What the person actually does in their current environment, chapter d.</td></tr><tr><td style=\"white-space:nowrap\">barrier<a name=\"mii-cs-seltene-icf-beurteilungsmerkmal-barrier\"> </a></td><td>Barrier</td><td>Extent to which an environmental factor hinders, chapter e.</td></tr><tr><td style=\"white-space:nowrap\">facilitator<a name=\"mii-cs-seltene-icf-beurteilungsmerkmal-facilitator\"> </a></td><td>Facilitator</td><td>Extent to which an environmental factor helps, chapter e.</td></tr></table></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-seltene-icf-beurteilungsmerkmal</b></p><a name=\"de-mii-cs-seltene-icf-beurteilungsmerkmal\"> </a><a name=\"de-hcmii-cs-seltene-icf-beurteilungsmerkmal\"> </a><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">extent-of-impairment<a name=\"de-mii-cs-seltene-icf-beurteilungsmerkmal-extent-of-impairment\"> </a></td><td>Extent of impairment (body functions)</td><td>First and only qualifier of chapter b.</td></tr><tr><td style=\"white-space:nowrap\">extent-of-impairment-structure<a name=\"de-mii-cs-seltene-icf-beurteilungsmerkmal-extent-of-impairment-structure\"> </a></td><td>Extent of impairment (body structures)</td><td>First qualifier of chapter s.</td></tr><tr><td style=\"white-space:nowrap\">nature-of-change<a name=\"de-mii-cs-seltene-icf-beurteilungsmerkmal-nature-of-change\"> </a></td><td>Nature of change (body structures)</td><td>Second qualifier of chapter s.</td></tr><tr><td style=\"white-space:nowrap\">anatomical-location<a name=\"de-mii-cs-seltene-icf-beurteilungsmerkmal-anatomical-location\"> </a></td><td>Anatomical location (body structures)</td><td>Third qualifier of chapter s; marked by the ICF as still under development.</td></tr><tr><td style=\"white-space:nowrap\">capacity<a name=\"de-mii-cs-seltene-icf-beurteilungsmerkmal-capacity\"> </a></td><td>Capacity</td><td>What the person can do in a standardised environment, chapter d.</td></tr><tr><td style=\"white-space:nowrap\">performance<a name=\"de-mii-cs-seltene-icf-beurteilungsmerkmal-performance\"> </a></td><td>Performance</td><td>What the person actually does in their current environment, chapter d.</td></tr><tr><td style=\"white-space:nowrap\">barrier<a name=\"de-mii-cs-seltene-icf-beurteilungsmerkmal-barrier\"> </a></td><td>Barrier</td><td>Extent to which an environmental factor hinders, chapter e.</td></tr><tr><td style=\"white-space:nowrap\">facilitator<a name=\"de-mii-cs-seltene-icf-beurteilungsmerkmal-facilitator\"> </a></td><td>Facilitator</td><td>Extent to which an environmental factor helps, chapter e.</td></tr></table></div></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_CS_Seltene_ICFBeurteilungsmerkmal",
+  "title" : "MII CS SE ICF Qualifier Kind",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-03T10:43:48+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Names which ICF qualifier a component carries. This is a slot name, not a scale — the scales themselves are the seven BfArM code systems. Defined locally because neither the ICF nor BfArM publishes identifiers for the qualifier positions, and because capacity and performance share one scale and can only be told apart here.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 8,
+  "concept" : [{
+    "code" : "extent-of-impairment",
+    "display" : "Extent of impairment (body functions)",
+    "definition" : "First and only qualifier of chapter b."
+  },
+  {
+    "code" : "extent-of-impairment-structure",
+    "display" : "Extent of impairment (body structures)",
+    "definition" : "First qualifier of chapter s."
+  },
+  {
+    "code" : "nature-of-change",
+    "display" : "Nature of change (body structures)",
+    "definition" : "Second qualifier of chapter s."
+  },
+  {
+    "code" : "anatomical-location",
+    "display" : "Anatomical location (body structures)",
+    "definition" : "Third qualifier of chapter s; marked by the ICF as still under development."
+  },
+  {
+    "code" : "capacity",
+    "display" : "Capacity",
+    "definition" : "What the person can do in a standardised environment, chapter d."
+  },
+  {
+    "code" : "performance",
+    "display" : "Performance",
+    "definition" : "What the person actually does in their current environment, chapter d."
+  },
+  {
+    "code" : "barrier",
+    "display" : "Barrier",
+    "definition" : "Extent to which an environmental factor hinders, chapter e."
+  },
+  {
+    "code" : "facilitator",
+    "display" : "Facilitator",
+    "definition" : "Extent to which an environmental factor helps, chapter e."
+  }]
+}

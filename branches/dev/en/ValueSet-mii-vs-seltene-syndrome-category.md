@@ -1,13 +1,22 @@
-# Syndrome Category Value Set - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# Syndrome Category Value Set - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Syndrome Category Value Set**
 
 ## ValueSet: Syndrome Category Value Set 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-syndrome-category | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_VS_Seltene_SyndromeCategory |
 
  
 Categories for classifying syndrome types in rare diseases 
 
  **References** 
 
-* [Syndrome Category Extension](StructureDefinition-mii-ext-seltene-syndrome-category.md)
+This value set is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
 
 ### Logical Definition (CLD)
 
@@ -28,12 +37,25 @@ Categories for classifying syndrome types in rare diseases
   "resourceType" : "ValueSet",
   "id" : "mii-vs-seltene-syndrome-category",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-syndrome-category",
-  "version" : "2026.0.1",
-  "name" : "SyndromeCategoryVS",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Seltene_SyndromeCategory",
   "title" : "Syndrome Category Value Set",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -42,12 +64,19 @@ Categories for classifying syndrome types in rare diseases
     }]
   }],
   "description" : "Categories for classifying syndrome types in rare diseases",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
       "concept" : [{
         "code" : "32895009",
-        "display" : "Genetic disorder"
+        "display" : "Hereditary disease"
       },
       {
         "code" : "75934005",
@@ -62,11 +91,11 @@ Categories for classifying syndrome types in rare diseases
         "display" : "Congenital malformation"
       },
       {
-        "code" : "371097004",
+        "code" : "5294002",
         "display" : "Developmental disorder"
       },
       {
-        "code" : "254829008",
+        "code" : "362975008",
         "display" : "Degenerative disorder"
       }]
     }]

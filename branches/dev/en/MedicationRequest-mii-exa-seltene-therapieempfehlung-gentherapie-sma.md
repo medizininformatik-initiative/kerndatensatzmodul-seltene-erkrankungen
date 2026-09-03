@@ -1,8 +1,18 @@
-# Beispiel Gentherapie bei SMA - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# Beispiel Gentherapie bei SMA - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Beispiel Gentherapie bei SMA**
 
 ## Example MedicationRequest: Beispiel Gentherapie bei SMA
 
-Profile: [MII PR SE Therapieempfehlung Systemische Therapie](StructureDefinition-mii-pr-seltene-therapieempfehlung.md) version: 2026.0.1
+-------
+
+**English**
+
+-------
+
+Profile: [MII PR SE Therapieempfehlung Systemische Therapie](StructureDefinition-mii-pr-seltene-therapieempfehlung.md) version: 2027.0.0-ballot.rc1
 
 **status**: Active
 
@@ -12,9 +22,9 @@ Profile: [MII PR SE Therapieempfehlung Systemische Therapie](StructureDefinition
 
 **medication**: Zolgensma
 
-**subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-patient-sma-001.md)
+**subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-mii-exa-seltene-patient-sma-001.md)
 
-**reasonReference**: [Spinale Muskelatrophie Typ 1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Condition/sma-diagnosis)
+**reasonReference**: [Spinale Muskelatrophie Typ 1](Condition-mii-exa-seltene-condition-sma-genetic.md)
 
 **note**: 
 
@@ -32,7 +42,7 @@ Einmalige intravenöse Infusion der Gentherapie
   "resourceType" : "MedicationRequest",
   "id" : "mii-exa-seltene-therapieempfehlung-gentherapie-sma",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung|2027.0.0-ballot.rc1"]
   },
   "status" : "active",
   "intent" : "proposal",
@@ -59,10 +69,10 @@ Einmalige intravenöse Infusion der Gentherapie
     "text" : "Zolgensma"
   },
   "subject" : {
-    "reference" : "Patient/patient-sma-001"
+    "reference" : "Patient/mii-exa-seltene-patient-sma-001"
   },
   "reasonReference" : [{
-    "reference" : "Condition/sma-diagnosis",
+    "reference" : "Condition/mii-exa-seltene-condition-sma-genetic",
     "display" : "Spinale Muskelatrophie Typ 1"
   }],
   "note" : [{

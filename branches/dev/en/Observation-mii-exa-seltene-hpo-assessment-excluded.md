@@ -1,14 +1,24 @@
-# HPO Assessment - Excluded Phenotype - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# HPO Assessment - Excluded Phenotype - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **HPO Assessment - Excluded Phenotype**
 
 ## Example Observation: HPO Assessment - Excluded Phenotype
 
-Profile: [MII Profile SE HPO Assessment](StructureDefinition-mii-pr-seltene-hpo-assessment.md) version: 2026.0.1
+-------
+
+**English**
+
+-------
+
+Profile: [MII Profile SE HPO Assessment](StructureDefinition-mii-pr-seltene-hpo-assessment.md) version: 2027.0.0-ballot.rc1
 
 **status**: Final
 
 **code**: Arachnodactyly
 
-**subject**: [Patient/example-patient](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-patient)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **effective**: 2024-01-15
 
@@ -35,7 +45,7 @@ Arachnodactyly explicitly excluded during clinical examination. Arm span/height 
   "resourceType" : "Observation",
   "id" : "mii-exa-seltene-hpo-assessment-excluded",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment|2027.0.0-ballot.rc1"]
   },
   "status" : "final",
   "code" : {
@@ -46,7 +56,7 @@ Arachnodactyly explicitly excluded during clinical examination. Arm span/height 
     }]
   },
   "subject" : {
-    "reference" : "Patient/example-patient"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "effectiveDateTime" : "2024-01-15",
   "note" : [{

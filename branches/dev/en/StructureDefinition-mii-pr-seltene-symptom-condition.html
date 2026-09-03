@@ -4,11 +4,10 @@
 <!DOCTYPE HTML>
 
 
-
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>MII Profile SE Symptom Condition - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1</title>
+    <title>MII Profile SE Symptom Condition - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -24,7 +23,29 @@
   	<link href="assets/css/prism.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
   	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
     <script type="text/javascript" src="assets/js/direction-management.js"> </script>
@@ -44,23 +65,88 @@
   </head>
   <body onload="document.body.style.opacity='1'">
 
-	  <script type="text/javascript" src="assets/js/prism.js"></script>
-	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
-	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"16.18"}
-    h3,h4,h5,h6{--heading-prefix:"16.18"}</style>
+    <style type="text/css">h2{--heading-prefix:"18.25"}
+    h3,h4,h5,h6{--heading-prefix:"18.25"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
-        <!-- Placeholder for child template header declarations -->
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Network of University Medicine — Data Integration Center)" src="assets/images/logo-num-diz-en.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Font size">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Font size: default">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Font size: larger">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Font size: largest">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Back to top">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
 
 
-        <div id="ig-status" data-fhir="generated">
+        <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Seltene Erkrankungen</span>
             <br/>
-            <span style="display:inline-block;">2026.0.1 - ci-build
+            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+
+
+
+  Germany
 
 
             </span>
@@ -69,7 +155,7 @@
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
       <div id="stripe"> </div>
       <div class="container">  <!-- container -->
         <!-- HEADER CONTENT -->
@@ -85,89 +171,119 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- menu.xml  -->
+              <!-- Menu in the IG's DEFAULT language (English).
+     The IG Publisher renders the navigation from this file. To translate it,
+     ship a per-language copy at input/translations/<lang>/includes/menu.xml —
+     this is the mechanism the HL7 reference IG FHIR/multi-lang-test-ig uses and
+     the ONLY way to get a TRANSLATED menu: the `menu:` property in
+     sushi-config.yaml generates a single menu.xml that cannot be translated.
+     Rules: keep the href targets identical across languages; dropdown parents
+     must link to a REAL page (href="#" is rejected by the template's menu QA);
+     only one sub-menu level is supported.
 
+     STRUCTURE: this menu implements the TF-KDS-agreed module menu (see
+     docs/page-structure.md for the full structure with cardinalities).
+     Entries marked OPTIONAL (0..1) below may be removed per module — the
+     removal procedure per entry is in docs/optional-pages.md in this
+     repository. Entries without a marker are mandatory (1..1).
+
+     LINK-ONLY ENTRIES (no page of their own):
+     - "Datasets and Descriptions" points at the Logical Models page
+       (logical-models.html) — the module's datasets ARE its logical models.
+       NEITHER Artifacts-Summary anchor is usable for the TF-KDS "Sec.
+       15.0.2" target: the numeric #2 is POSITIONAL (grouping index — wrong
+       section whenever the artifact mix differs from the full standard set),
+       and the browser-generated NAMED AnchorJS anchor
+       (#structures-logical-models) is invisible to the IG Publisher's link
+       validator — it injects a marker anchor into the menu (rendered as an
+       EMPTY menu entry) and logs a broken-link ERROR on every page's QA.
+       Full analysis: docs/page-structure.md, "Datasets and Descriptions".
+     - The four Conformance entries point at the KDS-wide conformance rules of
+       the Meta module (kerndatensatz-meta). INTERIM: the Meta module has no
+       published IG rendering yet (only a CI build with no conformance pages),
+       so these link to the authoritative meta-wiki sections; switch them to
+       the Meta IG's menu entries once a stable rendering exists (Gate item in
+       docs/page-structure.md). -->
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li>
-    <a href="index.html">Home</a>
-  </li>
+  <li><a href="index.html">Home</a></li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Modul
-      <b class="caret"></b>
-    </a>
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Guidance<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="module-description.html">Beschreibung des Moduls</a>
-      </li>
-      <li>
-        <a href="context.html">Kontext und Bezüge</a>
-      </li>
-      <li>
-        <a href="references.html">Referenzen</a>
-      </li>
-      <li>
-        <a href="release-notes.html">Release Notes</a>
-      </li>
+      <li><a href="guidance.html">Guidance</a></li>
+      <li><a href="implementer-guidance.html">Guidance for Implementers</a></li>
+      <li><a href="clinical-genetic-diagnosis-guide.html">Clinical vs. Genetic Diagnosis</a></li>
+      <li><a href="coding-best-practices.html">Coding Best Practices</a></li>
+      <li><a href="newborn-screening.html">Newborn Screening</a></li>
+      <!-- link-only entry: Logical-Models section of the Artifacts Summary (see header note) -->
+      <li><a href="logical-models.html">Datasets and Descriptions</a></li>
+      <li><a href="uml-diagrams.html">UML Diagrams</a></li>
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
-      <b class="caret"></b>
-    </a>
+    <!-- The parent and the first four entries link to the KDS-wide conformance
+         rules of the Meta module (INTERIM: meta-wiki; see header note). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Conformance<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="scenarios.html">Anwendungsszenarien</a>
-      </li>
-      <li>
-        <a href="datasets.html">Datensätze</a>
-      </li>
-      <li>
-        <a href="information-model.html">Informationsmodell (UML)</a>
-      </li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Conformance</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">General Requirements</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Handling Missing Data</a></li>
+      <li><a href="security-and-privacy.html">Security and Privacy</a></li>
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Umsetzung
-      <b class="caret"></b>
-    </a>
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artifacts<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="profiles-overview.html">FHIR-Profile</a>
-      </li>
-      <li>
-        <a href="terminology.html">Terminologien</a>
-      </li>
-      <li>
-        <a href="capability.html">CapabilityStatement</a>
-      </li>
+      <li><a href="artifacts.html">Artifacts Summary</a></li>
+      <li><a href="profiles.html">Profiles</a></li>
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="extensions.html">Extensions (optional)</a></li>
+      <li><a href="capability-statements.html">Capability Statements</a></li>
+      <li><a href="logical-models.html">Logical Models</a></li>
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="value-sets.html">Value Sets (optional)</a></li>
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="code-systems.html">Code Systems (optional)</a></li>
+      <li><a href="sma-example-annotations.html">Case Example SMA</a></li>
+      <li><a href="marfan-example-annotations.html">Case Example Marfan</a></li>
     </ul>
   </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Changelog</a></li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beispiele und Leitfäden
-      <b class="caret"></b>
-    </a>
+    <!-- The parent deliberately links the MANDATORY child (Versioning): the
+         Metadata Overview page is optional, and a parent pointing at it would
+         have to be re-targeted when that page is removed. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadata<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="sma-example-annotations.html">Beispiel SMA</a>
-      </li>
-      <li>
-        <a href="marfan-example-annotations.html">Beispiel Marfan</a>
-      </li>
-      <li>
-        <a href="clinical-genetic-diagnosis-guide.html">Klinisch-genetische Diagnose</a>
-      </li>
-      <li>
-        <a href="coding-best-practices.html">Kodier-Empfehlungen</a>
-      </li>
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="metadata.html">Metadata Overview (optional)</a></li>
+      <li><a href="version-history.html">Versioning</a></li>
     </ul>
-  </li>
-  <li>
-    <a href="artifacts.html">Artifacts</a>
   </li>
 </ul>
+
             </div>  <!-- /.nav-collapse -->
 
               
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/StructureDefinition-mii-pr-seltene-symptom-condition.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
 
           </div>  <!-- /.container -->
         </nav>  <!-- /.navbar -->
@@ -176,7 +292,7 @@
     </div>  <!-- /segment-navbar -->
     <!--status-bar-->
 
-    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
           <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MII Profile SE Symptom Condition</b></li>
@@ -193,7 +309,7 @@
 
 <!-- layouts\layout-profile -->
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Seltene Erkrankungen - Local Development build (v2026.0.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Seltene Erkrankungen - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -273,20 +389,13 @@ MII Profile SE Symptom Condition
 
   </h2>
 
-  <table class="colsi" data-fhir="generated">
+  <table class="colsi">
 
     <tr>
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">2026.0.1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition|2026.0.1"/></span>
-      </td>
-      <td style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
-        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
-  
-        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
-  
-      </span>
+      <span class="copy-text">2027.0.0-ballot.rc1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition|2027.0.0-ballot.rc1"/></span>
       </td>
     </tr>
 
@@ -298,13 +407,13 @@ MII Profile SE Symptom Condition
 
 
 
-      <td colspan="5">
+      <td colspan="4">
         
           Active
           
 
             as of 
-2026-07-24
+2026-09-03
 
           
         
@@ -331,27 +440,213 @@ MII Profile SE Symptom Condition
 
 
 
+<div style="display:inline-block" markdown="1">
+
+<!-- TODO:REVIEW machine translation (en) of intro note; Quelle: MIIIGModulSeltene/Technische-Implementierung/FHIR-Profile/AnamneseUndDiagnostik/Symptom-Condition.page.md (Simplifier-Guide 2026.0.1, migriert 2026-08-28, Direktiven gestript) -->
+<p>This profile describes symptom-based conditions in the context of rare diseases.
+It records symptomatic conditions with temporal characteristics and complements the HPO assessment observation profile.</p>
+
+<h3 id="examples-of-coded-symptoms">Examples of coded symptoms</h3>
+
+<p>Different coding systems can be used when recording symptoms of rare diseases:</p>
+
+<h4 id="icd-10-gm-codes">ICD-10-GM codes</h4>
+<ul>
+  <li><strong>R04.0</strong> (epistaxis/nosebleed) — a common symptom in von Willebrand syndrome</li>
+  <li><strong>S42.3</strong> (fracture of the humeral shaft) — a typical pathological fracture in osteogenesis imperfecta</li>
+</ul>
+
+<h4 id="snomed-ct-codes-for-laboratory-abnormalities">SNOMED CT codes for laboratory abnormalities</h4>
+<ul>
+  <li><strong>409675001</strong> (Partial thromboplastin time increased) — prolonged PTT in coagulation disorders</li>
+  <li><strong>166627004</strong> (Serum alkaline phosphatase above reference range) — elevated alkaline phosphatase in bone metabolism disorders</li>
+  <li><strong>1153490002</strong> (Serum creatine kinase above reference range) — elevated CK in muscular dystrophies</li>
+</ul>
+
+<h4 id="hpo-codes-for-physical-phenotypes">HPO codes for physical phenotypes</h4>
+<p>HPO is ideal for the precise description of physical/phenotypic abnormalities:</p>
+<ul>
+  <li><strong>HP:0000978</strong> (Bruising susceptibility) — tendency to hematomas in von Willebrand syndrome</li>
+  <li><strong>HP:0002659</strong> (Increased susceptibility to fractures) — fracture tendency in osteogenesis imperfecta</li>
+  <li><strong>HP:0000939</strong> (Osteoporosis) — in various skeletal dysplasias</li>
+  <li><strong>HP:0003198</strong> (Myopathy) — in muscular dystrophies</li>
+  <li><strong>HP:0001270</strong> (Motor delay) — delayed motor development in neuromuscular diseases</li>
+</ul>
+
+<h4 id="mondo-codes-secondary-harmonization-ontology">MONDO codes (secondary harmonization ontology)</h4>
+
+<blockquote>
+  <p><strong>Note:</strong> MONDO is a <strong>secondary harmonization ontology</strong> for improving international interoperability. Primary coding continues to use ICD-10-GM, SNOMED CT or HPO. MONDO codes can be added <strong>optionally</strong>.</p>
+</blockquote>
+
+<p>MONDO (Monarch Disease Ontology) harmonizes different classifications (SNOMED CT, Orphanet, OMIM, ICD) and enables integration with international standards such as <a href="https://phenopacket-schema.readthedocs.io/">Phenopackets</a> and GA4GH:</p>
+<ul>
+  <li><strong>MONDO:0007947</strong> (Marfan syndrome) — corresponds to Orpha:558, OMIM:154700</li>
+  <li><strong>MONDO:0001516</strong> (spinal muscular atrophy) — corresponds to Orpha:70</li>
+  <li><strong>MONDO:0009061</strong> (cystic fibrosis) — corresponds to Orpha:586, OMIM:219700</li>
+</ul>
+
+<p>Further information on MONDO can be found under <a href="code-systems.html">Terminologies</a>.</p>
+
+<hr />
+
+<h3 id="usage">Usage</h3>
+
+<p>The symptom condition profile is used for:</p>
+<ul>
+  <li>Documenting symptoms as independent conditions</li>
+  <li>Recording symptom courses over time</li>
+  <li>Linking with HPO-coded observations</li>
+  <li>Representing symptom clusters in rare diseases</li>
+</ul>
+
+<h3 id="demarcation-from-other-profiles">Demarcation from other profiles</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Symptom condition</strong></td>
+      <td>Symptoms as independent conditions with a course</td>
+    </tr>
+    <tr>
+      <td><strong>HPO assessment</strong></td>
+      <td>Individual phenotypic observations</td>
+    </tr>
+    <tr>
+      <td><strong>Clinical diagnosis</strong></td>
+      <td>Confirmed clinical diagnoses</td>
+    </tr>
+    <tr>
+      <td><strong>Genetic diagnosis</strong></td>
+      <td>Genetically confirmed diagnoses</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>Important:</strong> The distinction between the <strong>symptom condition</strong> and the <strong>HPO observation</strong> is clinically significant:</p>
+  <ul>
+    <li><strong>Symptom condition</strong>: documents a <strong>persistent state</strong> over a period (e.g. "the patient has had arachnodactyly since childhood")</li>
+    <li><strong>HPO observation</strong>: documents a <strong>single examination/assessment</strong> at a specific point in time (e.g. "arachnodactyly was observed on 2024-03-15")</li>
+  </ul>
+</blockquote>
+
+<p>A complete example of this distinction can be found in the <strong>Marfan syndrome example</strong>: <a href="marfan-example-annotations.html">Marfan example</a></p>
+
+<hr />
+
+<p><strong>Search parameters</strong></p>
+
+<p>The following search parameters are relevant for the Rare Diseases module, also in combination:</p>
+
+<ol>
+  <li>
+    <p>The search parameter <code class="language-plaintext highlighter-rouge">_id</code> MUST be supported:</p>
+
+    <p>Examples:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?_id=1234</code></p>
+
+    <p>Usage notes: Further information on searching for "_id" can be found in the <a href="http://hl7.org/fhir/R4/search.html#all">FHIR base specification, section "Parameters for all resources"</a>.</p>
+  </li>
+  <li>
+    <p>The search parameter "_profile" MUST be supported:</p>
+
+    <p>Examples:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition</code></p>
+
+    <p>Usage notes: Further information on searching for "_profile" can be found in the <a href="http://hl7.org/fhir/R4/search.html#all">FHIR base specification, section "token"</a>.</p>
+  </li>
+  <li>
+    <p>The search parameter "category" MUST be supported:</p>
+
+    <p>Examples:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?category=http://snomed.info/sct|418799008</code></p>
+
+    <p>Usage notes: Further information on searching for "category" can be found in the FHIR base specification, section "token".</p>
+  </li>
+  <li>
+    <p>The search parameter "code" MUST be supported:</p>
+
+    <p>Examples:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?code=http://hpo.jax.org/app/|HP:0001324</code></p>
+
+    <p>Usage notes: Further information on searching for "code" can be found in the FHIR base specification, section "token".</p>
+  </li>
+  <li>
+    <p>The search parameter "subject" MUST be supported:</p>
+
+    <p>Examples:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?subject=Patient/example</code></p>
+
+    <p>Usage notes: Further information on searching for "subject" can be found in the FHIR base specification, section "reference".</p>
+  </li>
+  <li>
+    <p>The search parameter "onset-date" MUST be supported:</p>
+
+    <p>Examples:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?onset-date=2024-02-08</code></p>
+
+    <p>Usage notes: Further information on searching for "onset-date" can be found in the FHIR base specification, section "date".</p>
+  </li>
+  <li>
+    <p>The search parameter "severity" MUST be supported:</p>
+
+    <p>Examples:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?severity=http://hpo.jax.org/app/|HP:0012828</code></p>
+
+    <p>Usage notes: Further information on searching for "severity" can be found in the FHIR base specification, section "token".</p>
+  </li>
+  <li>
+    <p>The search parameter "evidence" MUST be supported:</p>
+
+    <p>Examples:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?evidence=Observation/example</code></p>
+
+    <p>Usage notes: Further information on searching for "evidence" can be found in the FHIR base specification, section "reference".</p>
+  </li>
+</ol>
+
+<p>Example instances are linked in the "Examples" section of the profile page.</p>
+
+
+</div>
+
+
+
+
 <p><b>Usages:</b></p>
 <ul>
  <li>Examples for this Profile: <a href="Condition-mii-exa-seltene-symptom-condition.html">Condition/mii-exa-seltene-symptom-condition</a></li>
  <li>CapabilityStatements using this Profile: <a href="CapabilityStatement-mii-cps-seltene-capabilitystatement.html">MII CPS Seltene Erkrankungen CapabilityStatement</a></li>
 </ul>
-<p>You can also check for <a href="https://packages2.fhir.org/xig/resource/mii-ig-seltene-erkrankungen-v2026-de|current/StructureDefinition/StructureDefinition-mii-pr-seltene-symptom-condition.json">usages in the FHIR IG Statistics</a></p>
+<p>You can also check for <a href="https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-symptom-condition.json">usages in the FHIR IG Statistics</a></p>
 
 
   <!-- no uri -->
   <a name="profile"> </a>
   <h3 id="profile">Formal Views of Profile Content</h3>
   <p>
-    <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions">Description Differentials, Snapshots, and other representations</a>.
+    <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions">Description of Profiles, Differentials, Snapshots, and their representations</a>.
   </p>
   <div id="tabs">
     <ul>
-
       <li>
         <a href="#tabs-key">Key Elements Table</a>
       </li>
-
       <li>
         <a href="#tabs-diff">Differential Table</a>
       </li>
@@ -379,7 +674,6 @@ MII Profile SE Symptom Condition
         <a href="#tabs-all">All</a>
       </li>
     </ul>
-
     <a name="tabs-key"> </a>
     <div id="tabs-key">
       <div id="tbl-key">
@@ -771,7 +1065,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen zur Symptom-Erkrankung<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 42cbb193-92a5-43fa-b760-d77d9664e4a2
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 519bb38b-a934-4a88-89b0-69ec2299864e
 document.getElementById('cbmii-pr-seltene-symptom-conditionK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionK'), 'binding', document.getElementById('cbmii-pr-seltene-symptom-conditionK-binding').checked, document.getElementById('ppmii-pr-seltene-symptom-conditionK'));
 document.getElementById('cbmii-pr-seltene-symptom-conditionK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -859,7 +1153,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionK'), 'obliga
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-severity.html">HPO Severity</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -872,7 +1166,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionK'), 'obliga
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html">HPO Phenotypic Observation Codes</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -900,7 +1194,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionK'), 'obliga
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-severity.html">HPO Severity</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -913,7 +1207,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionK'), 'obliga
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html">HPO Phenotypic Observation Codes</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
 </table>
@@ -1061,7 +1355,6 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionK'), 'obliga
         </div>
       </div>
     </div>
-
     <a name="tabs-diff"> </a>
     <div id="tabs-diff">
       <div id="tbl-diff">
@@ -1298,7 +1591,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionK'), 'obliga
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen zur Symptom-Erkrankung</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 42cbb193-92a5-43fa-b760-d77d9664e4a2
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 519bb38b-a934-4a88-89b0-69ec2299864e
 document.getElementById('cbmii-pr-seltene-symptom-conditionD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionD'), 'binding', document.getElementById('cbmii-pr-seltene-symptom-conditionD-binding').checked, document.getElementById('ppmii-pr-seltene-symptom-conditionD'));
 document.getElementById('cbmii-pr-seltene-symptom-conditionD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1373,7 +1666,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionD'), 'obliga
       <a style="opacity: 0.5" href="ValueSet-mii-vs-seltene-hpo-severity.html">HPO Severity</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -1386,7 +1679,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionD'), 'obliga
       <a style="opacity: 0.5" href="ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html">HPO Phenotypic Observation Codes</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -1399,7 +1692,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionD'), 'obliga
       <a style="opacity: 0.5" href="ValueSet-mii-vs-seltene-hpo-severity.html">HPO Severity</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -1412,7 +1705,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionD'), 'obliga
       <a style="opacity: 0.5" href="ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html">HPO Phenotypic Observation Codes</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
 </table>
@@ -1898,7 +2191,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen zur Symptom-Erkrankung<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 42cbb193-92a5-43fa-b760-d77d9664e4a2
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 519bb38b-a934-4a88-89b0-69ec2299864e
 document.getElementById('cbmii-pr-seltene-symptom-conditionS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionS'), 'binding', document.getElementById('cbmii-pr-seltene-symptom-conditionS-binding').checked, document.getElementById('ppmii-pr-seltene-symptom-conditionS'));
 document.getElementById('cbmii-pr-seltene-symptom-conditionS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2002,7 +2295,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionS'), 'obliga
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-severity.html">HPO Severity</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -2015,7 +2308,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionS'), 'obliga
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html">HPO Phenotypic Observation Codes</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -2043,7 +2336,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionS'), 'obliga
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-severity.html">HPO Severity</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -2071,7 +2364,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionS'), 'obliga
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html">HPO Phenotypic Observation Codes</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
 </table>
@@ -2371,7 +2664,6 @@ Summary
     </div>
     <a name="tabs-all"> </a>
     <div id="tabs-all">
-
       <div id="all-tbl-key">
         <p>
           <b>Key Elements View</b>
@@ -2764,7 +3056,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen zur Symptom-Erkrankung<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 42cbb193-92a5-43fa-b760-d77d9664e4a2
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 519bb38b-a934-4a88-89b0-69ec2299864e
 document.getElementById('cbmii-pr-seltene-symptom-conditionKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionKA'), 'binding', document.getElementById('cbmii-pr-seltene-symptom-conditionKA-binding').checked, document.getElementById('ppmii-pr-seltene-symptom-conditionKA'));
 document.getElementById('cbmii-pr-seltene-symptom-conditionKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2851,7 +3143,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionKA'), 'oblig
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-severity.html">HPO Severity</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -2864,7 +3156,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionKA'), 'oblig
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html">HPO Phenotypic Observation Codes</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -2892,7 +3184,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionKA'), 'oblig
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-severity.html">HPO Severity</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -2905,7 +3197,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionKA'), 'oblig
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html">HPO Phenotypic Observation Codes</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
 </table>
@@ -3052,7 +3344,6 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionKA'), 'oblig
           
         </div>
       </div>
-
       <div id="all-tbl-diff">
         <p>
           <b>Differential View</b>
@@ -3290,7 +3581,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionKA'), 'oblig
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen zur Symptom-Erkrankung</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 42cbb193-92a5-43fa-b760-d77d9664e4a2
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 519bb38b-a934-4a88-89b0-69ec2299864e
 document.getElementById('cbmii-pr-seltene-symptom-conditionDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionDA'), 'binding', document.getElementById('cbmii-pr-seltene-symptom-conditionDA-binding').checked, document.getElementById('ppmii-pr-seltene-symptom-conditionDA'));
 document.getElementById('cbmii-pr-seltene-symptom-conditionDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3362,7 +3653,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionDA'), 'oblig
       <a style="opacity: 0.5" href="ValueSet-mii-vs-seltene-hpo-severity.html">HPO Severity</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -3375,7 +3666,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionDA'), 'oblig
       <a style="opacity: 0.5" href="ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html">HPO Phenotypic Observation Codes</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -3388,7 +3679,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionDA'), 'oblig
       <a style="opacity: 0.5" href="ValueSet-mii-vs-seltene-hpo-severity.html">HPO Severity</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -3401,7 +3692,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionDA'), 'oblig
       <a style="opacity: 0.5" href="ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html">HPO Phenotypic Observation Codes</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
 </table>
@@ -3887,7 +4178,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen zur Symptom-Erkrankung<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 42cbb193-92a5-43fa-b760-d77d9664e4a2
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 519bb38b-a934-4a88-89b0-69ec2299864e
 document.getElementById('cbmii-pr-seltene-symptom-conditionSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionSA'), 'binding', document.getElementById('cbmii-pr-seltene-symptom-conditionSA-binding').checked, document.getElementById('ppmii-pr-seltene-symptom-conditionSA'));
 document.getElementById('cbmii-pr-seltene-symptom-conditionSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3989,7 +4280,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionSA'), 'oblig
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-severity.html">HPO Severity</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -4002,7 +4293,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionSA'), 'oblig
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html">HPO Phenotypic Observation Codes</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -4030,7 +4321,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionSA'), 'oblig
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-severity.html">HPO Severity</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -4058,7 +4349,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionSA'), 'oblig
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html">HPO Phenotypic Observation Codes</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2026.0.1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
     <td>This IG</td>
   </tr>
 </table>
@@ -4380,11 +4671,9 @@ Summary
   <script type="text/javascript" src="assets/js/tabs.js"> </script>
 
   <script type="text/javascript" src="assets/js/window-hash.js"> </script>
-  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
-  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
-    <div class="container" data-fhir="generated">  <!-- container -->
+    <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
@@ -4392,18 +4681,46 @@ Summary
 
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
-          Package mii-ig-seltene-erkrankungen-v2026-de#2026.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated 
-  <span title="2026-07-24 06:29:00 +0000">
-    2026-07-24
-  </span>
-
+          Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Thu, Sep 3, 2026 10:43+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
-                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
                  
-                
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/en/legal-notice">Legal notice</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->

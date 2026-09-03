@@ -1,0 +1,35 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "mii-exa-seltene-studieneinschluss-anfrage",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage|2027.0.0-ballot.rc1"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest mii-exa-seltene-studieneinschluss-anfrage</b></p><a name=\"mii-exa-seltene-studieneinschluss-anfrage\"> </a><a name=\"hcmii-exa-seltene-studieneinschluss-anfrage\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html\">MII PR SE Studieneinschluss Anfrage</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 110465008}\">Clinical trial (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 702475000}\">Referral to clinical trial (procedure)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-seltene-patient.html\">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>authoredOn</b>: 2023-03-28</p><p><b>note</b>: </p><blockquote><div><p>Pruefung des Einschlusses in eine laufende Studie zur Gentherapie empfohlen.</p>\n</div></blockquote></div>"
+  },
+  "status" : "active",
+  "intent" : "proposal",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "110465008",
+      "display" : "Clinical trial (procedure)"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "702475000",
+      "display" : "Referral to clinical trial (procedure)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-seltene-patient"
+  },
+  "authoredOn" : "2023-03-28",
+  "note" : [{
+    "text" : "Pruefung des Einschlusses in eine laufende Studie zur Gentherapie empfohlen."
+  }]
+}

@@ -1,20 +1,47 @@
-# MII PR SE Clinical Diagnosis - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# MII PR SE Clinical Diagnosis - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII PR SE Clinical Diagnosis**
 
 ## Resource Profile: MII PR SE Clinical Diagnosis 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Seltene_ClinicalDiagnosis |
 
  
 Profile for clinical diagnosis of rare diseases with HPO phenotype codes. This profile is used for clinically diagnosed rare diseases based on phenotypic presentation. 
 
+This profile describes a clinically established diagnosis of a rare disease. It is used when the diagnosis is based on clinical findings and phenotypic features.
+
+**Search parameters**
+
+The following search parameters are relevant for the Rare Diseases module, also in combination:
+
+1. The search parameter `_id` MUST be supported:Examples:`GET [base]/Condition?_id=1234`Usage notes: Further information on searching for "_id" can be found in the [FHIR base specification, section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "_profile" MUST be supported:Examples:`GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis`Usage notes: Further information on searching for "_profile" can be found in the [FHIR base specification, section "token"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "category" MUST be supported:Examples:`GET [base]/Condition?category=http://terminology.hl7.org/CodeSystem/condition-category|encounter-diagnosis`Usage notes: Further information on searching for "category" can be found in the FHIR base specification, section "token".
+1. The search parameter "code" MUST be supported:Examples:`GET [base]/Condition?code=http://fhir.de/CodeSystem/bfarm/icd-10-gm|Q87.4`Usage notes: Further information on searching for "code" can be found in the FHIR base specification, section "token".
+1. The search parameter "subject" MUST be supported:Examples:`GET [base]/Condition?subject=Patient/example`Usage notes: Further information on searching for "subject" can be found in the FHIR base specification, section "reference".
+1. The search parameter "encounter" MUST be supported:Examples:`GET [base]/Condition?encounter=Encounter/example`Usage notes: Further information on searching for "encounter" can be found in the FHIR base specification, section "reference".
+1. The search parameter "recorded-date" MUST be supported:Examples:`GET [base]/Condition?recorded-date=2024-02-08`Usage notes: Further information on searching for "recorded-date" can be found in the FHIR base specification, section "date".
+1. The search parameter "verification-status" MUST be supported:Examples:`GET [base]/Condition?verification-status=provisional`Usage notes: Further information on searching for "verification-status" can be found in the FHIR base specification, section "token".
+1. The search parameter "clinical-status" MUST be supported:Examples:`GET [base]/Condition?clinical-status=active`Usage notes: Further information on searching for "clinical-status" can be found in the FHIR base specification, section "token".
+
+Example instances are linked in the "Examples" section of the profile page.
+
 **Usages:**
 
-* Examples for this Profile: [Condition/condition-cataract](Condition-condition-cataract.md), [Condition/condition-marfan-clinical](Condition-condition-marfan-clinical.md), [Condition/condition-marfan-suspected](Condition-condition-marfan-suspected.md), [Condition/condition-sma-clinical](Condition-condition-sma-clinical.md)... Show 7 more, [Condition/condition-sma-suspected](Condition-condition-sma-suspected.md), [Condition/example-cf-clinical](Condition-example-cf-clinical.md), [Condition/example-eds-excluded-clinical](Condition-example-eds-excluded-clinical.md), [Condition/example-marfan-clinical-diagnosis](Condition-example-marfan-clinical-diagnosis.md), [Condition/example-marfan-excluded-clinical](Condition-example-marfan-excluded-clinical.md), [Condition/example-metabolic-myopathy-excluded](Condition-example-metabolic-myopathy-excluded.md) and [Condition/example-noonan-clinical-diagnosis](Condition-example-noonan-clinical-diagnosis.md)
+* Examples for this Profile: [Condition/mii-exa-seltene-condition-cataract](Condition-mii-exa-seltene-condition-cataract.md), [Condition/mii-exa-seltene-condition-marfan-clinical](Condition-mii-exa-seltene-condition-marfan-clinical.md), [Condition/mii-exa-seltene-condition-marfan-suspected](Condition-mii-exa-seltene-condition-marfan-suspected.md), [Condition/mii-exa-seltene-condition-sma-clinical](Condition-mii-exa-seltene-condition-sma-clinical.md)... Show 7 more, [Condition/mii-exa-seltene-condition-sma-suspected](Condition-mii-exa-seltene-condition-sma-suspected.md), [Condition/mii-exa-seltene-example-cf-clinical](Condition-mii-exa-seltene-example-cf-clinical.md), [Condition/mii-exa-seltene-example-eds-excluded-clinical](Condition-mii-exa-seltene-example-eds-excluded-clinical.md), [Condition/mii-exa-seltene-example-marfan-clinical-diagnosis](Condition-mii-exa-seltene-example-marfan-clinical-diagnosis.md), [Condition/mii-exa-seltene-example-marfan-excluded-clinical](Condition-mii-exa-seltene-example-marfan-excluded-clinical.md), [Condition/mii-exa-seltene-example-metabolic-myopathy-excluded](Condition-mii-exa-seltene-example-metabolic-myopathy-excluded.md) and [Condition/mii-exa-seltene-example-noonan-clinical-diagnosis](Condition-mii-exa-seltene-example-noonan-clinical-diagnosis.md)
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/mii-ig-seltene-erkrankungen-v2026-de|current/StructureDefinition/StructureDefinition-mii-pr-seltene-clinical-diagnosis.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-clinical-diagnosis.json)
 
 ### Formal Views of Profile Content
 
- [Description Differentials, Snapshots, and other representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
  
 
@@ -49,6 +76,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "version" : "3.0.0",
         "code" : "package",
         "display" : "Package"
       }]
@@ -129,16 +157,29 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis",
-  "version" : "2026.0.1",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Seltene_ClinicalDiagnosis",
   "title" : "MII PR SE Clinical Diagnosis",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -147,6 +188,13 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
     }]
   }],
   "description" : "Profile for clinical diagnosis of rare diseases with HPO phenotype codes. This profile is used for clinically diagnosed rare diseases based on phenotypic presentation.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "SE-LogicalModel",
@@ -193,7 +241,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "Condition",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.KlinischeDiagnose",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose",
         "comment" : "Klinische Diagnose"
       }]
     },
@@ -207,7 +255,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "Condition.extension.value[x]",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia",
         "comment" : "Feststellungsdatum klinische SE-Diagnose"
       }]
     },
@@ -228,7 +276,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "sliceName" : "icd10-gm",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.KlinischeDiagnose",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose",
         "comment" : "ICD-10-GM Diagnose"
       }]
     },
@@ -238,7 +286,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "sliceName" : "orphanet",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.KlinischeDiagnose",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose",
         "comment" : "Orpha-Code Diagnose"
       }]
     },
@@ -261,7 +309,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
         "comment" : "HPO-Term des Symptoms"
       }]
     },
@@ -287,7 +335,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "Condition.subject",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Patient",
+        "map" : "persoenlicheInfosIndexpatient",
         "comment" : "Patient/Indexpatient"
       }]
     },
@@ -296,7 +344,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "Condition.encounter",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Untersuchungsdatum"
       }]
     },
@@ -305,7 +353,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "path" : "Condition.onset[x]",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose.alterKlinischeDia",
         "comment" : "Alter/Zeitpunkt bei klinischer SE-Diagnose"
       }]
     },
@@ -318,7 +366,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia",
         "comment" : "Feststellungsdatum klinische SE-Diagnose"
       }]
     },
@@ -366,7 +414,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
         "comment" : "Unterstützende HPO-Symptome"
       }]
     },
@@ -389,7 +437,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "Verweis auf Phänotypisierung"
       }]
     }]

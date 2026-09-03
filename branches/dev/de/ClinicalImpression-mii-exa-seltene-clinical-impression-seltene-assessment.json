@@ -1,0 +1,128 @@
+{
+  "resourceType" : "ClinicalImpression",
+  "id" : "mii-exa-seltene-clinical-impression-seltene-assessment",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2027.0.0-ballot.rc1"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ClinicalImpression mii-exa-seltene-clinical-impression-seltene-assessment</b></p><a name=\"de-mii-exa-seltene-clinical-impression-seltene-assessment\"> </a><a name=\"de-hcmii-exa-seltene-clinical-impression-seltene-assessment\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-seltene-clinical-impression.html\">MII Profile SE Clinical Impression</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Completed</p><p><b>subject</b>: <a href=\"Patient-mii-exa-seltene-patient-marfan-001.html\">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-seltene-encounter-cardiology.html\">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Seen in cardiac clinic (finding); period = 2024-12-15 --&gt; 2024-12-15; reasonCode = Chest pain</a></p><p><b>effective</b>: 2024-12-15</p><p><b>date</b>: 2024-12-15</p><p><b>problem</b>: </p><ul><li><a href=\"Condition-mii-exa-seltene-condition-marfan-suspected.html\">Condition Marfan-Syndrom</a></li><li><a href=\"Condition-mii-exa-seltene-condition-marfan-clinical.html\">Condition Marfan syndrome</a></li><li><a href=\"Condition-mii-exa-seltene-condition-marfan-genetic.html\">Condition Marfan syndrome</a></li></ul><blockquote><p><b>investigation</b></p><p><b>code</b>: <span title=\"Codes:\">Echokardiographie</span></p><p><b>item</b>: </p><ul><li><a href=\"Observation-mii-exa-seltene-observation-echo-aortic.html\">Observation Aorta root Diameter by US 2D</a></li><li><a href=\"Observation-mii-exa-seltene-observation-echo-av.html\">Observation Aortic valve Regurgitation degree by US.doppler</a></li><li><a href=\"Observation-mii-exa-seltene-observation-echo-mv.html\">Observation Mitral valve Regurgitation degree by US.doppler</a></li></ul></blockquote><p><b>summary</b>: 19-jähriger Patient mit Z.n. Katarakt-OP im ZSE vorstellig. Kardiologische Mitbeurteilung zeigt: Aortenwurzeldilatation (48mm), AKI Grad II, MKI Grad I. Skelettale Merkmale (Hochwuchs 2,13m, Beinlängendifferenz) bestätigen Marfan-Syndrom. Klinische und genetische Diagnose gesichert.</p><blockquote><p><b>finding</b></p><p><b>itemReference</b>: <a href=\"Condition-mii-exa-seltene-condition-marfan-clinical.html\">Condition Marfan syndrome</a></p></blockquote><blockquote><p><b>finding</b></p><p><b>itemReference</b>: <a href=\"Condition-mii-exa-seltene-condition-marfan-genetic.html\">Condition Marfan syndrome</a></p></blockquote><blockquote><p><b>finding</b></p><p><b>itemCodeableConcept</b>: <span title=\"Codes:{http://snomed.info/sct 251036003}\">Aortic root dilatation</span></p><p><b>itemReference</b>: <a href=\"Observation-mii-exa-seltene-symptom-aortic-root.html\">Observation Aortic root aneurysm</a></p></blockquote><blockquote><p><b>finding</b></p><p><b>itemCodeableConcept</b>: <span title=\"Codes:{http://snomed.info/sct 60234000}\">Aortic valve regurgitation</span></p><p><b>itemReference</b>: <a href=\"Observation-mii-exa-seltene-symptom-aortic-regurg.html\">Observation Aortic regurgitation</a></p></blockquote><blockquote><p><b>finding</b></p><p><b>itemCodeableConcept</b>: <span title=\"Codes:{http://snomed.info/sct 48724000}\">Mitral valve regurgitation</span></p><p><b>itemReference</b>: <a href=\"Observation-mii-exa-seltene-symptom-mitral-regurg.html\">Observation Mitral regurgitation</a></p></blockquote><blockquote><p><b>finding</b></p><p><b>itemCodeableConcept</b>: <span title=\"Codes:{http://snomed.info/sct 248328003}\">Tall stature</span></p><p><b>itemReference</b>: <a href=\"Observation-mii-exa-seltene-observation-height-001.html\">Observation Body height</a></p></blockquote><blockquote><p><b>finding</b></p><p><b>itemCodeableConcept</b>: <span title=\"Codes:{http://snomed.info/sct 707738004}\">Leg length discrepancy</span></p><p><b>itemReference</b>: <a href=\"Observation-mii-exa-seltene-observation-leg-asymmetry.html\">Observation Leg length discrepancy</a></p></blockquote><p><b>prognosisCodeableConcept</b>: <span title=\"Codes:{http://snomed.info/sct 67334001}\">Guarded prognosis</span></p><p><b>note</b>: , </p><blockquote><div><p>Katarakt in jungem Alter war Anlass für ZSE-Konsultation. Marfan-Syndrom klinisch und genetisch (FBN1-Mutation) bestätigt. OP-Indikation für Aortenwurzelersatz durch Kardiologie gestellt. Medikamentöse Therapie mit Losartan eingeleitet.</p>\n</div></blockquote><blockquote><div><p>Multidisziplinäre Betreuung im ZSE etabliert. Regelmäßige kardiologische Kontrollen alle 6 Monate. Genetische Beratung für Familienplanung empfohlen.</p>\n</div></blockquote></div>"
+  },
+  "status" : "completed",
+  "subject" : {
+    "reference" : "Patient/mii-exa-seltene-patient-marfan-001"
+  },
+  "encounter" : {
+    "reference" : "Encounter/mii-exa-seltene-encounter-cardiology"
+  },
+  "effectiveDateTime" : "2024-12-15",
+  "date" : "2024-12-15",
+  "problem" : [{
+    "reference" : "Condition/mii-exa-seltene-condition-marfan-suspected"
+  },
+  {
+    "reference" : "Condition/mii-exa-seltene-condition-marfan-clinical"
+  },
+  {
+    "reference" : "Condition/mii-exa-seltene-condition-marfan-genetic"
+  }],
+  "investigation" : [{
+    "code" : {
+      "text" : "Echokardiographie"
+    },
+    "item" : [{
+      "reference" : "Observation/mii-exa-seltene-observation-echo-aortic"
+    },
+    {
+      "reference" : "Observation/mii-exa-seltene-observation-echo-av"
+    },
+    {
+      "reference" : "Observation/mii-exa-seltene-observation-echo-mv"
+    }]
+  }],
+  "summary" : "19-jähriger Patient mit Z.n. Katarakt-OP im ZSE vorstellig. Kardiologische Mitbeurteilung zeigt: Aortenwurzeldilatation (48mm), AKI Grad II, MKI Grad I. Skelettale Merkmale (Hochwuchs 2,13m, Beinlängendifferenz) bestätigen Marfan-Syndrom. Klinische und genetische Diagnose gesichert.",
+  "finding" : [{
+    "itemReference" : {
+      "reference" : "Condition/mii-exa-seltene-condition-marfan-clinical"
+    }
+  },
+  {
+    "itemReference" : {
+      "reference" : "Condition/mii-exa-seltene-condition-marfan-genetic"
+    }
+  },
+  {
+    "itemCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "251036003",
+        "display" : "Aortic root dilatation"
+      }]
+    },
+    "itemReference" : {
+      "reference" : "Observation/mii-exa-seltene-symptom-aortic-root"
+    }
+  },
+  {
+    "itemCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "60234000",
+        "display" : "Aortic valve regurgitation"
+      }]
+    },
+    "itemReference" : {
+      "reference" : "Observation/mii-exa-seltene-symptom-aortic-regurg"
+    }
+  },
+  {
+    "itemCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "48724000",
+        "display" : "Mitral valve regurgitation"
+      }]
+    },
+    "itemReference" : {
+      "reference" : "Observation/mii-exa-seltene-symptom-mitral-regurg"
+    }
+  },
+  {
+    "itemCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "248328003",
+        "display" : "Tall stature"
+      }]
+    },
+    "itemReference" : {
+      "reference" : "Observation/mii-exa-seltene-observation-height-001"
+    }
+  },
+  {
+    "itemCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "707738004",
+        "display" : "Leg length discrepancy"
+      }]
+    },
+    "itemReference" : {
+      "reference" : "Observation/mii-exa-seltene-observation-leg-asymmetry"
+    }
+  }],
+  "prognosisCodeableConcept" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "67334001",
+      "display" : "Guarded prognosis"
+    }]
+  }],
+  "note" : [{
+    "text" : "Katarakt in jungem Alter war Anlass für ZSE-Konsultation. Marfan-Syndrom klinisch und genetisch (FBN1-Mutation) bestätigt. OP-Indikation für Aortenwurzelersatz durch Kardiologie gestellt. Medikamentöse Therapie mit Losartan eingeleitet."
+  },
+  {
+    "text" : "Multidisziplinäre Betreuung im ZSE etabliert. Regelmäßige kardiologische Kontrollen alle 6 Monate. Genetische Beratung für Familienplanung empfohlen."
+  }]
+}

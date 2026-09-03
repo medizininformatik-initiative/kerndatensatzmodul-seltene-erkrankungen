@@ -1,9 +1,77 @@
-# MII PR SE Therapieempfehlung Systemische Therapie - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# MII PR SE Therapieempfehlung Systemische Therapie - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII PR SE Therapieempfehlung Systemische Therapie**
 
 ## Resource Profile: MII PR SE Therapieempfehlung Systemische Therapie 
 
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Seltene_Therapieempfehlung |
+
  
 Therapieempfehlung für eine medikamentöse Systemische Therapie 
+
+This profile describes a **medicinal therapy recommendation** for patients with rare diseases. It is based on the FHIR resource MedicationRequest and covers systemic, targeted, preventive and gene-therapeutic treatment approaches.
+
+### Use cases
+
+Medicinal therapy recommendations include:
+
+* **Systemic therapies**: chemotherapy, immunotherapy, hormone therapy
+* **Targeted therapies**: targeted therapy based on molecular markers
+* **Preventive therapies**: prophylactic medication to avoid complications
+* **Gene therapies**: gene therapeutics for rare genetic diseases (e.g. onasemnogene abeparvovec for SMA)
+* **Combination therapies**: see the separate profile [Therapy recommendation, combination](StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.md)
+
+### Implementation notes
+
+#### Coding of medications
+
+* Use of **ATC codes** for classification
+* **UNII codes** for newer substances (particularly in studies)
+
+#### Status and intent
+
+* `status`: typically "draft" for recommendations, "active" after approval
+* `intent`: "proposal" for therapy recommendations, "order" upon implementation
+
+#### Dosage
+
+* Structured dose specifications with `dosageInstruction`
+* Support for complex schedules (e.g. titration, cyclic administration)
+* For the correct specification of the dosage, the requirements of the [Medication Dosage IG DE specification](https://build.fhir.org/ig/hl7germany/medication-dosage-ig/index.html) are to be observed
+
+#### Justification
+
+* Link to the diagnosis via `reasonReference`
+* Molecular markers via extensions where relevant
+
+-------
+
+### Search parameters
+
+The following search parameters are relevant for medicinal therapy recommendations:
+
+1. **_id**: search by resource id `GET [base]/MedicationRequest?_id=1234`
+1. **_profile**: search by profile `GET [base]/MedicationRequest?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung`
+1. **subject**: search by patient `GET [base]/MedicationRequest?subject=Patient/example`
+1. **status**: search by status `GET [base]/MedicationRequest?status=active`
+1. **intent**: search by intent `GET [base]/MedicationRequest?intent=proposal`
+1. **medication**: search by medication `GET [base]/MedicationRequest?medication=http://fhir.de/CodeSystem/ifa/pzn|12345678`
+1. **authored-on**: search by authoring date `GET [base]/MedicationRequest?authored-on=2024-02-08`
+
+-------
+
+Example instances are linked in the "Examples" section of the profile page.
+
+### Related profiles
+
+* [Therapieempfehlung-Kombination](StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.md) — for combination therapies
+* [Therapieempfehlung-Nicht-Medikamentoes](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md) — for non-medicinal therapies
+* [Therapieplan](StructureDefinition-mii-pr-seltene-therapieplan.md) — overarching therapy plan
 
 **Usages:**
 
@@ -11,11 +79,11 @@ Therapieempfehlung für eine medikamentöse Systemische Therapie
 * Examples for this Profile: [MedicationRequest/mii-exa-seltene-therapieempfehlung-gentherapie-sma](MedicationRequest-mii-exa-seltene-therapieempfehlung-gentherapie-sma.md) and [MedicationRequest/mii-exa-seltene-therapieempfehlung-losartan-marfan](MedicationRequest-mii-exa-seltene-therapieempfehlung-losartan-marfan.md)
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/mii-ig-seltene-erkrankungen-v2026-de|current/StructureDefinition/StructureDefinition-mii-pr-seltene-therapieempfehlung.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-therapieempfehlung.json)
 
 ### Formal Views of Profile Content
 
- [Description Differentials, Snapshots, and other representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
  
 
@@ -40,12 +108,25 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung",
-  "version" : "2026.0.1",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Seltene_Therapieempfehlung",
   "title" : "MII PR SE Therapieempfehlung Systemische Therapie",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -54,6 +135,13 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
     }]
   }],
   "description" : "Therapieempfehlung für eine medikamentöse Systemische Therapie",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "kind" : "resource",
   "abstract" : false,
@@ -74,18 +162,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
       "type" : [{
         "code" : "Extension",
         "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-prioritaet"]
-      }],
-      "mustSupport" : true
-    },
-    {
-      "id" : "MedicationRequest.extension:Evidenzgraduierung",
-      "path" : "MedicationRequest.extension",
-      "sliceName" : "Evidenzgraduierung",
-      "min" : 0,
-      "max" : "1",
-      "type" : [{
-        "code" : "Extension",
-        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung"]
       }],
       "mustSupport" : true
     },
@@ -119,8 +195,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
       "path" : "MedicationRequest.category",
       "slicing" : {
         "discriminator" : [{
-          "type" : "pattern",
-          "path" : "$this"
+          "type" : "value",
+          "path" : "coding.system"
         }],
         "description" : "Slice für Therapiestrategie-Kategorisierung aus Modellvorhaben GenomSeq",
         "rules" : "open"
@@ -151,7 +227,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
     {
       "id" : "MedicationRequest.category:MVGenomSeqTherapieStrategie.coding.system",
       "path" : "MedicationRequest.category.coding.system",
-      "min" : 1
+      "min" : 1,
+      "patternUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"
     },
     {
       "id" : "MedicationRequest.category:MVGenomSeqTherapieStrategie.coding.code",
@@ -182,7 +259,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
     {
       "id" : "MedicationRequest.category:MVGenomSeqTherapieTyp.coding.system",
       "path" : "MedicationRequest.category.coding.system",
-      "min" : 1
+      "min" : 1,
+      "patternUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ"
     },
     {
       "id" : "MedicationRequest.category:MVGenomSeqTherapieTyp.coding.code",

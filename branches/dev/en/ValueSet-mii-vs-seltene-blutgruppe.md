@@ -1,6 +1,15 @@
-# MII VS SE Blutgruppe - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# MII VS SE Blutgruppe - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII VS SE Blutgruppe**
 
 ## ValueSet: MII VS SE Blutgruppe 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-blutgruppe | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_VS_Seltene_Blutgruppe |
 
  
 ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List für 882-1 
@@ -28,13 +37,26 @@ ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List
   "resourceType" : "ValueSet",
   "id" : "mii-vs-seltene-blutgruppe",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-blutgruppe",
-  "version" : "2026.0.1",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Seltene_Blutgruppe",
   "title" : "MII VS SE Blutgruppe",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -43,6 +65,13 @@ ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List
     }]
   }],
   "description" : "ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List für 882-1",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "compose" : {
     "include" : [{
       "system" : "http://loinc.org",

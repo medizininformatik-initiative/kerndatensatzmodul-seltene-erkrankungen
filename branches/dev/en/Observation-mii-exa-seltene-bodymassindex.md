@@ -1,8 +1,18 @@
-# Body Mass Index (BMI) Example - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# Body Mass Index (BMI) Example - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Body Mass Index (BMI) Example**
 
 ## Example Observation: Body Mass Index (BMI) Example
 
-Profile: [Body Mass Index (BMI) of the patient](StructureDefinition-mii-pr-seltene-bodymassindex.md) version: 2026.0.1
+-------
+
+**English**
+
+-------
+
+Profile: [Body Mass Index (BMI) of the patient](StructureDefinition-mii-pr-seltene-bodymassindex.md) version: 2027.0.0-ballot.rc1
 
 **status**: Final
 
@@ -10,7 +20,7 @@ Profile: [Body Mass Index (BMI) of the patient](StructureDefinition-mii-pr-selte
 
 **code**: Body mass index (BMI) [Ratio]
 
-**subject**: [Example Patient](Patient-example.md)
+**subject**: [Example Patient](Patient-mii-exa-seltene-patient.md)
 
 **effective**: 2024-08-08 10:00:00+0200
 
@@ -25,7 +35,7 @@ Profile: [Body Mass Index (BMI) of the patient](StructureDefinition-mii-pr-selte
   "resourceType" : "Observation",
   "id" : "mii-exa-seltene-bodymassindex",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex|2027.0.0-ballot.rc1"]
   },
   "status" : "final",
   "category" : [{
@@ -43,7 +53,7 @@ Profile: [Body Mass Index (BMI) of the patient](StructureDefinition-mii-pr-selte
     }]
   },
   "subject" : {
-    "reference" : "Patient/example",
+    "reference" : "Patient/mii-exa-seltene-patient",
     "display" : "Example Patient"
   },
   "effectiveDateTime" : "2024-08-08T10:00:00+02:00",

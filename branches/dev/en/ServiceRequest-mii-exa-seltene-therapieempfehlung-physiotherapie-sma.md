@@ -1,8 +1,18 @@
-# Beispiel Physiotherapie bei SMA - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# Beispiel Physiotherapie bei SMA - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Beispiel Physiotherapie bei SMA**
 
 ## Example ServiceRequest: Beispiel Physiotherapie bei SMA
 
-Profile: [MII PR SE Therapieempfehlung Nicht-Medikamentös](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md) version: 2026.0.1
+-------
+
+**English**
+
+-------
+
+Profile: [MII PR SE Therapieempfehlung Nicht-Medikamentös](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md) version: 2027.0.0-ballot.rc1
 
 **status**: Active
 
@@ -14,13 +24,13 @@ Profile: [MII PR SE Therapieempfehlung Nicht-Medikamentös](StructureDefinition-
 
 **code**: Physiotherapie zur Erhaltung der motorischen Funktionen
 
-**subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-patient-sma-001.md)
+**subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-mii-exa-seltene-patient-sma-001.md)
 
 **occurrence**: 2 per 1 week
 
 **authoredOn**: 2024-07-29
 
-**reasonReference**: [Infantile Spinale Muskelatrophie Typ 1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Condition/sma-diagnosis)
+**reasonReference**: [Infantile Spinale Muskelatrophie Typ 1](Condition-mii-exa-seltene-condition-sma-genetic.md)
 
 **note**: 
 
@@ -38,7 +48,7 @@ Regelmäßige Physiotherapie 2x wöchentlich zur Kontrakturprophylaxe und Erhalt
   "resourceType" : "ServiceRequest",
   "id" : "mii-exa-seltene-therapieempfehlung-physiotherapie-sma",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2027.0.0-ballot.rc1"]
   },
   "status" : "active",
   "intent" : "proposal",
@@ -66,7 +76,7 @@ Regelmäßige Physiotherapie 2x wöchentlich zur Kontrakturprophylaxe und Erhalt
     "text" : "Physiotherapie zur Erhaltung der motorischen Funktionen"
   },
   "subject" : {
-    "reference" : "Patient/patient-sma-001"
+    "reference" : "Patient/mii-exa-seltene-patient-sma-001"
   },
   "occurrenceTiming" : {
     "repeat" : {
@@ -77,7 +87,7 @@ Regelmäßige Physiotherapie 2x wöchentlich zur Kontrakturprophylaxe und Erhalt
   },
   "authoredOn" : "2024-07-29",
   "reasonReference" : [{
-    "reference" : "Condition/sma-diagnosis",
+    "reference" : "Condition/mii-exa-seltene-condition-sma-genetic",
     "display" : "Infantile Spinale Muskelatrophie Typ 1"
   }],
   "note" : [{

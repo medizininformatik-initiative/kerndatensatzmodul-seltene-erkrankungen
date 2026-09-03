@@ -1,21 +1,96 @@
-# MII PR SE Therapieempfehlung Nicht-Medikamentös - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# MII PR SE Therapieempfehlung Nicht-Medikamentös - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII PR SE Therapieempfehlung Nicht-Medikamentös**
 
 ## Resource Profile: MII PR SE Therapieempfehlung Nicht-Medikamentös 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes |
 
  
 Therapieempfehlung für nicht-medikamentöse Interventionen bei seltenen Erkrankungen (z.B. Ernährungstherapie, Gentherapie, Prophylaxe, Früherkennung) 
 
+This profile describes a **non-medicinal therapy recommendation** for patients with rare diseases. It is based on the FHIR resource ServiceRequest and covers surgical procedures, nutritional therapies, physiotherapy, genetic counseling and further non-drug interventions.
+
+### Use cases
+
+Non-medicinal therapy recommendations include:
+
+* **Surgical procedures**: surgical interventions (e.g. aortic root replacement in Marfan syndrome)
+* **Nutritional therapy**: special diets in metabolic diseases
+* **Physiotherapy**: movement therapy to preserve mobility
+* **Occupational therapy**: promotion of everyday abilities
+* **Speech therapy**: for swallowing and speech disorders
+* **Psychological care**: psychotherapy and counseling
+* **Genetic counseling**: human genetics consultation
+* **Prophylaxis**: preventive measures without drugs
+* **Early detection examinations**: regular screening examinations
+
+### Implementation notes
+
+#### Coding of procedures
+
+* **OPS codes** for surgical and interventional procedures in Germany
+* **SNOMED CT** for international compatibility
+* **LOINC** for diagnostic procedures
+* Local codes for special therapy procedures
+
+#### Status and intent
+
+* `status`: typically "draft" for recommendations, "active" after approval
+* `intent`: "proposal" for therapy recommendations, "order" upon implementation
+* `priority`: urgency of the intervention (routine, urgent, asap, stat)
+
+#### Scheduling
+
+* `occurrence[x]`: time or period of the planned intervention
+* `authoredOn`: date of the recommendation
+
+#### Justification
+
+* Link to the diagnosis via `reasonReference`
+* Clinical indication via `reasonCode`
+
+-------
+
+### Search parameters
+
+The following search parameters are relevant for non-medicinal therapy recommendations:
+
+1. **_id**: search by resource id `GET [base]/ServiceRequest?_id=1234`
+1. **_profile**: search by profile `GET [base]/ServiceRequest?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes`
+1. **subject**: search by patient `GET [base]/ServiceRequest?subject=Patient/example`
+1. **status**: search by status `GET [base]/ServiceRequest?status=active`
+1. **intent**: search by intent `GET [base]/ServiceRequest?intent=proposal`
+1. **code**: search by procedure code `GET [base]/ServiceRequest?code=http://fhir.de/CodeSystem/dimdi/ops-2024|5-354.09`
+1. **authored**: search by authoring date `GET [base]/ServiceRequest?authored=2024-02-08`
+1. **priority**: search by priority `GET [base]/ServiceRequest?priority=urgent`
+
+-------
+
+Example instances are linked in the "Examples" section of the profile page.
+
+### Related profiles
+
+* [Therapieempfehlung-Medikamentoes](StructureDefinition-mii-pr-seltene-therapieempfehlung.md) — for medicinal therapies
+* [Therapieplan](StructureDefinition-mii-pr-seltene-therapieplan.md) — overarching therapy plan
+* [Studieneinschluss-Anfrage](StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.md) — for study participation recommendations
+
 **Usages:**
 
 * Refer to this Profile: [MII PR SE Therapieplan](StructureDefinition-mii-pr-seltene-therapieplan.md)
-* Examples for this Profile: [ServiceRequest/example-early-detection-recommendation](ServiceRequest-example-early-detection-recommendation.md), [ServiceRequest/example-nutrition-therapy-recommendation](ServiceRequest-example-nutrition-therapy-recommendation.md), [ServiceRequest/mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan](ServiceRequest-mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan.md), [ServiceRequest/mii-exa-seltene-therapieempfehlung-genetische-beratung](ServiceRequest-mii-exa-seltene-therapieempfehlung-genetische-beratung.md) and [ServiceRequest/mii-exa-seltene-therapieempfehlung-physiotherapie-sma](ServiceRequest-mii-exa-seltene-therapieempfehlung-physiotherapie-sma.md)
+* Examples for this Profile: [ServiceRequest/mii-exa-seltene-example-early-detection-recommendation](ServiceRequest-mii-exa-seltene-example-early-detection-recommendation.md), [ServiceRequest/mii-exa-seltene-example-nutrition-therapy-recommendation](ServiceRequest-mii-exa-seltene-example-nutrition-therapy-recommendation.md), [ServiceRequest/mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan](ServiceRequest-mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan.md), [ServiceRequest/mii-exa-seltene-therapieempfehlung-genetische-beratung](ServiceRequest-mii-exa-seltene-therapieempfehlung-genetische-beratung.md) and [ServiceRequest/mii-exa-seltene-therapieempfehlung-physiotherapie-sma](ServiceRequest-mii-exa-seltene-therapieempfehlung-physiotherapie-sma.md)
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/mii-ig-seltene-erkrankungen-v2026-de|current/StructureDefinition/StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.json)
 
 ### Formal Views of Profile Content
 
- [Description Differentials, Snapshots, and other representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
  
 
@@ -30,12 +105,25 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-seltene-therapieempfehlung-nicht-medikamentoes",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes",
-  "version" : "2026.0.1",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes",
   "title" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -44,6 +132,13 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
     }]
   }],
   "description" : "Therapieempfehlung für nicht-medikamentöse Interventionen bei seltenen Erkrankungen (z.B. Ernährungstherapie, Gentherapie, Prophylaxe, Früherkennung)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "workflow",
@@ -54,11 +149,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
     "identity" : "v2",
     "uri" : "http://hl7.org/v2",
     "name" : "HL7 v2 Mapping"
-  },
-  {
-    "identity" : "rim",
-    "uri" : "http://hl7.org/v3",
-    "name" : "RIM Mapping"
   },
   {
     "identity" : "w5",
@@ -105,18 +195,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
       "mustSupport" : true
     },
     {
-      "id" : "ServiceRequest.extension:Evidenzgraduierung",
-      "path" : "ServiceRequest.extension",
-      "sliceName" : "Evidenzgraduierung",
-      "min" : 0,
-      "max" : "1",
-      "type" : [{
-        "code" : "Extension",
-        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-evidenzgraduierung"]
-      }],
-      "mustSupport" : true
-    },
-    {
       "id" : "ServiceRequest.extension:Publikation",
       "path" : "ServiceRequest.extension",
       "sliceName" : "Publikation",
@@ -148,8 +226,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
       "path" : "ServiceRequest.category",
       "slicing" : {
         "discriminator" : [{
-          "type" : "pattern",
-          "path" : "$this"
+          "type" : "value",
+          "path" : "coding.system"
         }],
         "description" : "Slice für Therapiestrategie-Kategorisierung aus Modellvorhaben GenomSeq",
         "rules" : "open"
@@ -181,7 +259,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
     {
       "id" : "ServiceRequest.category:MVGenomSeqTherapieStrategie.coding.system",
       "path" : "ServiceRequest.category.coding.system",
-      "min" : 1
+      "min" : 1,
+      "patternUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"
     },
     {
       "id" : "ServiceRequest.category:MVGenomSeqTherapieStrategie.coding.code",
@@ -212,7 +291,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
     {
       "id" : "ServiceRequest.category:MVGenomSeqTherapieTyp.coding.system",
       "path" : "ServiceRequest.category.coding.system",
-      "min" : 1
+      "min" : 1,
+      "patternUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ"
     },
     {
       "id" : "ServiceRequest.category:MVGenomSeqTherapieTyp.coding.code",

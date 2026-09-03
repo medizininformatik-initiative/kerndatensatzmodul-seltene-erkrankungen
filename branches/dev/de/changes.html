@@ -1,0 +1,587 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Änderungshistorie - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"13"}
+    h3,h4,h5,h6{--heading-prefix:"13"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Netzwerk Universitätsmedizin — Datenintegrationszentrum)" src="assets/images/logo-num-diz-de.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Schriftgröße">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Schriftgröße: Standard">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Schriftgröße: größer">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Schriftgröße: am größten">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Zurück zum Seitenanfang">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Seltene Erkrankungen</span>
+            <br/>
+            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- Deutsche Übersetzung des Menüs (input/includes/menu.xml) — Struktur und
+     href-Ziele MÜSSEN identisch zur EN-Fassung bleiben; nur die Labels sind
+     übersetzt. Migration 2026-08-28. -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Startseite</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Anleitung</a></li>
+      <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
+      <li><a href="clinical-genetic-diagnosis-guide.html">Klinische vs. genetische Diagnose</a></li>
+      <li><a href="coding-best-practices.html">Kodier-Empfehlungen</a></li>
+      <li><a href="newborn-screening.html">Neugeborenenscreening</a></li>
+      <li><a href="logical-models.html">Datensätze und Beschreibungen</a></li>
+      <li><a href="uml-diagrams.html">UML-Diagramme</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Konformität<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformität</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">Allgemeine Anforderungen</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must-Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Umgang mit fehlenden Daten</a></li>
+      <li><a href="security-and-privacy.html">Sicherheit und Datenschutz</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artefakte<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artefakt-Übersicht</a></li>
+      <li><a href="profiles.html">Profile</a></li>
+      <li><a href="extensions.html">Extensions (optional)</a></li>
+      <li><a href="capability-statements.html">CapabilityStatements</a></li>
+      <li><a href="logical-models.html">Logische Modelle</a></li>
+      <li><a href="value-sets.html">ValueSets (optional)</a></li>
+      <li><a href="code-systems.html">CodeSystems (optional)</a></li>
+      <li><a href="sma-example-annotations.html">Fallbeispiel SMA</a></li>
+      <li><a href="marfan-example-annotations.html">Fallbeispiel Marfan</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Änderungshistorie</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadaten<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="metadata.html">Metadaten-Übersicht (optional)</a></li>
+      <li><a href="version-history.html">Versionierung</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Sprache:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/changes.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Inhaltsverzeichnis</b></a></li><li><b>Änderungshistorie</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Seltene Erkrankungen - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Änderungshistorie</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#version-202700-ballotrc1" id="markdown-toc-version-202700-ballotrc1">Version 2027.0.0-ballot.rc1</a>    <ul>
+      <li><a href="#neue-funktionen" id="markdown-toc-neue-funktionen">Neue Funktionen</a></li>
+      <li><a href="#breaking-changes" id="markdown-toc-breaking-changes">Breaking Changes</a></li>
+      <li><a href="#fehlerbehebungen" id="markdown-toc-fehlerbehebungen">Fehlerbehebungen</a></li>
+      <li><a href="#dokumentation" id="markdown-toc-dokumentation">Dokumentation</a></li>
+      <li><a href="#governance" id="markdown-toc-governance">Governance</a></li>
+    </ul>
+  </li>
+  <li><a href="#version-202601-patch-release" id="markdown-toc-version-202601-patch-release">Version 2026.0.1 (Patch-Release)</a>    <ul>
+      <li><a href="#abhängigkeiten" id="markdown-toc-abhängigkeiten">Abhängigkeiten</a></li>
+      <li><a href="#fehlerbehebungen-1" id="markdown-toc-fehlerbehebungen-1">Fehlerbehebungen</a></li>
+      <li><a href="#cicd-und-tooling" id="markdown-toc-cicd-und-tooling">CI/CD und Tooling</a></li>
+    </ul>
+  </li>
+  <li><a href="#version-202600-finale-version" id="markdown-toc-version-202600-finale-version">Version 2026.0.0 (Finale Version)</a>    <ul>
+      <li><a href="#änderungen-seit-v202600-rc1" id="markdown-toc-änderungen-seit-v202600-rc1">Änderungen seit v2026.0.0-rc.1</a></li>
+    </ul>
+  </li>
+  <li><a href="#änderungen-version-v202600-rc1-release-candidate-1" id="markdown-toc-änderungen-version-v202600-rc1-release-candidate-1">Änderungen Version v2026.0.0-rc.1 (Release Candidate 1)</a>    <ul>
+      <li><a href="#neue-funktionen-1" id="markdown-toc-neue-funktionen-1">Neue Funktionen</a></li>
+      <li><a href="#dokumentationsverbesserungen" id="markdown-toc-dokumentationsverbesserungen">Dokumentationsverbesserungen</a></li>
+      <li><a href="#fehlerbehebungen-2" id="markdown-toc-fehlerbehebungen-2">Fehlerbehebungen</a></li>
+      <li><a href="#validierung-und-qualitätsverbesserungen-aus-ballot-feedback" id="markdown-toc-validierung-und-qualitätsverbesserungen-aus-ballot-feedback">Validierung und Qualitätsverbesserungen (aus Ballot-Feedback)</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<!-- DE-Uebersetzungsseite; Quelle(n): release-notes.md — Migration 2026-08-28, page-map.tsv -->
+<p>Auf dieser Seite werden die Unterschiede zwischen den Versionen nachgehalten, beginnend mit den Unterschieden zwischen der Ballotierungs- und der finalen Version 2026.</p>
+
+<hr />
+
+<h2 id="version-202700-ballotrc1">Version 2027.0.0-ballot.rc1</h2>
+
+<h3 id="neue-funktionen">Neue Funktionen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>JARDIN-Datenpunkte</strong> aus der Gegenüberstellung des europäischen Minimaldatensatzes mit dem Modul (Issues #35, #36, #38). Alle drei sind konkrete Datenbedarfe eines europäischen Referenznetzwerks, keiner davon ist auf seltene Erkrankungen beschränkt — die Profile sagen das im Kopfkommentar auch selbst
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">feat</code> prä-/perinatale Angaben: <code class="language-plaintext highlighter-rouge">mii-pr-seltene-gestationsalter</code>, <code class="language-plaintext highlighter-rouge">mii-pr-seltene-geburtsgewicht</code>, <code class="language-plaintext highlighter-rouge">mii-pr-seltene-geburtslaenge</code>. Kein angebundenes MII-Modul deckte sie ab; Mehrlingsschwangerschaften und pränatal diagnostizierte Fehlbildungen wurden bewusst <strong>nicht</strong> profiliert, weil <code class="language-plaintext highlighter-rouge">Patient.multipleBirth[x]</code> und die bestehenden Condition-Profile mit HPO-Onset das leisten</li>
+      <li><code class="language-plaintext highlighter-rouge">feat</code> <code class="language-plaintext highlighter-rouge">mii-pr-seltene-icf-assessment</code> mit CodeSystem und ValueSets für die Beurteilungsmerkmale. Die WHO-Qualifier liegen in <code class="language-plaintext highlighter-rouge">component</code>, nicht in <code class="language-plaintext highlighter-rouge">value[x]</code>, weil ihre Zahl je ICF-Kapitel verschieden ist — Körperstrukturen tragen drei, Aktivitäten und Partizipation zwei (Leistungsfähigkeit <em>und</em> Leistung). Fünf Invarianten erzwingen die Kapitelkohärenz</li>
+      <li><code class="language-plaintext highlighter-rouge">feat</code> <code class="language-plaintext highlighter-rouge">mii-pr-seltene-registerteilnahme</code> für die Teilnahme an ERN-Registern, abgeleitet von <code class="language-plaintext highlighter-rouge">ResearchSubject</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>Consanguinity</strong> (<code class="language-plaintext highlighter-rouge">mii-pr-seltene-consanguinity</code>) mit ValueSet — Blutsverwandtschaft der Eltern nach RD-CDM v2.0.0 §6.4.4 (Issue #37)</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>Neugeborenenscreening</strong>: sieben ValueSets, davon fünf aus der LOINC-SNOMED-Ontologie per ECL abgeleitet, eines kuratiert nach G-BA-Kinder-Richtlinie und eines intensional über die LOINC-Eigenschaft <code class="language-plaintext highlighter-rouge">SYSTEM</code> (608 Trockenblut-Codes), dazu eine eigene Terminologieseite</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> Logical Model <code class="language-plaintext highlighter-rouge">mii-lm-seltene</code> wieder im Build und auf der Datensatzseite vollständig als Tabelle gerendert</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> 13 neue Beispielinstanzen, angebunden an das bestehende SMA-Fallbeispiel</li>
+</ul>
+
+<h3 id="breaking-changes">Breaking Changes</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">remove</code> Extension <code class="language-plaintext highlighter-rouge">mii-ex-seltene-empfehlung-evidenzgraduierung</code> entfernt, samt ihrer Verwendung in den drei Therapieempfehlungs-Profilen. Sie war eine Kopie aus dem MTB-Modul, deren <code class="language-plaintext highlighter-rouge">system</code>-Discriminator nie einen Wert trug — der Pflicht-Slice <code class="language-plaintext highlighter-rouge">Evidenzgrad 1..1</code> war von keiner Instanz erfüllbar. Publiziert, aber unbenutzbar, und von keinem Beispiel verwendet. Die Skalenfrage verhandelt Ballot-Ticket HDB-543 und ist onkologisch geprägt; für seltene Erkrankungen wurde sie nie beantwortet</li>
+  <li><code class="language-plaintext highlighter-rouge">remove</code> sechs Extensions entfernt, die <strong>nie an ein Profil angeschlossen waren</strong>: <code class="language-plaintext highlighter-rouge">mii-ex-seltene-age-of-onset</code>, <code class="language-plaintext highlighter-rouge">mii-ex-seltene-genetic-basis</code>, <code class="language-plaintext highlighter-rouge">mii-ex-seltene-inheritance-pattern</code>, <code class="language-plaintext highlighter-rouge">mii-ext-seltene-onset-age</code>, <code class="language-plaintext highlighter-rouge">mii-ext-seltene-phenotypic-pattern</code>, <code class="language-plaintext highlighter-rouge">mii-ext-seltene-syndrome-category</code>. Die Git-Historie kennt keinen Commit, der eine von ihnen per <code class="language-plaintext highlighter-rouge">named</code> in ein Profil aufgenommen hätte; publiziert waren sie dennoch seit 2026.0.1. <code class="language-plaintext highlighter-rouge">age-of-onset</code> und <code class="language-plaintext highlighter-rouge">onset-age</code> waren zudem dasselbe Konzept unter zwei IDs — angelegt am 31.07. und 07.08.2025, eine Woche auseinander, wobei die zweite Gruppe die erste unter der Konvention <code class="language-plaintext highlighter-rouge">mii-ex-</code> neu anlegte, ohne die erste zu entfernen. Von elf Extensions bleiben fünf, und die sind alle in Gebrauch. Die zugehörigen ValueSets bleiben bestehen, sie sind auch eigenständig brauchbar</li>
+  <li><code class="language-plaintext highlighter-rouge">change</code> Elementnamen des Logical Models auf lowerCamelCase. PascalCase verstößt gegen die FHIR-Regel <code class="language-plaintext highlighter-rouge">eld-20</code> und erzeugte 195 Warnungen. 62 Segmentnamen umbenannt, Akronyme korrekt behandelt (<code class="language-plaintext highlighter-rouge">HPOTerm</code> → <code class="language-plaintext highlighter-rouge">hpoTerm</code>, <code class="language-plaintext highlighter-rouge">BMI</code> → <code class="language-plaintext highlighter-rouge">bmi</code>), die 90 Mapping-Ziele in 11 Profilen mitgezogen. <strong>Die Elementpfade ändern sich damit</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">change</code> Codes von <code class="language-plaintext highlighter-rouge">mii-pr-seltene-taillenumfang</code> (LOINC <code class="language-plaintext highlighter-rouge">8280-0</code> → SNOMED <code class="language-plaintext highlighter-rouge">276361009</code>) und <code class="language-plaintext highlighter-rouge">mii-pr-seltene-hueftumfang</code> (LOINC <code class="language-plaintext highlighter-rouge">56063-1</code> → SNOMED <code class="language-plaintext highlighter-rouge">284472007</code>). <strong>Abfragen auf die alten Codes greifen nicht mehr</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">change</code> <strong>Benennung durchgehend an die Modulkonvention angeglichen.</strong> Die Prüfregeln in <code class="language-plaintext highlighter-rouge">qc/custom.rules.yaml</code> verlangen <code class="language-plaintext highlighter-rouge">mii-&lt;typ&gt;-seltene-…</code> für Ids und <code class="language-plaintext highlighter-rouge">MII_&lt;TYP&gt;_Seltene_…</code> für Namen; beides war nur teilweise umgesetzt. Betroffen sind:
+    <ul>
+      <li>15 Ressourcennamen, darunter <code class="language-plaintext highlighter-rouge">HPOSeverity</code> → <code class="language-plaintext highlighter-rouge">MII_VS_Seltene_HPOSeverity</code>, <code class="language-plaintext highlighter-rouge">PenetranceValueSet</code> → <code class="language-plaintext highlighter-rouge">MII_VS_Seltene_Penetrance</code>, <code class="language-plaintext highlighter-rouge">MII_LM_SE</code> → <code class="language-plaintext highlighter-rouge">MII_LM_Seltene</code> und <code class="language-plaintext highlighter-rouge">MII_CPS_SE_CapabilityStatement</code> → <code class="language-plaintext highlighter-rouge">MII_CPS_Seltene_CapabilityStatement</code>. Namen sind nicht Teil des Canonicals — <strong>hier ändert sich keine URL</strong></li>
+      <li>zwei Ids: die Extension <code class="language-plaintext highlighter-rouge">von-seltene-betroffen</code> (am 02.09. zwischenzeitlich <code class="language-plaintext highlighter-rouge">mii-ex-von-se-betroffen</code>) heißt jetzt <code class="language-plaintext highlighter-rouge">mii-ex-seltene-von-se-betroffen</code>, ihr ValueSet <code class="language-plaintext highlighter-rouge">von-seltene-betroffen-vs</code> heißt <code class="language-plaintext highlighter-rouge">mii-vs-seltene-von-se-betroffen</code>. <strong>Beide Canonicals ändern sich</strong></li>
+      <li>86 Beispielinstanzen erhalten das Präfix <code class="language-plaintext highlighter-rouge">mii-exa-seltene-</code>, alle 281 Verweise untereinander und auf den Fallbeispielseiten mitgezogen</li>
+    </ul>
+
+    <p>Der Bruch ist bewusst: das Modul ist noch nirgends umgesetzt, und vor der Ballotierung ist der letzte Zeitpunkt, an dem er billig ist</p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">change</code> Beispielinstanz <code class="language-plaintext highlighter-rouge">example</code> umbenannt in <code class="language-plaintext highlighter-rouge">mii-exa-seltene-patient</code>, profiliert auf <code class="language-plaintext highlighter-rouge">MII_PR_Person_Patient</code></li>
+  <li><code class="language-plaintext highlighter-rouge">change</code> alle Konformitätsressourcen tragen jetzt <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc1</code>. <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>, <code class="language-plaintext highlighter-rouge">input/fsh/rulesets/version.fsh</code> und <code class="language-plaintext highlighter-rouge">package.json</code> behaupteten drei verschiedene Stände; 56 Ressourcen trugen die Version des bereits publizierten Vorgängers <code class="language-plaintext highlighter-rouge">2026.0.1</code>, neun gar keine. Die <code class="language-plaintext highlighter-rouge">meta.profile</code>-Claims der Beispiele ziehen mit</li>
+</ul>
+
+<h3 id="fehlerbehebungen">Fehlerbehebungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>zwei Beispiele widersprachen sich fachlich.</strong> Die Deletion der Exons 45-47 im DMD-Gen wurde an einer Stelle als „Out-of-frame … Duchenne-Muskeldystrophie" geführt, im Ausschlussbeispiel dagegen als „In-frame … vereinbar mit Becker, NICHT Duchenne". Die Arithmetik entscheidet: <code class="language-plaintext highlighter-rouge">c.6439</code>–<code class="language-plaintext highlighter-rouge">c.6912</code> sind 474 Basen, 474 ÷ 3 = 158 — das Leseraster bleibt erhalten. Die Deletion ist in-frame und führt zu Becker. Variante und diagnostischer Bericht sind korrigiert (<code class="language-plaintext highlighter-rouge">conclusionCode</code> jetzt OMIM 300376 Becker); das bestätigte Duchenne-Beispiel hat mit der Deletion des Exons 45 einen echten out-of-frame Beleg erhalten (176 Basen, nicht durch drei teilbar)</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>13 Referenzen liefen ins Leere.</strong> Beispiele verwiesen auf Ressourcen, die nie existierten — darunter alle fünf Belege der Ausschlussbeispiele, obwohl gerade diese Seite den Ausschluss als dokumentationspflichtig herausstellt. Acht Verweise ließen sich auf vorhandene Beispiele umbiegen, für die übrigen sind die fehlenden Ressourcen angelegt worden: Linsenbefund und Beighton-Score als ausgeschlossene HPO-Phänotypen (<code class="language-plaintext highlighter-rouge">component[status] = Absent</code>), Laktat, Muskelbiopsie, CFTR-Anlageträgerschaft, PAH-Variante, zwei generische Kontakte und ein Beispiel für die Studieneinschluss-Anfrage, die bisher als einziges Profil ohne Beispiel dastand. Sämtliche neuen Codes gegen tx.fhir.org, die HPO-API und genenames.org geprüft — vier davon waren im ersten Anlauf falsch</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>das Taillenumfang-Profil trug den Code des Bauchumfangs.</strong> LOINC bietet den Taillenumfang ausschließlich auf Nabelhöhe an (<code class="language-plaintext highlighter-rouge">8280-0</code>, <code class="language-plaintext highlighter-rouge">8281-8</code>) — die Landmarke des Bauchumfangs, nicht der Taille, die an der schmalsten Stelle beziehungsweise am Mittelpunkt zwischen unterster Rippe und Beckenkamm definiert ist. Das Profil sagte damit etwas anderes, als es hieß. SNOMED trennt beides; <code class="language-plaintext highlighter-rouge">1162535003</code> und <code class="language-plaintext highlighter-rouge">1162536002</code> bleiben für die landmarkengenaue Angabe verfügbar. Relevant, weil das Modul ein Taille-Hüfte-Verhältnis führt: mit dem Bauchumfang als Zähler ergibt sich ein falsches Verhältnis</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> das Logical Model hat ein <code class="language-plaintext highlighter-rouge">taillenumfang</code> erhalten. Es kannte nur <code class="language-plaintext highlighter-rouge">bauchumfang</code>, wodurch das Taillenumfang-Profil auf den Bauchumfang mappte</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> das (auskommentierte) Profil <code class="language-plaintext highlighter-rouge">mii-pr-seltene-waist-to-hip-ratio</code> trug mit LOINC <code class="language-plaintext highlighter-rouge">8280-0</code> einen doppelt falschen Code — den Umfang statt des Verhältnisses, und denselben wie das Taillenumfang-Profil. Korrigiert auf SNOMED <code class="language-plaintext highlighter-rouge">248367009 |Waist/hip ratio|</code>. Das Profil ist weiterhin inaktiv; dass ausgerechnet das Verhältnis auskommentiert ist, erklärt, warum die Verwechslung so lange unauffällig blieb</li>
+  <li><code class="language-plaintext highlighter-rouge">remove</code> ValueSet <code class="language-plaintext highlighter-rouge">mii-vs-seltene-clinical-diagnosis-category</code> auf <code class="language-plaintext highlighter-rouge">retired</code> gesetzt. Es war seit dem 07.08.2025 nie gebunden; beim Versuch, das nachzuholen, zeigte sich zweierlei. Erstens waren vier der acht Codes falsch oder existierten nicht — <code class="language-plaintext highlighter-rouge">363358000</code> stand als „Clinical finding" und ist <em>Malignant neoplasm of lung</em>, <code class="language-plaintext highlighter-rouge">47367009</code> stand als „Syndrome" und ist <em>Exocrine pancreatic insufficiency</em>, <code class="language-plaintext highlighter-rouge">84757009</code> stand als „Rare disease" und ist <em>Epilepsy</em>, <code class="language-plaintext highlighter-rouge">381406004</code> gibt es nicht. Zweitens, und entscheidend: <strong>es beantwortet die falsche Frage.</strong> <code class="language-plaintext highlighter-rouge">Condition.category</code> bezeichnet in FHIR die Rolle der Condition im Datensatz — der Kurztext lautet wörtlich <code class="language-plaintext highlighter-rouge">problem-list-item | encounter-diagnosis</code> —, nicht die Art der Krankheit. Nach der Codekorrektur blieben drei Tautologien und drei Krankheitsklassifikationen übrig, die in <code class="language-plaintext highlighter-rouge">Condition.code</code> gehören. Nicht gelöscht, sondern retired: die URL ist publiziert und bleibt auflösbar</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>systematische Prüfung aller aufgezählten ValueSet-Codes</strong> gegen Terminologieserver und HPO-API (<code class="language-plaintext highlighter-rouge">scripts/verify-valueset-codes.py</code>). Sie brachte zwei weitere beschädigte ValueSets zutage.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">fix</code> <code class="language-plaintext highlighter-rouge">mii-vs-seltene-hpo-age-of-onset</code>: vier Codes waren systematisch verschoben. <code class="language-plaintext highlighter-rouge">HP:0003596</code> stand als „Neonatal onset" und bedeutet <strong>Middle age onset</strong> — in diesem Modul die Umkehrung der Aussage; Neonatal onset ist <code class="language-plaintext highlighter-rouge">HP:0003623</code>. Ebenso <code class="language-plaintext highlighter-rouge">HP:0025708</code> (stand als Middle age, ist Early young adult), <code class="language-plaintext highlighter-rouge">HP:0034198</code> (stand als Fetal, ist Second trimester) und <code class="language-plaintext highlighter-rouge">HP:0034199</code> (stand als Embryonal, ist Late first trimester). Fetal und Embryonal sind <code class="language-plaintext highlighter-rouge">HP:0011461</code> und <code class="language-plaintext highlighter-rouge">HP:0011460</code></li>
+      <li><code class="language-plaintext highlighter-rouge">fix</code> <code class="language-plaintext highlighter-rouge">mii-vs-seltene-hpo-inheritance-pattern</code>: vier Displays korrigiert, darunter <code class="language-plaintext highlighter-rouge">HP:0001428</code> („Somatic mutation" → <em>Typified by somatic mosaicism</em>) und <code class="language-plaintext highlighter-rouge">HP:0001426</code> („Multifactorial inheritance" → <em>Non-Mendelian inheritance</em>; ein HPO-Konzept „Multifactorial inheritance" gibt es nicht)</li>
+      <li><code class="language-plaintext highlighter-rouge">fix</code> <code class="language-plaintext highlighter-rouge">mii-vs-seltene-syndrome-category</code>: <code class="language-plaintext highlighter-rouge">32895009</code> trug das veraltete Display „Genetic disorder" statt <em>Hereditary disease</em> — dasselbe hatte der IG-Publisher gemeldet. <code class="language-plaintext highlighter-rouge">371097004</code> und <code class="language-plaintext highlighter-rouge">254829008</code> existieren nicht; die gemeinten Begriffe sind <code class="language-plaintext highlighter-rouge">5294002</code> und <code class="language-plaintext highlighter-rouge">362975008</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">remove</code> ValueSet <code class="language-plaintext highlighter-rouge">mii-vs-seltene-genetic-basis</code> auf <code class="language-plaintext highlighter-rouge">retired</code> gesetzt. <strong>Von neun SNOMED-Codes war einer richtig.</strong> <code class="language-plaintext highlighter-rouge">16402000</code> stand als „Mitochondrial disorder" und ist <em>Sickle cell trait</em>, <code class="language-plaintext highlighter-rouge">416010008</code> stand als „Disorder due to uniparental disomy" und ist <em>Hypospadias</em>, drei weitere existieren gar nicht. Das ist nicht reparabel, sondern neu zu erstellen; die Extension, die es band, wurde am selben Tag entfernt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> ValueSet <code class="language-plaintext highlighter-rouge">mii-vs-seltene-penetrance</code> korrigiert — drei von vier Codes waren falsch (Issue #31). <code class="language-plaintext highlighter-rouge">HP:0025169</code>, publiziert als „Complete penetrance", ist <em>Left ventricular systolic dysfunction</em>; <code class="language-plaintext highlighter-rouge">HP:0003828</code>, publiziert als „Variable penetrance", ist <em>Variable expressivity</em>. Alle Codes gegen die HPO-API geprüft. Zu beachten: die abgestuften Terme sind Untertypen der <em>unvollständigen</em> Penetranz</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Slicing-Discriminatoren auf <code class="language-plaintext highlighter-rouge">mii-pr-seltene-blutgruppe</code> sowie auf <code class="language-plaintext highlighter-rouge">category</code> in beiden Therapieempfehlungs-Profilen. Die Slices unterschieden sich nur durch <code class="language-plaintext highlighter-rouge">.system</code> beziehungsweise ein required-Binding — beides kann der jeweils gesetzte Discriminator nicht auswerten</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Logical Model reaktiviert; sein Canonical ist das Ziel des Mappings jedes Profils, womit 22 unauflösbare Links verschwinden</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> 31 Mapping-Ziele zeigten auf nicht existierende Elemente, und die Ziele für <code class="language-plaintext highlighter-rouge">valueQuantity.value</code> und <code class="language-plaintext highlighter-rouge">effectiveDateTime</code> auf das BackboneElement statt auf Wert oder Datum. Alle 102 lösen jetzt auf</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> das Logical Model hat <code class="language-plaintext highlighter-rouge">familienanamnese.todDurchSE</code> und <code class="language-plaintext highlighter-rouge">familienanamnese.dokumentationsdatum</code> erhalten — beide Datenpunkte führt das Familienanamnese-Profil, das Modell kannte sie nicht</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> fünf Verweise auf <code class="language-plaintext highlighter-rouge">Patient/example-patient</code>, eine nie definierte Instanz</li>
+</ul>
+
+<h3 id="dokumentation">Dokumentation</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">docs</code> der Leitfaden zu klinischer und genetischer Diagnose zeigt statt FSH-Blöcken drei Diagramme (Strukturvergleich, Parallelmodell, Entscheidungsbaum). Der bisherige <code class="language-plaintext highlighter-rouge">plantuml</code>-Block wurde nie gerendert und war zudem syntaktisch defekt; der englischen Fassung fehlte der Entscheidungsbaum ganz</li>
+  <li><code class="language-plaintext highlighter-rouge">docs</code> die Datensatzseite rendert das Logical Model als Tabelle mit 71 Datenelementen, erzeugt durch <code class="language-plaintext highlighter-rouge">scripts/generate-lm-table.py</code></li>
+  <li><code class="language-plaintext highlighter-rouge">docs</code> neue Seite zum Neugeborenenscreening</li>
+</ul>
+
+<h3 id="governance">Governance</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">chore</code> Lizenz auf IG-Ebene als <code class="language-plaintext highlighter-rouge">CC-BY-4.0</code> deklariert (Gate-A-Entscheidung). Das Modul deklarierte zuvor weder in <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> noch in <code class="language-plaintext highlighter-rouge">package.json</code> noch als LICENSE-Datei eine Lizenz; auf Artefakt-Ebene war CC-BY-4.0 über <code class="language-plaintext highlighter-rouge">LicenseCodeableCCBY40</code> bereits in Gebrauch</li>
+</ul>
+
+<hr />
+
+<h2 id="version-202601-patch-release">Version 2026.0.1 (Patch-Release)</h2>
+
+<h3 id="abhängigkeiten">Abhängigkeiten</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">chore</code> Abhängigkeit auf Modul Studie von <code class="language-plaintext highlighter-rouge">2026.0.0-ballot</code> auf <code class="language-plaintext highlighter-rouge">2026.0.2</code> aktualisiert</li>
+  <li><code class="language-plaintext highlighter-rouge">chore</code> Abhängigkeit auf Modul ICU auf <code class="language-plaintext highlighter-rouge">2026.0.x</code> (resolved: <code class="language-plaintext highlighter-rouge">2026.0.2</code>) aktualisiert</li>
+</ul>
+
+<h3 id="fehlerbehebungen-1">Fehlerbehebungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> ICU-Kopfumfang-Alias auf umbenanntes Profil <code class="language-plaintext highlighter-rouge">mii-pr-icu-muv-kopfumfang</code> aktualisiert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Korrekter SNOMED-Code für Kopfumfang (363812007 statt 363811000)</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> SNOMED Display auf englisch (Head circumference) für Validator-Kompatibilität</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> FamilyMemberHistory.condition zum Penetrance-Extension-Context hinzugefügt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> CPS Version über RuleSet statt Hardcoding, SupportProfile ohne Version-Suffix</li>
+</ul>
+
+<h3 id="cicd-und-tooling">CI/CD und Tooling</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> Validierungsregeln (qc/custom.rules.yaml) für Ressourcenvalidierung hinzugefügt</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> Zentralisiertes <code class="language-plaintext highlighter-rouge">/build-package</code> Kommando hinzugefügt</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> FHIR Restore-Schritt zum Build-Prozess hinzugefügt</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> mii-shared Submodul und fix-ig-export-links Skill hinzugefügt</li>
+  <li><code class="language-plaintext highlighter-rouge">refactor</code> IG-Seiten auf Tabs-Format umgestellt und lokales Studie-Profil entfernt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Terminologie-Codes und Display-Namen in Therapiebeispielen korrigiert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> MII IG Namenskonventionen für 2026-Release angewandt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> 'Erweiterungsmodul' durch 'KDS-Modul' gemäß MII-Richtlinien ersetzt</li>
+</ul>
+
+<hr />
+
+<h2 id="version-202600-finale-version">Version 2026.0.0 (Finale Version)</h2>
+
+<p>Diese Version ist die finale Veröffentlichung des MII Moduls Seltene Erkrankungen nach erfolgreichem Ballot-Verfahren.</p>
+
+<h3 id="änderungen-seit-v202600-rc1">Änderungen seit v2026.0.0-rc.1</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">chore</code> Alle Ressourcen auf Status "active" gesetzt</li>
+  <li><code class="language-plaintext highlighter-rouge">refactor</code> Diagnose-Abhängigkeit durch Base-Modul ersetzt für bessere Modularität</li>
+  <li><code class="language-plaintext highlighter-rouge">chore</code> Bake-Quellpfad für Package-Builds korrigiert</li>
+</ul>
+
+<hr />
+
+<h2 id="änderungen-version-v202600-rc1-release-candidate-1">Änderungen Version v2026.0.0-rc.1 (Release Candidate 1)</h2>
+
+<h3 id="neue-funktionen-1">Neue Funktionen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> MetaProfile RuleSet für alle Beispiel-Instanzen mit versionierter Profil-URL hinzugefügt</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> Therapietyp-Kategorie (kausal/symptomatisch) für Therapieempfehlungen hinzugefügt</li>
+</ul>
+
+<h3 id="dokumentationsverbesserungen">Dokumentationsverbesserungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">docs</code> HPO-Phänotypisierung Dokumentation aktualisiert entsprechend HL7 Phenomics IG Pattern (HDB-755, HDB-737)</li>
+  <li><code class="language-plaintext highlighter-rouge">docs</code> Klarstellung: Eine FamilyMemberHistory-Ressource pro Familienmitglied (HDB-750)</li>
+  <li><code class="language-plaintext highlighter-rouge">docs</code> Seltene Erkrankungen Definitionen im Modulbeschreibung aktualisiert (HDB-757)</li>
+  <li><code class="language-plaintext highlighter-rouge">docs</code> Orpha-Kodierung → ORPHAcode-Kodierung Terminologie korrigiert (HDB-764)</li>
+  <li><code class="language-plaintext highlighter-rouge">docs</code> HPO vs Symptom Unterscheidung mit Marfan-Beispiel dokumentiert (HDB-738)</li>
+  <li><code class="language-plaintext highlighter-rouge">docs</code> Dokumentationsklarstellungen (HDB-741, HDB-739)</li>
+</ul>
+
+<h3 id="fehlerbehebungen-2">Fehlerbehebungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Inkorrekte oBDS-Mappings aus Therapieplan-Seite entfernt (HDB-751)</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Inkorrekte oBDS-Mappings aus Messbefunde-Profilen entfernt (HDB-751)</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Tod-durch-SE Extension durch Standard contributedToDeath Element ersetzt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Körpermaße-Profile hinzugefügt und Validierungsfehler behoben</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> 21 SUSHI-Kompilierungsfehler behoben und HPO-Profil-Design verbessert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> 21 Validierungsfehler mit Terminologie- und Beispielkorrekturen behoben</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> HPO Assessment-Profil nach HL7 Phenomics IG Pattern refaktoriert</li>
+</ul>
+
+<h3 id="validierung-und-qualitätsverbesserungen-aus-ballot-feedback">Validierung und Qualitätsverbesserungen (aus Ballot-Feedback)</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> SNOMED CT-basiertes ValueSet für "Von SE betroffen" erstellt mit Codes 373066001 "Yes", 373067005 "No", 261665006 "Unknown". HL7 v2 Codes für Rückwärtskompatibilität beibehalten.</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Kombiniertes Symptom Change Status ValueSet erstellt: MVGenomSeq Codes (newly-added, improved, degraded, no-longer-observed, unchanged) mit SNOMED CT Mapping (385425000 Improved, 231877006 Worse, 385630006 Maintained, 2667000 Absent)</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> FamilyMemberHistory Beispiele korrigiert: ICD-10-GM Version 2004→2009, Display-Namen (Natural Mother→Natural mother), ungültiger Code E11.X→E11.9</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Ungültiger LOINC Code 79992-2 durch 78176-5 "Aorta root Diameter by US 2D" ersetzt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Ungültigen SNOMED Code 249374003 "Anteverted nares" aus HPO Observation Beispiel entfernt (HPO Code HP:0000463 beibehalten)</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Patient Identifier von <code class="language-plaintext highlighter-rouge">http://example.org</code> auf <code class="language-plaintext highlighter-rouge">http://test-krankenhaus.de/fhir/sid/patienten</code> geändert</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Thu, Sep 3, 2026 10:43+0000">2026-09-03</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/impressum">Impressum</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -32,4 +32,11 @@
       <sch:assert test="count(f:text) &lt;= 1">text: maximum cardinality of 'text' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:Observation/f:value[x]/f:coding 1</sch:title>
+    <sch:rule context="f:Observation/f:value[x]/f:coding">
+      <sch:assert test="count(f:system) &gt;= 1">system: minimum cardinality of 'system' is 1</sch:assert>
+      <sch:assert test="count(f:system) &gt;= 1">system: minimum cardinality of 'system' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
 </sch:schema>

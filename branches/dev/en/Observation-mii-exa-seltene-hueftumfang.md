@@ -1,16 +1,26 @@
-# Hüftumfang Beispiel - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# Hüftumfang Beispiel - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Hüftumfang Beispiel**
 
 ## Example Observation: Hüftumfang Beispiel
 
-Profile: [MII PR SE Hüftumfang](StructureDefinition-mii-pr-seltene-hueftumfang.md) version: 2026.0.1
+-------
+
+**English**
+
+-------
+
+Profile: [MII PR SE Hüftumfang](StructureDefinition-mii-pr-seltene-hueftumfang.md) version: 2027.0.0-ballot.rc1
 
 **status**: Final
 
 **category**: Vital Signs
 
-**code**: Circumference.at maximal protrusion of gluteus muscles Pelvis
+**code**: Hip circumference
 
-**subject**: [Beispielpatient](Patient-example.md)
+**subject**: [Beispielpatient](Patient-mii-exa-seltene-patient.md)
 
 **effective**: 2024-08-08 10:00:00+0200
 
@@ -25,7 +35,7 @@ Profile: [MII PR SE Hüftumfang](StructureDefinition-mii-pr-seltene-hueftumfang.
   "resourceType" : "Observation",
   "id" : "mii-exa-seltene-hueftumfang",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hueftumfang|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hueftumfang|2027.0.0-ballot.rc1"]
   },
   "status" : "final",
   "category" : [{
@@ -37,13 +47,13 @@ Profile: [MII PR SE Hüftumfang](StructureDefinition-mii-pr-seltene-hueftumfang.
   }],
   "code" : {
     "coding" : [{
-      "system" : "http://loinc.org",
-      "code" : "56063-1",
-      "display" : "Circumference.at maximal protrusion of gluteus muscles Pelvis"
+      "system" : "http://snomed.info/sct",
+      "code" : "284472007",
+      "display" : "Hip circumference"
     }]
   },
   "subject" : {
-    "reference" : "Patient/example",
+    "reference" : "Patient/mii-exa-seltene-patient",
     "display" : "Beispielpatient"
   },
   "effectiveDateTime" : "2024-08-08T10:00:00+02:00",

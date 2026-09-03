@@ -1,8 +1,18 @@
-# Therapieplan Example - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# Therapieplan Example - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Therapieplan Example**
 
 ## Example CarePlan: Therapieplan Example
 
-Profile: [MII PR SE Therapieplan](StructureDefinition-mii-pr-seltene-therapieplan.md) version: 2026.0.1
+-------
+
+**English**
+
+-------
+
+Profile: [MII PR SE Therapieplan](StructureDefinition-mii-pr-seltene-therapieplan.md) version: 2027.0.0-ballot.rc1
 
 **status**: Draft
 
@@ -10,15 +20,15 @@ Profile: [MII PR SE Therapieplan](StructureDefinition-mii-pr-seltene-therapiepla
 
 **description**: Therapieplan für den Patienten
 
-**subject**: [Patient/example-patient](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-patient)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **created**: 2023-03-28
 
-> **activity****reference**: [MedicationRequest/example-therapieempfehlung](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/MedicationRequest/example-therapieempfehlung)
+> **activity****reference**: [MedicationRequest: status = active; intent = proposal; category = Gentherapie,Kausal; medication[x] = ONASEMNOGENE ABEPARVOVEC; note = Einmalige intravenöse Infusion der Gentherapie](MedicationRequest-mii-exa-seltene-therapieempfehlung-gentherapie-sma.md)
 
-> **activity****reference**: [ServiceRequest/example-nichtmed-therapie](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/ServiceRequest/example-nichtmed-therapie)
+> **activity****reference**: [ServiceRequest Physical therapy procedure](ServiceRequest-mii-exa-seltene-therapieempfehlung-physiotherapie-sma.md)
 
-> **activity****reference**: [ServiceRequest/example-studieneinschluss](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/ServiceRequest/example-studieneinschluss)
+> **activity****reference**: [ServiceRequest Referral to clinical trial (procedure)](ServiceRequest-mii-exa-seltene-studieneinschluss-anfrage.md)
 
 
 
@@ -29,28 +39,28 @@ Profile: [MII PR SE Therapieplan](StructureDefinition-mii-pr-seltene-therapiepla
   "resourceType" : "CarePlan",
   "id" : "mii-exa-seltene-therapieplan",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan|2027.0.0-ballot.rc1"]
   },
   "status" : "draft",
   "intent" : "proposal",
   "description" : "Therapieplan für den Patienten",
   "subject" : {
-    "reference" : "Patient/example-patient"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "created" : "2023-03-28",
   "activity" : [{
     "reference" : {
-      "reference" : "MedicationRequest/example-therapieempfehlung"
+      "reference" : "MedicationRequest/mii-exa-seltene-therapieempfehlung-gentherapie-sma"
     }
   },
   {
     "reference" : {
-      "reference" : "ServiceRequest/example-nichtmed-therapie"
+      "reference" : "ServiceRequest/mii-exa-seltene-therapieempfehlung-physiotherapie-sma"
     }
   },
   {
     "reference" : {
-      "reference" : "ServiceRequest/example-studieneinschluss"
+      "reference" : "ServiceRequest/mii-exa-seltene-studieneinschluss-anfrage"
     }
   }]
 }

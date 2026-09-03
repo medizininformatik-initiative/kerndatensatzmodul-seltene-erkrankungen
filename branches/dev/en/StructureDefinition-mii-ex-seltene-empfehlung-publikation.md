@@ -1,6 +1,15 @@
-# MII EX SE Empfehlung Publikation - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# MII EX SE Empfehlung Publikation - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII EX SE Empfehlung Publikation**
 
 ## Extension: MII EX SE Empfehlung Publikation 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-publikation | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_EX_Seltene_Empfehlung_Publikation |
 
 Verweis auf Publikation der (einzelnen) Empfehlung
 
@@ -12,11 +21,11 @@ Verweis auf Publikation der (einzelnen) Empfehlung
 
 * Use this Extension: [MII PR SE Studieneinschluss Anfrage](StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.md), [MII PR SE Therapieempfehlung Kombinationstherapie](StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.md), [MII PR SE Therapieempfehlung Nicht-Medikamentös](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md) and [MII PR SE Therapieempfehlung Systemische Therapie](StructureDefinition-mii-pr-seltene-therapieempfehlung.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/mii-ig-seltene-erkrankungen-v2026-de|current/StructureDefinition/StructureDefinition-mii-ex-seltene-empfehlung-publikation.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-ex-seltene-empfehlung-publikation.json)
 
 ### Formal Views of Extension Content
 
- [Description Differentials, Snapshots, and other representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
  
 
@@ -31,12 +40,25 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-em
   "resourceType" : "StructureDefinition",
   "id" : "mii-ex-seltene-empfehlung-publikation",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-publikation",
-  "version" : "2026.0.1",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_EX_Seltene_Empfehlung_Publikation",
   "title" : "MII EX SE Empfehlung Publikation",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -45,12 +67,14 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-em
     }]
   }],
   "description" : "Verweis auf Publikation der (einzelnen) Empfehlung",
-  "fhirVersion" : "4.0.1",
-  "mapping" : [{
-    "identity" : "rim",
-    "uri" : "http://hl7.org/v3",
-    "name" : "RIM Mapping"
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
   }],
+  "fhirVersion" : "4.0.1",
   "kind" : "complex-type",
   "abstract" : false,
   "context" : [{

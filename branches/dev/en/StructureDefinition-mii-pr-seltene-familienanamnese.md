@@ -1,6 +1,15 @@
-# MII PR SE Familienanamnese - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# MII PR SE Familienanamnese - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII PR SE Familienanamnese**
 
 ## Resource Profile: MII PR SE Familienanamnese 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Seltene_Familienanamnese |
 
  
 
@@ -10,16 +19,125 @@
 
  
 
+This profile describes the family history in the context of rare diseases. It enables the structured recording of diseases in family members, with a particular focus on genetic and hereditary components of rare diseases.
+
+**Important:** A **separate FamilyMemberHistory resource** is created for **each family member**. A family member can have several diseases, all of which are documented in the same resource under `condition`. To document the **death of the index patient** due to a rare disease, a FamilyMemberHistory resource with `relationship.coding[snomed] = 116154003 | Patient |` can also be created (see section "For the index patient" below).
+
+### Clinical relevance
+
+The family history is of particular importance in rare diseases, as many of these diseases have a genetic component. Structured recording enables:
+
+* Identification of familial clustering
+* Assessment of the inheritance pattern
+* Risk stratification for relatives
+* Planning of genetic counseling and testing
+
+### Death due to a rare disease
+
+Whether a disease contributed to death is documented via the standard FHIR element `FamilyMemberHistory.condition.contributedToDeath`. This boolean element is MustSupport and enables a clear association between a specific disease and the death.
+
+#### For family members
+
+Document the death of a family member due to a rare disease as follows:
+
+* `relationship`: family relationship (e.g. father, mother, sibling)
+* `deceased[x]`: time or age of death
+* `condition.code`: the rare disease with ICD-10-GM, ORPHAcodes or SNOMED CT
+* `condition.contributedToDeath = true`: indication that this disease contributed to death
+
+#### For the index patient
+
+The FamilyMemberHistory profile can also be used to document the **death of the index patient** due to a rare disease:
+
+* `relationship.coding[snomed]`: set to `116154003 | Patient |` (available in the MolGen ValueSet)
+* `patient`: reference to the index patient
+* `deceased[x]`: time or age of death of the patient
+* `condition.code`: the rare disease that led to death
+* `condition.contributedToDeath = true`
+
+This modeling enables uniform documentation of deaths due to rare diseases for family members and the patient, without having to extend the Patient profile.
+
+#### Example
+
+```
+{
+  "resourceType": "FamilyMemberHistory",
+  "status": "completed",
+  "patient": {"reference": "Patient/example"},
+  "relationship": {
+    "coding": [{
+      "system": "http://snomed.info/sct",
+      "code": "72705000",
+      "display": "Mother"
+    }]
+  },
+  "deceasedAge": {"value": 52, "unit": "a", "system": "http://unitsofmeasure.org"},
+  "condition": [{
+    "code": {
+      "coding": [{
+        "system": "http://www.orpha.net",
+        "code": "558",
+        "display": "Marfan-Syndrom"
+      }]
+    },
+    "contributedToDeath": true
+  }]
+}
+
+```
+
+### MONDO coding (secondary harmonization ontology)
+
+> **Note:** MONDO is a **secondary harmonization ontology** and not a primary diagnostic target. The primary coding of the family disease uses ICD-10-GM, Alpha-ID, SNOMED CT or ORPHAcodes. MONDO codes can **optionally** be added in `condition.code.coding[mondo]`.
+
+MONDO (Monarch Disease Ontology) harmonizes different classifications and enables integration with international standards such as [Phenopackets](https://phenopacket-schema.readthedocs.io/) and GA4GH. Further information can be found under [Terminologies](code-systems.md).
+
+-------
+
+### Mapping of the logical data model to FHIR
+
+The following mapping shows the family history elements from the logical data model for rare diseases:
+
+### Assignment to FHIR elements
+
+The elements of the logical data model are mapped to the FamilyMemberHistory profile as follows:
+
+| | | |
+| :--- | :--- | :--- |
+| Familienanamnese.Verwandtschaftsverhaeltnis | FamilyMemberHistory.relationship | Biological relationship to the index patient |
+| Familienanamnese.Geschlecht | FamilyMemberHistory.sex | Sex of the family member |
+| Familienanamnese.GleicheSE | FamilyMemberHistory.condition.code | If the code is identical to the index patient's diagnosis |
+| Familienanamnese.AndereSE | FamilyMemberHistory.condition.code | If the code differs from the index patient's diagnosis |
+| Familienanamnese.Penetranz | FamilyMemberHistory.condition.extension:penetranz | Extension for missing clinical penetrance despite a genetic diagnosis in family members |
+| Familienanamnese.FamilienmitgliedVerstorben | FamilyMemberHistory.deceased[x] | Vital status of the family member |
+| Familienanamnese.TodDurchSE | FamilyMemberHistory.condition.contributedToDeath | Indicates whether the disease contributed to death |
+
+-------
+
+**Search parameters**
+
+The following search parameters are relevant for the Rare Diseases module, also in combination:
+
+1. The search parameter `_id` MUST be supported:Examples:`GET [base]/FamilyMemberHistory?_id=1234`Usage notes: Further information on searching for "_id" can be found in the [FHIR base specification, section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "_profile" MUST be supported:Examples:`GET [base]/FamilyMemberHistory?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese`Usage notes: Further information on searching for "_profile" can be found in the [FHIR base specification, section "token"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "patient" MUST be supported:Examples:`GET [base]/FamilyMemberHistory?patient=Patient/example`Usage notes: Further information on searching for "patient" can be found in the FHIR base specification, section "reference".
+1. The search parameter "status" MUST be supported:Examples:`GET [base]/FamilyMemberHistory?status=completed`Usage notes: Further information on searching for "status" can be found in the FHIR base specification, section "token".
+1. The search parameter "relationship" MUST be supported:Examples:`GET [base]/FamilyMemberHistory?relationship=http://terminology.hl7.org/CodeSystem/v3-RoleCode|FTH`Usage notes: Further information on searching for "relationship" can be found in the FHIR base specification, section "token".
+1. The search parameter "code" MUST be supported:Examples:`GET [base]/FamilyMemberHistory?code=http://www.orpha.net|558`Usage notes: Further information on searching for "code" can be found in the FHIR base specification, section "token".
+
+Example instances are linked in the "Examples" section of the profile page.
+
 **Usages:**
 
-* Examples for this Profile: [FamilyMemberHistory/family-history-001](FamilyMemberHistory-family-history-001.md) and [FamilyMemberHistory/mii-exa-seltene-familienanamnese](FamilyMemberHistory-mii-exa-seltene-familienanamnese.md)
+* Refer to this Profile: [MII PR SE Consanguinity](StructureDefinition-mii-pr-seltene-consanguinity.md)
+* Examples for this Profile: [FamilyMemberHistory/mii-exa-seltene-familienanamnese](FamilyMemberHistory-mii-exa-seltene-familienanamnese.md) and [FamilyMemberHistory/mii-exa-seltene-family-history-001](FamilyMemberHistory-mii-exa-seltene-family-history-001.md)
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/mii-ig-seltene-erkrankungen-v2026-de|current/StructureDefinition/StructureDefinition-mii-pr-seltene-familienanamnese.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-familienanamnese.json)
 
 ### Formal Views of Profile Content
 
- [Description Differentials, Snapshots, and other representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
  
 
@@ -34,12 +152,25 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-seltene-familienanamnese",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese",
-  "version" : "2026.0.1",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Seltene_Familienanamnese",
   "title" : "MII PR SE Familienanamnese",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -48,6 +179,13 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
     }]
   }],
   "description" : "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von seltenen Erkrankungen, basierend auf dem MolGen Familienanamnese Profil. Für jedes Familienmitglied wird eine separate FamilyMemberHistory-Ressource erstellt. Das Profil unterstützt die Dokumentation von Todesfällen durch seltene Erkrankungen über condition.contributedToDeath. Für den Indexpatienten selbst kann relationship.coding[snomed] = 116154003 | Patient | verwendet werden, um den Tod des Patienten durch eine seltene Erkrankung einheitlich zu dokumentieren.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "SE-LogicalModel",
@@ -69,7 +207,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "path" : "FamilyMemberHistory",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese",
+        "map" : "familienanamnese",
         "comment" : "Familienanamnese"
       }]
     },
@@ -88,12 +226,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "max" : "1",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen"]
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-von-se-betroffen"]
       }],
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.GleicheSE",
+        "map" : "familienanamnese.gleicheSE",
         "comment" : "Gleiche SE"
       }]
     },
@@ -102,7 +240,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "path" : "FamilyMemberHistory.patient",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Patient",
+        "map" : "persoenlicheInfosIndexpatient",
         "comment" : "Patient/Indexpatient"
       }]
     },
@@ -111,7 +249,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "path" : "FamilyMemberHistory.date",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Dokumentationsdatum",
+        "map" : "familienanamnese.dokumentationsdatum",
         "comment" : "Datum der Familienanamnese"
       }]
     },
@@ -120,7 +258,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "path" : "FamilyMemberHistory.relationship",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.Verwandtschaftsverhaeltnis",
+        "map" : "familienanamnese.verwandtschaftsverhaeltnis",
         "comment" : "Verwandtschaftsverhältnis"
       }]
     },
@@ -129,7 +267,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "path" : "FamilyMemberHistory.sex",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.Geschlecht",
+        "map" : "familienanamnese.geschlecht",
         "comment" : "Geschlecht"
       }]
     },
@@ -167,7 +305,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.FamilienmitgliedVerstorben",
+        "map" : "familienanamnese.familienmitgliedVerstorben",
         "comment" : "Familienmitglied verstorben"
       }]
     },
@@ -182,7 +320,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.FamilienmitgliedVerstorben",
+        "map" : "familienanamnese.familienmitgliedVerstorben",
         "comment" : "Sterbedatum"
       }]
     },
@@ -197,7 +335,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.FamilienmitgliedVerstorben",
+        "map" : "familienanamnese.familienmitgliedVerstorben",
         "comment" : "Alter bei Tod"
       }]
     },
@@ -206,7 +344,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "path" : "FamilyMemberHistory.reasonCode",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Grund/Erkrankung des Familienmitglieds"
       }]
     },
@@ -225,7 +363,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.Penetranz",
+        "map" : "familienanamnese.penetranz",
         "comment" : "Penetranz"
       }]
     },
@@ -235,7 +373,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "sliceName" : "icd10-gm",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Andere SE (ICD-10-GM)"
       }]
     },
@@ -245,7 +383,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "sliceName" : "sct",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Andere SE (SNOMED CT)"
       }]
     },
@@ -255,7 +393,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "sliceName" : "orphanet",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.AndereSE",
+        "map" : "familienanamnese.andereSE",
         "comment" : "Andere SE (Orpha-Code)"
       }]
     },
@@ -295,7 +433,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Familienanamnese.TodDurchSE",
+        "map" : "familienanamnese.todDurchSE",
         "comment" : "Tod durch seltene Erkrankung"
       }]
     },

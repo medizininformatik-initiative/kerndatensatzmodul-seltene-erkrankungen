@@ -1,14 +1,24 @@
-# HPO Assessment mit Änderungsstatus - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# HPO Assessment mit Änderungsstatus - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **HPO Assessment mit Änderungsstatus**
 
 ## Example Observation: HPO Assessment mit Änderungsstatus
 
-Profile: [MII Profile SE HPO Assessment](StructureDefinition-mii-pr-seltene-hpo-assessment.md) version: 2026.0.1
+-------
+
+**English**
+
+-------
+
+Profile: [MII Profile SE HPO Assessment](StructureDefinition-mii-pr-seltene-hpo-assessment.md) version: 2027.0.0-ballot.rc1
 
 **status**: Final
 
 **code**: Global developmental delay
 
-**subject**: [Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-example.md)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **effective**: 2024-11-15
 
@@ -35,7 +45,7 @@ Entwicklungsverzögerung hat sich seit letzter Untersuchung verbessert
   "resourceType" : "Observation",
   "id" : "mii-exa-seltene-hpo-assessment-change-status",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment|2027.0.0-ballot.rc1"]
   },
   "status" : "final",
   "code" : {
@@ -46,7 +56,7 @@ Entwicklungsverzögerung hat sich seit letzter Untersuchung verbessert
     }]
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "effectiveDateTime" : "2024-11-15",
   "note" : [{

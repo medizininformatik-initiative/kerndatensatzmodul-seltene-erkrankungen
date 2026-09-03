@@ -1,20 +1,111 @@
-# MII Profile SE Symptom Condition - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# MII Profile SE Symptom Condition - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII Profile SE Symptom Condition**
 
 ## Resource Profile: MII Profile SE Symptom Condition 
 
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Seltene_Symptom_Condition |
+
  
 Profile for symptom-based conditions in the context of rare diseases. This profile captures symptomatic conditions with temporal characteristics, complementing the HPO Assessment Observation profile. 
+
+This profile describes symptom-based conditions in the context of rare diseases. It records symptomatic conditions with temporal characteristics and complements the HPO assessment observation profile.
+
+### Examples of coded symptoms
+
+Different coding systems can be used when recording symptoms of rare diseases:
+
+#### ICD-10-GM codes
+
+* **R04.0** (epistaxis/nosebleed) — a common symptom in von Willebrand syndrome
+* **S42.3** (fracture of the humeral shaft) — a typical pathological fracture in osteogenesis imperfecta
+
+#### SNOMED CT codes for laboratory abnormalities
+
+* **409675001** (Partial thromboplastin time increased) — prolonged PTT in coagulation disorders
+* **166627004** (Serum alkaline phosphatase above reference range) — elevated alkaline phosphatase in bone metabolism disorders
+* **1153490002** (Serum creatine kinase above reference range) — elevated CK in muscular dystrophies
+
+#### HPO codes for physical phenotypes
+
+HPO is ideal for the precise description of physical/phenotypic abnormalities:
+
+* **HP:0000978** (Bruising susceptibility) — tendency to hematomas in von Willebrand syndrome
+* **HP:0002659** (Increased susceptibility to fractures) — fracture tendency in osteogenesis imperfecta
+* **HP:0000939** (Osteoporosis) — in various skeletal dysplasias
+* **HP:0003198** (Myopathy) — in muscular dystrophies
+* **HP:0001270** (Motor delay) — delayed motor development in neuromuscular diseases
+
+#### MONDO codes (secondary harmonization ontology)
+
+> **Note:** MONDO is a **secondary harmonization ontology** for improving international interoperability. Primary coding continues to use ICD-10-GM, SNOMED CT or HPO. MONDO codes can be added **optionally**.
+
+MONDO (Monarch Disease Ontology) harmonizes different classifications (SNOMED CT, Orphanet, OMIM, ICD) and enables integration with international standards such as [Phenopackets](https://phenopacket-schema.readthedocs.io/) and GA4GH:
+
+* **MONDO:0007947** (Marfan syndrome) — corresponds to Orpha:558, OMIM:154700
+* **MONDO:0001516** (spinal muscular atrophy) — corresponds to Orpha:70
+* **MONDO:0009061** (cystic fibrosis) — corresponds to Orpha:586, OMIM:219700
+
+Further information on MONDO can be found under [Terminologies](code-systems.md).
+
+-------
+
+### Usage
+
+The symptom condition profile is used for:
+
+* Documenting symptoms as independent conditions
+* Recording symptom courses over time
+* Linking with HPO-coded observations
+* Representing symptom clusters in rare diseases
+
+### Demarcation from other profiles
+
+| | |
+| :--- | :--- |
+| **Symptom condition** | Symptoms as independent conditions with a course |
+| **HPO assessment** | Individual phenotypic observations |
+| **Clinical diagnosis** | Confirmed clinical diagnoses |
+| **Genetic diagnosis** | Genetically confirmed diagnoses |
+
+> **Important:** The distinction between the **symptom condition** and the **HPO observation** is clinically significant:
+* **Symptom condition**: documents a **persistent state** over a period (e.g. "the patient has had arachnodactyly since childhood")
+* **HPO observation**: documents a **single examination/assessment** at a specific point in time (e.g. "arachnodactyly was observed on 2024-03-15")
+
+A complete example of this distinction can be found in the **Marfan syndrome example**: [Marfan example](marfan-example-annotations.md)
+
+-------
+
+**Search parameters**
+
+The following search parameters are relevant for the Rare Diseases module, also in combination:
+
+1. The search parameter `_id` MUST be supported:Examples:`GET [base]/Condition?_id=1234`Usage notes: Further information on searching for "_id" can be found in the [FHIR base specification, section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "_profile" MUST be supported:Examples:`GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition`Usage notes: Further information on searching for "_profile" can be found in the [FHIR base specification, section "token"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "category" MUST be supported:Examples:`GET [base]/Condition?category=http://snomed.info/sct|418799008`Usage notes: Further information on searching for "category" can be found in the FHIR base specification, section "token".
+1. The search parameter "code" MUST be supported:Examples:`GET [base]/Condition?code=http://hpo.jax.org/app/|HP:0001324`Usage notes: Further information on searching for "code" can be found in the FHIR base specification, section "token".
+1. The search parameter "subject" MUST be supported:Examples:`GET [base]/Condition?subject=Patient/example`Usage notes: Further information on searching for "subject" can be found in the FHIR base specification, section "reference".
+1. The search parameter "onset-date" MUST be supported:Examples:`GET [base]/Condition?onset-date=2024-02-08`Usage notes: Further information on searching for "onset-date" can be found in the FHIR base specification, section "date".
+1. The search parameter "severity" MUST be supported:Examples:`GET [base]/Condition?severity=http://hpo.jax.org/app/|HP:0012828`Usage notes: Further information on searching for "severity" can be found in the FHIR base specification, section "token".
+1. The search parameter "evidence" MUST be supported:Examples:`GET [base]/Condition?evidence=Observation/example`Usage notes: Further information on searching for "evidence" can be found in the FHIR base specification, section "reference".
+
+Example instances are linked in the "Examples" section of the profile page.
 
 **Usages:**
 
 * Examples for this Profile: [Condition/mii-exa-seltene-symptom-condition](Condition-mii-exa-seltene-symptom-condition.md)
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/mii-ig-seltene-erkrankungen-v2026-de|current/StructureDefinition/StructureDefinition-mii-pr-seltene-symptom-condition.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-symptom-condition.json)
 
 ### Formal Views of Profile Content
 
- [Description Differentials, Snapshots, and other representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
  
 
@@ -29,12 +120,25 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-seltene-symptom-condition",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition",
-  "version" : "2026.0.1",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Seltene_Symptom_Condition",
   "title" : "MII Profile SE Symptom Condition",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -43,6 +147,13 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
     }]
   }],
   "description" : "Profile for symptom-based conditions in the context of rare diseases. This profile captures symptomatic conditions with temporal characteristics, complementing the HPO Assessment Observation profile.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "SE-LogicalModel",
@@ -65,11 +176,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
     "name" : "HL7 v2 Mapping"
   },
   {
-    "identity" : "rim",
-    "uri" : "http://hl7.org/v3",
-    "name" : "RIM Mapping"
-  },
-  {
     "identity" : "w5",
     "uri" : "http://hl7.org/fhir/fivews",
     "name" : "FiveWs Pattern Mapping"
@@ -90,7 +196,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "path" : "Condition",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "Phänotypisierung als Condition"
       }]
     },
@@ -149,7 +255,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom",
         "comment" : "Schweregrad/Verlauf"
       }]
     },
@@ -193,7 +299,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
         "comment" : "HPO-Term des Symptoms"
       }]
     },
@@ -226,7 +332,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "SNOMED CT Symptom"
       }]
     },
@@ -259,7 +365,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "ICD-10-GM Symptom"
       }]
     },
@@ -292,7 +398,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "MONDO Symptom (internationale Interoperabilität)"
       }]
     },
@@ -330,7 +436,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Patient",
+        "map" : "persoenlicheInfosIndexpatient",
         "comment" : "Patient/Indexpatient"
       }]
     },
@@ -340,7 +446,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Untersuchungskontakt"
       }]
     },
@@ -370,7 +476,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
         "comment" : "Startdatum des Symptoms"
       }]
     },
@@ -389,7 +495,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "path" : "Condition.onset[x].start",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
         "comment" : "Beginn Symptomzeitraum"
       }]
     },
@@ -398,7 +504,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "path" : "Condition.onset[x].end",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
         "comment" : "Ende Symptomzeitraum"
       }]
     },
@@ -413,7 +519,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.alterSymptom",
         "comment" : "Alter bei Symptombeginn"
       }]
     },
@@ -428,7 +534,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase",
         "comment" : "Lebensphase Symptom"
       }]
     },
@@ -468,7 +574,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Dokumentationsdatum"
       }]
     },
@@ -510,7 +616,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
         "comment" : "Unterstützende HPO-Symptome"
       }]
     },
@@ -526,7 +632,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "Verweis auf Beobachtungen"
       }]
     },

@@ -3,15 +3,28 @@
   "id" : "mii-vs-seltene-penetrance",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-seltene-penetrance</b></p><a name=\"mii-vs-seltene-penetrance\"> </a><a name=\"hcmii-vs-seltene-penetrance\"> </a><ul><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-HPO.html\"><code>http://human-phenotype-ontology.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>HP:0003829</td><td>Incomplete penetrance</td></tr><tr><td>HP:0003828</td><td>Variable penetrance</td></tr><tr><td>HP:0025169</td><td>Complete penetrance</td></tr><tr><td>HP:0003831</td><td>Age-dependent penetrance</td></tr></table></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-seltene-penetrance</b></p><a name=\"mii-vs-seltene-penetrance\"> </a><a name=\"hcmii-vs-seltene-penetrance\"> </a><ul><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-HPO.html\"><code>http://human-phenotype-ontology.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>HP:0034950</td><td>Typified by complete penetrance</td></tr><tr><td>HP:0003829</td><td>Typified by incomplete penetrance</td></tr><tr><td>HP:4000158</td><td>Typified by high penetrance</td></tr><tr><td>HP:4000159</td><td>Typified by moderate penetrance</td></tr><tr><td>HP:4000160</td><td>Typified by low penetrance</td></tr><tr><td>HP:0003831</td><td>Typified by age-related disease onset</td></tr></table></li></ul></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-seltene-penetrance</b></p><a name=\"de-mii-vs-seltene-penetrance\"> </a><a name=\"de-hcmii-vs-seltene-penetrance\"> </a><ul><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-HPO.html\"><code>http://human-phenotype-ontology.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>HP:0034950</td><td>Typified by complete penetrance</td></tr><tr><td>HP:0003829</td><td>Typified by incomplete penetrance</td></tr><tr><td>HP:4000158</td><td>Typified by high penetrance</td></tr><tr><td>HP:4000159</td><td>Typified by moderate penetrance</td></tr><tr><td>HP:4000160</td><td>Typified by low penetrance</td></tr><tr><td>HP:0003831</td><td>Typified by age-related disease onset</td></tr></table></li></ul></div></div>"
   },
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-penetrance",
-  "version" : "2026.0.1",
-  "name" : "PenetranceValueSet",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Seltene_Penetrance",
   "title" : "MII VS SE Penetrance",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -19,25 +32,40 @@
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Value set for qualitative descriptions of genetic penetrance",
+  "description" : "Value set for qualitative descriptions of genetic penetrance, drawn from the HPO branch Inheritance qualifier (HP:0034335). Note that the graded terms (high/moderate/low penetrance) are subtypes of incomplete penetrance, not alternatives to complete penetrance.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "compose" : {
     "include" : [{
       "system" : "http://human-phenotype-ontology.org",
       "concept" : [{
+        "code" : "HP:0034950",
+        "display" : "Typified by complete penetrance"
+      },
+      {
         "code" : "HP:0003829",
-        "display" : "Incomplete penetrance"
+        "display" : "Typified by incomplete penetrance"
       },
       {
-        "code" : "HP:0003828",
-        "display" : "Variable penetrance"
+        "code" : "HP:4000158",
+        "display" : "Typified by high penetrance"
       },
       {
-        "code" : "HP:0025169",
-        "display" : "Complete penetrance"
+        "code" : "HP:4000159",
+        "display" : "Typified by moderate penetrance"
+      },
+      {
+        "code" : "HP:4000160",
+        "display" : "Typified by low penetrance"
       },
       {
         "code" : "HP:0003831",
-        "display" : "Age-dependent penetrance"
+        "display" : "Typified by age-related disease onset"
       }]
     }]
   }

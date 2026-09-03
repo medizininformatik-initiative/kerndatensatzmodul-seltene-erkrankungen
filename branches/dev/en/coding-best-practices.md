@@ -1,73 +1,75 @@
-# Kodier-Empfehlungen - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# Coding Best Practices - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
-## Kodier-Empfehlungen
+* [**Table of Contents**](toc.md)
+* [**Guidance**](guidance.md)
+* **Coding Best Practices**
 
-# Best Practices für Kodierung bei Seltenen Erkrankungen
+## Coding Best Practices
 
-## Vermeidung von Redundanz
+### Avoiding redundancy
 
-### Problem
+#### Problem
 
-Nicht alle Diagnosen benötigen alle verfügbaren Kodiersysteme. Eine übermäßige Mehrfachkodierung kann zu:
+Not every diagnosis needs every available coding system. Excessive multiple coding can lead to:
 
-* Redundanz und Datenaufblähung führen
-* Inkonsistenzen zwischen verschiedenen Kodiersystemen verursachen
-* Die Wartbarkeit erschweren
+* Redundancy and data bloat
+* Inconsistencies between different coding systems
+* Reduced maintainability
 
-### Lösung: Gezielte Kodierung
+#### Solution: targeted coding
 
-## Empfohlene Kodierungsstrategie
+### Recommended coding strategy
 
-### 1. Primäre Kodiersysteme nach Diagnosetyp
+#### 1. Primary coding systems by diagnosis type
 
-#### Für KLINISCHE Diagnosen
+##### For CLINICAL diagnoses
 
-* **ICD-10-GM:** Pflicht (Abrechnung/Statistik im deutschen Gesundheitswesen)
-* **Orpha-Codes:** Pflicht für seltene Erkrankungen
-* **HPO-Codes:** Empfohlen für phänotypische Beschreibung
+* **ICD-10-GM:** mandatory (billing/statistics in the German healthcare system)
+* **Orpha codes:** mandatory for rare diseases
+* **HPO codes:** recommended for phenotypic description
 
-#### Für GENETISCHE Diagnosen
+##### For GENETIC diagnoses
 
-* **Orpha-Codes:** Pflicht für seltene Erkrankungen
-* **OMIM-Codes:** Stark empfohlen für genetische Entitäten
-* **ICD-10-GM:** Optional (oft unspezifisch für genetische Varianten)
+* **Orpha codes:** mandatory for rare diseases
+* **OMIM codes:** strongly recommended for genetic entities
+* **ICD-10-GM:** optional (often unspecific for genetic variants)
 
-### 2. Kontextabhängige Kodiersysteme
+#### 2. Context-dependent coding systems
 
-#### HPO-Codes
+##### HPO codes
 
-* **Verwenden bei:** Klinischen Diagnosen (`MII_PR_SE_ClinicalDiagnosis`)
-* **Zweck:** Phänotypische Beschreibung
-* **Optional bei:** Genetischen Diagnosen (wenn Phänotyp relevant)
+* **Use for:** clinical diagnoses (`MII_PR_SE_ClinicalDiagnosis`)
+* **Purpose:** phenotypic description
+* **Optional for:** genetic diagnoses (if the phenotype is relevant)
 
-#### OMIM-Codes
+##### OMIM codes
 
-* **Verwenden bei:** Genetischen Diagnosen (`MII_PR_SE_GeneticDiagnosis`)
-* **Zweck:** Genetische Krankheitsentität
-* **Nicht verwenden bei:** Rein klinischen Diagnosen ohne genetische Bestätigung
+* **Use for:** genetic diagnoses (`MII_PR_SE_GeneticDiagnosis`)
+* **Purpose:** genetic disease entity
+* **Do not use for:** purely clinical diagnoses without genetic confirmation
 
-#### SNOMED CT
+##### SNOMED CT
 
-* **Verwenden wenn:** 
-* Keine spezifischere Kodierung verfügbar
-* Internationale Interoperabilität erforderlich
-* Komplexe klinische Konzepte abgebildet werden müssen
+* **Use when:** 
+* No more specific coding is available
+* International interoperability is required
+* Complex clinical concepts need to be represented
  
-* **Vermeiden wenn:** Orpha/OMIM ausreichend
+* **Avoid when:** Orpha/OMIM are sufficient
 
-## Entscheidungsmatrix
+### Decision matrix
 
 | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Klinische SE-Diagnose | ✅ Pflicht | ✅ Pflicht | ✅ Empfohlen | ❌ Nicht verwenden | ⚠️ Optional |
-| Genetische SE-Diagnose | ⚠️ Optional | ✅ Pflicht | ⚠️ Optional | ✅ Stark empfohlen | ⚠️ Optional |
-| Verdachtsdiagnose | ✅ Pflicht | ⚠️ Wenn möglich | ✅ Für Symptome | ❌ Nicht verwenden | ⚠️ Optional |
+| Clinical RD diagnosis | ✅ Mandatory | ✅ Mandatory | ✅ Recommended | ❌ Do not use | ⚠️ Optional |
+| Genetic RD diagnosis | ⚠️ Optional | ✅ Mandatory | ⚠️ Optional | ✅ Strongly recommended | ⚠️ Optional |
+| Suspected diagnosis | ✅ Mandatory | ⚠️ If possible | ✅ For symptoms | ❌ Do not use | ⚠️ Optional |
 
-## Praktische Beispiele
+### Practical examples
 
-### ✅ RICHTIG: Fokussierte Kodierung
+#### ✅ CORRECT: focused coding
 
-#### Klinische Diagnose (ICD-10-GM erforderlich)
+##### Clinical diagnosis (ICD-10-GM required)
 
 ```
 Instance: marfan-clinical-focused
@@ -75,23 +77,23 @@ InstanceOf: MII_PR_SE_ClinicalDiagnosis
 * code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
 * code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
 * code.coding[omim] = http://omim.org#154700 "Marfan syndrome"
-// OMIM für genetische Kodierung verwendet
+// OMIM used for genetic coding
 
 ```
 
-#### Genetische Diagnose (ICD-10-GM optional)
+##### Genetic diagnosis (ICD-10-GM optional)
 
 ```
 Instance: sma-genetic-focused
 InstanceOf: MII_PR_SE_GeneticDiagnosis
 * code.coding[orphanet] = http://www.orpha.net#83330 "SMA type 1"
 * code.coding[omim] = http://omim.org#253300 "Spinal muscular atrophy, type I"
-// ICD-10-GM kann weggelassen werden bei rein genetischer Diagnose
-// HPO optional, nur wenn Phänotyp dokumentiert werden soll
+// ICD-10-GM can be omitted for a purely genetic diagnosis
+// HPO optional, only if the phenotype is to be documented
 
 ```
 
-#### Genetische Diagnose mit ICD-10 (wenn klinisch relevant)
+##### Genetic diagnosis with ICD-10 (if clinically relevant)
 
 ```
 Instance: cf-genetic-with-clinical
@@ -99,11 +101,11 @@ InstanceOf: MII_PR_SE_GeneticDiagnosis
 * code.coding[icd10-gm] = $ICD10GM#E84.0 "Zystische Fibrose mit Lungenmanifestationen"
 * code.coding[orphanet] = http://www.orpha.net#586 "Cystic fibrosis"
 * code.coding[omim] = http://omim.org#219700 "Cystic fibrosis"
-// ICD-10 hier sinnvoll, da klinische Manifestation spezifiziert
+// ICD-10 useful here because the clinical manifestation is specified
 
 ```
 
-### ❌ FALSCH: Übermäßige Kodierung
+#### ❌ WRONG: excessive coding
 
 ```
 Instance: overencoded-diagnosis
@@ -114,140 +116,140 @@ InstanceOf: Condition
 * code.coding[3] = http://omim.org#154700 "Marfan syndrome"
 * code.coding[4] = $UMLS#C0024796 "Marfan Syndrome"
 * code.coding[5] = $MeSH#D008382 "Marfan Syndrome"
-// Zu viele redundante Codes!
+// Too many redundant codes!
 
 ```
 
-## Spezielle Szenarien
+### Special scenarios
 
-### Diagnose-Progression
+#### Diagnosis progression
 
-Bei der Modellierung von Diagnose-Verläufen:
+When modeling diagnostic courses:
 
-1. **Verdacht**(Screening)
-* ICD-10-GM: Pflicht
-* Orpha: Wenn spezifischer SE-Verdacht
-* HPO: Für Symptombeschreibung
-* OMIM: Nicht verwenden
+1. **Suspicion**(screening)
+* ICD-10-GM: mandatory
+* Orpha: if a specific RD is suspected
+* HPO: for symptom description
+* OMIM: do not use
 
-1. **Klinische Diagnose**
-* ICD-10-GM: Pflicht
-* Orpha: Pflicht
-* HPO: Empfohlen
-* OMIM: Nicht verwenden
+1. **Clinical diagnosis**
+* ICD-10-GM: mandatory
+* Orpha: mandatory
+* HPO: recommended
+* OMIM: do not use
 
-1. **Genetisch bestätigt**
-* ICD-10-GM: Optional (nur wenn klinisch relevant)
-* Orpha: Pflicht
-* HPO: Optional (wenn phänotypisch relevant)
-* OMIM: Stark empfohlen
+1. **Genetically confirmed**
+* ICD-10-GM: optional (only if clinically relevant)
+* Orpha: mandatory
+* HPO: optional (if phenotypically relevant)
+* OMIM: strongly recommended
 
-### Rein genetische vs. Klinisch-genetische Diagnosen
+#### Purely genetic vs. clinical-genetic diagnoses
 
-#### Rein genetische Befunde
+##### Purely genetic findings
 
 ```
-// Beispiel: Carrier-Status ohne Symptome
+// Example: carrier status without symptoms
 Instance: carrier-status-sma
 InstanceOf: MII_PR_SE_GeneticDiagnosis
 * code.coding[orphanet] = http://www.orpha.net#83330 "SMA"
 * code.coding[omim] = http://omim.org#253300 "SMA type I"
 * code.text = "Heterozygote SMN1-Mutation (Anlageträger)"
-// Kein ICD-10, da keine klinische Manifestation
+// No ICD-10, since no clinical manifestation
 
 ```
 
-#### Klinisch-genetische Diagnose
+##### Clinical-genetic diagnosis
 
 ```
-// Beispiel: Symptomatischer Patient mit genetischer Bestätigung
+// Example: symptomatic patient with genetic confirmation
 Instance: symptomatic-genetic-diagnosis
 InstanceOf: MII_PR_SE_GeneticDiagnosis
 * code.coding[icd10-gm] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie"
 * code.coding[orphanet] = http://www.orpha.net#83330 "SMA type 1"
 * code.coding[omim] = http://omim.org#253300 "SMA type I"
-// ICD-10 sinnvoll, da klinische Manifestation vorhanden
+// ICD-10 useful, since a clinical manifestation is present
 
 ```
 
-## Qualitätskriterien
+### Quality criteria
 
-### Minimale Anforderungen
+#### Minimal requirements
 
-#### Klinische Diagnose
+##### Clinical diagnosis
 
-* ICD-10-GM Code vorhanden
-* Orpha-Code für seltene Erkrankung
-* Angemessener verificationStatus
+* ICD-10-GM code present
+* Orpha code for the rare disease
+* Appropriate verificationStatus
 
-#### Genetische Diagnose
+##### Genetic diagnosis
 
-* Orpha-Code für seltene Erkrankung
-* OMIM-Code (wenn verfügbar)
-* Evidence-Link zu MolGen-Ressourcen
-* Angemessener verificationStatus (meist "confirmed")
+* Orpha code for the rare disease
+* OMIM code (if available)
+* Evidence link to MolGen resources
+* Appropriate verificationStatus (usually "confirmed")
 
-### Optimale Kodierung
+#### Optimal coding
 
-* Keine redundanten Codes
-* Kontextgerechte Verwendung von HPO/OMIM
-* Klare Trennung zwischen klinischer und genetischer Diagnose
-* Evidence-Verlinkung passend zum Diagnosetyp
+* No redundant codes
+* Context-appropriate use of HPO/OMIM
+* Clear separation between clinical and genetic diagnosis
+* Evidence linking appropriate to the diagnosis type
 
-## Wann ICD-10-GM bei genetischen Diagnosen verwenden?
+### When to use ICD-10-GM for genetic diagnoses?
 
-### ✅ ICD-10-GM sinnvoll bei:
+#### ✅ ICD-10-GM useful for:
 
-* Symptomatischen Patienten
-* Klinisch manifesten Erkrankungen
-* Wenn spezifische klinische Subtypen kodiert werden (z.B. CF mit Lungenmanifestationen)
-* Abrechnungsrelevanten Diagnosen
+* Symptomatic patients
+* Clinically manifest diseases
+* When specific clinical subtypes are coded (e.g. CF with pulmonary manifestations)
+* Diagnoses relevant to billing
 
-### ❌ ICD-10-GM weglassen bei:
+#### ❌ Omit ICD-10-GM for:
 
-* Reinen Anlageträgern ohne Symptome
-* Prädiktiven genetischen Tests
-* Genetischen Varianten unklarer Signifikanz (VUS)
-* Wenn ICD-10 keine adäquate Spezifität bietet
+* Pure carriers without symptoms
+* Predictive genetic tests
+* Genetic variants of unclear significance (VUS)
+* When ICD-10 offers no adequate specificity
 
-## Wichtiger Hinweis: Ausgeschlossene Diagnosen
+### Important note: excluded diagnoses
 
-### ⚠️ PFLICHT: Dokumentation ausgeschlossener Diagnosen
+#### ⚠️ MANDATORY: documentation of excluded diagnoses
 
-**Ausgeschlossene Diagnosen (refuted) MÜSSEN ebenfalls kodiert und dokumentiert werden!**
+**Excluded diagnoses (refuted) MUST also be coded and documented!**
 
-Dies gilt insbesondere für:
+This applies in particular to:
 
-* Verdachtsdiagnosen, die widerlegt wurden
-* Differentialdiagnosen, die ausgeschlossen wurden
-* Negative genetische Testergebnisse für vermutete Erkrankungen
+* Suspected diagnoses that were refuted
+* Differential diagnoses that were excluded
+* Negative genetic test results for suspected diseases
 
-#### Kodierung ausgeschlossener Diagnosen
+##### Coding excluded diagnoses
 
 ```
 * verificationStatus = #refuted
 * clinicalStatus = #inactive
-* code.coding[orphanet] = // Orpha-Code der ausgeschlossenen Erkrankung
-* note.text = // Begründung des Ausschlusses
+* code.coding[orphanet] = // Orpha code of the excluded disease
+* note.text = // justification of the exclusion
 
 ```
 
-#### Warum ist das wichtig?
+##### Why is this important?
 
-* **Vermeidung redundanter Diagnostik**: Bereits durchgeführte Tests nicht wiederholen
-* **Vollständige Dokumentation**: Diagnostischer Prozess nachvollziehbar
-* **Forschung**: Wichtig für Epidemiologie und Differentialdiagnostik
-* **Patientensicherheit**: Verhindert unnötige Untersuchungen
+* **Avoiding redundant diagnostics**: tests already performed are not repeated
+* **Complete documentation**: the diagnostic process remains traceable
+* **Research**: important for epidemiology and differential diagnostics
+* **Patient safety**: prevents unnecessary examinations
 
-## Zusammenfassung
+### Summary
 
-**Grundprinzip:** So viel wie nötig, so wenig wie möglich
+**Basic principle:** as much as necessary, as little as possible
 
-1. **Klinische Diagnose:**ICD-10-GM + Orpha + HPO
-1. **Genetische Diagnose:**Orpha + OMIM (ICD-10-GM nur wenn klinisch relevant)
-1. **Ausgeschlossene Diagnose:**Gleiche Kodierung + verificationStatus = refuted
-1. **SNOMED CT:**Nur wenn Mehrwert vorhanden
-1. **Andere Systeme:**Nur in begründeten Ausnahmefällen
+1. **Clinical diagnosis:**ICD-10-GM + Orpha + HPO
+1. **Genetic diagnosis:**Orpha + OMIM (ICD-10-GM only if clinically relevant)
+1. **Excluded diagnosis:**same coding + verificationStatus = refuted
+1. **SNOMED CT:**only if it adds value
+1. **Other systems:**only in justified exceptional cases
 
-Die Wahl der Kodiersysteme sollte den Kontext der Diagnose (klinisch vs. genetisch) und den Verwendungszweck (Abrechnung, Forschung, Registrierung) berücksichtigen.
+The choice of coding systems should take into account the context of the diagnosis (clinical vs. genetic) and the purpose (billing, research, registration).
 

@@ -1,14 +1,24 @@
-# mii-exa-seltene-familienanamnese - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# mii-exa-seltene-familienanamnese - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **mii-exa-seltene-familienanamnese**
 
 ## Example FamilyMemberHistory: mii-exa-seltene-familienanamnese
 
-Profile: [MII PR SE Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md) version: 2026.0.1
+-------
 
-**VonSEBetroffen**: Yes
+**English**
+
+-------
+
+Profile: [MII PR SE Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md) version: 2027.0.0-ballot.rc1
+
+**MII_EX_Seltene_VonSEBetroffen**: Yes
 
 **status**: Completed
 
-**patient**: [Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-example.md)
+**patient**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **relationship**: Natural mother
 
@@ -35,10 +45,10 @@ Profile: [MII PR SE Familienanamnese](StructureDefinition-mii-pr-seltene-familie
   "resourceType" : "FamilyMemberHistory",
   "id" : "mii-exa-seltene-familienanamnese",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese|2027.0.0-ballot.rc1"]
   },
   "extension" : [{
-    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/von-seltene-betroffen",
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-von-se-betroffen",
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://snomed.info/sct",
@@ -49,7 +59,7 @@ Profile: [MII PR SE Familienanamnese](StructureDefinition-mii-pr-seltene-familie
   }],
   "status" : "completed",
   "patient" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "relationship" : {
     "coding" : [{

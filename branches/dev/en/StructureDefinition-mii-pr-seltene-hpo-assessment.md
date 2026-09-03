@@ -1,20 +1,207 @@
-# MII Profile SE HPO Assessment - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# MII Profile SE HPO Assessment - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII Profile SE HPO Assessment**
 
 ## Resource Profile: MII Profile SE HPO Assessment 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Seltene_HPO_Assessment |
 
  
 Profile for HPO-based phenotypic observations in the context of rare diseases. This profile uses the Human Phenotype Ontology (HPO) to describe clinical symptoms and phenotypic abnormalities. 
 
+This profile describes phenotyping according to the Human Phenotype Ontology (HPO) in the diagnostics of rare diseases. It enables the structured recording of phenotypic abnormalities and clinical features.
+
+### HL7 Phenomics IG pattern
+
+This profile follows the **HL7 Phenomics Exchange Implementation Guide** pattern for documenting phenotypic features. This means:
+
+* **`value[x]` is not used** — instead, status and severity are recorded in `component` elements
+* **`component[status]`** documents whether the phenotype is present (Present) or explicitly excluded (Absent)
+* **`component[severity]`** allows specifying a severity (Mild, Moderate, Severe, Profound, Borderline)
+
+This pattern enables more precise and internationally interoperable documentation of phenotypic findings.
+
+### Point-in-time documentation
+
+**Important:** Each HPO observation represents a **specific point in time** of the phenotype assessment. Since phenotypes can change over the course of a disease, it is essential to:
+
+* Document **individual observations** with precise timestamps (`effectiveDateTime`)
+* Record **changes over time** via the `component[status].interpretation` element
+* Consider **parallel documentation** both as an Observation (point in time) and as a symptom condition (period)
+
+**Note on date recording:** The date (`effectiveDateTime`) is **not** part of the core data sets but **SHOULD** be recorded whenever possible to ensure the temporal traceability of the phenotype development.
+
+This point-in-time recording enables the traceability of disease progression and therapy effects in rare diseases.
+
+### Demarcation from the symptom condition
+
+> **Important:** The distinction between the **HPO observation** and the **symptom condition** is clinically significant:
+* **HPO observation**: documents a **single examination/assessment** at a specific point in time (e.g. "arachnodactyly was observed on 2024-03-15")
+* **Symptom condition**: documents a **persistent state** over a period (e.g. "the patient has had arachnodactyly since childhood")
+
+A complete example of this distinction can be found in the **Marfan syndrome example**: [Marfan example](marfan-example-annotations.md)
+
+There it is shown how:
+
+* Individual HPO observations are recorded at different examination appointments
+* These observations serve as evidence for persistent symptom conditions
+* Multiple confirmations of the same phenotype increase diagnostic certainty
+
+### Linking with evidence
+
+The `derivedFrom` element enables linking the HPO observation with concrete clinical findings:
+
+* **Laboratory values**: reference to abnormal laboratory results (e.g. elevated CK values in muscular dystrophy)
+* **Imaging**: reference to radiological or other imaging findings
+* **Other observations**: linking with further clinical assessments
+
+This referencing creates transparency about the basis of the phenotypic assessment.
+
+### Phenotype status (Present/Absent)
+
+The `component[status]` element documents whether a phenotype is present or explicitly excluded. This enables the precise documentation of "negative" findings (the phenotype was checked and is not present).
+
+```
+{
+  "component": [{
+    "code": {
+      "coding": [{
+        "system": "http://snomed.info/sct",
+        "code": "260411009",
+        "display": "Presence findings"
+      }]
+    },
+    "valueCodeableConcept": {
+      "coding": [{
+        "system": "http://loinc.org",
+        "code": "LA9633-4",
+        "display": "Present"
+      }]
+    }
+  }]
+}
+
+```
+
+#### Available status codes
+
+| | | |
+| :--- | :--- | :--- |
+| LA9633-4 | Present | The phenotype is present |
+| LA9634-2 | Absent | The phenotype is explicitly excluded |
+
+### Severity
+
+The optional `component[severity]` element enables documenting the severity of a phenotype according to the HPO severity ontology:
+
+```
+{
+  "component": [{
+    "code": {
+      "coding": [{
+        "system": "http://purl.obolibrary.org/obo/hp.owl",
+        "code": "HP:0012824",
+        "display": "Severity"
+      }]
+    },
+    "valueCodeableConcept": {
+      "coding": [{
+        "system": "http://purl.obolibrary.org/obo/hp.owl",
+        "code": "HP:0012826",
+        "display": "Moderate"
+      }]
+    }
+  }]
+}
+
+```
+
+#### Available severity codes
+
+| | | |
+| :--- | :--- | :--- |
+| HP:0012825 | Mild | Mild manifestation |
+| HP:0012826 | Moderate | Moderate manifestation |
+| HP:0012828 | Severe | Severe manifestation |
+| HP:0012829 | Profound | Very severe manifestation |
+| HP:0012827 | Borderline | Borderline manifestation |
+
+### Change status of HPO phenotypes
+
+In accordance with the requirements of the Model Project Genome Sequencing, this profile supports the documentation of changes in HPO phenotypes over time. The change status is documented in the `component[status].interpretation` element, together with the presence status:
+
+```
+{
+  "component": [{
+    "code": {
+      "coding": [{
+        "system": "http://snomed.info/sct",
+        "code": "260411009",
+        "display": "Presence findings"
+      }]
+    },
+    "valueCodeableConcept": {
+      "coding": [{
+        "system": "http://loinc.org",
+        "code": "LA9633-4",
+        "display": "Present"
+      }]
+    },
+    "interpretation": [{
+      "coding": [{
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status",
+        "code": "improved",
+        "display": "Verbessert"
+      }]
+    }]
+  }]
+}
+
+```
+
+#### Available change status codes
+
+| | | |
+| :--- | :--- | :--- |
+| newly-added | Newly added | The phenotype was newly observed/diagnosed |
+| improved | Improved | The phenotype has improved |
+| degraded | Degraded | The phenotype has worsened |
+| no-longer-observed | No longer observed | The phenotype is no longer observed/has disappeared |
+| unchanged | Unchanged | The phenotype has remained unchanged |
+
+-------
+
+**Search parameters**
+
+The following search parameters are relevant for the Rare Diseases module, also in combination:
+
+1. The search parameter `_id` MUST be supported:Examples:`GET [base]/Observation?_id=1234`Usage notes: Further information on searching for "_id" can be found in the [FHIR base specification, section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "_profile" MUST be supported:Examples:`GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment`Usage notes: Further information on searching for "_profile" can be found in the [FHIR base specification, section "token"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "category" MUST be supported:Examples:`GET [base]/Observation?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory`Usage notes: Further information on searching for "category" can be found in the FHIR base specification, section "token".
+1. The search parameter "code" MUST be supported:Examples:`GET [base]/Observation?code=http://loinc.org|79716-7`Usage notes: Further information on searching for "code" can be found in the FHIR base specification, section "token".
+1. The search parameter "subject" MUST be supported:Examples:`GET [base]/Observation?subject=Patient/example`Usage notes: Further information on searching for "subject" can be found in the FHIR base specification, section "reference".
+1. The search parameter "focus" MUST be supported:Examples:`GET [base]/Observation?focus=Condition/example`Usage notes: Further information on searching for "focus" can be found in the FHIR base specification, section "reference".
+1. The search parameter "encounter" MUST be supported:Examples:`GET [base]/Observation?encounter=Encounter/example`Usage notes: Further information on searching for "encounter" can be found in the FHIR base specification, section "reference".
+1. The search parameter "date" MUST be supported:Examples:`GET [base]/Observation?date=2024-02-08`Usage notes: Further information on searching for "date" can be found in the FHIR base specification, section "date".
+1. The search parameter "derived-from" MUST be supported:Examples:`GET [base]/Observation?derived-from=Observation/example`Usage notes: Further information on searching for "derived-from" can be found in the FHIR base specification, section "reference".
+
+Example instances are linked in the "Examples" section of the profile page.
+
 **Usages:**
 
-* Examples for this Profile: [Observation/anteverted-nares](Observation-anteverted-nares.md), [Observation/aortic-root-dilatation](Observation-aortic-root-dilatation.md), [Observation/arachnodactyly](Observation-arachnodactyly.md), [Observation/chronic-diarrhea](Observation-chronic-diarrhea.md)... Show 11 more, [Observation/failure-to-thrive](Observation-failure-to-thrive.md), [Observation/hypertelorism](Observation-hypertelorism.md), [Observation/lens-dislocation](Observation-lens-dislocation.md), [Observation/lymphedema](Observation-lymphedema.md), [Observation/mii-exa-seltene-hpo-assessment-change-status](Observation-mii-exa-seltene-hpo-assessment-change-status.md), [Observation/mii-exa-seltene-hpo-assessment-excluded](Observation-mii-exa-seltene-hpo-assessment-excluded.md), [Observation/mii-exa-seltene-hpo-assessment-severity](Observation-mii-exa-seltene-hpo-assessment-severity.md), [Observation/mii-exa-seltene-hpo-assessment](Observation-mii-exa-seltene-hpo-assessment.md), [Observation/recurrent-respiratory-infections](Observation-recurrent-respiratory-infections.md), [Observation/tall-stature](Observation-tall-stature.md) and [Observation/vsd](Observation-vsd.md)
+* Examples for this Profile: [Observation/mii-exa-seltene-anteverted-nares](Observation-mii-exa-seltene-anteverted-nares.md), [Observation/mii-exa-seltene-aortic-root-dilatation](Observation-mii-exa-seltene-aortic-root-dilatation.md), [Observation/mii-exa-seltene-arachnodactyly](Observation-mii-exa-seltene-arachnodactyly.md), [Observation/mii-exa-seltene-beighton-score-low](Observation-mii-exa-seltene-beighton-score-low.md)... Show 13 more, [Observation/mii-exa-seltene-chronic-diarrhea](Observation-mii-exa-seltene-chronic-diarrhea.md), [Observation/mii-exa-seltene-failure-to-thrive](Observation-mii-exa-seltene-failure-to-thrive.md), [Observation/mii-exa-seltene-hpo-assessment-change-status](Observation-mii-exa-seltene-hpo-assessment-change-status.md), [Observation/mii-exa-seltene-hpo-assessment-excluded](Observation-mii-exa-seltene-hpo-assessment-excluded.md), [Observation/mii-exa-seltene-hpo-assessment-severity](Observation-mii-exa-seltene-hpo-assessment-severity.md), [Observation/mii-exa-seltene-hpo-assessment](Observation-mii-exa-seltene-hpo-assessment.md), [Observation/mii-exa-seltene-hypertelorism](Observation-mii-exa-seltene-hypertelorism.md), [Observation/mii-exa-seltene-lens-dislocation](Observation-mii-exa-seltene-lens-dislocation.md), [Observation/mii-exa-seltene-lens-examination-normal](Observation-mii-exa-seltene-lens-examination-normal.md), [Observation/mii-exa-seltene-lymphedema](Observation-mii-exa-seltene-lymphedema.md), [Observation/mii-exa-seltene-recurrent-respiratory-infections](Observation-mii-exa-seltene-recurrent-respiratory-infections.md), [Observation/mii-exa-seltene-tall-stature](Observation-mii-exa-seltene-tall-stature.md) and [Observation/mii-exa-seltene-vsd](Observation-mii-exa-seltene-vsd.md)
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/mii-ig-seltene-erkrankungen-v2026-de|current/StructureDefinition/StructureDefinition-mii-pr-seltene-hpo-assessment.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-hpo-assessment.json)
 
 ### Formal Views of Profile Content
 
- [Description Differentials, Snapshots, and other representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
  
 
@@ -29,12 +216,25 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-seltene-hpo-assessment",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment",
-  "version" : "2026.0.1",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Seltene_HPO_Assessment",
   "title" : "MII Profile SE HPO Assessment",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -43,6 +243,13 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
     }]
   }],
   "description" : "Profile for HPO-based phenotypic observations in the context of rare diseases. This profile uses the Human Phenotype Ontology (HPO) to describe clinical symptoms and phenotypic abnormalities.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "SE-LogicalModel",
@@ -65,11 +272,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
     "name" : "HL7 v2 Mapping"
   },
   {
-    "identity" : "rim",
-    "uri" : "http://hl7.org/v3",
-    "name" : "RIM Mapping"
-  },
-  {
     "identity" : "w5",
     "uri" : "http://hl7.org/fhir/fivews",
     "name" : "FiveWs Pattern Mapping"
@@ -90,7 +292,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
       "path" : "Observation",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung",
         "comment" : "Phänotypisierung"
       }]
     },
@@ -111,7 +313,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
         "comment" : "HPO-Term des Symptoms"
       }]
     },
@@ -120,7 +322,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
       "path" : "Observation.code.coding.version",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOVersion",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoVersion",
         "comment" : "Version HPO-Term"
       }]
     },
@@ -136,7 +338,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Patient",
+        "map" : "persoenlicheInfosIndexpatient",
         "comment" : "Patient/Indexpatient"
       }]
     },
@@ -147,7 +349,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Untersuchungsdatum"
       }]
     },
@@ -182,7 +384,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
         "comment" : "Startdatum des Symptoms"
       }]
     },
@@ -201,7 +403,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
       "path" : "Observation.effective[x].start",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
         "comment" : "Startdatum des Symptoms"
       }]
     },
@@ -210,7 +412,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
       "path" : "Observation.effective[x].end",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
         "comment" : "Enddatum des Symptoms"
       }]
     },
@@ -248,7 +450,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.MethodeDiagnosestellung",
+        "map" : "anamneseUndDiagnostik.methodeDiagnosestellung",
         "comment" : "Methode der Diagnosestellung"
       }]
     },
@@ -312,12 +514,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoExcluded",
         "comment" : "HPO-Term ausgeschlossen (true wenn LA9634-2 'Absent', false wenn LA9633-4 'Present')"
       },
       {
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoStatus",
         "comment" : "Status HPO-Term (Present/Absent)"
       }]
     },
@@ -333,7 +535,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom",
         "comment" : "Verlauf Symptom"
       }]
     },
@@ -342,7 +544,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
       "path" : "Observation.component.interpretation.coding.code",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoStatus",
         "comment" : "Change Status"
       }]
     },
@@ -382,7 +584,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hp
       },
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.hpoStatus",
         "comment" : "Schweregrad (Mild/Moderate/Severe/Profound/Borderline)"
       }]
     }]

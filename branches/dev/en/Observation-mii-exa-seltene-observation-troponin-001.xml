@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-seltene-observation-troponin-001"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-seltene-observation-troponin-001</b></p><a name="mii-exa-seltene-observation-troponin-001"> </a><a name="hcmii-exa-seltene-observation-troponin-001"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 6598-7}">Troponin T.cardiac [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-07-22</p><p><b>value</b>: 92 ng/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeng/L = 'ng/L')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="6598-7"/>
+      <display value="Troponin T.cardiac [Mass/volume] in Serum or Plasma"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-seltene-patient-sma-001"/>
+  </subject>
+  <effectiveDateTime value="2024-07-22"/>
+  <valueQuantity>
+    <value value="92"/>
+    <unit value="ng/L"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="ng/L"/>
+  </valueQuantity>
+  <interpretation>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+      <code value="H"/>
+      <display value="High"/>
+    </coding>
+  </interpretation>
+</Observation>

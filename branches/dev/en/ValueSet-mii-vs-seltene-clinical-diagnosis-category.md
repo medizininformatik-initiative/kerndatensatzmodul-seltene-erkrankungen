@@ -1,9 +1,18 @@
-# MII VS SE Clinical Diagnosis Category - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# MII VS SE Clinical Diagnosis Category (retired) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
-## ValueSet: MII VS SE Clinical Diagnosis Category 
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII VS SE Clinical Diagnosis Category (retired)**
+
+## ValueSet: MII VS SE Clinical Diagnosis Category (retired) 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category | *Version*:2027.0.0-ballot.rc1 |
+| Retired as of 2026-09-03 | *Computable Name*:MII_VS_Seltene_ClinicalDiagnosisCategory |
 
  
-Value set for categorizing clinical diagnoses of rare diseases 
+RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code. 
 
  **References** 
 
@@ -14,6 +23,8 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
  
 
 ### Expansion
+
+Expansions are not generated for retired value sets
 
 -------
 
@@ -28,12 +39,25 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "resourceType" : "ValueSet",
   "id" : "mii-vs-seltene-clinical-diagnosis-category",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category",
-  "version" : "2026.0.1",
-  "name" : "ClinicalDiagnosisCategoryVS",
-  "title" : "MII VS SE Clinical Diagnosis Category",
-  "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Seltene_ClinicalDiagnosisCategory",
+  "title" : "MII VS SE Clinical Diagnosis Category (retired)",
+  "status" : "retired",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -41,7 +65,14 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Value set for categorizing clinical diagnoses of rare diseases",
+  "description" : "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
@@ -50,12 +81,16 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
         "display" : "Diagnosis"
       },
       {
-        "code" : "363358000",
+        "code" : "404684003",
         "display" : "Clinical finding"
       },
       {
         "code" : "64572001",
         "display" : "Disease"
+      },
+      {
+        "code" : "66091009",
+        "display" : "Congenital disease"
       },
       {
         "code" : "609328004",
@@ -64,18 +99,6 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       {
         "code" : "85828009",
         "display" : "Autoimmune disease"
-      },
-      {
-        "code" : "47367009",
-        "display" : "Syndrome"
-      },
-      {
-        "code" : "381406004",
-        "display" : "Congenital disorder"
-      },
-      {
-        "code" : "84757009",
-        "display" : "Rare disease"
       }]
     }]
   }

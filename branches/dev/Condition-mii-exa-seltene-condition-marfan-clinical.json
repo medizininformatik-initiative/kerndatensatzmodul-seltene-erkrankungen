@@ -1,0 +1,134 @@
+{
+  "resourceType" : "Condition",
+  "id" : "mii-exa-seltene-condition-marfan-clinical",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2027.0.0-ballot.rc1"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-seltene-condition-marfan-clinical</b></p><a name=\"mii-exa-seltene-condition-marfan-clinical\"> </a><a name=\"hcmii-exa-seltene-condition-marfan-clinical\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-seltene-clinical-diagnosis.html\">MII PR SE Clinical Diagnosis</a> version: 2027.0.0-ballot.rc1</p></div><p><b>Condition Asserted Date</b>: 2024-12-15</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://omim.org 154700}, {http://snomed.info/sct 19346006}, {http://www.orpha.net 558}\">Marfan-Syndrom</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-seltene-patient-marfan-001.html\">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-seltene-encounter-cardiology.html\">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Seen in cardiac clinic (finding); period = 2024-12-15 --&gt; 2024-12-15; reasonCode = Chest pain</a></p><p><b>recordedDate</b>: 2024-12-15</p><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title=\"Codes:{http://human-phenotype-ontology.org HP:0002616}\">Aortic root aneurysm</span></p><p><b>detail</b>: <a href=\"Observation-mii-exa-seltene-symptom-aortic-root.html\">Observation Aortic root aneurysm</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title=\"Codes:{http://human-phenotype-ontology.org HP:0001659}\">Aortic regurgitation</span></p><p><b>detail</b>: <a href=\"Observation-mii-exa-seltene-symptom-aortic-regurg.html\">Observation Aortic regurgitation</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title=\"Codes:{http://human-phenotype-ontology.org HP:0001653}\">Mitral regurgitation</span></p><p><b>detail</b>: <a href=\"Observation-mii-exa-seltene-symptom-mitral-regurg.html\">Observation Mitral regurgitation</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title=\"Codes:{http://human-phenotype-ontology.org HP:0000098}\">Tall stature</span></p><p><b>detail</b>: <a href=\"Observation-mii-exa-seltene-observation-height-001.html\">Observation Body height</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title=\"Codes:{http://human-phenotype-ontology.org HP:0100559}\">Lower limb asymmetry</span></p><p><b>detail</b>: <a href=\"Observation-mii-exa-seltene-observation-leg-asymmetry.html\">Observation Leg length discrepancy</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title=\"Codes:{http://human-phenotype-ontology.org HP:0100749}\">Chest pain</span></p><p><b>detail</b>: <a href=\"Observation-mii-exa-seltene-symptom-chest-pain.html\">Observation Chest pain</a></p></blockquote><p><b>note</b>: </p><blockquote><div><p>Marfan-Syndrom klinisch diagnostiziert basierend auf kardialen Befunden, Skelettmerkmalen und ophthalmologischer Manifestation</p>\n</div></blockquote></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-seltene-condition-marfan-clinical</b></p><a name=\"de-mii-exa-seltene-condition-marfan-clinical\"> </a><a name=\"de-hcmii-exa-seltene-condition-marfan-clinical\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-seltene-clinical-diagnosis.html\">MII PR SE Clinical Diagnosis</a> version: 2027.0.0-ballot.rc1</p></div><p><b>Condition Asserted Date</b>: 2024-12-15</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://omim.org 154700}, {http://snomed.info/sct 19346006}, {http://www.orpha.net 558}\">Marfan-Syndrom</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-seltene-patient-marfan-001.html\">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-seltene-encounter-cardiology.html\">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Seen in cardiac clinic (finding); period = 2024-12-15 --&gt; 2024-12-15; reasonCode = Chest pain</a></p><p><b>recordedDate</b>: 2024-12-15</p><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title=\"Codes:{http://human-phenotype-ontology.org HP:0002616}\">Aortic root aneurysm</span></p><p><b>detail</b>: <a href=\"Observation-mii-exa-seltene-symptom-aortic-root.html\">Observation Aortic root aneurysm</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title=\"Codes:{http://human-phenotype-ontology.org HP:0001659}\">Aortic regurgitation</span></p><p><b>detail</b>: <a href=\"Observation-mii-exa-seltene-symptom-aortic-regurg.html\">Observation Aortic regurgitation</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title=\"Codes:{http://human-phenotype-ontology.org HP:0001653}\">Mitral regurgitation</span></p><p><b>detail</b>: <a href=\"Observation-mii-exa-seltene-symptom-mitral-regurg.html\">Observation Mitral regurgitation</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title=\"Codes:{http://human-phenotype-ontology.org HP:0000098}\">Tall stature</span></p><p><b>detail</b>: <a href=\"Observation-mii-exa-seltene-observation-height-001.html\">Observation Body height</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title=\"Codes:{http://human-phenotype-ontology.org HP:0100559}\">Lower limb asymmetry</span></p><p><b>detail</b>: <a href=\"Observation-mii-exa-seltene-observation-leg-asymmetry.html\">Observation Leg length discrepancy</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title=\"Codes:{http://human-phenotype-ontology.org HP:0100749}\">Chest pain</span></p><p><b>detail</b>: <a href=\"Observation-mii-exa-seltene-symptom-chest-pain.html\">Observation Chest pain</a></p></blockquote><p><b>note</b>: </p><blockquote><div><p>Marfan-Syndrom klinisch diagnostiziert basierend auf kardialen Befunden, Skelettmerkmalen und ophthalmologischer Manifestation</p>\n</div></blockquote></div></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+    "valueDateTime" : "2024-12-15"
+  }],
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "active"
+    }]
+  },
+  "verificationStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+      "code" : "confirmed"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+      "code" : "encounter-diagnosis"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://omim.org",
+      "version" : "2024",
+      "code" : "154700",
+      "display" : "Marfan syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "19346006",
+      "display" : "Marfan syndrome"
+    },
+    {
+      "system" : "http://www.orpha.net",
+      "code" : "558",
+      "display" : "Marfan syndrome"
+    }],
+    "text" : "Marfan-Syndrom"
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-seltene-patient-marfan-001"
+  },
+  "encounter" : {
+    "reference" : "Encounter/mii-exa-seltene-encounter-cardiology"
+  },
+  "recordedDate" : "2024-12-15",
+  "evidence" : [{
+    "code" : [{
+      "coding" : [{
+        "system" : "http://human-phenotype-ontology.org",
+        "code" : "HP:0002616",
+        "display" : "Aortic root aneurysm"
+      }]
+    }],
+    "detail" : [{
+      "reference" : "Observation/mii-exa-seltene-symptom-aortic-root"
+    }]
+  },
+  {
+    "code" : [{
+      "coding" : [{
+        "system" : "http://human-phenotype-ontology.org",
+        "code" : "HP:0001659",
+        "display" : "Aortic regurgitation"
+      }]
+    }],
+    "detail" : [{
+      "reference" : "Observation/mii-exa-seltene-symptom-aortic-regurg"
+    }]
+  },
+  {
+    "code" : [{
+      "coding" : [{
+        "system" : "http://human-phenotype-ontology.org",
+        "code" : "HP:0001653",
+        "display" : "Mitral regurgitation"
+      }]
+    }],
+    "detail" : [{
+      "reference" : "Observation/mii-exa-seltene-symptom-mitral-regurg"
+    }]
+  },
+  {
+    "code" : [{
+      "coding" : [{
+        "system" : "http://human-phenotype-ontology.org",
+        "code" : "HP:0000098",
+        "display" : "Tall stature"
+      }]
+    }],
+    "detail" : [{
+      "reference" : "Observation/mii-exa-seltene-observation-height-001"
+    }]
+  },
+  {
+    "code" : [{
+      "coding" : [{
+        "system" : "http://human-phenotype-ontology.org",
+        "code" : "HP:0100559",
+        "display" : "Lower limb asymmetry"
+      }]
+    }],
+    "detail" : [{
+      "reference" : "Observation/mii-exa-seltene-observation-leg-asymmetry"
+    }]
+  },
+  {
+    "code" : [{
+      "coding" : [{
+        "system" : "http://human-phenotype-ontology.org",
+        "code" : "HP:0100749",
+        "display" : "Chest pain"
+      }]
+    }],
+    "detail" : [{
+      "reference" : "Observation/mii-exa-seltene-symptom-chest-pain"
+    }]
+  }],
+  "note" : [{
+    "text" : "Marfan-Syndrom klinisch diagnostiziert basierend auf kardialen Befunden, Skelettmerkmalen und ophthalmologischer Manifestation"
+  }]
+}

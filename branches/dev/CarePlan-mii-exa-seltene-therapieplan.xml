@@ -3,31 +3,31 @@
 <CarePlan xmlns="http://hl7.org/fhir">
   <id value="mii-exa-seltene-therapieplan"/>
   <meta>
-    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan|2026.0.1"/>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan|2027.0.0-ballot.rc1"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CarePlan mii-exa-seltene-therapieplan</b></p><a name="mii-exa-seltene-therapieplan"> </a><a name="hcmii-exa-seltene-therapieplan"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-therapieplan.html">MII PR SE Therapieplan</a> version: 2026.0.1</p></div><p><b>status</b>: Draft</p><p><b>intent</b>: Proposal</p><p><b>description</b>: Therapieplan für den Patienten</p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-patient">Patient/example-patient</a></p><p><b>created</b>: 2023-03-28</p><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/MedicationRequest/example-therapieempfehlung">MedicationRequest/example-therapieempfehlung</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/ServiceRequest/example-nichtmed-therapie">ServiceRequest/example-nichtmed-therapie</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/ServiceRequest/example-studieneinschluss">ServiceRequest/example-studieneinschluss</a></p></blockquote></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CarePlan mii-exa-seltene-therapieplan</b></p><a name="mii-exa-seltene-therapieplan"> </a><a name="hcmii-exa-seltene-therapieplan"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-therapieplan.html">MII PR SE Therapieplan</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Draft</p><p><b>intent</b>: Proposal</p><p><b>description</b>: Therapieplan für den Patienten</p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient.html">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>created</b>: 2023-03-28</p><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href="MedicationRequest-mii-exa-seltene-therapieempfehlung-gentherapie-sma.html">MedicationRequest: status = active; intent = proposal; category = Gentherapie,Kausal; medication[x] = ONASEMNOGENE ABEPARVOVEC; note = Einmalige intravenöse Infusion der Gentherapie</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href="ServiceRequest-mii-exa-seltene-therapieempfehlung-physiotherapie-sma.html">ServiceRequest Physical therapy procedure</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href="ServiceRequest-mii-exa-seltene-studieneinschluss-anfrage.html">ServiceRequest Referral to clinical trial (procedure)</a></p></blockquote></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CarePlan mii-exa-seltene-therapieplan</b></p><a name="de-mii-exa-seltene-therapieplan"> </a><a name="de-hcmii-exa-seltene-therapieplan"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-therapieplan.html">MII PR SE Therapieplan</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Draft</p><p><b>intent</b>: Proposal</p><p><b>description</b>: Therapieplan für den Patienten</p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient.html">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>created</b>: 2023-03-28</p><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href="MedicationRequest-mii-exa-seltene-therapieempfehlung-gentherapie-sma.html">MedicationRequest: status = active; intent = proposal; category = Gentherapie,Kausal; medication[x] = ONASEMNOGENE ABEPARVOVEC; note = Einmalige intravenöse Infusion der Gentherapie</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href="ServiceRequest-mii-exa-seltene-therapieempfehlung-physiotherapie-sma.html">ServiceRequest Physical therapy procedure</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href="ServiceRequest-mii-exa-seltene-studieneinschluss-anfrage.html">ServiceRequest Referral to clinical trial (procedure)</a></p></blockquote></div></div>
   </text>
   <status value="draft"/>
   <intent value="proposal"/>
   <description value="Therapieplan für den Patienten"/>
   <subject>
-    <reference value="Patient/example-patient"/>
+    <reference value="Patient/mii-exa-seltene-patient"/>
   </subject>
   <created value="2023-03-28"/>
   <activity>
     <reference>
-      <reference value="MedicationRequest/example-therapieempfehlung"/>
+      <reference value="MedicationRequest/mii-exa-seltene-therapieempfehlung-gentherapie-sma"/>
     </reference>
   </activity>
   <activity>
     <reference>
-      <reference value="ServiceRequest/example-nichtmed-therapie"/>
+      <reference value="ServiceRequest/mii-exa-seltene-therapieempfehlung-physiotherapie-sma"/>
     </reference>
   </activity>
   <activity>
     <reference>
-      <reference value="ServiceRequest/example-studieneinschluss"/>
+      <reference value="ServiceRequest/mii-exa-seltene-studieneinschluss-anfrage"/>
     </reference>
   </activity>
 </CarePlan>

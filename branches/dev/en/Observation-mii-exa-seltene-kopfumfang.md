@@ -1,8 +1,18 @@
-# Kopfumfang Beispiel - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# Kopfumfang Beispiel - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Kopfumfang Beispiel**
 
 ## Example Observation: Kopfumfang Beispiel
 
-Profile: [MII PR SE Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md) version: 2026.0.1
+-------
+
+**English**
+
+-------
+
+Profile: [MII PR SE Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md) version: 2027.0.0-ballot.rc1
 
 **status**: Final
 
@@ -10,7 +20,7 @@ Profile: [MII PR SE Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md
 
 **code**: Head Occipital-frontal circumference
 
-**subject**: [Beispielpatient](Patient-example.md)
+**subject**: [Beispielpatient](Patient-mii-exa-seltene-patient.md)
 
 **effective**: 2024-08-08 10:00:00+0200
 
@@ -25,7 +35,7 @@ Profile: [MII PR SE Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md
   "resourceType" : "Observation",
   "id" : "mii-exa-seltene-kopfumfang",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang|2027.0.0-ballot.rc1"]
   },
   "status" : "final",
   "category" : [{
@@ -47,7 +57,7 @@ Profile: [MII PR SE Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md
     }]
   },
   "subject" : {
-    "reference" : "Patient/example",
+    "reference" : "Patient/mii-exa-seltene-patient",
     "display" : "Beispielpatient"
   },
   "effectiveDateTime" : "2024-08-08T10:00:00+02:00",

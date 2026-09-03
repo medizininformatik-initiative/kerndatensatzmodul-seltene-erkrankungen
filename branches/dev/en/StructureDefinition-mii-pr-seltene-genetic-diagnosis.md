@@ -1,20 +1,47 @@
-# MII PR SE Genetic Diagnosis - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# MII PR SE Genetic Diagnosis - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII PR SE Genetic Diagnosis**
 
 ## Resource Profile: MII PR SE Genetic Diagnosis 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Seltene_GeneticDiagnosis |
 
  
 Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and links to MolGen variant/diagnostic implication resources. This profile is used when a rare disease diagnosis has been confirmed through genetic testing. 
 
+This profile describes a genetically confirmed diagnosis of a rare disease. It is used when the diagnosis has been confirmed by molecular genetic examination.
+
+**Search parameters**
+
+The following search parameters are relevant for the Rare Diseases module, also in combination:
+
+1. The search parameter `_id` MUST be supported:Examples:`GET [base]/Condition?_id=1234`Usage notes: Further information on searching for "_id" can be found in the [FHIR base specification, section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "_profile" MUST be supported:Examples:`GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis`Usage notes: Further information on searching for "_profile" can be found in the [FHIR base specification, section "token"](http://hl7.org/fhir/R4/search.html#all).
+1. The search parameter "category" MUST be supported:Examples:`GET [base]/Condition?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory`Usage notes: Further information on searching for "category" can be found in the FHIR base specification, section "token".
+1. The search parameter "code" MUST be supported:Examples:`GET [base]/Condition?code=http://fhir.de/CodeSystem/sct|184305005`Usage notes: Further information on searching for "code" can be found in the FHIR base specification, section "token".
+1. The search parameter "subject" MUST be supported:Examples:`GET [base]/Condition?subject=Patient/example`Usage notes: Further information on searching for "subject" can be found in the FHIR base specification, section "reference".
+1. The search parameter "focus" MUST be supported:Examples:`GET [base]/Condition?focus=Condition/example`Usage notes: Further information on searching for "focus" can be found in the FHIR base specification, section "reference".
+1. The search parameter "encounter" MUST be supported:Examples:`GET [base]/Condition?encounter=Encounter/example`Usage notes: Further information on searching for "encounter" can be found in the FHIR base specification, section "reference".
+1. The search parameter "date" MUST be supported:Examples:`GET [base]/Condition?date=2024-02-08`Usage notes: Further information on searching for "date" can be found in the FHIR base specification, section "date".
+1. The search parameter "derived-from" MUST be supported:Examples:`GET [base]/Condition?derived-from=Observation/example`Usage notes: Further information on searching for "derived-from" can be found in the FHIR base specification, section "reference".
+
+Example instances are linked in the "Examples" section of the profile page.
+
 **Usages:**
 
-* Examples for this Profile: [Condition/condition-marfan-genetic](Condition-condition-marfan-genetic.md), [Condition/condition-pku-diagnosis](Condition-condition-pku-diagnosis.md), [Condition/condition-sma-genetic](Condition-condition-sma-genetic.md), [Condition/example-brca1-genetic-diagnosis](Condition-example-brca1-genetic-diagnosis.md)... Show 6 more, [Condition/example-cf-excluded-after-screening](Condition-example-cf-excluded-after-screening.md), [Condition/example-cf-genetic](Condition-example-cf-genetic.md), [Condition/example-dmd-excluded-bmd-confirmed](Condition-example-dmd-excluded-bmd-confirmed.md), [Condition/example-dmd-genetic-diagnosis](Condition-example-dmd-genetic-diagnosis.md), [Condition/example-sma-excluded-genetic](Condition-example-sma-excluded-genetic.md) and [Condition/example-sma-genetic-diagnosis](Condition-example-sma-genetic-diagnosis.md)
+* Examples for this Profile: [Condition/mii-exa-seltene-condition-marfan-genetic](Condition-mii-exa-seltene-condition-marfan-genetic.md), [Condition/mii-exa-seltene-condition-pku-diagnosis](Condition-mii-exa-seltene-condition-pku-diagnosis.md), [Condition/mii-exa-seltene-condition-sma-genetic](Condition-mii-exa-seltene-condition-sma-genetic.md), [Condition/mii-exa-seltene-example-brca1-genetic-diagnosis](Condition-mii-exa-seltene-example-brca1-genetic-diagnosis.md)... Show 6 more, [Condition/mii-exa-seltene-example-cf-excluded-after-screening](Condition-mii-exa-seltene-example-cf-excluded-after-screening.md), [Condition/mii-exa-seltene-example-cf-genetic](Condition-mii-exa-seltene-example-cf-genetic.md), [Condition/mii-exa-seltene-example-dmd-excluded-bmd-confirmed](Condition-mii-exa-seltene-example-dmd-excluded-bmd-confirmed.md), [Condition/mii-exa-seltene-example-dmd-genetic-diagnosis](Condition-mii-exa-seltene-example-dmd-genetic-diagnosis.md), [Condition/mii-exa-seltene-example-sma-excluded-genetic](Condition-mii-exa-seltene-example-sma-excluded-genetic.md) and [Condition/mii-exa-seltene-example-sma-genetic-diagnosis](Condition-mii-exa-seltene-example-sma-genetic-diagnosis.md)
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/mii-ig-seltene-erkrankungen-v2026-de|current/StructureDefinition/StructureDefinition-mii-pr-seltene-genetic-diagnosis.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-genetic-diagnosis.json)
 
 ### Formal Views of Profile Content
 
- [Description Differentials, Snapshots, and other representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
  
 
@@ -49,6 +76,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "version" : "3.0.0",
         "code" : "package",
         "display" : "Package"
       }]
@@ -129,16 +157,29 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis",
-  "version" : "2026.0.1",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Seltene_GeneticDiagnosis",
   "title" : "MII PR SE Genetic Diagnosis",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -147,6 +188,13 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
     }]
   }],
   "description" : "Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and links to MolGen variant/diagnostic implication resources. This profile is used when a rare disease diagnosis has been confirmed through genetic testing.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "SE-LogicalModel",
@@ -200,7 +248,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "Genetische Diagnose"
       }]
     },
@@ -214,7 +262,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "path" : "Condition.extension.value[x]",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia",
         "comment" : "Feststellungsdatum genetische SE-Diagnose"
       }]
     },
@@ -233,7 +281,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenDiaFehlendePenetranz",
+        "map" : "anamneseUndDiagnostik.genDiaFehlendePenetranz",
         "comment" : "Genetische Diagnose mit fehlender Penetranz"
       }]
     },
@@ -268,7 +316,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "sliceName" : "icd10-gm",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "ICD-10-GM Diagnose"
       }]
     },
@@ -278,7 +326,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "sliceName" : "orphanet",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "Orpha-Code Diagnose"
       }]
     },
@@ -296,7 +344,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "OMIM-Code Diagnose"
       }]
     },
@@ -322,7 +370,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "path" : "Condition.subject",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Patient",
+        "map" : "persoenlicheInfosIndexpatient",
         "comment" : "Patient/Indexpatient"
       }]
     },
@@ -331,7 +379,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "path" : "Condition.encounter",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+        "map" : "anamneseUndDiagnostik.untersuchungsdatum",
         "comment" : "Untersuchungsdatum"
       }]
     },
@@ -340,7 +388,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "path" : "Condition.onset[x]",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose.AlterGenDia",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.alterGenDia",
         "comment" : "Alter/Zeitpunkt bei genetischer SE-Diagnose"
       }]
     },
@@ -353,7 +401,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.GenetischeDiagnose.FeststellungsdatumGenDia",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia",
         "comment" : "Feststellungsdatum genetische SE-Diagnose"
       }]
     },
@@ -391,7 +439,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "AnamneseUndDiagnostik.MethodeDiagnosestellung",
+        "map" : "anamneseUndDiagnostik.methodeDiagnosestellung",
         "comment" : "Methode der Diagnosestellung"
       }]
     },

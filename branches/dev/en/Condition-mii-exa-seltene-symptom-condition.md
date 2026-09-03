@@ -1,8 +1,18 @@
-# MII Example SE Symptom Condition - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# MII Example SE Symptom Condition - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII Example SE Symptom Condition**
 
 ## Example Condition: MII Example SE Symptom Condition
 
-Profile: [MII Profile SE Symptom Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md) version: 2026.0.1
+-------
+
+**English**
+
+-------
+
+Profile: [MII Profile SE Symptom Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md) version: 2027.0.0-ballot.rc1
 
 **clinicalStatus**: Active
 
@@ -16,7 +26,7 @@ Profile: [MII Profile SE Symptom Condition](StructureDefinition-mii-pr-seltene-s
 
 **bodySite**: Skeletal muscle
 
-**subject**: [Example Patient](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/example-patient)
+**subject**: [Example Patient](Patient-mii-exa-seltene-patient.md)
 
 **onset**: 15 years (Details: UCUM codea = 'a')
 
@@ -45,7 +55,7 @@ Patient reports progressive muscle weakness affecting daily activities, particul
   "resourceType" : "Condition",
   "id" : "mii-exa-seltene-symptom-condition",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition|2027.0.0-ballot.rc1"]
   },
   "clinicalStatus" : {
     "coding" : [{
@@ -93,7 +103,7 @@ Patient reports progressive muscle weakness affecting daily activities, particul
     "text" : "Skeletal muscle"
   }],
   "subject" : {
-    "reference" : "Patient/example-patient",
+    "reference" : "Patient/mii-exa-seltene-patient",
     "display" : "Example Patient"
   },
   "onsetAge" : {

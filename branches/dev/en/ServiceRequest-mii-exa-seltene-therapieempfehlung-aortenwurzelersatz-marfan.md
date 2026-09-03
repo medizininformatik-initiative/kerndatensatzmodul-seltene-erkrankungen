@@ -1,8 +1,18 @@
-# Beispiel Aortenwurzelersatz bei Marfan-Syndrom - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# Beispiel Aortenwurzelersatz bei Marfan-Syndrom - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Beispiel Aortenwurzelersatz bei Marfan-Syndrom**
 
 ## Example ServiceRequest: Beispiel Aortenwurzelersatz bei Marfan-Syndrom
 
-Profile: [MII PR SE Therapieempfehlung Nicht-Medikamentös](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md) version: 2026.0.1
+-------
+
+**English**
+
+-------
+
+Profile: [MII PR SE Therapieempfehlung Nicht-Medikamentös](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md) version: 2027.0.0-ballot.rc1
 
 **status**: Active
 
@@ -14,13 +24,13 @@ Profile: [MII PR SE Therapieempfehlung Nicht-Medikamentös](StructureDefinition-
 
 **code**: Composite-Graft-Implantation (David-OP)
 
-**subject**: [Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)](Patient-patient-marfan-001.md)
+**subject**: [Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)](Patient-mii-exa-seltene-patient-marfan-001.md)
 
 **occurrence**: 2025-03-15
 
 **authoredOn**: 2024-12-15
 
-**reasonReference**: [Progrediente Aortenwurzeldilatation bei Marfan-Syndrom](Condition-condition-marfan-clinical.md)
+**reasonReference**: [Progrediente Aortenwurzeldilatation bei Marfan-Syndrom](Condition-mii-exa-seltene-condition-marfan-clinical.md)
 
 **note**: 
 
@@ -38,7 +48,7 @@ Geplanter elektiver Eingriff bei progredienter Aortenwurzeldilatation (48mm) zur
   "resourceType" : "ServiceRequest",
   "id" : "mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2027.0.0-ballot.rc1"]
   },
   "status" : "active",
   "intent" : "proposal",
@@ -71,12 +81,12 @@ Geplanter elektiver Eingriff bei progredienter Aortenwurzeldilatation (48mm) zur
     "text" : "Composite-Graft-Implantation (David-OP)"
   },
   "subject" : {
-    "reference" : "Patient/patient-marfan-001"
+    "reference" : "Patient/mii-exa-seltene-patient-marfan-001"
   },
   "occurrenceDateTime" : "2025-03-15",
   "authoredOn" : "2024-12-15",
   "reasonReference" : [{
-    "reference" : "Condition/condition-marfan-clinical",
+    "reference" : "Condition/mii-exa-seltene-condition-marfan-clinical",
     "display" : "Progrediente Aortenwurzeldilatation bei Marfan-Syndrom"
   }],
   "note" : [{

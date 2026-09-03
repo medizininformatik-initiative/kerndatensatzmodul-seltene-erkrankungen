@@ -1,0 +1,80 @@
+# ICF example — body function (chapter b), one qualifier - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **ICF example — body function (chapter b), one qualifier**
+
+## Beispiel Observation: ICF example — body function (chapter b), one qualifier
+
+-------
+
+**German**
+
+-------
+
+Profile: [MII PR SE ICF Assessment](StructureDefinition-mii-pr-seltene-icf-assessment.md) version: 2027.0.0-ballot.rc1
+
+**status**: Final
+
+**category**: Survey
+
+**code**: Muscle power functions
+
+**subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-mii-exa-seltene-patient-sma-001.md)
+
+**effective**: 2025-07-01
+
+### Components
+
+| | | |
+| :--- | :--- | :--- |
+| - | **Code** | **Value[x]** |
+| * | Extent of impairment (body functions) | Schädigung voll ausgeprägt (komplett, total ...) 96-100 % |
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-seltene-icf-koerperfunktion",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment|2027.0.0-ballot.rc1"]
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "survey"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "code" : "b730",
+      "display" : "Muscle power functions"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-seltene-patient-sma-001"
+  },
+  "effectiveDateTime" : "2025-07-01",
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal",
+        "code" : "extent-of-impairment"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://terminologien.bfarm.de/fhir/CodeSystem/icf-q-ausmass-der-schaedigung",
+        "code" : ".4",
+        "display" : "Schädigung voll ausgeprägt (komplett, total ...) 96-100 %"
+      }]
+    }
+  }]
+}
+
+```

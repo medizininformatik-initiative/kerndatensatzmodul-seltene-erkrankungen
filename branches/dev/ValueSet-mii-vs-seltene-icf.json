@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-seltene-icf",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-seltene-icf</b></p><a name=\"mii-vs-seltene-icf\"> </a><a name=\"hcmii-vs-seltene-icf\"> </a><ul><li>Include all codes defined in <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-ICF.html\"><code>http://hl7.org/fhir/sid/icf</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span></li></ul></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-seltene-icf</b></p><a name=\"de-mii-vs-seltene-icf\"> </a><a name=\"de-hcmii-vs-seltene-icf\"> </a><ul><li>Include all codes defined in <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-ICF.html\"><code>http://hl7.org/fhir/sid/icf</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span></li></ul></div></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Seltene_ICF",
+  "title" : "MII VS SE ICF Categories",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-03T10:43:48+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. German display text comes from the BfArM language supplement, so the value set does not need a German twin.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/icf"
+    }]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "resourceType" : "Patient",
+  "id" : "mii-exa-seltene-patient",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Patient mii-exa-seltene-patient</b></p><a name=\"mii-exa-seltene-patient\"> </a><a name=\"hcmii-exa-seltene-patient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-person-patient.html\">MII PR Person Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</p><hr/></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Patient mii-exa-seltene-patient</b></p><a name=\"de-mii-exa-seltene-patient\"> </a><a name=\"de-hcmii-exa-seltene-patient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-person-patient.html\">MII PR Person Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</p><hr/></div></div>"
+  },
+  "identifier" : [{
+    "system" : "http://test-krankenhaus.de/fhir/sid/patienten",
+    "value" : "12345"
+  }],
+  "name" : [{
+    "use" : "official",
+    "family" : "Mustermann",
+    "given" : ["Max"]
+  }],
+  "gender" : "male",
+  "birthDate" : "1990-01-01"
+}

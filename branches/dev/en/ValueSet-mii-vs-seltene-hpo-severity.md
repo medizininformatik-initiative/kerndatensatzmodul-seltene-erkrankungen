@@ -1,6 +1,16 @@
-# HPO Severity - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# HPO Severity - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **HPO Severity**
 
 ## ValueSet: HPO Severity 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_VS_Seltene_HPOSeverity |
+| **Copyright/Legal**: This value set includes content from Human Phenotype Ontology (HPO). | |
 
  
 HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Phenomics IG component pattern. 
@@ -29,12 +39,25 @@ HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Pheno
   "resourceType" : "ValueSet",
   "id" : "mii-vs-seltene-hpo-severity",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity",
-  "version" : "2026.0.1",
-  "name" : "HPOSeverity",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Seltene_HPOSeverity",
   "title" : "HPO Severity",
   "status" : "active",
-  "date" : "2026-07-24T06:29:13+00:00",
+  "date" : "2026-09-03T10:43:48+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{
@@ -43,6 +66,13 @@ HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Pheno
     }]
   }],
   "description" : "HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Phenomics IG component pattern.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
   "copyright" : "This value set includes content from Human Phenotype Ontology (HPO).",
   "compose" : {
     "include" : [{

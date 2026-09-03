@@ -1,8 +1,18 @@
-# Beispiel Genetische Beratung - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2026.0.1
+# Beispiel Genetische Beratung - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Beispiel Genetische Beratung**
 
 ## Example ServiceRequest: Beispiel Genetische Beratung
 
-Profile: [MII PR SE Therapieempfehlung Nicht-Medikamentös](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md) version: 2026.0.1
+-------
+
+**English**
+
+-------
+
+Profile: [MII PR SE Therapieempfehlung Nicht-Medikamentös](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md) version: 2027.0.0-ballot.rc1
 
 **status**: Active
 
@@ -14,7 +24,7 @@ Profile: [MII PR SE Therapieempfehlung Nicht-Medikamentös](StructureDefinition-
 
 **code**: Humangenetische Beratung
 
-**subject**: [Max Mustermann Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-example.md)
+**subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
 **authoredOn**: 2024-11-01
 
@@ -36,7 +46,7 @@ Beratung bezüglich Vererbungsmodus und Wiederholungsrisiko
   "resourceType" : "ServiceRequest",
   "id" : "mii-exa-seltene-therapieempfehlung-genetische-beratung",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2026.0.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2027.0.0-ballot.rc1"]
   },
   "status" : "active",
   "intent" : "proposal",
@@ -64,7 +74,7 @@ Beratung bezüglich Vererbungsmodus und Wiederholungsrisiko
     "text" : "Humangenetische Beratung"
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-seltene-patient"
   },
   "authoredOn" : "2024-11-01",
   "reasonCode" : [{
