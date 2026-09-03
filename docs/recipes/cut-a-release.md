@@ -33,7 +33,10 @@ for the step-by-step mapping to the MII wiki's Module Release Workflow.
    is left in them.
 3. **Promote `dev → main`** with a merge commit.
 4. **Tag** the release on `main`: `git tag v2027.0.0 && git push origin v2027.0.0`
-   (the tag pattern the `module-release.yml` workflow listens for).
+   (the tag pattern the `module-release.yml` workflow listens for). The leading
+   `v` is required and its absence fails **silently** — nothing triggers, and no
+   error says so. After pushing, confirm a `module-release` run actually
+   started.
 5. `module-release.yml` then **builds** and creates a **draft GitHub
    Release** with the package attached. **A human reviews and publishes the
    draft** — publishing is what fires the MII Zulip announcement (topic

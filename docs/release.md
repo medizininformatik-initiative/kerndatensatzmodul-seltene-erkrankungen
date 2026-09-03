@@ -50,6 +50,12 @@ prerelease, and the preview build labels itself `2027.0.0-draft.1` this way).
 - The release automation triggers on the tag glob `v[0-9]+.[0-9]+.[0-9]+*`
   (exactly the pattern `kerndatensatz-basis` uses).
 
+> **The leading `v` is load-bearing, and its absence is silent.** A tag such as
+> `2027.0.0` matches no trigger: no workflow starts, nothing fails, no notice
+> appears anywhere. The tag simply sits there and the release never happens.
+> `consent` and `mikrobiologie` tag without the prefix — check the Actions tab
+> after pushing a tag, not just the tag list.
+
 ---
 
 ## What is automated vs. human-gated (at a glance)

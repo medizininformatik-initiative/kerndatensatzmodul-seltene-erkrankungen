@@ -662,10 +662,57 @@ jobs:
             }' > site/publish-setup.json
           touch site/.nojekyll
 
+          # publish-setup.json DEKLARIERT die beiden Feeds oben, legt sie aber
+          # nicht an — der Publisher erwartet sie vorhanden und schreibt nur
+          # neue Eintraege hinein. Beim ersten Lauf existieren sie noch nicht,
+          # also hier als leere, gueltige RSS-Kanaele erzeugen.
+          #
+          # LC_ALL=C ist nicht kosmetisch: RSS verlangt RFC-822-Datumsangaben in
+          # englischer Schreibweise. Ohne das Locale schreibt ein deutscher
+          # Runner "Do., 03 Sep. 2026" statt "Wed, 03 Sep 2026", und der Feed
+          # ist damit ungueltig.
+          feed_date="$(LC_ALL=C date -u '+%a, %d %b %Y %H:%M:%S GMT')"
+          for feed in package publication; do
+            case "${feed}" in
+              package)     feed_title="Package feed";;
+              publication) feed_title="Publication feed";;
+            esac
+            # printf statt Heredoc: In einem YAML-Blockskalar muss JEDE Zeile
+            # eingerueckt sein, sonst endet der Block. Ein eingerueckter
+            # Heredoc wiederum schoebe Leerzeichen vor die XML-Deklaration,
+            # die zwingend am Dateianfang stehen muss.
+            {
+              printf '%s\n' '<?xml version="1.0" encoding="UTF-8"?>'
+              printf '%s\n' '<rss version="2.0">'
+              printf '%s\n' '  <channel>'
+              printf '    <title>%s %s</title>\n' "${EXPECTED_PACKAGE_ID}" "${feed_title}"
+              printf '    <description>%s for %s</description>\n' "${feed_title}" "${EXPECTED_PACKAGE_ID}"
+              printf '    <link>%s</link>\n' "${PUBLICATION_BASE}"
+              printf '%s\n' '    <generator>HL7 IG Publisher</generator>'
+              printf '    <lastBuildDate>%s</lastBuildDate>\n' "${feed_date}"
+              printf '    <pubDate>%s</pubDate>\n' "${feed_date}"
+              printf '%s\n' '    <language>en</language>'
+              printf '%s\n' '  </channel>'
+              printf '%s\n' '</rss>'
+            } > "site/${feed}-feed.xml"
+          done
+
+          # package-registry.json wird weiter unten nur GEPRUEFT, und das auch
+          # nur im Nicht-Bootstrap-Zweig. Beim ersten Mal muss es erzeugt
+          # werden, sonst faellt der -go-publish-Lauf ueber die fehlende Datei.
+          java -Xmx2g -jar "${RUNNER_TEMP}/publisher.jar" \
+            -generate-package-registry site
+
+          test -s site/package-feed.xml
+          test -s site/publication-feed.xml
+          test -s site/package-registry.json
+
           {
             echo "### First-publication webroot seeded"
             echo
             echo "- Generated publish-setup.json for ${PUBLICATION_BASE}"
+            echo "- Generated package-feed.xml and publication-feed.xml (RFC-822, LC_ALL=C)"
+            echo "- Generated package-registry.json"
           } >> "${GITHUB_STEP_SUMMARY}"
 
       - name: Prepare publication workspace
@@ -700,7 +747,17 @@ jobs:
           TX_URL: ${{ steps.terminology.outputs.tx_url }}
         run: |
           set -euo pipefail
+          # -fhir-settings gehoert an BEIDE Publisher-Aufrufe. Der Build oben
+          # bekommt es; -go-publish validiert erneut gegen den Terminologie-
+          # server und lief ohne die Allowlist in die SSRF-Haertung von
+          # Publisher 2.3.1+.
+          #
+          # Der Kommentar steht bewusst UEBER dem Aufruf und nicht zwischen
+          # dessen fortgesetzten Zeilen: ein '#' innerhalb einer
+          # Backslash-Fortsetzung kommentiert den Rest der logischen Zeile aus,
+          # das jeweils folgende Flag eingeschlossen.
           java -Xmx6g -jar "${RUNNER_TEMP}/publisher.jar" -go-publish \
+            -fhir-settings "${GITHUB_WORKSPACE}/source/.github/fhir-settings.json" \
             -source "${GITHUB_WORKSPACE}/source" \
             -web "${GITHUB_WORKSPACE}/site" \
             -history "${GITHUB_WORKSPACE}/publication/history" \
