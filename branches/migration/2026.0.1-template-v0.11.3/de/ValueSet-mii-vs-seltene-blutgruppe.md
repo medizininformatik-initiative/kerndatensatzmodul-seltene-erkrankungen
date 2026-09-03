@@ -42,7 +42,7 @@ ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List
   "title" : "MII VS SE Blutgruppe",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T09:27:13+00:00",
+  "date" : "2026-09-03T09:44:41+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

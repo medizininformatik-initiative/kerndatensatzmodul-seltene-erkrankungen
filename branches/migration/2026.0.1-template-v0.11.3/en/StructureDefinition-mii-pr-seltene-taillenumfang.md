@@ -71,7 +71,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ta
   "name" : "MII_PR_Seltene_Taillenumfang",
   "title" : "MII PR SE Taillenumfang",
   "status" : "active",
-  "date" : "2026-09-03T09:27:13+00:00",
+  "date" : "2026-09-03T09:44:41+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
