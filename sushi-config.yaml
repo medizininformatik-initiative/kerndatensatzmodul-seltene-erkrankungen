@@ -16,11 +16,11 @@ description: "FHIR profiles for representing rare disease data (phenotyping, fam
 status: active # draft | active | retired | unknown
 # MII CalVer YYYY.n.n; Ziel-Version 2027.0.0-ballot = User-Entscheid 2026-08-28
 # (Quelle: 2026.0.1). Analog Modul Bildgebung.
-version: "2027.0.0-ballot"
+version: "2027.0.0-ballot.rc1"
 packageId: de.medizininformatikinitiative.kerndatensatz.seltene
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: "2022+"
-releaseLabel: ci-build # Quelle gewinnt (2027.0.0-ballot ist kein formales Release)
+releaseLabel: ci-build # Quelle gewinnt (2027.0.0-ballot.rc1 ist kein formales Release)
 # Gate A ① (A-1) ENTSCHIEDEN am 2026-08-31 durch den Modulverantwortlichen:
 # CC-BY-4.0. Die Quelle deklarierte auf IG-Ebene nirgends eine Lizenz (kein Feld
 # in sushi-config/package.json, keine LICENSE-Datei, kein Impressums-Statement);
