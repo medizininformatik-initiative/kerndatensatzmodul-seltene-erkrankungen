@@ -350,8 +350,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>In the modeling of rare diseases we distinguish between two kinds of diagnosis:</p>
 
 <ol>
-  <li><strong>Clinical diagnosis</strong> (<code class="language-plaintext highlighter-rouge">MII_PR_SE_ClinicalDiagnosis</code>) — based on phenotypic features</li>
-  <li><strong>Genetic diagnosis</strong> (<code class="language-plaintext highlighter-rouge">MII_PR_SE_GeneticDiagnosis</code>) — molecularly confirmed</li>
+  <li><strong>Clinical diagnosis</strong> (<code class="language-plaintext highlighter-rouge">MII_PR_Seltene_ClinicalDiagnosis</code>) — based on phenotypic features</li>
+  <li><strong>Genetic diagnosis</strong> (<code class="language-plaintext highlighter-rouge">MII_PR_Seltene_GeneticDiagnosis</code>) — molecularly confirmed</li>
 </ol>
 
 <p>This distinction is important because many rare diseases are first suspected clinically and later confirmed genetically.</p>
@@ -370,13 +370,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h4 id="specifics">Specifics</h4>
 
 <ul>
-  <li><strong>HPO codes</strong>: additional slice for Human Phenotype Ontology codes</li>
+  <li><strong>HPO codes</strong>: additional slice <code class="language-plaintext highlighter-rouge">code.coding[hpo]</code> (0..*), required-bound to the
+HPO phenotype code value set</li>
   <li><strong>Phenotypic evidence</strong>: evidence.detail references HPO-coded symptom observations</li>
-  <li><strong>Verification status</strong>: typically "provisional" or "differential"</li>
-  <li><strong>Category</strong>: optional specific categorization (e.g. "Syndrome", "Rare disease")</li>
+  <li><strong>Verification status</strong>: <strong>not</strong> constrained by the profile (0..1, inherited required
+binding to <code class="language-plaintext highlighter-rouge">condition-ver-status</code>); "provisional" or "differential" are recommended
+while genetic confirmation is pending</li>
+  <li><strong>Category</strong>: <code class="language-plaintext highlighter-rouge">category</code> is mandatory (1..*), but its value is not fixed. It states the
+role in the record (<code class="language-plaintext highlighter-rouge">problem-list-item</code> or <code class="language-plaintext highlighter-rouge">encounter-diagnosis</code>), not the kind of
+disease — a module-wide binding to disease kinds would be conceptually wrong here.</li>
 </ul>
 
-<h4 id="fsh-example">FSH example</h4>
+<h4 id="structural-comparison">Structural comparison</h4>
 
 <p><img src="diagnose-klinisch-vs-genetisch.svg" alt="Clinical versus genetic diagnosis — structural comparison" /></p>
 
@@ -397,30 +402,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li><strong>OMIM codes</strong>: additional slice for Online Mendelian Inheritance in Man codes</li>
-  <li><strong>MolGen evidence</strong>: evidence.detail MUST reference MolGen resources:
+  <li><strong>Genetic evidence</strong>: <code class="language-plaintext highlighter-rouge">evidence</code> is mandatory (1..<em>), <code class="language-plaintext highlighter-rouge">evidence.detail</code> (1..</em>) references
+an Observation or DiagnosticReport. The profile does not constrain the target profiles;
+the MolGen resources are recommended:
     <ul>
       <li><code class="language-plaintext highlighter-rouge">MII_PR_MolGen_Variante</code> for individual variants</li>
       <li><code class="language-plaintext highlighter-rouge">MII_PR_MolGen_DiagnostischeImplikation</code> for comprehensive genetic reports</li>
     </ul>
   </li>
-  <li><strong>Verification status</strong>: typically "confirmed"</li>
-  <li><strong>Additional genetic information</strong>: penetrance, genetic basis</li>
+  <li><strong>Genetic evidence marker</strong>: <code class="language-plaintext highlighter-rouge">evidence.code.coding[geneticEvidence]</code> carries
+<code class="language-plaintext highlighter-rouge">106221001 | Genetic finding |</code></li>
+  <li><strong>Verification status</strong>: <strong>not</strong> constrained by the profile; "confirmed" is recommended</li>
+  <li><strong>Additional genetic information</strong>: <code class="language-plaintext highlighter-rouge">penetrance</code> extension</li>
   <li><strong>Category</strong>: MANDATORY: <code class="language-plaintext highlighter-rouge">782964007 | Genetic disease |</code> for unambiguous labeling</li>
 </ul>
-
-<h4 id="fsh-example-1">FSH example</h4>
 
 <h3 id="parallel-diagnosis-model">Parallel diagnosis model</h3>
 
 <p>In rare diseases, clinical and genetic diagnoses exist <strong>in parallel</strong>:</p>
 
-<h4 id="1-suspected-diagnosis-screeninginitial">1. Suspected diagnosis (screening/initial)</h4>
-
 <p><img src="diagnose-parallelmodell.svg" alt="Parallel diagnosis model" /></p>
 
-<h4 id="2-clinical-diagnosis">2. Clinical diagnosis</h4>
-
-<h4 id="3-genetic-diagnosis-parallel-to-the-clinical-one">3. Genetic diagnosis (parallel to the clinical one)</h4>
+<p>The diagram shows all three stages: the suspected diagnosis from screening or first
+contact, the clinical diagnosis after phenotypic work-up, and the genetic diagnosis
+after molecular confirmation.</p>
 
 <p><strong>Important:</strong> The genetic diagnosis does NOT replace the clinical diagnosis. Both exist in parallel and complement each other.</p>
 
@@ -428,7 +433,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><img src="diagnose-entscheidungsbaum.svg" alt="Decision tree: which diagnosis profile when" /></p>
 
-<p>The decision flow (rare disease suspected → ClinicalImpression → examinations → phenotypic analysis leading to <code class="language-plaintext highlighter-rouge">MII_PR_SE_ClinicalDiagnosis</code> with HPO codes and linked HPO symptoms, and/or genetic analysis leading to <code class="language-plaintext highlighter-rouge">MII_PR_SE_GeneticDiagnosis</code> with OMIM code, linked MolGen variant and diagnostic implication — each ending in status "confirmed") is visualized in the German version of this page as a PlantUML source. The ClinicalImpression links: problem → suspected diagnosis, finding → clinical diagnosis, finding → genetic diagnosis, investigation → examinations. Clinical and genetic diagnoses exist <strong>in parallel</strong> and complement each other.</p>
+<p>The ClinicalImpression links the stages: problem → suspected diagnosis, finding →
+clinical diagnosis, finding → genetic diagnosis, investigation → examinations.</p>
 
 <h3 id="practical-notes">Practical notes</h3>
 
@@ -506,19 +512,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="validation">Validation</h3>
 
-<h4 id="mandatory-fields-clinical-diagnosis">Mandatory fields, clinical diagnosis</h4>
+<h4 id="checklist-clinical-diagnosis">Checklist, clinical diagnosis</h4>
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />At least one HPO code in the code.coding slice</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Evidence.detail with reference to phenotypic observations</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Appropriate verificationStatus</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">category</code> set — <strong>mandatory</strong> (1..*)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />HPO code in <code class="language-plaintext highlighter-rouge">code.coding[hpo]</code> where the phenotype is known (the profile does not
+    enforce it, but for rare diseases it carries the actual content)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">evidence.detail</code> referencing phenotypic observations</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Appropriate <code class="language-plaintext highlighter-rouge">verificationStatus</code></li>
 </ul>
 
-<h4 id="mandatory-fields-genetic-diagnosis">Mandatory fields, genetic diagnosis</h4>
+<h4 id="checklist-genetic-diagnosis">Checklist, genetic diagnosis</h4>
 <ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">category</code> = <code class="language-plaintext highlighter-rouge">782964007 | Genetic disease |</code> — <strong>mandatory</strong>, fixed value</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />At least one <code class="language-plaintext highlighter-rouge">evidence</code> with <code class="language-plaintext highlighter-rouge">evidence.detail</code> — <strong>mandatory</strong> (1..*)</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />OMIM code if available</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />At least one evidence.detail to a MolGen resource</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />verificationStatus = confirmed (for a confirmed diagnosis)</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />evidence.code with "Genetic finding"</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">evidence.code.coding[geneticEvidence]</code> = <code class="language-plaintext highlighter-rouge">106221001 | Genetic finding |</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">verificationStatus = confirmed</code> for a confirmed diagnosis</li>
 </ul>
 
 <h3 id="excluded-diagnoses">Excluded diagnoses</h3>
@@ -537,9 +546,44 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="modeling-excluded-diagnoses">Modeling excluded diagnoses</h4>
 
-<h5 id="clinically-excluded">Clinically excluded</h5>
+<p>Excluded diagnoses use the same profile as confirmed ones; only the status differs:</p>
 
-<h5 id="genetically-excluded">Genetically excluded</h5>
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Clinically excluded</th>
+      <th>Genetically excluded</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Profile</td>
+      <td><code class="language-plaintext highlighter-rouge">MII_PR_Seltene_ClinicalDiagnosis</code></td>
+      <td><code class="language-plaintext highlighter-rouge">MII_PR_Seltene_GeneticDiagnosis</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">verificationStatus</code></td>
+      <td><code class="language-plaintext highlighter-rouge">refuted</code></td>
+      <td><code class="language-plaintext highlighter-rouge">refuted</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">clinicalStatus</code></td>
+      <td><code class="language-plaintext highlighter-rouge">inactive</code></td>
+      <td><code class="language-plaintext highlighter-rouge">inactive</code></td>
+    </tr>
+    <tr>
+      <td>Justification</td>
+      <td><code class="language-plaintext highlighter-rouge">note.text</code></td>
+      <td><code class="language-plaintext highlighter-rouge">note.text</code></td>
+    </tr>
+    <tr>
+      <td>Evidence</td>
+      <td>negative phenotypic finding</td>
+      <td>negative molecular finding</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="best-practices-for-excluded-diagnoses">Best practices for excluded diagnoses</h4>
 
@@ -600,7 +644,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 2, 2026 18:22+0000">2026-09-02</span>
+          Generated <span title="Thu, Sep 3, 2026 06:59+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

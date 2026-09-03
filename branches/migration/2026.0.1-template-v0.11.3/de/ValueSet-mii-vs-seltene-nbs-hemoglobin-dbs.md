@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-hemoglobin-dbs | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_VS_Seltene_NBS_Hemoglobin_DBS |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_VS_Seltene_NBS_Hemoglobin_DBS |
 
  
 Hämoglobin-Fraktionen in Trockenblut, bezogen auf das Gesamthämoglobin — die Messgrößen des Screenings auf Sichelzellkrankheit und weitere Hämoglobinopathien. Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb deutlich unvollständig gegenüber LOINC (rund ein Drittel der DBS-Hämoglobin-Codes); für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all. 
@@ -42,7 +42,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "MII VS Seltene Erkrankungen NBS Hämoglobin-Fraktionen (Trockenblut)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T18:22:51+00:00",
+  "date" : "2026-09-03T06:59:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -12,8 +12,8 @@
 
 In der Modellierung seltener Erkrankungen unterscheiden wir zwischen zwei Arten der Diagnosestellung:
 
-1. **Klinische Diagnose**(`MII_PR_SE_ClinicalDiagnosis`) - Basierend auf phänotypischen Merkmalen
-1. **Genetische Diagnose**(`MII_PR_SE_GeneticDiagnosis`) - Molekulargenetisch bestätigt
+1. **Klinische Diagnose**(`MII_PR_Seltene_ClinicalDiagnosis`) - Basierend auf phänotypischen Merkmalen
+1. **Genetische Diagnose**(`MII_PR_Seltene_GeneticDiagnosis`) - Molekulargenetisch bestätigt
 
 Diese Unterscheidung ist wichtig, da viele seltene Erkrankungen zunächst klinisch vermutet und später genetisch bestätigt werden.
 
@@ -29,12 +29,12 @@ Die klinische Diagnose wird verwendet, wenn:
 
 ### Besonderheiten
 
-* **HPO-Codes**: Zusätzlicher Slice für Human Phenotype Ontology Codes
+* **HPO-Codes**: Zusätzlicher Slice `code.coding[hpo]` (0..*), required gebunden an das ValueSet der HPO-Phänotypcodes
 * **Phänotypische Evidenz**: Evidence.detail verweist auf HPO-kodierte Symptom-Observations
-* **Verifikationsstatus**: Typischerweise "provisional" oder "differential"
-* **Kategorie**: Optional spezifische Kategorisierung (z.B. "Syndrome", "Rare disease")
+* **Verifikationsstatus**: Vom Profil **nicht** eingeschränkt (0..1, geerbte required- Bindung an `condition-ver-status`); empfohlen "provisional" oder "differential", solange die genetische Bestätigung aussteht
+* **Kategorie**: `category` ist Pflicht (1..*), der Wert bleibt frei. Er beschreibt die Rolle im Record (`problem-list-item` oder `encounter-diagnosis`), nicht die Art der Erkrankung — eine modulweite Bindung an Krankheitsarten waere hier fachlich falsch.
 
-### Beispiel FSH
+### Strukturvergleich
 
 ![](diagnose-klinisch-vs-genetisch.svg)
 
@@ -53,27 +53,22 @@ Die genetische Diagnose wird verwendet, wenn:
 ### Besonderheiten
 
 * **OMIM-Codes**: Zusätzlicher Slice für Online Mendelian Inheritance in Man Codes
-* **MolGen-Evidenz**: Evidence.detail MUSS auf MolGen-Ressourcen verweisen: 
+* **Genetische Evidenz**: `evidence` ist Pflicht (1..**), `evidence.detail` (1..**) verweist auf Observation oder DiagnosticReport. Das Profil schreibt die Zielprofile nicht vor; empfohlen sind die MolGen-Ressourcen: 
 * `MII_PR_MolGen_Variante` für einzelne Varianten
 * `MII_PR_MolGen_DiagnostischeImplikation` für umfassende genetische Berichte
  
-* **Verifikationsstatus**: Typischerweise "confirmed"
-* **Genetische Zusatzinformationen**: Penetranz, genetische Basis
+* **Genetische Evidenz-Kennzeichnung**: `evidence.code.coding[geneticEvidence]` trägt `106221001 | Genetic finding |`
+* **Verifikationsstatus**: Vom Profil **nicht** eingeschränkt; empfohlen "confirmed"
+* **Genetische Zusatzinformation**: Extension `penetrance`
 * **Kategorie**: PFLICHT: `782964007 | Genetic disease |` zur eindeutigen Kennzeichnung
-
-### Beispiel FSH
 
 ## Paralleles Diagnosemodell
 
 Bei seltenen Erkrankungen existieren klinische und genetische Diagnosen **parallel** zueinander:
 
-### 1. Verdachtsdiagnose (Screening/Initial)
-
 ![](diagnose-parallelmodell.svg)
 
-### 2. Klinische Diagnose
-
-### 3. Genetische Diagnose (parallel zur klinischen)
+Das Diagramm zeigt die drei Stufen: Verdachtsdiagnose aus Screening oder Erstkontakt, klinische Diagnose nach phänotypischer Abklärung, genetische Diagnose nach molekulargenetischer Bestätigung.
 
 **Wichtig:** Die genetische Diagnose ersetzt NICHT die klinische Diagnose. Beide existieren parallel und ergänzen sich gegenseitig.
 
@@ -120,18 +115,20 @@ Beide Diagnosen bleiben als eigenständige Ressourcen erhalten und dokumentieren
 
 ## Validierung
 
-### Pflichtfelder Klinische Diagnose
+### Checkliste Klinische Diagnose
 
-* Mindestens ein HPO-Code im code.coding Slice
-* Evidence.detail mit Verweis auf phänotypische Observations
-* Angemessener verificationStatus
+* `category` gesetzt — **Pflicht** (1..*)
+* HPO-Code in `code.coding[hpo]`, sofern der Phänotyp bekannt ist (das Profil erzwingt ihn nicht, für seltene Erkrankungen ist er aber der eigentliche Gehalt)
+* `evidence.detail` mit Verweis auf phänotypische Observations
+* Angemessener `verificationStatus`
 
-### Pflichtfelder Genetische Diagnose
+### Checkliste Genetische Diagnose
 
-* OMIM-Code wenn verfügbar
-* Mindestens eine evidence.detail zu MolGen-Ressource
-* verificationStatus = confirmed (bei bestätigter Diagnose)
-* evidence.code mit "Genetic finding"
+* `category` = `782964007 | Genetic disease |` — **Pflicht**, fester Wert
+* Mindestens eine `evidence` mit `evidence.detail` — **Pflicht** (1..*)
+* OMIM-Code, wenn verfügbar
+* `evidence.code.coding[geneticEvidence]` = `106221001 | Genetic finding |`
+* `verificationStatus = confirmed` bei bestätigter Diagnose
 
 ## Ausgeschlossene Diagnosen
 
@@ -148,9 +145,15 @@ Bei seltenen Erkrankungen ist die Dokumentation ausgeschlossener Diagnosen essen
 
 ### Modellierung ausgeschlossener Diagnosen
 
-#### Klinisch ausgeschlossen
+Ausgeschlossene Diagnosen nutzen dasselbe Profil wie bestätigte; unterschieden wird allein über den Status:
 
-#### Genetisch ausgeschlossen
+| | | |
+| :--- | :--- | :--- |
+| Profil | `MII_PR_Seltene_ClinicalDiagnosis` | `MII_PR_Seltene_GeneticDiagnosis` |
+| `verificationStatus` | `refuted` | `refuted` |
+| `clinicalStatus` | `inactive` | `inactive` |
+| Begründung | `note.text` | `note.text` |
+| Evidenz | negativer phänotypischer Befund | negativer molekulargenetischer Befund |
 
 ### Best Practices für ausgeschlossene Diagnosen
 

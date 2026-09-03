@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-02 | *Computable Name*:MII_PR_Seltene_Studieneinschluss_Anfrage |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Seltene_Studieneinschluss_Anfrage |
 
  
 Anfrage zum Studieneinschluss 
@@ -57,7 +57,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-st
   "name" : "MII_PR_Seltene_Studieneinschluss_Anfrage",
   "title" : "MII PR SE Studieneinschluss Anfrage",
   "status" : "active",
-  "date" : "2026-09-02T18:22:51+00:00",
+  "date" : "2026-09-03T06:59:35+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
