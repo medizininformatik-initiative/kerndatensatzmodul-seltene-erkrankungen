@@ -30,7 +30,7 @@ Profile: [MII PR SE Therapieempfehlung Nicht-Medikamentös](StructureDefinition-
 
 **authoredOn**: 2024-07-29
 
-**reasonReference**: [Infantile Spinale Muskelatrophie Typ 1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Condition/sma-diagnosis)
+**reasonReference**: [Infantile Spinale Muskelatrophie Typ 1](Condition-mii-exa-seltene-condition-sma-genetic.md)
 
 **note**: 
 
@@ -87,7 +87,7 @@ Regelmäßige Physiotherapie 2x wöchentlich zur Kontrakturprophylaxe und Erhalt
   },
   "authoredOn" : "2024-07-29",
   "reasonReference" : [{
-    "reference" : "Condition/sma-diagnosis",
+    "reference" : "Condition/mii-exa-seltene-condition-sma-genetic",
     "display" : "Infantile Spinale Muskelatrophie Typ 1"
   }],
   "note" : [{

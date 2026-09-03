@@ -30,9 +30,9 @@ Profile: [MII PR SE Clinical Diagnosis](StructureDefinition-mii-pr-seltene-clini
 
 **recordedDate**: 2024-10-01
 
-> **evidence****code**: Laktat normal**detail**: [Observation/lactate-normal](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/lactate-normal)
+> **evidence****code**: Laktat normal**detail**: [Observation Lactate [Moles/volume] in Serum or Plasma](Observation-mii-exa-seltene-lactate-normal.md)
 
-> **evidence****code**: Muskelbiopsie unauffällig**detail**: [DiagnosticReport/muscle-biopsy-normal](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/DiagnosticReport/muscle-biopsy-normal)
+> **evidence****code**: Muskelbiopsie unauffällig**detail**: [Diagnostic Report for 'Comprehensive pathology report panel' for '->Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'](DiagnosticReport-mii-exa-seltene-muscle-biopsy-normal.md)
 
 **note**: 
 
@@ -98,7 +98,7 @@ Metabolische Myopathie ausgeschlossen. Laktat in Ruhe und unter Belastung normwe
       "text" : "Laktat normal"
     }],
     "detail" : [{
-      "reference" : "Observation/lactate-normal"
+      "reference" : "Observation/mii-exa-seltene-lactate-normal"
     }]
   },
   {
@@ -106,7 +106,7 @@ Metabolische Myopathie ausgeschlossen. Laktat in Ruhe und unter Belastung normwe
       "text" : "Muskelbiopsie unauffällig"
     }],
     "detail" : [{
-      "reference" : "DiagnosticReport/muscle-biopsy-normal"
+      "reference" : "DiagnosticReport/mii-exa-seltene-muscle-biopsy-normal"
     }]
   }],
   "note" : [{

@@ -26,7 +26,7 @@ Profile: [MII PR SE Genetic Diagnosis](StructureDefinition-mii-pr-seltene-geneti
 
 **subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
-**encounter**: [Encounter/genetic-consultation](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/genetic-consultation)
+**encounter**: [Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Genetic counseling; period = 2024-09-15 --> 2024-09-15](Encounter-mii-exa-seltene-encounter-genetic-consultation.md)
 
 **onset**: 2024-07-01
 
@@ -100,7 +100,7 @@ Homozygote Deletion des SMN1-Gens nachgewiesen. 0 Kopien SMN1, 2 Kopien SMN2. Di
     "reference" : "Patient/mii-exa-seltene-patient"
   },
   "encounter" : {
-    "reference" : "Encounter/genetic-consultation"
+    "reference" : "Encounter/mii-exa-seltene-encounter-genetic-consultation"
   },
   "onsetDateTime" : "2024-07-01",
   "recordedDate" : "2024-07-26",

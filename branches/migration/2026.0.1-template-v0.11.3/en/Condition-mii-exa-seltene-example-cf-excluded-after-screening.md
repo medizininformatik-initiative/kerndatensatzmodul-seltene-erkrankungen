@@ -35,7 +35,7 @@ Profile: [MII PR SE Genetic Diagnosis](StructureDefinition-mii-pr-seltene-geneti
 | | | |
 | :--- | :--- | :--- |
 | - | **Code** | **Detail** |
-| * | Genetic finding | [Observation/molgen-cftr-heterozygous-carrier](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/molgen-cftr-heterozygous-carrier) |
+| * | Genetic finding | [Observation Genetic variant assessment](Observation-mii-exa-seltene-molgen-cftr-heterozygous-carrier.md) |
 
 **note**: 
 
@@ -106,7 +106,7 @@ Heterozygoter Anlageträger für F508del. Zweite Mutation ausgeschlossen. IRT-Er
       }]
     }],
     "detail" : [{
-      "reference" : "Observation/molgen-cftr-heterozygous-carrier"
+      "reference" : "Observation/mii-exa-seltene-molgen-cftr-heterozygous-carrier"
     }]
   }],
   "note" : [{

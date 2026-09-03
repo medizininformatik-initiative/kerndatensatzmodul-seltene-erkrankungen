@@ -31,7 +31,7 @@ Profile: [MII PR SE Genetic Diagnosis](StructureDefinition-mii-pr-seltene-geneti
 | | | |
 | :--- | :--- | :--- |
 | - | **Code** | **Detail** |
-| * | PAH-Gen Mutation c.1222C>T (p.R408W) | [Observation/pku-genetic-variant](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/pku-genetic-variant) |
+| * | PAH-Gen Mutation c.1222C>T (p.R408W) | [Observation Genetic variant assessment](Observation-mii-exa-seltene-molgen-variant-pah-pku.md) |
 
 **note**: 
 
@@ -103,7 +103,7 @@ Klassische PKU mit PAH-Gen Mutation c.1222C>T, erfordert lebenslange phenylalani
       "text" : "PAH-Gen Mutation c.1222C>T (p.R408W)"
     }],
     "detail" : [{
-      "reference" : "Observation/pku-genetic-variant"
+      "reference" : "Observation/mii-exa-seltene-molgen-variant-pah-pku"
     }]
   }],
   "note" : [{

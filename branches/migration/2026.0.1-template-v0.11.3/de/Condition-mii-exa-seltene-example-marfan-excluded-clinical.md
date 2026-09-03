@@ -26,7 +26,7 @@ Profile: [MII PR SE Clinical Diagnosis](StructureDefinition-mii-pr-seltene-clini
 
 **subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
-**encounter**: [Encounter/cardiology-consultation](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/cardiology-consultation)
+**encounter**: [Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Seen in cardiac clinic (finding); period = 2024-12-15 --> 2024-12-15](Encounter-mii-exa-seltene-encounter-cardiology-consultation.md)
 
 **abatement**: 2024-12-15
 
@@ -34,7 +34,7 @@ Profile: [MII PR SE Clinical Diagnosis](StructureDefinition-mii-pr-seltene-clini
 
 > **evidence****code**: Normale Aortenwurzel**detail**: [Observation Aorta root Diameter by US 2D](Observation-mii-exa-seltene-aortic-root-normal.md)
 
-> **evidence****code**: Keine Linsenluxation**detail**: [Observation/lens-examination-normal](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/lens-examination-normal)
+> **evidence****code**: Keine Linsenluxation**detail**: [Observation Ectopia lentis](Observation-mii-exa-seltene-lens-examination-normal.md)
 
 **note**: 
 
@@ -94,7 +94,7 @@ Marfan-Syndrom klinisch ausgeschlossen. Ghent-Kriterien nicht erfüllt. Aortenwu
     "reference" : "Patient/mii-exa-seltene-patient"
   },
   "encounter" : {
-    "reference" : "Encounter/cardiology-consultation"
+    "reference" : "Encounter/mii-exa-seltene-encounter-cardiology-consultation"
   },
   "abatementDateTime" : "2024-12-15",
   "recordedDate" : "2024-12-15",
@@ -111,7 +111,7 @@ Marfan-Syndrom klinisch ausgeschlossen. Ghent-Kriterien nicht erfüllt. Aortenwu
       "text" : "Keine Linsenluxation"
     }],
     "detail" : [{
-      "reference" : "Observation/lens-examination-normal"
+      "reference" : "Observation/mii-exa-seltene-lens-examination-normal"
     }]
   }],
   "note" : [{

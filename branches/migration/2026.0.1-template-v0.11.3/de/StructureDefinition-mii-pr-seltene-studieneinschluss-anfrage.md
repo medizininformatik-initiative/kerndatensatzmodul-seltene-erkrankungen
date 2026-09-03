@@ -32,6 +32,7 @@ Beispielinstanzen sind auf der Profilseite im Abschnitt „Examples" verlinkt.
 **Usages:**
 
 * Refer to this Profile: [MII PR SE Therapieplan](StructureDefinition-mii-pr-seltene-therapieplan.md)
+* Examples for this Profile: [ServiceRequest/mii-exa-seltene-studieneinschluss-anfrage](ServiceRequest-mii-exa-seltene-studieneinschluss-anfrage.md)
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.json)
@@ -145,7 +146,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Studieneinschluss_Anfrage",
   "title" : "MII PR SE Studieneinschluss Anfrage",
   "status" : "active",
-  "date" : "2026-09-03T09:08:22+00:00",
+  "date" : "2026-09-03T09:27:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

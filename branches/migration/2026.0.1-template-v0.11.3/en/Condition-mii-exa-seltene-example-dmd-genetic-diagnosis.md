@@ -28,15 +28,15 @@ Profile: [MII PR SE Genetic Diagnosis](StructureDefinition-mii-pr-seltene-geneti
 
 **recordedDate**: 2024-09-15
 
-> **evidence****code**: Genetic finding**detail**: [Observation Genetic variant assessment](Observation-mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47.md)
+> **evidence****code**: Genetic finding**detail**: [Observation Genetic variant assessment](Observation-mii-exa-seltene-molgen-variant-dmd-deletion-exon45.md)
 
-> **evidence****code**: Genetic test**detail**: [Diagnostic Report for 'Genetic analysis report' for '->Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'](DiagnosticReport-mii-exa-seltene-molgen-diagnostic-dmd.md)
+> **evidence****code**: Genetic test**detail**: [Diagnostic Report for 'Genetic analysis report' for '->Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'](DiagnosticReport-mii-exa-seltene-molgen-diagnostic-dmd-duchenne.md)
 
 **note**: 
 
 > 
 
-Deletion der Exons 45-47 im DMD-Gen nachgewiesen. Out-of-frame Deletion führt zu komplettem Funktionsverlust des Dystrophin-Proteins.
+Deletion des Exons 45 im DMD-Gen nachgewiesen. Out-of-frame Deletion mit Leserasterverschiebung, kein funktionsfaehiges Dystrophin. (Bis 2026-09-03 stand hier die Deletion der Exons 45-47 — die ist in-frame und fuehrt zu Becker, nicht zu Duchenne.)
 
 
 
@@ -105,7 +105,7 @@ Deletion der Exons 45-47 im DMD-Gen nachgewiesen. Out-of-frame Deletion führt z
       }]
     }],
     "detail" : [{
-      "reference" : "Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47"
+      "reference" : "Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45"
     }]
   },
   {
@@ -117,11 +117,11 @@ Deletion der Exons 45-47 im DMD-Gen nachgewiesen. Out-of-frame Deletion führt z
       }]
     }],
     "detail" : [{
-      "reference" : "DiagnosticReport/mii-exa-seltene-molgen-diagnostic-dmd"
+      "reference" : "DiagnosticReport/mii-exa-seltene-molgen-diagnostic-dmd-duchenne"
     }]
   }],
   "note" : [{
-    "text" : "Deletion der Exons 45-47 im DMD-Gen nachgewiesen. Out-of-frame Deletion führt zu komplettem Funktionsverlust des Dystrophin-Proteins."
+    "text" : "Deletion des Exons 45 im DMD-Gen nachgewiesen. Out-of-frame Deletion mit Leserasterverschiebung, kein funktionsfaehiges Dystrophin. (Bis 2026-09-03 stand hier die Deletion der Exons 45-47 — die ist in-frame und fuehrt zu Becker, nicht zu Duchenne.)"
   }]
 }
 

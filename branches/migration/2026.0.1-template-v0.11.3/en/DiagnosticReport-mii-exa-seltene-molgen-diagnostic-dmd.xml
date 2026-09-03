@@ -4,7 +4,7 @@
   <id value="mii-exa-seltene-molgen-diagnostic-dmd"/>
   <language value="en"/>
   <text>
-    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DiagnosticReport mii-exa-seltene-molgen-diagnostic-dmd</b></p><a name="mii-exa-seltene-molgen-diagnostic-dmd"> </a><a name="hcmii-exa-seltene-molgen-diagnostic-dmd"> </a><h2><span title="Codes:{http://loinc.org 51969-4}">Genetic analysis report</span> (<span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 LAB}">Laboratory</span>) </h2><table class="grid"><tr><td>Subject</td><td>Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</td></tr><tr><td>Relevant Time</td><td>2024-09-15</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td></tr><tr><td><a href="Observation-mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47.html"><span title="Codes:{http://loinc.org 69548-6}">Genetic variant assessment</span></a></td><td><span title="Codes:{http://snomed.info/sct 10828004}">Positive</span></td><td>Final</td></tr></table><p>Out-of-frame Deletion der Exons 45-47 im DMD-Gen. Diese Mutation führt zu einem vorzeitigen Stopcodon und komplettem Verlust des funktionsfähigen Dystrophin-Proteins. Diagnose: Duchenne-Muskeldystrophie.</p><p><b>Coded Conclusions:</b></p><ul><li><span title="Codes:{http://omim.org 310200}">Duchenne muscular dystrophy</span></li></ul></div>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DiagnosticReport mii-exa-seltene-molgen-diagnostic-dmd</b></p><a name="mii-exa-seltene-molgen-diagnostic-dmd"> </a><a name="hcmii-exa-seltene-molgen-diagnostic-dmd"> </a><h2><span title="Codes:{http://loinc.org 51969-4}">Genetic analysis report</span> (<span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 LAB}">Laboratory</span>) </h2><table class="grid"><tr><td>Subject</td><td>Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</td></tr><tr><td>Relevant Time</td><td>2024-09-15</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td></tr><tr><td><a href="Observation-mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47.html"><span title="Codes:{http://loinc.org 69548-6}">Genetic variant assessment</span></a></td><td><span title="Codes:{http://snomed.info/sct 10828004}">Positive</span></td><td>Final</td></tr></table><p>In-frame Deletion der Exons 45-47 im DMD-Gen (c.6439-?_6912+?del, 474 Basen — durch drei teilbar, das Leseraster bleibt erhalten). Es entsteht ein verkürztes, aber teilfunktionsfähiges Dystrophin. Vereinbar mit Becker-Muskeldystrophie; Duchenne-Muskeldystrophie ist damit ausgeschlossen.</p><p><b>Coded Conclusions:</b></p><ul><li><span title="Codes:{http://omim.org 300376}">Becker muscular dystrophy</span></li></ul></div>
   </text>
   <status value="final"/>
   <category>
@@ -28,12 +28,12 @@
   <result>
     <reference value="Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47"/>
   </result>
-  <conclusion value="Out-of-frame Deletion der Exons 45-47 im DMD-Gen. Diese Mutation führt zu einem vorzeitigen Stopcodon und komplettem Verlust des funktionsfähigen Dystrophin-Proteins. Diagnose: Duchenne-Muskeldystrophie."/>
+  <conclusion value="In-frame Deletion der Exons 45-47 im DMD-Gen (c.6439-?_6912+?del, 474 Basen — durch drei teilbar, das Leseraster bleibt erhalten). Es entsteht ein verkürztes, aber teilfunktionsfähiges Dystrophin. Vereinbar mit Becker-Muskeldystrophie; Duchenne-Muskeldystrophie ist damit ausgeschlossen."/>
   <conclusionCode>
     <coding>
       <system value="http://omim.org"/>
-      <code value="310200"/>
-      <display value="Duchenne muscular dystrophy"/>
+      <code value="300376"/>
+      <display value="Becker muscular dystrophy"/>
     </coding>
   </conclusionCode>
 </DiagnosticReport>

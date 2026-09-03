@@ -1,10 +1,10 @@
-# DMD Diagnostische Implikation - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# DMD Exon 45-47 - Diagnostische Implikation (Becker) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **DMD Diagnostische Implikation**
+* **DMD Exon 45-47 - Diagnostische Implikation (Becker)**
 
-## Beispiel DiagnosticReport: DMD Diagnostische Implikation
+## Beispiel DiagnosticReport: DMD Exon 45-47 - Diagnostische Implikation (Becker)
 
 -------
 
@@ -25,11 +25,11 @@
   * **Value**: Positive
   * **Flags**: Final
 
-Out-of-frame Deletion der Exons 45-47 im DMD-Gen. Diese Mutation führt zu einem vorzeitigen Stopcodon und komplettem Verlust des funktionsfähigen Dystrophin-Proteins. Diagnose: Duchenne-Muskeldystrophie.
+In-frame Deletion der Exons 45-47 im DMD-Gen (c.6439-?_6912+?del, 474 Basen — durch drei teilbar, das Leseraster bleibt erhalten). Es entsteht ein verkürztes, aber teilfunktionsfähiges Dystrophin. Vereinbar mit Becker-Muskeldystrophie; Duchenne-Muskeldystrophie ist damit ausgeschlossen.
 
 **Coded Conclusions:**
 
-* Duchenne muscular dystrophy
+* Becker muscular dystrophy
 
 
 
@@ -61,12 +61,12 @@ Out-of-frame Deletion der Exons 45-47 im DMD-Gen. Diese Mutation führt zu einem
   "result" : [{
     "reference" : "Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47"
   }],
-  "conclusion" : "Out-of-frame Deletion der Exons 45-47 im DMD-Gen. Diese Mutation führt zu einem vorzeitigen Stopcodon und komplettem Verlust des funktionsfähigen Dystrophin-Proteins. Diagnose: Duchenne-Muskeldystrophie.",
+  "conclusion" : "In-frame Deletion der Exons 45-47 im DMD-Gen (c.6439-?_6912+?del, 474 Basen — durch drei teilbar, das Leseraster bleibt erhalten). Es entsteht ein verkürztes, aber teilfunktionsfähiges Dystrophin. Vereinbar mit Becker-Muskeldystrophie; Duchenne-Muskeldystrophie ist damit ausgeschlossen.",
   "conclusionCode" : [{
     "coding" : [{
       "system" : "http://omim.org",
-      "code" : "310200",
-      "display" : "Duchenne muscular dystrophy"
+      "code" : "300376",
+      "display" : "Becker muscular dystrophy"
     }]
   }]
 }

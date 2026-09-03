@@ -24,7 +24,7 @@ Profile: [MII PR SE Therapieempfehlung Systemische Therapie](StructureDefinition
 
 **subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-mii-exa-seltene-patient-sma-001.md)
 
-**reasonReference**: [Spinale Muskelatrophie Typ 1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Condition/sma-diagnosis)
+**reasonReference**: [Spinale Muskelatrophie Typ 1](Condition-mii-exa-seltene-condition-sma-genetic.md)
 
 **note**: 
 
@@ -72,7 +72,7 @@ Einmalige intravenöse Infusion der Gentherapie
     "reference" : "Patient/mii-exa-seltene-patient-sma-001"
   },
   "reasonReference" : [{
-    "reference" : "Condition/sma-diagnosis",
+    "reference" : "Condition/mii-exa-seltene-condition-sma-genetic",
     "display" : "Spinale Muskelatrophie Typ 1"
   }],
   "note" : [{

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-seltene-muscle-biopsy-normal"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DiagnosticReport mii-exa-seltene-muscle-biopsy-normal</b></p><a name="mii-exa-seltene-muscle-biopsy-normal"> </a><a name="hcmii-exa-seltene-muscle-biopsy-normal"> </a><h2><span title="Codes:{http://loinc.org 60567-5}">Comprehensive pathology report panel</span> (<span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 LAB}">Laboratory</span>) </h2><table class="grid"><tr><td>Subject</td><td>Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</td></tr><tr><td>Relevant Time</td><td>2024-10-01</td></tr></table><p><b>Report Details</b></p><p>Regelrechte Faserstruktur, keine ragged-red fibers, Atmungskettenenzyme unauffaellig. Kein Hinweis auf mitochondriale Pathologie.</p><p><b>Coded Conclusions:</b></p><ul><li><span title="Codes:{http://snomed.info/sct 17621005}">Normal</span></li></ul></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="LAB"/>
+      <display value="Laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="60567-5"/>
+      <display value="Comprehensive pathology report panel"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-seltene-patient"/>
+  </subject>
+  <effectiveDateTime value="2024-10-01"/>
+  <conclusion value="Regelrechte Faserstruktur, keine ragged-red fibers, Atmungskettenenzyme unauffaellig. Kein Hinweis auf mitochondriale Pathologie."/>
+  <conclusionCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="17621005"/>
+      <display value="Normal"/>
+    </coding>
+  </conclusionCode>
+</DiagnosticReport>

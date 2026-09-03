@@ -35,7 +35,7 @@ Profile: [MII PR SE Clinical Diagnosis](StructureDefinition-mii-pr-seltene-clini
 | | | |
 | :--- | :--- | :--- |
 | - | **Code** | **Detail** |
-| * | Beighton-Score niedrig | [Observation/beighton-score-low](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/beighton-score-low) |
+| * | Beighton-Score niedrig | [Observation Joint hypermobility](Observation-mii-exa-seltene-beighton-score-low.md) |
 
 **note**: 
 
@@ -101,7 +101,7 @@ EDS als Differentialdiagnose ausgeschlossen. Beighton-Score 2/9, keine Hauthyper
       "text" : "Beighton-Score niedrig"
     }],
     "detail" : [{
-      "reference" : "Observation/beighton-score-low"
+      "reference" : "Observation/mii-exa-seltene-beighton-score-low"
     }]
   }],
   "note" : [{

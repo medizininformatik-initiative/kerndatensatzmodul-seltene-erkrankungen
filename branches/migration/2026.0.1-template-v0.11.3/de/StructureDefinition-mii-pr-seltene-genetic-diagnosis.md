@@ -239,7 +239,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_GeneticDiagnosis",
   "title" : "MII PR SE Genetic Diagnosis",
   "status" : "active",
-  "date" : "2026-09-03T09:08:22+00:00",
+  "date" : "2026-09-03T09:27:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

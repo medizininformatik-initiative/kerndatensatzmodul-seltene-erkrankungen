@@ -26,7 +26,7 @@ Profile: [MII PR SE Clinical Diagnosis](StructureDefinition-mii-pr-seltene-clini
 
 **subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
-**encounter**: [Encounter/cardiology-consultation](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Encounter/cardiology-consultation)
+**encounter**: [Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Seen in cardiac clinic (finding); period = 2024-12-15 --> 2024-12-15](Encounter-mii-exa-seltene-encounter-cardiology-consultation.md)
 
 **recordedDate**: 2024-12-15
 
@@ -101,7 +101,7 @@ Klinische Diagnose basierend auf Ghent-Kriterien. Patient erfüllt Major-Kriteri
     "reference" : "Patient/mii-exa-seltene-patient"
   },
   "encounter" : {
-    "reference" : "Encounter/cardiology-consultation"
+    "reference" : "Encounter/mii-exa-seltene-encounter-cardiology-consultation"
   },
   "recordedDate" : "2024-12-15",
   "evidence" : [{
