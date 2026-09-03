@@ -83,7 +83,7 @@ Beispielinstanzen sind auf der Profilseite im Abschnitt „Examples" verlinkt.
 **Usages:**
 
 * Refer to this Profile: [MII PR SE Therapieplan](StructureDefinition-mii-pr-seltene-therapieplan.md)
-* Examples for this Profile: [ServiceRequest/example-early-detection-recommendation](ServiceRequest-example-early-detection-recommendation.md), [ServiceRequest/example-nutrition-therapy-recommendation](ServiceRequest-example-nutrition-therapy-recommendation.md), [ServiceRequest/mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan](ServiceRequest-mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan.md), [ServiceRequest/mii-exa-seltene-therapieempfehlung-genetische-beratung](ServiceRequest-mii-exa-seltene-therapieempfehlung-genetische-beratung.md) and [ServiceRequest/mii-exa-seltene-therapieempfehlung-physiotherapie-sma](ServiceRequest-mii-exa-seltene-therapieempfehlung-physiotherapie-sma.md)
+* Examples for this Profile: [ServiceRequest/mii-exa-seltene-example-early-detection-recommendation](ServiceRequest-mii-exa-seltene-example-early-detection-recommendation.md), [ServiceRequest/mii-exa-seltene-example-nutrition-therapy-recommendation](ServiceRequest-mii-exa-seltene-example-nutrition-therapy-recommendation.md), [ServiceRequest/mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan](ServiceRequest-mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan.md), [ServiceRequest/mii-exa-seltene-therapieempfehlung-genetische-beratung](ServiceRequest-mii-exa-seltene-therapieempfehlung-genetische-beratung.md) and [ServiceRequest/mii-exa-seltene-therapieempfehlung-physiotherapie-sma](ServiceRequest-mii-exa-seltene-therapieempfehlung-physiotherapie-sma.md)
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.json)
@@ -187,7 +187,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes",
   "title" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
   "status" : "active",
-  "date" : "2026-09-03T07:17:59+00:00",
+  "date" : "2026-09-03T07:33:22+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

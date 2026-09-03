@@ -20,7 +20,7 @@ Profile: [MII PR SE Geburtslänge](StructureDefinition-mii-pr-seltene-geburtslae
 
 **code**: Body height Measured --at birth
 
-**subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-patient-sma-001.md)
+**subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-mii-exa-seltene-patient-sma-001.md)
 
 **effective**: 2024-07-01
 
@@ -52,7 +52,7 @@ Profile: [MII PR SE Geburtslänge](StructureDefinition-mii-pr-seltene-geburtslae
     }]
   },
   "subject" : {
-    "reference" : "Patient/patient-sma-001"
+    "reference" : "Patient/mii-exa-seltene-patient-sma-001"
   },
   "effectiveDateTime" : "2024-07-01",
   "valueQuantity" : {

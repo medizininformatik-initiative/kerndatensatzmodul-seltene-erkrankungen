@@ -1,0 +1,64 @@
+{
+  "resourceType" : "Condition",
+  "id" : "mii-exa-seltene-example-eds-excluded-clinical",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2027.0.0-ballot.rc1"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Condition mii-exa-seltene-example-eds-excluded-clinical</b></p><a name=\"de-mii-exa-seltene-example-eds-excluded-clinical\"> </a><a name=\"de-hcmii-exa-seltene-example-eds-excluded-clinical\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-seltene-clinical-diagnosis.html\">MII PR SE Clinical Diagnosis</a> version: 2027.0.0-ballot.rc1</p></div><p><b>Condition Asserted Date</b>: 2024-11-20</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical inactive}\">Inactive</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status refuted}\">Refuted</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm Q79.6}, {http://www.orpha.net 98249}\">Ehlers-Danlos-Syndrom (ausgeschlossen)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-seltene-patient.html\">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>abatement</b>: 2024-11-20</p><p><b>recordedDate</b>: 2024-11-20</p><h3>Evidences</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">Beighton-Score niedrig</span></td><td><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Observation/beighton-score-low\">Observation/beighton-score-low</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>EDS als Differentialdiagnose ausgeschlossen. Beighton-Score 2/9, keine Hauthyperextensibilität, keine atrophen Narben.</p>\n</div></blockquote></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+    "valueDateTime" : "2024-11-20"
+  }],
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "inactive"
+    }]
+  },
+  "verificationStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+      "code" : "refuted"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+      "code" : "encounter-diagnosis"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "version" : "2024",
+      "code" : "Q79.6",
+      "display" : "Ehlers-Danlos-Syndrom"
+    },
+    {
+      "system" : "http://www.orpha.net",
+      "code" : "98249",
+      "display" : "Ehlers-Danlos syndrome"
+    }],
+    "text" : "Ehlers-Danlos-Syndrom (ausgeschlossen)"
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-seltene-patient"
+  },
+  "abatementDateTime" : "2024-11-20",
+  "recordedDate" : "2024-11-20",
+  "evidence" : [{
+    "code" : [{
+      "text" : "Beighton-Score niedrig"
+    }],
+    "detail" : [{
+      "reference" : "Observation/beighton-score-low"
+    }]
+  }],
+  "note" : [{
+    "text" : "EDS als Differentialdiagnose ausgeschlossen. Beighton-Score 2/9, keine Hauthyperextensibilität, keine atrophen Narben."
+  }]
+}

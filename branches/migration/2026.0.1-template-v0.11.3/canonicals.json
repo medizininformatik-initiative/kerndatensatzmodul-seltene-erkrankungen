@@ -3,7 +3,7 @@
   "type" : "CapabilityStatement",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "MII_CPS_SE_CapabilityStatement"
+  "name" : "MII_CPS_Seltene_CapabilityStatement"
 },
 {
   "id" : "mii-cs-seltene-empfehlung-status-begruendung",
@@ -52,7 +52,7 @@
   "type" : "ImplementationGuide",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "MIIIGModulSelteneErkrankungen"
+  "name" : "MII_IG_Seltene_Erkrankungen"
 },
 {
   "id" : "mii-exa-seltene-register-katalog-euro-nmd",
@@ -66,7 +66,7 @@
   "type" : "StructureDefinition",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "MII_LM_SE"
+  "name" : "MII_LM_Seltene"
 },
 {
   "id" : "mii-ex-seltene-empfehlung-prioritaet",
@@ -87,7 +87,7 @@
   "type" : "StructureDefinition",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "Penetrance"
+  "name" : "MII_EX_Seltene_Penetrance"
 },
 {
   "id" : "mii-ex-seltene-register",
@@ -97,11 +97,11 @@
   "name" : "MII_EX_Seltene_Register"
 },
 {
-  "id" : "mii-ex-von-se-betroffen",
+  "id" : "mii-ex-seltene-von-se-betroffen",
   "type" : "StructureDefinition",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-von-se-betroffen",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "VonSEBetroffen"
+  "name" : "MII_EX_Seltene_VonSEBetroffen"
 },
 {
   "id" : "mii-pr-seltene-blutgruppe",
@@ -276,7 +276,7 @@
   "type" : "ValueSet",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "ClinicalDiagnosisCategoryVS"
+  "name" : "MII_VS_Seltene_ClinicalDiagnosisCategory"
 },
 {
   "id" : "mii-vs-seltene-consanguinity",
@@ -297,14 +297,14 @@
   "type" : "ValueSet",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-genetic-basis",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "GeneticBasisValueSet"
+  "name" : "MII_VS_Seltene_GeneticBasis"
 },
 {
   "id" : "mii-vs-seltene-hpo-age-of-onset",
   "type" : "ValueSet",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-age-of-onset",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "HPOAgeOfOnsetValueSet"
+  "name" : "MII_VS_Seltene_HPOAgeOfOnset"
 },
 {
   "id" : "mii-vs-seltene-hpo-change-status",
@@ -318,28 +318,28 @@
   "type" : "ValueSet",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-inheritance-pattern",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "HPOInheritancePatternValueSet"
+  "name" : "MII_VS_Seltene_HPOInheritancePattern"
 },
 {
   "id" : "mii-vs-seltene-hpo-phenotypic-observation-codes",
   "type" : "ValueSet",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "HPOPhenotypicObservationCodes"
+  "name" : "MII_VS_Seltene_HPOPhenotypicObservationCodes"
 },
 {
   "id" : "mii-vs-seltene-hpo-presence-status",
   "type" : "ValueSet",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "HPOPresenceStatus"
+  "name" : "MII_VS_Seltene_HPOPresenceStatus"
 },
 {
   "id" : "mii-vs-seltene-hpo-severity",
   "type" : "ValueSet",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "HPOSeverity"
+  "name" : "MII_VS_Seltene_HPOSeverity"
 },
 {
   "id" : "mii-vs-seltene-icf",
@@ -416,7 +416,7 @@
   "type" : "ValueSet",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-penetrance",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "PenetranceValueSet"
+  "name" : "MII_VS_Seltene_Penetrance"
 },
 {
   "id" : "mii-vs-seltene-symptom-change-status-combined",
@@ -430,7 +430,7 @@
   "type" : "ValueSet",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-syndrome-category",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "SyndromeCategoryVS"
+  "name" : "MII_VS_Seltene_SyndromeCategory"
 },
 {
   "id" : "mii-vs-seltene-therapieempfehlung-strategie",
@@ -461,9 +461,9 @@
   "name" : "MII_VS_Seltene_TherapieempfehlungTyp"
 },
 {
-  "id" : "von-seltene-betroffen-vs",
+  "id" : "mii-vs-seltene-von-se-betroffen",
   "type" : "ValueSet",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/von-seltene-betroffen-vs",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-von-se-betroffen",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "VonSEBetroffenVS"
+  "name" : "MII_VS_Seltene_VonSEBetroffen"
 }]

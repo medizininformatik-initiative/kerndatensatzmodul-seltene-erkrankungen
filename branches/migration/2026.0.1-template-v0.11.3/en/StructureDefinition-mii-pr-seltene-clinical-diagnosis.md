@@ -34,7 +34,7 @@ Example instances are linked in the "Examples" section of the profile page.
 
 **Usages:**
 
-* Examples for this Profile: [Condition/condition-cataract](Condition-condition-cataract.md), [Condition/condition-marfan-clinical](Condition-condition-marfan-clinical.md), [Condition/condition-marfan-suspected](Condition-condition-marfan-suspected.md), [Condition/condition-sma-clinical](Condition-condition-sma-clinical.md)... Show 7 more, [Condition/condition-sma-suspected](Condition-condition-sma-suspected.md), [Condition/example-cf-clinical](Condition-example-cf-clinical.md), [Condition/example-eds-excluded-clinical](Condition-example-eds-excluded-clinical.md), [Condition/example-marfan-clinical-diagnosis](Condition-example-marfan-clinical-diagnosis.md), [Condition/example-marfan-excluded-clinical](Condition-example-marfan-excluded-clinical.md), [Condition/example-metabolic-myopathy-excluded](Condition-example-metabolic-myopathy-excluded.md) and [Condition/example-noonan-clinical-diagnosis](Condition-example-noonan-clinical-diagnosis.md)
+* Examples for this Profile: [Condition/mii-exa-seltene-condition-cataract](Condition-mii-exa-seltene-condition-cataract.md), [Condition/mii-exa-seltene-condition-marfan-clinical](Condition-mii-exa-seltene-condition-marfan-clinical.md), [Condition/mii-exa-seltene-condition-marfan-suspected](Condition-mii-exa-seltene-condition-marfan-suspected.md), [Condition/mii-exa-seltene-condition-sma-clinical](Condition-mii-exa-seltene-condition-sma-clinical.md)... Show 7 more, [Condition/mii-exa-seltene-condition-sma-suspected](Condition-mii-exa-seltene-condition-sma-suspected.md), [Condition/mii-exa-seltene-example-cf-clinical](Condition-mii-exa-seltene-example-cf-clinical.md), [Condition/mii-exa-seltene-example-eds-excluded-clinical](Condition-mii-exa-seltene-example-eds-excluded-clinical.md), [Condition/mii-exa-seltene-example-marfan-clinical-diagnosis](Condition-mii-exa-seltene-example-marfan-clinical-diagnosis.md), [Condition/mii-exa-seltene-example-marfan-excluded-clinical](Condition-mii-exa-seltene-example-marfan-excluded-clinical.md), [Condition/mii-exa-seltene-example-metabolic-myopathy-excluded](Condition-mii-exa-seltene-example-metabolic-myopathy-excluded.md) and [Condition/mii-exa-seltene-example-noonan-clinical-diagnosis](Condition-mii-exa-seltene-example-noonan-clinical-diagnosis.md)
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-clinical-diagnosis.json)
@@ -165,7 +165,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
   "name" : "MII_PR_Seltene_ClinicalDiagnosis",
   "title" : "MII PR SE Clinical Diagnosis",
   "status" : "active",
-  "date" : "2026-09-03T07:17:59+00:00",
+  "date" : "2026-09-03T07:33:22+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

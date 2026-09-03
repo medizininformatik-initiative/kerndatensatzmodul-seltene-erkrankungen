@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2025-01-21 | *Computable Name*:MII_CPS_SE_CapabilityStatement |
+| Active as of 2025-01-21 | *Computable Name*:MII_CPS_Seltene_CapabilityStatement |
 
  
 Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Seltene Erkrankungen der Medizininformatik Initiative zu implementieren. 
@@ -26,7 +26,7 @@ Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktione
   "id" : "mii-cps-seltene-capabilitystatement",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "MII_CPS_SE_CapabilityStatement",
+  "name" : "MII_CPS_Seltene_CapabilityStatement",
   "title" : "MII CPS Seltene Erkrankungen CapabilityStatement",
   "status" : "active",
   "experimental" : false,

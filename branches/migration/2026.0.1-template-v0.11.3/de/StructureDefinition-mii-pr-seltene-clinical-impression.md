@@ -82,7 +82,7 @@ Beispielinstanzen sind auf der Profilseite im Abschnitt „Examples" verlinkt.
 
 **Usages:**
 
-* Examples for this Profile: [ClinicalImpression/clinical-impression-erstvorstellung](ClinicalImpression-clinical-impression-erstvorstellung.md), [ClinicalImpression/clinical-impression-nachsorge](ClinicalImpression-clinical-impression-nachsorge.md) and [ClinicalImpression/clinical-impression-seltene-assessment](ClinicalImpression-clinical-impression-seltene-assessment.md)
+* Examples for this Profile: [ClinicalImpression/mii-exa-seltene-clinical-impression-erstvorstellung](ClinicalImpression-mii-exa-seltene-clinical-impression-erstvorstellung.md), [ClinicalImpression/mii-exa-seltene-clinical-impression-nachsorge](ClinicalImpression-mii-exa-seltene-clinical-impression-nachsorge.md) and [ClinicalImpression/mii-exa-seltene-clinical-impression-seltene-assessment](ClinicalImpression-mii-exa-seltene-clinical-impression-seltene-assessment.md)
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-clinical-impression.json)
@@ -168,7 +168,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_ClinicalImpression",
   "title" : "MII Profile SE Clinical Impression",
   "status" : "active",
-  "date" : "2026-09-03T07:17:59+00:00",
+  "date" : "2026-09-03T07:33:22+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

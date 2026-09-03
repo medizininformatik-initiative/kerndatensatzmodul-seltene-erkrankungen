@@ -7,7 +7,7 @@
   "language" : "de",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-seltene-geburtslaenge</b></p><a name=\"de-mii-exa-seltene-geburtslaenge\"> </a><a name=\"de-hcmii-exa-seltene-geburtslaenge\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-seltene-geburtslaenge.html\">MII PR SE Geburtslänge</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 89269-5}\">Body height Measured --at birth</span></p><p><b>subject</b>: <a href=\"Patient-patient-sma-001.html\">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-07-01</p><p><b>value</b>: 50 Zentimeter<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codecm = 'cm')</span></p></div>"
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-seltene-geburtslaenge</b></p><a name=\"de-mii-exa-seltene-geburtslaenge\"> </a><a name=\"de-hcmii-exa-seltene-geburtslaenge\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-seltene-geburtslaenge.html\">MII PR SE Geburtslänge</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 89269-5}\">Body height Measured --at birth</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-seltene-patient-sma-001.html\">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>effective</b>: 2024-07-01</p><p><b>value</b>: 50 Zentimeter<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codecm = 'cm')</span></p></div>"
   },
   "status" : "final",
   "category" : [{
@@ -24,7 +24,7 @@
     }]
   },
   "subject" : {
-    "reference" : "Patient/patient-sma-001"
+    "reference" : "Patient/mii-exa-seltene-patient-sma-001"
   },
   "effectiveDateTime" : "2024-07-01",
   "valueQuantity" : {

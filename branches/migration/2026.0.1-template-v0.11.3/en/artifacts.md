@@ -67,7 +67,7 @@ These define constraints on FHIR data types for systems conforming to this imple
 | [ MII EX SE Empfehlung Publikation  ](StructureDefinition-mii-ex-seltene-empfehlung-publikation.md) | Verweis auf Publikation der (einzelnen) Empfehlung |
 | [ MII EX SE Penetrance  ](StructureDefinition-mii-ex-seltene-penetrance.md) | Extension to capture the penetrance of genetic variants associated with a rare disease |
 | [ MII EX SE Register  ](StructureDefinition-mii-ex-seltene-register.md) | Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt. |
-| [ VonSEBetroffen  ](StructureDefinition-mii-ex-von-se-betroffen.md) | Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist. |
+| [ MII_EX_Seltene_VonSEBetroffen  ](StructureDefinition-mii-ex-seltene-von-se-betroffen.md) | Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist. |
 
 ### Terminology: Value Sets 
 
@@ -103,7 +103,7 @@ These define sets of codes used by systems conforming to this implementation gui
 | [ MII VS Seltene Erkrankungen NBS alle Trockenblut-Analyte (LOINC)  ](ValueSet-mii-vs-seltene-nbs-dbs-all.md) | Alle LOINC-Codes, deren Untersuchungsmaterial Trockenblut (dried blood spot) ist — intensional über die LOINC-Eigenschaft SYSTEM definiert und damit vollständig. Enthält Analyte, Quotienten, Panels und Interpretationscodes nebeneinander sowie Analytik ausserhalb des Neugeborenenscreenings; für klinisch abgegrenzte Teilmengen dienen die gruppierten ValueSets mii-vs-seltene-nbs-*-dbs. |
 | [ MII VS Seltene Erkrankungen Symptom Change Status (Combined)  ](ValueSet-mii-vs-seltene-symptom-change-status-combined.md) | ValueSet zur Dokumentation von Änderungen bei Symptomen/Phänotypen über Zeit. Kombiniert MVGenomSeq-spezifische Codes mit SNOMED CT-Codes für internationale Interoperabilität. |
 | [ Syndrome Category Value Set  ](ValueSet-mii-vs-seltene-syndrome-category.md) | Categories for classifying syndrome types in rare diseases |
-| [ Von SE betroffen Value Set  ](ValueSet-von-seltene-betroffen-vs.md) | ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Verwendet SNOMED CT codes für internationale Interoperabilität. |
+| [ Von SE betroffen Value Set  ](ValueSet-mii-vs-seltene-von-se-betroffen.md) | ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Verwendet SNOMED CT codes für internationale Interoperabilität. |
 
 ### Terminology: Code Systems 
 
@@ -124,24 +124,24 @@ These are example instances that show what data produced and consumed by systems
 
 | | |
 | :--- | :--- |
-| [ ALT Labor - Post-therapeutisch  ](Observation-observation-alt-001.md) | ALT Wert nach Gentherapie |
-| [ AST Labor - Post-therapeutisch  ](Observation-observation-ast-001.md) | AST Wert nach Gentherapie |
-| [ Ambulante Erstvorstellung  ](Encounter-encounter-ambulant-001.md) | Erstvorstellung im SMA-Zentrum |
-| [ Ambulante Nachsorge  ](Encounter-encounter-nachsorge-001.md) | Erster Nachsorgetermin nach Gentherapie |
-| [ Antevertierte Nares - HPO-kodiert  ](Observation-anteverted-nares.md) | Nach oben gerichtete Nasenlöcher |
-| [ Aortenklappeninsuffizienz  ](Observation-symptom-aortic-regurg.md) | Moderate Aortenklappeninsuffizienz Grad II |
-| [ Aortenwurzel - Normalbefund  ](Observation-aortic-root-normal.md) | Normale Aortenwurzel, schließt Marfan aus |
-| [ Aortenwurzeldilatation  ](Observation-symptom-aortic-root.md) | Pathologisch erweiterte Aortenwurzel |
-| [ Aortenwurzeldilatation - HPO-kodiert  ](Observation-aortic-root-dilatation.md) | Echokardiographisch nachgewiesene Aortenwurzeldilatation |
-| [ Arachnodaktylie - HPO-kodiert  ](Observation-arachnodactyly.md) | Spinnenfingrigkeit bei Marfan-Syndrom |
-| [ Augenärztliche Konsultation  ](Encounter-encounter-ophthalmology.md) | Erstvorstellung beim Augenarzt wegen Katarakt |
-| [ BRCA1 Pathogene Variante - MolGen  ](Observation-molgen-variant-brca1-pathogenic.md) | Pathogene BRCA1-Variante |
-| [ BRCA1/2 Panel - Diagnostische Implikation  ](DiagnosticReport-molgen-brca-panel.md) | Hereditäres Karzinom-Panel |
-| [ Beinlängendifferenz  ](Observation-observation-leg-asymmetry.md) | Beinlängendifferenz mit rechts verkürztem Bein |
+| [ ALT Labor - Post-therapeutisch  ](Observation-mii-exa-seltene-observation-alt-001.md) | ALT Wert nach Gentherapie |
+| [ AST Labor - Post-therapeutisch  ](Observation-mii-exa-seltene-observation-ast-001.md) | AST Wert nach Gentherapie |
+| [ Ambulante Erstvorstellung  ](Encounter-mii-exa-seltene-encounter-ambulant-001.md) | Erstvorstellung im SMA-Zentrum |
+| [ Ambulante Nachsorge  ](Encounter-mii-exa-seltene-encounter-nachsorge-001.md) | Erster Nachsorgetermin nach Gentherapie |
+| [ Antevertierte Nares - HPO-kodiert  ](Observation-mii-exa-seltene-anteverted-nares.md) | Nach oben gerichtete Nasenlöcher |
+| [ Aortenklappeninsuffizienz  ](Observation-mii-exa-seltene-symptom-aortic-regurg.md) | Moderate Aortenklappeninsuffizienz Grad II |
+| [ Aortenwurzel - Normalbefund  ](Observation-mii-exa-seltene-aortic-root-normal.md) | Normale Aortenwurzel, schließt Marfan aus |
+| [ Aortenwurzeldilatation  ](Observation-mii-exa-seltene-symptom-aortic-root.md) | Pathologisch erweiterte Aortenwurzel |
+| [ Aortenwurzeldilatation - HPO-kodiert  ](Observation-mii-exa-seltene-aortic-root-dilatation.md) | Echokardiographisch nachgewiesene Aortenwurzeldilatation |
+| [ Arachnodaktylie - HPO-kodiert  ](Observation-mii-exa-seltene-arachnodactyly.md) | Spinnenfingrigkeit bei Marfan-Syndrom |
+| [ Augenärztliche Konsultation  ](Encounter-mii-exa-seltene-encounter-ophthalmology.md) | Erstvorstellung beim Augenarzt wegen Katarakt |
+| [ BRCA1 Pathogene Variante - MolGen  ](Observation-mii-exa-seltene-molgen-variant-brca1-pathogenic.md) | Pathogene BRCA1-Variante |
+| [ BRCA1/2 Panel - Diagnostische Implikation  ](DiagnosticReport-mii-exa-seltene-molgen-brca-panel.md) | Hereditäres Karzinom-Panel |
+| [ Beinlängendifferenz  ](Observation-mii-exa-seltene-observation-leg-asymmetry.md) | Beinlängendifferenz mit rechts verkürztem Bein |
 | [ Beispiel Aortenwurzelersatz bei Marfan-Syndrom  ](ServiceRequest-mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan.md) | Beispiel einer nicht-medikamentösen Therapieempfehlung für Aortenwurzelersatz bei Marfan-Syndrom |
 | [ Beispiel Einwilligung zur Registerteilnahme  ](Consent-mii-exa-seltene-register-einwilligung.md) | Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusaetzliche Huerde. |
-| [ Beispiel Ernährungstherapie-Empfehlung  ](ServiceRequest-example-nutrition-therapy-recommendation.md) | Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie |
-| [ Beispiel Früherkennungsprogramm-Empfehlung  ](ServiceRequest-example-early-detection-recommendation.md) | Beispiel einer Empfehlung für regelmäßige Früherkennungsuntersuchungen |
+| [ Beispiel Ernährungstherapie-Empfehlung  ](ServiceRequest-mii-exa-seltene-example-nutrition-therapy-recommendation.md) | Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie |
+| [ Beispiel Früherkennungsprogramm-Empfehlung  ](ServiceRequest-mii-exa-seltene-example-early-detection-recommendation.md) | Beispiel einer Empfehlung für regelmäßige Früherkennungsuntersuchungen |
 | [ Beispiel Geburtsgewicht  ](Observation-mii-exa-seltene-geburtsgewicht.md) | Geburtsgewicht im Normbereich. Ausgangswert für die Beurteilung der bei SMA Typ 1 häufigen späteren Gedeihstörung. |
 | [ Beispiel Geburtslänge  ](Observation-mii-exa-seltene-geburtslaenge.md) | Körperlänge bei Geburt, gemessen. |
 | [ Beispiel Genetische Beratung  ](ServiceRequest-mii-exa-seltene-therapieempfehlung-genetische-beratung.md) | Beispiel einer nicht-medikamentösen Therapieempfehlung für genetische Beratung |
@@ -155,91 +155,91 @@ These are example instances that show what data produced and consumed by systems
 | [ Beispiel Register-Katalogeintrag (Library)  ](Library-mii-exa-seltene-register-katalog-euro-nmd.md) | Derselbe Registerbestand als Katalogeintrag nach dem Profil mii-pr-studie-register des Moduls Studie. Steht neben der ResearchStudy, nicht an ihrer Stelle — eine Library kann kein Ziel von ResearchSubject.study sein. |
 | [ Beispiel Registerteilnahme — ERN EURO-NMD  ](ResearchSubject-mii-exa-seltene-registerteilnahme.md) | Teilnahme des SMA-Kindes am EURO-NMD-Register. Die Kennung ist das registereigene Pseudonym, nicht die Patienten-ID des Standorts. |
 | [ Body Mass Index (BMI) Example  ](Observation-mii-exa-seltene-bodymassindex.md) | Example of a Body Mass Index (BMI) observation for a patient. |
-| [ CF Diagnostische Implikation - MolGen  ](DiagnosticReport-molgen-cf-diagnostic.md) | Mukoviszidose genetischer Befund |
-| [ CFTR F508del Homozygot - MolGen Variante  ](Observation-molgen-variant-cftr-f508del-homozygous.md) | Homozygote F508del Mutation bei Mukoviszidose |
-| [ Chronische Diarrhoe - HPO-kodiert  ](Observation-chronic-diarrhea.md) | Chronische Durchfälle bei CF |
+| [ CF Diagnostische Implikation - MolGen  ](DiagnosticReport-mii-exa-seltene-molgen-cf-diagnostic.md) | Mukoviszidose genetischer Befund |
+| [ CFTR F508del Homozygot - MolGen Variante  ](Observation-mii-exa-seltene-molgen-variant-cftr-f508del-homozygous.md) | Homozygote F508del Mutation bei Mukoviszidose |
+| [ Chronische Diarrhoe - HPO-kodiert  ](Observation-mii-exa-seltene-chronic-diarrhea.md) | Chronische Durchfälle bei CF |
 | [ Consanguinity - Eltern blutsverwandt  ](Observation-mii-exa-seltene-consanguinity.md) | Beispiel: Bei einem Indexpatienten mit Verdacht auf eine autosomal-rezessive seltene Erkrankung ist dokumentiert, dass die Eltern blutsverwandt sind (Cousins 1. Grades). |
-| [ DMD Diagnostische Implikation  ](DiagnosticReport-molgen-diagnostic-dmd.md) | Diagnostischer Bericht Duchenne-Muskeldystrophie |
-| [ DMD Exon 45-47 Deletion - MolGen Variante  ](Observation-molgen-variant-dmd-deletion-exon45-47.md) | Out-of-frame Deletion im DMD-Gen |
-| [ Duchenne ausgeschlossen - Becker bestätigt  ](Condition-example-dmd-excluded-bmd-confirmed.md) | Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muskeldystrophie |
-| [ Duchenne-Muskeldystrophie - Genetisch bestätigt  ](Condition-example-dmd-genetic-diagnosis.md) | Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie |
-| [ Echokardiographie - Aortenklappeninsuffizienz  ](Observation-observation-echo-av.md) | Beurteilung der Aortenklappeninsuffizienz |
-| [ Echokardiographie - Aortenwurzeldurchmesser  ](Observation-observation-echo-aortic.md) | Aortenwurzeldurchmesser in der Echokardiographie |
-| [ Echokardiographie - Mitralklappeninsuffizienz  ](Observation-observation-echo-mv.md) | Beurteilung der Mitralklappeninsuffizienz |
-| [ Ehlers-Danlos-Syndrom - Ausgeschlossen  ](Condition-example-eds-excluded-clinical.md) | Differentialdiagnose EDS ausgeschlossen |
-| [ FBN1 Gen - Pathogene Mutation  ](Observation-variant-fbn1-001.md) | Pathogene FBN1-Mutation bei Marfan-Syndrom |
-| [ Familienanamnese - Urgroßmutter mit Muskelerkrankung  ](FamilyMemberHistory-family-history-001.md) | Urgroßmutter mit unbekannter Muskelerkrankung |
-| [ Gedeihstörung - HPO-kodiert  ](Observation-failure-to-thrive.md) | Mangelhafte Gewichtszunahme |
-| [ Gentherapie Verabreichung  ](Procedure-procedure-gentherapy-001.md) | Verabreichung des Gentherapeutikums für SMA |
-| [ Geplante Aortenwurzelersatz-Operation  ](Procedure-procedure-aortic-planned.md) | Geplante David-Operation (Valve-sparing root replacement) |
-| [ Geplante Herzchirurgie  ](Encounter-encounter-surgery-planned.md) | Geplanter stationärer Aufenthalt für Aortenwurzelersatz |
+| [ DMD Diagnostische Implikation  ](DiagnosticReport-mii-exa-seltene-molgen-diagnostic-dmd.md) | Diagnostischer Bericht Duchenne-Muskeldystrophie |
+| [ DMD Exon 45-47 Deletion - MolGen Variante  ](Observation-mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47.md) | Out-of-frame Deletion im DMD-Gen |
+| [ Duchenne ausgeschlossen - Becker bestätigt  ](Condition-mii-exa-seltene-example-dmd-excluded-bmd-confirmed.md) | Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muskeldystrophie |
+| [ Duchenne-Muskeldystrophie - Genetisch bestätigt  ](Condition-mii-exa-seltene-example-dmd-genetic-diagnosis.md) | Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie |
+| [ Echokardiographie - Aortenklappeninsuffizienz  ](Observation-mii-exa-seltene-observation-echo-av.md) | Beurteilung der Aortenklappeninsuffizienz |
+| [ Echokardiographie - Aortenwurzeldurchmesser  ](Observation-mii-exa-seltene-observation-echo-aortic.md) | Aortenwurzeldurchmesser in der Echokardiographie |
+| [ Echokardiographie - Mitralklappeninsuffizienz  ](Observation-mii-exa-seltene-observation-echo-mv.md) | Beurteilung der Mitralklappeninsuffizienz |
+| [ Ehlers-Danlos-Syndrom - Ausgeschlossen  ](Condition-mii-exa-seltene-example-eds-excluded-clinical.md) | Differentialdiagnose EDS ausgeschlossen |
+| [ FBN1 Gen - Pathogene Mutation  ](Observation-mii-exa-seltene-variant-fbn1-001.md) | Pathogene FBN1-Mutation bei Marfan-Syndrom |
+| [ Familienanamnese - Urgroßmutter mit Muskelerkrankung  ](FamilyMemberHistory-mii-exa-seltene-family-history-001.md) | Urgroßmutter mit unbekannter Muskelerkrankung |
+| [ Gedeihstörung - HPO-kodiert  ](Observation-mii-exa-seltene-failure-to-thrive.md) | Mangelhafte Gewichtszunahme |
+| [ Gentherapie Verabreichung  ](Procedure-mii-exa-seltene-procedure-gentherapy-001.md) | Verabreichung des Gentherapeutikums für SMA |
+| [ Geplante Aortenwurzelersatz-Operation  ](Procedure-mii-exa-seltene-procedure-aortic-planned.md) | Geplante David-Operation (Valve-sparing root replacement) |
+| [ Geplante Herzchirurgie  ](Encounter-mii-exa-seltene-encounter-surgery-planned.md) | Geplanter stationärer Aufenthalt für Aortenwurzelersatz |
 | [ HPO Assessment - Excluded Phenotype  ](Observation-mii-exa-seltene-hpo-assessment-excluded.md) | Example of an explicitly excluded phenotype (arachnodactyly ruled out during Marfan syndrome workup). |
 | [ HPO Assessment - Present with Severity  ](Observation-mii-exa-seltene-hpo-assessment-severity.md) | Example of a phenotype with both status (present) and severity grading. Demonstrates HL7 Phenomics IG component pattern. |
 | [ HPO Assessment mit Änderungsstatus  ](Observation-mii-exa-seltene-hpo-assessment-change-status.md) | Beispiel einer HPO-Beobachtung mit dokumentiertem Änderungsstatus |
 | [ HPO Symptom Observation Example  ](Observation-mii-exa-seltene-hpo-assessment.md) | Example of an HPO-based phenotypic observation for intellectual disability. |
-| [ Hereditäres Mamma- und Ovarialkarzinom-Syndrom  ](Condition-example-brca1-genetic-diagnosis.md) | Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom |
-| [ Hochwuchs - HPO-kodiert  ](Observation-tall-stature.md) | Pathologisch erhöhte Körpergröße |
-| [ Hypertelorismus - HPO-kodiert  ](Observation-hypertelorism.md) | Vergrößerter Augenabstand |
+| [ Hereditäres Mamma- und Ovarialkarzinom-Syndrom  ](Condition-mii-exa-seltene-example-brca1-genetic-diagnosis.md) | Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom |
+| [ Hochwuchs - HPO-kodiert  ](Observation-mii-exa-seltene-tall-stature.md) | Pathologisch erhöhte Körpergröße |
+| [ Hypertelorismus - HPO-kodiert  ](Observation-mii-exa-seltene-hypertelorism.md) | Vergrößerter Augenabstand |
 | [ Hüftumfang Beispiel  ](Observation-mii-exa-seltene-hueftumfang.md) | Beispiel einer Hüftumfang-Messung bei einem Patienten mit seltener Erkrankung. |
 | [ ICF example — activities and participation (chapter d), capacity vs performance  ](Observation-mii-exa-seltene-icf-aktivitaet.md) | Eating in SMA type 1, and the reason chapter d takes two qualifiers rather than one. Without assistance the child cannot feed orally at all — capacity is a complete problem. With a gastrostomy in place, nutrition in daily life is only moderately impaired — performance is markedly better. The gap between the two IS the measured effect of the assistive device; a model with a single value would have had to discard one of the two numbers and would have said something false either way. |
 | [ ICF example — body function (chapter b), one qualifier  ](Observation-mii-exa-seltene-icf-koerperfunktion.md) | Muscle power functions in SMA type 1, graded as a complete problem. Chapter b takes exactly one qualifier; invariant mii-icf-1 rejects any other component here. |
 | [ ICF example — body structure (chapter s), three qualifiers  ](Observation-mii-exa-seltene-icf-koerperstruktur.md) | Spinal cord in SMA type 1: degeneration of the anterior horn cells. The only chapter that takes three qualifiers at once — extent, nature of the change and anatomical location. This is the case a single value[x] could never have carried, which is why the profile uses components. |
 | [ ICF example — environmental factor (chapter e), facilitator  ](Observation-mii-exa-seltene-icf-umweltfaktor.md) | Assistive products for mobility, graded as a substantial FACILITATOR. Environmental factors are the one chapter with a two-sided scale, and BfArM resolves it by putting the sign into the code itself: facilitators run +0 to +4, barriers .0 to .4. Invariant mii-icf-5 forbids grading the same factor as both at once. |
-| [ Kardiologische Erstvorstellung  ](Encounter-encounter-cardiology.md) | Ambulante kardiologische Erstvorstellung bei Thoraxschmerzen |
-| [ Katarakt bilateral  ](Condition-condition-cataract.md) | Beidseitige Katarakt bei Marfan-Syndrom |
-| [ Katarakt bilateral  ](Observation-symptom-cataract.md) | Beidseitige Katarakt als ophthalmologische Manifestation |
-| [ Katarakt-Operation  ](Procedure-procedure-cataract-surgery.md) | Phakoemulsifikation mit Intraokularlinsenimplantation |
-| [ Katarakt-Operation Aufenthalt  ](Encounter-encounter-cataract-surgery.md) | Tagesklinischer Aufenthalt für Katarakt-Operation |
-| [ Klinische Beurteilung - Erstvorstellung  ](ClinicalImpression-clinical-impression-erstvorstellung.md) | Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum |
-| [ Klinische Beurteilung - Nachsorge  ](ClinicalImpression-clinical-impression-nachsorge.md) | Nachsorgeuntersuchung nach Gentherapie |
-| [ Konsultation ZSE bei V.a. Marfan-Syndrom  ](ClinicalImpression-clinical-impression-seltene-assessment.md) | Konsultation im Zentrum für Seltene Erkrankungen mit kardiologischer Mitbeurteilung bei V.a. Marfan-Syndrom |
+| [ Kardiologische Erstvorstellung  ](Encounter-mii-exa-seltene-encounter-cardiology.md) | Ambulante kardiologische Erstvorstellung bei Thoraxschmerzen |
+| [ Katarakt bilateral  ](Condition-mii-exa-seltene-condition-cataract.md) | Beidseitige Katarakt bei Marfan-Syndrom |
+| [ Katarakt bilateral  ](Observation-mii-exa-seltene-symptom-cataract.md) | Beidseitige Katarakt als ophthalmologische Manifestation |
+| [ Katarakt-Operation  ](Procedure-mii-exa-seltene-procedure-cataract-surgery.md) | Phakoemulsifikation mit Intraokularlinsenimplantation |
+| [ Katarakt-Operation Aufenthalt  ](Encounter-mii-exa-seltene-encounter-cataract-surgery.md) | Tagesklinischer Aufenthalt für Katarakt-Operation |
+| [ Klinische Beurteilung - Erstvorstellung  ](ClinicalImpression-mii-exa-seltene-clinical-impression-erstvorstellung.md) | Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum |
+| [ Klinische Beurteilung - Nachsorge  ](ClinicalImpression-mii-exa-seltene-clinical-impression-nachsorge.md) | Nachsorgeuntersuchung nach Gentherapie |
+| [ Konsultation ZSE bei V.a. Marfan-Syndrom  ](ClinicalImpression-mii-exa-seltene-clinical-impression-seltene-assessment.md) | Konsultation im Zentrum für Seltene Erkrankungen mit kardiologischer Mitbeurteilung bei V.a. Marfan-Syndrom |
 | [ Kopfumfang Beispiel  ](Observation-mii-exa-seltene-kopfumfang.md) | Beispiel einer Kopfumfang-Messung bei einem Patienten mit seltener Erkrankung. |
-| [ Körpergröße - Hochwuchs  ](Observation-observation-height-001.md) | Pathologisch erhöhte Körpergröße bei Marfan-Syndrom |
-| [ Linsenluxation - HPO-kodiert  ](Observation-lens-dislocation.md) | Ectopia lentis bei Marfan-Syndrom |
-| [ Losartan Therapie  ](MedicationStatement-medication-losartan.md) | Losartan zur Progressionshemmung der Aortenwurzeldilatation |
-| [ Lymphödem - HPO-kodiert  ](Observation-lymphedema.md) | Peripheres Lymphödem |
-| [ MII EXA SE Beispielpatient  ](Patient-mii-exa-seltene-patient.md) | Generischer Beispielpatient des Moduls Seltene Erkrankungen, referenziert von den Beispielen, die keinen eigenen Fallbezug haben. Fuer die ausgearbeiteten Fallbeispiele siehe patient-sma-001 und patient-marfan-001. |
+| [ Körpergröße - Hochwuchs  ](Observation-mii-exa-seltene-observation-height-001.md) | Pathologisch erhöhte Körpergröße bei Marfan-Syndrom |
+| [ Linsenluxation - HPO-kodiert  ](Observation-mii-exa-seltene-lens-dislocation.md) | Ectopia lentis bei Marfan-Syndrom |
+| [ Losartan Therapie  ](MedicationStatement-mii-exa-seltene-medication-losartan.md) | Losartan zur Progressionshemmung der Aortenwurzeldilatation |
+| [ Lymphödem - HPO-kodiert  ](Observation-mii-exa-seltene-lymphedema.md) | Peripheres Lymphödem |
+| [ MII EXA SE Beispielpatient  ](Patient-mii-exa-seltene-patient.md) | Generischer Beispielpatient des Moduls Seltene Erkrankungen, referenziert von den Beispielen, die keinen eigenen Fallbezug haben. Fuer die ausgearbeiteten Fallbeispiele siehe mii-exa-seltene-patient-sma-001 und mii-exa-seltene-patient-marfan-001. |
 | [ MII Example SE Symptom Condition  ](Condition-mii-exa-seltene-symptom-condition.md) | Example of a symptom condition in the context of rare diseases using HPO codes |
-| [ Marfan Patient - 19-jähriger Mann  ](Patient-patient-marfan-001.md) | 19-jähriger männlicher Patient mit bestätigtem Marfan-Syndrom |
-| [ Marfan-Syndrom - Genetische Diagnose  ](Condition-condition-marfan-genetic.md) | Genetisch bestätigtes Marfan-Syndrom mit FBN1-Mutation |
-| [ Marfan-Syndrom - Klinisch ausgeschlossen  ](Condition-example-marfan-excluded-clinical.md) | Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose |
-| [ Marfan-Syndrom - Klinische Diagnose  ](Condition-condition-marfan-clinical.md) | Klinisch bestätigtes Marfan-Syndrom |
-| [ Marfan-Syndrom - Klinische Diagnose  ](Condition-example-marfan-clinical-diagnosis.md) | Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend auf phänotypischen Merkmalen |
-| [ Marfan-Syndrom - Verdacht  ](Condition-condition-marfan-suspected.md) | Verdacht auf Marfan-Syndrom |
-| [ Marfan-Syndrom Fallbeispiel - Vollständiges Transaction Bundle  ](Bundle-bundle-marfan-complete.md) | Transaction Bundle mit allen Ressourcen für den Marfan-Syndrom Fall |
-| [ Metabolische Myopathie - Ausgeschlossen  ](Condition-example-metabolic-myopathy-excluded.md) | Metabolische Myopathie als Differentialdiagnose ausgeschlossen |
-| [ Mitralklappeninsuffizienz  ](Observation-symptom-mitral-regurg.md) | Milde Mitralklappeninsuffizienz Grad I |
-| [ Mukoviszidose - Genetisch bestätigt  ](Condition-example-cf-genetic.md) | Genetisch bestätigte Mukoviszidose |
-| [ Mukoviszidose - Klinischer Verdacht  ](Condition-example-cf-clinical.md) | Initiale klinische Verdachtsdiagnose Mukoviszidose |
-| [ Mukoviszidose - Nach positivem Screening ausgeschlossen  ](Condition-example-cf-excluded-after-screening.md) | CF nach auffälligem Neugeborenenscreening genetisch ausgeschlossen |
-| [ Neugeborenenscreening  ](Encounter-encounter-screening-001.md) | Neugeborenenscreening mit SMA-Verdacht |
-| [ Noonan-Syndrom - Klinische Diagnose  ](Condition-example-noonan-clinical-diagnosis.md) | Beispiel einer klinischen Diagnose des Noonan-Syndroms |
-| [ Phenylketonurie - Genetische Diagnose  ](Condition-condition-pku-diagnosis.md) | Genetisch bestätigte Phenylketonurie (PKU) |
-| [ Rezidivierende Atemwegsinfekte - HPO-kodiert  ](Observation-recurrent-respiratory-infections.md) | Häufige respiratorische Infektionen bei CF |
-| [ SMA - Genetisch ausgeschlossen  ](Condition-example-sma-excluded-genetic.md) | Spinale Muskelatrophie genetisch ausgeschlossen |
-| [ SMA Diagnostische Implikation - MolGen  ](DiagnosticReport-molgen-diagnostic-implication-sma.md) | Diagnostischer Bericht zur SMA-Genetik |
-| [ SMA Fallbeispiel - Vollständiges Transaction Bundle  ](Bundle-bundle-sma-complete.md) | Transaction Bundle mit allen Ressourcen für den SMA Fall inkl. Diagnoseverlauf |
-| [ SMA Genetik - Negativbefund  ](DiagnosticReport-molgen-sma-negative.md) | Genetischer Test schließt SMA aus |
-| [ SMA Genetische Diagnose  ](Condition-condition-sma-genetic.md) | SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion |
-| [ SMA Klinische Diagnose  ](Condition-condition-sma-clinical.md) | Klinische Diagnose SMA Typ 1 bei Erstvorstellung |
-| [ SMA Neugeborenenscreening Ergebnis  ](Observation-observation-sma-screening.md) | Positives SMA-Screening beim Neugeborenenscreening |
-| [ SMA Patient - Neugeborenes Mädchen  ](Patient-patient-sma-001.md) | Neugeborenes Mädchen mit bestätigter SMA Typ 1 |
-| [ SMA Typ 1 - Genetisch bestätigte Diagnose  ](Condition-example-sma-genetic-diagnosis.md) | Beispiel einer genetisch bestätigten Diagnose der spinalen Muskelatrophie Typ 1 |
-| [ SMA Verdacht - Neugeborenenscreening  ](Condition-condition-sma-suspected.md) | Verdacht auf SMA beim Neugeborenenscreening |
-| [ SMN1 - Normale Kopienanzahl  ](Observation-molgen-smn1-normal-copies.md) | 2 Kopien SMN1 - schließt SMA aus |
-| [ SMN1 Gen - Homozygote Deletion  ](Observation-variant-smn1-001.md) | 0 Kopien des SMN1-Gens nachgewiesen |
-| [ SMN1 Gen Deletion - MolGen Variante  ](Observation-molgen-variant-smn1-deletion.md) | Homozygote Deletion des SMN1-Gens bei SMA |
-| [ SMN2 Gen - Kopienanzahl  ](Observation-variant-smn2-001.md) | 2 Kopien des SMN2-Gens nachgewiesen |
-| [ Stationärer Aufenthalt zur Gentherapie  ](Encounter-encounter-stationaer-001.md) | Stationäre Aufnahme für Gentherapie |
+| [ Marfan Patient - 19-jähriger Mann  ](Patient-mii-exa-seltene-patient-marfan-001.md) | 19-jähriger männlicher Patient mit bestätigtem Marfan-Syndrom |
+| [ Marfan-Syndrom - Genetische Diagnose  ](Condition-mii-exa-seltene-condition-marfan-genetic.md) | Genetisch bestätigtes Marfan-Syndrom mit FBN1-Mutation |
+| [ Marfan-Syndrom - Klinisch ausgeschlossen  ](Condition-mii-exa-seltene-example-marfan-excluded-clinical.md) | Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose |
+| [ Marfan-Syndrom - Klinische Diagnose  ](Condition-mii-exa-seltene-condition-marfan-clinical.md) | Klinisch bestätigtes Marfan-Syndrom |
+| [ Marfan-Syndrom - Klinische Diagnose  ](Condition-mii-exa-seltene-example-marfan-clinical-diagnosis.md) | Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend auf phänotypischen Merkmalen |
+| [ Marfan-Syndrom - Verdacht  ](Condition-mii-exa-seltene-condition-marfan-suspected.md) | Verdacht auf Marfan-Syndrom |
+| [ Marfan-Syndrom Fallbeispiel - Vollständiges Transaction Bundle  ](Bundle-mii-exa-seltene-bundle-marfan-complete.md) | Transaction Bundle mit allen Ressourcen für den Marfan-Syndrom Fall |
+| [ Metabolische Myopathie - Ausgeschlossen  ](Condition-mii-exa-seltene-example-metabolic-myopathy-excluded.md) | Metabolische Myopathie als Differentialdiagnose ausgeschlossen |
+| [ Mitralklappeninsuffizienz  ](Observation-mii-exa-seltene-symptom-mitral-regurg.md) | Milde Mitralklappeninsuffizienz Grad I |
+| [ Mukoviszidose - Genetisch bestätigt  ](Condition-mii-exa-seltene-example-cf-genetic.md) | Genetisch bestätigte Mukoviszidose |
+| [ Mukoviszidose - Klinischer Verdacht  ](Condition-mii-exa-seltene-example-cf-clinical.md) | Initiale klinische Verdachtsdiagnose Mukoviszidose |
+| [ Mukoviszidose - Nach positivem Screening ausgeschlossen  ](Condition-mii-exa-seltene-example-cf-excluded-after-screening.md) | CF nach auffälligem Neugeborenenscreening genetisch ausgeschlossen |
+| [ Neugeborenenscreening  ](Encounter-mii-exa-seltene-encounter-screening-001.md) | Neugeborenenscreening mit SMA-Verdacht |
+| [ Noonan-Syndrom - Klinische Diagnose  ](Condition-mii-exa-seltene-example-noonan-clinical-diagnosis.md) | Beispiel einer klinischen Diagnose des Noonan-Syndroms |
+| [ Phenylketonurie - Genetische Diagnose  ](Condition-mii-exa-seltene-condition-pku-diagnosis.md) | Genetisch bestätigte Phenylketonurie (PKU) |
+| [ Rezidivierende Atemwegsinfekte - HPO-kodiert  ](Observation-mii-exa-seltene-recurrent-respiratory-infections.md) | Häufige respiratorische Infektionen bei CF |
+| [ SMA - Genetisch ausgeschlossen  ](Condition-mii-exa-seltene-example-sma-excluded-genetic.md) | Spinale Muskelatrophie genetisch ausgeschlossen |
+| [ SMA Diagnostische Implikation - MolGen  ](DiagnosticReport-mii-exa-seltene-molgen-diagnostic-implication-sma.md) | Diagnostischer Bericht zur SMA-Genetik |
+| [ SMA Fallbeispiel - Vollständiges Transaction Bundle  ](Bundle-mii-exa-seltene-bundle-sma-complete.md) | Transaction Bundle mit allen Ressourcen für den SMA Fall inkl. Diagnoseverlauf |
+| [ SMA Genetik - Negativbefund  ](DiagnosticReport-mii-exa-seltene-molgen-sma-negative.md) | Genetischer Test schließt SMA aus |
+| [ SMA Genetische Diagnose  ](Condition-mii-exa-seltene-condition-sma-genetic.md) | SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion |
+| [ SMA Klinische Diagnose  ](Condition-mii-exa-seltene-condition-sma-clinical.md) | Klinische Diagnose SMA Typ 1 bei Erstvorstellung |
+| [ SMA Neugeborenenscreening Ergebnis  ](Observation-mii-exa-seltene-observation-sma-screening.md) | Positives SMA-Screening beim Neugeborenenscreening |
+| [ SMA Patient - Neugeborenes Mädchen  ](Patient-mii-exa-seltene-patient-sma-001.md) | Neugeborenes Mädchen mit bestätigter SMA Typ 1 |
+| [ SMA Typ 1 - Genetisch bestätigte Diagnose  ](Condition-mii-exa-seltene-example-sma-genetic-diagnosis.md) | Beispiel einer genetisch bestätigten Diagnose der spinalen Muskelatrophie Typ 1 |
+| [ SMA Verdacht - Neugeborenenscreening  ](Condition-mii-exa-seltene-condition-sma-suspected.md) | Verdacht auf SMA beim Neugeborenenscreening |
+| [ SMN1 - Normale Kopienanzahl  ](Observation-mii-exa-seltene-molgen-smn1-normal-copies.md) | 2 Kopien SMN1 - schließt SMA aus |
+| [ SMN1 Gen - Homozygote Deletion  ](Observation-mii-exa-seltene-variant-smn1-001.md) | 0 Kopien des SMN1-Gens nachgewiesen |
+| [ SMN1 Gen Deletion - MolGen Variante  ](Observation-mii-exa-seltene-molgen-variant-smn1-deletion.md) | Homozygote Deletion des SMN1-Gens bei SMA |
+| [ SMN2 Gen - Kopienanzahl  ](Observation-mii-exa-seltene-variant-smn2-001.md) | 2 Kopien des SMN2-Gens nachgewiesen |
+| [ Stationärer Aufenthalt zur Gentherapie  ](Encounter-mii-exa-seltene-encounter-stationaer-001.md) | Stationäre Aufnahme für Gentherapie |
 | [ Taillenumfang Beispiel  ](Observation-mii-exa-seltene-taillenumfang.md) | Beispiel einer Taillenumfang-Messung bei einem Patienten mit seltener Erkrankung. |
 | [ Therapieplan Example  ](CarePlan-mii-exa-seltene-therapieplan.md) | Example of a Therapieplan for a patient. |
-| [ Thoraxschmerzen  ](Observation-symptom-chest-pain.md) | Akute Thoraxschmerzen als Präsentationssymptom |
-| [ Thrombozytenzahl - Post-therapeutisch  ](Observation-observation-plt-001.md) | Thrombozytenzahl nach Gentherapie |
-| [ Troponin T hs - 01.08.2024  ](Observation-observation-troponin-003.md) | Troponin T hochsensitiv nach Therapie |
-| [ Troponin T hs - 12.08.2024  ](Observation-observation-troponin-004.md) | Troponin T hochsensitiv bei Nachsorge |
-| [ Troponin T hs - 22.07.2024  ](Observation-observation-troponin-001.md) | Troponin T hochsensitiv Baseline |
-| [ Troponin T hs - 28.07.2024  ](Observation-observation-troponin-002.md) | Troponin T hochsensitiv vor Therapie |
-| [ Ventrikelseptumdefekt - HPO-kodiert  ](Observation-vsd.md) | Angeborener Ventrikelseptumdefekt |
+| [ Thoraxschmerzen  ](Observation-mii-exa-seltene-symptom-chest-pain.md) | Akute Thoraxschmerzen als Präsentationssymptom |
+| [ Thrombozytenzahl - Post-therapeutisch  ](Observation-mii-exa-seltene-observation-plt-001.md) | Thrombozytenzahl nach Gentherapie |
+| [ Troponin T hs - 01.08.2024  ](Observation-mii-exa-seltene-observation-troponin-003.md) | Troponin T hochsensitiv nach Therapie |
+| [ Troponin T hs - 12.08.2024  ](Observation-mii-exa-seltene-observation-troponin-004.md) | Troponin T hochsensitiv bei Nachsorge |
+| [ Troponin T hs - 22.07.2024  ](Observation-mii-exa-seltene-observation-troponin-001.md) | Troponin T hochsensitiv Baseline |
+| [ Troponin T hs - 28.07.2024  ](Observation-mii-exa-seltene-observation-troponin-002.md) | Troponin T hochsensitiv vor Therapie |
+| [ Ventrikelseptumdefekt - HPO-kodiert  ](Observation-mii-exa-seltene-vsd.md) | Angeborener Ventrikelseptumdefekt |
 | [ mii-exa-seltene-familienanamnese  ](FamilyMemberHistory-mii-exa-seltene-familienanamnese.md) | Example Patient Family Anamnesis |
 
 ### Other 

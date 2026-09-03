@@ -57,13 +57,13 @@ This publication includes IP covered under the following statements.
 
 * BfArM - Bundesinstitut für Arzneimittel und Medizinprodukte
 
-* [ATC](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/atc): [Bundle/bundle-marfan-complete](Bundle-bundle-marfan-complete.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MedicationRequest/mii-exa-seltene-therapieempfehlung-losartan-marfan](MedicationRequest-mii-exa-seltene-therapieempfehlung-losartan-marfan.md) and [MedicationStatement/medication-losartan](MedicationStatement-medication-losartan.md)
+* [ATC](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/atc): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MedicationRequest/mii-exa-seltene-therapieempfehlung-losartan-marfan](MedicationRequest-mii-exa-seltene-therapieempfehlung-losartan-marfan.md) and [MedicationStatement/mii-exa-seltene-medication-losartan](MedicationStatement-mii-exa-seltene-medication-losartan.md)
 
 
 * BfArM 1994 - 2024 - Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM)
 
 * [Alpha-ID](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/alpha-id): [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md) and [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md)
-* [OPS](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/ops): [Bundle/bundle-marfan-complete](Bundle-bundle-marfan-complete.md), [MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md), [Procedure/procedure-aortic-planned](Procedure-procedure-aortic-planned.md), [Procedure/procedure-cataract-surgery](Procedure-procedure-cataract-surgery.md) and [ServiceRequest/mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan](ServiceRequest-mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan.md)
+* [OPS](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/ops): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md), [Procedure/mii-exa-seltene-procedure-aortic-planned](Procedure-mii-exa-seltene-procedure-aortic-planned.md), [Procedure/mii-exa-seltene-procedure-cataract-surgery](Procedure-mii-exa-seltene-procedure-cataract-surgery.md) and [ServiceRequest/mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan](ServiceRequest-mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan.md)
 
 
 * Copyrights permitted under terms specified by [Creative Commons Attribution 4.0 International (CC BY 4.0) ](https://creativecommons.org/licenses/by/4.0/legalcode) .Consistent with the terms of CC BY 4.0, HL7 is permitted to share, copy and redistribute the material in any medium or format and adapt, remix, transform, and build upon the material for its purposes as long as the CC BY 4.0 license terms are upheld. HL7 must must give appropriate credit, provide a link to the license, and indicate if changes were made. HL7 may do so in any reasonable manner, but not in any way that suggests the licensor endorses HL7 or it's use. And HL7 may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
@@ -78,7 +78,7 @@ This publication includes IP covered under the following statements.
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [ClinicalDiagnosisCategoryVS](ValueSet-mii-vs-seltene-clinical-diagnosis-category.md), [ERNEuroNMDRegistry](Library-mii-exa-seltene-register-katalog-euro-nmd.md)... Show 65 more, [GeneticBasisValueSet](ValueSet-mii-vs-seltene-genetic-basis.md), [HPOAgeOfOnsetValueSet](ValueSet-mii-vs-seltene-hpo-age-of-onset.md), [HPOInheritancePatternValueSet](ValueSet-mii-vs-seltene-hpo-inheritance-pattern.md), [HPOPhenotypicObservationCodes](ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.md), [HPOPresenceStatus](ValueSet-mii-vs-seltene-hpo-presence-status.md), [HPOSeverity](ValueSet-mii-vs-seltene-hpo-severity.md), [MIIIGModulSelteneErkrankungen](index.md), [MII_CPS_SE_CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md), [MII_CS_Seltene_Empfehlung_StatusBegruendung](CodeSystem-mii-cs-seltene-empfehlung-status-begruendung.md), [MII_CS_Seltene_HPO_ChangeStatus](CodeSystem-mii-cs-seltene-hpo-change-status.md), [MII_CS_Seltene_ICFBeurteilungsmerkmal](CodeSystem-mii-cs-seltene-icf-beurteilungsmerkmal.md), [MII_CS_Seltene_NARSE_Therapietyp](CodeSystem-mii-cs-seltene-narse-therapietyp.md), [MII_CS_Seltene_TherapieempfehlungStrategie](CodeSystem-mii-cs-seltene-therapieempfehlung-strategie.md), [MII_CS_Seltene_TherapieempfehlungTyp](CodeSystem-mii-cs-seltene-therapieempfehlung-typ.md), [MII_EX_Seltene_Empfehlung_Prioritaet](StructureDefinition-mii-ex-seltene-empfehlung-prioritaet.md), [MII_EX_Seltene_Empfehlung_Publikation](StructureDefinition-mii-ex-seltene-empfehlung-publikation.md), [MII_EX_Seltene_Register](StructureDefinition-mii-ex-seltene-register.md), [MII_LM_SE](StructureDefinition-mii-lm-seltene.md), [MII_PR_Seltene_Blutgruppe](StructureDefinition-mii-pr-seltene-blutgruppe.md), [MII_PR_Seltene_Bodymassindex](StructureDefinition-mii-pr-seltene-bodymassindex.md), [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_ClinicalImpression](StructureDefinition-mii-pr-seltene-clinical-impression.md), [MII_PR_Seltene_Consanguinity](StructureDefinition-mii-pr-seltene-consanguinity.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md), [MII_PR_Seltene_Geburtsgewicht](StructureDefinition-mii-pr-seltene-geburtsgewicht.md), [MII_PR_Seltene_Geburtslaenge](StructureDefinition-mii-pr-seltene-geburtslaenge.md), [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md), [MII_PR_Seltene_Gestationsalter](StructureDefinition-mii-pr-seltene-gestationsalter.md), [MII_PR_Seltene_HPO_Assessment](StructureDefinition-mii-pr-seltene-hpo-assessment.md), [MII_PR_Seltene_Hueftumfang](StructureDefinition-mii-pr-seltene-hueftumfang.md), [MII_PR_Seltene_ICFAssessment](StructureDefinition-mii-pr-seltene-icf-assessment.md), [MII_PR_Seltene_Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md), [MII_PR_Seltene_Registerteilnahme](StructureDefinition-mii-pr-seltene-registerteilnahme.md), [MII_PR_Seltene_Studieneinschluss_Anfrage](StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.md), [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md), [MII_PR_Seltene_Taillenumfang](StructureDefinition-mii-pr-seltene-taillenumfang.md), [MII_PR_Seltene_TherapieDurchgefuehrt](StructureDefinition-mii-pr-seltene-therapie-durchgefuehrt.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md), [MII_PR_Seltene_Therapieempfehlung_Kombination](StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.md), [MII_PR_Seltene_Therapieplan](StructureDefinition-mii-pr-seltene-therapieplan.md), [MII_VS_Seltene_Blutgruppe](ValueSet-mii-vs-seltene-blutgruppe.md), [MII_VS_Seltene_Consanguinity](ValueSet-mii-vs-seltene-consanguinity.md), [MII_VS_Seltene_Empfehlung_StatusBegruendung](ValueSet-mii-vs-seltene-empfehlung-status-begruendung.md), [MII_VS_Seltene_HPO_ChangeStatus](ValueSet-mii-vs-seltene-hpo-change-status.md), [MII_VS_Seltene_ICF](ValueSet-mii-vs-seltene-icf.md), [MII_VS_Seltene_ICFBeurteilungsmerkmal](ValueSet-mii-vs-seltene-icf-beurteilungsmerkmal.md), [MII_VS_Seltene_NARSE_Therapietyp](ValueSet-mii-vs-seltene-narse-therapietyp.md), [MII_VS_Seltene_NBS_Acylcarnitine_DBS](ValueSet-mii-vs-seltene-nbs-acylcarnitine-dbs.md), [MII_VS_Seltene_NBS_AminoAcid_DBS](ValueSet-mii-vs-seltene-nbs-aminoacid-dbs.md), [MII_VS_Seltene_NBS_DBS_All](ValueSet-mii-vs-seltene-nbs-dbs-all.md), [MII_VS_Seltene_NBS_EnzymeActivity_DBS](ValueSet-mii-vs-seltene-nbs-enzyme-activity-dbs.md), [MII_VS_Seltene_NBS_Hemoglobin_DBS](ValueSet-mii-vs-seltene-nbs-hemoglobin-dbs.md), [MII_VS_Seltene_NBS_Ratio_DBS](ValueSet-mii-vs-seltene-nbs-ratio-dbs.md), [MII_VS_Seltene_NBS_TargetAnalyte](ValueSet-mii-vs-seltene-nbs-target-analyte.md), [MII_VS_Seltene_Symptom_ChangeStatus_Combined](ValueSet-mii-vs-seltene-symptom-change-status-combined.md), [MII_VS_Seltene_TherapieempfehlungStrategie](ValueSet-mii-vs-seltene-therapieempfehlung-strategie.md), [MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes](ValueSet-mii-vs-seltene-therapieempfehlung-strategie-medikamentoes.md), [MII_VS_Seltene_TherapieempfehlungStrategieNichtMedikamentoes](ValueSet-mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes.md), [MII_VS_Seltene_TherapieempfehlungTyp](ValueSet-mii-vs-seltene-therapieempfehlung-typ.md), [Penetrance](StructureDefinition-mii-ex-seltene-penetrance.md), [PenetranceValueSet](ValueSet-mii-vs-seltene-penetrance.md), [SyndromeCategoryVS](ValueSet-mii-vs-seltene-syndrome-category.md), [VonSEBetroffen](StructureDefinition-mii-ex-von-se-betroffen.md) and [VonSEBetroffenVS](ValueSet-von-seltene-betroffen-vs.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [ERNEuroNMDRegistry](Library-mii-exa-seltene-register-katalog-euro-nmd.md), [MII_CPS_Seltene_CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)... Show 65 more, [MII_CS_Seltene_Empfehlung_StatusBegruendung](CodeSystem-mii-cs-seltene-empfehlung-status-begruendung.md), [MII_CS_Seltene_HPO_ChangeStatus](CodeSystem-mii-cs-seltene-hpo-change-status.md), [MII_CS_Seltene_ICFBeurteilungsmerkmal](CodeSystem-mii-cs-seltene-icf-beurteilungsmerkmal.md), [MII_CS_Seltene_NARSE_Therapietyp](CodeSystem-mii-cs-seltene-narse-therapietyp.md), [MII_CS_Seltene_TherapieempfehlungStrategie](CodeSystem-mii-cs-seltene-therapieempfehlung-strategie.md), [MII_CS_Seltene_TherapieempfehlungTyp](CodeSystem-mii-cs-seltene-therapieempfehlung-typ.md), [MII_EX_Seltene_Empfehlung_Prioritaet](StructureDefinition-mii-ex-seltene-empfehlung-prioritaet.md), [MII_EX_Seltene_Empfehlung_Publikation](StructureDefinition-mii-ex-seltene-empfehlung-publikation.md), [MII_EX_Seltene_Penetrance](StructureDefinition-mii-ex-seltene-penetrance.md), [MII_EX_Seltene_Register](StructureDefinition-mii-ex-seltene-register.md), [MII_EX_Seltene_VonSEBetroffen](StructureDefinition-mii-ex-seltene-von-se-betroffen.md), [MII_IG_Seltene_Erkrankungen](index.md), [MII_LM_Seltene](StructureDefinition-mii-lm-seltene.md), [MII_PR_Seltene_Blutgruppe](StructureDefinition-mii-pr-seltene-blutgruppe.md), [MII_PR_Seltene_Bodymassindex](StructureDefinition-mii-pr-seltene-bodymassindex.md), [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_ClinicalImpression](StructureDefinition-mii-pr-seltene-clinical-impression.md), [MII_PR_Seltene_Consanguinity](StructureDefinition-mii-pr-seltene-consanguinity.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md), [MII_PR_Seltene_Geburtsgewicht](StructureDefinition-mii-pr-seltene-geburtsgewicht.md), [MII_PR_Seltene_Geburtslaenge](StructureDefinition-mii-pr-seltene-geburtslaenge.md), [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md), [MII_PR_Seltene_Gestationsalter](StructureDefinition-mii-pr-seltene-gestationsalter.md), [MII_PR_Seltene_HPO_Assessment](StructureDefinition-mii-pr-seltene-hpo-assessment.md), [MII_PR_Seltene_Hueftumfang](StructureDefinition-mii-pr-seltene-hueftumfang.md), [MII_PR_Seltene_ICFAssessment](StructureDefinition-mii-pr-seltene-icf-assessment.md), [MII_PR_Seltene_Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md), [MII_PR_Seltene_Registerteilnahme](StructureDefinition-mii-pr-seltene-registerteilnahme.md), [MII_PR_Seltene_Studieneinschluss_Anfrage](StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.md), [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md), [MII_PR_Seltene_Taillenumfang](StructureDefinition-mii-pr-seltene-taillenumfang.md), [MII_PR_Seltene_TherapieDurchgefuehrt](StructureDefinition-mii-pr-seltene-therapie-durchgefuehrt.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md), [MII_PR_Seltene_Therapieempfehlung_Kombination](StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.md), [MII_PR_Seltene_Therapieplan](StructureDefinition-mii-pr-seltene-therapieplan.md), [MII_VS_Seltene_Blutgruppe](ValueSet-mii-vs-seltene-blutgruppe.md), [MII_VS_Seltene_ClinicalDiagnosisCategory](ValueSet-mii-vs-seltene-clinical-diagnosis-category.md), [MII_VS_Seltene_Consanguinity](ValueSet-mii-vs-seltene-consanguinity.md), [MII_VS_Seltene_Empfehlung_StatusBegruendung](ValueSet-mii-vs-seltene-empfehlung-status-begruendung.md), [MII_VS_Seltene_GeneticBasis](ValueSet-mii-vs-seltene-genetic-basis.md), [MII_VS_Seltene_HPOAgeOfOnset](ValueSet-mii-vs-seltene-hpo-age-of-onset.md), [MII_VS_Seltene_HPOInheritancePattern](ValueSet-mii-vs-seltene-hpo-inheritance-pattern.md), [MII_VS_Seltene_HPOPhenotypicObservationCodes](ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.md), [MII_VS_Seltene_HPOPresenceStatus](ValueSet-mii-vs-seltene-hpo-presence-status.md), [MII_VS_Seltene_HPOSeverity](ValueSet-mii-vs-seltene-hpo-severity.md), [MII_VS_Seltene_HPO_ChangeStatus](ValueSet-mii-vs-seltene-hpo-change-status.md), [MII_VS_Seltene_ICF](ValueSet-mii-vs-seltene-icf.md), [MII_VS_Seltene_ICFBeurteilungsmerkmal](ValueSet-mii-vs-seltene-icf-beurteilungsmerkmal.md), [MII_VS_Seltene_NARSE_Therapietyp](ValueSet-mii-vs-seltene-narse-therapietyp.md), [MII_VS_Seltene_NBS_Acylcarnitine_DBS](ValueSet-mii-vs-seltene-nbs-acylcarnitine-dbs.md), [MII_VS_Seltene_NBS_AminoAcid_DBS](ValueSet-mii-vs-seltene-nbs-aminoacid-dbs.md), [MII_VS_Seltene_NBS_DBS_All](ValueSet-mii-vs-seltene-nbs-dbs-all.md), [MII_VS_Seltene_NBS_EnzymeActivity_DBS](ValueSet-mii-vs-seltene-nbs-enzyme-activity-dbs.md), [MII_VS_Seltene_NBS_Hemoglobin_DBS](ValueSet-mii-vs-seltene-nbs-hemoglobin-dbs.md), [MII_VS_Seltene_NBS_Ratio_DBS](ValueSet-mii-vs-seltene-nbs-ratio-dbs.md), [MII_VS_Seltene_NBS_TargetAnalyte](ValueSet-mii-vs-seltene-nbs-target-analyte.md), [MII_VS_Seltene_Penetrance](ValueSet-mii-vs-seltene-penetrance.md), [MII_VS_Seltene_Symptom_ChangeStatus_Combined](ValueSet-mii-vs-seltene-symptom-change-status-combined.md), [MII_VS_Seltene_SyndromeCategory](ValueSet-mii-vs-seltene-syndrome-category.md), [MII_VS_Seltene_TherapieempfehlungStrategie](ValueSet-mii-vs-seltene-therapieempfehlung-strategie.md), [MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes](ValueSet-mii-vs-seltene-therapieempfehlung-strategie-medikamentoes.md), [MII_VS_Seltene_TherapieempfehlungStrategieNichtMedikamentoes](ValueSet-mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes.md), [MII_VS_Seltene_TherapieempfehlungTyp](ValueSet-mii-vs-seltene-therapieempfehlung-typ.md) and [MII_VS_Seltene_VonSEBetroffen](ValueSet-mii-vs-seltene-von-se-betroffen.md)
 
 
 * Publications of the World Health Organization enjoy copyright protection in accordance with the provisions of Protocol 2 of the Universal Copyright Convention. All rights reserved.
@@ -98,50 +98,50 @@ This publication includes IP covered under the following statements.
 * Users of the HPO should add the following statement to their online presence. This service/product uses the Human Phenotype Ontology (version information). Find out more at [http://www.human-phenotype-ontology.org](http://www.human-phenotype-ontology.org). We request that the HPO logo be included as well.
  
 
-* [Human Phenotype Ontology](http://terminology.hl7.org/6.5.0/CodeSystem-HPO.html): [Bundle/bundle-marfan-complete](Bundle-bundle-marfan-complete.md), [Bundle/bundle-sma-complete](Bundle-bundle-sma-complete.md)... Show 40 more, [Condition/condition-cataract](Condition-condition-cataract.md), [Condition/condition-marfan-clinical](Condition-condition-marfan-clinical.md), [Condition/condition-sma-clinical](Condition-condition-sma-clinical.md), [Condition/condition-sma-suspected](Condition-condition-sma-suspected.md), [Condition/example-cf-clinical](Condition-example-cf-clinical.md), [Condition/example-marfan-clinical-diagnosis](Condition-example-marfan-clinical-diagnosis.md), [Condition/example-noonan-clinical-diagnosis](Condition-example-noonan-clinical-diagnosis.md), [Condition/mii-exa-seltene-symptom-condition](Condition-mii-exa-seltene-symptom-condition.md), [HPOAgeOfOnsetValueSet](ValueSet-mii-vs-seltene-hpo-age-of-onset.md), [HPOInheritancePatternValueSet](ValueSet-mii-vs-seltene-hpo-inheritance-pattern.md), [HPOPhenotypicObservationCodes](ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.md), [HPOSeverity](ValueSet-mii-vs-seltene-hpo-severity.md), [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_ClinicalImpression](StructureDefinition-mii-pr-seltene-clinical-impression.md), [MII_PR_Seltene_HPO_Assessment](StructureDefinition-mii-pr-seltene-hpo-assessment.md), [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md), [Observation/anteverted-nares](Observation-anteverted-nares.md), [Observation/aortic-root-dilatation](Observation-aortic-root-dilatation.md), [Observation/arachnodactyly](Observation-arachnodactyly.md), [Observation/chronic-diarrhea](Observation-chronic-diarrhea.md), [Observation/failure-to-thrive](Observation-failure-to-thrive.md), [Observation/hypertelorism](Observation-hypertelorism.md), [Observation/lens-dislocation](Observation-lens-dislocation.md), [Observation/lymphedema](Observation-lymphedema.md), [Observation/mii-exa-seltene-hpo-assessment](Observation-mii-exa-seltene-hpo-assessment.md), [Observation/mii-exa-seltene-hpo-assessment-change-status](Observation-mii-exa-seltene-hpo-assessment-change-status.md), [Observation/mii-exa-seltene-hpo-assessment-excluded](Observation-mii-exa-seltene-hpo-assessment-excluded.md), [Observation/mii-exa-seltene-hpo-assessment-severity](Observation-mii-exa-seltene-hpo-assessment-severity.md), [Observation/observation-height-001](Observation-observation-height-001.md), [Observation/observation-leg-asymmetry](Observation-observation-leg-asymmetry.md), [Observation/recurrent-respiratory-infections](Observation-recurrent-respiratory-infections.md), [Observation/symptom-aortic-regurg](Observation-symptom-aortic-regurg.md), [Observation/symptom-aortic-root](Observation-symptom-aortic-root.md), [Observation/symptom-cataract](Observation-symptom-cataract.md), [Observation/symptom-chest-pain](Observation-symptom-chest-pain.md), [Observation/symptom-mitral-regurg](Observation-symptom-mitral-regurg.md), [Observation/tall-stature](Observation-tall-stature.md), [Observation/vsd](Observation-vsd.md), [Penetrance](StructureDefinition-mii-ex-seltene-penetrance.md) and [PenetranceValueSet](ValueSet-mii-vs-seltene-penetrance.md)
+* [Human Phenotype Ontology](http://terminology.hl7.org/6.5.0/CodeSystem-HPO.html): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 40 more, [Condition/mii-exa-seltene-condition-cataract](Condition-mii-exa-seltene-condition-cataract.md), [Condition/mii-exa-seltene-condition-marfan-clinical](Condition-mii-exa-seltene-condition-marfan-clinical.md), [Condition/mii-exa-seltene-condition-sma-clinical](Condition-mii-exa-seltene-condition-sma-clinical.md), [Condition/mii-exa-seltene-condition-sma-suspected](Condition-mii-exa-seltene-condition-sma-suspected.md), [Condition/mii-exa-seltene-example-cf-clinical](Condition-mii-exa-seltene-example-cf-clinical.md), [Condition/mii-exa-seltene-example-marfan-clinical-diagnosis](Condition-mii-exa-seltene-example-marfan-clinical-diagnosis.md), [Condition/mii-exa-seltene-example-noonan-clinical-diagnosis](Condition-mii-exa-seltene-example-noonan-clinical-diagnosis.md), [Condition/mii-exa-seltene-symptom-condition](Condition-mii-exa-seltene-symptom-condition.md), [MII_EX_Seltene_Penetrance](StructureDefinition-mii-ex-seltene-penetrance.md), [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_ClinicalImpression](StructureDefinition-mii-pr-seltene-clinical-impression.md), [MII_PR_Seltene_HPO_Assessment](StructureDefinition-mii-pr-seltene-hpo-assessment.md), [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md), [MII_VS_Seltene_HPOAgeOfOnset](ValueSet-mii-vs-seltene-hpo-age-of-onset.md), [MII_VS_Seltene_HPOInheritancePattern](ValueSet-mii-vs-seltene-hpo-inheritance-pattern.md), [MII_VS_Seltene_HPOPhenotypicObservationCodes](ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.md), [MII_VS_Seltene_HPOSeverity](ValueSet-mii-vs-seltene-hpo-severity.md), [MII_VS_Seltene_Penetrance](ValueSet-mii-vs-seltene-penetrance.md), [Observation/mii-exa-seltene-anteverted-nares](Observation-mii-exa-seltene-anteverted-nares.md), [Observation/mii-exa-seltene-aortic-root-dilatation](Observation-mii-exa-seltene-aortic-root-dilatation.md), [Observation/mii-exa-seltene-arachnodactyly](Observation-mii-exa-seltene-arachnodactyly.md), [Observation/mii-exa-seltene-chronic-diarrhea](Observation-mii-exa-seltene-chronic-diarrhea.md), [Observation/mii-exa-seltene-failure-to-thrive](Observation-mii-exa-seltene-failure-to-thrive.md), [Observation/mii-exa-seltene-hpo-assessment](Observation-mii-exa-seltene-hpo-assessment.md), [Observation/mii-exa-seltene-hpo-assessment-change-status](Observation-mii-exa-seltene-hpo-assessment-change-status.md), [Observation/mii-exa-seltene-hpo-assessment-excluded](Observation-mii-exa-seltene-hpo-assessment-excluded.md), [Observation/mii-exa-seltene-hpo-assessment-severity](Observation-mii-exa-seltene-hpo-assessment-severity.md), [Observation/mii-exa-seltene-hypertelorism](Observation-mii-exa-seltene-hypertelorism.md), [Observation/mii-exa-seltene-lens-dislocation](Observation-mii-exa-seltene-lens-dislocation.md), [Observation/mii-exa-seltene-lymphedema](Observation-mii-exa-seltene-lymphedema.md), [Observation/mii-exa-seltene-observation-height-001](Observation-mii-exa-seltene-observation-height-001.md), [Observation/mii-exa-seltene-observation-leg-asymmetry](Observation-mii-exa-seltene-observation-leg-asymmetry.md), [Observation/mii-exa-seltene-recurrent-respiratory-infections](Observation-mii-exa-seltene-recurrent-respiratory-infections.md), [Observation/mii-exa-seltene-symptom-aortic-regurg](Observation-mii-exa-seltene-symptom-aortic-regurg.md), [Observation/mii-exa-seltene-symptom-aortic-root](Observation-mii-exa-seltene-symptom-aortic-root.md), [Observation/mii-exa-seltene-symptom-cataract](Observation-mii-exa-seltene-symptom-cataract.md), [Observation/mii-exa-seltene-symptom-chest-pain](Observation-mii-exa-seltene-symptom-chest-pain.md), [Observation/mii-exa-seltene-symptom-mitral-regurg](Observation-mii-exa-seltene-symptom-mitral-regurg.md), [Observation/mii-exa-seltene-tall-stature](Observation-mii-exa-seltene-tall-stature.md) and [Observation/mii-exa-seltene-vsd](Observation-mii-exa-seltene-vsd.md)
 
 
 * The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. [https://ucum.org/trac/wiki/TermsOfUse](https://ucum.org/trac/wiki/TermsOfUse)
 
-* [Unified Code for Units of Measure (UCUM)](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/CodeSystem-v3-ucum.html): [Bundle/bundle-marfan-complete](Bundle-bundle-marfan-complete.md), [Bundle/bundle-sma-complete](Bundle-bundle-sma-complete.md)... Show 20 more, [MII_PR_Seltene_Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MedicationRequest/mii-exa-seltene-therapieempfehlung-losartan-marfan](MedicationRequest-mii-exa-seltene-therapieempfehlung-losartan-marfan.md), [MedicationStatement/medication-losartan](MedicationStatement-medication-losartan.md), [Observation/aortic-root-normal](Observation-aortic-root-normal.md), [Observation/mii-exa-seltene-bodymassindex](Observation-mii-exa-seltene-bodymassindex.md), [Observation/mii-exa-seltene-geburtsgewicht](Observation-mii-exa-seltene-geburtsgewicht.md), [Observation/mii-exa-seltene-geburtslaenge](Observation-mii-exa-seltene-geburtslaenge.md), [Observation/mii-exa-seltene-gestationsalter](Observation-mii-exa-seltene-gestationsalter.md), [Observation/mii-exa-seltene-hueftumfang](Observation-mii-exa-seltene-hueftumfang.md), [Observation/mii-exa-seltene-kopfumfang](Observation-mii-exa-seltene-kopfumfang.md), [Observation/mii-exa-seltene-taillenumfang](Observation-mii-exa-seltene-taillenumfang.md), [Observation/observation-echo-aortic](Observation-observation-echo-aortic.md), [Observation/observation-height-001](Observation-observation-height-001.md), [Observation/observation-sma-screening](Observation-observation-sma-screening.md), [Observation/observation-troponin-001](Observation-observation-troponin-001.md), [Observation/observation-troponin-002](Observation-observation-troponin-002.md), [Observation/observation-troponin-003](Observation-observation-troponin-003.md), [Observation/observation-troponin-004](Observation-observation-troponin-004.md) and [Observation/symptom-aortic-root](Observation-symptom-aortic-root.md)
+* [Unified Code for Units of Measure (UCUM)](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/CodeSystem-v3-ucum.html): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 20 more, [MII_PR_Seltene_Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MedicationRequest/mii-exa-seltene-therapieempfehlung-losartan-marfan](MedicationRequest-mii-exa-seltene-therapieempfehlung-losartan-marfan.md), [MedicationStatement/mii-exa-seltene-medication-losartan](MedicationStatement-mii-exa-seltene-medication-losartan.md), [Observation/mii-exa-seltene-aortic-root-normal](Observation-mii-exa-seltene-aortic-root-normal.md), [Observation/mii-exa-seltene-bodymassindex](Observation-mii-exa-seltene-bodymassindex.md), [Observation/mii-exa-seltene-geburtsgewicht](Observation-mii-exa-seltene-geburtsgewicht.md), [Observation/mii-exa-seltene-geburtslaenge](Observation-mii-exa-seltene-geburtslaenge.md), [Observation/mii-exa-seltene-gestationsalter](Observation-mii-exa-seltene-gestationsalter.md), [Observation/mii-exa-seltene-hueftumfang](Observation-mii-exa-seltene-hueftumfang.md), [Observation/mii-exa-seltene-kopfumfang](Observation-mii-exa-seltene-kopfumfang.md), [Observation/mii-exa-seltene-observation-echo-aortic](Observation-mii-exa-seltene-observation-echo-aortic.md), [Observation/mii-exa-seltene-observation-height-001](Observation-mii-exa-seltene-observation-height-001.md), [Observation/mii-exa-seltene-observation-sma-screening](Observation-mii-exa-seltene-observation-sma-screening.md), [Observation/mii-exa-seltene-observation-troponin-001](Observation-mii-exa-seltene-observation-troponin-001.md), [Observation/mii-exa-seltene-observation-troponin-002](Observation-mii-exa-seltene-observation-troponin-002.md), [Observation/mii-exa-seltene-observation-troponin-003](Observation-mii-exa-seltene-observation-troponin-003.md), [Observation/mii-exa-seltene-observation-troponin-004](Observation-mii-exa-seltene-observation-troponin-004.md), [Observation/mii-exa-seltene-symptom-aortic-root](Observation-mii-exa-seltene-symptom-aortic-root.md) and [Observation/mii-exa-seltene-taillenumfang](Observation-mii-exa-seltene-taillenumfang.md)
 
 
 * This material contains content from [LOINC](http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the [license](http://loinc.org/license). LOINC® is a registered United States trademark of Regenstrief Institute, Inc.
 
-* [LOINC](http://terminology.hl7.org/6.5.0/CodeSystem-v3-loinc.html): [Bundle/bundle-marfan-complete](Bundle-bundle-marfan-complete.md), [Bundle/bundle-sma-complete](Bundle-bundle-sma-complete.md)... Show 63 more, [Condition/condition-pku-diagnosis](Condition-condition-pku-diagnosis.md), [DiagnosticReport/molgen-brca-panel](DiagnosticReport-molgen-brca-panel.md), [DiagnosticReport/molgen-cf-diagnostic](DiagnosticReport-molgen-cf-diagnostic.md), [DiagnosticReport/molgen-diagnostic-dmd](DiagnosticReport-molgen-diagnostic-dmd.md), [DiagnosticReport/molgen-diagnostic-implication-sma](DiagnosticReport-molgen-diagnostic-implication-sma.md), [DiagnosticReport/molgen-sma-negative](DiagnosticReport-molgen-sma-negative.md), [HPOPresenceStatus](ValueSet-mii-vs-seltene-hpo-presence-status.md), [MII_PR_Seltene_Blutgruppe](StructureDefinition-mii-pr-seltene-blutgruppe.md), [MII_PR_Seltene_Bodymassindex](StructureDefinition-mii-pr-seltene-bodymassindex.md), [MII_PR_Seltene_Geburtsgewicht](StructureDefinition-mii-pr-seltene-geburtsgewicht.md), [MII_PR_Seltene_Geburtslaenge](StructureDefinition-mii-pr-seltene-geburtslaenge.md), [MII_PR_Seltene_Gestationsalter](StructureDefinition-mii-pr-seltene-gestationsalter.md), [MII_PR_Seltene_HPO_Assessment](StructureDefinition-mii-pr-seltene-hpo-assessment.md), [MII_PR_Seltene_Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md), [MII_VS_Seltene_Blutgruppe](ValueSet-mii-vs-seltene-blutgruppe.md), [MII_VS_Seltene_NBS_Acylcarnitine_DBS](ValueSet-mii-vs-seltene-nbs-acylcarnitine-dbs.md), [MII_VS_Seltene_NBS_AminoAcid_DBS](ValueSet-mii-vs-seltene-nbs-aminoacid-dbs.md), [MII_VS_Seltene_NBS_DBS_All](ValueSet-mii-vs-seltene-nbs-dbs-all.md), [MII_VS_Seltene_NBS_EnzymeActivity_DBS](ValueSet-mii-vs-seltene-nbs-enzyme-activity-dbs.md), [MII_VS_Seltene_NBS_Hemoglobin_DBS](ValueSet-mii-vs-seltene-nbs-hemoglobin-dbs.md), [MII_VS_Seltene_NBS_Ratio_DBS](ValueSet-mii-vs-seltene-nbs-ratio-dbs.md), [MII_VS_Seltene_NBS_TargetAnalyte](ValueSet-mii-vs-seltene-nbs-target-analyte.md), [Observation/anteverted-nares](Observation-anteverted-nares.md), [Observation/aortic-root-dilatation](Observation-aortic-root-dilatation.md), [Observation/aortic-root-normal](Observation-aortic-root-normal.md), [Observation/arachnodactyly](Observation-arachnodactyly.md), [Observation/chronic-diarrhea](Observation-chronic-diarrhea.md), [Observation/failure-to-thrive](Observation-failure-to-thrive.md), [Observation/hypertelorism](Observation-hypertelorism.md), [Observation/lens-dislocation](Observation-lens-dislocation.md), [Observation/lymphedema](Observation-lymphedema.md), [Observation/mii-exa-seltene-bodymassindex](Observation-mii-exa-seltene-bodymassindex.md), [Observation/mii-exa-seltene-geburtsgewicht](Observation-mii-exa-seltene-geburtsgewicht.md), [Observation/mii-exa-seltene-geburtslaenge](Observation-mii-exa-seltene-geburtslaenge.md), [Observation/mii-exa-seltene-gestationsalter](Observation-mii-exa-seltene-gestationsalter.md), [Observation/mii-exa-seltene-hpo-assessment](Observation-mii-exa-seltene-hpo-assessment.md), [Observation/mii-exa-seltene-hpo-assessment-change-status](Observation-mii-exa-seltene-hpo-assessment-change-status.md), [Observation/mii-exa-seltene-hpo-assessment-excluded](Observation-mii-exa-seltene-hpo-assessment-excluded.md), [Observation/mii-exa-seltene-hpo-assessment-severity](Observation-mii-exa-seltene-hpo-assessment-severity.md), [Observation/mii-exa-seltene-kopfumfang](Observation-mii-exa-seltene-kopfumfang.md), [Observation/molgen-smn1-normal-copies](Observation-molgen-smn1-normal-copies.md), [Observation/molgen-variant-brca1-pathogenic](Observation-molgen-variant-brca1-pathogenic.md), [Observation/molgen-variant-cftr-f508del-homozygous](Observation-molgen-variant-cftr-f508del-homozygous.md), [Observation/molgen-variant-dmd-deletion-exon45-47](Observation-molgen-variant-dmd-deletion-exon45-47.md), [Observation/molgen-variant-smn1-deletion](Observation-molgen-variant-smn1-deletion.md), [Observation/observation-alt-001](Observation-observation-alt-001.md), [Observation/observation-ast-001](Observation-observation-ast-001.md), [Observation/observation-echo-aortic](Observation-observation-echo-aortic.md), [Observation/observation-echo-av](Observation-observation-echo-av.md), [Observation/observation-echo-mv](Observation-observation-echo-mv.md), [Observation/observation-height-001](Observation-observation-height-001.md), [Observation/observation-plt-001](Observation-observation-plt-001.md), [Observation/observation-sma-screening](Observation-observation-sma-screening.md), [Observation/observation-troponin-001](Observation-observation-troponin-001.md), [Observation/observation-troponin-002](Observation-observation-troponin-002.md), [Observation/observation-troponin-003](Observation-observation-troponin-003.md), [Observation/observation-troponin-004](Observation-observation-troponin-004.md), [Observation/recurrent-respiratory-infections](Observation-recurrent-respiratory-infections.md), [Observation/tall-stature](Observation-tall-stature.md), [Observation/variant-fbn1-001](Observation-variant-fbn1-001.md), [Observation/variant-smn1-001](Observation-variant-smn1-001.md), [Observation/variant-smn2-001](Observation-variant-smn2-001.md) and [Observation/vsd](Observation-vsd.md)
+* [LOINC](http://terminology.hl7.org/6.5.0/CodeSystem-v3-loinc.html): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 63 more, [Condition/mii-exa-seltene-condition-pku-diagnosis](Condition-mii-exa-seltene-condition-pku-diagnosis.md), [DiagnosticReport/mii-exa-seltene-molgen-brca-panel](DiagnosticReport-mii-exa-seltene-molgen-brca-panel.md), [DiagnosticReport/mii-exa-seltene-molgen-cf-diagnostic](DiagnosticReport-mii-exa-seltene-molgen-cf-diagnostic.md), [DiagnosticReport/mii-exa-seltene-molgen-diagnostic-dmd](DiagnosticReport-mii-exa-seltene-molgen-diagnostic-dmd.md), [DiagnosticReport/mii-exa-seltene-molgen-diagnostic-implication-sma](DiagnosticReport-mii-exa-seltene-molgen-diagnostic-implication-sma.md), [DiagnosticReport/mii-exa-seltene-molgen-sma-negative](DiagnosticReport-mii-exa-seltene-molgen-sma-negative.md), [MII_PR_Seltene_Blutgruppe](StructureDefinition-mii-pr-seltene-blutgruppe.md), [MII_PR_Seltene_Bodymassindex](StructureDefinition-mii-pr-seltene-bodymassindex.md), [MII_PR_Seltene_Geburtsgewicht](StructureDefinition-mii-pr-seltene-geburtsgewicht.md), [MII_PR_Seltene_Geburtslaenge](StructureDefinition-mii-pr-seltene-geburtslaenge.md), [MII_PR_Seltene_Gestationsalter](StructureDefinition-mii-pr-seltene-gestationsalter.md), [MII_PR_Seltene_HPO_Assessment](StructureDefinition-mii-pr-seltene-hpo-assessment.md), [MII_PR_Seltene_Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md), [MII_VS_Seltene_Blutgruppe](ValueSet-mii-vs-seltene-blutgruppe.md), [MII_VS_Seltene_HPOPresenceStatus](ValueSet-mii-vs-seltene-hpo-presence-status.md), [MII_VS_Seltene_NBS_Acylcarnitine_DBS](ValueSet-mii-vs-seltene-nbs-acylcarnitine-dbs.md), [MII_VS_Seltene_NBS_AminoAcid_DBS](ValueSet-mii-vs-seltene-nbs-aminoacid-dbs.md), [MII_VS_Seltene_NBS_DBS_All](ValueSet-mii-vs-seltene-nbs-dbs-all.md), [MII_VS_Seltene_NBS_EnzymeActivity_DBS](ValueSet-mii-vs-seltene-nbs-enzyme-activity-dbs.md), [MII_VS_Seltene_NBS_Hemoglobin_DBS](ValueSet-mii-vs-seltene-nbs-hemoglobin-dbs.md), [MII_VS_Seltene_NBS_Ratio_DBS](ValueSet-mii-vs-seltene-nbs-ratio-dbs.md), [MII_VS_Seltene_NBS_TargetAnalyte](ValueSet-mii-vs-seltene-nbs-target-analyte.md), [Observation/mii-exa-seltene-anteverted-nares](Observation-mii-exa-seltene-anteverted-nares.md), [Observation/mii-exa-seltene-aortic-root-dilatation](Observation-mii-exa-seltene-aortic-root-dilatation.md), [Observation/mii-exa-seltene-aortic-root-normal](Observation-mii-exa-seltene-aortic-root-normal.md), [Observation/mii-exa-seltene-arachnodactyly](Observation-mii-exa-seltene-arachnodactyly.md), [Observation/mii-exa-seltene-bodymassindex](Observation-mii-exa-seltene-bodymassindex.md), [Observation/mii-exa-seltene-chronic-diarrhea](Observation-mii-exa-seltene-chronic-diarrhea.md), [Observation/mii-exa-seltene-failure-to-thrive](Observation-mii-exa-seltene-failure-to-thrive.md), [Observation/mii-exa-seltene-geburtsgewicht](Observation-mii-exa-seltene-geburtsgewicht.md), [Observation/mii-exa-seltene-geburtslaenge](Observation-mii-exa-seltene-geburtslaenge.md), [Observation/mii-exa-seltene-gestationsalter](Observation-mii-exa-seltene-gestationsalter.md), [Observation/mii-exa-seltene-hpo-assessment](Observation-mii-exa-seltene-hpo-assessment.md), [Observation/mii-exa-seltene-hpo-assessment-change-status](Observation-mii-exa-seltene-hpo-assessment-change-status.md), [Observation/mii-exa-seltene-hpo-assessment-excluded](Observation-mii-exa-seltene-hpo-assessment-excluded.md), [Observation/mii-exa-seltene-hpo-assessment-severity](Observation-mii-exa-seltene-hpo-assessment-severity.md), [Observation/mii-exa-seltene-hypertelorism](Observation-mii-exa-seltene-hypertelorism.md), [Observation/mii-exa-seltene-kopfumfang](Observation-mii-exa-seltene-kopfumfang.md), [Observation/mii-exa-seltene-lens-dislocation](Observation-mii-exa-seltene-lens-dislocation.md), [Observation/mii-exa-seltene-lymphedema](Observation-mii-exa-seltene-lymphedema.md), [Observation/mii-exa-seltene-molgen-smn1-normal-copies](Observation-mii-exa-seltene-molgen-smn1-normal-copies.md), [Observation/mii-exa-seltene-molgen-variant-brca1-pathogenic](Observation-mii-exa-seltene-molgen-variant-brca1-pathogenic.md), [Observation/mii-exa-seltene-molgen-variant-cftr-f508del-homozygous](Observation-mii-exa-seltene-molgen-variant-cftr-f508del-homozygous.md), [Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47](Observation-mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47.md), [Observation/mii-exa-seltene-molgen-variant-smn1-deletion](Observation-mii-exa-seltene-molgen-variant-smn1-deletion.md), [Observation/mii-exa-seltene-observation-alt-001](Observation-mii-exa-seltene-observation-alt-001.md), [Observation/mii-exa-seltene-observation-ast-001](Observation-mii-exa-seltene-observation-ast-001.md), [Observation/mii-exa-seltene-observation-echo-aortic](Observation-mii-exa-seltene-observation-echo-aortic.md), [Observation/mii-exa-seltene-observation-echo-av](Observation-mii-exa-seltene-observation-echo-av.md), [Observation/mii-exa-seltene-observation-echo-mv](Observation-mii-exa-seltene-observation-echo-mv.md), [Observation/mii-exa-seltene-observation-height-001](Observation-mii-exa-seltene-observation-height-001.md), [Observation/mii-exa-seltene-observation-plt-001](Observation-mii-exa-seltene-observation-plt-001.md), [Observation/mii-exa-seltene-observation-sma-screening](Observation-mii-exa-seltene-observation-sma-screening.md), [Observation/mii-exa-seltene-observation-troponin-001](Observation-mii-exa-seltene-observation-troponin-001.md), [Observation/mii-exa-seltene-observation-troponin-002](Observation-mii-exa-seltene-observation-troponin-002.md), [Observation/mii-exa-seltene-observation-troponin-003](Observation-mii-exa-seltene-observation-troponin-003.md), [Observation/mii-exa-seltene-observation-troponin-004](Observation-mii-exa-seltene-observation-troponin-004.md), [Observation/mii-exa-seltene-recurrent-respiratory-infections](Observation-mii-exa-seltene-recurrent-respiratory-infections.md), [Observation/mii-exa-seltene-tall-stature](Observation-mii-exa-seltene-tall-stature.md), [Observation/mii-exa-seltene-variant-fbn1-001](Observation-mii-exa-seltene-variant-fbn1-001.md), [Observation/mii-exa-seltene-variant-smn1-001](Observation-mii-exa-seltene-variant-smn1-001.md), [Observation/mii-exa-seltene-variant-smn2-001](Observation-mii-exa-seltene-variant-smn2-001.md) and [Observation/mii-exa-seltene-vsd](Observation-mii-exa-seltene-vsd.md)
 
 
 * This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact [https://www.snomed.org/get-snomed](https://www.snomed.org/get-snomed) or [info@snomed.org](mailto:info@snomed.org).
 
-* [SNOMED Clinical Terms&reg; (SNOMED CT&reg;)](http://hl7.org/fhir/R4/codesystem-snomedct.html): [Bundle/bundle-marfan-complete](Bundle-bundle-marfan-complete.md), [Bundle/bundle-sma-complete](Bundle-bundle-sma-complete.md)... Show 99 more, [ClinicalDiagnosisCategoryVS](ValueSet-mii-vs-seltene-clinical-diagnosis-category.md), [ClinicalImpression/clinical-impression-erstvorstellung](ClinicalImpression-clinical-impression-erstvorstellung.md), [ClinicalImpression/clinical-impression-nachsorge](ClinicalImpression-clinical-impression-nachsorge.md), [ClinicalImpression/clinical-impression-seltene-assessment](ClinicalImpression-clinical-impression-seltene-assessment.md), [Condition/condition-cataract](Condition-condition-cataract.md), [Condition/condition-marfan-clinical](Condition-condition-marfan-clinical.md), [Condition/condition-marfan-genetic](Condition-condition-marfan-genetic.md), [Condition/condition-marfan-suspected](Condition-condition-marfan-suspected.md), [Condition/condition-pku-diagnosis](Condition-condition-pku-diagnosis.md), [Condition/condition-sma-clinical](Condition-condition-sma-clinical.md), [Condition/condition-sma-genetic](Condition-condition-sma-genetic.md), [Condition/condition-sma-suspected](Condition-condition-sma-suspected.md), [Condition/example-brca1-genetic-diagnosis](Condition-example-brca1-genetic-diagnosis.md), [Condition/example-cf-excluded-after-screening](Condition-example-cf-excluded-after-screening.md), [Condition/example-cf-genetic](Condition-example-cf-genetic.md), [Condition/example-dmd-excluded-bmd-confirmed](Condition-example-dmd-excluded-bmd-confirmed.md), [Condition/example-dmd-genetic-diagnosis](Condition-example-dmd-genetic-diagnosis.md), [Condition/example-marfan-clinical-diagnosis](Condition-example-marfan-clinical-diagnosis.md), [Condition/example-noonan-clinical-diagnosis](Condition-example-noonan-clinical-diagnosis.md), [Condition/example-sma-excluded-genetic](Condition-example-sma-excluded-genetic.md), [Condition/example-sma-genetic-diagnosis](Condition-example-sma-genetic-diagnosis.md), [Condition/mii-exa-seltene-symptom-condition](Condition-mii-exa-seltene-symptom-condition.md), [DiagnosticReport/molgen-sma-negative](DiagnosticReport-molgen-sma-negative.md), [Encounter/encounter-ambulant-001](Encounter-encounter-ambulant-001.md), [Encounter/encounter-cardiology](Encounter-encounter-cardiology.md), [Encounter/encounter-cataract-surgery](Encounter-encounter-cataract-surgery.md), [Encounter/encounter-nachsorge-001](Encounter-encounter-nachsorge-001.md), [Encounter/encounter-ophthalmology](Encounter-encounter-ophthalmology.md), [Encounter/encounter-screening-001](Encounter-encounter-screening-001.md), [Encounter/encounter-stationaer-001](Encounter-encounter-stationaer-001.md), [Encounter/encounter-surgery-planned](Encounter-encounter-surgery-planned.md), [FamilyMemberHistory/family-history-001](FamilyMemberHistory-family-history-001.md), [FamilyMemberHistory/mii-exa-seltene-familienanamnese](FamilyMemberHistory-mii-exa-seltene-familienanamnese.md), [GeneticBasisValueSet](ValueSet-mii-vs-seltene-genetic-basis.md), [MII_PR_Seltene_Blutgruppe](StructureDefinition-mii-pr-seltene-blutgruppe.md), [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_Consanguinity](StructureDefinition-mii-pr-seltene-consanguinity.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md), [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md), [MII_PR_Seltene_HPO_Assessment](StructureDefinition-mii-pr-seltene-hpo-assessment.md), [MII_PR_Seltene_Hueftumfang](StructureDefinition-mii-pr-seltene-hueftumfang.md), [MII_PR_Seltene_Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md), [MII_PR_Seltene_Studieneinschluss_Anfrage](StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.md), [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md), [MII_PR_Seltene_Taillenumfang](StructureDefinition-mii-pr-seltene-taillenumfang.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md), [MII_VS_Seltene_Blutgruppe](ValueSet-mii-vs-seltene-blutgruppe.md), [MII_VS_Seltene_Consanguinity](ValueSet-mii-vs-seltene-consanguinity.md), [MII_VS_Seltene_Symptom_ChangeStatus_Combined](ValueSet-mii-vs-seltene-symptom-change-status-combined.md), [MedicationStatement/medication-losartan](MedicationStatement-medication-losartan.md), [Observation/anteverted-nares](Observation-anteverted-nares.md), [Observation/aortic-root-dilatation](Observation-aortic-root-dilatation.md), [Observation/arachnodactyly](Observation-arachnodactyly.md), [Observation/chronic-diarrhea](Observation-chronic-diarrhea.md), [Observation/failure-to-thrive](Observation-failure-to-thrive.md), [Observation/hypertelorism](Observation-hypertelorism.md), [Observation/lens-dislocation](Observation-lens-dislocation.md), [Observation/lymphedema](Observation-lymphedema.md), [Observation/mii-exa-seltene-consanguinity](Observation-mii-exa-seltene-consanguinity.md), [Observation/mii-exa-seltene-hpo-assessment](Observation-mii-exa-seltene-hpo-assessment.md), [Observation/mii-exa-seltene-hpo-assessment-change-status](Observation-mii-exa-seltene-hpo-assessment-change-status.md), [Observation/mii-exa-seltene-hpo-assessment-excluded](Observation-mii-exa-seltene-hpo-assessment-excluded.md), [Observation/mii-exa-seltene-hpo-assessment-severity](Observation-mii-exa-seltene-hpo-assessment-severity.md), [Observation/mii-exa-seltene-hueftumfang](Observation-mii-exa-seltene-hueftumfang.md), [Observation/mii-exa-seltene-kopfumfang](Observation-mii-exa-seltene-kopfumfang.md), [Observation/mii-exa-seltene-taillenumfang](Observation-mii-exa-seltene-taillenumfang.md), [Observation/molgen-smn1-normal-copies](Observation-molgen-smn1-normal-copies.md), [Observation/molgen-variant-brca1-pathogenic](Observation-molgen-variant-brca1-pathogenic.md), [Observation/molgen-variant-cftr-f508del-homozygous](Observation-molgen-variant-cftr-f508del-homozygous.md), [Observation/molgen-variant-dmd-deletion-exon45-47](Observation-molgen-variant-dmd-deletion-exon45-47.md), [Observation/molgen-variant-smn1-deletion](Observation-molgen-variant-smn1-deletion.md), [Observation/observation-echo-aortic](Observation-observation-echo-aortic.md), [Observation/observation-echo-av](Observation-observation-echo-av.md), [Observation/observation-echo-mv](Observation-observation-echo-mv.md), [Observation/observation-height-001](Observation-observation-height-001.md), [Observation/observation-leg-asymmetry](Observation-observation-leg-asymmetry.md), [Observation/observation-sma-screening](Observation-observation-sma-screening.md), [Observation/recurrent-respiratory-infections](Observation-recurrent-respiratory-infections.md), [Observation/symptom-aortic-regurg](Observation-symptom-aortic-regurg.md), [Observation/symptom-aortic-root](Observation-symptom-aortic-root.md), [Observation/symptom-cataract](Observation-symptom-cataract.md), [Observation/symptom-chest-pain](Observation-symptom-chest-pain.md), [Observation/symptom-mitral-regurg](Observation-symptom-mitral-regurg.md), [Observation/tall-stature](Observation-tall-stature.md), [Observation/variant-fbn1-001](Observation-variant-fbn1-001.md), [Observation/variant-smn1-001](Observation-variant-smn1-001.md), [Observation/vsd](Observation-vsd.md), [Procedure/procedure-aortic-planned](Procedure-procedure-aortic-planned.md), [Procedure/procedure-cataract-surgery](Procedure-procedure-cataract-surgery.md), [Procedure/procedure-gentherapy-001](Procedure-procedure-gentherapy-001.md), [ServiceRequest/example-early-detection-recommendation](ServiceRequest-example-early-detection-recommendation.md), [ServiceRequest/example-nutrition-therapy-recommendation](ServiceRequest-example-nutrition-therapy-recommendation.md), [ServiceRequest/mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan](ServiceRequest-mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan.md), [ServiceRequest/mii-exa-seltene-therapieempfehlung-genetische-beratung](ServiceRequest-mii-exa-seltene-therapieempfehlung-genetische-beratung.md), [ServiceRequest/mii-exa-seltene-therapieempfehlung-physiotherapie-sma](ServiceRequest-mii-exa-seltene-therapieempfehlung-physiotherapie-sma.md), [SyndromeCategoryVS](ValueSet-mii-vs-seltene-syndrome-category.md), [VonSEBetroffen](StructureDefinition-mii-ex-von-se-betroffen.md) and [VonSEBetroffenVS](ValueSet-von-seltene-betroffen-vs.md)
+* [SNOMED Clinical Terms&reg; (SNOMED CT&reg;)](http://hl7.org/fhir/R4/codesystem-snomedct.html): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 99 more, [ClinicalImpression/mii-exa-seltene-clinical-impression-erstvorstellung](ClinicalImpression-mii-exa-seltene-clinical-impression-erstvorstellung.md), [ClinicalImpression/mii-exa-seltene-clinical-impression-nachsorge](ClinicalImpression-mii-exa-seltene-clinical-impression-nachsorge.md), [ClinicalImpression/mii-exa-seltene-clinical-impression-seltene-assessment](ClinicalImpression-mii-exa-seltene-clinical-impression-seltene-assessment.md), [Condition/mii-exa-seltene-condition-cataract](Condition-mii-exa-seltene-condition-cataract.md), [Condition/mii-exa-seltene-condition-marfan-clinical](Condition-mii-exa-seltene-condition-marfan-clinical.md), [Condition/mii-exa-seltene-condition-marfan-genetic](Condition-mii-exa-seltene-condition-marfan-genetic.md), [Condition/mii-exa-seltene-condition-marfan-suspected](Condition-mii-exa-seltene-condition-marfan-suspected.md), [Condition/mii-exa-seltene-condition-pku-diagnosis](Condition-mii-exa-seltene-condition-pku-diagnosis.md), [Condition/mii-exa-seltene-condition-sma-clinical](Condition-mii-exa-seltene-condition-sma-clinical.md), [Condition/mii-exa-seltene-condition-sma-genetic](Condition-mii-exa-seltene-condition-sma-genetic.md), [Condition/mii-exa-seltene-condition-sma-suspected](Condition-mii-exa-seltene-condition-sma-suspected.md), [Condition/mii-exa-seltene-example-brca1-genetic-diagnosis](Condition-mii-exa-seltene-example-brca1-genetic-diagnosis.md), [Condition/mii-exa-seltene-example-cf-excluded-after-screening](Condition-mii-exa-seltene-example-cf-excluded-after-screening.md), [Condition/mii-exa-seltene-example-cf-genetic](Condition-mii-exa-seltene-example-cf-genetic.md), [Condition/mii-exa-seltene-example-dmd-excluded-bmd-confirmed](Condition-mii-exa-seltene-example-dmd-excluded-bmd-confirmed.md), [Condition/mii-exa-seltene-example-dmd-genetic-diagnosis](Condition-mii-exa-seltene-example-dmd-genetic-diagnosis.md), [Condition/mii-exa-seltene-example-marfan-clinical-diagnosis](Condition-mii-exa-seltene-example-marfan-clinical-diagnosis.md), [Condition/mii-exa-seltene-example-noonan-clinical-diagnosis](Condition-mii-exa-seltene-example-noonan-clinical-diagnosis.md), [Condition/mii-exa-seltene-example-sma-excluded-genetic](Condition-mii-exa-seltene-example-sma-excluded-genetic.md), [Condition/mii-exa-seltene-example-sma-genetic-diagnosis](Condition-mii-exa-seltene-example-sma-genetic-diagnosis.md), [Condition/mii-exa-seltene-symptom-condition](Condition-mii-exa-seltene-symptom-condition.md), [DiagnosticReport/mii-exa-seltene-molgen-sma-negative](DiagnosticReport-mii-exa-seltene-molgen-sma-negative.md), [Encounter/mii-exa-seltene-encounter-ambulant-001](Encounter-mii-exa-seltene-encounter-ambulant-001.md), [Encounter/mii-exa-seltene-encounter-cardiology](Encounter-mii-exa-seltene-encounter-cardiology.md), [Encounter/mii-exa-seltene-encounter-cataract-surgery](Encounter-mii-exa-seltene-encounter-cataract-surgery.md), [Encounter/mii-exa-seltene-encounter-nachsorge-001](Encounter-mii-exa-seltene-encounter-nachsorge-001.md), [Encounter/mii-exa-seltene-encounter-ophthalmology](Encounter-mii-exa-seltene-encounter-ophthalmology.md), [Encounter/mii-exa-seltene-encounter-screening-001](Encounter-mii-exa-seltene-encounter-screening-001.md), [Encounter/mii-exa-seltene-encounter-stationaer-001](Encounter-mii-exa-seltene-encounter-stationaer-001.md), [Encounter/mii-exa-seltene-encounter-surgery-planned](Encounter-mii-exa-seltene-encounter-surgery-planned.md), [FamilyMemberHistory/mii-exa-seltene-familienanamnese](FamilyMemberHistory-mii-exa-seltene-familienanamnese.md), [FamilyMemberHistory/mii-exa-seltene-family-history-001](FamilyMemberHistory-mii-exa-seltene-family-history-001.md), [MII_EX_Seltene_VonSEBetroffen](StructureDefinition-mii-ex-seltene-von-se-betroffen.md), [MII_PR_Seltene_Blutgruppe](StructureDefinition-mii-pr-seltene-blutgruppe.md), [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_Consanguinity](StructureDefinition-mii-pr-seltene-consanguinity.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md), [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md), [MII_PR_Seltene_HPO_Assessment](StructureDefinition-mii-pr-seltene-hpo-assessment.md), [MII_PR_Seltene_Hueftumfang](StructureDefinition-mii-pr-seltene-hueftumfang.md), [MII_PR_Seltene_Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md), [MII_PR_Seltene_Studieneinschluss_Anfrage](StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.md), [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md), [MII_PR_Seltene_Taillenumfang](StructureDefinition-mii-pr-seltene-taillenumfang.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md), [MII_VS_Seltene_Blutgruppe](ValueSet-mii-vs-seltene-blutgruppe.md), [MII_VS_Seltene_ClinicalDiagnosisCategory](ValueSet-mii-vs-seltene-clinical-diagnosis-category.md), [MII_VS_Seltene_Consanguinity](ValueSet-mii-vs-seltene-consanguinity.md), [MII_VS_Seltene_GeneticBasis](ValueSet-mii-vs-seltene-genetic-basis.md), [MII_VS_Seltene_Symptom_ChangeStatus_Combined](ValueSet-mii-vs-seltene-symptom-change-status-combined.md), [MII_VS_Seltene_SyndromeCategory](ValueSet-mii-vs-seltene-syndrome-category.md), [MII_VS_Seltene_VonSEBetroffen](ValueSet-mii-vs-seltene-von-se-betroffen.md), [MedicationStatement/mii-exa-seltene-medication-losartan](MedicationStatement-mii-exa-seltene-medication-losartan.md), [Observation/mii-exa-seltene-anteverted-nares](Observation-mii-exa-seltene-anteverted-nares.md), [Observation/mii-exa-seltene-aortic-root-dilatation](Observation-mii-exa-seltene-aortic-root-dilatation.md), [Observation/mii-exa-seltene-arachnodactyly](Observation-mii-exa-seltene-arachnodactyly.md), [Observation/mii-exa-seltene-chronic-diarrhea](Observation-mii-exa-seltene-chronic-diarrhea.md), [Observation/mii-exa-seltene-consanguinity](Observation-mii-exa-seltene-consanguinity.md), [Observation/mii-exa-seltene-failure-to-thrive](Observation-mii-exa-seltene-failure-to-thrive.md), [Observation/mii-exa-seltene-hpo-assessment](Observation-mii-exa-seltene-hpo-assessment.md), [Observation/mii-exa-seltene-hpo-assessment-change-status](Observation-mii-exa-seltene-hpo-assessment-change-status.md), [Observation/mii-exa-seltene-hpo-assessment-excluded](Observation-mii-exa-seltene-hpo-assessment-excluded.md), [Observation/mii-exa-seltene-hpo-assessment-severity](Observation-mii-exa-seltene-hpo-assessment-severity.md), [Observation/mii-exa-seltene-hueftumfang](Observation-mii-exa-seltene-hueftumfang.md), [Observation/mii-exa-seltene-hypertelorism](Observation-mii-exa-seltene-hypertelorism.md), [Observation/mii-exa-seltene-kopfumfang](Observation-mii-exa-seltene-kopfumfang.md), [Observation/mii-exa-seltene-lens-dislocation](Observation-mii-exa-seltene-lens-dislocation.md), [Observation/mii-exa-seltene-lymphedema](Observation-mii-exa-seltene-lymphedema.md), [Observation/mii-exa-seltene-molgen-smn1-normal-copies](Observation-mii-exa-seltene-molgen-smn1-normal-copies.md), [Observation/mii-exa-seltene-molgen-variant-brca1-pathogenic](Observation-mii-exa-seltene-molgen-variant-brca1-pathogenic.md), [Observation/mii-exa-seltene-molgen-variant-cftr-f508del-homozygous](Observation-mii-exa-seltene-molgen-variant-cftr-f508del-homozygous.md), [Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47](Observation-mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47.md), [Observation/mii-exa-seltene-molgen-variant-smn1-deletion](Observation-mii-exa-seltene-molgen-variant-smn1-deletion.md), [Observation/mii-exa-seltene-observation-echo-aortic](Observation-mii-exa-seltene-observation-echo-aortic.md), [Observation/mii-exa-seltene-observation-echo-av](Observation-mii-exa-seltene-observation-echo-av.md), [Observation/mii-exa-seltene-observation-echo-mv](Observation-mii-exa-seltene-observation-echo-mv.md), [Observation/mii-exa-seltene-observation-height-001](Observation-mii-exa-seltene-observation-height-001.md), [Observation/mii-exa-seltene-observation-leg-asymmetry](Observation-mii-exa-seltene-observation-leg-asymmetry.md), [Observation/mii-exa-seltene-observation-sma-screening](Observation-mii-exa-seltene-observation-sma-screening.md), [Observation/mii-exa-seltene-recurrent-respiratory-infections](Observation-mii-exa-seltene-recurrent-respiratory-infections.md), [Observation/mii-exa-seltene-symptom-aortic-regurg](Observation-mii-exa-seltene-symptom-aortic-regurg.md), [Observation/mii-exa-seltene-symptom-aortic-root](Observation-mii-exa-seltene-symptom-aortic-root.md), [Observation/mii-exa-seltene-symptom-cataract](Observation-mii-exa-seltene-symptom-cataract.md), [Observation/mii-exa-seltene-symptom-chest-pain](Observation-mii-exa-seltene-symptom-chest-pain.md), [Observation/mii-exa-seltene-symptom-mitral-regurg](Observation-mii-exa-seltene-symptom-mitral-regurg.md), [Observation/mii-exa-seltene-taillenumfang](Observation-mii-exa-seltene-taillenumfang.md), [Observation/mii-exa-seltene-tall-stature](Observation-mii-exa-seltene-tall-stature.md), [Observation/mii-exa-seltene-variant-fbn1-001](Observation-mii-exa-seltene-variant-fbn1-001.md), [Observation/mii-exa-seltene-variant-smn1-001](Observation-mii-exa-seltene-variant-smn1-001.md), [Observation/mii-exa-seltene-vsd](Observation-mii-exa-seltene-vsd.md), [Procedure/mii-exa-seltene-procedure-aortic-planned](Procedure-mii-exa-seltene-procedure-aortic-planned.md), [Procedure/mii-exa-seltene-procedure-cataract-surgery](Procedure-mii-exa-seltene-procedure-cataract-surgery.md), [Procedure/mii-exa-seltene-procedure-gentherapy-001](Procedure-mii-exa-seltene-procedure-gentherapy-001.md), [ServiceRequest/mii-exa-seltene-example-early-detection-recommendation](ServiceRequest-mii-exa-seltene-example-early-detection-recommendation.md), [ServiceRequest/mii-exa-seltene-example-nutrition-therapy-recommendation](ServiceRequest-mii-exa-seltene-example-nutrition-therapy-recommendation.md), [ServiceRequest/mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan](ServiceRequest-mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan.md), [ServiceRequest/mii-exa-seltene-therapieempfehlung-genetische-beratung](ServiceRequest-mii-exa-seltene-therapieempfehlung-genetische-beratung.md) and [ServiceRequest/mii-exa-seltene-therapieempfehlung-physiotherapie-sma](ServiceRequest-mii-exa-seltene-therapieempfehlung-physiotherapie-sma.md)
 
 
 * This material derives from the HL7 Terminology (THO). THO is copyright ©1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: [https://terminology.hl7.org/license.html](https://terminology.hl7.org/license.html)
 
-* [Condition Category Codes](http://terminology.hl7.org/7.3.0/CodeSystem-condition-category.html): [Bundle/bundle-marfan-complete](Bundle-bundle-marfan-complete.md), [Bundle/bundle-sma-complete](Bundle-bundle-sma-complete.md)... Show 12 more, [Condition/condition-cataract](Condition-condition-cataract.md), [Condition/condition-marfan-clinical](Condition-condition-marfan-clinical.md), [Condition/condition-marfan-suspected](Condition-condition-marfan-suspected.md), [Condition/condition-sma-clinical](Condition-condition-sma-clinical.md), [Condition/condition-sma-suspected](Condition-condition-sma-suspected.md), [Condition/example-cf-clinical](Condition-example-cf-clinical.md), [Condition/example-eds-excluded-clinical](Condition-example-eds-excluded-clinical.md), [Condition/example-marfan-clinical-diagnosis](Condition-example-marfan-clinical-diagnosis.md), [Condition/example-marfan-excluded-clinical](Condition-example-marfan-excluded-clinical.md), [Condition/example-metabolic-myopathy-excluded](Condition-example-metabolic-myopathy-excluded.md), [Condition/example-noonan-clinical-diagnosis](Condition-example-noonan-clinical-diagnosis.md) and [Condition/mii-exa-seltene-symptom-condition](Condition-mii-exa-seltene-symptom-condition.md)
-* [Condition Clinical Status Codes](http://terminology.hl7.org/7.3.0/CodeSystem-condition-clinical.html): [Bundle/bundle-marfan-complete](Bundle-bundle-marfan-complete.md), [Bundle/bundle-sma-complete](Bundle-bundle-sma-complete.md)... Show 23 more, [Condition/condition-cataract](Condition-condition-cataract.md), [Condition/condition-marfan-clinical](Condition-condition-marfan-clinical.md), [Condition/condition-marfan-genetic](Condition-condition-marfan-genetic.md), [Condition/condition-marfan-suspected](Condition-condition-marfan-suspected.md), [Condition/condition-pku-diagnosis](Condition-condition-pku-diagnosis.md), [Condition/condition-sma-clinical](Condition-condition-sma-clinical.md), [Condition/condition-sma-genetic](Condition-condition-sma-genetic.md), [Condition/condition-sma-suspected](Condition-condition-sma-suspected.md), [Condition/example-brca1-genetic-diagnosis](Condition-example-brca1-genetic-diagnosis.md), [Condition/example-cf-clinical](Condition-example-cf-clinical.md), [Condition/example-cf-excluded-after-screening](Condition-example-cf-excluded-after-screening.md), [Condition/example-cf-genetic](Condition-example-cf-genetic.md), [Condition/example-dmd-excluded-bmd-confirmed](Condition-example-dmd-excluded-bmd-confirmed.md), [Condition/example-dmd-genetic-diagnosis](Condition-example-dmd-genetic-diagnosis.md), [Condition/example-eds-excluded-clinical](Condition-example-eds-excluded-clinical.md), [Condition/example-marfan-clinical-diagnosis](Condition-example-marfan-clinical-diagnosis.md), [Condition/example-marfan-excluded-clinical](Condition-example-marfan-excluded-clinical.md), [Condition/example-metabolic-myopathy-excluded](Condition-example-metabolic-myopathy-excluded.md), [Condition/example-noonan-clinical-diagnosis](Condition-example-noonan-clinical-diagnosis.md), [Condition/example-sma-excluded-genetic](Condition-example-sma-excluded-genetic.md), [Condition/example-sma-genetic-diagnosis](Condition-example-sma-genetic-diagnosis.md), [Condition/mii-exa-seltene-symptom-condition](Condition-mii-exa-seltene-symptom-condition.md) and [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md)
-* [ConditionVerificationStatus](http://terminology.hl7.org/7.3.0/CodeSystem-condition-ver-status.html): [Bundle/bundle-marfan-complete](Bundle-bundle-marfan-complete.md), [Bundle/bundle-sma-complete](Bundle-bundle-sma-complete.md)... Show 23 more, [Condition/condition-cataract](Condition-condition-cataract.md), [Condition/condition-marfan-clinical](Condition-condition-marfan-clinical.md), [Condition/condition-marfan-genetic](Condition-condition-marfan-genetic.md), [Condition/condition-marfan-suspected](Condition-condition-marfan-suspected.md), [Condition/condition-pku-diagnosis](Condition-condition-pku-diagnosis.md), [Condition/condition-sma-clinical](Condition-condition-sma-clinical.md), [Condition/condition-sma-genetic](Condition-condition-sma-genetic.md), [Condition/condition-sma-suspected](Condition-condition-sma-suspected.md), [Condition/example-brca1-genetic-diagnosis](Condition-example-brca1-genetic-diagnosis.md), [Condition/example-cf-clinical](Condition-example-cf-clinical.md), [Condition/example-cf-excluded-after-screening](Condition-example-cf-excluded-after-screening.md), [Condition/example-cf-genetic](Condition-example-cf-genetic.md), [Condition/example-dmd-excluded-bmd-confirmed](Condition-example-dmd-excluded-bmd-confirmed.md), [Condition/example-dmd-genetic-diagnosis](Condition-example-dmd-genetic-diagnosis.md), [Condition/example-eds-excluded-clinical](Condition-example-eds-excluded-clinical.md), [Condition/example-marfan-clinical-diagnosis](Condition-example-marfan-clinical-diagnosis.md), [Condition/example-marfan-excluded-clinical](Condition-example-marfan-excluded-clinical.md), [Condition/example-metabolic-myopathy-excluded](Condition-example-metabolic-myopathy-excluded.md), [Condition/example-noonan-clinical-diagnosis](Condition-example-noonan-clinical-diagnosis.md), [Condition/example-sma-excluded-genetic](Condition-example-sma-excluded-genetic.md), [Condition/example-sma-genetic-diagnosis](Condition-example-sma-genetic-diagnosis.md), [Condition/mii-exa-seltene-symptom-condition](Condition-mii-exa-seltene-symptom-condition.md) and [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md)
+* [Condition Category Codes](http://terminology.hl7.org/7.3.0/CodeSystem-condition-category.html): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 12 more, [Condition/mii-exa-seltene-condition-cataract](Condition-mii-exa-seltene-condition-cataract.md), [Condition/mii-exa-seltene-condition-marfan-clinical](Condition-mii-exa-seltene-condition-marfan-clinical.md), [Condition/mii-exa-seltene-condition-marfan-suspected](Condition-mii-exa-seltene-condition-marfan-suspected.md), [Condition/mii-exa-seltene-condition-sma-clinical](Condition-mii-exa-seltene-condition-sma-clinical.md), [Condition/mii-exa-seltene-condition-sma-suspected](Condition-mii-exa-seltene-condition-sma-suspected.md), [Condition/mii-exa-seltene-example-cf-clinical](Condition-mii-exa-seltene-example-cf-clinical.md), [Condition/mii-exa-seltene-example-eds-excluded-clinical](Condition-mii-exa-seltene-example-eds-excluded-clinical.md), [Condition/mii-exa-seltene-example-marfan-clinical-diagnosis](Condition-mii-exa-seltene-example-marfan-clinical-diagnosis.md), [Condition/mii-exa-seltene-example-marfan-excluded-clinical](Condition-mii-exa-seltene-example-marfan-excluded-clinical.md), [Condition/mii-exa-seltene-example-metabolic-myopathy-excluded](Condition-mii-exa-seltene-example-metabolic-myopathy-excluded.md), [Condition/mii-exa-seltene-example-noonan-clinical-diagnosis](Condition-mii-exa-seltene-example-noonan-clinical-diagnosis.md) and [Condition/mii-exa-seltene-symptom-condition](Condition-mii-exa-seltene-symptom-condition.md)
+* [Condition Clinical Status Codes](http://terminology.hl7.org/7.3.0/CodeSystem-condition-clinical.html): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 23 more, [Condition/mii-exa-seltene-condition-cataract](Condition-mii-exa-seltene-condition-cataract.md), [Condition/mii-exa-seltene-condition-marfan-clinical](Condition-mii-exa-seltene-condition-marfan-clinical.md), [Condition/mii-exa-seltene-condition-marfan-genetic](Condition-mii-exa-seltene-condition-marfan-genetic.md), [Condition/mii-exa-seltene-condition-marfan-suspected](Condition-mii-exa-seltene-condition-marfan-suspected.md), [Condition/mii-exa-seltene-condition-pku-diagnosis](Condition-mii-exa-seltene-condition-pku-diagnosis.md), [Condition/mii-exa-seltene-condition-sma-clinical](Condition-mii-exa-seltene-condition-sma-clinical.md), [Condition/mii-exa-seltene-condition-sma-genetic](Condition-mii-exa-seltene-condition-sma-genetic.md), [Condition/mii-exa-seltene-condition-sma-suspected](Condition-mii-exa-seltene-condition-sma-suspected.md), [Condition/mii-exa-seltene-example-brca1-genetic-diagnosis](Condition-mii-exa-seltene-example-brca1-genetic-diagnosis.md), [Condition/mii-exa-seltene-example-cf-clinical](Condition-mii-exa-seltene-example-cf-clinical.md), [Condition/mii-exa-seltene-example-cf-excluded-after-screening](Condition-mii-exa-seltene-example-cf-excluded-after-screening.md), [Condition/mii-exa-seltene-example-cf-genetic](Condition-mii-exa-seltene-example-cf-genetic.md), [Condition/mii-exa-seltene-example-dmd-excluded-bmd-confirmed](Condition-mii-exa-seltene-example-dmd-excluded-bmd-confirmed.md), [Condition/mii-exa-seltene-example-dmd-genetic-diagnosis](Condition-mii-exa-seltene-example-dmd-genetic-diagnosis.md), [Condition/mii-exa-seltene-example-eds-excluded-clinical](Condition-mii-exa-seltene-example-eds-excluded-clinical.md), [Condition/mii-exa-seltene-example-marfan-clinical-diagnosis](Condition-mii-exa-seltene-example-marfan-clinical-diagnosis.md), [Condition/mii-exa-seltene-example-marfan-excluded-clinical](Condition-mii-exa-seltene-example-marfan-excluded-clinical.md), [Condition/mii-exa-seltene-example-metabolic-myopathy-excluded](Condition-mii-exa-seltene-example-metabolic-myopathy-excluded.md), [Condition/mii-exa-seltene-example-noonan-clinical-diagnosis](Condition-mii-exa-seltene-example-noonan-clinical-diagnosis.md), [Condition/mii-exa-seltene-example-sma-excluded-genetic](Condition-mii-exa-seltene-example-sma-excluded-genetic.md), [Condition/mii-exa-seltene-example-sma-genetic-diagnosis](Condition-mii-exa-seltene-example-sma-genetic-diagnosis.md), [Condition/mii-exa-seltene-symptom-condition](Condition-mii-exa-seltene-symptom-condition.md) and [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md)
+* [ConditionVerificationStatus](http://terminology.hl7.org/7.3.0/CodeSystem-condition-ver-status.html): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 23 more, [Condition/mii-exa-seltene-condition-cataract](Condition-mii-exa-seltene-condition-cataract.md), [Condition/mii-exa-seltene-condition-marfan-clinical](Condition-mii-exa-seltene-condition-marfan-clinical.md), [Condition/mii-exa-seltene-condition-marfan-genetic](Condition-mii-exa-seltene-condition-marfan-genetic.md), [Condition/mii-exa-seltene-condition-marfan-suspected](Condition-mii-exa-seltene-condition-marfan-suspected.md), [Condition/mii-exa-seltene-condition-pku-diagnosis](Condition-mii-exa-seltene-condition-pku-diagnosis.md), [Condition/mii-exa-seltene-condition-sma-clinical](Condition-mii-exa-seltene-condition-sma-clinical.md), [Condition/mii-exa-seltene-condition-sma-genetic](Condition-mii-exa-seltene-condition-sma-genetic.md), [Condition/mii-exa-seltene-condition-sma-suspected](Condition-mii-exa-seltene-condition-sma-suspected.md), [Condition/mii-exa-seltene-example-brca1-genetic-diagnosis](Condition-mii-exa-seltene-example-brca1-genetic-diagnosis.md), [Condition/mii-exa-seltene-example-cf-clinical](Condition-mii-exa-seltene-example-cf-clinical.md), [Condition/mii-exa-seltene-example-cf-excluded-after-screening](Condition-mii-exa-seltene-example-cf-excluded-after-screening.md), [Condition/mii-exa-seltene-example-cf-genetic](Condition-mii-exa-seltene-example-cf-genetic.md), [Condition/mii-exa-seltene-example-dmd-excluded-bmd-confirmed](Condition-mii-exa-seltene-example-dmd-excluded-bmd-confirmed.md), [Condition/mii-exa-seltene-example-dmd-genetic-diagnosis](Condition-mii-exa-seltene-example-dmd-genetic-diagnosis.md), [Condition/mii-exa-seltene-example-eds-excluded-clinical](Condition-mii-exa-seltene-example-eds-excluded-clinical.md), [Condition/mii-exa-seltene-example-marfan-clinical-diagnosis](Condition-mii-exa-seltene-example-marfan-clinical-diagnosis.md), [Condition/mii-exa-seltene-example-marfan-excluded-clinical](Condition-mii-exa-seltene-example-marfan-excluded-clinical.md), [Condition/mii-exa-seltene-example-metabolic-myopathy-excluded](Condition-mii-exa-seltene-example-metabolic-myopathy-excluded.md), [Condition/mii-exa-seltene-example-noonan-clinical-diagnosis](Condition-mii-exa-seltene-example-noonan-clinical-diagnosis.md), [Condition/mii-exa-seltene-example-sma-excluded-genetic](Condition-mii-exa-seltene-example-sma-excluded-genetic.md), [Condition/mii-exa-seltene-example-sma-genetic-diagnosis](Condition-mii-exa-seltene-example-sma-genetic-diagnosis.md), [Condition/mii-exa-seltene-symptom-condition](Condition-mii-exa-seltene-symptom-condition.md) and [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md)
 * [Consent Category Codes](http://terminology.hl7.org/7.3.0/CodeSystem-consentcategorycodes.html): [Consent/mii-exa-seltene-register-einwilligung](Consent-mii-exa-seltene-register-einwilligung.md)
 * [Consent PolicyRule Codes](http://terminology.hl7.org/7.3.0/CodeSystem-consentpolicycodes.html): [Consent/mii-exa-seltene-register-einwilligung](Consent-mii-exa-seltene-register-einwilligung.md)
 * [Consent Scope Codes](http://terminology.hl7.org/7.3.0/CodeSystem-consentscope.html): [Consent/mii-exa-seltene-register-einwilligung](Consent-mii-exa-seltene-register-einwilligung.md)
-* [Diagnosis Role](http://terminology.hl7.org/7.3.0/CodeSystem-diagnosis-role.html): [Bundle/bundle-marfan-complete](Bundle-bundle-marfan-complete.md), [Bundle/bundle-sma-complete](Bundle-bundle-sma-complete.md)... Show 6 more, [Encounter/encounter-ambulant-001](Encounter-encounter-ambulant-001.md), [Encounter/encounter-cardiology](Encounter-encounter-cardiology.md), [Encounter/encounter-cataract-surgery](Encounter-encounter-cataract-surgery.md), [Encounter/encounter-ophthalmology](Encounter-encounter-ophthalmology.md), [Encounter/encounter-stationaer-001](Encounter-encounter-stationaer-001.md) and [Encounter/encounter-surgery-planned](Encounter-encounter-surgery-planned.md)
+* [Diagnosis Role](http://terminology.hl7.org/7.3.0/CodeSystem-diagnosis-role.html): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 6 more, [Encounter/mii-exa-seltene-encounter-ambulant-001](Encounter-mii-exa-seltene-encounter-ambulant-001.md), [Encounter/mii-exa-seltene-encounter-cardiology](Encounter-mii-exa-seltene-encounter-cardiology.md), [Encounter/mii-exa-seltene-encounter-cataract-surgery](Encounter-mii-exa-seltene-encounter-cataract-surgery.md), [Encounter/mii-exa-seltene-encounter-ophthalmology](Encounter-mii-exa-seltene-encounter-ophthalmology.md), [Encounter/mii-exa-seltene-encounter-stationaer-001](Encounter-mii-exa-seltene-encounter-stationaer-001.md) and [Encounter/mii-exa-seltene-encounter-surgery-planned](Encounter-mii-exa-seltene-encounter-surgery-planned.md)
 * [LibraryType](http://terminology.hl7.org/7.3.0/CodeSystem-library-type.html): [ERNEuroNMDRegistry](Library-mii-exa-seltene-register-katalog-euro-nmd.md)
-* [Observation Category Codes](http://terminology.hl7.org/7.3.0/CodeSystem-observation-category.html): [Bundle/bundle-marfan-complete](Bundle-bundle-marfan-complete.md), [Bundle/bundle-sma-complete](Bundle-bundle-sma-complete.md)... Show 55 more, [MII_PR_Seltene_Blutgruppe](StructureDefinition-mii-pr-seltene-blutgruppe.md), [MII_PR_Seltene_Consanguinity](StructureDefinition-mii-pr-seltene-consanguinity.md), [MII_PR_Seltene_Geburtsgewicht](StructureDefinition-mii-pr-seltene-geburtsgewicht.md), [MII_PR_Seltene_Geburtslaenge](StructureDefinition-mii-pr-seltene-geburtslaenge.md), [MII_PR_Seltene_ICFAssessment](StructureDefinition-mii-pr-seltene-icf-assessment.md), [MII_PR_Seltene_Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md), [Observation/anteverted-nares](Observation-anteverted-nares.md), [Observation/aortic-root-dilatation](Observation-aortic-root-dilatation.md), [Observation/aortic-root-normal](Observation-aortic-root-normal.md), [Observation/arachnodactyly](Observation-arachnodactyly.md), [Observation/chronic-diarrhea](Observation-chronic-diarrhea.md), [Observation/failure-to-thrive](Observation-failure-to-thrive.md), [Observation/hypertelorism](Observation-hypertelorism.md), [Observation/lens-dislocation](Observation-lens-dislocation.md), [Observation/lymphedema](Observation-lymphedema.md), [Observation/mii-exa-seltene-bodymassindex](Observation-mii-exa-seltene-bodymassindex.md), [Observation/mii-exa-seltene-consanguinity](Observation-mii-exa-seltene-consanguinity.md), [Observation/mii-exa-seltene-geburtsgewicht](Observation-mii-exa-seltene-geburtsgewicht.md), [Observation/mii-exa-seltene-geburtslaenge](Observation-mii-exa-seltene-geburtslaenge.md), [Observation/mii-exa-seltene-hueftumfang](Observation-mii-exa-seltene-hueftumfang.md), [Observation/mii-exa-seltene-icf-aktivitaet](Observation-mii-exa-seltene-icf-aktivitaet.md), [Observation/mii-exa-seltene-icf-koerperfunktion](Observation-mii-exa-seltene-icf-koerperfunktion.md), [Observation/mii-exa-seltene-icf-koerperstruktur](Observation-mii-exa-seltene-icf-koerperstruktur.md), [Observation/mii-exa-seltene-icf-umweltfaktor](Observation-mii-exa-seltene-icf-umweltfaktor.md), [Observation/mii-exa-seltene-kopfumfang](Observation-mii-exa-seltene-kopfumfang.md), [Observation/mii-exa-seltene-taillenumfang](Observation-mii-exa-seltene-taillenumfang.md), [Observation/molgen-smn1-normal-copies](Observation-molgen-smn1-normal-copies.md), [Observation/molgen-variant-brca1-pathogenic](Observation-molgen-variant-brca1-pathogenic.md), [Observation/molgen-variant-cftr-f508del-homozygous](Observation-molgen-variant-cftr-f508del-homozygous.md), [Observation/molgen-variant-dmd-deletion-exon45-47](Observation-molgen-variant-dmd-deletion-exon45-47.md), [Observation/molgen-variant-smn1-deletion](Observation-molgen-variant-smn1-deletion.md), [Observation/observation-alt-001](Observation-observation-alt-001.md), [Observation/observation-ast-001](Observation-observation-ast-001.md), [Observation/observation-echo-aortic](Observation-observation-echo-aortic.md), [Observation/observation-echo-av](Observation-observation-echo-av.md), [Observation/observation-echo-mv](Observation-observation-echo-mv.md), [Observation/observation-height-001](Observation-observation-height-001.md), [Observation/observation-leg-asymmetry](Observation-observation-leg-asymmetry.md), [Observation/observation-plt-001](Observation-observation-plt-001.md), [Observation/observation-sma-screening](Observation-observation-sma-screening.md), [Observation/observation-troponin-001](Observation-observation-troponin-001.md), [Observation/observation-troponin-002](Observation-observation-troponin-002.md), [Observation/observation-troponin-003](Observation-observation-troponin-003.md), [Observation/observation-troponin-004](Observation-observation-troponin-004.md), [Observation/recurrent-respiratory-infections](Observation-recurrent-respiratory-infections.md), [Observation/symptom-aortic-regurg](Observation-symptom-aortic-regurg.md), [Observation/symptom-aortic-root](Observation-symptom-aortic-root.md), [Observation/symptom-cataract](Observation-symptom-cataract.md), [Observation/symptom-chest-pain](Observation-symptom-chest-pain.md), [Observation/symptom-mitral-regurg](Observation-symptom-mitral-regurg.md), [Observation/tall-stature](Observation-tall-stature.md), [Observation/variant-fbn1-001](Observation-variant-fbn1-001.md), [Observation/variant-smn1-001](Observation-variant-smn1-001.md), [Observation/variant-smn2-001](Observation-variant-smn2-001.md) and [Observation/vsd](Observation-vsd.md)
-* [diagnosticServiceSectionId](http://terminology.hl7.org/7.3.0/CodeSystem-v2-0074.html): [DiagnosticReport/molgen-brca-panel](DiagnosticReport-molgen-brca-panel.md), [DiagnosticReport/molgen-cf-diagnostic](DiagnosticReport-molgen-cf-diagnostic.md), [DiagnosticReport/molgen-diagnostic-dmd](DiagnosticReport-molgen-diagnostic-dmd.md), [DiagnosticReport/molgen-diagnostic-implication-sma](DiagnosticReport-molgen-diagnostic-implication-sma.md) and [DiagnosticReport/molgen-sma-negative](DiagnosticReport-molgen-sma-negative.md)
-* [expandedYes-NoIndicator](http://terminology.hl7.org/7.3.0/CodeSystem-v2-0532.html): [VonSEBetroffen](StructureDefinition-mii-ex-von-se-betroffen.md) and [VonSEBetroffenVS](ValueSet-von-seltene-betroffen-vs.md)
-* [ActCode](http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html): [Bundle/bundle-marfan-complete](Bundle-bundle-marfan-complete.md), [Bundle/bundle-sma-complete](Bundle-bundle-sma-complete.md)... Show 8 more, [Encounter/encounter-ambulant-001](Encounter-encounter-ambulant-001.md), [Encounter/encounter-cardiology](Encounter-encounter-cardiology.md), [Encounter/encounter-cataract-surgery](Encounter-encounter-cataract-surgery.md), [Encounter/encounter-nachsorge-001](Encounter-encounter-nachsorge-001.md), [Encounter/encounter-ophthalmology](Encounter-encounter-ophthalmology.md), [Encounter/encounter-screening-001](Encounter-encounter-screening-001.md), [Encounter/encounter-stationaer-001](Encounter-encounter-stationaer-001.md) and [Encounter/encounter-surgery-planned](Encounter-encounter-surgery-planned.md)
-* [ObservationInterpretation](http://terminology.hl7.org/7.3.0/CodeSystem-v3-ObservationInterpretation.html): [Bundle/bundle-marfan-complete](Bundle-bundle-marfan-complete.md), [Bundle/bundle-sma-complete](Bundle-bundle-sma-complete.md)... Show 34 more, [Observation/anteverted-nares](Observation-anteverted-nares.md), [Observation/aortic-root-dilatation](Observation-aortic-root-dilatation.md), [Observation/aortic-root-normal](Observation-aortic-root-normal.md), [Observation/arachnodactyly](Observation-arachnodactyly.md), [Observation/chronic-diarrhea](Observation-chronic-diarrhea.md), [Observation/failure-to-thrive](Observation-failure-to-thrive.md), [Observation/hypertelorism](Observation-hypertelorism.md), [Observation/lens-dislocation](Observation-lens-dislocation.md), [Observation/lymphedema](Observation-lymphedema.md), [Observation/molgen-smn1-normal-copies](Observation-molgen-smn1-normal-copies.md), [Observation/molgen-variant-smn1-deletion](Observation-molgen-variant-smn1-deletion.md), [Observation/observation-alt-001](Observation-observation-alt-001.md), [Observation/observation-ast-001](Observation-observation-ast-001.md), [Observation/observation-echo-aortic](Observation-observation-echo-aortic.md), [Observation/observation-echo-av](Observation-observation-echo-av.md), [Observation/observation-echo-mv](Observation-observation-echo-mv.md), [Observation/observation-height-001](Observation-observation-height-001.md), [Observation/observation-leg-asymmetry](Observation-observation-leg-asymmetry.md), [Observation/observation-plt-001](Observation-observation-plt-001.md), [Observation/observation-sma-screening](Observation-observation-sma-screening.md), [Observation/observation-troponin-001](Observation-observation-troponin-001.md), [Observation/observation-troponin-002](Observation-observation-troponin-002.md), [Observation/observation-troponin-003](Observation-observation-troponin-003.md), [Observation/observation-troponin-004](Observation-observation-troponin-004.md), [Observation/recurrent-respiratory-infections](Observation-recurrent-respiratory-infections.md), [Observation/symptom-aortic-regurg](Observation-symptom-aortic-regurg.md), [Observation/symptom-aortic-root](Observation-symptom-aortic-root.md), [Observation/symptom-cataract](Observation-symptom-cataract.md), [Observation/symptom-chest-pain](Observation-symptom-chest-pain.md), [Observation/symptom-mitral-regurg](Observation-symptom-mitral-regurg.md), [Observation/tall-stature](Observation-tall-stature.md), [Observation/variant-fbn1-001](Observation-variant-fbn1-001.md), [Observation/variant-smn1-001](Observation-variant-smn1-001.md) and [Observation/vsd](Observation-vsd.md)
+* [Observation Category Codes](http://terminology.hl7.org/7.3.0/CodeSystem-observation-category.html): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 55 more, [MII_PR_Seltene_Blutgruppe](StructureDefinition-mii-pr-seltene-blutgruppe.md), [MII_PR_Seltene_Consanguinity](StructureDefinition-mii-pr-seltene-consanguinity.md), [MII_PR_Seltene_Geburtsgewicht](StructureDefinition-mii-pr-seltene-geburtsgewicht.md), [MII_PR_Seltene_Geburtslaenge](StructureDefinition-mii-pr-seltene-geburtslaenge.md), [MII_PR_Seltene_ICFAssessment](StructureDefinition-mii-pr-seltene-icf-assessment.md), [MII_PR_Seltene_Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md), [Observation/mii-exa-seltene-anteverted-nares](Observation-mii-exa-seltene-anteverted-nares.md), [Observation/mii-exa-seltene-aortic-root-dilatation](Observation-mii-exa-seltene-aortic-root-dilatation.md), [Observation/mii-exa-seltene-aortic-root-normal](Observation-mii-exa-seltene-aortic-root-normal.md), [Observation/mii-exa-seltene-arachnodactyly](Observation-mii-exa-seltene-arachnodactyly.md), [Observation/mii-exa-seltene-bodymassindex](Observation-mii-exa-seltene-bodymassindex.md), [Observation/mii-exa-seltene-chronic-diarrhea](Observation-mii-exa-seltene-chronic-diarrhea.md), [Observation/mii-exa-seltene-consanguinity](Observation-mii-exa-seltene-consanguinity.md), [Observation/mii-exa-seltene-failure-to-thrive](Observation-mii-exa-seltene-failure-to-thrive.md), [Observation/mii-exa-seltene-geburtsgewicht](Observation-mii-exa-seltene-geburtsgewicht.md), [Observation/mii-exa-seltene-geburtslaenge](Observation-mii-exa-seltene-geburtslaenge.md), [Observation/mii-exa-seltene-hueftumfang](Observation-mii-exa-seltene-hueftumfang.md), [Observation/mii-exa-seltene-hypertelorism](Observation-mii-exa-seltene-hypertelorism.md), [Observation/mii-exa-seltene-icf-aktivitaet](Observation-mii-exa-seltene-icf-aktivitaet.md), [Observation/mii-exa-seltene-icf-koerperfunktion](Observation-mii-exa-seltene-icf-koerperfunktion.md), [Observation/mii-exa-seltene-icf-koerperstruktur](Observation-mii-exa-seltene-icf-koerperstruktur.md), [Observation/mii-exa-seltene-icf-umweltfaktor](Observation-mii-exa-seltene-icf-umweltfaktor.md), [Observation/mii-exa-seltene-kopfumfang](Observation-mii-exa-seltene-kopfumfang.md), [Observation/mii-exa-seltene-lens-dislocation](Observation-mii-exa-seltene-lens-dislocation.md), [Observation/mii-exa-seltene-lymphedema](Observation-mii-exa-seltene-lymphedema.md), [Observation/mii-exa-seltene-molgen-smn1-normal-copies](Observation-mii-exa-seltene-molgen-smn1-normal-copies.md), [Observation/mii-exa-seltene-molgen-variant-brca1-pathogenic](Observation-mii-exa-seltene-molgen-variant-brca1-pathogenic.md), [Observation/mii-exa-seltene-molgen-variant-cftr-f508del-homozygous](Observation-mii-exa-seltene-molgen-variant-cftr-f508del-homozygous.md), [Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47](Observation-mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47.md), [Observation/mii-exa-seltene-molgen-variant-smn1-deletion](Observation-mii-exa-seltene-molgen-variant-smn1-deletion.md), [Observation/mii-exa-seltene-observation-alt-001](Observation-mii-exa-seltene-observation-alt-001.md), [Observation/mii-exa-seltene-observation-ast-001](Observation-mii-exa-seltene-observation-ast-001.md), [Observation/mii-exa-seltene-observation-echo-aortic](Observation-mii-exa-seltene-observation-echo-aortic.md), [Observation/mii-exa-seltene-observation-echo-av](Observation-mii-exa-seltene-observation-echo-av.md), [Observation/mii-exa-seltene-observation-echo-mv](Observation-mii-exa-seltene-observation-echo-mv.md), [Observation/mii-exa-seltene-observation-height-001](Observation-mii-exa-seltene-observation-height-001.md), [Observation/mii-exa-seltene-observation-leg-asymmetry](Observation-mii-exa-seltene-observation-leg-asymmetry.md), [Observation/mii-exa-seltene-observation-plt-001](Observation-mii-exa-seltene-observation-plt-001.md), [Observation/mii-exa-seltene-observation-sma-screening](Observation-mii-exa-seltene-observation-sma-screening.md), [Observation/mii-exa-seltene-observation-troponin-001](Observation-mii-exa-seltene-observation-troponin-001.md), [Observation/mii-exa-seltene-observation-troponin-002](Observation-mii-exa-seltene-observation-troponin-002.md), [Observation/mii-exa-seltene-observation-troponin-003](Observation-mii-exa-seltene-observation-troponin-003.md), [Observation/mii-exa-seltene-observation-troponin-004](Observation-mii-exa-seltene-observation-troponin-004.md), [Observation/mii-exa-seltene-recurrent-respiratory-infections](Observation-mii-exa-seltene-recurrent-respiratory-infections.md), [Observation/mii-exa-seltene-symptom-aortic-regurg](Observation-mii-exa-seltene-symptom-aortic-regurg.md), [Observation/mii-exa-seltene-symptom-aortic-root](Observation-mii-exa-seltene-symptom-aortic-root.md), [Observation/mii-exa-seltene-symptom-cataract](Observation-mii-exa-seltene-symptom-cataract.md), [Observation/mii-exa-seltene-symptom-chest-pain](Observation-mii-exa-seltene-symptom-chest-pain.md), [Observation/mii-exa-seltene-symptom-mitral-regurg](Observation-mii-exa-seltene-symptom-mitral-regurg.md), [Observation/mii-exa-seltene-taillenumfang](Observation-mii-exa-seltene-taillenumfang.md), [Observation/mii-exa-seltene-tall-stature](Observation-mii-exa-seltene-tall-stature.md), [Observation/mii-exa-seltene-variant-fbn1-001](Observation-mii-exa-seltene-variant-fbn1-001.md), [Observation/mii-exa-seltene-variant-smn1-001](Observation-mii-exa-seltene-variant-smn1-001.md), [Observation/mii-exa-seltene-variant-smn2-001](Observation-mii-exa-seltene-variant-smn2-001.md) and [Observation/mii-exa-seltene-vsd](Observation-mii-exa-seltene-vsd.md)
+* [diagnosticServiceSectionId](http://terminology.hl7.org/7.3.0/CodeSystem-v2-0074.html): [DiagnosticReport/mii-exa-seltene-molgen-brca-panel](DiagnosticReport-mii-exa-seltene-molgen-brca-panel.md), [DiagnosticReport/mii-exa-seltene-molgen-cf-diagnostic](DiagnosticReport-mii-exa-seltene-molgen-cf-diagnostic.md), [DiagnosticReport/mii-exa-seltene-molgen-diagnostic-dmd](DiagnosticReport-mii-exa-seltene-molgen-diagnostic-dmd.md), [DiagnosticReport/mii-exa-seltene-molgen-diagnostic-implication-sma](DiagnosticReport-mii-exa-seltene-molgen-diagnostic-implication-sma.md) and [DiagnosticReport/mii-exa-seltene-molgen-sma-negative](DiagnosticReport-mii-exa-seltene-molgen-sma-negative.md)
+* [expandedYes-NoIndicator](http://terminology.hl7.org/7.3.0/CodeSystem-v2-0532.html): [MII_EX_Seltene_VonSEBetroffen](StructureDefinition-mii-ex-seltene-von-se-betroffen.md) and [MII_VS_Seltene_VonSEBetroffen](ValueSet-mii-vs-seltene-von-se-betroffen.md)
+* [ActCode](http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 8 more, [Encounter/mii-exa-seltene-encounter-ambulant-001](Encounter-mii-exa-seltene-encounter-ambulant-001.md), [Encounter/mii-exa-seltene-encounter-cardiology](Encounter-mii-exa-seltene-encounter-cardiology.md), [Encounter/mii-exa-seltene-encounter-cataract-surgery](Encounter-mii-exa-seltene-encounter-cataract-surgery.md), [Encounter/mii-exa-seltene-encounter-nachsorge-001](Encounter-mii-exa-seltene-encounter-nachsorge-001.md), [Encounter/mii-exa-seltene-encounter-ophthalmology](Encounter-mii-exa-seltene-encounter-ophthalmology.md), [Encounter/mii-exa-seltene-encounter-screening-001](Encounter-mii-exa-seltene-encounter-screening-001.md), [Encounter/mii-exa-seltene-encounter-stationaer-001](Encounter-mii-exa-seltene-encounter-stationaer-001.md) and [Encounter/mii-exa-seltene-encounter-surgery-planned](Encounter-mii-exa-seltene-encounter-surgery-planned.md)
+* [ObservationInterpretation](http://terminology.hl7.org/7.3.0/CodeSystem-v3-ObservationInterpretation.html): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 34 more, [Observation/mii-exa-seltene-anteverted-nares](Observation-mii-exa-seltene-anteverted-nares.md), [Observation/mii-exa-seltene-aortic-root-dilatation](Observation-mii-exa-seltene-aortic-root-dilatation.md), [Observation/mii-exa-seltene-aortic-root-normal](Observation-mii-exa-seltene-aortic-root-normal.md), [Observation/mii-exa-seltene-arachnodactyly](Observation-mii-exa-seltene-arachnodactyly.md), [Observation/mii-exa-seltene-chronic-diarrhea](Observation-mii-exa-seltene-chronic-diarrhea.md), [Observation/mii-exa-seltene-failure-to-thrive](Observation-mii-exa-seltene-failure-to-thrive.md), [Observation/mii-exa-seltene-hypertelorism](Observation-mii-exa-seltene-hypertelorism.md), [Observation/mii-exa-seltene-lens-dislocation](Observation-mii-exa-seltene-lens-dislocation.md), [Observation/mii-exa-seltene-lymphedema](Observation-mii-exa-seltene-lymphedema.md), [Observation/mii-exa-seltene-molgen-smn1-normal-copies](Observation-mii-exa-seltene-molgen-smn1-normal-copies.md), [Observation/mii-exa-seltene-molgen-variant-smn1-deletion](Observation-mii-exa-seltene-molgen-variant-smn1-deletion.md), [Observation/mii-exa-seltene-observation-alt-001](Observation-mii-exa-seltene-observation-alt-001.md), [Observation/mii-exa-seltene-observation-ast-001](Observation-mii-exa-seltene-observation-ast-001.md), [Observation/mii-exa-seltene-observation-echo-aortic](Observation-mii-exa-seltene-observation-echo-aortic.md), [Observation/mii-exa-seltene-observation-echo-av](Observation-mii-exa-seltene-observation-echo-av.md), [Observation/mii-exa-seltene-observation-echo-mv](Observation-mii-exa-seltene-observation-echo-mv.md), [Observation/mii-exa-seltene-observation-height-001](Observation-mii-exa-seltene-observation-height-001.md), [Observation/mii-exa-seltene-observation-leg-asymmetry](Observation-mii-exa-seltene-observation-leg-asymmetry.md), [Observation/mii-exa-seltene-observation-plt-001](Observation-mii-exa-seltene-observation-plt-001.md), [Observation/mii-exa-seltene-observation-sma-screening](Observation-mii-exa-seltene-observation-sma-screening.md), [Observation/mii-exa-seltene-observation-troponin-001](Observation-mii-exa-seltene-observation-troponin-001.md), [Observation/mii-exa-seltene-observation-troponin-002](Observation-mii-exa-seltene-observation-troponin-002.md), [Observation/mii-exa-seltene-observation-troponin-003](Observation-mii-exa-seltene-observation-troponin-003.md), [Observation/mii-exa-seltene-observation-troponin-004](Observation-mii-exa-seltene-observation-troponin-004.md), [Observation/mii-exa-seltene-recurrent-respiratory-infections](Observation-mii-exa-seltene-recurrent-respiratory-infections.md), [Observation/mii-exa-seltene-symptom-aortic-regurg](Observation-mii-exa-seltene-symptom-aortic-regurg.md), [Observation/mii-exa-seltene-symptom-aortic-root](Observation-mii-exa-seltene-symptom-aortic-root.md), [Observation/mii-exa-seltene-symptom-cataract](Observation-mii-exa-seltene-symptom-cataract.md), [Observation/mii-exa-seltene-symptom-chest-pain](Observation-mii-exa-seltene-symptom-chest-pain.md), [Observation/mii-exa-seltene-symptom-mitral-regurg](Observation-mii-exa-seltene-symptom-mitral-regurg.md), [Observation/mii-exa-seltene-tall-stature](Observation-mii-exa-seltene-tall-stature.md), [Observation/mii-exa-seltene-variant-fbn1-001](Observation-mii-exa-seltene-variant-fbn1-001.md), [Observation/mii-exa-seltene-variant-smn1-001](Observation-mii-exa-seltene-variant-smn1-001.md) and [Observation/mii-exa-seltene-vsd](Observation-mii-exa-seltene-vsd.md)
 * [RoleCode](http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html): [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md)
 
 
 * Unless otherwise noted, the contents of the FDA website (www.fda.gov) — both text and graphics — are not copyrighted. They are in the public domain and may be republished, reprinted and otherwise used freely by anyone without the need to obtain permission from FDA. Credit to the U.S. Food and Drug Administration as the source is appreciated but not required.
 
-* [Unique Ingredient Identifier (UNII)](http://terminology.hl7.org/6.5.0/CodeSystem-UNII.html): [Bundle/bundle-sma-complete](Bundle-bundle-sma-complete.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MedicationRequest/mii-exa-seltene-therapieempfehlung-gentherapie-sma](MedicationRequest-mii-exa-seltene-therapieempfehlung-gentherapie-sma.md) and [Procedure/procedure-gentherapy-001](Procedure-procedure-gentherapy-001.md)
+* [Unique Ingredient Identifier (UNII)](http://terminology.hl7.org/6.5.0/CodeSystem-UNII.html): [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MedicationRequest/mii-exa-seltene-therapieempfehlung-gentherapie-sma](MedicationRequest-mii-exa-seltene-therapieempfehlung-gentherapie-sma.md) and [Procedure/mii-exa-seltene-procedure-gentherapy-001](Procedure-mii-exa-seltene-procedure-gentherapy-001.md)
 
 
 * WHO, BfArM 1994 - 2024 - Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM)
 
-* [ICD-10-GM](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/icd-10-gm): [Bundle/bundle-marfan-complete](Bundle-bundle-marfan-complete.md), [Bundle/bundle-sma-complete](Bundle-bundle-sma-complete.md)... Show 11 more, [Condition/condition-cataract](Condition-condition-cataract.md), [Condition/condition-marfan-suspected](Condition-condition-marfan-suspected.md), [Condition/condition-sma-clinical](Condition-condition-sma-clinical.md), [Condition/example-eds-excluded-clinical](Condition-example-eds-excluded-clinical.md), [Condition/example-metabolic-myopathy-excluded](Condition-example-metabolic-myopathy-excluded.md), [Condition/example-noonan-clinical-diagnosis](Condition-example-noonan-clinical-diagnosis.md), [FamilyMemberHistory/mii-exa-seltene-familienanamnese](FamilyMemberHistory-mii-exa-seltene-familienanamnese.md), [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md), [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md) and [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md)
+* [ICD-10-GM](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/icd-10-gm): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 11 more, [Condition/mii-exa-seltene-condition-cataract](Condition-mii-exa-seltene-condition-cataract.md), [Condition/mii-exa-seltene-condition-marfan-suspected](Condition-mii-exa-seltene-condition-marfan-suspected.md), [Condition/mii-exa-seltene-condition-sma-clinical](Condition-mii-exa-seltene-condition-sma-clinical.md), [Condition/mii-exa-seltene-example-eds-excluded-clinical](Condition-mii-exa-seltene-example-eds-excluded-clinical.md), [Condition/mii-exa-seltene-example-metabolic-myopathy-excluded](Condition-mii-exa-seltene-example-metabolic-myopathy-excluded.md), [Condition/mii-exa-seltene-example-noonan-clinical-diagnosis](Condition-mii-exa-seltene-example-noonan-clinical-diagnosis.md), [FamilyMemberHistory/mii-exa-seltene-familienanamnese](FamilyMemberHistory-mii-exa-seltene-familienanamnese.md), [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md), [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md) and [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md)
 
 
 ### IG Parameter Settings and Expansion Parameters
@@ -292,7 +292,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene-erkrankungen-v2026-de",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "MIIIGModulSelteneErkrankungen",
+  "name" : "MII_IG_Seltene_Erkrankungen",
   "title" : "MII IG Kerndatensatz-Modul Seltene Erkrankungen",
   "_title" : {
     "extension" : [{
@@ -1388,10 +1388,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-observation-alt-001.html"
+        "valueUri" : "Observation-mii-exa-seltene-observation-alt-001.html"
       }],
       "reference" : {
-        "reference" : "Observation/observation-alt-001"
+        "reference" : "Observation/mii-exa-seltene-observation-alt-001"
       },
       "name" : "ALT Labor - Post-therapeutisch",
       "description" : "ALT Wert nach Gentherapie",
@@ -1404,10 +1404,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Encounter-encounter-ambulant-001.html"
+        "valueUri" : "Encounter-mii-exa-seltene-encounter-ambulant-001.html"
       }],
       "reference" : {
-        "reference" : "Encounter/encounter-ambulant-001"
+        "reference" : "Encounter/mii-exa-seltene-encounter-ambulant-001"
       },
       "name" : "Ambulante Erstvorstellung",
       "description" : "Erstvorstellung im SMA-Zentrum",
@@ -1420,10 +1420,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Encounter-encounter-nachsorge-001.html"
+        "valueUri" : "Encounter-mii-exa-seltene-encounter-nachsorge-001.html"
       }],
       "reference" : {
-        "reference" : "Encounter/encounter-nachsorge-001"
+        "reference" : "Encounter/mii-exa-seltene-encounter-nachsorge-001"
       },
       "name" : "Ambulante Nachsorge",
       "description" : "Erster Nachsorgetermin nach Gentherapie",
@@ -1436,10 +1436,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-anteverted-nares.html"
+        "valueUri" : "Observation-mii-exa-seltene-anteverted-nares.html"
       }],
       "reference" : {
-        "reference" : "Observation/anteverted-nares"
+        "reference" : "Observation/mii-exa-seltene-anteverted-nares"
       },
       "name" : "Antevertierte Nares - HPO-kodiert",
       "description" : "Nach oben gerichtete Nasenlöcher",
@@ -1452,10 +1452,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-symptom-aortic-regurg.html"
+        "valueUri" : "Observation-mii-exa-seltene-symptom-aortic-regurg.html"
       }],
       "reference" : {
-        "reference" : "Observation/symptom-aortic-regurg"
+        "reference" : "Observation/mii-exa-seltene-symptom-aortic-regurg"
       },
       "name" : "Aortenklappeninsuffizienz",
       "description" : "Moderate Aortenklappeninsuffizienz Grad II",
@@ -1468,10 +1468,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-aortic-root-normal.html"
+        "valueUri" : "Observation-mii-exa-seltene-aortic-root-normal.html"
       }],
       "reference" : {
-        "reference" : "Observation/aortic-root-normal"
+        "reference" : "Observation/mii-exa-seltene-aortic-root-normal"
       },
       "name" : "Aortenwurzel - Normalbefund",
       "description" : "Normale Aortenwurzel, schließt Marfan aus",
@@ -1484,10 +1484,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-symptom-aortic-root.html"
+        "valueUri" : "Observation-mii-exa-seltene-symptom-aortic-root.html"
       }],
       "reference" : {
-        "reference" : "Observation/symptom-aortic-root"
+        "reference" : "Observation/mii-exa-seltene-symptom-aortic-root"
       },
       "name" : "Aortenwurzeldilatation",
       "description" : "Pathologisch erweiterte Aortenwurzel",
@@ -1500,10 +1500,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-aortic-root-dilatation.html"
+        "valueUri" : "Observation-mii-exa-seltene-aortic-root-dilatation.html"
       }],
       "reference" : {
-        "reference" : "Observation/aortic-root-dilatation"
+        "reference" : "Observation/mii-exa-seltene-aortic-root-dilatation"
       },
       "name" : "Aortenwurzeldilatation - HPO-kodiert",
       "description" : "Echokardiographisch nachgewiesene Aortenwurzeldilatation",
@@ -1516,10 +1516,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-arachnodactyly.html"
+        "valueUri" : "Observation-mii-exa-seltene-arachnodactyly.html"
       }],
       "reference" : {
-        "reference" : "Observation/arachnodactyly"
+        "reference" : "Observation/mii-exa-seltene-arachnodactyly"
       },
       "name" : "Arachnodaktylie - HPO-kodiert",
       "description" : "Spinnenfingrigkeit bei Marfan-Syndrom",
@@ -1532,10 +1532,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-observation-ast-001.html"
+        "valueUri" : "Observation-mii-exa-seltene-observation-ast-001.html"
       }],
       "reference" : {
-        "reference" : "Observation/observation-ast-001"
+        "reference" : "Observation/mii-exa-seltene-observation-ast-001"
       },
       "name" : "AST Labor - Post-therapeutisch",
       "description" : "AST Wert nach Gentherapie",
@@ -1548,10 +1548,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Encounter-encounter-ophthalmology.html"
+        "valueUri" : "Encounter-mii-exa-seltene-encounter-ophthalmology.html"
       }],
       "reference" : {
-        "reference" : "Encounter/encounter-ophthalmology"
+        "reference" : "Encounter/mii-exa-seltene-encounter-ophthalmology"
       },
       "name" : "Augenärztliche Konsultation",
       "description" : "Erstvorstellung beim Augenarzt wegen Katarakt",
@@ -1564,10 +1564,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-observation-leg-asymmetry.html"
+        "valueUri" : "Observation-mii-exa-seltene-observation-leg-asymmetry.html"
       }],
       "reference" : {
-        "reference" : "Observation/observation-leg-asymmetry"
+        "reference" : "Observation/mii-exa-seltene-observation-leg-asymmetry"
       },
       "name" : "Beinlängendifferenz",
       "description" : "Beinlängendifferenz mit rechts verkürztem Bein",
@@ -1612,10 +1612,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ServiceRequest-example-nutrition-therapy-recommendation.html"
+        "valueUri" : "ServiceRequest-mii-exa-seltene-example-nutrition-therapy-recommendation.html"
       }],
       "reference" : {
-        "reference" : "ServiceRequest/example-nutrition-therapy-recommendation"
+        "reference" : "ServiceRequest/mii-exa-seltene-example-nutrition-therapy-recommendation"
       },
       "name" : "Beispiel Ernährungstherapie-Empfehlung",
       "description" : "Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie",
@@ -1628,10 +1628,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ServiceRequest-example-early-detection-recommendation.html"
+        "valueUri" : "ServiceRequest-mii-exa-seltene-example-early-detection-recommendation.html"
       }],
       "reference" : {
-        "reference" : "ServiceRequest/example-early-detection-recommendation"
+        "reference" : "ServiceRequest/mii-exa-seltene-example-early-detection-recommendation"
       },
       "name" : "Beispiel Früherkennungsprogramm-Empfehlung",
       "description" : "Beispiel einer Empfehlung für regelmäßige Früherkennungsuntersuchungen",
@@ -1868,10 +1868,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-molgen-variant-brca1-pathogenic.html"
+        "valueUri" : "Observation-mii-exa-seltene-molgen-variant-brca1-pathogenic.html"
       }],
       "reference" : {
-        "reference" : "Observation/molgen-variant-brca1-pathogenic"
+        "reference" : "Observation/mii-exa-seltene-molgen-variant-brca1-pathogenic"
       },
       "name" : "BRCA1 Pathogene Variante - MolGen",
       "description" : "Pathogene BRCA1-Variante",
@@ -1884,10 +1884,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "DiagnosticReport-molgen-brca-panel.html"
+        "valueUri" : "DiagnosticReport-mii-exa-seltene-molgen-brca-panel.html"
       }],
       "reference" : {
-        "reference" : "DiagnosticReport/molgen-brca-panel"
+        "reference" : "DiagnosticReport/mii-exa-seltene-molgen-brca-panel"
       },
       "name" : "BRCA1/2 Panel - Diagnostische Implikation",
       "description" : "Hereditäres Karzinom-Panel",
@@ -1900,10 +1900,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "DiagnosticReport-molgen-cf-diagnostic.html"
+        "valueUri" : "DiagnosticReport-mii-exa-seltene-molgen-cf-diagnostic.html"
       }],
       "reference" : {
-        "reference" : "DiagnosticReport/molgen-cf-diagnostic"
+        "reference" : "DiagnosticReport/mii-exa-seltene-molgen-cf-diagnostic"
       },
       "name" : "CF Diagnostische Implikation - MolGen",
       "description" : "Mukoviszidose genetischer Befund",
@@ -1916,10 +1916,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-molgen-variant-cftr-f508del-homozygous.html"
+        "valueUri" : "Observation-mii-exa-seltene-molgen-variant-cftr-f508del-homozygous.html"
       }],
       "reference" : {
-        "reference" : "Observation/molgen-variant-cftr-f508del-homozygous"
+        "reference" : "Observation/mii-exa-seltene-molgen-variant-cftr-f508del-homozygous"
       },
       "name" : "CFTR F508del Homozygot - MolGen Variante",
       "description" : "Homozygote F508del Mutation bei Mukoviszidose",
@@ -1932,10 +1932,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-chronic-diarrhea.html"
+        "valueUri" : "Observation-mii-exa-seltene-chronic-diarrhea.html"
       }],
       "reference" : {
-        "reference" : "Observation/chronic-diarrhea"
+        "reference" : "Observation/mii-exa-seltene-chronic-diarrhea"
       },
       "name" : "Chronische Diarrhoe - HPO-kodiert",
       "description" : "Chronische Durchfälle bei CF",
@@ -1964,10 +1964,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "DiagnosticReport-molgen-diagnostic-dmd.html"
+        "valueUri" : "DiagnosticReport-mii-exa-seltene-molgen-diagnostic-dmd.html"
       }],
       "reference" : {
-        "reference" : "DiagnosticReport/molgen-diagnostic-dmd"
+        "reference" : "DiagnosticReport/mii-exa-seltene-molgen-diagnostic-dmd"
       },
       "name" : "DMD Diagnostische Implikation",
       "description" : "Diagnostischer Bericht Duchenne-Muskeldystrophie",
@@ -1980,10 +1980,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-molgen-variant-dmd-deletion-exon45-47.html"
+        "valueUri" : "Observation-mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47.html"
       }],
       "reference" : {
-        "reference" : "Observation/molgen-variant-dmd-deletion-exon45-47"
+        "reference" : "Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47"
       },
       "name" : "DMD Exon 45-47 Deletion - MolGen Variante",
       "description" : "Out-of-frame Deletion im DMD-Gen",
@@ -1996,10 +1996,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-example-dmd-excluded-bmd-confirmed.html"
+        "valueUri" : "Condition-mii-exa-seltene-example-dmd-excluded-bmd-confirmed.html"
       }],
       "reference" : {
-        "reference" : "Condition/example-dmd-excluded-bmd-confirmed"
+        "reference" : "Condition/mii-exa-seltene-example-dmd-excluded-bmd-confirmed"
       },
       "name" : "Duchenne ausgeschlossen - Becker bestätigt",
       "description" : "Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muskeldystrophie",
@@ -2012,10 +2012,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-example-dmd-genetic-diagnosis.html"
+        "valueUri" : "Condition-mii-exa-seltene-example-dmd-genetic-diagnosis.html"
       }],
       "reference" : {
-        "reference" : "Condition/example-dmd-genetic-diagnosis"
+        "reference" : "Condition/mii-exa-seltene-example-dmd-genetic-diagnosis"
       },
       "name" : "Duchenne-Muskeldystrophie - Genetisch bestätigt",
       "description" : "Beispiel einer genetisch bestätigten Duchenne-Muskeldystrophie",
@@ -2028,10 +2028,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-observation-echo-av.html"
+        "valueUri" : "Observation-mii-exa-seltene-observation-echo-av.html"
       }],
       "reference" : {
-        "reference" : "Observation/observation-echo-av"
+        "reference" : "Observation/mii-exa-seltene-observation-echo-av"
       },
       "name" : "Echokardiographie - Aortenklappeninsuffizienz",
       "description" : "Beurteilung der Aortenklappeninsuffizienz",
@@ -2044,10 +2044,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-observation-echo-aortic.html"
+        "valueUri" : "Observation-mii-exa-seltene-observation-echo-aortic.html"
       }],
       "reference" : {
-        "reference" : "Observation/observation-echo-aortic"
+        "reference" : "Observation/mii-exa-seltene-observation-echo-aortic"
       },
       "name" : "Echokardiographie - Aortenwurzeldurchmesser",
       "description" : "Aortenwurzeldurchmesser in der Echokardiographie",
@@ -2060,10 +2060,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-observation-echo-mv.html"
+        "valueUri" : "Observation-mii-exa-seltene-observation-echo-mv.html"
       }],
       "reference" : {
-        "reference" : "Observation/observation-echo-mv"
+        "reference" : "Observation/mii-exa-seltene-observation-echo-mv"
       },
       "name" : "Echokardiographie - Mitralklappeninsuffizienz",
       "description" : "Beurteilung der Mitralklappeninsuffizienz",
@@ -2076,10 +2076,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-example-eds-excluded-clinical.html"
+        "valueUri" : "Condition-mii-exa-seltene-example-eds-excluded-clinical.html"
       }],
       "reference" : {
-        "reference" : "Condition/example-eds-excluded-clinical"
+        "reference" : "Condition/mii-exa-seltene-example-eds-excluded-clinical"
       },
       "name" : "Ehlers-Danlos-Syndrom - Ausgeschlossen",
       "description" : "Differentialdiagnose EDS ausgeschlossen",
@@ -2092,10 +2092,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "FamilyMemberHistory-family-history-001.html"
+        "valueUri" : "FamilyMemberHistory-mii-exa-seltene-family-history-001.html"
       }],
       "reference" : {
-        "reference" : "FamilyMemberHistory/family-history-001"
+        "reference" : "FamilyMemberHistory/mii-exa-seltene-family-history-001"
       },
       "name" : "Familienanamnese - Urgroßmutter mit Muskelerkrankung",
       "description" : "Urgroßmutter mit unbekannter Muskelerkrankung",
@@ -2108,10 +2108,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-variant-fbn1-001.html"
+        "valueUri" : "Observation-mii-exa-seltene-variant-fbn1-001.html"
       }],
       "reference" : {
-        "reference" : "Observation/variant-fbn1-001"
+        "reference" : "Observation/mii-exa-seltene-variant-fbn1-001"
       },
       "name" : "FBN1 Gen - Pathogene Mutation",
       "description" : "Pathogene FBN1-Mutation bei Marfan-Syndrom",
@@ -2124,10 +2124,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-failure-to-thrive.html"
+        "valueUri" : "Observation-mii-exa-seltene-failure-to-thrive.html"
       }],
       "reference" : {
-        "reference" : "Observation/failure-to-thrive"
+        "reference" : "Observation/mii-exa-seltene-failure-to-thrive"
       },
       "name" : "Gedeihstörung - HPO-kodiert",
       "description" : "Mangelhafte Gewichtszunahme",
@@ -2140,10 +2140,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Procedure-procedure-gentherapy-001.html"
+        "valueUri" : "Procedure-mii-exa-seltene-procedure-gentherapy-001.html"
       }],
       "reference" : {
-        "reference" : "Procedure/procedure-gentherapy-001"
+        "reference" : "Procedure/mii-exa-seltene-procedure-gentherapy-001"
       },
       "name" : "Gentherapie Verabreichung",
       "description" : "Verabreichung des Gentherapeutikums für SMA",
@@ -2156,10 +2156,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Procedure-procedure-aortic-planned.html"
+        "valueUri" : "Procedure-mii-exa-seltene-procedure-aortic-planned.html"
       }],
       "reference" : {
-        "reference" : "Procedure/procedure-aortic-planned"
+        "reference" : "Procedure/mii-exa-seltene-procedure-aortic-planned"
       },
       "name" : "Geplante Aortenwurzelersatz-Operation",
       "description" : "Geplante David-Operation (Valve-sparing root replacement)",
@@ -2172,10 +2172,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Encounter-encounter-surgery-planned.html"
+        "valueUri" : "Encounter-mii-exa-seltene-encounter-surgery-planned.html"
       }],
       "reference" : {
-        "reference" : "Encounter/encounter-surgery-planned"
+        "reference" : "Encounter/mii-exa-seltene-encounter-surgery-planned"
       },
       "name" : "Geplante Herzchirurgie",
       "description" : "Geplanter stationärer Aufenthalt für Aortenwurzelersatz",
@@ -2188,10 +2188,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-example-brca1-genetic-diagnosis.html"
+        "valueUri" : "Condition-mii-exa-seltene-example-brca1-genetic-diagnosis.html"
       }],
       "reference" : {
-        "reference" : "Condition/example-brca1-genetic-diagnosis"
+        "reference" : "Condition/mii-exa-seltene-example-brca1-genetic-diagnosis"
       },
       "name" : "Hereditäres Mamma- und Ovarialkarzinom-Syndrom",
       "description" : "Genetisch bestätigtes BRCA1-assoziiertes Karzinom-Syndrom",
@@ -2204,10 +2204,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-tall-stature.html"
+        "valueUri" : "Observation-mii-exa-seltene-tall-stature.html"
       }],
       "reference" : {
-        "reference" : "Observation/tall-stature"
+        "reference" : "Observation/mii-exa-seltene-tall-stature"
       },
       "name" : "Hochwuchs - HPO-kodiert",
       "description" : "Pathologisch erhöhte Körpergröße",
@@ -2332,10 +2332,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-hypertelorism.html"
+        "valueUri" : "Observation-mii-exa-seltene-hypertelorism.html"
       }],
       "reference" : {
-        "reference" : "Observation/hypertelorism"
+        "reference" : "Observation/mii-exa-seltene-hypertelorism"
       },
       "name" : "Hypertelorismus - HPO-kodiert",
       "description" : "Vergrößerter Augenabstand",
@@ -2428,10 +2428,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Encounter-encounter-cardiology.html"
+        "valueUri" : "Encounter-mii-exa-seltene-encounter-cardiology.html"
       }],
       "reference" : {
-        "reference" : "Encounter/encounter-cardiology"
+        "reference" : "Encounter/mii-exa-seltene-encounter-cardiology"
       },
       "name" : "Kardiologische Erstvorstellung",
       "description" : "Ambulante kardiologische Erstvorstellung bei Thoraxschmerzen",
@@ -2444,10 +2444,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-condition-cataract.html"
+        "valueUri" : "Condition-mii-exa-seltene-condition-cataract.html"
       }],
       "reference" : {
-        "reference" : "Condition/condition-cataract"
+        "reference" : "Condition/mii-exa-seltene-condition-cataract"
       },
       "name" : "Katarakt bilateral",
       "description" : "Beidseitige Katarakt bei Marfan-Syndrom",
@@ -2460,10 +2460,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-symptom-cataract.html"
+        "valueUri" : "Observation-mii-exa-seltene-symptom-cataract.html"
       }],
       "reference" : {
-        "reference" : "Observation/symptom-cataract"
+        "reference" : "Observation/mii-exa-seltene-symptom-cataract"
       },
       "name" : "Katarakt bilateral",
       "description" : "Beidseitige Katarakt als ophthalmologische Manifestation",
@@ -2476,10 +2476,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Procedure-procedure-cataract-surgery.html"
+        "valueUri" : "Procedure-mii-exa-seltene-procedure-cataract-surgery.html"
       }],
       "reference" : {
-        "reference" : "Procedure/procedure-cataract-surgery"
+        "reference" : "Procedure/mii-exa-seltene-procedure-cataract-surgery"
       },
       "name" : "Katarakt-Operation",
       "description" : "Phakoemulsifikation mit Intraokularlinsenimplantation",
@@ -2492,10 +2492,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Encounter-encounter-cataract-surgery.html"
+        "valueUri" : "Encounter-mii-exa-seltene-encounter-cataract-surgery.html"
       }],
       "reference" : {
-        "reference" : "Encounter/encounter-cataract-surgery"
+        "reference" : "Encounter/mii-exa-seltene-encounter-cataract-surgery"
       },
       "name" : "Katarakt-Operation Aufenthalt",
       "description" : "Tagesklinischer Aufenthalt für Katarakt-Operation",
@@ -2508,10 +2508,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ClinicalImpression-clinical-impression-erstvorstellung.html"
+        "valueUri" : "ClinicalImpression-mii-exa-seltene-clinical-impression-erstvorstellung.html"
       }],
       "reference" : {
-        "reference" : "ClinicalImpression/clinical-impression-erstvorstellung"
+        "reference" : "ClinicalImpression/mii-exa-seltene-clinical-impression-erstvorstellung"
       },
       "name" : "Klinische Beurteilung - Erstvorstellung",
       "description" : "Initiale klinische Beurteilung bei Erstvorstellung im SMA-Zentrum",
@@ -2524,10 +2524,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ClinicalImpression-clinical-impression-nachsorge.html"
+        "valueUri" : "ClinicalImpression-mii-exa-seltene-clinical-impression-nachsorge.html"
       }],
       "reference" : {
-        "reference" : "ClinicalImpression/clinical-impression-nachsorge"
+        "reference" : "ClinicalImpression/mii-exa-seltene-clinical-impression-nachsorge"
       },
       "name" : "Klinische Beurteilung - Nachsorge",
       "description" : "Nachsorgeuntersuchung nach Gentherapie",
@@ -2540,10 +2540,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ClinicalImpression-clinical-impression-seltene-assessment.html"
+        "valueUri" : "ClinicalImpression-mii-exa-seltene-clinical-impression-seltene-assessment.html"
       }],
       "reference" : {
-        "reference" : "ClinicalImpression/clinical-impression-seltene-assessment"
+        "reference" : "ClinicalImpression/mii-exa-seltene-clinical-impression-seltene-assessment"
       },
       "name" : "Konsultation ZSE bei V.a. Marfan-Syndrom",
       "description" : "Konsultation im Zentrum für Seltene Erkrankungen mit kardiologischer Mitbeurteilung bei V.a. Marfan-Syndrom",
@@ -2572,10 +2572,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-observation-height-001.html"
+        "valueUri" : "Observation-mii-exa-seltene-observation-height-001.html"
       }],
       "reference" : {
-        "reference" : "Observation/observation-height-001"
+        "reference" : "Observation/mii-exa-seltene-observation-height-001"
       },
       "name" : "Körpergröße - Hochwuchs",
       "description" : "Pathologisch erhöhte Körpergröße bei Marfan-Syndrom",
@@ -2588,10 +2588,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-lens-dislocation.html"
+        "valueUri" : "Observation-mii-exa-seltene-lens-dislocation.html"
       }],
       "reference" : {
-        "reference" : "Observation/lens-dislocation"
+        "reference" : "Observation/mii-exa-seltene-lens-dislocation"
       },
       "name" : "Linsenluxation - HPO-kodiert",
       "description" : "Ectopia lentis bei Marfan-Syndrom",
@@ -2604,10 +2604,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "MedicationStatement-medication-losartan.html"
+        "valueUri" : "MedicationStatement-mii-exa-seltene-medication-losartan.html"
       }],
       "reference" : {
-        "reference" : "MedicationStatement/medication-losartan"
+        "reference" : "MedicationStatement/mii-exa-seltene-medication-losartan"
       },
       "name" : "Losartan Therapie",
       "description" : "Losartan zur Progressionshemmung der Aortenwurzeldilatation",
@@ -2620,10 +2620,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-lymphedema.html"
+        "valueUri" : "Observation-mii-exa-seltene-lymphedema.html"
       }],
       "reference" : {
-        "reference" : "Observation/lymphedema"
+        "reference" : "Observation/mii-exa-seltene-lymphedema"
       },
       "name" : "Lymphödem - HPO-kodiert",
       "description" : "Peripheres Lymphödem",
@@ -2636,10 +2636,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Patient-patient-marfan-001.html"
+        "valueUri" : "Patient-mii-exa-seltene-patient-marfan-001.html"
       }],
       "reference" : {
-        "reference" : "Patient/patient-marfan-001"
+        "reference" : "Patient/mii-exa-seltene-patient-marfan-001"
       },
       "name" : "Marfan Patient - 19-jähriger Mann",
       "description" : "19-jähriger männlicher Patient mit bestätigtem Marfan-Syndrom",
@@ -2652,10 +2652,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-condition-marfan-genetic.html"
+        "valueUri" : "Condition-mii-exa-seltene-condition-marfan-genetic.html"
       }],
       "reference" : {
-        "reference" : "Condition/condition-marfan-genetic"
+        "reference" : "Condition/mii-exa-seltene-condition-marfan-genetic"
       },
       "name" : "Marfan-Syndrom - Genetische Diagnose",
       "description" : "Genetisch bestätigtes Marfan-Syndrom mit FBN1-Mutation",
@@ -2668,10 +2668,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-example-marfan-excluded-clinical.html"
+        "valueUri" : "Condition-mii-exa-seltene-example-marfan-excluded-clinical.html"
       }],
       "reference" : {
-        "reference" : "Condition/example-marfan-excluded-clinical"
+        "reference" : "Condition/mii-exa-seltene-example-marfan-excluded-clinical"
       },
       "name" : "Marfan-Syndrom - Klinisch ausgeschlossen",
       "description" : "Beispiel einer klinisch ausgeschlossenen Marfan-Diagnose",
@@ -2684,10 +2684,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-example-marfan-clinical-diagnosis.html"
+        "valueUri" : "Condition-mii-exa-seltene-example-marfan-clinical-diagnosis.html"
       }],
       "reference" : {
-        "reference" : "Condition/example-marfan-clinical-diagnosis"
+        "reference" : "Condition/mii-exa-seltene-example-marfan-clinical-diagnosis"
       },
       "name" : "Marfan-Syndrom - Klinische Diagnose",
       "description" : "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend auf phänotypischen Merkmalen",
@@ -2700,10 +2700,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-condition-marfan-clinical.html"
+        "valueUri" : "Condition-mii-exa-seltene-condition-marfan-clinical.html"
       }],
       "reference" : {
-        "reference" : "Condition/condition-marfan-clinical"
+        "reference" : "Condition/mii-exa-seltene-condition-marfan-clinical"
       },
       "name" : "Marfan-Syndrom - Klinische Diagnose",
       "description" : "Klinisch bestätigtes Marfan-Syndrom",
@@ -2716,10 +2716,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-condition-marfan-suspected.html"
+        "valueUri" : "Condition-mii-exa-seltene-condition-marfan-suspected.html"
       }],
       "reference" : {
-        "reference" : "Condition/condition-marfan-suspected"
+        "reference" : "Condition/mii-exa-seltene-condition-marfan-suspected"
       },
       "name" : "Marfan-Syndrom - Verdacht",
       "description" : "Verdacht auf Marfan-Syndrom",
@@ -2732,10 +2732,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Bundle-bundle-marfan-complete.html"
+        "valueUri" : "Bundle-mii-exa-seltene-bundle-marfan-complete.html"
       }],
       "reference" : {
-        "reference" : "Bundle/bundle-marfan-complete"
+        "reference" : "Bundle/mii-exa-seltene-bundle-marfan-complete"
       },
       "name" : "Marfan-Syndrom Fallbeispiel - Vollständiges Transaction Bundle",
       "description" : "Transaction Bundle mit allen Ressourcen für den Marfan-Syndrom Fall",
@@ -2748,10 +2748,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-example-metabolic-myopathy-excluded.html"
+        "valueUri" : "Condition-mii-exa-seltene-example-metabolic-myopathy-excluded.html"
       }],
       "reference" : {
-        "reference" : "Condition/example-metabolic-myopathy-excluded"
+        "reference" : "Condition/mii-exa-seltene-example-metabolic-myopathy-excluded"
       },
       "name" : "Metabolische Myopathie - Ausgeschlossen",
       "description" : "Metabolische Myopathie als Differentialdiagnose ausgeschlossen",
@@ -2946,7 +2946,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Patient/mii-exa-seltene-patient"
       },
       "name" : "MII EXA SE Beispielpatient",
-      "description" : "Generischer Beispielpatient des Moduls Seltene Erkrankungen, referenziert von den Beispielen, die keinen eigenen Fallbezug haben. Fuer die ausgearbeiteten Fallbeispiele siehe patient-sma-001 und patient-marfan-001.",
+      "description" : "Generischer Beispielpatient des Moduls Seltene Erkrankungen, referenziert von den Beispielen, die keinen eigenen Fallbezug haben. Fuer die ausgearbeiteten Fallbeispiele siehe mii-exa-seltene-patient-sma-001 und mii-exa-seltene-patient-marfan-001.",
       "exampleBoolean" : true
     },
     {
@@ -3751,14 +3751,30 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-mii-ex-seltene-von-se-betroffen.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/mii-ex-seltene-von-se-betroffen"
+      },
+      "name" : "MII_EX_Seltene_VonSEBetroffen",
+      "description" : "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-symptom-mitral-regurg.html"
+        "valueUri" : "Observation-mii-exa-seltene-symptom-mitral-regurg.html"
       }],
       "reference" : {
-        "reference" : "Observation/symptom-mitral-regurg"
+        "reference" : "Observation/mii-exa-seltene-symptom-mitral-regurg"
       },
       "name" : "Mitralklappeninsuffizienz",
       "description" : "Milde Mitralklappeninsuffizienz Grad I",
@@ -3771,10 +3787,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-example-cf-genetic.html"
+        "valueUri" : "Condition-mii-exa-seltene-example-cf-genetic.html"
       }],
       "reference" : {
-        "reference" : "Condition/example-cf-genetic"
+        "reference" : "Condition/mii-exa-seltene-example-cf-genetic"
       },
       "name" : "Mukoviszidose - Genetisch bestätigt",
       "description" : "Genetisch bestätigte Mukoviszidose",
@@ -3787,10 +3803,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-example-cf-clinical.html"
+        "valueUri" : "Condition-mii-exa-seltene-example-cf-clinical.html"
       }],
       "reference" : {
-        "reference" : "Condition/example-cf-clinical"
+        "reference" : "Condition/mii-exa-seltene-example-cf-clinical"
       },
       "name" : "Mukoviszidose - Klinischer Verdacht",
       "description" : "Initiale klinische Verdachtsdiagnose Mukoviszidose",
@@ -3803,10 +3819,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-example-cf-excluded-after-screening.html"
+        "valueUri" : "Condition-mii-exa-seltene-example-cf-excluded-after-screening.html"
       }],
       "reference" : {
-        "reference" : "Condition/example-cf-excluded-after-screening"
+        "reference" : "Condition/mii-exa-seltene-example-cf-excluded-after-screening"
       },
       "name" : "Mukoviszidose - Nach positivem Screening ausgeschlossen",
       "description" : "CF nach auffälligem Neugeborenenscreening genetisch ausgeschlossen",
@@ -3819,10 +3835,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Encounter-encounter-screening-001.html"
+        "valueUri" : "Encounter-mii-exa-seltene-encounter-screening-001.html"
       }],
       "reference" : {
-        "reference" : "Encounter/encounter-screening-001"
+        "reference" : "Encounter/mii-exa-seltene-encounter-screening-001"
       },
       "name" : "Neugeborenenscreening",
       "description" : "Neugeborenenscreening mit SMA-Verdacht",
@@ -3835,10 +3851,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-example-noonan-clinical-diagnosis.html"
+        "valueUri" : "Condition-mii-exa-seltene-example-noonan-clinical-diagnosis.html"
       }],
       "reference" : {
-        "reference" : "Condition/example-noonan-clinical-diagnosis"
+        "reference" : "Condition/mii-exa-seltene-example-noonan-clinical-diagnosis"
       },
       "name" : "Noonan-Syndrom - Klinische Diagnose",
       "description" : "Beispiel einer klinischen Diagnose des Noonan-Syndroms",
@@ -3851,10 +3867,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-condition-pku-diagnosis.html"
+        "valueUri" : "Condition-mii-exa-seltene-condition-pku-diagnosis.html"
       }],
       "reference" : {
-        "reference" : "Condition/condition-pku-diagnosis"
+        "reference" : "Condition/mii-exa-seltene-condition-pku-diagnosis"
       },
       "name" : "Phenylketonurie - Genetische Diagnose",
       "description" : "Genetisch bestätigte Phenylketonurie (PKU)",
@@ -3867,10 +3883,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-recurrent-respiratory-infections.html"
+        "valueUri" : "Observation-mii-exa-seltene-recurrent-respiratory-infections.html"
       }],
       "reference" : {
-        "reference" : "Observation/recurrent-respiratory-infections"
+        "reference" : "Observation/mii-exa-seltene-recurrent-respiratory-infections"
       },
       "name" : "Rezidivierende Atemwegsinfekte - HPO-kodiert",
       "description" : "Häufige respiratorische Infektionen bei CF",
@@ -3883,10 +3899,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-example-sma-excluded-genetic.html"
+        "valueUri" : "Condition-mii-exa-seltene-example-sma-excluded-genetic.html"
       }],
       "reference" : {
-        "reference" : "Condition/example-sma-excluded-genetic"
+        "reference" : "Condition/mii-exa-seltene-example-sma-excluded-genetic"
       },
       "name" : "SMA - Genetisch ausgeschlossen",
       "description" : "Spinale Muskelatrophie genetisch ausgeschlossen",
@@ -3899,10 +3915,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "DiagnosticReport-molgen-diagnostic-implication-sma.html"
+        "valueUri" : "DiagnosticReport-mii-exa-seltene-molgen-diagnostic-implication-sma.html"
       }],
       "reference" : {
-        "reference" : "DiagnosticReport/molgen-diagnostic-implication-sma"
+        "reference" : "DiagnosticReport/mii-exa-seltene-molgen-diagnostic-implication-sma"
       },
       "name" : "SMA Diagnostische Implikation - MolGen",
       "description" : "Diagnostischer Bericht zur SMA-Genetik",
@@ -3915,10 +3931,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Bundle-bundle-sma-complete.html"
+        "valueUri" : "Bundle-mii-exa-seltene-bundle-sma-complete.html"
       }],
       "reference" : {
-        "reference" : "Bundle/bundle-sma-complete"
+        "reference" : "Bundle/mii-exa-seltene-bundle-sma-complete"
       },
       "name" : "SMA Fallbeispiel - Vollständiges Transaction Bundle",
       "description" : "Transaction Bundle mit allen Ressourcen für den SMA Fall inkl. Diagnoseverlauf",
@@ -3931,10 +3947,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "DiagnosticReport-molgen-sma-negative.html"
+        "valueUri" : "DiagnosticReport-mii-exa-seltene-molgen-sma-negative.html"
       }],
       "reference" : {
-        "reference" : "DiagnosticReport/molgen-sma-negative"
+        "reference" : "DiagnosticReport/mii-exa-seltene-molgen-sma-negative"
       },
       "name" : "SMA Genetik - Negativbefund",
       "description" : "Genetischer Test schließt SMA aus",
@@ -3947,10 +3963,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-condition-sma-genetic.html"
+        "valueUri" : "Condition-mii-exa-seltene-condition-sma-genetic.html"
       }],
       "reference" : {
-        "reference" : "Condition/condition-sma-genetic"
+        "reference" : "Condition/mii-exa-seltene-condition-sma-genetic"
       },
       "name" : "SMA Genetische Diagnose",
       "description" : "SMA Typ 1, molekulargenetisch bestätigt durch SMN1-Deletion",
@@ -3963,10 +3979,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-condition-sma-clinical.html"
+        "valueUri" : "Condition-mii-exa-seltene-condition-sma-clinical.html"
       }],
       "reference" : {
-        "reference" : "Condition/condition-sma-clinical"
+        "reference" : "Condition/mii-exa-seltene-condition-sma-clinical"
       },
       "name" : "SMA Klinische Diagnose",
       "description" : "Klinische Diagnose SMA Typ 1 bei Erstvorstellung",
@@ -3979,10 +3995,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-observation-sma-screening.html"
+        "valueUri" : "Observation-mii-exa-seltene-observation-sma-screening.html"
       }],
       "reference" : {
-        "reference" : "Observation/observation-sma-screening"
+        "reference" : "Observation/mii-exa-seltene-observation-sma-screening"
       },
       "name" : "SMA Neugeborenenscreening Ergebnis",
       "description" : "Positives SMA-Screening beim Neugeborenenscreening",
@@ -3995,10 +4011,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Patient-patient-sma-001.html"
+        "valueUri" : "Patient-mii-exa-seltene-patient-sma-001.html"
       }],
       "reference" : {
-        "reference" : "Patient/patient-sma-001"
+        "reference" : "Patient/mii-exa-seltene-patient-sma-001"
       },
       "name" : "SMA Patient - Neugeborenes Mädchen",
       "description" : "Neugeborenes Mädchen mit bestätigter SMA Typ 1",
@@ -4011,10 +4027,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-example-sma-genetic-diagnosis.html"
+        "valueUri" : "Condition-mii-exa-seltene-example-sma-genetic-diagnosis.html"
       }],
       "reference" : {
-        "reference" : "Condition/example-sma-genetic-diagnosis"
+        "reference" : "Condition/mii-exa-seltene-example-sma-genetic-diagnosis"
       },
       "name" : "SMA Typ 1 - Genetisch bestätigte Diagnose",
       "description" : "Beispiel einer genetisch bestätigten Diagnose der spinalen Muskelatrophie Typ 1",
@@ -4027,10 +4043,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Condition-condition-sma-suspected.html"
+        "valueUri" : "Condition-mii-exa-seltene-condition-sma-suspected.html"
       }],
       "reference" : {
-        "reference" : "Condition/condition-sma-suspected"
+        "reference" : "Condition/mii-exa-seltene-condition-sma-suspected"
       },
       "name" : "SMA Verdacht - Neugeborenenscreening",
       "description" : "Verdacht auf SMA beim Neugeborenenscreening",
@@ -4043,10 +4059,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-molgen-smn1-normal-copies.html"
+        "valueUri" : "Observation-mii-exa-seltene-molgen-smn1-normal-copies.html"
       }],
       "reference" : {
-        "reference" : "Observation/molgen-smn1-normal-copies"
+        "reference" : "Observation/mii-exa-seltene-molgen-smn1-normal-copies"
       },
       "name" : "SMN1 - Normale Kopienanzahl",
       "description" : "2 Kopien SMN1 - schließt SMA aus",
@@ -4059,10 +4075,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-variant-smn1-001.html"
+        "valueUri" : "Observation-mii-exa-seltene-variant-smn1-001.html"
       }],
       "reference" : {
-        "reference" : "Observation/variant-smn1-001"
+        "reference" : "Observation/mii-exa-seltene-variant-smn1-001"
       },
       "name" : "SMN1 Gen - Homozygote Deletion",
       "description" : "0 Kopien des SMN1-Gens nachgewiesen",
@@ -4075,10 +4091,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-molgen-variant-smn1-deletion.html"
+        "valueUri" : "Observation-mii-exa-seltene-molgen-variant-smn1-deletion.html"
       }],
       "reference" : {
-        "reference" : "Observation/molgen-variant-smn1-deletion"
+        "reference" : "Observation/mii-exa-seltene-molgen-variant-smn1-deletion"
       },
       "name" : "SMN1 Gen Deletion - MolGen Variante",
       "description" : "Homozygote Deletion des SMN1-Gens bei SMA",
@@ -4091,10 +4107,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-variant-smn2-001.html"
+        "valueUri" : "Observation-mii-exa-seltene-variant-smn2-001.html"
       }],
       "reference" : {
-        "reference" : "Observation/variant-smn2-001"
+        "reference" : "Observation/mii-exa-seltene-variant-smn2-001"
       },
       "name" : "SMN2 Gen - Kopienanzahl",
       "description" : "2 Kopien des SMN2-Gens nachgewiesen",
@@ -4107,10 +4123,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Encounter-encounter-stationaer-001.html"
+        "valueUri" : "Encounter-mii-exa-seltene-encounter-stationaer-001.html"
       }],
       "reference" : {
-        "reference" : "Encounter/encounter-stationaer-001"
+        "reference" : "Encounter/mii-exa-seltene-encounter-stationaer-001"
       },
       "name" : "Stationärer Aufenthalt zur Gentherapie",
       "description" : "Stationäre Aufnahme für Gentherapie",
@@ -4171,10 +4187,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-symptom-chest-pain.html"
+        "valueUri" : "Observation-mii-exa-seltene-symptom-chest-pain.html"
       }],
       "reference" : {
-        "reference" : "Observation/symptom-chest-pain"
+        "reference" : "Observation/mii-exa-seltene-symptom-chest-pain"
       },
       "name" : "Thoraxschmerzen",
       "description" : "Akute Thoraxschmerzen als Präsentationssymptom",
@@ -4187,10 +4203,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-observation-plt-001.html"
+        "valueUri" : "Observation-mii-exa-seltene-observation-plt-001.html"
       }],
       "reference" : {
-        "reference" : "Observation/observation-plt-001"
+        "reference" : "Observation/mii-exa-seltene-observation-plt-001"
       },
       "name" : "Thrombozytenzahl - Post-therapeutisch",
       "description" : "Thrombozytenzahl nach Gentherapie",
@@ -4203,10 +4219,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-observation-troponin-003.html"
+        "valueUri" : "Observation-mii-exa-seltene-observation-troponin-003.html"
       }],
       "reference" : {
-        "reference" : "Observation/observation-troponin-003"
+        "reference" : "Observation/mii-exa-seltene-observation-troponin-003"
       },
       "name" : "Troponin T hs - 01.08.2024",
       "description" : "Troponin T hochsensitiv nach Therapie",
@@ -4219,10 +4235,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-observation-troponin-004.html"
+        "valueUri" : "Observation-mii-exa-seltene-observation-troponin-004.html"
       }],
       "reference" : {
-        "reference" : "Observation/observation-troponin-004"
+        "reference" : "Observation/mii-exa-seltene-observation-troponin-004"
       },
       "name" : "Troponin T hs - 12.08.2024",
       "description" : "Troponin T hochsensitiv bei Nachsorge",
@@ -4235,10 +4251,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-observation-troponin-001.html"
+        "valueUri" : "Observation-mii-exa-seltene-observation-troponin-001.html"
       }],
       "reference" : {
-        "reference" : "Observation/observation-troponin-001"
+        "reference" : "Observation/mii-exa-seltene-observation-troponin-001"
       },
       "name" : "Troponin T hs - 22.07.2024",
       "description" : "Troponin T hochsensitiv Baseline",
@@ -4251,10 +4267,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-observation-troponin-002.html"
+        "valueUri" : "Observation-mii-exa-seltene-observation-troponin-002.html"
       }],
       "reference" : {
-        "reference" : "Observation/observation-troponin-002"
+        "reference" : "Observation/mii-exa-seltene-observation-troponin-002"
       },
       "name" : "Troponin T hs - 28.07.2024",
       "description" : "Troponin T hochsensitiv vor Therapie",
@@ -4267,10 +4283,10 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-vsd.html"
+        "valueUri" : "Observation-mii-exa-seltene-vsd.html"
       }],
       "reference" : {
-        "reference" : "Observation/vsd"
+        "reference" : "Observation/mii-exa-seltene-vsd"
       },
       "name" : "Ventrikelseptumdefekt - HPO-kodiert",
       "description" : "Angeborener Ventrikelseptumdefekt",
@@ -4283,29 +4299,13 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ValueSet-von-seltene-betroffen-vs.html"
+        "valueUri" : "ValueSet-mii-vs-seltene-von-se-betroffen.html"
       }],
       "reference" : {
-        "reference" : "ValueSet/von-seltene-betroffen-vs"
+        "reference" : "ValueSet/mii-vs-seltene-von-se-betroffen"
       },
       "name" : "Von SE betroffen Value Set",
       "description" : "ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Verwendet SNOMED CT codes für internationale Interoperabilität.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "StructureDefinition-mii-ex-von-se-betroffen.html"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/mii-ex-von-se-betroffen"
-      },
-      "name" : "VonSEBetroffen",
-      "description" : "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
       "exampleBoolean" : false
     }],
     "page" : {

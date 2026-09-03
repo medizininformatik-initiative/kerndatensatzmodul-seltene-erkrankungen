@@ -15,7 +15,7 @@
 ## Participants
 
 * **Role**: Patient
-  * **Details**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-patient-sma-001.md)
+  * **Details**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-mii-exa-seltene-patient-sma-001.md)
 
 This consent is made under the regulation Common Rule Informed Consent .
 
@@ -43,7 +43,7 @@ The subject has given their consent.
     }]
   }],
   "patient" : {
-    "reference" : "Patient/patient-sma-001"
+    "reference" : "Patient/mii-exa-seltene-patient-sma-001"
   },
   "dateTime" : "2024-08-15",
   "policyRule" : {

@@ -1,0 +1,132 @@
+# Klinische Beurteilung - Erstvorstellung - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Klinische Beurteilung - Erstvorstellung**
+
+## Example ClinicalImpression: Klinische Beurteilung - Erstvorstellung
+
+-------
+
+**English**
+
+-------
+
+Profile: [MII Profile SE Clinical Impression](StructureDefinition-mii-pr-seltene-clinical-impression.md) version: 2027.0.0-ballot.rc1
+
+**status**: Completed
+
+**subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-mii-exa-seltene-patient-sma-001.md)
+
+**encounter**: [Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Follow-up encounter; period = 2024-07-22 --> 2024-07-22](Encounter-mii-exa-seltene-encounter-ambulant-001.md)
+
+**effective**: 2024-07-22
+
+**date**: 2024-07-22
+
+**problem**: [Condition Werdnig-Hoffmann disease](Condition-mii-exa-seltene-condition-sma-suspected.md)
+
+> **investigation****code**: Familienanamnese**item**: [FamilyMemberHistory: extension = Unknown; status = completed; date = 2024-07-22; relationship = Great grandmother](FamilyMemberHistory-mii-exa-seltene-family-history-001.md)
+
+> **investigation****code**: Labordiagnostik**item**: [Observation Troponin T.cardiac [Mass/volume] in Serum or Plasma](Observation-mii-exa-seltene-observation-troponin-001.md)
+
+**summary**: Neugeborenes mit V.a. SMA aus Neugeborenenscreening. Familienanamnese zeigt unklare Muskelerkrankung der Urgroßmutter. Troponin T bereits erhöht (92 ng/l).
+
+> **finding****itemReference**: [Condition Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]](Condition-mii-exa-seltene-condition-sma-clinical.md)
+
+> **finding****itemReference**: [Condition Spinal muscular atrophy, type I](Condition-mii-exa-seltene-condition-sma-genetic.md)
+
+> **finding****itemCodeableConcept**: Troponin above reference range**itemReference**: [Observation Troponin T.cardiac [Mass/volume] in Serum or Plasma](Observation-mii-exa-seltene-observation-troponin-001.md)
+
+**prognosisCodeableConcept**: Guarded prognosis
+
+**note**: , 
+
+> 
+
+Klinische Untersuchung gemäß SMA-Diagnoseprotokoll. Blutentnahme für Genetik veranlasst.
+
+
+> 
+
+Klinisches Bild vereinbar mit SMA Typ 1. Molekulargenetische Bestätigung ausstehend. Eltern über Therapieoptionen informiert.
+
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ClinicalImpression",
+  "id" : "mii-exa-seltene-clinical-impression-erstvorstellung",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2027.0.0-ballot.rc1"]
+  },
+  "status" : "completed",
+  "subject" : {
+    "reference" : "Patient/mii-exa-seltene-patient-sma-001"
+  },
+  "encounter" : {
+    "reference" : "Encounter/mii-exa-seltene-encounter-ambulant-001"
+  },
+  "effectiveDateTime" : "2024-07-22",
+  "date" : "2024-07-22",
+  "problem" : [{
+    "reference" : "Condition/mii-exa-seltene-condition-sma-suspected"
+  }],
+  "investigation" : [{
+    "code" : {
+      "text" : "Familienanamnese"
+    },
+    "item" : [{
+      "reference" : "FamilyMemberHistory/mii-exa-seltene-family-history-001"
+    }]
+  },
+  {
+    "code" : {
+      "text" : "Labordiagnostik"
+    },
+    "item" : [{
+      "reference" : "Observation/mii-exa-seltene-observation-troponin-001"
+    }]
+  }],
+  "summary" : "Neugeborenes mit V.a. SMA aus Neugeborenenscreening. Familienanamnese zeigt unklare Muskelerkrankung der Urgroßmutter. Troponin T bereits erhöht (92 ng/l).",
+  "finding" : [{
+    "itemReference" : {
+      "reference" : "Condition/mii-exa-seltene-condition-sma-clinical"
+    }
+  },
+  {
+    "itemReference" : {
+      "reference" : "Condition/mii-exa-seltene-condition-sma-genetic"
+    }
+  },
+  {
+    "itemCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "1363512008",
+        "display" : "Troponin above reference range"
+      }]
+    },
+    "itemReference" : {
+      "reference" : "Observation/mii-exa-seltene-observation-troponin-001"
+    }
+  }],
+  "prognosisCodeableConcept" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "67334001",
+      "display" : "Guarded prognosis"
+    }]
+  }],
+  "note" : [{
+    "text" : "Klinische Untersuchung gemäß SMA-Diagnoseprotokoll. Blutentnahme für Genetik veranlasst."
+  },
+  {
+    "text" : "Klinisches Bild vereinbar mit SMA Typ 1. Molekulargenetische Bestätigung ausstehend. Eltern über Therapieoptionen informiert."
+  }]
+}
+
+```

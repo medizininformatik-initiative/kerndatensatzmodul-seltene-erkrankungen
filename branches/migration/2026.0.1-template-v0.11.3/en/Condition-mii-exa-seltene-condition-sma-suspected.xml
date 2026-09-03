@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-seltene-condition-sma-suspected"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Condition mii-exa-seltene-condition-sma-suspected</b></p><a name="mii-exa-seltene-condition-sma-suspected"> </a><a name="hcmii-exa-seltene-condition-sma-suspected"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-clinical-diagnosis.html">MII PR SE Clinical Diagnosis</a> version: 2027.0.0-ballot.rc1</p></div><p><b>Condition Asserted Date</b>: 2024-07-18</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status unconfirmed}">Unconfirmed</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}">Encounter Diagnosis</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 64383006}, {http://human-phenotype-ontology.org HP:0007373}">Verdacht auf Spinale Muskelatrophie</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient-sma-001.html">Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)</a></p><p><b>encounter</b>: <a href="Encounter-mii-exa-seltene-encounter-screening-001.html">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Neonatal screening (procedure); period = 2024-07-18 --&gt; 2024-07-18; reasonCode = </a></p><p><b>recordedDate</b>: 2024-07-18</p><h3>Evidences</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:">Positives Neugeborenenscreening</span></td><td><a href="Observation-mii-exa-seltene-observation-sma-screening.html">Observation Spinal muscular atrophy newborn screening panel</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Verdacht beim Neugeborenenscreening gestellt - SMN1 Exon 7 nicht nachweisbar</p>
+</div></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+    <valueDateTime value="2024-07-18"/>
+  </extension>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="unconfirmed"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+      <code value="encounter-diagnosis"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="64383006"/>
+      <display value="Werdnig-Hoffmann disease"/>
+    </coding>
+    <coding>
+      <system value="http://human-phenotype-ontology.org"/>
+      <code value="HP:0007373"/>
+      <display value="Motor neuron atrophy"/>
+    </coding>
+    <text value="Verdacht auf Spinale Muskelatrophie"/>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-seltene-patient-sma-001"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/mii-exa-seltene-encounter-screening-001"/>
+  </encounter>
+  <recordedDate value="2024-07-18"/>
+  <evidence>
+    <code>
+      <text value="Positives Neugeborenenscreening"/>
+    </code>
+    <detail>
+      <reference value="Observation/mii-exa-seltene-observation-sma-screening"/>
+    </detail>
+  </evidence>
+  <note>
+    <text value="Verdacht beim Neugeborenenscreening gestellt - SMN1 Exon 7 nicht nachweisbar"/>
+  </note>
+</Condition>

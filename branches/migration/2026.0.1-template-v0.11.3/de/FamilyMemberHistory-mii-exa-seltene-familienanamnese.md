@@ -14,7 +14,7 @@
 
 Profile: [MII PR SE Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md) version: 2027.0.0-ballot.rc1
 
-**VonSEBetroffen**: Yes
+**MII_EX_Seltene_VonSEBetroffen**: Yes
 
 **status**: Completed
 
@@ -48,7 +48,7 @@ Profile: [MII PR SE Familienanamnese](StructureDefinition-mii-pr-seltene-familie
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese|2027.0.0-ballot.rc1"]
   },
   "extension" : [{
-    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen",
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-von-se-betroffen",
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://snomed.info/sct",

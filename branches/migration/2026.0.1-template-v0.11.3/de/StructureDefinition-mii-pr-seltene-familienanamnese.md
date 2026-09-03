@@ -130,7 +130,7 @@ Beispielinstanzen sind auf der Profilseite im Abschnitt „Examples" verlinkt.
 **Usages:**
 
 * Refer to this Profile: [MII PR SE Consanguinity](StructureDefinition-mii-pr-seltene-consanguinity.md)
-* Examples for this Profile: [FamilyMemberHistory/family-history-001](FamilyMemberHistory-family-history-001.md) and [FamilyMemberHistory/mii-exa-seltene-familienanamnese](FamilyMemberHistory-mii-exa-seltene-familienanamnese.md)
+* Examples for this Profile: [FamilyMemberHistory/mii-exa-seltene-familienanamnese](FamilyMemberHistory-mii-exa-seltene-familienanamnese.md) and [FamilyMemberHistory/mii-exa-seltene-family-history-001](FamilyMemberHistory-mii-exa-seltene-family-history-001.md)
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-familienanamnese.json)
@@ -166,7 +166,7 @@ Mandatory: 2 elements(2 nested mandatory elements)
 
 This structure refers to these extensions:
 
-* [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen](StructureDefinition-mii-ex-von-se-betroffen.md)
+* [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-von-se-betroffen](StructureDefinition-mii-ex-seltene-von-se-betroffen.md)
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance](StructureDefinition-mii-ex-seltene-penetrance.md)
 
 **Slices**
@@ -203,7 +203,7 @@ Mandatory: 2 elements(2 nested mandatory elements)
 
 This structure refers to these extensions:
 
-* [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen](StructureDefinition-mii-ex-von-se-betroffen.md)
+* [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-von-se-betroffen](StructureDefinition-mii-ex-seltene-von-se-betroffen.md)
 * [https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance](StructureDefinition-mii-ex-seltene-penetrance.md)
 
 **Slices**
@@ -230,7 +230,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Familienanamnese",
   "title" : "MII PR SE Familienanamnese",
   "status" : "active",
-  "date" : "2026-09-03T07:17:59+00:00",
+  "date" : "2026-09-03T07:33:22+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -300,7 +300,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "max" : "1",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-von-se-betroffen"]
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-von-se-betroffen"]
       }],
       "mustSupport" : true,
       "mapping" : [{

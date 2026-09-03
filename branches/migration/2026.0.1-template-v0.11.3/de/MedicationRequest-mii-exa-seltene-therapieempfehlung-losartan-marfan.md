@@ -22,9 +22,9 @@ Profile: [MII PR SE Therapieempfehlung Systemische Therapie](StructureDefinition
 
 **medication**: Losartan
 
-**subject**: [Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)](Patient-patient-marfan-001.md)
+**subject**: [Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)](Patient-mii-exa-seltene-patient-marfan-001.md)
 
-**reasonReference**: [Marfan-Syndrom mit Aortenwurzeldilatation](Condition-condition-marfan-clinical.md)
+**reasonReference**: [Marfan-Syndrom mit Aortenwurzeldilatation](Condition-mii-exa-seltene-condition-marfan-clinical.md)
 
 > **dosageInstruction****text**: 50mg 1x täglich**timing**: Once per 1 day
 
@@ -71,10 +71,10 @@ Profile: [MII PR SE Therapieempfehlung Systemische Therapie](StructureDefinition
     }]
   },
   "subject" : {
-    "reference" : "Patient/patient-marfan-001"
+    "reference" : "Patient/mii-exa-seltene-patient-marfan-001"
   },
   "reasonReference" : [{
-    "reference" : "Condition/condition-marfan-clinical",
+    "reference" : "Condition/mii-exa-seltene-condition-marfan-clinical",
     "display" : "Marfan-Syndrom mit Aortenwurzeldilatation"
   }],
   "dosageInstruction" : [{

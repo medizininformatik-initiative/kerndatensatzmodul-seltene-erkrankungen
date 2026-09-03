@@ -24,7 +24,7 @@ Profile: [MII PR SE Registerteilnahme](StructureDefinition-mii-pr-seltene-regist
 
 **study**: [ResearchStudy ERN EURO-NMD Patient Registry](ResearchStudy-mii-exa-seltene-register-euro-nmd.md)
 
-**individual**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-patient-sma-001.md)
+**individual**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-mii-exa-seltene-patient-sma-001.md)
 
 **consent**: [mii-exa-seltene-register-einwilligung](Consent-mii-exa-seltene-register-einwilligung.md)
 
@@ -57,7 +57,7 @@ Profile: [MII PR SE Registerteilnahme](StructureDefinition-mii-pr-seltene-regist
     "reference" : "ResearchStudy/mii-exa-seltene-register-euro-nmd"
   },
   "individual" : {
-    "reference" : "Patient/patient-sma-001"
+    "reference" : "Patient/mii-exa-seltene-patient-sma-001"
   },
   "consent" : {
     "reference" : "Consent/mii-exa-seltene-register-einwilligung"

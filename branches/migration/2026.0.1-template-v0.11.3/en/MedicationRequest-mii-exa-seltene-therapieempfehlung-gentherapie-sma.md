@@ -22,7 +22,7 @@ Profile: [MII PR SE Therapieempfehlung Systemische Therapie](StructureDefinition
 
 **medication**: Zolgensma
 
-**subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-patient-sma-001.md)
+**subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-mii-exa-seltene-patient-sma-001.md)
 
 **reasonReference**: [Spinale Muskelatrophie Typ 1](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.org/packages/de.basisprofil.r4/Condition/sma-diagnosis)
 
@@ -69,7 +69,7 @@ Einmalige intravenöse Infusion der Gentherapie
     "text" : "Zolgensma"
   },
   "subject" : {
-    "reference" : "Patient/patient-sma-001"
+    "reference" : "Patient/mii-exa-seltene-patient-sma-001"
   },
   "reasonReference" : [{
     "reference" : "Condition/sma-diagnosis",

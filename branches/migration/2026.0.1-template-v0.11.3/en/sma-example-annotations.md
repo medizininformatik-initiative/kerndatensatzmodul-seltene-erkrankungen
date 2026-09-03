@@ -156,35 +156,35 @@ This document contains the semantic annotations for a case example of spinal mus
 
 ##### Patient and family history
 
-| Resource ID | Type | Description | Date | Status/details | |————–|—–|————–|——-|—————-| | `patient-sma-001` | Patient | Newborn girl | Birth: ~2024-07-01 | ID: SMA-2024-001 | | `family-history-001` | FamilyMemberHistory | Great-grandmother with muscle disease | 2024-07-22 | Relation: uncertain |
+| Resource ID | Type | Description | Date | Status/details | |————–|—–|————–|——-|—————-| | `mii-exa-seltene-patient-sma-001` | Patient | Newborn girl | Birth: ~2024-07-01 | ID: SMA-2024-001 | | `mii-exa-seltene-family-history-001` | FamilyMemberHistory | Great-grandmother with muscle disease | 2024-07-22 | Relation: uncertain |
 
 ##### Diagnosis course
 
-| Resource ID | Type | Description | Date of determination | Verification status | Codes | |————–|—–|————–|——————-|——————-|——–| | `condition-sma-suspected` | Condition | Suspected SMA | 2024-07-18 | unconfirmed | SNOMED: 80854005 | | `condition-sma-clinical` | Condition | Clinical diagnosis SMA type 1 | 2024-07-22 | provisional | ICD-10: G12.0, Orpha: 83330 | | `condition-sma-confirmed` | Condition | Confirmed SMA type 1 | 2024-07-26 | confirmed | ICD-10: G12.0, Orpha: 83330 |
+| Resource ID | Type | Description | Date of determination | Verification status | Codes | |————–|—–|————–|——————-|——————-|——–| | `mii-exa-seltene-condition-sma-suspected` | Condition | Suspected SMA | 2024-07-18 | unconfirmed | SNOMED: 80854005 | | `mii-exa-seltene-condition-sma-clinical` | Condition | Clinical diagnosis SMA type 1 | 2024-07-22 | provisional | ICD-10: G12.0, Orpha: 83330 | | `condition-sma-confirmed` | Condition | Confirmed SMA type 1 | 2024-07-26 | confirmed | ICD-10: G12.0, Orpha: 83330 |
 
 ##### Screening and genetic findings
 
-| Resource ID | Type | Test/gene | Finding | Date | Interpretation | |————–|—–|———-|———|——-|—————-| | `observation-sma-screening` | Observation | SMA newborn screening (LOINC: 92005-8) | SMN1 exon 7 not detectable | 2024-07-18 | Positive for SMA | | `variant-smn1-001` | Observation | SMN1 (HGNC:11117) — confirmatory | 0 copies (deletion) | 2024-07-26 | Pathological, disease-causing | | `variant-smn2-001` | Observation | SMN2 (HGNC:11118) — confirmatory | 2 copies | 2024-07-26 | Phenotype modifier |
+| Resource ID | Type | Test/gene | Finding | Date | Interpretation | |————–|—–|———-|———|——-|—————-| | `mii-exa-seltene-observation-sma-screening` | Observation | SMA newborn screening (LOINC: 92005-8) | SMN1 exon 7 not detectable | 2024-07-18 | Positive for SMA | | `mii-exa-seltene-variant-smn1-001` | Observation | SMN1 (HGNC:11117) — confirmatory | 0 copies (deletion) | 2024-07-26 | Pathological, disease-causing | | `mii-exa-seltene-variant-smn2-001` | Observation | SMN2 (HGNC:11118) — confirmatory | 2 copies | 2024-07-26 | Phenotype modifier |
 
 ##### Treatment
 
-| Resource ID | Type | Description | Date | Code | Details | |————–|—–|————–|——-|——|———| | `procedure-gentherapy-001` | Procedure | Gene therapy (onasemnogene abeparvovec) | 2024-07-29 | OPS: 6-00d.0, UNII: MLU3LU3EVV | With prednisolone, without complications |
+| Resource ID | Type | Description | Date | Code | Details | |————–|—–|————–|——-|——|———| | `mii-exa-seltene-procedure-gentherapy-001` | Procedure | Gene therapy (onasemnogene abeparvovec) | 2024-07-29 | OPS: 6-00d.0, UNII: MLU3LU3EVV | With prednisolone, without complications |
 
 ##### Laboratory values
 
-| Resource ID | Type | Parameter | Date | Value | Interpretation | |————–|—–|———–|——-|——|—————-| | `observation-troponin-001` | Observation | Troponin T hs | 2024-07-22 | 92 ng/l | Elevated | | `observation-troponin-002` | Observation | Troponin T hs | 2024-07-28 | 58 ng/l | Elevated | | `observation-troponin-003` | Observation | Troponin T hs | 2024-08-01 | 57 ng/l | Elevated | | `observation-troponin-004` | Observation | Troponin T hs | 2024-08-12 | 106 ng/l | Elevated | | `observation-alt-001` | Observation | ALT | 2024-07-29 | - | Normal | | `observation-ast-001` | Observation | AST | 2024-07-29 | - | Normal | | `observation-plt-001` | Observation | Platelet count | 2024-07-29 | - | Normal |
+| Resource ID | Type | Parameter | Date | Value | Interpretation | |————–|—–|———–|——-|——|—————-| | `mii-exa-seltene-observation-troponin-001` | Observation | Troponin T hs | 2024-07-22 | 92 ng/l | Elevated | | `mii-exa-seltene-observation-troponin-002` | Observation | Troponin T hs | 2024-07-28 | 58 ng/l | Elevated | | `mii-exa-seltene-observation-troponin-003` | Observation | Troponin T hs | 2024-08-01 | 57 ng/l | Elevated | | `mii-exa-seltene-observation-troponin-004` | Observation | Troponin T hs | 2024-08-12 | 106 ng/l | Elevated | | `mii-exa-seltene-observation-alt-001` | Observation | ALT | 2024-07-29 | - | Normal | | `mii-exa-seltene-observation-ast-001` | Observation | AST | 2024-07-29 | - | Normal | | `mii-exa-seltene-observation-plt-001` | Observation | Platelet count | 2024-07-29 | - | Normal |
 
 ##### Encounters
 
-| Resource ID | Type | Description | Date | Setting | Linked diagnosis | |————–|—–|————–|——-|———|——————-| | `encounter-screening-001` | Encounter | Newborn screening | 2024-07-18 | Screening | `condition-sma-suspected` | | `encounter-ambulant-001` | Encounter | First presentation SMA center | 2024-07-22 | Outpatient | `condition-sma-clinical` | | `encounter-stationaer-001` | Encounter | Inpatient gene therapy | 2024-07-29/30 | Inpatient | `condition-sma-confirmed` | | `encounter-nachsorge-001` | Encounter | Follow-up | 2024-08-12 | Outpatient | `condition-sma-confirmed` |
+| Resource ID | Type | Description | Date | Setting | Linked diagnosis | |————–|—–|————–|——-|———|——————-| | `mii-exa-seltene-encounter-screening-001` | Encounter | Newborn screening | 2024-07-18 | Screening | `mii-exa-seltene-condition-sma-suspected` | | `mii-exa-seltene-encounter-ambulant-001` | Encounter | First presentation SMA center | 2024-07-22 | Outpatient | `mii-exa-seltene-condition-sma-clinical` | | `mii-exa-seltene-encounter-stationaer-001` | Encounter | Inpatient gene therapy | 2024-07-29/30 | Inpatient | `condition-sma-confirmed` | | `mii-exa-seltene-encounter-nachsorge-001` | Encounter | Follow-up | 2024-08-12 | Outpatient | `condition-sma-confirmed` |
 
 ##### Clinical assessments
 
-| Resource ID | Type | Description | Date | Encounter | Key findings | |————–|—–|————–|——-|———–|——————| | `clinical-impression-erstvorstellung` | ClinicalImpression | Initial clinical assessment | 2024-07-22 | `encounter-ambulant-001` | Family history, troponin ↑, suspected SMA type 1 | | `clinical-impression-nachsorge` | ClinicalImpression | Follow-up assessment after gene therapy | 2024-08-12 | `encounter-nachsorge-001` | Troponin still ↑ (pre-existing), ALT/AST/PLT normal |
+| Resource ID | Type | Description | Date | Encounter | Key findings | |————–|—–|————–|——-|———–|——————| | `mii-exa-seltene-clinical-impression-erstvorstellung` | ClinicalImpression | Initial clinical assessment | 2024-07-22 | `mii-exa-seltene-encounter-ambulant-001` | Family history, troponin ↑, suspected SMA type 1 | | `mii-exa-seltene-clinical-impression-nachsorge` | ClinicalImpression | Follow-up assessment after gene therapy | 2024-08-12 | `mii-exa-seltene-encounter-nachsorge-001` | Troponin still ↑ (pre-existing), ALT/AST/PLT normal |
 
 #### Bundle
 
-| Resource ID | Type | Description | Number of entries | |————–|—–|————–|—————–| | `bundle-sma-complete` | Bundle | Transaction bundle with all resources | 22 resources |
+| Resource ID | Type | Description | Number of entries | |————–|—–|————–|—————–| | `mii-exa-seltene-bundle-sma-complete` | Bundle | Transaction bundle with all resources | 22 resources |
 
 ### Resource diagrams
 

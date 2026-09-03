@@ -1,0 +1,1576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-seltene-bundle-marfan-complete"/>
+  <language value="de"/>
+  <type value="transaction"/>
+  <timestamp value="2024-12-15T14:00:00Z"/>
+  <entry>
+    <fullUrl value="urn:uuid:546740dd-771d-41e4-a2a5-e8d6a2b5c505"/>
+    <resource>
+      <Patient>
+        <id value="mii-exa-seltene-patient-marfan-001"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <system value="https://www.medizininformatik-initiative.de/fhir/sid/patient-id"/>
+          <value value="MRF-2024-001"/>
+        </identifier>
+        <gender value="male"/>
+        <birthDate value="2005-01-01"/>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:12b18efe-aae8-4039-9e2c-466ee0cb0ce0"/>
+    <resource>
+      <Condition>
+        <id value="mii-exa-seltene-condition-marfan-suspected"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2027.0.0-ballot.rc1"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2024-12-10"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="provisional"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="encounter-diagnosis"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <version value="2024"/>
+            <code value="Q87.4"/>
+            <display value="Marfan-Syndrom"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="19346006"/>
+            <display value="Marfan syndrome"/>
+          </coding>
+          <coding>
+            <system value="http://www.orpha.net"/>
+            <code value="558"/>
+            <display value="Marfan syndrome"/>
+          </coding>
+          <text value="Verdacht auf Marfan-Syndrom"/>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <recordedDate value="2024-12-10"/>
+        <note>
+          <text value="Verdacht auf Marfan-Syndrom aufgrund klinischer Präsentation"/>
+        </note>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:6842a03b-9adc-4cb7-9126-85d317203e7b"/>
+    <resource>
+      <Condition>
+        <id value="mii-exa-seltene-condition-marfan-clinical"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2027.0.0-ballot.rc1"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2024-12-15"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="encounter-diagnosis"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://omim.org"/>
+            <version value="2024"/>
+            <code value="154700"/>
+            <display value="Marfan syndrome"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="19346006"/>
+            <display value="Marfan syndrome"/>
+          </coding>
+          <coding>
+            <system value="http://www.orpha.net"/>
+            <code value="558"/>
+            <display value="Marfan syndrome"/>
+          </coding>
+          <text value="Marfan-Syndrom"/>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/mii-exa-seltene-encounter-cardiology"/>
+        </encounter>
+        <recordedDate value="2024-12-15"/>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://human-phenotype-ontology.org"/>
+              <code value="HP:0002616"/>
+              <display value="Aortic root aneurysm"/>
+            </coding>
+          </code>
+          <detail>
+            <reference value="Observation/mii-exa-seltene-symptom-aortic-root"/>
+          </detail>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://human-phenotype-ontology.org"/>
+              <code value="HP:0001659"/>
+              <display value="Aortic regurgitation"/>
+            </coding>
+          </code>
+          <detail>
+            <reference value="Observation/mii-exa-seltene-symptom-aortic-regurg"/>
+          </detail>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://human-phenotype-ontology.org"/>
+              <code value="HP:0001653"/>
+              <display value="Mitral regurgitation"/>
+            </coding>
+          </code>
+          <detail>
+            <reference value="Observation/mii-exa-seltene-symptom-mitral-regurg"/>
+          </detail>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://human-phenotype-ontology.org"/>
+              <code value="HP:0000098"/>
+              <display value="Tall stature"/>
+            </coding>
+          </code>
+          <detail>
+            <reference value="Observation/mii-exa-seltene-observation-height-001"/>
+          </detail>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://human-phenotype-ontology.org"/>
+              <code value="HP:0100559"/>
+              <display value="Lower limb asymmetry"/>
+            </coding>
+          </code>
+          <detail>
+            <reference value="Observation/mii-exa-seltene-observation-leg-asymmetry"/>
+          </detail>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://human-phenotype-ontology.org"/>
+              <code value="HP:0100749"/>
+              <display value="Chest pain"/>
+            </coding>
+          </code>
+          <detail>
+            <reference value="Observation/mii-exa-seltene-symptom-chest-pain"/>
+          </detail>
+        </evidence>
+        <note>
+          <text value="Marfan-Syndrom klinisch diagnostiziert basierend auf kardialen Befunden, Skelettmerkmalen und ophthalmologischer Manifestation"/>
+        </note>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:23bd27f8-f2b5-4bc9-8fa3-078c26bc64a2"/>
+    <resource>
+      <Condition>
+        <id value="mii-exa-seltene-condition-marfan-genetic"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2027.0.0-ballot.rc1"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2024-12-20"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="782964007"/>
+            <display value="Genetic disease"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://omim.org"/>
+            <version value="2024"/>
+            <code value="154700"/>
+            <display value="Marfan syndrome"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="19346006"/>
+            <display value="Marfan syndrome"/>
+          </coding>
+          <coding>
+            <system value="http://www.orpha.net"/>
+            <code value="558"/>
+            <display value="Marfan syndrome"/>
+          </coding>
+          <text value="Marfan-Syndrom - genetisch bestätigt"/>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <recordedDate value="2024-12-20"/>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="106221001"/>
+              <display value="Genetic finding"/>
+            </coding>
+          </code>
+          <detail>
+            <reference value="Observation/mii-exa-seltene-variant-fbn1-001"/>
+          </detail>
+        </evidence>
+        <note>
+          <text value="FBN1-Mutation c.3217G&gt;A (p.Gly1073Arg) nachgewiesen, krankheitsursächlich. Genetische Diagnose existiert parallel zur klinischen Diagnose."/>
+        </note>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:f584ef12-6225-4e71-9186-68528f68e07d"/>
+    <resource>
+      <Condition>
+        <id value="mii-exa-seltene-condition-cataract"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2027.0.0-ballot.rc1"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2024-10-15"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="resolved"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="encounter-diagnosis"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <version value="2024"/>
+            <code value="H26.9"/>
+            <display value="Katarakt, nicht näher bezeichnet"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="193570009"/>
+            <display value="Cataract"/>
+          </coding>
+          <coding>
+            <system value="http://human-phenotype-ontology.org"/>
+            <code value="HP:0000518"/>
+            <display value="Cataract"/>
+          </coding>
+          <text value="Katarakt bilateral"/>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/mii-exa-seltene-encounter-ophthalmology"/>
+        </encounter>
+        <abatementDateTime value="2024-11-12"/>
+        <recordedDate value="2024-10-15"/>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://human-phenotype-ontology.org"/>
+              <code value="HP:0000518"/>
+              <display value="Cataract"/>
+            </coding>
+          </code>
+          <detail>
+            <reference value="Observation/mii-exa-seltene-symptom-cataract"/>
+          </detail>
+        </evidence>
+        <note>
+          <text value="Katarakt bilateral, operativ versorgt"/>
+        </note>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:72fa4681-014d-4caa-86a3-97cea92766f4"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-seltene-observation-height-001"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="8302-2"/>
+            <display value="Body height"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <effectiveDateTime value="2024-12-15"/>
+        <valueQuantity>
+          <value value="213"/>
+          <unit value="cm"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="cm"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+        <bodySite>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="38266002"/>
+            <display value="Entire body as a whole"/>
+          </coding>
+        </bodySite>
+        <component>
+          <code>
+            <coding>
+              <system value="http://human-phenotype-ontology.org"/>
+              <code value="HP:0000098"/>
+              <display value="Tall stature"/>
+            </coding>
+          </code>
+          <valueString value="Pathologischer Hochwuchs &gt;99. Perzentile"/>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:9dfa4ddc-723f-4c65-b86d-1a88304e77fe"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-seltene-observation-leg-asymmetry"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="exam"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="707738004"/>
+            <display value="Leg length discrepancy"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <effectiveDateTime value="2024-12-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="7771000"/>
+            <display value="Left"/>
+          </coding>
+        </valueCodeableConcept>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="A"/>
+            <display value="Abnormal"/>
+          </coding>
+        </interpretation>
+        <bodySite>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="30021000"/>
+            <display value="Lower leg structure"/>
+          </coding>
+        </bodySite>
+        <component>
+          <code>
+            <coding>
+              <system value="http://human-phenotype-ontology.org"/>
+              <code value="HP:0100559"/>
+              <display value="Lower limb asymmetry"/>
+            </coding>
+          </code>
+          <valueString value="Rechtes Bein verkürzt"/>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b5f66545-2f6e-450c-a92e-8e9d2626e003"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-seltene-symptom-chest-pain"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="exam"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://human-phenotype-ontology.org"/>
+            <code value="HP:0100749"/>
+            <display value="Chest pain"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="29857009"/>
+            <display value="Chest pain"/>
+          </coding>
+          <text value="Thoraxschmerzen"/>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <effectiveDateTime value="2024-12-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="52101004"/>
+            <display value="Present"/>
+          </coding>
+        </valueCodeableConcept>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="A"/>
+            <display value="Abnormal"/>
+          </coding>
+        </interpretation>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:ce25223c-45fe-4a87-ba1b-e120cba24e94"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-seltene-symptom-cataract"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="exam"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://human-phenotype-ontology.org"/>
+            <code value="HP:0000518"/>
+            <display value="Cataract"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="193570009"/>
+            <display value="Cataract"/>
+          </coding>
+          <text value="Katarakt bilateral"/>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <effectiveDateTime value="2024-10-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="51440002"/>
+            <display value="Bilateral"/>
+          </coding>
+        </valueCodeableConcept>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="A"/>
+            <display value="Abnormal"/>
+          </coding>
+        </interpretation>
+        <bodySite>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="81745001"/>
+            <display value="Eye structure"/>
+          </coding>
+        </bodySite>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:a482bf38-9c7a-4295-a0f2-a38c1d15aae7"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-seltene-symptom-aortic-root"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="imaging"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://human-phenotype-ontology.org"/>
+            <code value="HP:0002616"/>
+            <display value="Aortic root aneurysm"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="251036003"/>
+            <display value="Aortic root dilatation"/>
+          </coding>
+          <text value="Aortenwurzeldilatation"/>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <effectiveDateTime value="2024-12-15"/>
+        <valueQuantity>
+          <value value="48"/>
+          <unit value="mm"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mm"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+        <referenceRange>
+          <high>
+            <value value="40"/>
+            <unit value="mm"/>
+          </high>
+          <text value="Normwert &lt;40mm"/>
+        </referenceRange>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:7b78bb46-817f-4786-84f8-0805b1580192"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-seltene-symptom-aortic-regurg"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="imaging"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://human-phenotype-ontology.org"/>
+            <code value="HP:0001659"/>
+            <display value="Aortic regurgitation"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="60234000"/>
+            <display value="Aortic valve regurgitation"/>
+          </coding>
+          <text value="Aortenklappeninsuffizienz"/>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <effectiveDateTime value="2024-12-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="838545002"/>
+            <display value="Moderate aortic valve regurgitation"/>
+          </coding>
+          <text value="Aortenklappeninsuffizienz Grad II"/>
+        </valueCodeableConcept>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="A"/>
+            <display value="Abnormal"/>
+          </coding>
+        </interpretation>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:a933aaca-920c-4d29-be34-1d38c60b8bc9"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-seltene-symptom-mitral-regurg"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="imaging"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://human-phenotype-ontology.org"/>
+            <code value="HP:0001653"/>
+            <display value="Mitral regurgitation"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="48724000"/>
+            <display value="Mitral valve regurgitation"/>
+          </coding>
+          <text value="Mitralklappeninsuffizienz"/>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <effectiveDateTime value="2024-12-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="838451005"/>
+            <display value="Mild mitral valve regurgitation"/>
+          </coding>
+          <text value="Mitralklappeninsuffizienz Grad I"/>
+        </valueCodeableConcept>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="A"/>
+            <display value="Abnormal"/>
+          </coding>
+        </interpretation>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b769b1ea-3ec2-4b35-86d2-9a0ca128e1e6"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-seltene-variant-fbn1-001"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="55233-1"/>
+            <display value="Genetic analysis master panel"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <effectiveDateTime value="2024-12-20"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="10828004"/>
+            <display value="Positive"/>
+          </coding>
+        </valueCodeableConcept>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="POS"/>
+            <display value="Positive"/>
+          </coding>
+        </interpretation>
+        <note>
+          <text value="Pathogene FBN1-Mutation, krankheitsursächlich für Marfan-Syndrom"/>
+        </note>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48018-6"/>
+              <display value="Gene studied [ID]"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://www.genenames.org/geneId"/>
+              <code value="HGNC:3603"/>
+              <display value="FBN1"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48004-6"/>
+              <display value="DNA change (c.HGVS)"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <text value="c.3217G&gt;A"/>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48005-3"/>
+              <display value="Amino acid change (pHGVS)"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <text value="p.Gly1073Arg"/>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="53037-8"/>
+              <display value="Genetic variation clinical significance [Imp]"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="LA6668-3"/>
+              <display value="Pathogenic"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b4d84fa0-2c48-4613-ba4f-05b75d83c3c9"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-seltene-observation-echo-aortic"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="imaging"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="78176-5"/>
+            <display value="Aorta root Diameter by US 2D"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <effectiveDateTime value="2024-12-15"/>
+        <valueQuantity>
+          <value value="48"/>
+          <unit value="mm"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mm"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+        <method>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="40701008"/>
+            <display value="Echocardiography"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:796c77be-100b-4935-b738-ef8d6175d668"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-seltene-observation-echo-av"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="imaging"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="18112-3"/>
+            <display value="Aortic valve Regurgitation degree by US.doppler"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <effectiveDateTime value="2024-12-15"/>
+        <valueCodeableConcept>
+          <text value="Grad II"/>
+        </valueCodeableConcept>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="A"/>
+            <display value="Abnormal"/>
+          </coding>
+        </interpretation>
+        <method>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="40701008"/>
+            <display value="Echocardiography"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:c9a2b002-1177-4c4e-82c0-a8d32983da28"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-seltene-observation-echo-mv"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="imaging"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="18113-1"/>
+            <display value="Mitral valve Regurgitation degree by US.doppler"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <effectiveDateTime value="2024-12-15"/>
+        <valueCodeableConcept>
+          <text value="Grad I"/>
+        </valueCodeableConcept>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="A"/>
+            <display value="Abnormal"/>
+          </coding>
+        </interpretation>
+        <method>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="40701008"/>
+            <display value="Echocardiography"/>
+          </coding>
+        </method>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:7aa4841a-ee1c-462f-86c7-00a2705d42f4"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-seltene-procedure-cataract-surgery"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+            <code value="5-144.5a"/>
+            <display value="Extrakapsuläre Extraktion der Linse [ECCE]: Linsenkernverflüssigung [Phakoemulsifikation] über kornealen Zugang: Mit Einführung einer kapselfixierten Hinterkammerlinse, monofokale Intraokularlinse"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="54885007"/>
+            <display value="Extraction of cataract"/>
+          </coding>
+          <text value="Phakoemulsifikation mit IOL-Implantation"/>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <performedDateTime value="2024-11-12"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-seltene-condition-cataract"/>
+        </reasonReference>
+        <outcome>
+          <text value="Erfolgreiche Linsenimplantation ohne Komplikationen"/>
+        </outcome>
+        <note>
+          <text value="Komplikationslose Phakoemulsifikation beider Augen mit Implantation monofokaler Intraokularlinsen"/>
+        </note>
+      </Procedure>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Procedure"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:853a938b-bc21-4757-98cc-c33554ea26af"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-seltene-procedure-aortic-planned"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="preparation"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+            <code value="5-354.0a"/>
+            <display value="Andere Operationen an Herzklappen: Aortenklappe: Rekonstruktion der Aortenwurzel mit Implantation einer Gefäßprothese nach David"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="428179006"/>
+            <display value="Replacement of aortic root"/>
+          </coding>
+          <text value="Aortenwurzelersatz (David-Operation)"/>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <performedPeriod>
+          <start value="2025-03-15"/>
+        </performedPeriod>
+        <reasonReference>
+          <reference value="Condition/mii-exa-seltene-condition-marfan-clinical"/>
+        </reasonReference>
+        <note>
+          <text value="Geplante klappensparende Aortenwurzelersatz-Operation nach David bei progredienter Aortenwurzeldilatation"/>
+        </note>
+      </Procedure>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Procedure"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:8fb04be6-9930-4aec-8a5f-4ef9b904ae51"/>
+    <resource>
+      <MedicationStatement>
+        <id value="mii-exa-seltene-medication-losartan"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+            <code value="C09CA01"/>
+            <display value="Losartan"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="373567002"/>
+            <display value="Losartan"/>
+          </coding>
+          <text value="Losartan 50mg"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <effectiveDateTime value="2024-12-15"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-seltene-condition-marfan-clinical"/>
+        </reasonReference>
+        <note>
+          <text value="Zur Progressionshemmung der Aortenwurzeldilatation bei Marfan-Syndrom"/>
+        </note>
+        <dosage>
+          <text value="50mg einmal täglich"/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1"/>
+              <periodUnit value="d"/>
+            </repeat>
+          </timing>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="26643006"/>
+              <display value="Oral route"/>
+            </coding>
+          </route>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="50"/>
+              <unit value="mg"/>
+              <system value="http://unitsofmeasure.org"/>
+              <code value="mg"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosage>
+      </MedicationStatement>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationStatement"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:35d41288-207b-4be7-967a-d92e295d1c75"/>
+    <resource>
+      <ClinicalImpression>
+        <id value="mii-exa-seltene-clinical-impression-seltene-assessment"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2027.0.0-ballot.rc1"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/mii-exa-seltene-encounter-cardiology"/>
+        </encounter>
+        <effectiveDateTime value="2024-12-15"/>
+        <date value="2024-12-15"/>
+        <problem>
+          <reference value="Condition/mii-exa-seltene-condition-marfan-suspected"/>
+        </problem>
+        <problem>
+          <reference value="Condition/mii-exa-seltene-condition-marfan-clinical"/>
+        </problem>
+        <problem>
+          <reference value="Condition/mii-exa-seltene-condition-marfan-genetic"/>
+        </problem>
+        <investigation>
+          <code>
+            <text value="Echokardiographie"/>
+          </code>
+          <item>
+            <reference value="Observation/mii-exa-seltene-observation-echo-aortic"/>
+          </item>
+          <item>
+            <reference value="Observation/mii-exa-seltene-observation-echo-av"/>
+          </item>
+          <item>
+            <reference value="Observation/mii-exa-seltene-observation-echo-mv"/>
+          </item>
+        </investigation>
+        <summary value="19-jähriger Patient mit Z.n. Katarakt-OP im ZSE vorstellig. Kardiologische Mitbeurteilung zeigt: Aortenwurzeldilatation (48mm), AKI Grad II, MKI Grad I. Skelettale Merkmale (Hochwuchs 2,13m, Beinlängendifferenz) bestätigen Marfan-Syndrom. Klinische und genetische Diagnose gesichert."/>
+        <finding>
+          <itemReference>
+            <reference value="Condition/mii-exa-seltene-condition-marfan-clinical"/>
+          </itemReference>
+        </finding>
+        <finding>
+          <itemReference>
+            <reference value="Condition/mii-exa-seltene-condition-marfan-genetic"/>
+          </itemReference>
+        </finding>
+        <finding>
+          <itemCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="251036003"/>
+              <display value="Aortic root dilatation"/>
+            </coding>
+          </itemCodeableConcept>
+          <itemReference>
+            <reference value="Observation/mii-exa-seltene-symptom-aortic-root"/>
+          </itemReference>
+        </finding>
+        <finding>
+          <itemCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="60234000"/>
+              <display value="Aortic valve regurgitation"/>
+            </coding>
+          </itemCodeableConcept>
+          <itemReference>
+            <reference value="Observation/mii-exa-seltene-symptom-aortic-regurg"/>
+          </itemReference>
+        </finding>
+        <finding>
+          <itemCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="48724000"/>
+              <display value="Mitral valve regurgitation"/>
+            </coding>
+          </itemCodeableConcept>
+          <itemReference>
+            <reference value="Observation/mii-exa-seltene-symptom-mitral-regurg"/>
+          </itemReference>
+        </finding>
+        <finding>
+          <itemCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="248328003"/>
+              <display value="Tall stature"/>
+            </coding>
+          </itemCodeableConcept>
+          <itemReference>
+            <reference value="Observation/mii-exa-seltene-observation-height-001"/>
+          </itemReference>
+        </finding>
+        <finding>
+          <itemCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="707738004"/>
+              <display value="Leg length discrepancy"/>
+            </coding>
+          </itemCodeableConcept>
+          <itemReference>
+            <reference value="Observation/mii-exa-seltene-observation-leg-asymmetry"/>
+          </itemReference>
+        </finding>
+        <prognosisCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="67334001"/>
+            <display value="Guarded prognosis"/>
+          </coding>
+        </prognosisCodeableConcept>
+        <note>
+          <text value="Katarakt in jungem Alter war Anlass für ZSE-Konsultation. Marfan-Syndrom klinisch und genetisch (FBN1-Mutation) bestätigt. OP-Indikation für Aortenwurzelersatz durch Kardiologie gestellt. Medikamentöse Therapie mit Losartan eingeleitet."/>
+        </note>
+        <note>
+          <text value="Multidisziplinäre Betreuung im ZSE etabliert. Regelmäßige kardiologische Kontrollen alle 6 Monate. Genetische Beratung für Familienplanung empfohlen."/>
+        </note>
+      </ClinicalImpression>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ClinicalImpression"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:258f0a21-4c6e-473d-87e9-36a5bf01bb1a"/>
+    <resource>
+      <Encounter>
+        <id value="mii-exa-seltene-encounter-ophthalmology"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="AMB"/>
+          <display value="ambulatory"/>
+        </class>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="36228007"/>
+            <display value="Ophthalmic examination and evaluation"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <period>
+          <start value="2024-10-15"/>
+          <end value="2024-10-15"/>
+        </period>
+        <diagnosis>
+          <condition>
+            <reference value="Condition/mii-exa-seltene-condition-cataract"/>
+          </condition>
+          <use>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+              <code value="AD"/>
+              <display value="Admission diagnosis"/>
+            </coding>
+          </use>
+        </diagnosis>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:70504d04-a6f0-4aa8-bd20-9b475b94438c"/>
+    <resource>
+      <Encounter>
+        <id value="mii-exa-seltene-encounter-cataract-surgery"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="SS"/>
+          <display value="short stay"/>
+        </class>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="305408004"/>
+            <display value="Admission to surgical department"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <period>
+          <start value="2024-11-12T07:00:00Z"/>
+          <end value="2024-11-12T15:00:00Z"/>
+        </period>
+        <diagnosis>
+          <condition>
+            <reference value="Condition/mii-exa-seltene-condition-cataract"/>
+          </condition>
+          <use>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+              <code value="CC"/>
+              <display value="Chief complaint"/>
+            </coding>
+          </use>
+        </diagnosis>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:c90d7e24-a787-4d1b-b402-36b64362cc13"/>
+    <resource>
+      <Encounter>
+        <id value="mii-exa-seltene-encounter-cardiology"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="AMB"/>
+          <display value="ambulatory"/>
+        </class>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="185228002"/>
+            <display value="Seen in cardiac clinic (finding)"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <period>
+          <start value="2024-12-15"/>
+          <end value="2024-12-15"/>
+        </period>
+        <reasonCode>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="29857009"/>
+            <display value="Chest pain"/>
+          </coding>
+          <text value="Thoraxschmerzen bei V.a. Marfan-Syndrom"/>
+        </reasonCode>
+        <diagnosis>
+          <condition>
+            <reference value="Condition/mii-exa-seltene-condition-marfan-clinical"/>
+          </condition>
+          <use>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+              <code value="AD"/>
+              <display value="Admission diagnosis"/>
+            </coding>
+          </use>
+        </diagnosis>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1ec76c96-9e7d-403a-9ea5-1f2eaea6ef28"/>
+    <resource>
+      <Encounter>
+        <id value="mii-exa-seltene-encounter-surgery-planned"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="planned"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="IMP"/>
+          <display value="inpatient encounter"/>
+        </class>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="305357000"/>
+            <display value="Admission to cardiology department"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+        </subject>
+        <period>
+          <start value="2025-03-15"/>
+        </period>
+        <reasonCode>
+          <text value="Elektive Aortenwurzelersatz-Operation bei Marfan-Syndrom"/>
+        </reasonCode>
+        <diagnosis>
+          <condition>
+            <reference value="Condition/mii-exa-seltene-condition-marfan-clinical"/>
+          </condition>
+          <use>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+              <code value="CC"/>
+              <display value="Chief complaint"/>
+            </coding>
+          </use>
+        </diagnosis>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+</Bundle>

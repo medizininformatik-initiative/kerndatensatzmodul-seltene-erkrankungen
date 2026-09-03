@@ -24,7 +24,7 @@ Profile: [MII PR SE Therapieempfehlung Nicht-Medikamentös](StructureDefinition-
 
 **code**: Physiotherapie zur Erhaltung der motorischen Funktionen
 
-**subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-patient-sma-001.md)
+**subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-mii-exa-seltene-patient-sma-001.md)
 
 **occurrence**: 2 per 1 week
 
@@ -76,7 +76,7 @@ Regelmäßige Physiotherapie 2x wöchentlich zur Kontrakturprophylaxe und Erhalt
     "text" : "Physiotherapie zur Erhaltung der motorischen Funktionen"
   },
   "subject" : {
-    "reference" : "Patient/patient-sma-001"
+    "reference" : "Patient/mii-exa-seltene-patient-sma-001"
   },
   "occurrenceTiming" : {
     "repeat" : {

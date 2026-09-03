@@ -20,7 +20,7 @@ Profile: [MII PR SE ICF Assessment](StructureDefinition-mii-pr-seltene-icf-asses
 
 **code**: Eating
 
-**subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-patient-sma-001.md)
+**subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-mii-exa-seltene-patient-sma-001.md)
 
 **effective**: 2025-07-01
 
@@ -61,7 +61,7 @@ Leistungsfähigkeit ohne Hilfsmittel beurteilt, Leistung mit liegender PEG. Die 
     }]
   },
   "subject" : {
-    "reference" : "Patient/patient-sma-001"
+    "reference" : "Patient/mii-exa-seltene-patient-sma-001"
   },
   "effectiveDateTime" : "2025-07-01",
   "note" : [{

@@ -34,7 +34,7 @@ Example instances are linked in the "Examples" section of the profile page.
 
 **Usages:**
 
-* Examples for this Profile: [Condition/condition-marfan-genetic](Condition-condition-marfan-genetic.md), [Condition/condition-pku-diagnosis](Condition-condition-pku-diagnosis.md), [Condition/condition-sma-genetic](Condition-condition-sma-genetic.md), [Condition/example-brca1-genetic-diagnosis](Condition-example-brca1-genetic-diagnosis.md)... Show 6 more, [Condition/example-cf-excluded-after-screening](Condition-example-cf-excluded-after-screening.md), [Condition/example-cf-genetic](Condition-example-cf-genetic.md), [Condition/example-dmd-excluded-bmd-confirmed](Condition-example-dmd-excluded-bmd-confirmed.md), [Condition/example-dmd-genetic-diagnosis](Condition-example-dmd-genetic-diagnosis.md), [Condition/example-sma-excluded-genetic](Condition-example-sma-excluded-genetic.md) and [Condition/example-sma-genetic-diagnosis](Condition-example-sma-genetic-diagnosis.md)
+* Examples for this Profile: [Condition/mii-exa-seltene-condition-marfan-genetic](Condition-mii-exa-seltene-condition-marfan-genetic.md), [Condition/mii-exa-seltene-condition-pku-diagnosis](Condition-mii-exa-seltene-condition-pku-diagnosis.md), [Condition/mii-exa-seltene-condition-sma-genetic](Condition-mii-exa-seltene-condition-sma-genetic.md), [Condition/mii-exa-seltene-example-brca1-genetic-diagnosis](Condition-mii-exa-seltene-example-brca1-genetic-diagnosis.md)... Show 6 more, [Condition/mii-exa-seltene-example-cf-excluded-after-screening](Condition-mii-exa-seltene-example-cf-excluded-after-screening.md), [Condition/mii-exa-seltene-example-cf-genetic](Condition-mii-exa-seltene-example-cf-genetic.md), [Condition/mii-exa-seltene-example-dmd-excluded-bmd-confirmed](Condition-mii-exa-seltene-example-dmd-excluded-bmd-confirmed.md), [Condition/mii-exa-seltene-example-dmd-genetic-diagnosis](Condition-mii-exa-seltene-example-dmd-genetic-diagnosis.md), [Condition/mii-exa-seltene-example-sma-excluded-genetic](Condition-mii-exa-seltene-example-sma-excluded-genetic.md) and [Condition/mii-exa-seltene-example-sma-genetic-diagnosis](Condition-mii-exa-seltene-example-sma-genetic-diagnosis.md)
 * CapabilityStatements using this Profile: [MII CPS Seltene Erkrankungen CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-genetic-diagnosis.json)
@@ -165,7 +165,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
   "name" : "MII_PR_Seltene_GeneticDiagnosis",
   "title" : "MII PR SE Genetic Diagnosis",
   "status" : "active",
-  "date" : "2026-09-03T07:17:59+00:00",
+  "date" : "2026-09-03T07:33:22+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

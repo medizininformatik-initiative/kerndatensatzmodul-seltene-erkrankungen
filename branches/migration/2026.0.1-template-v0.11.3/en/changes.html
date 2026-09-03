@@ -332,7 +332,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#version-202700-ballot" id="markdown-toc-version-202700-ballot">Version 2027.0.0-ballot</a></li>
+  <li><a href="#version-202700-ballotrc1" id="markdown-toc-version-202700-ballotrc1">Version 2027.0.0-ballot.rc1</a></li>
   <li><a href="#version-202601-patch-release" id="markdown-toc-version-202601-patch-release">Version 2026.0.1 (patch release)</a></li>
   <li><a href="#version-202600-final-version" id="markdown-toc-version-202600-final-version">Version 2026.0.0 (final version)</a></li>
   <li><a href="#changes-in-version-v202600-rc1-release-candidate-1" id="markdown-toc-changes-in-version-v202600-rc1-release-candidate-1">Changes in version v2026.0.0-rc.1 (release candidate 1)</a></li>
@@ -344,7 +344,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h3 id="version-202700-ballot">Version 2027.0.0-ballot</h3>
+<h3 id="version-202700-ballotrc1">Version 2027.0.0-ballot.rc1</h3>
 
 <h4 id="new-features">New features</h4>
 
@@ -369,8 +369,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">remove</code> six extensions removed that were <strong>never wired into any profile</strong>: <code class="language-plaintext highlighter-rouge">mii-ex-seltene-age-of-onset</code>, <code class="language-plaintext highlighter-rouge">mii-ex-seltene-genetic-basis</code>, <code class="language-plaintext highlighter-rouge">mii-ex-seltene-inheritance-pattern</code>, <code class="language-plaintext highlighter-rouge">mii-ext-seltene-onset-age</code>, <code class="language-plaintext highlighter-rouge">mii-ext-seltene-phenotypic-pattern</code>, <code class="language-plaintext highlighter-rouge">mii-ext-seltene-syndrome-category</code>. The git history contains no commit that took any of them into a profile via <code class="language-plaintext highlighter-rouge">named</code>; they were published in 2026.0.1 nonetheless. <code class="language-plaintext highlighter-rouge">age-of-onset</code> and <code class="language-plaintext highlighter-rouge">onset-age</code> were also the same concept under two ids — created on 2025-07-31 and 2025-08-07, a week apart, the second batch recreating the first under the <code class="language-plaintext highlighter-rouge">mii-ex-</code> convention without removing it. Eleven extensions become five, and all five are in use. Their value sets remain, being useful on their own</li>
   <li><code class="language-plaintext highlighter-rouge">change</code> element names of the logical model moved to lowerCamelCase. PascalCase violates the FHIR rule <code class="language-plaintext highlighter-rouge">eld-20</code> and produced 195 warnings. 62 segment names renamed with acronyms handled correctly (<code class="language-plaintext highlighter-rouge">HPOTerm</code> → <code class="language-plaintext highlighter-rouge">hpoTerm</code>, <code class="language-plaintext highlighter-rouge">BMI</code> → <code class="language-plaintext highlighter-rouge">bmi</code>), and the 90 mapping targets in 11 profiles moved with them. <strong>Element paths therefore changed</strong></li>
   <li><code class="language-plaintext highlighter-rouge">change</code> codes of <code class="language-plaintext highlighter-rouge">mii-pr-seltene-taillenumfang</code> (LOINC <code class="language-plaintext highlighter-rouge">8280-0</code> → SNOMED <code class="language-plaintext highlighter-rouge">276361009</code>) and <code class="language-plaintext highlighter-rouge">mii-pr-seltene-hueftumfang</code> (LOINC <code class="language-plaintext highlighter-rouge">56063-1</code> → SNOMED <code class="language-plaintext highlighter-rouge">284472007</code>). <strong>Consumers querying by the old codes will no longer match</strong></li>
-  <li><code class="language-plaintext highlighter-rouge">change</code> extension <code class="language-plaintext highlighter-rouge">von-seltene-betroffen</code> renamed to <code class="language-plaintext highlighter-rouge">mii-ex-von-se-betroffen</code>. It was the only extension without a prefix and followed neither of the two conventions present in the module. Since no <code class="language-plaintext highlighter-rouge">^url</code> was set, SUSHI derives the canonical from the id — <strong>so the canonical changes with it</strong>. Its value set keeps <code class="language-plaintext highlighter-rouge">von-seltene-betroffen-vs</code> for now, as it carries an explicit <code class="language-plaintext highlighter-rouge">^url</code></li>
+  <li><code class="language-plaintext highlighter-rouge">change</code> <strong>naming brought in line with the module convention throughout.</strong> The rules in <code class="language-plaintext highlighter-rouge">qc/custom.rules.yaml</code> require <code class="language-plaintext highlighter-rouge">mii-&lt;type&gt;-seltene-…</code> for ids and <code class="language-plaintext highlighter-rouge">MII_&lt;TYPE&gt;_Seltene_…</code> for names; both were only partly applied. Affected:
+    <ul>
+      <li>15 resource names, among them <code class="language-plaintext highlighter-rouge">HPOSeverity</code> → <code class="language-plaintext highlighter-rouge">MII_VS_Seltene_HPOSeverity</code>, <code class="language-plaintext highlighter-rouge">PenetranceValueSet</code> → <code class="language-plaintext highlighter-rouge">MII_VS_Seltene_Penetrance</code>, <code class="language-plaintext highlighter-rouge">MII_LM_SE</code> → <code class="language-plaintext highlighter-rouge">MII_LM_Seltene</code> and <code class="language-plaintext highlighter-rouge">MII_CPS_SE_CapabilityStatement</code> → <code class="language-plaintext highlighter-rouge">MII_CPS_Seltene_CapabilityStatement</code>. Names are not part of the canonical — <strong>no URL changes here</strong></li>
+      <li>two ids: the extension <code class="language-plaintext highlighter-rouge">von-seltene-betroffen</code> (briefly <code class="language-plaintext highlighter-rouge">mii-ex-von-se-betroffen</code> on 2026-09-02) is now <code class="language-plaintext highlighter-rouge">mii-ex-seltene-von-se-betroffen</code>, and its value set <code class="language-plaintext highlighter-rouge">von-seltene-betroffen-vs</code> is now <code class="language-plaintext highlighter-rouge">mii-vs-seltene-von-se-betroffen</code>. <strong>Both canonicals change</strong></li>
+      <li>86 example instances gain the <code class="language-plaintext highlighter-rouge">mii-exa-seltene-</code> prefix, with all 281 cross-references and case-example page references carried along</li>
+    </ul>
+
+    <p>The break is deliberate: the module is not implemented anywhere yet, and the run-up to the ballot is the last moment at which it is cheap</p>
+  </li>
   <li><code class="language-plaintext highlighter-rouge">change</code> example instance <code class="language-plaintext highlighter-rouge">example</code> renamed to <code class="language-plaintext highlighter-rouge">mii-exa-seltene-patient</code>, profiled on <code class="language-plaintext highlighter-rouge">MII_PR_Person_Patient</code></li>
+  <li><code class="language-plaintext highlighter-rouge">change</code> all conformance resources now carry <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc1</code>. <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>, <code class="language-plaintext highlighter-rouge">input/fsh/rulesets/version.fsh</code> and <code class="language-plaintext highlighter-rouge">package.json</code> each claimed a different value; 56 resources carried the version of the already published predecessor <code class="language-plaintext highlighter-rouge">2026.0.1</code>, nine carried none at all. The <code class="language-plaintext highlighter-rouge">meta.profile</code> claims of the examples follow</li>
 </ul>
 
 <h4 id="bug-fixes">Bug fixes</h4>
@@ -528,7 +537,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Sep 3, 2026 07:17+0000">2026-09-03</span>
+          Generated <span title="Thu, Sep 3, 2026 07:33+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
