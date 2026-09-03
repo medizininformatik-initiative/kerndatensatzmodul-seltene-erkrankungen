@@ -41,8 +41,15 @@ export function readTopLevel(yaml, key) {
   const m = yaml.match(re);
   if (!m) return null;
   let v = m[1].trim();
-  if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) {
-    return v.slice(1, -1);
+  // A quoted value ends at its MATCHING quote, and whatever follows - a
+  // trailing comment included - is not part of it. The earlier order
+  // (quote-strip only when the whole string ends in a quote, comment-strip
+  // after) made `title: "MII X" # comment` keep its quotes and fail M4
+  // spuriously, while a ` #` INSIDE the quotes must survive.
+  const q = v[0];
+  if (q === '"' || q === "'") {
+    const end = v.indexOf(q, 1);
+    if (end > 0) return v.slice(1, end);
   }
   const c = v.search(/\s+#/);
   if (c >= 0) v = v.slice(0, c).trim();
@@ -184,7 +191,7 @@ export function evaluate({ sushiConfig = null, igIni = null, packageJson = null,
 
     field("M6 version", readTopLevel(sushiConfig, "version"), (v) => {
       if (isPlaceholder(v)) return { ok: true, parameterized: true };
-      return { ok: /^\d{4}\.\d+\.\d+$/.test(v), parameterized: false, reason: "version must be CalVer YYYY.n.n (modules never use SemVer)" };
+      return { ok: /^\d{4}\.\d+\.\d+(-[0-9A-Za-z.-]+)?$/.test(v), parameterized: false, reason: "version must be CalVer YYYY.n.n with an optional prerelease suffix, e.g. 2027.0.0-draft.1 (modules never use SemVer)" };
     });
 
     // M7 — no floating label anywhere (always hard, both branches).
