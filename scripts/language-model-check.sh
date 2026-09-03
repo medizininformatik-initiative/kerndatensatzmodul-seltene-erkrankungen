@@ -49,7 +49,17 @@ PATTERNS=(
 # Reviewed exceptions: "<path>|<substring of the offending line>", one per line.
 # A module author writing their own prose can record a legitimate hit here
 # without blanking a whole file from the scan.
-ALLOW=''
+#
+# migration-log/migration-report.md (2026-09-03): der Migrationsbericht ist ein
+# historisches Protokoll und BESCHREIBT die Sprachumkehrung, statt sie zu
+# behaupten — "the source is German-only", "The German original is the
+# authority", "The source is German; the target's default language is English".
+# Genau das ist der Sachverhalt, den der Bericht festhalten soll. Die Datei
+# bleibt im Scan; nur diese vier Zeilen sind freigegeben.
+ALLOW='migration-log/migration-report.md|the source is German-only
+migration-log/migration-report.md|The template'"'"'s default language is English; the source is German-only
+migration-log/migration-report.md|The German original is the authority
+migration-log/migration-report.md|The source is German; the target'"'"'s default language is English'
 
 args=()
 for pattern in "${PATTERNS[@]}"; do
