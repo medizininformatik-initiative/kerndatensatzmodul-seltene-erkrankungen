@@ -4,7 +4,12 @@
 # id/canonical/name/title/packageId/publisher unverändert aus der Quelle
 # (sushi-config 2026.0.1 / package.json); Quell-Fassung archiviert unter
 # migration-log/sushi-config.source.yaml.
-id: mii-ig-seltene-erkrankungen-v2026-de
+# Id ohne Jahr und ohne Sprachkuerzel, wie in allen MII-Modulen
+# (mii-ig-base, mii-ig-meta, mii-ig-studie, mii-ig-soziodemographie).
+# Das Release steht ausschliesslich in version:; die Id bleibt ueber alle
+# Releases stabil. Stand bis 2026-09-03 auf mii-ig-seltene-erkrankungen-v2026-de
+# und haette im 2027er Ballot-Paket ein 'v2026' gefuehrt.
+id: mii-ig-seltene
 # Canonical der Quelle (ext-Raum, publiziert seit 2026.0.0) — NICHT das
 # Template-Muster fhir/modul-<slug>; ein publizierter Canonical wird nie geändert.
 canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene
