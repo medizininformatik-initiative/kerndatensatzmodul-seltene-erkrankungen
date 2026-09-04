@@ -120,13 +120,22 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 ## FHIR-Mapping
 
 ### Verwendete Profile
-- **Patient**: MII KDS Patient
-- **Diagnose**: MII PR SE Diagnose
-- **Molekulargenetik**: MII PR MolGen Variante
-- **Familienanamnese**: MII PR SE Familienanamnese
-- **Laborwerte**: MII PR Labor Observation
-- **Prozedur**: MII PR Prozedur
-- **Encounter**: MII PR Encounter
+
+Die Liste nennt, was die Beispielinstanzen tatsächlich in `meta.profile`
+deklarieren. Ressourcen ohne Eintrag verwenden bewusst die blanke
+FHIR-Basisressource: Dieses Modul profiliert, was für seltene Erkrankungen
+spezifisch ist, und verweist für den Rest auf die Nachbarmodule — Laborwerte
+gehören ins **Laborbefund**-Modul, Variantenbefunde in den
+**Molekulargenetischen Befund**. Keines von beiden ist eine Abhängigkeit dieses
+Moduls, und nichts hier erbt davon.
+
+- **Klinische Diagnose** (Verdacht, klinisch): `mii-pr-seltene-clinical-diagnosis`
+- **Genetische Diagnose** (bestätigt, ausgeschlossen): `mii-pr-seltene-genetic-diagnosis`
+- **Therapieempfehlung, medikamentös** (Gentherapie): `mii-pr-seltene-therapieempfehlung`
+- **Therapieempfehlung, nicht-medikamentös** (Physiotherapie): `mii-pr-seltene-therapieempfehlung-nicht-medikamentoes`
+- **Durchgeführte Therapie** (NARSE): `mii-pr-seltene-therapie-durchgefuehrt`
+- **Unprofilierte Basisressourcen**: Patient, die Labor- und Varianten-Observations,
+  die MolGen-DiagnosticReports und das Transaktions-Bundle
 
 ### Ressourcen-Übersicht
 
