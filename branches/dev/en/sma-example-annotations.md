@@ -144,13 +144,14 @@ This document contains the semantic annotations for a case example of spinal mus
 
 #### Profiles used
 
-* **Patient**: MII KDS Patient
-* **Diagnosis**: MII PR SE Diagnose
-* **Molecular genetics**: MII PR MolGen Variante
-* **Family history**: MII PR SE Familienanamnese
-* **Laboratory values**: MII PR Labor Observation
-* **Procedure**: MII PR Prozedur
-* **Encounter**: MII PR Encounter
+The list below states what the example instances actually declare in `meta.profile`. Resources without an entry deliberately use the plain FHIR base resource: this module profiles what is specific to rare diseases and points at the neighbouring MII modules for the rest — laboratory values belong to **Laborbefund**, variant findings to **Molekulargenetischer Befund**. Neither is a dependency of this module, and nothing here inherits from them.
+
+* **Clinical diagnosis** (suspected, clinical): `mii-pr-seltene-clinical-diagnosis`
+* **Genetic diagnosis** (confirmed, excluded): `mii-pr-seltene-genetic-diagnosis`
+* **Therapy recommendation, medicinal** (gene therapy): `mii-pr-seltene-therapieempfehlung`
+* **Therapy recommendation, non-medicinal** (physiotherapy): `mii-pr-seltene-therapieempfehlung-nicht-medikamentoes`
+* **Therapy performed** (NARSE): `mii-pr-seltene-therapie-durchgefuehrt`
+* **Unprofiled base resources**: Patient, the laboratory and variant Observations, the MolGen DiagnosticReports, and the transaction Bundle
 
 #### Resource overview
 

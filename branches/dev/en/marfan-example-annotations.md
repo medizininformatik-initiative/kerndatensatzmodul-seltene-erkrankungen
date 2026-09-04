@@ -170,14 +170,13 @@ This document contains the semantic annotations for a case example of Marfan syn
 
 #### Profiles used
 
-* **Patient**: MII KDS Patient
-* **Diagnosis**: MII PR SE Diagnose
-* **Symptom/phenotype**: MII PR SE Symptom
-* **Procedure**: MII PR Prozedur
-* **MedicationStatement**: MII PR Medikation MedicationStatement
-* **Observation**: MII PR Labor Observation
-* **Encounter**: MII PR Encounter
-* **ClinicalImpression**: MII PR SE ClinicalImpression
+The list below states what the example instances actually declare in `meta.profile`. Resources without an entry deliberately use the plain FHIR base resource: this module profiles what is specific to rare diseases and points at the neighbouring MII modules for the rest — laboratory values belong to **Laborbefund**, variant findings to **Molekulargenetischer Befund**. Neither is a dependency of this module, and nothing here inherits from them.
+
+* **Clinical diagnosis**: `mii-pr-seltene-clinical-diagnosis`
+* **Genetic diagnosis**: `mii-pr-seltene-genetic-diagnosis`
+* **Therapy recommendation, medicinal** (losartan): `mii-pr-seltene-therapieempfehlung`
+* **Therapy recommendation, non-medicinal**: `mii-pr-seltene-therapieempfehlung-nicht-medikamentoes`
+* **Unprofiled base resources**: Patient and the transaction Bundle
 
 #### Resource overview
 

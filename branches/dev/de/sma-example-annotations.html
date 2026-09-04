@@ -511,14 +511,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h2 id="fhir-mapping">FHIR-Mapping</h2>
 
 <h3 id="verwendete-profile">Verwendete Profile</h3>
+
+<p>Die Liste nennt, was die Beispielinstanzen tatsächlich in <code class="language-plaintext highlighter-rouge">meta.profile</code>
+deklarieren. Ressourcen ohne Eintrag verwenden bewusst die blanke
+FHIR-Basisressource: Dieses Modul profiliert, was für seltene Erkrankungen
+spezifisch ist, und verweist für den Rest auf die Nachbarmodule — Laborwerte
+gehören ins <strong>Laborbefund</strong>-Modul, Variantenbefunde in den
+<strong>Molekulargenetischen Befund</strong>. Keines von beiden ist eine Abhängigkeit dieses
+Moduls, und nichts hier erbt davon.</p>
+
 <ul>
-  <li><strong>Patient</strong>: MII KDS Patient</li>
-  <li><strong>Diagnose</strong>: MII PR SE Diagnose</li>
-  <li><strong>Molekulargenetik</strong>: MII PR MolGen Variante</li>
-  <li><strong>Familienanamnese</strong>: MII PR SE Familienanamnese</li>
-  <li><strong>Laborwerte</strong>: MII PR Labor Observation</li>
-  <li><strong>Prozedur</strong>: MII PR Prozedur</li>
-  <li><strong>Encounter</strong>: MII PR Encounter</li>
+  <li><strong>Klinische Diagnose</strong> (Verdacht, klinisch): <code class="language-plaintext highlighter-rouge">mii-pr-seltene-clinical-diagnosis</code></li>
+  <li><strong>Genetische Diagnose</strong> (bestätigt, ausgeschlossen): <code class="language-plaintext highlighter-rouge">mii-pr-seltene-genetic-diagnosis</code></li>
+  <li><strong>Therapieempfehlung, medikamentös</strong> (Gentherapie): <code class="language-plaintext highlighter-rouge">mii-pr-seltene-therapieempfehlung</code></li>
+  <li><strong>Therapieempfehlung, nicht-medikamentös</strong> (Physiotherapie): <code class="language-plaintext highlighter-rouge">mii-pr-seltene-therapieempfehlung-nicht-medikamentoes</code></li>
+  <li><strong>Durchgeführte Therapie</strong> (NARSE): <code class="language-plaintext highlighter-rouge">mii-pr-seltene-therapie-durchgefuehrt</code></li>
+  <li><strong>Unprofilierte Basisressourcen</strong>: Patient, die Labor- und Varianten-Observations,
+die MolGen-DiagnosticReports und das Transaktions-Bundle</li>
 </ul>
 
 <h3 id="ressourcen-übersicht">Ressourcen-Übersicht</h3>
@@ -875,7 +884,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 4, 2026 08:01+0000">2026-09-04</span>
+          Erstellt <span title="Fri, Sep 4, 2026 11:35+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -81,7 +81,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-selte
   "name" : "MII_EX_Seltene_Penetrance",
   "title" : "MII EX SE Penetrance",
   "status" : "active",
-  "date" : "2026-09-04T08:01:15+00:00",
+  "date" : "2026-09-04T11:35:42+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

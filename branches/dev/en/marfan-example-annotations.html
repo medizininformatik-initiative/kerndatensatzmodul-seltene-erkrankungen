@@ -560,15 +560,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="fhir-mapping">FHIR mapping</h3>
 
 <h4 id="profiles-used">Profiles used</h4>
+
+<p>The list below states what the example instances actually declare in
+<code class="language-plaintext highlighter-rouge">meta.profile</code>. Resources without an entry deliberately use the plain FHIR base
+resource: this module profiles what is specific to rare diseases and points at
+the neighbouring MII modules for the rest — laboratory values belong to
+<strong>Laborbefund</strong>, variant findings to <strong>Molekulargenetischer Befund</strong>. Neither is
+a dependency of this module, and nothing here inherits from them.</p>
+
 <ul>
-  <li><strong>Patient</strong>: MII KDS Patient</li>
-  <li><strong>Diagnosis</strong>: MII PR SE Diagnose</li>
-  <li><strong>Symptom/phenotype</strong>: MII PR SE Symptom</li>
-  <li><strong>Procedure</strong>: MII PR Prozedur</li>
-  <li><strong>MedicationStatement</strong>: MII PR Medikation MedicationStatement</li>
-  <li><strong>Observation</strong>: MII PR Labor Observation</li>
-  <li><strong>Encounter</strong>: MII PR Encounter</li>
-  <li><strong>ClinicalImpression</strong>: MII PR SE ClinicalImpression</li>
+  <li><strong>Clinical diagnosis</strong>: <code class="language-plaintext highlighter-rouge">mii-pr-seltene-clinical-diagnosis</code></li>
+  <li><strong>Genetic diagnosis</strong>: <code class="language-plaintext highlighter-rouge">mii-pr-seltene-genetic-diagnosis</code></li>
+  <li><strong>Therapy recommendation, medicinal</strong> (losartan): <code class="language-plaintext highlighter-rouge">mii-pr-seltene-therapieempfehlung</code></li>
+  <li><strong>Therapy recommendation, non-medicinal</strong>: <code class="language-plaintext highlighter-rouge">mii-pr-seltene-therapieempfehlung-nicht-medikamentoes</code></li>
+  <li><strong>Unprofiled base resources</strong>: Patient and the transaction Bundle</li>
 </ul>
 
 <h4 id="resource-overview">Resource overview</h4>
@@ -927,7 +932,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 4, 2026 08:01+0000">2026-09-04</span>
+          Generated <span title="Fri, Sep 4, 2026 11:35+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

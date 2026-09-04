@@ -172,14 +172,13 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 
 ### Verwendete Profile
 
-* **Patient**: MII KDS Patient
-* **Diagnose**: MII PR SE Diagnose
-* **Symptom/Phänotyp**: MII PR SE Symptom
-* **Prozedur**: MII PR Prozedur
-* **MedicationStatement**: MII PR Medikation MedicationStatement
-* **Observation**: MII PR Labor Observation
-* **Encounter**: MII PR Encounter
-* **ClinicalImpression**: MII PR SE ClinicalImpression
+Die Liste nennt, was die Beispielinstanzen tatsächlich in `meta.profile` deklarieren. Ressourcen ohne Eintrag verwenden bewusst die blanke FHIR-Basisressource: Dieses Modul profiliert, was für seltene Erkrankungen spezifisch ist, und verweist für den Rest auf die Nachbarmodule — Laborwerte gehören ins **Laborbefund**-Modul, Variantenbefunde in den **Molekulargenetischen Befund**. Keines von beiden ist eine Abhängigkeit dieses Moduls, und nichts hier erbt davon.
+
+* **Klinische Diagnose**: `mii-pr-seltene-clinical-diagnosis`
+* **Genetische Diagnose**: `mii-pr-seltene-genetic-diagnosis`
+* **Therapieempfehlung, medikamentös** (Losartan): `mii-pr-seltene-therapieempfehlung`
+* **Therapieempfehlung, nicht-medikamentös**: `mii-pr-seltene-therapieempfehlung-nicht-medikamentoes`
+* **Unprofilierte Basisressourcen**: Patient und das Transaktions-Bundle
 
 ### Ressourcen-Übersicht
 
