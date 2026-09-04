@@ -19,6 +19,13 @@
   ],
   "description": "Observation profile grading a single ICF category for a patient, as required by the JARDIN MDS draft and the ERDRI-CDS. Observation.code carries the ICF category; the WHO qualifiers are carried as components, because body structures take three of them and activities/participation take two (capacity and performance).",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "SE-LogicalModel",
+      "name": "Mapping FHIR zu Seltene Erkrankungen Logical Model",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -124,7 +131,14 @@
         "path": "Observation.code",
         "short": "ICF category being graded",
         "definition": "A single ICF category, e.g. b280 |Sensation of pain| or d450 |Walking|. The chapters are b (body functions), s (body structures), d (activities and participation) and e (environmental factors). German display text is available through the BfArM language supplement without changing the code system.",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "funktionsfaehigkeit.icfCode",
+            "comment": "ICF-Code"
+          }
+        ]
       },
       {
         "id": "Observation.code.coding",
@@ -167,7 +181,14 @@
             "code": "Period"
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "funktionsfaehigkeit.erhebungsdatum",
+            "comment": "Erhebungsdatum"
+          }
+        ]
       },
       {
         "id": "Observation.performer",
@@ -198,6 +219,17 @@
           "description": "One slice per ICF qualifier. Which ones apply depends on the chapter of the category in Observation.code."
         },
         "mustSupport": true
+      },
+      {
+        "id": "Observation.component.value[x]",
+        "path": "Observation.component.value[x]",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "funktionsfaehigkeit.beurteilungsmerkmal",
+            "comment": "WHO-Qualifier zum ICF-Kode"
+          }
+        ]
       },
       {
         "id": "Observation.component:extentOfImpairment",

@@ -73,6 +73,19 @@ The table below is generated from the published logical model (`mii-lm-seltene`)
 | &nbsp;&nbsp;&nbsp;&nbsp;`familienmitgliedVerstorben` | 0..1 | code | Gibt an, ob das Familienmitglied verstorben ist. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`todDurchSE` | 0..1 | code | Gibt an, ob die seltene Erkrankung zum Tod des Familienmitglieds beigetragen hat. Abzugrenzen von familienmitgliedVerstorben, das nur den Tod als solchen festhält. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`dokumentationsdatum` | 0..1 | date | Datum, an dem die Familienanamnese erhoben beziehungsweise dokumentiert wurde. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`konsanguinitaetEltern` | 0..1 | code | Gibt an, ob die biologischen Eltern des Indexpatienten blutsverwandt sind (RD-CDM v2.0.0 6.4.4). |
+| `perinatal` | 0..* | BackboneElement | Prä- und perinatale Angaben |
+| &nbsp;&nbsp;&nbsp;&nbsp;`gestationsalter` | 0..1 | decimal | Vollendete Schwangerschaftswochen bei Geburt des Indexpatienten. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`geburtsgewicht` | 0..1 | decimal | Geburtsgewicht des Indexpatienten in Gramm. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`geburtslaenge` | 0..1 | decimal | Körperlänge des Indexpatienten bei Geburt in Zentimetern. |
+| `funktionsfaehigkeit` | 0..* | BackboneElement | Funktionsfähigkeit und Behinderung (ICF) |
+| &nbsp;&nbsp;&nbsp;&nbsp;`icfCode` | 0..1 | code | Kode der Internationalen Klassifikation der Funktionsfähigkeit, Behinderung und Gesundheit. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`beurteilungsmerkmal` | 0..* | code | WHO-Qualifier zum ICF-Kode. Ihre Zahl ist je Kapitel verschieden: Körperstrukturen tragen drei, Aktivitäten und Partizipation zwei. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`erhebungsdatum` | 0..1 | date | Datum der ICF-Einstufung. |
+| `registerteilnahme` | 0..* | BackboneElement | Teilnahme an Registern |
+| &nbsp;&nbsp;&nbsp;&nbsp;`registerName` | 0..1 | code | Register, an dem der Indexpatient teilnimmt, insbesondere ein Register eines Europäischen Referenznetzwerks (ERN). |
+| &nbsp;&nbsp;&nbsp;&nbsp;`teilnahmestatus` | 0..1 | code | Status der Teilnahme am Register. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`teilnahmezeitraum` | 0..1 | Period | Zeitraum der Teilnahme am Register. |
 | `therapieForschung` | 0..* | BackboneElement | Therapie und Forschung |
 | &nbsp;&nbsp;&nbsp;&nbsp;`offLabel` | 0..* | BackboneElement | Off-Label-Gabe |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`offLabelGabe` | 0..1 | code | Gibt an, ob eine Off-Label-Gabe vorliegt. |

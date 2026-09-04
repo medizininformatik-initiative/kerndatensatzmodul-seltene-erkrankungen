@@ -76,6 +76,32 @@ Description: "MII LogicalModel Modul Seltene Erkraknungen"
   // bereits gefuehrt, das Modell kannte sie nicht — die Mappings zeigten daher ins Leere.
   * todDurchSE 0..1 code "Tod durch seltene Erkrankung" "Gibt an, ob die seltene Erkrankung zum Tod des Familienmitglieds beigetragen hat. Abzugrenzen von familienmitgliedVerstorben, das nur den Tod als solchen festhält."
   * dokumentationsdatum 0..1 date "Dokumentationsdatum" "Datum, an dem die Familienanamnese erhoben beziehungsweise dokumentiert wurde."
+  // Ergaenzt 2026-09-04: das Profil mii-pr-seltene-consanguinity besteht seit
+  // 2026-09-02, das Datenmodell kannte den Datenpunkt nicht. Er sitzt hier und
+  // nicht bei verwandtschaftsverhaeltnis, weil er das Verhaeltnis DER ELTERN
+  // zueinander beschreibt, nicht das eines Familienmitglieds zum Indexpatienten.
+  * konsanguinitaetEltern 0..1 code "Blutsverwandtschaft der Eltern" "Gibt an, ob die biologischen Eltern des Indexpatienten blutsverwandt sind (RD-CDM v2.0.0 6.4.4)."
+// Ergaenzt 2026-09-04. Die drei Gruppen bilden die 2027er Ergaenzungen des
+// Moduls ab (JARDIN/RD-CDM, Issues #35 und #36 sowie #38). Sie stehen bewusst
+// als eigene Gruppen und nicht unter koerperlicheUntersuchung: perinatale
+// Masse werden einmalig bei Geburt erhoben statt im Verlauf, die
+// ICF-Einstufung ist keine Messung, und eine Registerteilnahme ist keine
+// Studienteilnahme im Sinne von therapieForschung.studie.
+* perinatal 0..* BackboneElement "Prä- und perinatale Angaben"
+  * gestationsalter 0..1 decimal "Gestationsalter bei Geburt" "Vollendete Schwangerschaftswochen bei Geburt des Indexpatienten."
+  * geburtsgewicht 0..1 decimal "Geburtsgewicht in g" "Geburtsgewicht des Indexpatienten in Gramm."
+  * geburtslaenge 0..1 decimal "Geburtslänge in cm" "Körperlänge des Indexpatienten bei Geburt in Zentimetern."
+
+* funktionsfaehigkeit 0..* BackboneElement "Funktionsfähigkeit und Behinderung (ICF)"
+  * icfCode 0..1 code "ICF-Code" "Kode der Internationalen Klassifikation der Funktionsfähigkeit, Behinderung und Gesundheit."
+  * beurteilungsmerkmal 0..* code "Beurteilungsmerkmal" "WHO-Qualifier zum ICF-Kode. Ihre Zahl ist je Kapitel verschieden: Körperstrukturen tragen drei, Aktivitäten und Partizipation zwei."
+  * erhebungsdatum 0..1 date "Erhebungsdatum" "Datum der ICF-Einstufung."
+
+* registerteilnahme 0..* BackboneElement "Teilnahme an Registern"
+  * registerName 0..1 code "Register" "Register, an dem der Indexpatient teilnimmt, insbesondere ein Register eines Europäischen Referenznetzwerks (ERN)."
+  * teilnahmestatus 0..1 code "Teilnahmestatus" "Status der Teilnahme am Register."
+  * teilnahmezeitraum 0..1 Period "Teilnahmezeitraum" "Zeitraum der Teilnahme am Register."
+
 * therapieForschung 0..* BackboneElement "Therapie und Forschung"
   * offLabel 0..* BackboneElement "Off-Label-Gabe"
     * offLabelGabe 0..1 code "Off-Label-Gabe" "Gibt an, ob eine Off-Label-Gabe vorliegt."

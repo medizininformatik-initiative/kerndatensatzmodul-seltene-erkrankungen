@@ -112,3 +112,16 @@ Description: "Teilnahme einer Person an einem Register für seltene Erkrankungen
 * study only Reference(ResearchStudy)
 * study ^short = "Das Register, als ResearchStudy gefuehrt"
 * study ^comment = "In R4 ist study 1..1 Pflicht und auf ResearchStudy festgelegt. Ein Register muss daher als ResearchStudy vorliegen; der Library-Katalogeintrag des Moduls Studie kann hier nicht stehen. Siehe Kopfkommentar."
+
+
+// Ergaenzt 2026-09-04: Mapping auf das Logical Model. Das Profil bestand seit
+// 2026-09-02 ohne Gegenstueck im Datenmodell — die Elemente sind mit diesem
+// Commit dort nachgetragen worden.
+Mapping:     SE-LogicalModel-Registerteilnahme
+Id:          SE-LogicalModel
+Title:       "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+Source:      MII_PR_Seltene_Registerteilnahme
+Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
+* study -> "registerteilnahme.registerName" "Register"
+* status -> "registerteilnahme.teilnahmestatus" "Teilnahmestatus"
+* period -> "registerteilnahme.teilnahmezeitraum" "Teilnahmezeitraum"

@@ -161,6 +161,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 ### Ressourcen-Übersicht
 
 #### Patient und Phänotyp
+
 | Ressource ID | Typ | Beschreibung | Datum | Status/Details |
 |--------------|-----|--------------|-------|----------------|
 | `mii-exa-seltene-patient-marfan-001` | Patient | 19-jähriger Mann | Geburt: ~2005 | ID: MRF-2024-001 |
@@ -168,6 +169,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 | `mii-exa-seltene-observation-leg-asymmetry` | Observation | Beinlängendifferenz | 15.12.2024 | Rechts verkürzt (HPO:0100559) |
 
 #### Symptome und Befunde
+
 | Ressource ID | Typ | Beschreibung | Datum | HPO Code | Schweregrad |
 |--------------|-----|--------------|-------|----------|-------------|
 | `mii-exa-seltene-symptom-chest-pain` | Observation | Thoraxschmerzen | 15.12.2024 | HP:0100749 | Akut |
@@ -177,23 +179,27 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 | `mii-exa-seltene-symptom-cataract` | Observation | Katarakt bilateral | 15.10.2024 | HP:0000518 | Bilateral |
 
 #### Diagnosen
+
 | Ressource ID | Typ | Beschreibung | Feststellungsdatum | ICD-10 | Orpha |
 |--------------|-----|--------------|-------------------|---------|-------|
 | `condition-marfan-confirmed` | Condition | Marfan-Syndrom | 15.12.2024 | Q87.4 | 558 |
 | `mii-exa-seltene-condition-cataract` | Condition | Katarakt bilateral | 15.10.2024 | H26.9 | - |
 
 #### Prozeduren
+
 | Ressource ID | Typ | Beschreibung | Datum | OPS Code | Status |
 |--------------|-----|--------------|-------|----------|---------|
 | `mii-exa-seltene-procedure-cataract-surgery` | Procedure | Phakoemulsifikation mit IOL | 12.11.2024 | 5-144.5a | Abgeschlossen |
 | `mii-exa-seltene-procedure-aortic-planned` | Procedure | Aortenwurzelersatz (David-OP) | 15.03.2025 | 5-354.0a | Geplant |
 
 #### Medikation
+
 | Ressource ID | Typ | Medikament | Dosierung | Start | Indikation |
 |--------------|-----|------------|-----------|-------|------------|
 | `mii-exa-seltene-medication-losartan` | MedicationStatement | Losartan | 50mg 1x täglich | 15.12.2024 | Aortenprotektion |
 
 #### Diagnostik
+
 | Ressource ID | Typ | Untersuchung | Datum | Wichtige Befunde |
 |--------------|-----|--------------|-------|------------------|
 | `mii-exa-seltene-observation-echo-aortic` | Observation | Aortenwurzel-Echo | 15.12.2024 | 48mm (pathologisch) |
@@ -201,6 +207,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 | `mii-exa-seltene-observation-echo-mv` | Observation | MK-Insuffizienz Echo | 15.12.2024 | Grad I |
 
 #### Behandlungskontakte
+
 | Ressource ID | Typ | Beschreibung | Datum | Setting | Fachbereich |
 |--------------|-----|--------------|-------|---------|-------------|
 | `mii-exa-seltene-encounter-ophthalmology` | Encounter | Augenärztliche Konsultation | 15.10.2024 | Ambulant | Ophthalmologie |
@@ -209,11 +216,13 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 | `mii-exa-seltene-encounter-surgery-planned` | Encounter | Geplante Herzchirurgie | 15.03.2025 | Stationär | Herzchirurgie |
 
 #### Klinische Beurteilungen
+
 | Ressource ID | Typ | Beschreibung | Datum | Wichtige Aspekte |
 |--------------|-----|--------------|-------|------------------|
 | `clinical-impression-cardiology` | ClinicalImpression | Kardiologische Beurteilung | 15.12.2024 | Marfan bestätigt, OP-Indikation |
 
 ### Bundle
+
 | Ressource ID | Typ | Beschreibung | Anzahl Einträge |
 |--------------|-----|--------------|-----------------|
 | `mii-exa-seltene-bundle-marfan-complete` | Bundle | Transaction Bundle mit allen Ressourcen | 20 Ressourcen |

@@ -254,3 +254,16 @@ Description: "All categories of the WHO International Classification of Function
 * ^status = #active
 * ^experimental = false
 * include codes from system $icf
+
+
+// Ergaenzt 2026-09-04: Mapping auf das Logical Model. Das Profil bestand seit
+// 2026-09-02 ohne Gegenstueck im Datenmodell — die Elemente sind mit diesem
+// Commit dort nachgetragen worden.
+Mapping:     SE-LogicalModel-ICFAssessment
+Id:          SE-LogicalModel
+Title:       "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+Source:      MII_PR_Seltene_ICFAssessment
+Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
+* code -> "funktionsfaehigkeit.icfCode" "ICF-Code"
+* component.value[x] -> "funktionsfaehigkeit.beurteilungsmerkmal" "WHO-Qualifier zum ICF-Kode"
+* effective[x] -> "funktionsfaehigkeit.erhebungsdatum" "Erhebungsdatum"

@@ -164,3 +164,36 @@ Description: "Gemessene Körperlänge bei Geburt. Zusammen mit Geburtsgewicht un
 * valueQuantity.code 1..1
 * valueQuantity.code = #cm
 * valueQuantity.unit = "Zentimeter"
+
+
+// Ergaenzt 2026-09-04: Mapping auf das Logical Model. Das Profil bestand seit
+// 2026-09-02 ohne Gegenstueck im Datenmodell — die Elemente sind mit diesem
+// Commit dort nachgetragen worden.
+Mapping:     SE-LogicalModel-Gestationsalter
+Id:          SE-LogicalModel
+Title:       "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+Source:      MII_PR_Seltene_Gestationsalter
+Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
+* value[x] -> "perinatal.gestationsalter" "Gestationsalter bei Geburt"
+
+
+// Ergaenzt 2026-09-04: Mapping auf das Logical Model. Das Profil bestand seit
+// 2026-09-02 ohne Gegenstueck im Datenmodell — die Elemente sind mit diesem
+// Commit dort nachgetragen worden.
+Mapping:     SE-LogicalModel-Geburtsgewicht
+Id:          SE-LogicalModel
+Title:       "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+Source:      MII_PR_Seltene_Geburtsgewicht
+Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
+* value[x] -> "perinatal.geburtsgewicht" "Geburtsgewicht"
+
+
+// Ergaenzt 2026-09-04: Mapping auf das Logical Model. Das Profil bestand seit
+// 2026-09-02 ohne Gegenstueck im Datenmodell — die Elemente sind mit diesem
+// Commit dort nachgetragen worden.
+Mapping:     SE-LogicalModel-Geburtslaenge
+Id:          SE-LogicalModel
+Title:       "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+Source:      MII_PR_Seltene_Geburtslaenge
+Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
+* value[x] -> "perinatal.geburtslaenge" "Geburtslänge"

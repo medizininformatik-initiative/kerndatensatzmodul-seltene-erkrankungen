@@ -72,3 +72,14 @@ Description: "ValueSet zur Angabe der Blutsverwandtschaft der Eltern (Consanguin
 * $SCT#373067005 "No"
 * $SCT#261665006 "Unknown"
 * $SCT#1220561009 "Not recorded"
+
+
+// Ergaenzt 2026-09-04: Mapping auf das Logical Model. Das Profil bestand seit
+// 2026-09-02 ohne Gegenstueck im Datenmodell — die Elemente sind mit diesem
+// Commit dort nachgetragen worden.
+Mapping:     SE-LogicalModel-Consanguinity
+Id:          SE-LogicalModel
+Title:       "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+Source:      MII_PR_Seltene_Consanguinity
+Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
+* value[x] -> "familienanamnese.konsanguinitaetEltern" "Blutsverwandtschaft der Eltern"

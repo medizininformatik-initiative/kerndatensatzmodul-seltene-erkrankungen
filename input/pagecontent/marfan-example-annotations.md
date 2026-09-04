@@ -160,6 +160,7 @@ This document contains the semantic annotations for a case example of Marfan syn
 #### Resource overview
 
 ##### Patient and phenotype
+
 | Resource ID | Type | Description | Date | Status/details |
 |--------------|-----|--------------|-------|----------------|
 | `mii-exa-seltene-patient-marfan-001` | Patient | 19-year-old man | Birth: ~2005 | ID: MRF-2024-001 |
@@ -167,6 +168,7 @@ This document contains the semantic annotations for a case example of Marfan syn
 | `mii-exa-seltene-observation-leg-asymmetry` | Observation | Leg length discrepancy | 2024-12-15 | Right shortened (HPO:0100559) |
 
 ##### Symptoms and findings
+
 | Resource ID | Type | Description | Date | HPO code | Severity |
 |--------------|-----|--------------|-------|----------|-------------|
 | `mii-exa-seltene-symptom-chest-pain` | Observation | Chest pain | 2024-12-15 | HP:0100749 | Acute |
@@ -176,23 +178,27 @@ This document contains the semantic annotations for a case example of Marfan syn
 | `mii-exa-seltene-symptom-cataract` | Observation | Bilateral cataract | 2024-10-15 | HP:0000518 | Bilateral |
 
 ##### Diagnoses
+
 | Resource ID | Type | Description | Date of determination | ICD-10 | Orpha |
 |--------------|-----|--------------|-------------------|---------|-------|
 | `condition-marfan-confirmed` | Condition | Marfan syndrome | 2024-12-15 | Q87.4 | 558 |
 | `mii-exa-seltene-condition-cataract` | Condition | Bilateral cataract | 2024-10-15 | H26.9 | - |
 
 ##### Procedures
+
 | Resource ID | Type | Description | Date | OPS code | Status |
 |--------------|-----|--------------|-------|----------|---------|
 | `mii-exa-seltene-procedure-cataract-surgery` | Procedure | Phacoemulsification with IOL | 2024-11-12 | 5-144.5a | Completed |
 | `mii-exa-seltene-procedure-aortic-planned` | Procedure | Aortic root replacement (David procedure) | 2025-03-15 | 5-354.0a | Planned |
 
 ##### Medication
+
 | Resource ID | Type | Drug | Dose | Start | Indication |
 |--------------|-----|------------|-----------|-------|------------|
 | `mii-exa-seltene-medication-losartan` | MedicationStatement | Losartan | 50 mg once daily | 2024-12-15 | Aortic protection |
 
 ##### Diagnostics
+
 | Resource ID | Type | Examination | Date | Key findings |
 |--------------|-----|--------------|-------|------------------|
 | `mii-exa-seltene-observation-echo-aortic` | Observation | Aortic root echo | 2024-12-15 | 48 mm (pathological) |
@@ -200,6 +206,7 @@ This document contains the semantic annotations for a case example of Marfan syn
 | `mii-exa-seltene-observation-echo-mv` | Observation | MV regurgitation echo | 2024-12-15 | Grade I |
 
 ##### Encounters
+
 | Resource ID | Type | Description | Date | Setting | Specialty |
 |--------------|-----|--------------|-------|---------|-------------|
 | `mii-exa-seltene-encounter-ophthalmology` | Encounter | Ophthalmological consultation | 2024-10-15 | Outpatient | Ophthalmology |
@@ -208,11 +215,13 @@ This document contains the semantic annotations for a case example of Marfan syn
 | `mii-exa-seltene-encounter-surgery-planned` | Encounter | Planned cardiac surgery | 2025-03-15 | Inpatient | Cardiac surgery |
 
 ##### Clinical assessments
+
 | Resource ID | Type | Description | Date | Key aspects |
 |--------------|-----|--------------|-------|------------------|
 | `clinical-impression-cardiology` | ClinicalImpression | Cardiological assessment | 2024-12-15 | Marfan confirmed, indication for surgery |
 
 #### Bundle
+
 | Resource ID | Type | Description | Number of entries |
 |--------------|-----|--------------|-----------------|
 | `mii-exa-seltene-bundle-marfan-complete` | Bundle | Transaction bundle with all resources | 20 resources |

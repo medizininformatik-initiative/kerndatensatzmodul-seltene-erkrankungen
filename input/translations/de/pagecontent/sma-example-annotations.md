@@ -131,12 +131,14 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 ### Ressourcen-Übersicht
 
 #### Patient und Familienanamnese
+
 | Ressource ID | Typ | Beschreibung | Datum | Status/Details |
 |--------------|-----|--------------|-------|----------------|
 | `mii-exa-seltene-patient-sma-001` | Patient | Neugeborenes Mädchen | Geburt: ~01.07.2024 | ID: SMA-2024-001 |
 | `mii-exa-seltene-family-history-001` | FamilyMemberHistory | Urgroßmutter mit Muskelerkrankung | 22.07.2024 | Relation: unsicher |
 
 #### Diagnose-Verlauf
+
 | Ressource ID | Typ | Beschreibung | Feststellungsdatum | Verification Status | Codes |
 |--------------|-----|--------------|-------------------|-------------------|--------|
 | `mii-exa-seltene-condition-sma-suspected` | Condition | Verdacht auf SMA | 18.07.2024 | unconfirmed | SNOMED: 80854005 |
@@ -144,6 +146,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 | `condition-sma-confirmed` | Condition | Bestätigte SMA Typ 1 | 26.07.2024 | confirmed | ICD-10: G12.0, Orpha: 83330 |
 
 #### Screening und Genetische Befunde
+
 | Ressource ID | Typ | Test/Gen | Befund | Datum | Interpretation |
 |--------------|-----|----------|---------|-------|----------------|
 | `mii-exa-seltene-observation-sma-screening` | Observation | SMA Neugeborenenscreening (LOINC: 92005-8) | SMN1 Exon 7 nicht nachweisbar | 18.07.2024 | Positiv für SMA |
@@ -151,11 +154,13 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 | `mii-exa-seltene-variant-smn2-001` | Observation | SMN2 (HGNC:11118) - Konfirmatorisch | 2 Kopien | 26.07.2024 | Phänotyp-Modifikator |
 
 #### Behandlung
+
 | Ressource ID | Typ | Beschreibung | Datum | Code | Details |
 |--------------|-----|--------------|-------|------|---------|
 | `mii-exa-seltene-procedure-gentherapy-001` | Procedure | Gentherapie (Onasemnogene abeparvovec) | 29.07.2024 | OPS: 6-00d.0, UNII: MLU3LU3EVV | Mit Prednisolon, ohne Komplikationen |
 
 #### Laborwerte
+
 | Ressource ID | Typ | Parameter | Datum | Wert | Interpretation |
 |--------------|-----|-----------|-------|------|----------------|
 | `mii-exa-seltene-observation-troponin-001` | Observation | Troponin T hs | 22.07.2024 | 92 ng/l | Erhöht |
@@ -167,6 +172,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 | `mii-exa-seltene-observation-plt-001` | Observation | Thrombozytenzahl | 29.07.2024 | - | Normwertig |
 
 #### Behandlungskontakte
+
 | Ressource ID | Typ | Beschreibung | Datum | Setting | Verknüpfte Diagnose |
 |--------------|-----|--------------|-------|---------|-------------------|
 | `mii-exa-seltene-encounter-screening-001` | Encounter | Neugeborenenscreening | 18.07.2024 | Screening | `mii-exa-seltene-condition-sma-suspected` |
@@ -175,12 +181,14 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 | `mii-exa-seltene-encounter-nachsorge-001` | Encounter | Nachsorge | 12.08.2024 | Ambulant | `condition-sma-confirmed` |
 
 #### Klinische Beurteilungen
+
 | Ressource ID | Typ | Beschreibung | Datum | Encounter | Wichtige Befunde |
 |--------------|-----|--------------|-------|-----------|------------------|
 | `mii-exa-seltene-clinical-impression-erstvorstellung` | ClinicalImpression | Initiale klinische Beurteilung | 22.07.2024 | `mii-exa-seltene-encounter-ambulant-001` | Familienanamnese, Troponin ↑, V.a. SMA Typ 1 |
 | `mii-exa-seltene-clinical-impression-nachsorge` | ClinicalImpression | Nachsorgebeurteilung nach Gentherapie | 12.08.2024 | `mii-exa-seltene-encounter-nachsorge-001` | Troponin weiter ↑ (präexistent), ALT/AST/PLT normal |
 
 ### Bundle
+
 | Ressource ID | Typ | Beschreibung | Anzahl Einträge |
 |--------------|-----|--------------|-----------------|
 | `mii-exa-seltene-bundle-sma-complete` | Bundle | Transaction Bundle mit allen Ressourcen | 22 Ressourcen |

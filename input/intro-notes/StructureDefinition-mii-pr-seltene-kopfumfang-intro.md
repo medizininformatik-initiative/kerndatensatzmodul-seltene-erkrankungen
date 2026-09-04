@@ -15,56 +15,6 @@ The profile uses the LOINC code **9843-4** (Head Occipital-frontal circumference
 
 ---
 
-**Search parameters**
-
-The following search parameters are relevant for the Rare Diseases module, also in combination:
-
-1. The search parameter ```_id``` MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?_id=1234```
-
-    Usage notes: Further information on searching for "_id" can be found in the [FHIR base specification, section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-2. The search parameter "_profile" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang```
-
-    Usage notes: Further information on searching for "_profile" can be found in the [FHIR base specification, section "token"](http://hl7.org/fhir/R4/search.html#all).
-
-3. The search parameter "code" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?code=http://loinc.org|9843-4```
-
-    Usage notes: Further information on searching for "code" can be found in the FHIR base specification, section "token".
-
-4. The search parameter "subject" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?subject=Patient/example```
-
-    Usage notes: Further information on searching for "subject" can be found in the FHIR base specification, section "reference".
-
-5. The search parameter "date" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?date=2024-02-08```
-
-    Usage notes: Further information on searching for "date" can be found in the FHIR base specification, section "date".
-
-6. The search parameter "value-quantity" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Observation?value-quantity=35|http://unitsofmeasure.org|cm```
-
-    Usage notes: Further information on searching for "value-quantity" can be found in the FHIR base specification, section "quantity".
+**Search parameters** are declared module-wide in the [CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.html) &mdash; machine-readable and complete there, rather than repeated by hand per profile.
 
 Example instances are linked in the "Examples" section of the profile page.
