@@ -2,16 +2,19 @@
 Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz-Moduls Seltene Erkrankungen der Medizininformatik-Initiative.
 Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
 
+<!-- Datum und Version stehen hier bewusst NICHT mehr (2026-09-03). Der IG
+     Publisher zeigt beides direkt ueber dieser Seite in seinem eigenen
+     Kopfkasten ("Version:" und "Active as of") aus sushi-config.yaml. Eine
+     handgepflegte Kopie laeuft weg: sie trug noch einen unersetzten
+     Review-Platzhalter und die Version
+     "2027.0.0-ballot", waehrend der Leitfaden selbst bereits
+     2027.0.0-ballot.rc1 und 2026-09-02 auswies. Status und Realm bleiben, die
+     zeigt der Kopfkasten nicht. -->
+
 | Veröffentlichung   |   |
 |---------|---|
-| Datum   | TODO:REVIEW (ci-build) |
-| Version | 2027.0.0-ballot |
-| Status  | Active       |
-| Realm   | DE          |
-
-<!-- DERIVED:stand-in source=index.md gate=A -->
-> **Written during migration - review before release.** Datum und Version in der Tabelle oben wurden durch die Migration auf den Arbeitsstand 2027.0.0-ballot gesetzt; die Quellseite dokumentierte das Release 2026.0.1 (30.03.2026).
-{: .ig-highlight .ig-highlight-blue}
+| Status  | Active |
+| Realm   | DE |
 
 ## Impressum
 Dieser Leitfaden ist im Rahmen der Medizininformatik Initiative erstellt worden und unterliegt per Governance-Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V.

@@ -2,16 +2,18 @@
 This specification describes the FHIR representation of the Core Data Set (KDS) module Rare Diseases (Seltene Erkrankungen) of the German Medical Informatics Initiative (MII).
 The following pages describe the module's use cases as well as the associated FHIR profiles and terminology resources in their binding form.
 
+<!-- Date and Version deliberately NOT repeated here (2026-09-03). The IG
+     Publisher renders both directly above this page, in its own header box
+     ("Version:" and "Active as of"), from sushi-config.yaml. A hand-kept copy
+     drifts: it still carried an unreplaced review placeholder and the version
+     "2027.0.0-ballot" while
+     the guide itself already said 2027.0.0-ballot.rc1 and 2026-09-02. Status
+     and Realm stay because the header box does not show them. -->
+
 | Publication |   |
 |---------|---|
-| Date    | TODO:REVIEW (ci-build) |
-| Version | 2027.0.0-ballot |
 | Status  | Active |
 | Realm   | DE |
-
-<!-- DERIVED:stand-in source=index.md gate=A -->
-> **Written during migration - review before release.** The publication date and version in the table above were updated to the 2027.0.0-ballot working state by the migration; the source page recorded the 2026.0.1 release (2026-03-30).
-{: .ig-highlight .ig-highlight-blue}
 
 ### Imprint
 
