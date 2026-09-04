@@ -594,16 +594,16 @@
     "valueCanonical" : "http://fhir.de/ValueSet/lebensphase-de|1.6.0"
   },
   {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1"
+  },
+  {
     "name" : "default-valueset-version",
     "valueCanonical" : "http://hl7.org/fhir/ValueSet/clinicalimpression-status|4.0.1"
   },
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1"
   },
   {
     "name" : "default-canonical-version",

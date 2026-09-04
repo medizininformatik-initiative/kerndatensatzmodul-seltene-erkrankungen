@@ -293,6 +293,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#implementierungshinweis-für-krankheitsspezifische-codes" id="markdown-toc-implementierungshinweis-für-krankheitsspezifische-codes">Implementierungshinweis für krankheitsspezifische Codes</a></li>
+  <li><a href="#laborparameter-erben-nicht-neu-definieren" id="markdown-toc-laborparameter-erben-nicht-neu-definieren">Laborparameter: erben, nicht neu definieren</a></li>
   <li><a href="#profilgruppen" id="markdown-toc-profilgruppen">Profilgruppen</a>    <ul>
       <li><a href="#anamnese-und-diagnostik" id="markdown-toc-anamnese-und-diagnostik">Anamnese und Diagnostik</a></li>
       <li><a href="#diagnose" id="markdown-toc-diagnose">Diagnose</a></li>
@@ -315,6 +316,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <blockquote>
   <p><strong>Hinweis:</strong> Die technische Implementierung von Profilen für krankheitsspezifische Codes (inkl. relevanter Diagnosen, Symptome, Prozeduren, Medikationen etc.) kann beispielsweise als projektspezifische Spezifikation erfolgen und langfristig ins Modul Seltene Erkrankungen migriert werden. Dies ermöglicht eine flexible Anpassung an spezielle Anforderungen einzelner Projekte, während gleichzeitig eine spätere Standardisierung und Integration in das Kernmodul angestrebt wird.</p>
+</blockquote>
+
+<h3 id="laborparameter-erben-nicht-neu-definieren">Laborparameter: erben, nicht neu definieren</h3>
+
+<blockquote class="ig-highlight ig-highlight-blue">
+  <p><strong>Festlegung (2026-09-04).</strong> Dieses Modul definiert <strong>keine</strong> Laborprofile; die
+Fallbeispiele führen deshalb blanke <code class="language-plaintext highlighter-rouge">Observation</code>-Ressourcen mit
+<code class="language-plaintext highlighter-rouge">category = laboratory</code>. Sollten künftig Laborparameter ins Modul aufgenommen
+werden, <strong>erben sie vom MII-Modul Laborbefund</strong> und werden nicht hier aus
+<code class="language-plaintext highlighter-rouge">Observation</code> heraus profiliert. Der erste Schritt dazu ist,
+<code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.laborbefund</code> als Abhängigkeit
+aufzunehmen. Dieselbe Arbeitsteilung gilt für Variantenbefunde, die in den
+<strong>Molekulargenetischen Befund</strong> gehören — jenes Modul <em>ist</em> bereits
+Abhängigkeit, seine Profile werden referenziert statt kopiert.</p>
 </blockquote>
 
 <h2 id="profilgruppen">Profilgruppen</h2>
@@ -776,7 +791,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 4, 2026 11:35+0000">2026-09-04</span>
+          Erstellt <span title="Fri, Sep 4, 2026 11:52+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

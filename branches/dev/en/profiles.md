@@ -13,6 +13,10 @@ All elements of the core data set, adapted to the details and requirements of th
 
 > **Note:** The technical implementation of profiles for disease-specific codes (including relevant diagnoses, symptoms, procedures, medications, etc.) can, for example, be realized as a project-specific specification and migrated into the Rare Diseases module in the long term. This allows flexible adaptation to the special requirements of individual projects while at the same time aiming at later standardization and integration into the core module.
 
+### Laboratory parameters: inherit, do not redefine
+
+> **Rule (decided 2026-09-04).** This module defines **no** laboratory profiles, and the case examples therefore carry plain `Observation` resources with `category = laboratory`. Should laboratory parameters become part of the module in future, they **inherit from the MII module Laborbefund** rather than being profiled here from `Observation`. Adding `de.medizininformatikinitiative.kerndatensatz.laborbefund` as a dependency is then the first step. The same division of labour holds for variant findings, which belong to **Molekulargenetischer Befund** — that module **is** already a dependency and its profiles are referenced, not copied.
+
 ## Profile groups
 
 ### History and diagnostics

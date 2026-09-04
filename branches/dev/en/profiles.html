@@ -333,6 +333,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#implementation-note-for-disease-specific-codes" id="markdown-toc-implementation-note-for-disease-specific-codes">Implementation note for disease-specific codes</a></li>
+  <li><a href="#laboratory-parameters-inherit-do-not-redefine" id="markdown-toc-laboratory-parameters-inherit-do-not-redefine">Laboratory parameters: inherit, do not redefine</a></li>
   <li><a href="#profile-groups" id="markdown-toc-profile-groups">Profile groups</a>    <ul>
       <li><a href="#history-and-diagnostics" id="markdown-toc-history-and-diagnostics">History and diagnostics</a></li>
       <li><a href="#diagnosis" id="markdown-toc-diagnosis">Diagnosis</a></li>
@@ -355,6 +356,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <blockquote>
   <p><strong>Note:</strong> The technical implementation of profiles for disease-specific codes (including relevant diagnoses, symptoms, procedures, medications, etc.) can, for example, be realized as a project-specific specification and migrated into the Rare Diseases module in the long term. This allows flexible adaptation to the special requirements of individual projects while at the same time aiming at later standardization and integration into the core module.</p>
+</blockquote>
+
+<h3 id="laboratory-parameters-inherit-do-not-redefine">Laboratory parameters: inherit, do not redefine</h3>
+
+<blockquote class="ig-highlight ig-highlight-blue">
+  <p><strong>Rule (decided 2026-09-04).</strong> This module defines <strong>no</strong> laboratory profiles,
+and the case examples therefore carry plain <code class="language-plaintext highlighter-rouge">Observation</code> resources with
+<code class="language-plaintext highlighter-rouge">category = laboratory</code>. Should laboratory parameters become part of the module
+in future, they <strong>inherit from the MII module Laborbefund</strong> rather than being
+profiled here from <code class="language-plaintext highlighter-rouge">Observation</code>. Adding
+<code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.laborbefund</code> as a dependency is
+then the first step. The same division of labour holds for variant findings,
+which belong to <strong>Molekulargenetischer Befund</strong> — that module <em>is</em> already a
+dependency and its profiles are referenced, not copied.</p>
 </blockquote>
 
 <h2 id="profile-groups">Profile groups</h2>
@@ -818,7 +833,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 4, 2026 11:35+0000">2026-09-04</span>
+          Generated <span title="Fri, Sep 4, 2026 11:52+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

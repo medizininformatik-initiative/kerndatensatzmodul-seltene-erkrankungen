@@ -13,6 +13,10 @@ Alle Elemente des Kerndatensatzes, angepasst an die Details und Anforderungen f�
 
 > **Hinweis:** Die technische Implementierung von Profilen für krankheitsspezifische Codes (inkl. relevanter Diagnosen, Symptome, Prozeduren, Medikationen etc.) kann beispielsweise als projektspezifische Spezifikation erfolgen und langfristig ins Modul Seltene Erkrankungen migriert werden. Dies ermöglicht eine flexible Anpassung an spezielle Anforderungen einzelner Projekte, während gleichzeitig eine spätere Standardisierung und Integration in das Kernmodul angestrebt wird.
 
+### Laborparameter: erben, nicht neu definieren
+
+> **Festlegung (2026-09-04).** Dieses Modul definiert **keine** Laborprofile; die Fallbeispiele führen deshalb blanke `Observation`-Ressourcen mit `category = laboratory`. Sollten künftig Laborparameter ins Modul aufgenommen werden, **erben sie vom MII-Modul Laborbefund** und werden nicht hier aus `Observation` heraus profiliert. Der erste Schritt dazu ist, `de.medizininformatikinitiative.kerndatensatz.laborbefund` als Abhängigkeit aufzunehmen. Dieselbe Arbeitsteilung gilt für Variantenbefunde, die in den **Molekulargenetischen Befund** gehören — jenes Modul **ist** bereits Abhängigkeit, seine Profile werden referenziert statt kopiert.
+
 ## Profilgruppen
 
 ### Anamnese und Diagnostik
