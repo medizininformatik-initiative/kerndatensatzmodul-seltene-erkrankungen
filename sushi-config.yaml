@@ -222,9 +222,8 @@ pages:
   translationinfo.md:
     title: Translation Information
 parameters:
-  # Zwei Canonicals dieses Moduls folgen NICHT dem Schema
+  # Ein Canonical dieses Moduls folgt NICHT dem Schema
   # {canonical}/{ResourceType}/{id}, das der IG Publisher erwartet:
-  #   mii-lm-seltene                      -> .../StructureDefinition/LogicalModel/Seltene
   #   mii-cps-seltene-capabilitystatement -> .../CapabilityStatement/metadata
   # Beide sind in 2026.0.1 publiziert und duerfen sich nicht aendern. Der
   # Publisher meldet sonst "Resource id/url mismatch ... Use the special-url
@@ -237,7 +236,6 @@ parameters:
   # Mehrheit: 15 von 23 Logical Models in 10 Modulen, base eingeschlossen.
   # Kein Modul hat es je gewechselt.
   special-url:
-    - https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene
     - https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata
   path-resource:
     - input/predefined-resources

@@ -81,5 +81,5 @@ Mapping:     SE-LogicalModel-Consanguinity
 Id:          SE-LogicalModel
 Title:       "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source:      MII_PR_Seltene_Consanguinity
-Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
 * value[x] -> "familienanamnese.konsanguinitaetEltern" "Blutsverwandtschaft der Eltern"

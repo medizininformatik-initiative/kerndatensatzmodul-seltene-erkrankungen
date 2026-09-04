@@ -5,7 +5,17 @@ Title: "MII LM SE"
 Description: "MII LogicalModel Modul Seltene Erkraknungen"
 * insert Publisher
 * insert PR_CS_VS_Version
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+// BREAKING CHANGE 2026-09-04 (Nutzerentscheid): Der Canonical lautete bis
+// 2026.0.1 .../StructureDefinition/LogicalModel/Seltene und ist unter dieser
+// URL publiziert. Er folgt jetzt dem Schema {canonical}/{Typ}/{id}, das der
+// IG Publisher erwartet — damit entfaellt der Fehler "Resource id/url
+// mismatch", ohne ihn per special-url stumm zu schalten.
+//
+// Preis: Verweise auf den alten Canonical laufen ins Leere, und das Modul
+// weicht vom MII-Mehrheitsmuster ab — 15 von 23 Logical Models nutzen
+// .../StructureDefinition/LogicalModel/<Name>, base eingeschlossen.
+// Die 17 Mapping-Targets im Modul sind mitgezogen.
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
 * anamneseUndDiagnostik 0..* BackboneElement "Diagnose"
   * untersuchungsdatum 0..1 date "Untersuchungsdatum" "Datum der durchgeführten Untersuchung eines SE-Patienten."
   * untersuchungsanlass 0..1 code "Untersuchungsanlass" "Grund für den Besuch des SE-Patienten."

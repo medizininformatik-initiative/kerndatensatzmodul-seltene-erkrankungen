@@ -134,7 +134,7 @@ Mapping: FHIR-SE-SymptomCondition
 Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_Symptom_Condition
-Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
 * -> "anamneseUndDiagnostik.phaenotypisierung" "Phänotypisierung als Condition"
 * code.coding[hpoCoding] -> "anamneseUndDiagnostik.phaenotypisierung.hpoTerm" "HPO-Term des Symptoms"
 * code.coding[snomedCoding] -> "anamneseUndDiagnostik.phaenotypisierung" "SNOMED CT Symptom"

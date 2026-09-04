@@ -263,7 +263,7 @@ Mapping:     SE-LogicalModel-ICFAssessment
 Id:          SE-LogicalModel
 Title:       "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source:      MII_PR_Seltene_ICFAssessment
-Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
 * code -> "funktionsfaehigkeit.icfCode" "ICF-Code"
 * component.value[x] -> "funktionsfaehigkeit.beurteilungsmerkmal" "WHO-Qualifier zum ICF-Kode"
 * effective[x] -> "funktionsfaehigkeit.erhebungsdatum" "Erhebungsdatum"

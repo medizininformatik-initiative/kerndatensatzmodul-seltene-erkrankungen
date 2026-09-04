@@ -173,7 +173,7 @@ Mapping:     SE-LogicalModel-Gestationsalter
 Id:          SE-LogicalModel
 Title:       "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source:      MII_PR_Seltene_Gestationsalter
-Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
 * value[x] -> "perinatal.gestationsalter" "Gestationsalter bei Geburt"
 
 
@@ -184,7 +184,7 @@ Mapping:     SE-LogicalModel-Geburtsgewicht
 Id:          SE-LogicalModel
 Title:       "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source:      MII_PR_Seltene_Geburtsgewicht
-Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
 * value[x] -> "perinatal.geburtsgewicht" "Geburtsgewicht"
 
 
@@ -195,5 +195,5 @@ Mapping:     SE-LogicalModel-Geburtslaenge
 Id:          SE-LogicalModel
 Title:       "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source:      MII_PR_Seltene_Geburtslaenge
-Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
 * value[x] -> "perinatal.geburtslaenge" "Geburtslänge"
