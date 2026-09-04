@@ -359,12 +359,14 @@
       {
         "id": "Condition.evidence.detail",
         "path": "Condition.evidence.detail",
-        "short": "Reference to Observation resources containing HPO-coded symptoms",
+        "short": "Reference to the findings supporting or refuting the diagnosis",
+        "comment": "Typischerweise HPO-kodierte Symptom-Observations; ein DiagnosticReport ist zulaessig, wenn der Beleg ein Befundbericht ist (etwa eine Biopsie).",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Observation"
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
             ]
           }
         ],

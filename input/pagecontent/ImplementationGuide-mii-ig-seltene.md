@@ -15,8 +15,8 @@
 This ImplementationGuide resource defines the technical details of this
 publication, including dependencies and publishing parameters.
 
-- [XML](../ImplementationGuide-mii-ig-seltene-erkrankungen-v2026-de.xml)
-- [JSON](../ImplementationGuide-mii-ig-seltene-erkrankungen-v2026-de.json)
+- [XML](../ImplementationGuide-mii-ig-seltene.xml)
+- [JSON](../ImplementationGuide-mii-ig-seltene.json)
 
 ### Cross Version Analysis
 

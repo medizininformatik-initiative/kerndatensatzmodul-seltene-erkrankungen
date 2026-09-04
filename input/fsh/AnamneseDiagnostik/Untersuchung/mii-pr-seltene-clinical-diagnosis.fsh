@@ -61,8 +61,15 @@ Description: "Profile for clinical diagnosis of rare diseases with HPO phenotype
 * evidence.code ^short = "Manifestation/symptom supporting the diagnosis"
 * evidence.code.coding from mii-vs-seltene-hpo-phenotypic-observation-codes (extensible)
 * evidence.detail MS
-* evidence.detail ^short = "Reference to Observation resources containing HPO-coded symptoms"
-* evidence.detail only Reference(Observation)
+* evidence.detail ^short = "Reference to the findings supporting or refuting the diagnosis"
+// Erweitert 2026-09-04 um DiagnosticReport. Der IG Publisher meldete
+// "Invalid Resource target type. Found DiagnosticReport, but expected one of
+// ([Observation])" fuer das Ausschlussbeispiel Metabolische Myopathie, das
+// eine unauffaellige Muskelbiopsie als Beleg fuehrt — ein Befundbericht ist
+// legitime klinische Evidenz. Das Schwesterprofil GeneticDiagnosis erlaubt
+// beide Typen seit jeher. Eine Lockerung: bisher gueltige Instanzen bleiben es.
+* evidence.detail only Reference(Observation or DiagnosticReport)
+* evidence.detail ^comment = "Typischerweise HPO-kodierte Symptom-Observations; ein DiagnosticReport ist zulaessig, wenn der Beleg ein Befundbericht ist (etwa eine Biopsie)."
 
 // Stage assessment can reference HPO severity assessments
 * stage.assessment MS

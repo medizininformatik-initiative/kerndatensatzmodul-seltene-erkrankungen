@@ -121,7 +121,7 @@ Mapping:     SE-LogicalModel-Registerteilnahme
 Id:          SE-LogicalModel
 Title:       "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source:      MII_PR_Seltene_Registerteilnahme
-Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
+Target:      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
 * study -> "registerteilnahme.registerName" "Register"
 * status -> "registerteilnahme.teilnahmestatus" "Teilnahmestatus"
 * period -> "registerteilnahme.teilnahmezeitraum" "Teilnahmezeitraum"

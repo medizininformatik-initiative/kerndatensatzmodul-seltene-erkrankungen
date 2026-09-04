@@ -50,10 +50,16 @@ Description: "Therapieplan"
 * activity[NichtMedikamentoesTherapie] ^definition = "Therapieempfehlung für nicht-medikamentöse Interventionen (Ernährungstherapie, Prophylaxe, Früherkennung, humangenetische Beratung, andere)"
 * activity[NichtMedikamentoesTherapie] ^comment = "Referenziert ServiceRequest-basierte Profile für alle nicht-medikamentösen Therapien einschließlich humangenetischer Beratung"
 * activity[NichtMedikamentoesTherapie].reference 0..1 MS
-* activity[NichtMedikamentoesTherapie].reference only Reference(
-    MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes or
-    ServiceRequest
-)
+// Der blanke ServiceRequest ist hier am 2026-09-04 entfernt worden. Der
+// Slicing-Discriminator ist #profile auf reference.resolve(); solange dieser
+// Slice JEDEN ServiceRequest zulaesst, umfasst er auch
+// MII_PR_Seltene_Studieneinschluss_Anfrage, und der Publisher meldet
+// "Element matches more than one slice - NichtMedikamentoesTherapie,
+// Studieneinschlussempfehlung". Aufgefallen ist es erst, als das Beispiel
+// mii-exa-seltene-studieneinschluss-anfrage entstand. Die Slicing-Regel ist
+// #open: ein Verweis auf einen unprofilierten ServiceRequest bleibt erlaubt,
+// er faellt nur in keinen der benannten Slices.
+* activity[NichtMedikamentoesTherapie].reference only Reference(MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes)
 * activity[NichtMedikamentoesTherapie].detail MS // NOTE: Kardinalität min = 1 aus Elternprofil geerbt
 * activity[NichtMedikamentoesTherapie].detail.statusReason from MII_VS_Seltene_Empfehlung_StatusBegruendung (required)
 

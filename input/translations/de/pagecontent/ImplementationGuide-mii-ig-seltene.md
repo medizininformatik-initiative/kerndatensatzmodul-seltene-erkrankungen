@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- German mirror of input/pagecontent/ImplementationGuide-mii-ig-seltene-erkrankungen-v2026-de.md —
+<!-- German mirror of input/pagecontent/ImplementationGuide-mii-ig-seltene.md —
      both files must say the same thing. ALL generated fragments (cross-version
      analysis included) are language-selected via lang-fragment: the pinned
      publisher writes _includes/<name>-<lang>.xhtml plus a bare default-language
@@ -10,8 +10,8 @@
 Diese ImplementationGuide-Ressource definiert die technischen Details dieser
 Publikation, einschließlich Abhängigkeiten und Veröffentlichungsparametern.
 
-- [XML](../ImplementationGuide-mii-ig-seltene-erkrankungen-v2026-de.xml)
-- [JSON](../ImplementationGuide-mii-ig-seltene-erkrankungen-v2026-de.json)
+- [XML](../ImplementationGuide-mii-ig-seltene.xml)
+- [JSON](../ImplementationGuide-mii-ig-seltene.json)
 
 ### Versionsübergreifende Analyse
 
