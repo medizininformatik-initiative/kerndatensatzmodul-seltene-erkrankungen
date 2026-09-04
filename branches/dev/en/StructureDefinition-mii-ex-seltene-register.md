@@ -45,7 +45,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-re
   "name" : "MII_EX_Seltene_Register",
   "title" : "MII EX SE Register",
   "status" : "active",
-  "date" : "2026-09-04T12:44:12+00:00",
+  "date" : "2026-09-04T13:01:37+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
