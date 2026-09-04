@@ -7,8 +7,6 @@
 
 This page lists the FHIR extensions defined by the **Seltene Erkrankungen** module (naming convention `MII_EX_<Module>_<Name>`). Extensions carry information the base resources and profiles cannot express; the profiles that use them are on the [Profiles](profiles.md) page.
 
-> [TODO: List and describe your module's extensions — or remove this page if your module defines none.]
-
 The module defines the following extensions.
 
 | | | |

@@ -9,8 +9,6 @@
 
 Diese Seite listet die FHIR-Extensions, die das Modul **Seltene Erkrankungen** definiert (Namenskonvention `MII_EX_<Modul>_<Name>`). Extensions transportieren Informationen, die die Basis-Ressourcen und Profile nicht ausdrücken können; die Profile, die sie verwenden, stehen auf der Seite [Profile](profiles.md).
 
-> [TODO: Listen und beschreiben Sie die Extensions Ihres Moduls — oder entfernen Sie diese Seite, wenn Ihr Modul keine definiert.]
-
 Das Modul definiert die folgenden Extensions.
 
 | | | |

@@ -205,7 +205,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 
 | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `condition-marfan-confirmed` | Condition | Marfan-Syndrom | 15.12.2024 | Q87.4 | 558 |
+| `mii-exa-seltene-condition-marfan-genetic` | Condition | Marfan-Syndrom | 15.12.2024 | Q87.4 | 558 |
 | `mii-exa-seltene-condition-cataract` | Condition | Katarakt bilateral | 15.10.2024 | H26.9 | - |
 
 #### Prozeduren
@@ -242,7 +242,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| `clinical-impression-cardiology` | ClinicalImpression | Kardiologische Beurteilung | 15.12.2024 | Marfan bestätigt, OP-Indikation |
+| `mii-exa-seltene-clinical-impression-seltene-assessment` | ClinicalImpression | Kardiologische Beurteilung | 15.12.2024 | Marfan bestätigt, OP-Indikation |
 
 ### Bundle
 

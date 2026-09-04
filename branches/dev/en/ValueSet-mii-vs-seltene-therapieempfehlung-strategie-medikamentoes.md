@@ -41,7 +41,7 @@ ValueSet für medikamentöse Therapiestrategien (für MedicationRequest Profile)
   "name" : "MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes",
   "title" : "MII VS SE Therapieempfehlung Strategie - Medikamentös",
   "status" : "active",
-  "date" : "2026-09-04T07:02:52+00:00",
+  "date" : "2026-09-04T08:01:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -169,7 +169,7 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `mii-exa-seltene-condition-sma-suspected` | Condition | Verdacht auf SMA | 18.07.2024 | unconfirmed | SNOMED: 80854005 |
 | `mii-exa-seltene-condition-sma-clinical` | Condition | Klinische Diagnose SMA Typ 1 | 22.07.2024 | provisional | ICD-10: G12.0, Orpha: 83330 |
-| `condition-sma-confirmed` | Condition | Bestätigte SMA Typ 1 | 26.07.2024 | confirmed | ICD-10: G12.0, Orpha: 83330 |
+| `mii-exa-seltene-condition-sma-genetic` | Condition | Bestätigte SMA Typ 1 | 26.07.2024 | confirmed | ICD-10: G12.0, Orpha: 83330 |
 
 #### Screening und Genetische Befunde
 
@@ -203,8 +203,8 @@ Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel ein
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `mii-exa-seltene-encounter-screening-001` | Encounter | Neugeborenenscreening | 18.07.2024 | Screening | `mii-exa-seltene-condition-sma-suspected` |
 | `mii-exa-seltene-encounter-ambulant-001` | Encounter | Erstvorstellung SMA-Zentrum | 22.07.2024 | Ambulant | `mii-exa-seltene-condition-sma-clinical` |
-| `mii-exa-seltene-encounter-stationaer-001` | Encounter | Stationäre Gentherapie | 29-30.07.2024 | Stationär | `condition-sma-confirmed` |
-| `mii-exa-seltene-encounter-nachsorge-001` | Encounter | Nachsorge | 12.08.2024 | Ambulant | `condition-sma-confirmed` |
+| `mii-exa-seltene-encounter-stationaer-001` | Encounter | Stationäre Gentherapie | 29-30.07.2024 | Stationär | `mii-exa-seltene-condition-sma-genetic` |
+| `mii-exa-seltene-encounter-nachsorge-001` | Encounter | Nachsorge | 12.08.2024 | Ambulant | `mii-exa-seltene-condition-sma-genetic` |
 
 #### Klinische Beurteilungen
 
