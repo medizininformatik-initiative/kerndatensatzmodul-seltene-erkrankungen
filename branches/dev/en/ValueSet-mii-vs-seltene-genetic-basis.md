@@ -43,7 +43,7 @@ Expansions are not generated for retired value sets
   "name" : "MII_VS_Seltene_GeneticBasis",
   "title" : "MII VS SE Genetic Basis (retired)",
   "status" : "retired",
-  "date" : "2026-09-04T05:29:06+00:00",
+  "date" : "2026-09-04T06:37:14+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

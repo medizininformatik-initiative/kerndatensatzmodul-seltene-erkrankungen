@@ -41,7 +41,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "MII_VS_Seltene_HPOInheritancePattern",
   "title" : "MII VS SE HPO Inheritance Pattern",
   "status" : "active",
-  "date" : "2026-09-04T05:29:06+00:00",
+  "date" : "2026-09-04T06:37:14+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
