@@ -97,7 +97,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Registerteilnahme",
   "title" : "MII PR SE Registerteilnahme",
   "status" : "active",
-  "date" : "2026-09-04T06:37:14+00:00",
+  "date" : "2026-09-04T07:02:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -129,6 +129,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "SE-LogicalModel",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene",
+    "name" : "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+  },
+  {
     "identity" : "BRIDG5.1",
     "uri" : "https://bridgmodel.nci.nih.gov",
     "name" : "BRIDG 5.1 Mapping"
@@ -191,14 +196,24 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "id" : "ResearchSubject.status",
       "path" : "ResearchSubject.status",
       "short" : "Status der Teilnahme",
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "registerteilnahme.teilnahmestatus",
+        "comment" : "Teilnahmestatus"
+      }]
     },
     {
       "id" : "ResearchSubject.period",
       "path" : "ResearchSubject.period",
       "short" : "Zeitraum der Registerteilnahme",
       "comment" : "Optional, aus demselben Grund wie identifier: das Einschlussdatum ist am dokumentierenden Standort nicht immer bekannt.",
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "registerteilnahme.teilnahmezeitraum",
+        "comment" : "Teilnahmezeitraum"
+      }]
     },
     {
       "id" : "ResearchSubject.period.start",
@@ -210,7 +225,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "ResearchSubject.study",
       "short" : "Das Register, als ResearchStudy gefuehrt",
       "comment" : "In R4 ist study 1..1 Pflicht und auf ResearchStudy festgelegt. Ein Register muss daher als ResearchStudy vorliegen; der Library-Katalogeintrag des Moduls Studie kann hier nicht stehen. Siehe Kopfkommentar.",
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "registerteilnahme.registerName",
+        "comment" : "Register"
+      }]
     },
     {
       "id" : "ResearchSubject.individual",

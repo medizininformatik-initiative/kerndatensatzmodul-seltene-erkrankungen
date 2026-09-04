@@ -2025,7 +2025,7 @@
         <reference value="CodeSystem/mii-cs-seltene-hpo-change-status"/>
       </reference>
       <name value="MII CS Seltene Erkrankungen HPO Change Status"/>
-      <description value="CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit"/>
+      <description value="CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit. Eigene Codes des Moduls: HPO führt für diesen Zweck nichts. Sein Zweig Clinical course (HP:0031797) beschreibt den Verlauf der Krankheit — Onset, Pace of progression, Temporal pattern, Disease remission —, nicht die Veränderung eines einzelnen Phänotyps zwischen zwei Erhebungen. Vier der fünf Konzepte haben SNOMED-CT-Entsprechungen, die je Code unten angegeben sind; für newly-added führt SNOMED kein generisches Konzept."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

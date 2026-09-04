@@ -303,19 +303,6 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
 <!-- markdownlint-disable MD041 -->
 <!-- Deutsche Übersetzung von input/pagecontent/extensions.md (aufgeteilt aus
      der früheren Kombi-Seite profiles-and-extensions.md). -->
-<!-- OPTIONAL-PAGE (0..1) — Marker entfernen, wenn die Seite BLEIBT; andernfalls
-     die Seite gemäß docs/optional-pages.md entfernen. Der Konventions-Check
-     (M9) lässt ein Release mit diesem Marker fehlschlagen. -->
-
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p><strong>Optionale Seite (0..1).</strong> Das KDS-Modulmenü führt diese Seite als
-<em>optional</em>. Entscheiden Sie für Ihr Modul: Seite <strong>behalten</strong> — Inhalte
-ausfüllen und dieses Banner samt <code class="language-plaintext highlighter-rouge">OPTIONAL-PAGE</code>-Marker-Kommentar löschen (in
-dieser Datei UND in der englischen Quellseite) — oder Seite <strong>entfernen</strong>,
-nach der Schritt-für-Schritt-Anleitung in <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/docs/optional-pages.md"><code class="language-plaintext highlighter-rouge">docs/optional-pages.md</code></a> dieses
-Repositories. Ein Release darf dieses Banner nicht enthalten
-(Konventions-Check M9).</p>
-</blockquote>
 
 <p>Diese Seite listet die FHIR-Extensions, die das Modul <strong>Seltene Erkrankungen</strong>
 definiert (Namenskonvention <code class="language-plaintext highlighter-rouge">MII_EX_&lt;Modul&gt;_&lt;Name&gt;</code>). Extensions transportieren
@@ -326,6 +313,49 @@ Profile, die sie verwenden, stehen auf der Seite <a href="profiles.html">Profile
   <p>[TODO: Listen und beschreiben Sie die Extensions Ihres Moduls — oder
 entfernen Sie diese Seite, wenn Ihr Modul keine definiert.]</p>
 </blockquote>
+
+<!-- BEGIN GENERATED: artifact-list (scripts/generate-artifact-lists.py) -->
+
+<p>Das Modul definiert die folgenden Extensions.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titel</th>
+      <th>Id</th>
+      <th>Zweck</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MII EX SE Empfehlung Priorität</td>
+      <td><a href="StructureDefinition-mii-ex-seltene-empfehlung-prioritaet.html"><code class="language-plaintext highlighter-rouge">mii-ex-seltene-empfehlung-prioritaet</code></a></td>
+      <td>Priorität der (einzelnen) Empfehlung</td>
+    </tr>
+    <tr>
+      <td>MII EX SE Empfehlung Publikation</td>
+      <td><a href="StructureDefinition-mii-ex-seltene-empfehlung-publikation.html"><code class="language-plaintext highlighter-rouge">mii-ex-seltene-empfehlung-publikation</code></a></td>
+      <td>Verweis auf Publikation der (einzelnen) Empfehlung</td>
+    </tr>
+    <tr>
+      <td>MII EX SE Penetrance</td>
+      <td><a href="StructureDefinition-mii-ex-seltene-penetrance.html"><code class="language-plaintext highlighter-rouge">mii-ex-seltene-penetrance</code></a></td>
+      <td>Extension to capture the penetrance of genetic variants associated with a rare disease</td>
+    </tr>
+    <tr>
+      <td>MII EX SE Register</td>
+      <td><a href="StructureDefinition-mii-ex-seltene-register.html"><code class="language-plaintext highlighter-rouge">mii-ex-seltene-register</code></a></td>
+      <td>Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.</td>
+    </tr>
+    <tr>
+      <td>MII_EX_Seltene_VonSEBetroffen</td>
+      <td><a href="StructureDefinition-mii-ex-seltene-von-se-betroffen.html"><code class="language-plaintext highlighter-rouge">mii-ex-seltene-von-se-betroffen</code></a></td>
+      <td>Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- END GENERATED: artifact-list -->
 
 
 
@@ -352,7 +382,7 @@ entfernen Sie diese Seite, wenn Ihr Modul keine definiert.]</p>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 4, 2026 06:37+0000">2026-09-04</span>
+          Erstellt <span title="Fri, Sep 4, 2026 07:02+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

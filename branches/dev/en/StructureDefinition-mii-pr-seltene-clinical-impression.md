@@ -65,18 +65,7 @@ ClinicalImpression (first presentation)
 
 -------
 
-**Search parameters**
-
-The following search parameters are relevant for the Rare Diseases module, also in combination:
-
-1. The search parameter `_id` MUST be supported:Examples:`GET [base]/ClinicalImpression?_id=1234`Usage notes: Further information on searching for "_id" can be found in the [FHIR base specification, section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter "_profile" MUST be supported:Examples:`GET [base]/ClinicalImpression?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression`Usage notes: Further information on searching for "_profile" can be found in the [FHIR base specification, section "token"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter "status" MUST be supported:Examples:`GET [base]/ClinicalImpression?status=completed`Usage notes: Further information on searching for "status" can be found in the FHIR base specification, section "token".
-1. The search parameter "subject" MUST be supported:Examples:`GET [base]/ClinicalImpression?subject=Patient/example`Usage notes: Further information on searching for "subject" can be found in the FHIR base specification, section "reference".
-1. The search parameter "problem" MUST be supported:Examples:`GET [base]/ClinicalImpression?problem=Condition/example`Usage notes: Further information on searching for "problem" can be found in the FHIR base specification, section "reference".
-1. The search parameter "encounter" MUST be supported:Examples:`GET [base]/ClinicalImpression?encounter=Encounter/example`Usage notes: Further information on searching for "encounter" can be found in the FHIR base specification, section "reference".
-1. The search parameter "date" MUST be supported:Examples:`GET [base]/ClinicalImpression?date=2024-02-08`Usage notes: Further information on searching for "date" can be found in the FHIR base specification, section "date".
-1. The search parameter "finding-ref" MUST be supported:Examples:`GET [base]/ClinicalImpression?finding-ref=Observation/example`Usage notes: Further information on searching for "finding-ref" can be found in the FHIR base specification, section "reference".
+**Search parameters** are declared module-wide in the [CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md) — machine-readable and complete there, rather than repeated by hand per profile.
 
 Example instances are linked in the "Examples" section of the profile page.
 
@@ -108,7 +97,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
   "name" : "MII_PR_Seltene_ClinicalImpression",
   "title" : "MII Profile SE Clinical Impression",
   "status" : "active",
-  "date" : "2026-09-04T06:37:14+00:00",
+  "date" : "2026-09-04T07:02:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

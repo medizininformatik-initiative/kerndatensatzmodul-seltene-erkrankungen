@@ -311,21 +311,6 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
      nicht. Sobald sushi-config.yaml ein CRMI-Profil, eine artifact-*-Extension
      oder einen Manifest-Parameter gewinnt oder verliert, sind die Tabellen unten
      in BEIDEN Sprachen nachzuziehen. -->
-<!-- OPTIONAL-PAGE (0..1) — Marker entfernen, wenn die Seite BLEIBT; andernfalls
-     die Seite gemäß docs/optional-pages.md entfernen. Der Konventions-Check
-     (M9) lässt ein Release mit diesem Marker fehlschlagen. -->
-
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p><strong>Optionale Seite (0..1).</strong> Das KDS-Modulmenü führt diese Seite als
-<em>optional</em> — behalten Sie sie nur, wenn die Profile Ihres Moduls die hier
-dokumentierten Metadaten-Charakteristiken aufweisen (wie z. B. das
-Basis-Modul). Entscheiden Sie für Ihr Modul: Seite <strong>behalten</strong> — Inhalte
-ausfüllen und dieses Banner samt <code class="language-plaintext highlighter-rouge">OPTIONAL-PAGE</code>-Marker-Kommentar löschen (in
-dieser Datei UND in der englischen Quellseite) — oder Seite <strong>entfernen</strong>,
-nach der Schritt-für-Schritt-Anleitung in <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/docs/optional-pages.md"><code class="language-plaintext highlighter-rouge">docs/optional-pages.md</code></a> dieses
-Repositories. Ein Release darf dieses Banner nicht enthalten
-(Konventions-Check M9).</p>
-</blockquote>
 
 <p>Diese Seite beschreibt die maschinenlesbaren Metadaten des Moduls
 <strong>Seltene Erkrankungen</strong>. Sie existieren, damit die Artefakte dieses Leitfadens
@@ -334,12 +319,16 @@ wiederverwendbar sind — für Menschen wie für Software.</p>
 
 <p>Das Metadatenmodell folgt dem
 <a href="https://hl7.org/fhir/uv/crmi/STU2/en/index.html">Canonical Resource Management Infrastructure Implementation Guide</a>
-(CRMI). CRMI beschreibt, wie Wissensartefakte über ihren gesamten
-Lebenszyklus hinweg konsistent ausgetauscht werden — von der Autorenschaft über
-Veröffentlichung und Verteilung bis zur Implementierung. Dieser Leitfaden
-verwendet die CRMI-Profile, -Extensions und -Manifest-Mechanismen, die für die
-Veröffentlichung eines MII-Kerndatensatz-Moduls als versionierter
-FHIR-Implementierungsleitfaden nützlich sind.</p>
+(CRMI); was CRMI ist und leistet, steht dort und wird hier nicht wiederholt.</p>
+
+<p>Ebenso wenig wiederholt diese Seite, was MII-weit gilt und im Modul
+<strong>kerndatensatz-meta</strong> gepflegt wird — dort und nicht hier stehen
+<a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII">Namenskonventionen für FHIR-Ressourcen</a>,
+die <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Terminology-Version-Policy">Terminology Version Policy</a>,
+der <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow">Module Release Workflow</a>
+und die <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/%C3%9Cbersicht-%C3%BCber-Versionen-der-Kerndatensatz%E2%80%90Module">Übersicht über die Versionen der KDS-Module</a>.</p>
+
+<p>Was unten folgt, ist ausschließlich das, was <strong>dieses</strong> Modul deklariert.</p>
 
 <p>Das Vorgehen ist vorläufig: Es hält den derzeit genutzten CRMI-Ansatz fest und
 kann angepasst werden, wenn CRMI reift, sich der KDS-Veröffentlichungsprozess
@@ -816,7 +805,7 @@ Ressourcen die vollständigen maschinenlesbaren Metadaten.</p>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 4, 2026 06:37+0000">2026-09-04</span>
+          Erstellt <span title="Fri, Sep 4, 2026 07:02+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

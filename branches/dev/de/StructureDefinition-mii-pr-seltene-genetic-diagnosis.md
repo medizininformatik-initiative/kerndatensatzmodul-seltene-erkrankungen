@@ -16,19 +16,7 @@ Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and
 
 Dieses Profil beschreibt eine genetisch bestätigte Diagnose einer seltenen Erkrankung. Es wird verwendet, wenn die Diagnose durch molekulargenetische Untersuchung bestätigt wurde.
 
-**Suchparameter**
-
-Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch in Kombination:
-
-1. Der Suchparameter `_id` MUSS unterstützt werden:Beispiele:`GET [base]/Condition?_id=1234`Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-1. Der Suchparameter "_profile" MUSS unterstützt werden:Beispiele:`GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis`Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
-1. Der Suchparameter "category" MUSS unterstützt werden:Beispiele:`GET [base]/Condition?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory`Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
-1. Der Suchparameter "code" MUSS unterstützt werden:Beispiele:`GET [base]/Condition?code=http://fhir.de/CodeSystem/sct|184305005`Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
-1. Der Suchparameter "subject" MUSS unterstützt werden:Beispiele:`GET [base]/Condition?subject=Patient/example`Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-1. Der Suchparameter "focus" MUSS unterstützt werden:Beispiele:`GET [base]/Condition?focus=Condition/example`Anwendungshinweise: Weitere Informationen zur Suche nach "focus" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-1. Der Suchparameter "encounter" MUSS unterstützt werden:Beispiele:`GET [base]/Condition?encounter=Encounter/example`Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-1. Der Suchparameter "date" MUSS unterstützt werden:Beispiele:`GET [base]/Condition?date=2024-02-08`Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
-1. Der Suchparameter "derived-from" MUSS unterstützt werden:Beispiele:`GET [base]/Condition?derived-from=Observation/example`Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+**Suchparameter** sind modulweit im [CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md) deklariert — dort maschinenlesbar und vollständig, statt je Profil von Hand wiederholt.
 
 Beispielinstanzen sind auf der Profilseite im Abschnitt „Examples" verlinkt.
 
@@ -239,7 +227,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_GeneticDiagnosis",
   "title" : "MII PR SE Genetic Diagnosis",
   "status" : "active",
-  "date" : "2026-09-04T06:37:14+00:00",
+  "date" : "2026-09-04T07:02:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

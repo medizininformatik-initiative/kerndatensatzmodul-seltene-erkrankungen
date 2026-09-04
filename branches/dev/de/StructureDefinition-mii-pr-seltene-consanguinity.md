@@ -115,7 +115,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Consanguinity",
   "title" : "MII PR SE Consanguinity",
   "status" : "active",
-  "date" : "2026-09-04T06:37:14+00:00",
+  "date" : "2026-09-04T07:02:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -147,6 +147,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "SE-LogicalModel",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene",
+    "name" : "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -284,7 +289,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "type" : [{
         "code" : "CodeableConcept"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "familienanamnese.konsanguinitaetEltern",
+        "comment" : "Blutsverwandtschaft der Eltern"
+      }]
     },
     {
       "id" : "Observation.value[x].coding",

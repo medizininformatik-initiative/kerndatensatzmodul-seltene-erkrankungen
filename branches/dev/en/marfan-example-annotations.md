@@ -183,39 +183,70 @@ This document contains the semantic annotations for a case example of Marfan syn
 
 ##### Patient and phenotype
 
-| Resource ID | Type | Description | Date | Status/details | |————–|—–|————–|——-|—————-| | `mii-exa-seltene-patient-marfan-001` | Patient | 19-year-old man | Birth: ~2005 | ID: MRF-2024-001 | | `mii-exa-seltene-observation-height-001` | Observation | Body height | 2024-12-15 | 2.13 m (HPO:0000098) | | `mii-exa-seltene-observation-leg-asymmetry` | Observation | Leg length discrepancy | 2024-12-15 | Right shortened (HPO:0100559) |
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| `mii-exa-seltene-patient-marfan-001` | Patient | 19-year-old man | Birth: ~2005 | ID: MRF-2024-001 |
+| `mii-exa-seltene-observation-height-001` | Observation | Body height | 2024-12-15 | 2.13 m (HPO:0000098) |
+| `mii-exa-seltene-observation-leg-asymmetry` | Observation | Leg length discrepancy | 2024-12-15 | Right shortened (HPO:0100559) |
 
 ##### Symptoms and findings
 
-| Resource ID | Type | Description | Date | HPO code | Severity | |————–|—–|————–|——-|———-|————-| | `mii-exa-seltene-symptom-chest-pain` | Observation | Chest pain | 2024-12-15 | HP:0100749 | Acute | | `mii-exa-seltene-symptom-aortic-root` | Observation | Aortic root dilatation | 2024-12-15 | HP:0002616 | 48 mm | | `mii-exa-seltene-symptom-aortic-regurg` | Observation | Aortic valve regurgitation | 2024-12-15 | HP:0001659 | Grade II | | `mii-exa-seltene-symptom-mitral-regurg` | Observation | Mitral valve regurgitation | 2024-12-15 | HP:0001653 | Grade I | | `mii-exa-seltene-symptom-cataract` | Observation | Bilateral cataract | 2024-10-15 | HP:0000518 | Bilateral |
+| | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `mii-exa-seltene-symptom-chest-pain` | Observation | Chest pain | 2024-12-15 | HP:0100749 | Acute |
+| `mii-exa-seltene-symptom-aortic-root` | Observation | Aortic root dilatation | 2024-12-15 | HP:0002616 | 48 mm |
+| `mii-exa-seltene-symptom-aortic-regurg` | Observation | Aortic valve regurgitation | 2024-12-15 | HP:0001659 | Grade II |
+| `mii-exa-seltene-symptom-mitral-regurg` | Observation | Mitral valve regurgitation | 2024-12-15 | HP:0001653 | Grade I |
+| `mii-exa-seltene-symptom-cataract` | Observation | Bilateral cataract | 2024-10-15 | HP:0000518 | Bilateral |
 
 ##### Diagnoses
 
-| Resource ID | Type | Description | Date of determination | ICD-10 | Orpha | |————–|—–|————–|——————-|———|——-| | `condition-marfan-confirmed` | Condition | Marfan syndrome | 2024-12-15 | Q87.4 | 558 | | `mii-exa-seltene-condition-cataract` | Condition | Bilateral cataract | 2024-10-15 | H26.9 | - |
+| | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `condition-marfan-confirmed` | Condition | Marfan syndrome | 2024-12-15 | Q87.4 | 558 |
+| `mii-exa-seltene-condition-cataract` | Condition | Bilateral cataract | 2024-10-15 | H26.9 | - |
 
 ##### Procedures
 
-| Resource ID | Type | Description | Date | OPS code | Status | |————–|—–|————–|——-|———-|———| | `mii-exa-seltene-procedure-cataract-surgery` | Procedure | Phacoemulsification with IOL | 2024-11-12 | 5-144.5a | Completed | | `mii-exa-seltene-procedure-aortic-planned` | Procedure | Aortic root replacement (David procedure) | 2025-03-15 | 5-354.0a | Planned |
+| | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `mii-exa-seltene-procedure-cataract-surgery` | Procedure | Phacoemulsification with IOL | 2024-11-12 | 5-144.5a | Completed |
+| `mii-exa-seltene-procedure-aortic-planned` | Procedure | Aortic root replacement (David procedure) | 2025-03-15 | 5-354.0a | Planned |
 
 ##### Medication
 
-| Resource ID | Type | Drug | Dose | Start | Indication | |————–|—–|————|———–|——-|————| | `mii-exa-seltene-medication-losartan` | MedicationStatement | Losartan | 50 mg once daily | 2024-12-15 | Aortic protection |
+| | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `mii-exa-seltene-medication-losartan` | MedicationStatement | Losartan | 50 mg once daily | 2024-12-15 | Aortic protection |
 
 ##### Diagnostics
 
-| Resource ID | Type | Examination | Date | Key findings | |————–|—–|————–|——-|——————| | `mii-exa-seltene-observation-echo-aortic` | Observation | Aortic root echo | 2024-12-15 | 48 mm (pathological) | | `mii-exa-seltene-observation-echo-av` | Observation | AV regurgitation echo | 2024-12-15 | Grade II | | `mii-exa-seltene-observation-echo-mv` | Observation | MV regurgitation echo | 2024-12-15 | Grade I |
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| `mii-exa-seltene-observation-echo-aortic` | Observation | Aortic root echo | 2024-12-15 | 48 mm (pathological) |
+| `mii-exa-seltene-observation-echo-av` | Observation | AV regurgitation echo | 2024-12-15 | Grade II |
+| `mii-exa-seltene-observation-echo-mv` | Observation | MV regurgitation echo | 2024-12-15 | Grade I |
 
 ##### Encounters
 
-| Resource ID | Type | Description | Date | Setting | Specialty | |————–|—–|————–|——-|———|————-| | `mii-exa-seltene-encounter-ophthalmology` | Encounter | Ophthalmological consultation | 2024-10-15 | Outpatient | Ophthalmology | | `mii-exa-seltene-encounter-cataract-surgery` | Encounter | Cataract surgery | 2024-11-12 | Day clinic | Ophthalmology | | `mii-exa-seltene-encounter-cardiology` | Encounter | First cardiological presentation | 2024-12-15 | Outpatient | Cardiology | | `mii-exa-seltene-encounter-surgery-planned` | Encounter | Planned cardiac surgery | 2025-03-15 | Inpatient | Cardiac surgery |
+| | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `mii-exa-seltene-encounter-ophthalmology` | Encounter | Ophthalmological consultation | 2024-10-15 | Outpatient | Ophthalmology |
+| `mii-exa-seltene-encounter-cataract-surgery` | Encounter | Cataract surgery | 2024-11-12 | Day clinic | Ophthalmology |
+| `mii-exa-seltene-encounter-cardiology` | Encounter | First cardiological presentation | 2024-12-15 | Outpatient | Cardiology |
+| `mii-exa-seltene-encounter-surgery-planned` | Encounter | Planned cardiac surgery | 2025-03-15 | Inpatient | Cardiac surgery |
 
 ##### Clinical assessments
 
-| Resource ID | Type | Description | Date | Key aspects | |————–|—–|————–|——-|——————| | `clinical-impression-cardiology` | ClinicalImpression | Cardiological assessment | 2024-12-15 | Marfan confirmed, indication for surgery |
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| `clinical-impression-cardiology` | ClinicalImpression | Cardiological assessment | 2024-12-15 | Marfan confirmed, indication for surgery |
 
 #### Bundle
 
-| Resource ID | Type | Description | Number of entries | |————–|—–|————–|—————–| | `mii-exa-seltene-bundle-marfan-complete` | Bundle | Transaction bundle with all resources | 20 resources |
+| | | | |
+| :--- | :--- | :--- | :--- |
+| `mii-exa-seltene-bundle-marfan-complete` | Bundle | Transaction bundle with all resources | 20 resources |
 
 ### Resource diagrams
 

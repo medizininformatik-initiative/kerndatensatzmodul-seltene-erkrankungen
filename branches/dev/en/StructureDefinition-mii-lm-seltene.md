@@ -41,7 +41,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
   "name" : "MII_LM_Seltene",
   "title" : "MII LM SE",
   "status" : "active",
-  "date" : "2026-09-04T06:37:14+00:00",
+  "date" : "2026-09-04T07:02:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -742,6 +742,149 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene.cs
       "max" : "1",
       "type" : [{
         "code" : "date"
+      }]
+    },
+    {
+      "id" : "Seltene.familienanamnese.konsanguinitaetEltern",
+      "path" : "Seltene.familienanamnese.konsanguinitaetEltern",
+      "short" : "Blutsverwandtschaft der Eltern",
+      "definition" : "Gibt an, ob die biologischen Eltern des Indexpatienten blutsverwandt sind (RD-CDM v2.0.0 6.4.4).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.perinatal",
+      "path" : "Seltene.perinatal",
+      "short" : "Prä- und perinatale Angaben",
+      "definition" : "Prä- und perinatale Angaben",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.perinatal.gestationsalter",
+      "path" : "Seltene.perinatal.gestationsalter",
+      "short" : "Gestationsalter bei Geburt",
+      "definition" : "Vollendete Schwangerschaftswochen bei Geburt des Indexpatienten.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }]
+    },
+    {
+      "id" : "Seltene.perinatal.geburtsgewicht",
+      "path" : "Seltene.perinatal.geburtsgewicht",
+      "short" : "Geburtsgewicht in g",
+      "definition" : "Geburtsgewicht des Indexpatienten in Gramm.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }]
+    },
+    {
+      "id" : "Seltene.perinatal.geburtslaenge",
+      "path" : "Seltene.perinatal.geburtslaenge",
+      "short" : "Geburtslänge in cm",
+      "definition" : "Körperlänge des Indexpatienten bei Geburt in Zentimetern.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }]
+    },
+    {
+      "id" : "Seltene.funktionsfaehigkeit",
+      "path" : "Seltene.funktionsfaehigkeit",
+      "short" : "Funktionsfähigkeit und Behinderung (ICF)",
+      "definition" : "Funktionsfähigkeit und Behinderung (ICF)",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.funktionsfaehigkeit.icfCode",
+      "path" : "Seltene.funktionsfaehigkeit.icfCode",
+      "short" : "ICF-Code",
+      "definition" : "Kode der Internationalen Klassifikation der Funktionsfähigkeit, Behinderung und Gesundheit.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.funktionsfaehigkeit.beurteilungsmerkmal",
+      "path" : "Seltene.funktionsfaehigkeit.beurteilungsmerkmal",
+      "short" : "Beurteilungsmerkmal",
+      "definition" : "WHO-Qualifier zum ICF-Kode. Ihre Zahl ist je Kapitel verschieden: Körperstrukturen tragen drei, Aktivitäten und Partizipation zwei.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.funktionsfaehigkeit.erhebungsdatum",
+      "path" : "Seltene.funktionsfaehigkeit.erhebungsdatum",
+      "short" : "Erhebungsdatum",
+      "definition" : "Datum der ICF-Einstufung.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "Seltene.registerteilnahme",
+      "path" : "Seltene.registerteilnahme",
+      "short" : "Teilnahme an Registern",
+      "definition" : "Teilnahme an Registern",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.registerteilnahme.registerName",
+      "path" : "Seltene.registerteilnahme.registerName",
+      "short" : "Register",
+      "definition" : "Register, an dem der Indexpatient teilnimmt, insbesondere ein Register eines Europäischen Referenznetzwerks (ERN).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.registerteilnahme.teilnahmestatus",
+      "path" : "Seltene.registerteilnahme.teilnahmestatus",
+      "short" : "Teilnahmestatus",
+      "definition" : "Status der Teilnahme am Register.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "Seltene.registerteilnahme.teilnahmezeitraum",
+      "path" : "Seltene.registerteilnahme.teilnahmezeitraum",
+      "short" : "Teilnahmezeitraum",
+      "definition" : "Zeitraum der Teilnahme am Register.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Period"
       }]
     },
     {

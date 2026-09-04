@@ -90,56 +90,6 @@ The elements of the logical data model are mapped to the FamilyMemberHistory pro
 
 ---
 
-**Search parameters**
-
-The following search parameters are relevant for the Rare Diseases module, also in combination:
-
-1. The search parameter ```_id``` MUST be supported:
-
-    Examples: 
-
-    ```GET [base]/FamilyMemberHistory?_id=1234```
-    
-    Usage notes: Further information on searching for "_id" can be found in the [FHIR base specification, section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-2. The search parameter "_profile" MUST be supported:
-
-    Examples:
-    
-    ```GET [base]/FamilyMemberHistory?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese```
-    
-    Usage notes: Further information on searching for "_profile" can be found in the [FHIR base specification, section "token"](http://hl7.org/fhir/R4/search.html#all).
-
-3. The search parameter "patient" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/FamilyMemberHistory?patient=Patient/example```
-
-    Usage notes: Further information on searching for "patient" can be found in the FHIR base specification, section "reference".
-
-4. The search parameter "status" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/FamilyMemberHistory?status=completed```
-
-    Usage notes: Further information on searching for "status" can be found in the FHIR base specification, section "token".
-
-5. The search parameter "relationship" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/FamilyMemberHistory?relationship=http://terminology.hl7.org/CodeSystem/v3-RoleCode|FTH```
-
-    Usage notes: Further information on searching for "relationship" can be found in the FHIR base specification, section "token".
-
-6. The search parameter "code" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/FamilyMemberHistory?code=http://www.orpha.net|558```
-
-    Usage notes: Further information on searching for "code" can be found in the FHIR base specification, section "token".
+**Search parameters** are declared module-wide in the [CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.html) &mdash; machine-readable and complete there, rather than repeated by hand per profile.
 
 Example instances are linked in the "Examples" section of the profile page.

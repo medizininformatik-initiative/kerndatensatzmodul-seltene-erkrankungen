@@ -18,17 +18,7 @@ Dieses Profil beschreibt einen Therapieplan für Patienten mit Seltenen Erkranku
 
 -------
 
-**Suchparameter**
-
-Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch in Kombination:
-
-1. Der Suchparameter `_id` MUSS unterstützt werden:Beispiele:`GET [base]/CarePlan?_id=1234`Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-1. Der Suchparameter "_profile" MUSS unterstützt werden:Beispiele:`GET [base]/CarePlan?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan`Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
-1. Der Suchparameter "category" MUSS unterstützt werden:Beispiele:`GET [base]/CarePlan?category=http://snomed.info/sct|734163000`Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
-1. Der Suchparameter "subject" MUSS unterstützt werden:Beispiele:`GET [base]/CarePlan?subject=Patient/example`Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-1. Der Suchparameter "encounter" MUSS unterstützt werden:Beispiele:`GET [base]/CarePlan?encounter=Encounter/example`Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-1. Der Suchparameter "date" MUSS unterstützt werden:Beispiele:`GET [base]/CarePlan?date=2024-02-08`Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".
-1. Der Suchparameter "activity-reference" MUSS unterstützt werden:Beispiele:`GET [base]/CarePlan?activity-reference=ServiceRequest/example`Anwendungshinweise: Weitere Informationen zur Suche nach "activity-reference" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
+**Suchparameter** sind modulweit im [CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md) deklariert — dort maschinenlesbar und vollständig, statt je Profil von Hand wiederholt.
 
 Beispielinstanzen sind auf der Profilseite im Abschnitt „Examples" verlinkt.
 
@@ -142,7 +132,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Therapieplan",
   "title" : "MII PR SE Therapieplan",
   "status" : "active",
-  "date" : "2026-09-04T06:37:14+00:00",
+  "date" : "2026-09-04T07:02:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

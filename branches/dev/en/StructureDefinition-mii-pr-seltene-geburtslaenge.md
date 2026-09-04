@@ -41,7 +41,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
   "name" : "MII_PR_Seltene_Geburtslaenge",
   "title" : "MII PR SE Geburtslänge",
   "status" : "active",
-  "date" : "2026-09-04T06:37:14+00:00",
+  "date" : "2026-09-04T07:02:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -73,6 +73,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "SE-LogicalModel",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene",
+    "name" : "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -193,7 +198,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "type" : [{
         "code" : "Quantity"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "perinatal.geburtslaenge",
+        "comment" : "Geburtslänge"
+      }]
     },
     {
       "id" : "Observation.value[x].value",

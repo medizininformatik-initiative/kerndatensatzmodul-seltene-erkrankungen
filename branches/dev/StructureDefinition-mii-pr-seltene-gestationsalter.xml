@@ -46,7 +46,7 @@
   <name value="MII_PR_Seltene_Gestationsalter"/>
   <title value="MII PR SE Gestationsalter bei Geburt"/>
   <status value="active"/>
-  <date value="2026-09-04T06:37:14+00:00"/>
+  <date value="2026-09-04T07:02:52+00:00"/>
   <publisher value="Medizininformatik Initiative">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
@@ -73,6 +73,11 @@
     </coding>
   </jurisdiction>
   <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="SE-LogicalModel"/>
+    <uri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"/>
+    <name value="Mapping FHIR zu Seltene Erkrankungen Logical Model"/>
+  </mapping>
   <mapping>
     <identity value="workflow"/>
     <uri value="http://hl7.org/fhir/workflow"/>
@@ -1308,6 +1313,11 @@
       <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="true"/>
+      <mapping>
+        <identity value="SE-LogicalModel"/>
+        <map value="perinatal.gestationsalter"/>
+        <comment value="Gestationsalter bei Geburt"/>
+      </mapping>
       <mapping>
         <identity value="sct-concept"/>
         <map value="&lt; 441742003 |Evaluation finding|"/>
@@ -2812,6 +2822,11 @@
         <code value="Quantity"/>
       </type>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="SE-LogicalModel"/>
+        <map value="perinatal.gestationsalter"/>
+        <comment value="Gestationsalter bei Geburt"/>
+      </mapping>
     </element>
     <element id="Observation.value[x].value">
       <path value="Observation.value[x].value"/>

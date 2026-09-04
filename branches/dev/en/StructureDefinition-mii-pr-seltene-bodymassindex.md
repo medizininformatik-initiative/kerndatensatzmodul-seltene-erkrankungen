@@ -16,19 +16,7 @@ Describes the Body Mass Index (BMI) of the patient.
 
 This profile describes the body mass index of a patient and is needed, among other things, for musculoskeletal and metabolic diseases. The profile is not specific to rare diseases but had not been implemented elsewhere so far.
 
-**Search parameters**
-
-The following search parameters are relevant for the Rare Diseases module, also in combination:
-
-1. The search parameter `_id` MUST be supported:Examples:`GET [base]/Observation?_id=1234`Usage notes: Further information on searching for "_id" can be found in the [FHIR base specification, section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter "_profile" MUST be supported:Examples:`GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex`Usage notes: Further information on searching for "_profile" can be found in the [FHIR base specification, section "token"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter "category" MUST be supported:Examples:`GET [base]/Observation?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory`Usage notes: Further information on searching for "category" can be found in the FHIR base specification, section "token".
-1. The search parameter "code" MUST be supported:Examples:`GET [base]/Observation?code=http://fhir.de/CodeSystem/sct|184305005`Usage notes: Further information on searching for "code" can be found in the FHIR base specification, section "token".
-1. The search parameter "subject" MUST be supported:Examples:`GET [base]/Observation?subject=Patient/example`Usage notes: Further information on searching for "subject" can be found in the FHIR base specification, section "reference".
-1. The search parameter "focus" MUST be supported:Examples:`GET [base]/Observation?focus=Condition/example`Usage notes: Further information on searching for "focus" can be found in the FHIR base specification, section "reference".
-1. The search parameter "encounter" MUST be supported:Examples:`GET [base]/Observation?encounter=Encounter/example`Usage notes: Further information on searching for "encounter" can be found in the FHIR base specification, section "reference".
-1. The search parameter "date" MUST be supported:Examples:`GET [base]/Observation?date=2024-02-08`Usage notes: Further information on searching for "date" can be found in the FHIR base specification, section "date".
-1. The search parameter "derived-from" MUST be supported:Examples:`GET [base]/Observation?derived-from=Observation/example`Usage notes: Further information on searching for "derived-from" can be found in the FHIR base specification, section "reference".
+**Search parameters** are declared module-wide in the [CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md) — machine-readable and complete there, rather than repeated by hand per profile.
 
 Example instances are linked in the "Examples" section of the profile page.
 
@@ -60,7 +48,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-bo
   "name" : "MII_PR_Seltene_Bodymassindex",
   "title" : "Body Mass Index (BMI) of the patient",
   "status" : "active",
-  "date" : "2026-09-04T06:37:14+00:00",
+  "date" : "2026-09-04T07:02:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

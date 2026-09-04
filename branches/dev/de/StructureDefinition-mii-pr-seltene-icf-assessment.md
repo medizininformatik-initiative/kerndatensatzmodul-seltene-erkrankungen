@@ -111,7 +111,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_ICFAssessment",
   "title" : "MII PR SE ICF Assessment",
   "status" : "active",
-  "date" : "2026-09-04T06:37:14+00:00",
+  "date" : "2026-09-04T07:02:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -143,6 +143,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "SE-LogicalModel",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene",
+    "name" : "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -265,7 +270,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "Observation.code",
       "short" : "ICF category being graded",
       "definition" : "A single ICF category, e.g. b280 |Sensation of pain| or d450 |Walking|. The chapters are b (body functions), s (body structures), d (activities and participation) and e (environmental factors). German display text is available through the BfArM language supplement without changing the code system.",
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "funktionsfaehigkeit.icfCode",
+        "comment" : "ICF-Code"
+      }]
     },
     {
       "id" : "Observation.code.coding",
@@ -302,7 +312,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       {
         "code" : "Period"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "funktionsfaehigkeit.erhebungsdatum",
+        "comment" : "Erhebungsdatum"
+      }]
     },
     {
       "id" : "Observation.performer",
@@ -331,6 +346,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
         "rules" : "open"
       },
       "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component.value[x]",
+      "path" : "Observation.component.value[x]",
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "funktionsfaehigkeit.beurteilungsmerkmal",
+        "comment" : "WHO-Qualifier zum ICF-Kode"
+      }]
     },
     {
       "id" : "Observation.component:extentOfImpairment",

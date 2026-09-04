@@ -12,7 +12,7 @@
 | Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_CS_Seltene_HPO_ChangeStatus |
 
  
-CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit 
+CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit. Eigene Codes des Moduls: HPO führt für diesen Zweck nichts. Sein Zweig Clinical course (HP:0031797) beschreibt den Verlauf der Krankheit — Onset, Pace of progression, Temporal pattern, Disease remission —, nicht die Veränderung eines einzelnen Phänotyps zwischen zwei Erhebungen. Vier der fünf Konzepte haben SNOMED-CT-Entsprechungen, die je Code unten angegeben sind; für newly-added führt SNOMED kein generisches Konzept. 
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
@@ -37,7 +37,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MII CS Seltene Erkrankungen HPO Change Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T06:37:14+00:00",
+  "date" : "2026-09-04T07:02:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -59,7 +59,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit",
+  "description" : "CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit. Eigene Codes des Moduls: HPO führt für diesen Zweck nichts. Sein Zweig Clinical course (HP:0031797) beschreibt den Verlauf der Krankheit — Onset, Pace of progression, Temporal pattern, Disease remission —, nicht die Veränderung eines einzelnen Phänotyps zwischen zwei Erhebungen. Vier der fünf Konzepte haben SNOMED-CT-Entsprechungen, die je Code unten angegeben sind; für newly-added führt SNOMED kein generisches Konzept.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

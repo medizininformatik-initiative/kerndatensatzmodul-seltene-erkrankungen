@@ -524,59 +524,317 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="ressourcen-übersicht">Ressourcen-Übersicht</h3>
 
 <h4 id="patient-und-familienanamnese">Patient und Familienanamnese</h4>
-<p>| Ressource ID | Typ | Beschreibung | Datum | Status/Details |
-|————–|—–|————–|——-|—————-|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-patient-sma-001</code> | Patient | Neugeborenes Mädchen | Geburt: ~01.07.2024 | ID: SMA-2024-001 |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-family-history-001</code> | FamilyMemberHistory | Urgroßmutter mit Muskelerkrankung | 22.07.2024 | Relation: unsicher |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ressource ID</th>
+      <th>Typ</th>
+      <th>Beschreibung</th>
+      <th>Datum</th>
+      <th>Status/Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-patient-sma-001</code></td>
+      <td>Patient</td>
+      <td>Neugeborenes Mädchen</td>
+      <td>Geburt: ~01.07.2024</td>
+      <td>ID: SMA-2024-001</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-family-history-001</code></td>
+      <td>FamilyMemberHistory</td>
+      <td>Urgroßmutter mit Muskelerkrankung</td>
+      <td>22.07.2024</td>
+      <td>Relation: unsicher</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="diagnose-verlauf">Diagnose-Verlauf</h4>
-<p>| Ressource ID | Typ | Beschreibung | Feststellungsdatum | Verification Status | Codes |
-|————–|—–|————–|——————-|——————-|——–|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-condition-sma-suspected</code> | Condition | Verdacht auf SMA | 18.07.2024 | unconfirmed | SNOMED: 80854005 |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-condition-sma-clinical</code> | Condition | Klinische Diagnose SMA Typ 1 | 22.07.2024 | provisional | ICD-10: G12.0, Orpha: 83330 |
-| <code class="language-plaintext highlighter-rouge">condition-sma-confirmed</code> | Condition | Bestätigte SMA Typ 1 | 26.07.2024 | confirmed | ICD-10: G12.0, Orpha: 83330 |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ressource ID</th>
+      <th>Typ</th>
+      <th>Beschreibung</th>
+      <th>Feststellungsdatum</th>
+      <th>Verification Status</th>
+      <th>Codes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-condition-sma-suspected</code></td>
+      <td>Condition</td>
+      <td>Verdacht auf SMA</td>
+      <td>18.07.2024</td>
+      <td>unconfirmed</td>
+      <td>SNOMED: 80854005</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-condition-sma-clinical</code></td>
+      <td>Condition</td>
+      <td>Klinische Diagnose SMA Typ 1</td>
+      <td>22.07.2024</td>
+      <td>provisional</td>
+      <td>ICD-10: G12.0, Orpha: 83330</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">condition-sma-confirmed</code></td>
+      <td>Condition</td>
+      <td>Bestätigte SMA Typ 1</td>
+      <td>26.07.2024</td>
+      <td>confirmed</td>
+      <td>ICD-10: G12.0, Orpha: 83330</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="screening-und-genetische-befunde">Screening und Genetische Befunde</h4>
-<p>| Ressource ID | Typ | Test/Gen | Befund | Datum | Interpretation |
-|————–|—–|———-|———|——-|—————-|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-sma-screening</code> | Observation | SMA Neugeborenenscreening (LOINC: 92005-8) | SMN1 Exon 7 nicht nachweisbar | 18.07.2024 | Positiv für SMA |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-variant-smn1-001</code> | Observation | SMN1 (HGNC:11117) - Konfirmatorisch | 0 Kopien (Deletion) | 26.07.2024 | Pathologisch, krankheitsursächlich |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-variant-smn2-001</code> | Observation | SMN2 (HGNC:11118) - Konfirmatorisch | 2 Kopien | 26.07.2024 | Phänotyp-Modifikator |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ressource ID</th>
+      <th>Typ</th>
+      <th>Test/Gen</th>
+      <th>Befund</th>
+      <th>Datum</th>
+      <th>Interpretation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-sma-screening</code></td>
+      <td>Observation</td>
+      <td>SMA Neugeborenenscreening (LOINC: 92005-8)</td>
+      <td>SMN1 Exon 7 nicht nachweisbar</td>
+      <td>18.07.2024</td>
+      <td>Positiv für SMA</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-variant-smn1-001</code></td>
+      <td>Observation</td>
+      <td>SMN1 (HGNC:11117) - Konfirmatorisch</td>
+      <td>0 Kopien (Deletion)</td>
+      <td>26.07.2024</td>
+      <td>Pathologisch, krankheitsursächlich</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-variant-smn2-001</code></td>
+      <td>Observation</td>
+      <td>SMN2 (HGNC:11118) - Konfirmatorisch</td>
+      <td>2 Kopien</td>
+      <td>26.07.2024</td>
+      <td>Phänotyp-Modifikator</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="behandlung">Behandlung</h4>
-<p>| Ressource ID | Typ | Beschreibung | Datum | Code | Details |
-|————–|—–|————–|——-|——|———|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-procedure-gentherapy-001</code> | Procedure | Gentherapie (Onasemnogene abeparvovec) | 29.07.2024 | OPS: 6-00d.0, UNII: MLU3LU3EVV | Mit Prednisolon, ohne Komplikationen |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ressource ID</th>
+      <th>Typ</th>
+      <th>Beschreibung</th>
+      <th>Datum</th>
+      <th>Code</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-procedure-gentherapy-001</code></td>
+      <td>Procedure</td>
+      <td>Gentherapie (Onasemnogene abeparvovec)</td>
+      <td>29.07.2024</td>
+      <td>OPS: 6-00d.0, UNII: MLU3LU3EVV</td>
+      <td>Mit Prednisolon, ohne Komplikationen</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="laborwerte-1">Laborwerte</h4>
-<p>| Ressource ID | Typ | Parameter | Datum | Wert | Interpretation |
-|————–|—–|———–|——-|——|—————-|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-troponin-001</code> | Observation | Troponin T hs | 22.07.2024 | 92 ng/l | Erhöht |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-troponin-002</code> | Observation | Troponin T hs | 28.07.2024 | 58 ng/l | Erhöht |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-troponin-003</code> | Observation | Troponin T hs | 01.08.2024 | 57 ng/l | Erhöht |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-troponin-004</code> | Observation | Troponin T hs | 12.08.2024 | 106 ng/l | Erhöht |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-alt-001</code> | Observation | ALT | 29.07.2024 | - | Normwertig |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-ast-001</code> | Observation | AST | 29.07.2024 | - | Normwertig |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-plt-001</code> | Observation | Thrombozytenzahl | 29.07.2024 | - | Normwertig |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ressource ID</th>
+      <th>Typ</th>
+      <th>Parameter</th>
+      <th>Datum</th>
+      <th>Wert</th>
+      <th>Interpretation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-troponin-001</code></td>
+      <td>Observation</td>
+      <td>Troponin T hs</td>
+      <td>22.07.2024</td>
+      <td>92 ng/l</td>
+      <td>Erhöht</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-troponin-002</code></td>
+      <td>Observation</td>
+      <td>Troponin T hs</td>
+      <td>28.07.2024</td>
+      <td>58 ng/l</td>
+      <td>Erhöht</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-troponin-003</code></td>
+      <td>Observation</td>
+      <td>Troponin T hs</td>
+      <td>01.08.2024</td>
+      <td>57 ng/l</td>
+      <td>Erhöht</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-troponin-004</code></td>
+      <td>Observation</td>
+      <td>Troponin T hs</td>
+      <td>12.08.2024</td>
+      <td>106 ng/l</td>
+      <td>Erhöht</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-alt-001</code></td>
+      <td>Observation</td>
+      <td>ALT</td>
+      <td>29.07.2024</td>
+      <td>-</td>
+      <td>Normwertig</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-ast-001</code></td>
+      <td>Observation</td>
+      <td>AST</td>
+      <td>29.07.2024</td>
+      <td>-</td>
+      <td>Normwertig</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-plt-001</code></td>
+      <td>Observation</td>
+      <td>Thrombozytenzahl</td>
+      <td>29.07.2024</td>
+      <td>-</td>
+      <td>Normwertig</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="behandlungskontakte">Behandlungskontakte</h4>
-<p>| Ressource ID | Typ | Beschreibung | Datum | Setting | Verknüpfte Diagnose |
-|————–|—–|————–|——-|———|——————-|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-screening-001</code> | Encounter | Neugeborenenscreening | 18.07.2024 | Screening | <code class="language-plaintext highlighter-rouge">mii-exa-seltene-condition-sma-suspected</code> |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-ambulant-001</code> | Encounter | Erstvorstellung SMA-Zentrum | 22.07.2024 | Ambulant | <code class="language-plaintext highlighter-rouge">mii-exa-seltene-condition-sma-clinical</code> |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-stationaer-001</code> | Encounter | Stationäre Gentherapie | 29-30.07.2024 | Stationär | <code class="language-plaintext highlighter-rouge">condition-sma-confirmed</code> |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-nachsorge-001</code> | Encounter | Nachsorge | 12.08.2024 | Ambulant | <code class="language-plaintext highlighter-rouge">condition-sma-confirmed</code> |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ressource ID</th>
+      <th>Typ</th>
+      <th>Beschreibung</th>
+      <th>Datum</th>
+      <th>Setting</th>
+      <th>Verknüpfte Diagnose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-screening-001</code></td>
+      <td>Encounter</td>
+      <td>Neugeborenenscreening</td>
+      <td>18.07.2024</td>
+      <td>Screening</td>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-condition-sma-suspected</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-ambulant-001</code></td>
+      <td>Encounter</td>
+      <td>Erstvorstellung SMA-Zentrum</td>
+      <td>22.07.2024</td>
+      <td>Ambulant</td>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-condition-sma-clinical</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-stationaer-001</code></td>
+      <td>Encounter</td>
+      <td>Stationäre Gentherapie</td>
+      <td>29-30.07.2024</td>
+      <td>Stationär</td>
+      <td><code class="language-plaintext highlighter-rouge">condition-sma-confirmed</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-nachsorge-001</code></td>
+      <td>Encounter</td>
+      <td>Nachsorge</td>
+      <td>12.08.2024</td>
+      <td>Ambulant</td>
+      <td><code class="language-plaintext highlighter-rouge">condition-sma-confirmed</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="klinische-beurteilungen">Klinische Beurteilungen</h4>
-<p>| Ressource ID | Typ | Beschreibung | Datum | Encounter | Wichtige Befunde |
-|————–|—–|————–|——-|———–|——————|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-clinical-impression-erstvorstellung</code> | ClinicalImpression | Initiale klinische Beurteilung | 22.07.2024 | <code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-ambulant-001</code> | Familienanamnese, Troponin ↑, V.a. SMA Typ 1 |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-clinical-impression-nachsorge</code> | ClinicalImpression | Nachsorgebeurteilung nach Gentherapie | 12.08.2024 | <code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-nachsorge-001</code> | Troponin weiter ↑ (präexistent), ALT/AST/PLT normal |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ressource ID</th>
+      <th>Typ</th>
+      <th>Beschreibung</th>
+      <th>Datum</th>
+      <th>Encounter</th>
+      <th>Wichtige Befunde</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-clinical-impression-erstvorstellung</code></td>
+      <td>ClinicalImpression</td>
+      <td>Initiale klinische Beurteilung</td>
+      <td>22.07.2024</td>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-ambulant-001</code></td>
+      <td>Familienanamnese, Troponin ↑, V.a. SMA Typ 1</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-clinical-impression-nachsorge</code></td>
+      <td>ClinicalImpression</td>
+      <td>Nachsorgebeurteilung nach Gentherapie</td>
+      <td>12.08.2024</td>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-nachsorge-001</code></td>
+      <td>Troponin weiter ↑ (präexistent), ALT/AST/PLT normal</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="bundle">Bundle</h3>
-<p>| Ressource ID | Typ | Beschreibung | Anzahl Einträge |
-|————–|—–|————–|—————–|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-bundle-sma-complete</code> | Bundle | Transaction Bundle mit allen Ressourcen | 22 Ressourcen |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ressource ID</th>
+      <th>Typ</th>
+      <th>Beschreibung</th>
+      <th>Anzahl Einträge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-bundle-sma-complete</code></td>
+      <td>Bundle</td>
+      <td>Transaction Bundle mit allen Ressourcen</td>
+      <td>22 Ressourcen</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="implementierung">Implementierung</h2>
 
@@ -617,7 +875,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 4, 2026 06:37+0000">2026-09-04</span>
+          Erstellt <span title="Fri, Sep 4, 2026 07:02+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

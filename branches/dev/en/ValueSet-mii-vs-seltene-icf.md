@@ -44,7 +44,7 @@ No Expansion for this valueset (Unknown Code System)
   "title" : "MII VS SE ICF Categories",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T06:37:14+00:00",
+  "date" : "2026-09-04T07:02:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

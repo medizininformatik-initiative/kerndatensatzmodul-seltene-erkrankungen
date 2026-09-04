@@ -109,3 +109,14 @@ In den FHIR-Profilen dieses Moduls wird MONDO als **optionaler** Coding-Slice be
 * [MONDO auf OBO Foundry](http://obofoundry.org/ontology/mondo.html)
 * [Monarch Initiative](https://monarchinitiative.org)
 
+Neben den oben beschriebenen externen Terminologien definiert das Modul die folgenden eigenen CodeSystems. Sie bestehen dort, wo keine publizierte Terminologie das Konzept fuehrt.
+
+| | | |
+| :--- | :--- | :--- |
+| MII CS SE Empfehlung Status Begründung | [`mii-cs-seltene-empfehlung-status-begruendung`](CodeSystem-mii-cs-seltene-empfehlung-status-begruendung.md) | Begründung bei fehlender Empfehlung |
+| MII CS Seltene Erkrankungen HPO Change Status | [`mii-cs-seltene-hpo-change-status`](CodeSystem-mii-cs-seltene-hpo-change-status.md) | CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit |
+| MII CS SE ICF Qualifier Kind | [`mii-cs-seltene-icf-beurteilungsmerkmal`](CodeSystem-mii-cs-seltene-icf-beurteilungsmerkmal.md) | Names which ICF qualifier a component carries. This is a slot name, not a scale — the scales themselves are the seven BfArM code systems. Defined locally because neither the ICF nor BfArM publishes identifiers for the qualifier positions, and because capacity and performance share one scale and can only be told apart here. |
+| MII CS Seltene Erkrankungen NARSE Therapietyp | [`mii-cs-seltene-narse-therapietyp`](CodeSystem-mii-cs-seltene-narse-therapietyp.md) | CodeSystem für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen |
+| MII CS SE Therapieempfehlung Strategie | [`mii-cs-seltene-therapieempfehlung-strategie`](CodeSystem-mii-cs-seltene-therapieempfehlung-strategie.md) | Strategietypen für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq |
+| MII CS SE Therapieempfehlung Typ | [`mii-cs-seltene-therapieempfehlung-typ`](CodeSystem-mii-cs-seltene-therapieempfehlung-typ.md) | Therapietyp (kausal vs. symptomatisch) für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq |
+

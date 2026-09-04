@@ -1,28 +1,25 @@
-
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
-
-
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>ValueSets - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link href="fhir.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="fhir.css"/>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
 
-    <!-- Project extras -->
-    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
-    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-  	<link href="assets/css/prism.css" rel="stylesheet" />
-    <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Branding override for the fhir2.base.template CSS placeholder
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+    <link rel="stylesheet" href="assets/css/project.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Branding override for the fhir2.base.template CSS placeholder
      (base ships includes/fragment-css.html as a single comment; it is included
      in <head> AFTER all base stylesheets, so the linked files win the
      cascade).
@@ -39,40 +36,40 @@
      MII design; anything else - including no brand.json at all and unknown
      values - renders NUM-DIZ. Both palettes declare the same variable set
      (scripts/brand-switch.test.mjs). -->
-<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
-<link href="assets/css/template-base.css" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/bootstrap-accessibility.css"/>
+<link rel="stylesheet" href="assets/css/template-base.css"/>
 
-<link href="assets/css/num-diz.css" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/num-diz.css"/>
 
 
 
-    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
-    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+    <script src="assets/js/direction-management.js" type="text/javascript"> </script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+    <![endif] -->
 
-    <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
     <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"8"}
     h3,h4,h5,h6{--heading-prefix:"8"}</style>
-    <div id="segment-header" class="segment">  <!-- segment-header -->
-      <div class="container">  <!-- container -->
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
 
-        <!-- Branding override for the fhir2.base.template header placeholder
+          <!-- Branding override for the fhir2.base.template header placeholder
      (base ships includes/fragment-header.html as a single comment; it is included
      inside "#segment-header > .container", before the #ig-status block).
      Language handling: only the asset and its descriptive alt text switch on
@@ -89,34 +86,34 @@
      (content/assets/images/), so it resolves from the inherited assets without
      shipping it here. -->
 <div id="family-nav">
-  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
-    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  <a no-external="true" id="family-logo" href="https://hl7.org/fhir">
+    <img src="assets/images/fhir-logo-www.png" alt="HL7 FHIR" height="50"/>
   </a>
 </div>
 <div id="project-nav">
 
-  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+  <a no-external="true" id="project-logo" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
 
-    <img height="50" alt="NUM-DIZ (Netzwerk Universitätsmedizin — Datenintegrationszentrum)" src="assets/images/logo-num-diz-de.svg"/>
+    <img src="assets/images/logo-num-diz-de.svg" alt="NUM-DIZ (Netzwerk Universitätsmedizin — Datenintegrationszentrum)" height="50"/>
 
   </a>
 
 </div>
-<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+  <!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
      is the untouched default. Logic in assets/js/font-size-control.js, the
      zoom mapping + button styling in template-base.css ("font-size control"
      block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
      on include.lang. REMOVAL: delete this block, the js file and the CSS
      block - one commit, styleguide §5a. -->
 
-<div class="ig-fontsize" role="group" aria-label="Schriftgröße">
-  <button type="button" data-level="0" aria-pressed="true" aria-label="Schriftgröße: Standard">A</button>
-  <button type="button" data-level="1" aria-pressed="false" aria-label="Schriftgröße: größer">A</button>
-  <button type="button" data-level="2" aria-pressed="false" aria-label="Schriftgröße: am größten">A</button>
+<div role="group" class="ig-fontsize" aria-label="Schriftgröße">
+  <button type="button" aria-label="Schriftgröße: Standard" data-level="0" aria-pressed="true">A</button>
+  <button type="button" aria-label="Schriftgröße: größer" data-level="1" aria-pressed="false">A</button>
+  <button type="button" aria-label="Schriftgröße: am größten" data-level="2" aria-pressed="false">A</button>
 </div>
 
-<script src="assets/js/font-size-control.js" defer></script>
-<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+<script defer="null" src="assets/js/font-size-control.js"></script>
+  <!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
      patches the Bootstrap-3 components the publisher renders - navbar
      dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
      (structure-tabs) the full ARIA tabs pattern, alerts live-region
@@ -126,8 +123,8 @@
      evaluated and rejected: 151 commits behind upstream, its 6 deltas are
      site-specific tab tweaks). REMOVAL: delete this tag, both vendored
      assets and the fragment-css link - guard test pins the hashes. -->
-<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
-<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+<script defer="null" src="assets/js/bootstrap-accessibility.min.js"></script>
+  <!-- Back-to-top button: appears after one viewport of scrolling (logic in
      assets/js/back-to-top.js, styling in template-base.css "back-to-top"
      block). Rendered here inside #segment-header, which is OUTSIDE the
      data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
@@ -135,7 +132,7 @@
 
 <button type="button" class="ig-back-to-top" aria-label="Zurück zum Seitenanfang">↑</button>
 
-<script src="assets/js/back-to-top.js" defer></script>
+<script defer="null" src="assets/js/back-to-top.js"></script>
 
 
         <div id="ig-status">
@@ -151,29 +148,29 @@
             </span>
           </p>
         </div>
-      </div> <!-- /container -->
-    </div>  <!-- /segment-header -->
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">  <!-- container -->
-        <!-- HEADER CONTENT -->
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-          <!--status-bar-->
+            <!-- status-bar -->
           <div class="container">
 
-            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- Deutsche Übersetzung des Menüs (input/includes/menu.xml) — Struktur und
+                <!-- Deutsche Übersetzung des Menüs (input/includes/menu.xml) — Struktur und
      href-Ziele MÜSSEN identisch zur EN-Fassung bleiben; nur die Labels sind
      übersetzt. Migration 2026-08-28. -->
-<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+<ul class="nav navbar-nav">
   <li><a href="index.html">Startseite</a></li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
@@ -222,7 +219,7 @@
   </li>
 </ul>
 
-            </div>  <!-- /.nav-collapse -->
+            </div>    <!-- /.nav-collapse -->
 
               
 
@@ -230,39 +227,39 @@
 
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
-  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  <div style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;" id="select_flg" class="flaglist">
+    <div><img src="assets/images/lang-de.png" alt="flag en" class="flag"/>Deutsch</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Sprache:</div>
- 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+ 	<div style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;" id="flaglist" class="flaglist">
+    <div><img src="assets/images/lang-de.png" alt="flag de" class="flag"/>Deutsch</div>
 
-    <div><a href="../en/value-sets.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+    <div><a href="../en/value-sets.html"><img src="assets/images/lang-en.png" alt="flag en" class="flag"/>English</a></div>
 
   </div>
 </div>
 
 
 
-          </div>  <!-- /.container -->
-        </nav>  <!-- /.navbar -->
-      <!-- /HEADER CONTENT -->
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-navbar -->
-    <!--status-bar-->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
 
-    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
-      <div class="container">  <!-- container -->
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Inhaltsverzeichnis</b></a></li><li><b>ValueSets</b></li>
+          <li><a href="toc.html"><b>Inhaltsverzeichnis</b></a></li><li><b>ValueSets</b></li>
 
         </ul>
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-breadcrumb -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">  <!-- segment-content -->
-      <div class="container">  <!-- container -->
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
@@ -274,7 +271,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Seltene Erkrankungen - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+    <!-- ReleaseHeader --><p id="publish-box">MII IG Kerndatensatz-Modul Seltene Erkrankungen - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   <h2>ValueSets</h2>
   
 
@@ -289,9 +286,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
-    <p><!-- white space is critical inside of capture --></p>
+    <p>  <!-- white space is critical inside of capture --></p>
 <div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
 </div>
 
 <p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
@@ -300,24 +297,11 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
 
 </p>
 
-<!-- markdownlint-disable MD041 -->
-<!-- Deutsche Übersetzung von input/pagecontent/value-sets.md (aufgeteilt aus
+  <!-- markdownlint-disable MD041 -->
+  <!-- Deutsche Übersetzung von input/pagecontent/value-sets.md (aufgeteilt aus
      der früheren Seite terminology.md gemäß der TF-KDS-abgestimmten Menüstruktur).
      Der IG-Publisher listet die ValueSets auf den Artefakt-Seiten automatisch;
      hier stehen die MII-Hinweise dazu. -->
-<!-- OPTIONAL-PAGE (0..1) — Marker entfernen, wenn die Seite BLEIBT; andernfalls
-     die Seite gemäß docs/optional-pages.md entfernen. Der Konventions-Check
-     (M9) lässt ein Release mit diesem Marker fehlschlagen. -->
-
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p><strong>Optionale Seite (0..1).</strong> Das KDS-Modulmenü führt diese Seite als
-<em>optional</em>. Entscheiden Sie für Ihr Modul: Seite <strong>behalten</strong> — Inhalte
-ausfüllen und dieses Banner samt <code class="language-plaintext highlighter-rouge">OPTIONAL-PAGE</code>-Marker-Kommentar löschen (in
-dieser Datei UND in der englischen Quellseite) — oder Seite <strong>entfernen</strong>,
-nach der Schritt-für-Schritt-Anleitung in <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/docs/optional-pages.md"><code class="language-plaintext highlighter-rouge">docs/optional-pages.md</code></a> dieses
-Repositories. Ein Release darf dieses Banner nicht enthalten
-(Konventions-Check M9).</p>
-</blockquote>
 
 <p>Diese Seite beschreibt die ValueSets des Moduls <strong>Seltene Erkrankungen</strong>
 (Namenskonvention <code class="language-plaintext highlighter-rouge">MII_VS_&lt;Modul&gt;_&lt;Name&gt;</code>). Allgemeine Hinweise zur Verwendung
@@ -339,35 +323,212 @@ Sie auf die automatisch erzeugte Artefakt-Liste — oder entfernen Sie diese
 Seite, wenn Ihr Modul keine definiert.]</p>
 </blockquote>
 
+  <!-- BEGIN GENERATED: artifact-list (scripts/generate-artifact-lists.py) -->
+
+<p>Das Modul definiert die folgenden ValueSets. Auch solche, die lediglich Codes einer externen Terminologie buendeln, stehen hier — ihr Canonical gehoert diesem Modul.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titel</th>
+      <th>Id</th>
+      <th>Zweck</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MII VS SE Blutgruppe</td>
+      <td><a href="ValueSet-mii-vs-seltene-blutgruppe.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-blutgruppe</code></a></td>
+      <td>ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List für 882-1</td>
+    </tr>
+    <tr>
+      <td>MII VS Seltene Erkrankungen Consanguinity</td>
+      <td><a href="ValueSet-mii-vs-seltene-consanguinity.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-consanguinity</code></a></td>
+      <td>ValueSet zur Angabe der Blutsverwandtschaft der Eltern (Consanguinity): Ja / Nein / Unbekannt / Nicht erfasst (SNOMED CT), entsprechend dem Consanguinity Value Set aus RD-CDM v2.0.0.</td>
+    </tr>
+    <tr>
+      <td>MII VS SE Empfehlung Status Begründung</td>
+      <td><a href="ValueSet-mii-vs-seltene-empfehlung-status-begruendung.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-empfehlung-status-begruendung</code></a></td>
+      <td>ValueSet für Begründung bei fehlender Empfehlung</td>
+    </tr>
+    <tr>
+      <td>MII VS SE HPO Age of Onset</td>
+      <td><a href="ValueSet-mii-vs-seltene-hpo-age-of-onset.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-hpo-age-of-onset</code></a></td>
+      <td>Value set containing HPO terms for age of onset of diseases</td>
+    </tr>
+    <tr>
+      <td>MII VS Seltene Erkrankungen HPO Change Status</td>
+      <td><a href="ValueSet-mii-vs-seltene-hpo-change-status.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-hpo-change-status</code></a></td>
+      <td>ValueSet für Änderungsstatus von HPO-Phänotypen gemäß Modellvorhaben Genomsequenzierung</td>
+    </tr>
+    <tr>
+      <td>MII VS SE HPO Inheritance Pattern</td>
+      <td><a href="ValueSet-mii-vs-seltene-hpo-inheritance-pattern.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-hpo-inheritance-pattern</code></a></td>
+      <td>Value set containing HPO terms for modes of inheritance</td>
+    </tr>
+    <tr>
+      <td>HPO Phenotypic Observation Codes</td>
+      <td><a href="ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-hpo-phenotypic-observation-codes</code></a></td>
+      <td>Human Phenotype Ontology codes for phenotypic observations</td>
+    </tr>
+    <tr>
+      <td>HPO Phenotype Presence Status</td>
+      <td><a href="ValueSet-mii-vs-seltene-hpo-presence-status.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-hpo-presence-status</code></a></td>
+      <td>LOINC codes for indicating presence or absence of phenotypic features. Follows HL7 Phenomics IG pattern.</td>
+    </tr>
+    <tr>
+      <td>HPO Severity</td>
+      <td><a href="ValueSet-mii-vs-seltene-hpo-severity.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-hpo-severity</code></a></td>
+      <td>HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Phenomics IG component pattern.</td>
+    </tr>
+    <tr>
+      <td>MII VS SE ICF Qualifier Kind</td>
+      <td><a href="ValueSet-mii-vs-seltene-icf-beurteilungsmerkmal.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-icf-beurteilungsmerkmal</code></a></td>
+      <td>All qualifier kinds usable as a component code in the ICF assessment profile.</td>
+    </tr>
+    <tr>
+      <td>MII VS SE ICF Categories</td>
+      <td><a href="ValueSet-mii-vs-seltene-icf.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-icf</code></a></td>
+      <td>All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. German display text comes from the BfArM language supplement, so the value set does not need a German twin.</td>
+    </tr>
+    <tr>
+      <td>MII VS Seltene Erkrankungen NARSE Therapietyp</td>
+      <td><a href="ValueSet-mii-vs-seltene-narse-therapietyp.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-narse-therapietyp</code></a></td>
+      <td>ValueSet für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen</td>
+    </tr>
+    <tr>
+      <td>MII VS Seltene Erkrankungen NBS Acylcarnitine (Trockenblut)</td>
+      <td><a href="ValueSet-mii-vs-seltene-nbs-acylcarnitine-dbs.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-nbs-acylcarnitine-dbs</code></a></td>
+      <td>Acylcarnitin- und Carnitin-Analyte in Trockenblut (dried blood spot) — die Messgrößen des MS/MS-Acylcarnitinprofils im Neugeborenenscreening (Fettsäureoxidationsstörungen, Organoazidopathien, Carnitinzyklusdefekte). Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb NICHT vollständig gegenüber LOINC: enthalten ist der nach SNOMED gemappte Teil. Für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all.</td>
+    </tr>
+    <tr>
+      <td>MII VS Seltene Erkrankungen NBS Aminosäuren (Trockenblut)</td>
+      <td><a href="ValueSet-mii-vs-seltene-nbs-aminoacid-dbs.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-nbs-aminoacid-dbs</code></a></td>
+      <td>Aminosäure-Analyte in Trockenblut — die Messgrößen des MS/MS-Aminosäureprofils im Neugeborenenscreening (Phenylketonurie, Ahornsirupkrankheit, Homocystinurie, Tyrosinämie, Harnstoffzyklusdefekte). Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb NICHT vollständig gegenüber LOINC; für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all.</td>
+    </tr>
+    <tr>
+      <td>MII VS Seltene Erkrankungen NBS alle Trockenblut-Analyte (LOINC)</td>
+      <td><a href="ValueSet-mii-vs-seltene-nbs-dbs-all.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-nbs-dbs-all</code></a></td>
+      <td>Alle LOINC-Codes, deren Untersuchungsmaterial Trockenblut (dried blood spot) ist — intensional über die LOINC-Eigenschaft SYSTEM definiert und damit vollständig. Enthält Analyte, Quotienten, Panels und Interpretationscodes nebeneinander sowie Analytik ausserhalb des Neugeborenenscreenings; für klinisch abgegrenzte Teilmengen dienen die gruppierten ValueSets mii-vs-seltene-nbs-*-dbs.</td>
+    </tr>
+    <tr>
+      <td>MII VS Seltene Erkrankungen NBS Enzymaktivitäten (Trockenblut)</td>
+      <td><a href="ValueSet-mii-vs-seltene-nbs-enzyme-activity-dbs.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-nbs-enzyme-activity-dbs</code></a></td>
+      <td>Enzymaktivitäten (katalytische Konzentration), die in Trockenblut bestimmt werden — u. a. Biotinidase und Galaktose-Enzyme des deutschen Neugeborenenscreenings sowie die Enzyme lysosomaler Speicherkrankheiten, die international gescreent werden.</td>
+    </tr>
+    <tr>
+      <td>MII VS Seltene Erkrankungen NBS Hämoglobin-Fraktionen (Trockenblut)</td>
+      <td><a href="ValueSet-mii-vs-seltene-nbs-hemoglobin-dbs.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-nbs-hemoglobin-dbs</code></a></td>
+      <td>Hämoglobin-Fraktionen in Trockenblut, bezogen auf das Gesamthämoglobin — die Messgrößen des Screenings auf Sichelzellkrankheit und weitere Hämoglobinopathien. Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb deutlich unvollständig gegenüber LOINC (rund ein Drittel der DBS-Hämoglobin-Codes); für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all.</td>
+    </tr>
+    <tr>
+      <td>MII VS Seltene Erkrankungen NBS Quotienten (Trockenblut)</td>
+      <td><a href="ValueSet-mii-vs-seltene-nbs-ratio-dbs.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-nbs-ratio-dbs</code></a></td>
+      <td>Diagnostische Quotienten aus Trockenblut-Analyten. Im Neugeborenenscreening tragen die Verhältnisse (z. B. C3/C2, Phe/Tyr) einen großen Teil der diagnostischen Trennschärfe, weil sie von der Probenqualität weniger abhängen als Einzelwerte.</td>
+    </tr>
+    <tr>
+      <td>MII VS Seltene Erkrankungen NBS Leitanalyten der Zielkrankheiten</td>
+      <td><a href="ValueSet-mii-vs-seltene-nbs-target-analyte.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-nbs-target-analyte</code></a></td>
+      <td>Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie <span class="fhir-conformance"> 17 Abs. 1 (20 Zielkrankheiten) und </span><span class="fhir-conformance"> 17 Abs. 1 (20 Zielkrankheiten) und </span></td>
+    </tr>
+    <tr>
+      <td>MII VS SE Penetrance</td>
+      <td><a href="ValueSet-mii-vs-seltene-penetrance.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-penetrance</code></a></td>
+      <td>Value set for qualitative descriptions of genetic penetrance, drawn from the HPO branch Inheritance qualifier (HP:0034335). Note that the graded terms (high/moderate/low penetrance) are subtypes of incomplete penetrance, not alternatives to complete penetrance.</td>
+    </tr>
+    <tr>
+      <td>MII VS Seltene Erkrankungen Symptom Change Status (Combined)</td>
+      <td><a href="ValueSet-mii-vs-seltene-symptom-change-status-combined.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-symptom-change-status-combined</code></a></td>
+      <td>ValueSet zur Dokumentation von Änderungen bei Symptomen/Phänotypen über Zeit. Kombiniert MVGenomSeq-spezifische Codes mit SNOMED CT-Codes für internationale Interoperabilität.</td>
+    </tr>
+    <tr>
+      <td>Syndrome Category Value Set</td>
+      <td><a href="ValueSet-mii-vs-seltene-syndrome-category.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-syndrome-category</code></a></td>
+      <td>Categories for classifying syndrome types in rare diseases</td>
+    </tr>
+    <tr>
+      <td>MII VS SE Therapieempfehlung Strategie - Medikamentös</td>
+      <td><a href="ValueSet-mii-vs-seltene-therapieempfehlung-strategie-medikamentoes.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-therapieempfehlung-strategie-medikamentoes</code></a></td>
+      <td>ValueSet für medikamentöse Therapiestrategien (für MedicationRequest Profile) - Verwendet für MedicationRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq</td>
+    </tr>
+    <tr>
+      <td>MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös</td>
+      <td><a href="ValueSet-mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes</code></a></td>
+      <td>ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profile) - Verwendet für ServiceRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq</td>
+    </tr>
+    <tr>
+      <td>MII VS SE Therapieempfehlung Strategie</td>
+      <td><a href="ValueSet-mii-vs-seltene-therapieempfehlung-strategie.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-therapieempfehlung-strategie</code></a></td>
+      <td>ValueSet für Strategietypen von Therapieempfehlungen bei seltenen Erkrankungen (Modellvorhaben GenomSeq)</td>
+    </tr>
+    <tr>
+      <td>MII VS SE Therapieempfehlung Typ</td>
+      <td><a href="ValueSet-mii-vs-seltene-therapieempfehlung-typ.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-therapieempfehlung-typ</code></a></td>
+      <td>ValueSet für Therapietypen (kausal/symptomatisch) bei seltenen Erkrankungen (Modellvorhaben GenomSeq)</td>
+    </tr>
+    <tr>
+      <td>Von SE betroffen Value Set</td>
+      <td><a href="ValueSet-mii-vs-seltene-von-se-betroffen.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-von-se-betroffen</code></a></td>
+      <td>ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Verwendet SNOMED CT codes für internationale Interoperabilität.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Zurueckgezogen.</strong> Die folgenden Artefakte bleiben aufloesbar, sollen in neuen Implementierungen aber nicht mehr verwendet werden:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titel</th>
+      <th>Id</th>
+      <th>Zweck</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MII VS SE Clinical Diagnosis Category (retired)</td>
+      <td><a href="ValueSet-mii-vs-seltene-clinical-diagnosis-category.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-clinical-diagnosis-category</code></a></td>
+      <td>RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code.</td>
+    </tr>
+    <tr>
+      <td>MII VS SE Genetic Basis (retired)</td>
+      <td><a href="ValueSet-mii-vs-seltene-genetic-basis.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-genetic-basis</code></a></td>
+      <td>RETIRED. Nicht verwenden. Acht der neun enthaltenen SNOMED-Codes bezeichnen etwas anderes als ihr Display behauptet oder existieren nicht; das ValueSet muss neu erstellt werden.</td>
+    </tr>
+  </tbody>
+</table>
+
+  <!-- END GENERATED: artifact-list -->
+
 
 
 
 </div>
-        </div>  <!-- /inner-wrapper -->
-      </div>  <!-- /row -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-content -->
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
 
-  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
-  <script type="text/javascript" src="assets/js/flags.js"> </script>
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+  <script src="assets/js/flags.js" type="text/javascript"> </script>
 
-  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
   <a name="bottom"> </a>
-  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
-    <div class="container">  <!-- container -->
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
         <p>
 
 
 
-          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 4, 2026 06:37+0000">2026-09-04</span>
+          Erstellt <span title="Fri, Sep 4, 2026 07:02+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
-            <!-- Branding override for the fhir2.base.template footer fragment.
+              <!-- Branding override for the fhir2.base.template footer fragment.
      Unlike header/css, the base footer fragment is NOT an empty placeholder: it
      renders "Links: Table of Contents | QA Report [| feedback dashboards]".
      The base uses site.data.stringsBase[include.lang][...] for the labels. The
@@ -392,40 +553,39 @@ Seite, wenn Ihr Modul keine definiert.]</p>
           Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
                  
-                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
-                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
-                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/impressum">Impressum</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/" target="_blank">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/" target="_blank">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/impressum" target="_blank">Impressum</a>
                  <br/>
-                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                   <!-- HL7 trademark attribution (required wherever the FHIR flame
                       renders - the header shows it on every page; see HL7's
                       trademark guidelines; permission request tracked in issue #109). The sentence is
                       HL7's prescribed formula and stays in English on every
                       language's pages (legal wording, styleguide §6). -->
-                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+                 <span>HL7&reg;, FHIR&reg; and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
 
           </span>
         </p>
-      </div>  <!-- /inner-wrapper -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-footer -->
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
-    <div class="container">  <!-- container -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
 
-  <!-- JS and analytics only. -->
-  <!-- Bootstrap core JavaScript
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
-  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  <!-- Analytics Below
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
   ================================================== -->
   </body>
 </html>
-

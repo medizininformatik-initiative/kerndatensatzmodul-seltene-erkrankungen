@@ -574,62 +574,319 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h4 id="resource-overview">Resource overview</h4>
 
 <h5 id="patient-and-phenotype">Patient and phenotype</h5>
-<p>| Resource ID | Type | Description | Date | Status/details |
-|————–|—–|————–|——-|—————-|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-patient-marfan-001</code> | Patient | 19-year-old man | Birth: ~2005 | ID: MRF-2024-001 |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-height-001</code> | Observation | Body height | 2024-12-15 | 2.13 m (HPO:0000098) |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-leg-asymmetry</code> | Observation | Leg length discrepancy | 2024-12-15 | Right shortened (HPO:0100559) |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource ID</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Status/details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-patient-marfan-001</code></td>
+      <td>Patient</td>
+      <td>19-year-old man</td>
+      <td>Birth: ~2005</td>
+      <td>ID: MRF-2024-001</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-height-001</code></td>
+      <td>Observation</td>
+      <td>Body height</td>
+      <td>2024-12-15</td>
+      <td>2.13 m (HPO:0000098)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-leg-asymmetry</code></td>
+      <td>Observation</td>
+      <td>Leg length discrepancy</td>
+      <td>2024-12-15</td>
+      <td>Right shortened (HPO:0100559)</td>
+    </tr>
+  </tbody>
+</table>
 
 <h5 id="symptoms-and-findings">Symptoms and findings</h5>
-<p>| Resource ID | Type | Description | Date | HPO code | Severity |
-|————–|—–|————–|——-|———-|————-|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-symptom-chest-pain</code> | Observation | Chest pain | 2024-12-15 | HP:0100749 | Acute |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-symptom-aortic-root</code> | Observation | Aortic root dilatation | 2024-12-15 | HP:0002616 | 48 mm |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-symptom-aortic-regurg</code> | Observation | Aortic valve regurgitation | 2024-12-15 | HP:0001659 | Grade II |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-symptom-mitral-regurg</code> | Observation | Mitral valve regurgitation | 2024-12-15 | HP:0001653 | Grade I |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-symptom-cataract</code> | Observation | Bilateral cataract | 2024-10-15 | HP:0000518 | Bilateral |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource ID</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>HPO code</th>
+      <th>Severity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-symptom-chest-pain</code></td>
+      <td>Observation</td>
+      <td>Chest pain</td>
+      <td>2024-12-15</td>
+      <td>HP:0100749</td>
+      <td>Acute</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-symptom-aortic-root</code></td>
+      <td>Observation</td>
+      <td>Aortic root dilatation</td>
+      <td>2024-12-15</td>
+      <td>HP:0002616</td>
+      <td>48 mm</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-symptom-aortic-regurg</code></td>
+      <td>Observation</td>
+      <td>Aortic valve regurgitation</td>
+      <td>2024-12-15</td>
+      <td>HP:0001659</td>
+      <td>Grade II</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-symptom-mitral-regurg</code></td>
+      <td>Observation</td>
+      <td>Mitral valve regurgitation</td>
+      <td>2024-12-15</td>
+      <td>HP:0001653</td>
+      <td>Grade I</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-symptom-cataract</code></td>
+      <td>Observation</td>
+      <td>Bilateral cataract</td>
+      <td>2024-10-15</td>
+      <td>HP:0000518</td>
+      <td>Bilateral</td>
+    </tr>
+  </tbody>
+</table>
 
 <h5 id="diagnoses-1">Diagnoses</h5>
-<p>| Resource ID | Type | Description | Date of determination | ICD-10 | Orpha |
-|————–|—–|————–|——————-|———|——-|
-| <code class="language-plaintext highlighter-rouge">condition-marfan-confirmed</code> | Condition | Marfan syndrome | 2024-12-15 | Q87.4 | 558 |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-condition-cataract</code> | Condition | Bilateral cataract | 2024-10-15 | H26.9 | - |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource ID</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Date of determination</th>
+      <th>ICD-10</th>
+      <th>Orpha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">condition-marfan-confirmed</code></td>
+      <td>Condition</td>
+      <td>Marfan syndrome</td>
+      <td>2024-12-15</td>
+      <td>Q87.4</td>
+      <td>558</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-condition-cataract</code></td>
+      <td>Condition</td>
+      <td>Bilateral cataract</td>
+      <td>2024-10-15</td>
+      <td>H26.9</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
 
 <h5 id="procedures-1">Procedures</h5>
-<p>| Resource ID | Type | Description | Date | OPS code | Status |
-|————–|—–|————–|——-|———-|———|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-procedure-cataract-surgery</code> | Procedure | Phacoemulsification with IOL | 2024-11-12 | 5-144.5a | Completed |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-procedure-aortic-planned</code> | Procedure | Aortic root replacement (David procedure) | 2025-03-15 | 5-354.0a | Planned |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource ID</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>OPS code</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-procedure-cataract-surgery</code></td>
+      <td>Procedure</td>
+      <td>Phacoemulsification with IOL</td>
+      <td>2024-11-12</td>
+      <td>5-144.5a</td>
+      <td>Completed</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-procedure-aortic-planned</code></td>
+      <td>Procedure</td>
+      <td>Aortic root replacement (David procedure)</td>
+      <td>2025-03-15</td>
+      <td>5-354.0a</td>
+      <td>Planned</td>
+    </tr>
+  </tbody>
+</table>
 
 <h5 id="medication-1">Medication</h5>
-<p>| Resource ID | Type | Drug | Dose | Start | Indication |
-|————–|—–|————|———–|——-|————|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-medication-losartan</code> | MedicationStatement | Losartan | 50 mg once daily | 2024-12-15 | Aortic protection |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource ID</th>
+      <th>Type</th>
+      <th>Drug</th>
+      <th>Dose</th>
+      <th>Start</th>
+      <th>Indication</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-medication-losartan</code></td>
+      <td>MedicationStatement</td>
+      <td>Losartan</td>
+      <td>50 mg once daily</td>
+      <td>2024-12-15</td>
+      <td>Aortic protection</td>
+    </tr>
+  </tbody>
+</table>
 
 <h5 id="diagnostics">Diagnostics</h5>
-<p>| Resource ID | Type | Examination | Date | Key findings |
-|————–|—–|————–|——-|——————|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-echo-aortic</code> | Observation | Aortic root echo | 2024-12-15 | 48 mm (pathological) |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-echo-av</code> | Observation | AV regurgitation echo | 2024-12-15 | Grade II |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-echo-mv</code> | Observation | MV regurgitation echo | 2024-12-15 | Grade I |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource ID</th>
+      <th>Type</th>
+      <th>Examination</th>
+      <th>Date</th>
+      <th>Key findings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-echo-aortic</code></td>
+      <td>Observation</td>
+      <td>Aortic root echo</td>
+      <td>2024-12-15</td>
+      <td>48 mm (pathological)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-echo-av</code></td>
+      <td>Observation</td>
+      <td>AV regurgitation echo</td>
+      <td>2024-12-15</td>
+      <td>Grade II</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-observation-echo-mv</code></td>
+      <td>Observation</td>
+      <td>MV regurgitation echo</td>
+      <td>2024-12-15</td>
+      <td>Grade I</td>
+    </tr>
+  </tbody>
+</table>
 
 <h5 id="encounters">Encounters</h5>
-<p>| Resource ID | Type | Description | Date | Setting | Specialty |
-|————–|—–|————–|——-|———|————-|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-ophthalmology</code> | Encounter | Ophthalmological consultation | 2024-10-15 | Outpatient | Ophthalmology |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-cataract-surgery</code> | Encounter | Cataract surgery | 2024-11-12 | Day clinic | Ophthalmology |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-cardiology</code> | Encounter | First cardiological presentation | 2024-12-15 | Outpatient | Cardiology |
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-surgery-planned</code> | Encounter | Planned cardiac surgery | 2025-03-15 | Inpatient | Cardiac surgery |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource ID</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Setting</th>
+      <th>Specialty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-ophthalmology</code></td>
+      <td>Encounter</td>
+      <td>Ophthalmological consultation</td>
+      <td>2024-10-15</td>
+      <td>Outpatient</td>
+      <td>Ophthalmology</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-cataract-surgery</code></td>
+      <td>Encounter</td>
+      <td>Cataract surgery</td>
+      <td>2024-11-12</td>
+      <td>Day clinic</td>
+      <td>Ophthalmology</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-cardiology</code></td>
+      <td>Encounter</td>
+      <td>First cardiological presentation</td>
+      <td>2024-12-15</td>
+      <td>Outpatient</td>
+      <td>Cardiology</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-encounter-surgery-planned</code></td>
+      <td>Encounter</td>
+      <td>Planned cardiac surgery</td>
+      <td>2025-03-15</td>
+      <td>Inpatient</td>
+      <td>Cardiac surgery</td>
+    </tr>
+  </tbody>
+</table>
 
 <h5 id="clinical-assessments">Clinical assessments</h5>
-<p>| Resource ID | Type | Description | Date | Key aspects |
-|————–|—–|————–|——-|——————|
-| <code class="language-plaintext highlighter-rouge">clinical-impression-cardiology</code> | ClinicalImpression | Cardiological assessment | 2024-12-15 | Marfan confirmed, indication for surgery |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource ID</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Key aspects</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">clinical-impression-cardiology</code></td>
+      <td>ClinicalImpression</td>
+      <td>Cardiological assessment</td>
+      <td>2024-12-15</td>
+      <td>Marfan confirmed, indication for surgery</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="bundle">Bundle</h4>
-<p>| Resource ID | Type | Description | Number of entries |
-|————–|—–|————–|—————–|
-| <code class="language-plaintext highlighter-rouge">mii-exa-seltene-bundle-marfan-complete</code> | Bundle | Transaction bundle with all resources | 20 resources |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource ID</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Number of entries</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-exa-seltene-bundle-marfan-complete</code></td>
+      <td>Bundle</td>
+      <td>Transaction bundle with all resources</td>
+      <td>20 resources</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="resource-diagrams">Resource diagrams</h3>
 
@@ -670,7 +927,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 4, 2026 06:37+0000">2026-09-04</span>
+          Generated <span title="Fri, Sep 4, 2026 07:02+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

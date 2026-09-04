@@ -541,84 +541,7 @@ It records symptomatic conditions with temporal characteristics and complements 
 
 <hr />
 
-<p><strong>Search parameters</strong></p>
-
-<p>The following search parameters are relevant for the Rare Diseases module, also in combination:</p>
-
-<ol>
-  <li>
-    <p>The search parameter <code class="language-plaintext highlighter-rouge">_id</code> MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?_id=1234</code></p>
-
-    <p>Usage notes: Further information on searching for "_id" can be found in the <a href="http://hl7.org/fhir/R4/search.html#all">FHIR base specification, section "Parameters for all resources"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "_profile" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition</code></p>
-
-    <p>Usage notes: Further information on searching for "_profile" can be found in the <a href="http://hl7.org/fhir/R4/search.html#all">FHIR base specification, section "token"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "category" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?category=http://snomed.info/sct|418799008</code></p>
-
-    <p>Usage notes: Further information on searching for "category" can be found in the FHIR base specification, section "token".</p>
-  </li>
-  <li>
-    <p>The search parameter "code" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?code=http://hpo.jax.org/app/|HP:0001324</code></p>
-
-    <p>Usage notes: Further information on searching for "code" can be found in the FHIR base specification, section "token".</p>
-  </li>
-  <li>
-    <p>The search parameter "subject" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?subject=Patient/example</code></p>
-
-    <p>Usage notes: Further information on searching for "subject" can be found in the FHIR base specification, section "reference".</p>
-  </li>
-  <li>
-    <p>The search parameter "onset-date" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?onset-date=2024-02-08</code></p>
-
-    <p>Usage notes: Further information on searching for "onset-date" can be found in the FHIR base specification, section "date".</p>
-  </li>
-  <li>
-    <p>The search parameter "severity" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?severity=http://hpo.jax.org/app/|HP:0012828</code></p>
-
-    <p>Usage notes: Further information on searching for "severity" can be found in the FHIR base specification, section "token".</p>
-  </li>
-  <li>
-    <p>The search parameter "evidence" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Condition?evidence=Observation/example</code></p>
-
-    <p>Usage notes: Further information on searching for "evidence" can be found in the FHIR base specification, section "reference".</p>
-  </li>
-</ol>
+<p><strong>Search parameters</strong> are declared module-wide in the <a href="CapabilityStatement-mii-cps-seltene-capabilitystatement.html">CapabilityStatement</a> — machine-readable and complete there, rather than repeated by hand per profile.</p>
 
 <p>Example instances are linked in the "Examples" section of the profile page.</p>
 
@@ -1065,7 +988,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen zur Symptom-Erkrankung<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-symptom-conditionK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionK'), 'binding', document.getElementById('cbmii-pr-seltene-symptom-conditionK-binding').checked, document.getElementById('ppmii-pr-seltene-symptom-conditionK'));
 document.getElementById('cbmii-pr-seltene-symptom-conditionK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1591,7 +1514,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionK'), 'obliga
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen zur Symptom-Erkrankung</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-symptom-conditionD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionD'), 'binding', document.getElementById('cbmii-pr-seltene-symptom-conditionD-binding').checked, document.getElementById('ppmii-pr-seltene-symptom-conditionD'));
 document.getElementById('cbmii-pr-seltene-symptom-conditionD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2191,7 +2114,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen zur Symptom-Erkrankung<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-symptom-conditionS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionS'), 'binding', document.getElementById('cbmii-pr-seltene-symptom-conditionS-binding').checked, document.getElementById('ppmii-pr-seltene-symptom-conditionS'));
 document.getElementById('cbmii-pr-seltene-symptom-conditionS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3056,7 +2979,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen zur Symptom-Erkrankung<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-symptom-conditionKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionKA'), 'binding', document.getElementById('cbmii-pr-seltene-symptom-conditionKA-binding').checked, document.getElementById('ppmii-pr-seltene-symptom-conditionKA'));
 document.getElementById('cbmii-pr-seltene-symptom-conditionKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3581,7 +3504,7 @@ filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionKA'), 'oblig
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen zur Symptom-Erkrankung</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-symptom-conditionDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionDA'), 'binding', document.getElementById('cbmii-pr-seltene-symptom-conditionDA-binding').checked, document.getElementById('ppmii-pr-seltene-symptom-conditionDA'));
 document.getElementById('cbmii-pr-seltene-symptom-conditionDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4178,7 +4101,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen zur Symptom-Erkrankung<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-symptom-conditionSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-symptom-conditionSA'), 'binding', document.getElementById('cbmii-pr-seltene-symptom-conditionSA-binding').checked, document.getElementById('ppmii-pr-seltene-symptom-conditionSA'));
 document.getElementById('cbmii-pr-seltene-symptom-conditionSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4682,7 +4605,7 @@ Summary
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 4, 2026 06:37+0000">2026-09-04</span>
+          Generated <span title="Fri, Sep 4, 2026 07:02+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

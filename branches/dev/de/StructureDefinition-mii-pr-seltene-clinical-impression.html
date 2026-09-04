@@ -453,84 +453,7 @@ Es ermöglicht die strukturierte Erfassung klinischer Eindrücke, Befunde und Be
 
 <hr />
 
-<p><strong>Suchparameter</strong></p>
-
-<p>Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch in Kombination:</p>
-
-<ol>
-  <li>
-    <p>Der Suchparameter <code class="language-plaintext highlighter-rouge">_id</code> MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/ClinicalImpression?_id=1234</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der <a href="http://hl7.org/fhir/R4/search.html#all">FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"</a>.</p>
-  </li>
-  <li>
-    <p>Der Suchparameter "_profile" MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/ClinicalImpression?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der <a href="http://hl7.org/fhir/R4/search.html#all">FHIR-Basisspezifikation - Abschnitt "token"</a>.</p>
-  </li>
-  <li>
-    <p>Der Suchparameter "status" MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/ClinicalImpression?status=completed</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "status" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".</p>
-  </li>
-  <li>
-    <p>Der Suchparameter "subject" MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/ClinicalImpression?subject=Patient/example</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".</p>
-  </li>
-  <li>
-    <p>Der Suchparameter "problem" MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/ClinicalImpression?problem=Condition/example</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "problem" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".</p>
-  </li>
-  <li>
-    <p>Der Suchparameter "encounter" MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/ClinicalImpression?encounter=Encounter/example</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".</p>
-  </li>
-  <li>
-    <p>Der Suchparameter "date" MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/ClinicalImpression?date=2024-02-08</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der FHIR-Basisspezifikation - Abschnitt "date".</p>
-  </li>
-  <li>
-    <p>Der Suchparameter "finding-ref" MUSS unterstützt werden:</p>
-
-    <p>Beispiele:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/ClinicalImpression?finding-ref=Observation/example</code></p>
-
-    <p>Anwendungshinweise: Weitere Informationen zur Suche nach "finding-ref" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".</p>
-  </li>
-</ol>
+<p><strong>Suchparameter</strong> sind modulweit im <a href="CapabilityStatement-mii-cps-seltene-capabilitystatement.html">CapabilityStatement</a> deklariert — dort maschinenlesbar und vollständig, statt je Profil von Hand wiederholt.</p>
 
 <p>Beispielinstanzen sind auf der Profilseite im Abschnitt „Examples" verlinkt.</p>
 
@@ -757,7 +680,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-clinical-impressionK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-clinical-impressionK'), 'binding', document.getElementById('cbmii-pr-seltene-clinical-impressionK-binding').checked, document.getElementById('ppmii-pr-seltene-clinical-impressionK'));
 document.getElementById('cbmii-pr-seltene-clinical-impressionK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1081,7 +1004,7 @@ filterDesc(document.getElementById('mii-pr-seltene-clinical-impressionK'), 'obli
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-clinical-impressionD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-clinical-impressionD'), 'binding', document.getElementById('cbmii-pr-seltene-clinical-impressionD-binding').checked, document.getElementById('ppmii-pr-seltene-clinical-impressionD'));
 document.getElementById('cbmii-pr-seltene-clinical-impressionD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1407,7 +1330,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-clinical-impressionS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-clinical-impressionS'), 'binding', document.getElementById('cbmii-pr-seltene-clinical-impressionS-binding').checked, document.getElementById('ppmii-pr-seltene-clinical-impressionS'));
 document.getElementById('cbmii-pr-seltene-clinical-impressionS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1909,7 +1832,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-clinical-impressionKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-clinical-impressionKA'), 'binding', document.getElementById('cbmii-pr-seltene-clinical-impressionKA-binding').checked, document.getElementById('ppmii-pr-seltene-clinical-impressionKA'));
 document.getElementById('cbmii-pr-seltene-clinical-impressionKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2232,7 +2155,7 @@ filterDesc(document.getElementById('mii-pr-seltene-clinical-impressionKA'), 'obl
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-clinical-impressionDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-clinical-impressionDA'), 'binding', document.getElementById('cbmii-pr-seltene-clinical-impressionDA-binding').checked, document.getElementById('ppmii-pr-seltene-clinical-impressionDA'));
 document.getElementById('cbmii-pr-seltene-clinical-impressionDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2555,7 +2478,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Zusätzliche Anmerkungen<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-clinical-impressionSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-clinical-impressionSA'), 'binding', document.getElementById('cbmii-pr-seltene-clinical-impressionSA-binding').checked, document.getElementById('ppmii-pr-seltene-clinical-impressionSA'));
 document.getElementById('cbmii-pr-seltene-clinical-impressionSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2916,7 +2839,7 @@ Summary
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 4, 2026 06:37+0000">2026-09-04</span>
+          Erstellt <span title="Fri, Sep 4, 2026 07:02+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

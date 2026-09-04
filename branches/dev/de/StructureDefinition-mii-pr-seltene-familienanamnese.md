@@ -114,16 +114,7 @@ Die Elemente des logischen Datenmodells werden wie folgt auf das FamilyMemberHis
 
 -------
 
-**Suchparameter**
-
-Folgende Suchparameter sind für das Modul Seltene Erkrankungen relevant, auch in Kombination:
-
-1. Der Suchparameter `_id` MUSS unterstützt werden:Beispiele:`GET [base]/FamilyMemberHistory?_id=1234`Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-1. Der Suchparameter "_profile" MUSS unterstützt werden:Beispiele:`GET [base]/FamilyMemberHistory?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese`Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all).
-1. Der Suchparameter "patient" MUSS unterstützt werden:Beispiele:`GET [base]/FamilyMemberHistory?patient=Patient/example`Anwendungshinweise: Weitere Informationen zur Suche nach "patient" finden sich in der FHIR-Basisspezifikation - Abschnitt "reference".
-1. Der Suchparameter "status" MUSS unterstützt werden:Beispiele:`GET [base]/FamilyMemberHistory?status=completed`Anwendungshinweise: Weitere Informationen zur Suche nach "status" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
-1. Der Suchparameter "relationship" MUSS unterstützt werden:Beispiele:`GET [base]/FamilyMemberHistory?relationship=http://terminology.hl7.org/CodeSystem/v3-RoleCode|FTH`Anwendungshinweise: Weitere Informationen zur Suche nach "relationship" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
-1. Der Suchparameter "code" MUSS unterstützt werden:Beispiele:`GET [base]/FamilyMemberHistory?code=http://www.orpha.net|558`Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der FHIR-Basisspezifikation - Abschnitt "token".
+**Suchparameter** sind modulweit im [CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md) deklariert — dort maschinenlesbar und vollständig, statt je Profil von Hand wiederholt.
 
 Beispielinstanzen sind auf der Profilseite im Abschnitt „Examples" verlinkt.
 
@@ -230,7 +221,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Familienanamnese",
   "title" : "MII PR SE Familienanamnese",
   "status" : "active",
-  "date" : "2026-09-04T06:37:14+00:00",
+  "date" : "2026-09-04T07:02:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

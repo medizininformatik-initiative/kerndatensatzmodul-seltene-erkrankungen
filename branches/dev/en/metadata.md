@@ -5,11 +5,13 @@
 
 ## Metadata Overview
 
-> **Optional page (0..1).** The KDS module menu lists this page as **optional** — keep it only when your module's profiles carry the metadata characteristics it documents (as, for example, the Base module does). Decide for your module: **keep** it — fill it in and delete this banner and the `OPTIONAL-PAGE` marker comment (in this file AND the German mirror) — or **remove** it, following the per-entry procedure in [`docs/optional-pages.md`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/docs/optional-pages.md) of this repository. A release must not ship with this banner (convention check M9).
-
 This page documents the computable metadata of the **Seltene Erkrankungen** module. The metadata exists so that the artifacts of this guide can be discovered, evaluated, validated, cited, governed and reused — by people and by software alike.
 
-The metadata model follows the [Canonical Resource Management Infrastructure Implementation Guide](https://hl7.org/fhir/uv/crmi/STU2/en/index.html) (CRMI). CRMI describes how knowledge artifacts are exchanged consistently across their whole management lifecycle, from authoring through publication and distribution to implementation. This guide applies the CRMI profiles, extensions and manifest mechanisms that are useful for publishing an MII core dataset module as a versioned FHIR implementation guide.
+The metadata model follows the [Canonical Resource Management Infrastructure Implementation Guide](https://hl7.org/fhir/uv/crmi/STU2/en/index.html) (CRMI); what CRMI is and does is documented there and is not repeated here.
+
+Nor does this page repeat what applies MII-wide and is maintained in the **kerndatensatz-meta** module — the [naming conventions for FHIR resources](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII), the [Terminology Version Policy](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Terminology-Version-Policy), the [Module Release Workflow](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow) and the [overview of KDS module versions](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/%C3%9Cbersicht-%C3%BCber-Versionen-der-Kerndatensatz%E2%80%90Module) live there, not here.
+
+What follows below is only what **this** module declares.
 
 The approach is preliminary: it records the CRMI-based metadata currently used and may be refined as CRMI matures, as the KDS publication process evolves, and as FAIR assessment of FHIR implementation guides becomes more concrete.
 

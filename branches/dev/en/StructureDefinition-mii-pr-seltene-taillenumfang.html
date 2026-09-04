@@ -461,66 +461,7 @@ MII PR SE Taillenumfang
 
 <hr />
 
-<p><strong>Search parameters</strong></p>
-
-<p>The following search parameters are relevant for the Rare Diseases module, also in combination:</p>
-
-<ol>
-  <li>
-    <p>The search parameter <code class="language-plaintext highlighter-rouge">_id</code> MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?_id=1234</code></p>
-
-    <p>Usage notes: Further information on searching for "_id" can be found in the <a href="http://hl7.org/fhir/R4/search.html#all">FHIR base specification, section "Parameters for all resources"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "_profile" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-taillenumfang</code></p>
-
-    <p>Usage notes: Further information on searching for "_profile" can be found in the <a href="http://hl7.org/fhir/R4/search.html#all">FHIR base specification, section "token"</a>.</p>
-  </li>
-  <li>
-    <p>The search parameter "code" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?code=http://loinc.org|8280-0</code></p>
-
-    <p>Usage notes: Further information on searching for "code" can be found in the FHIR base specification, section "token".</p>
-  </li>
-  <li>
-    <p>The search parameter "subject" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?subject=Patient/example</code></p>
-
-    <p>Usage notes: Further information on searching for "subject" can be found in the FHIR base specification, section "reference".</p>
-  </li>
-  <li>
-    <p>The search parameter "date" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?date=2024-02-08</code></p>
-
-    <p>Usage notes: Further information on searching for "date" can be found in the FHIR base specification, section "date".</p>
-  </li>
-  <li>
-    <p>The search parameter "value-quantity" MUST be supported:</p>
-
-    <p>Examples:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">GET [base]/Observation?value-quantity=82|http://unitsofmeasure.org|cm</code></p>
-
-    <p>Usage notes: Further information on searching for "value-quantity" can be found in the FHIR base specification, section "quantity".</p>
-  </li>
-</ol>
+<p><strong>Search parameters</strong> are declared module-wide in the <a href="CapabilityStatement-mii-cps-seltene-capabilitystatement.html">CapabilityStatement</a> — machine-readable and complete there, rather than repeated by hand per profile.</p>
 
 <p>Example instances are linked in the "Examples" section of the profile page.</p>
 
@@ -707,7 +648,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Coded form of the unit<br/><span style="font-weight:bold">Fixed Value: </span><span style="color: darkgreen">cm</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-taillenumfangK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-taillenumfangK'), 'binding', document.getElementById('cbmii-pr-seltene-taillenumfangK-binding').checked, document.getElementById('ppmii-pr-seltene-taillenumfangK'));
 document.getElementById('cbmii-pr-seltene-taillenumfangK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1019,7 +960,7 @@ filterDesc(document.getElementById('mii-pr-seltene-taillenumfangK'), 'obligation
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Coded form of the unit</span><br/><span style="font-weight:bold">Fixed Value: </span><span style="color: darkgreen">cm</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-taillenumfangD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-taillenumfangD'), 'binding', document.getElementById('cbmii-pr-seltene-taillenumfangD-binding').checked, document.getElementById('ppmii-pr-seltene-taillenumfangD'));
 document.getElementById('cbmii-pr-seltene-taillenumfangD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1504,7 +1445,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-taillenumfangS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-taillenumfangS'), 'binding', document.getElementById('cbmii-pr-seltene-taillenumfangS-binding').checked, document.getElementById('ppmii-pr-seltene-taillenumfangS'));
 document.getElementById('cbmii-pr-seltene-taillenumfangS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2134,7 +2075,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Coded form of the unit<br/><span style="font-weight:bold">Fixed Value: </span><span style="color: darkgreen">cm</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-taillenumfangKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-taillenumfangKA'), 'binding', document.getElementById('cbmii-pr-seltene-taillenumfangKA-binding').checked, document.getElementById('ppmii-pr-seltene-taillenumfangKA'));
 document.getElementById('cbmii-pr-seltene-taillenumfangKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2445,7 +2386,7 @@ filterDesc(document.getElementById('mii-pr-seltene-taillenumfangKA'), 'obligatio
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Coded form of the unit</span><br/><span style="font-weight:bold">Fixed Value: </span><span style="color: darkgreen">cm</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-taillenumfangDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-taillenumfangDA'), 'binding', document.getElementById('cbmii-pr-seltene-taillenumfangDA-binding').checked, document.getElementById('ppmii-pr-seltene-taillenumfangDA'));
 document.getElementById('cbmii-pr-seltene-taillenumfangDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2927,7 +2868,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 2e699024-671e-4d14-b02f-864414f5185a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 5437763e-4124-49e7-9c11-55fa5e37b17b
 document.getElementById('cbmii-pr-seltene-taillenumfangSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-taillenumfangSA'), 'binding', document.getElementById('cbmii-pr-seltene-taillenumfangSA-binding').checked, document.getElementById('ppmii-pr-seltene-taillenumfangSA'));
 document.getElementById('cbmii-pr-seltene-taillenumfangSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3455,7 +3396,7 @@ Summary
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 4, 2026 06:37+0000">2026-09-04</span>
+          Generated <span title="Fri, Sep 4, 2026 07:02+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

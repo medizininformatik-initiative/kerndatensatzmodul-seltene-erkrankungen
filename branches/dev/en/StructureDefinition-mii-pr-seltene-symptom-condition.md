@@ -81,18 +81,7 @@ A complete example of this distinction can be found in the **Marfan syndrome exa
 
 -------
 
-**Search parameters**
-
-The following search parameters are relevant for the Rare Diseases module, also in combination:
-
-1. The search parameter `_id` MUST be supported:Examples:`GET [base]/Condition?_id=1234`Usage notes: Further information on searching for "_id" can be found in the [FHIR base specification, section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter "_profile" MUST be supported:Examples:`GET [base]/Condition?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition`Usage notes: Further information on searching for "_profile" can be found in the [FHIR base specification, section "token"](http://hl7.org/fhir/R4/search.html#all).
-1. The search parameter "category" MUST be supported:Examples:`GET [base]/Condition?category=http://snomed.info/sct|418799008`Usage notes: Further information on searching for "category" can be found in the FHIR base specification, section "token".
-1. The search parameter "code" MUST be supported:Examples:`GET [base]/Condition?code=http://hpo.jax.org/app/|HP:0001324`Usage notes: Further information on searching for "code" can be found in the FHIR base specification, section "token".
-1. The search parameter "subject" MUST be supported:Examples:`GET [base]/Condition?subject=Patient/example`Usage notes: Further information on searching for "subject" can be found in the FHIR base specification, section "reference".
-1. The search parameter "onset-date" MUST be supported:Examples:`GET [base]/Condition?onset-date=2024-02-08`Usage notes: Further information on searching for "onset-date" can be found in the FHIR base specification, section "date".
-1. The search parameter "severity" MUST be supported:Examples:`GET [base]/Condition?severity=http://hpo.jax.org/app/|HP:0012828`Usage notes: Further information on searching for "severity" can be found in the FHIR base specification, section "token".
-1. The search parameter "evidence" MUST be supported:Examples:`GET [base]/Condition?evidence=Observation/example`Usage notes: Further information on searching for "evidence" can be found in the FHIR base specification, section "reference".
+**Search parameters** are declared module-wide in the [CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md) — machine-readable and complete there, rather than repeated by hand per profile.
 
 Example instances are linked in the "Examples" section of the profile page.
 
@@ -124,7 +113,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
   "name" : "MII_PR_Seltene_Symptom_Condition",
   "title" : "MII Profile SE Symptom Condition",
   "status" : "active",
-  "date" : "2026-09-04T06:37:14+00:00",
+  "date" : "2026-09-04T07:02:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
