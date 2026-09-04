@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-penetrance | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_VS_Seltene_Penetrance |
+| Active as of 2026-09-04 | *Computable Name*:MII_VS_Seltene_Penetrance |
 
  
 Value set for qualitative descriptions of genetic penetrance, drawn from the HPO branch Inheritance qualifier (HP:0034335). Note that the graded terms (high/moderate/low penetrance) are subtypes of incomplete penetrance, not alternatives to complete penetrance. 
@@ -41,7 +41,7 @@ Value set for qualitative descriptions of genetic penetrance, drawn from the HPO
   "name" : "MII_VS_Seltene_Penetrance",
   "title" : "MII VS SE Penetrance",
   "status" : "active",
-  "date" : "2026-09-03T17:01:55+00:00",
+  "date" : "2026-09-04T05:29:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

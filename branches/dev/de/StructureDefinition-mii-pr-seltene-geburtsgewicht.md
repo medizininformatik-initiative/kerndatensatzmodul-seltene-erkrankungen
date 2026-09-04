@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geburtsgewicht | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_Seltene_Geburtsgewicht |
+| Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_PR_Seltene_Geburtsgewicht |
 
  
 Gemessenes Geburtsgewicht. Bei seltenen Erkrankungen ein Ausgangswert für die Beurteilung von Gedeihstörungen, Makrosomie und intrauteriner Wachstumsrestriktion. 
@@ -99,7 +99,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Geburtsgewicht",
   "title" : "MII PR SE Geburtsgewicht",
   "status" : "active",
-  "date" : "2026-09-03T17:01:55+00:00",
+  "date" : "2026-09-04T05:29:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

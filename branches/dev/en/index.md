@@ -14,12 +14,8 @@ This specification describes the FHIR representation of the Core Data Set (KDS) 
 
 | | |
 | :--- | :--- |
-| Date | TODO:REVIEW (ci-build) |
-| Version | 2027.0.0-ballot |
 | Status | Active |
 | Realm | DE |
-
-> **Written during migration - review before release.** The publication date and version in the table above were updated to the 2027.0.0-ballot working state by the migration; the source page recorded the 2026.0.1 release (2026-03-30).
 
 ### Imprint
 

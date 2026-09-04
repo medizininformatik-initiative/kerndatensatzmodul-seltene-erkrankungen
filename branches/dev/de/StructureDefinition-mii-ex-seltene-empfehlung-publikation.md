@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-publikation | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_EX_Seltene_Empfehlung_Publikation |
+| Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_EX_Seltene_Empfehlung_Publikation |
 
 Verweis auf Publikation der (einzelnen) Empfehlung
 
@@ -77,7 +77,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-selte
   "name" : "MII_EX_Seltene_Empfehlung_Publikation",
   "title" : "MII EX SE Empfehlung Publikation",
   "status" : "active",
-  "date" : "2026-09-03T17:01:55+00:00",
+  "date" : "2026-09-04T05:29:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

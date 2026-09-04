@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_CS_Seltene_NARSE_Therapietyp |
+| Active as of 2026-09-04 | *Computable Name*:MII_CS_Seltene_NARSE_Therapietyp |
 
  
 CodeSystem für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen 
@@ -36,7 +36,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Seltene Erkrankungen NARSE Therapietyp",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T17:01:55+00:00",
+  "date" : "2026-09-04T05:29:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

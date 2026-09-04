@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_PR_Seltene_Therapieempfehlung |
+| Active as of 2026-09-04 | *Computable Name*:MII_PR_Seltene_Therapieempfehlung |
 
  
 Therapieempfehlung für eine medikamentöse Systemische Therapie 
@@ -112,7 +112,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
   "name" : "MII_PR_Seltene_Therapieempfehlung",
   "title" : "MII PR SE Therapieempfehlung Systemische Therapie",
   "status" : "active",
-  "date" : "2026-09-03T17:01:55+00:00",
+  "date" : "2026-09-04T05:29:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

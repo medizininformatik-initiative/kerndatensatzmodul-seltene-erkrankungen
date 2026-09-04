@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-symptom-change-status-combined | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_VS_Seltene_Symptom_ChangeStatus_Combined |
+| Active as of 2026-09-04 | *Computable Name*:MII_VS_Seltene_Symptom_ChangeStatus_Combined |
 
  
 ValueSet zur Dokumentation von Änderungen bei Symptomen/Phänotypen über Zeit. Kombiniert MVGenomSeq-spezifische Codes mit SNOMED CT-Codes für internationale Interoperabilität. 
@@ -42,7 +42,7 @@ ValueSet zur Dokumentation von Änderungen bei Symptomen/Phänotypen über Zeit.
   "title" : "MII VS Seltene Erkrankungen Symptom Change Status (Combined)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T17:01:55+00:00",
+  "date" : "2026-09-04T05:29:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

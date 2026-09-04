@@ -16,12 +16,8 @@ Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatens
 
 | | |
 | :--- | :--- |
-| Datum | TODO:REVIEW (ci-build) |
-| Version | 2027.0.0-ballot |
 | Status | Active |
 | Realm | DE |
-
-> **Written during migration - review before release.** Datum und Version in der Tabelle oben wurden durch die Migration auf den Arbeitsstand 2027.0.0-ballot gesetzt; die Quellseite dokumentierte das Release 2026.0.1 (30.03.2026).
 
 ## Impressum
 

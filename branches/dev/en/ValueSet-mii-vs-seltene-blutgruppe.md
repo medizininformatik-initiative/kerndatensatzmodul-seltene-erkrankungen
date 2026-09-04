@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-blutgruppe | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_VS_Seltene_Blutgruppe |
+| Active as of 2026-09-04 | *Computable Name*:MII_VS_Seltene_Blutgruppe |
 
  
 ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List für 882-1 
@@ -42,7 +42,7 @@ ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List
   "title" : "MII VS SE Blutgruppe",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T17:01:55+00:00",
+  "date" : "2026-09-04T05:29:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

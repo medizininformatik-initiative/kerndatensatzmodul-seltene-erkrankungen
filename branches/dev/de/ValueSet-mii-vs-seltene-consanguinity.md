@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-consanguinity | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_VS_Seltene_Consanguinity |
+| Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_VS_Seltene_Consanguinity |
 
  
 ValueSet zur Angabe der Blutsverwandtschaft der Eltern (Consanguinity): Ja / Nein / Unbekannt / Nicht erfasst (SNOMED CT), entsprechend dem Consanguinity Value Set aus RD-CDM v2.0.0. 
@@ -42,7 +42,7 @@ ValueSet zur Angabe der Blutsverwandtschaft der Eltern (Consanguinity): Ja / Nei
   "title" : "MII VS Seltene Erkrankungen Consanguinity",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T17:01:55+00:00",
+  "date" : "2026-09-04T05:29:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

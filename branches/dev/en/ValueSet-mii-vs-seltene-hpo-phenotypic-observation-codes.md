@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_VS_Seltene_HPOPhenotypicObservationCodes |
+| Active as of 2026-09-04 | *Computable Name*:MII_VS_Seltene_HPOPhenotypicObservationCodes |
 
  
 Human Phenotype Ontology codes for phenotypic observations 
@@ -44,7 +44,7 @@ Human Phenotype Ontology codes for phenotypic observations
   "name" : "MII_VS_Seltene_HPOPhenotypicObservationCodes",
   "title" : "HPO Phenotypic Observation Codes",
   "status" : "active",
-  "date" : "2026-09-03T17:01:55+00:00",
+  "date" : "2026-09-04T05:29:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
