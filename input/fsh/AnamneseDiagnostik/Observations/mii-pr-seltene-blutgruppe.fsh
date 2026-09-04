@@ -71,7 +71,7 @@ Mapping: FHIR-SE-Blutgruppe
 Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_Blutgruppe
-Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/mii-lm-seltene"
+Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
 * -> "koerperlicheUntersuchung.blutgruppe" "Blutgruppe"
 * valueCodeableConcept -> "koerperlicheUntersuchung.blutgruppe" "Blutgruppe"
 * valueCodeableConcept.coding[loinc] -> "koerperlicheUntersuchung.blutgruppe" "Blutgruppe (LOINC)"

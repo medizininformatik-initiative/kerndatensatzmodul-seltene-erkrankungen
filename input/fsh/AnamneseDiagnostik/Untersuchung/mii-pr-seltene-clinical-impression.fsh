@@ -105,7 +105,7 @@ Mapping: FHIR-SE-ClinicalImpression
 Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_ClinicalImpression
-Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/mii-lm-seltene"
+Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
 * -> "anamneseUndDiagnostik" "Anamnese und Diagnostik"
 * effectiveDateTime -> "anamneseUndDiagnostik.untersuchungsdatum" "Untersuchungsdatum"
 * effectivePeriod.start -> "anamneseUndDiagnostik.untersuchungsdatum" "Beginn der Untersuchung"

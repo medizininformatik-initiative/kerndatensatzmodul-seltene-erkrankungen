@@ -5,22 +5,23 @@ Title: "MII LM SE"
 Description: "MII LogicalModel Modul Seltene Erkraknungen"
 * insert Publisher
 * insert PR_CS_VS_Version
-// BREAKING CHANGE 2026-09-04 (Nutzerentscheid): Der Canonical lautete bis
-// 2026.0.1 .../StructureDefinition/LogicalModel/Seltene und ist unter dieser
-// URL publiziert. Das Segment LogicalModel/ bleibt — es ist MII-weit die
-// Mehrheit (15 von 23 Modellen, base eingeschlossen) —, nur das Ende traegt
-// jetzt die Id statt des Namens.
+// Der Canonical endet auf /Seltene und NICHT auf der Id — das ist Absicht.
 //
-// Damit ist EINE der beiden Publisher-Pruefungen erfuellt:
-//   IGKnowledgeProvider:456   verlangt url.endsWith("/"+id)          -> ok
-//   PublisherIGLoader:4626    verlangt url == {canonical}/{Typ}/{id} -> nein
-// Die zweite bleibt und wird per special-url in sushi-config.yaml als
-// gewollt erklaert; canonicalUrlIsOk() prueft auf Gleichheit, ein
-// zusaetzliches Pfadsegment ist dort nie zulaessig.
+// Am 2026-09-04 wurde beides versucht, um den Publisher-Fehler "Resource
+// id/url mismatch" loszuwerden. Ergebnis: Es geht nicht, solange die Id
+// Bindestriche traegt, denn die Elementpfade des Modells leiten sich aus dem
+// LETZTEN SEGMENT des Canonicals ab.
+//   /Seltene         -> Wurzelpfad "Seltene"         -> eld-20 erfuellt
+//   /mii-lm-seltene  -> Wurzelpfad "mii-lm-seltene"  -> eld-20 verletzt,
+//                       und zwar auf JEDEM der 87 Elemente (247 Warnungen)
+// eld-20 verlangt [A-Za-z][A-Za-z0-9]* — Bindestriche sind nicht zulaessig.
 //
-// Preis unveraendert: Verweise auf den alten Canonical laufen ins Leere.
-// Die 17 Mapping-Targets im Modul sind mitgezogen.
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/mii-lm-seltene"
+// Die beiden Anforderungen schliessen einander damit aus. Alle fuenf
+// MII-Module mit Id-Schema verletzen eld-20 auf jedem Element (dokument,
+// soziodemographie, pros, patho, studie); die zehn mit LogicalModel/<Name>
+// nehmen stattdessen die eine Publisher-Meldung in Kauf. Wir tun dasselbe
+// und erklaeren sie per special-url in sushi-config.yaml.
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
 * anamneseUndDiagnostik 0..* BackboneElement "Diagnose"
   * untersuchungsdatum 0..1 date "Untersuchungsdatum" "Datum der durchgeführten Untersuchung eines SE-Patienten."
   * untersuchungsanlass 0..1 code "Untersuchungsanlass" "Grund für den Besuch des SE-Patienten."

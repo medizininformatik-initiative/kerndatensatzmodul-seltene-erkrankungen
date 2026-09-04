@@ -63,7 +63,7 @@ Mapping: FHIR-SE-Hueftumfang
 Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_Hueftumfang
-Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/mii-lm-seltene"
+Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
 * -> "koerperlicheUntersuchung.hueftumfang" "Hüftumfang"
 * valueQuantity.value -> "koerperlicheUntersuchung.hueftumfang.hueftumfang" "Hüftumfang in cm"
 * effectiveDateTime -> "koerperlicheUntersuchung.hueftumfang.datumHueftumfang" "Datum der Messung"
