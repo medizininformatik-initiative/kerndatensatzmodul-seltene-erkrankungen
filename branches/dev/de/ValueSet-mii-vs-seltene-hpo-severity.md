@@ -26,8 +26,6 @@ HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Pheno
 
 ### Expansion
 
-No Expansion for this valueset (Unknown Code System)
-
 -------
 
  [Beschreibung der obigen Tabelle(n)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -45,7 +43,7 @@ No Expansion for this valueset (Unknown Code System)
   "name" : "MII_VS_Seltene_HPOSeverity",
   "title" : "HPO Severity",
   "status" : "active",
-  "date" : "2026-09-04T16:11:50+00:00",
+  "date" : "2026-09-04T16:57:12+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

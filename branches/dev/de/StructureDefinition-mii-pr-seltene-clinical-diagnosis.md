@@ -203,7 +203,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_ClinicalDiagnosis",
   "title" : "MII PR SE Clinical Diagnosis",
   "status" : "active",
-  "date" : "2026-09-04T16:11:50+00:00",
+  "date" : "2026-09-04T16:57:12+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -236,7 +236,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "SE-LogicalModel",
-    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/mii-lm-seltene",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene",
     "name" : "Mapping FHIR zu Seltene Erkrankungen Logical Model"
   },
   {
