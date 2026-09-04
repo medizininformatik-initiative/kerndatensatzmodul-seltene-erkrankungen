@@ -1,10 +1,7 @@
 @startuml
-' Entscheidungsbaum: welches Diagnoseprofil wann.
-' Neu geschrieben 2026-09-02 — die vorherige Fassung lag als ```plantuml-Block
-' in der Seite, wurde vom Renderer NICHT als Diagramm erkannt (sie erschien als
-' roher Codeblock) und war ausserdem an einer note-Konstruktion syntaktisch
-' defekt. Jetzt als Aktivitaetsdiagramm, nach SVG gerendert und als Bild
-' eingebunden.
+' Decision tree: which diagnosis profile when — English rendering.
+' German twin: diagnose-entscheidungsbaum-de.puml (renders to …-de.svg).
+' See the header of diagnose-parallelmodell.puml for why the pair exists.
 skinparam backgroundColor transparent
 skinparam shadowing false
 skinparam defaultFontName Helvetica
@@ -18,35 +15,34 @@ skinparam activity {
   FontColor #1a1a1a
 }
 
-title Welches Diagnoseprofil wann?
+title Which diagnosis profile when?
 
 start
-:Befund oder Verdacht liegt vor;
+:A finding or a suspicion exists;
 
-if (Molekulargenetischer\nBefund vorhanden?) then (nein)
-  :**Klinische Diagnose**\nMII_PR_Seltene_ClinicalDiagnosis;
-  :code.coding[hpo] setzen;
-  :evidence.detail → HPO-Observation;
-  if (Diagnose gesichert?) then (nein)
+if (Molecular genetic\nresult available?) then (no)
+  :**Clinical diagnosis**\nMII_PR_Seltene_ClinicalDiagnosis;
+  :set code.coding[hpo];
+  :evidence.detail → HPO observation;
+  if (Diagnosis established?) then (no)
     :verificationStatus = provisional;
-  else (ja)
+  else (yes)
     :verificationStatus = confirmed;
   endif
-else (ja)
-  :**Genetische Diagnose**\nMII_PR_Seltene_GeneticDiagnosis;
-  :category = SCT#782964007\nGenetic disease  (Pflicht);
-  :code.coding[omim] setzen;
-  :evidence.detail → MolGen-Variante;
+else (yes)
+  :**Genetic diagnosis**\nMII_PR_Seltene_GeneticDiagnosis;
+  :category = SCT#782964007\nGenetic disease  (mandatory);
+  :set code.coding[omim];
+  :evidence.detail → MolGen variant;
   :verificationStatus = confirmed;
   note right
-    Eine bereits bestehende
-    klinische Diagnose bleibt
-    erhalten — sie wird nicht
-    ersetzt.
+    An existing clinical
+    diagnosis stays as it is —
+    it is not replaced.
   end note
 endif
 
-:ClinicalImpression verknuepft beide\nueber problem und finding;
+:ClinicalImpression links both\nvia problem and finding;
 stop
 
 @enduml

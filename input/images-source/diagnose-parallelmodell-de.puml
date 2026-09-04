@@ -1,0 +1,34 @@
+@startuml
+' Paralleles Diagnosemodell — ersetzt die drei kurzen FSH-Schnipsel auf der Seite
+' clinical-genetic-diagnosis-guide. Beschriftungen bewusst sprachneutral
+' (FHIR-Elementnamen, Codes), damit dieselbe SVG in beiden Sprachbaeumen taugt.
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam roundcorner 8
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 12
+skinparam ArrowColor #555555
+skinparam rectangle {
+  BorderColor #4a86e8
+  BackgroundColor #eef4fd
+  FontColor #1a1a1a
+}
+
+title Paralleles Diagnosemodell — Verdacht, klinisch, genetisch
+
+rectangle "**Verdachtsdiagnose**\n<size:11>Condition</size>\n<size:11>verificationStatus = **provisional**</size>\n<size:11>category = encounter-diagnosis</size>" as V #fff8e1
+rectangle "**Klinische Diagnose**\n<size:11>MII_PR_Seltene_ClinicalDiagnosis</size>\n<size:11>verificationStatus = **confirmed**</size>\n<size:11>category = encounter-diagnosis</size>\n<size:11>evidence → HPO-Observations</size>" as K #e8f5e9
+rectangle "**Genetische Diagnose**\n<size:11>MII_PR_Seltene_GeneticDiagnosis</size>\n<size:11>verificationStatus = **confirmed**</size>\n<size:11>category = SCT#782964007 Genetic disease</size>\n<size:11>evidence → MolGen-Variante</size>" as G #e3f2fd
+
+V -down-> K : phänotypische\nAbklärung
+K -right-> G : molekulargenetische\nBestätigung
+
+note bottom of K
+  **Beide bestehen nebeneinander.**
+  Die genetische Diagnose ERSETZT die
+  klinische nicht — sie ergänzt sie.
+  Ein Patient trägt am Ende zwei
+  Condition-Ressourcen.
+end note
+
+@enduml

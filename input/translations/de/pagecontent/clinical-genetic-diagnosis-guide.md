@@ -31,7 +31,7 @@ Die klinische Diagnose wird verwendet, wenn:
 
 ### Strukturvergleich
 
-![Klinische gegen genetische Diagnose — struktureller Vergleich](diagnose-klinisch-vs-genetisch.svg)
+![Klinische gegen genetische Diagnose — struktureller Vergleich](diagnose-klinisch-vs-genetisch-de.svg)
 
 Die ausformulierten Instanzen stehen als Beispiele bei den Profilen selbst; hier geht es um den Unterschied, nicht um die Syntax.
 
@@ -60,7 +60,7 @@ Die genetische Diagnose wird verwendet, wenn:
 
 Bei seltenen Erkrankungen existieren klinische und genetische Diagnosen **parallel** zueinander:
 
-![Paralleles Diagnosemodell](diagnose-parallelmodell.svg)
+![Paralleles Diagnosemodell](diagnose-parallelmodell-de.svg)
 
 Das Diagramm zeigt die drei Stufen: Verdachtsdiagnose aus Screening oder Erstkontakt,
 klinische Diagnose nach phänotypischer Abklärung, genetische Diagnose nach
@@ -70,7 +70,7 @@ molekulargenetischer Bestätigung.
 
 ## Entscheidungsbaum
 
-![Entscheidungsbaum: welches Diagnoseprofil wann](diagnose-entscheidungsbaum.svg)
+![Entscheidungsbaum: welches Diagnoseprofil wann](diagnose-entscheidungsbaum-de.svg)
 
 ## Praktische Hinweise
 

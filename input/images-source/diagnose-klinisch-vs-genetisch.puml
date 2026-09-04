@@ -1,22 +1,12 @@
 @startuml
-' Klinische gegen genetische Diagnose — Strukturvergleich.
-' Sprachneutral: nur FHIR-Elementnamen, Profil-IDs und Codes.
+' Clinical versus genetic diagnosis — structural comparison, English rendering.
+' German twin: diagnose-klinisch-vs-genetisch-de.puml (renders to …-de.svg).
+' See the header of diagnose-parallelmodell.puml for why the pair exists.
 '
-' Korrigiert 2026-09-03. Die erste Fassung (2026-09-02) fuehrte vier
-' Extensions auf, die noch am selben Tag entfernt wurden (ageOfOnset,
-' inheritancePattern an beiden Profilen, geneticBasis an der genetischen),
-' und behauptete einen Unterschied "Kategorie optional gegen Pflicht", den
-' es nie gab: category ist in BEIDEN Profilen 1..*. Der wirkliche Unterschied
-' ist, dass die genetische Diagnose den WERT der Kategorie festlegt.
-' Ausserdem war verificationStatus als Profil-Constraint dargestellt — das
-' Modul schraenkt es an keiner Stelle ein, es erbt unveraendert 0..1 mit
-' required-Bindung an condition-ver-status. Die Empfehlung, welcher Status
-' wann zu setzen ist, steht im Parallelmodell-Diagramm, wo sie hingehoert.
-' Jede Zeile unten ist am 2026-09-03 gegen die generierten
-' StructureDefinitions geprueft.
-' KEIN 'left to right direction': das dreht die Semantik der Pfeilrichtung um,
-' wodurch aus '-[hidden]right->' ein Untereinander wird und der Vergleich seine
-' Nebeneinander-Anordnung verliert (so passiert am 2026-09-03).
+' Every line below was checked against the generated StructureDefinitions on
+' 2026-09-03. NO 'left to right direction': it inverts arrow-direction
+' semantics, turning '-[hidden]right->' into a vertical stack and costing the
+' comparison its side-by-side arrangement.
 skinparam backgroundColor transparent
 skinparam shadowing false
 skinparam defaultFontName Helvetica
@@ -29,15 +19,15 @@ skinparam class {
   FontColor #1a1a1a
 }
 
-title Was die beiden Profile unterscheidet
+title What sets the two profiles apart
 
 class "MII_PR_Seltene_ClinicalDiagnosis" as C {
-  code.coding[icd10-gm]   << geerbt >>
-  code.coding[orphanet]   << geerbt >>
-  code.coding[**hpo**]  0..*   << eigener Slice >>
+  code.coding[icd10-gm]   << inherited >>
+  code.coding[orphanet]   << inherited >>
+  code.coding[**hpo**]  0..*   << own slice >>
   <size:11>required → hpo-phenotypic-observation-codes</size>
   --
-  category  1..*   <size:11>Wert frei</size>
+  category  1..*   <size:11>value not fixed</size>
   --
   evidence  0..*
   evidence.code.coding   <size:11>extensible → HPO</size>
@@ -45,14 +35,14 @@ class "MII_PR_Seltene_ClinicalDiagnosis" as C {
 }
 
 class "MII_PR_Seltene_GeneticDiagnosis" as G {
-  code.coding[icd10-gm]   << geerbt >>
-  code.coding[orphanet]   << geerbt >>
-  code.coding[**omim**]  0..*   << eigener Slice >>
+  code.coding[icd10-gm]   << inherited >>
+  code.coding[orphanet]   << inherited >>
+  code.coding[**omim**]  0..*   << own slice >>
   --
-  category  1..*   <size:11>**fester Wert**</size>
+  category  1..*   <size:11>**fixed value**</size>
   <size:11>= SCT#782964007 Genetic disease</size>
   --
-  evidence  **1..***   <size:11>Pflicht</size>
+  evidence  **1..***   <size:11>mandatory</size>
   evidence.code.coding[**geneticEvidence**]
   <size:11>= SCT#106221001 Genetic finding</size>
   evidence.detail  1..* → Observation | DiagnosticReport
@@ -63,21 +53,21 @@ class "MII_PR_Seltene_GeneticDiagnosis" as G {
 C -[hidden]right-> G
 
 note bottom of C
-  Belegt sich mit **Phaenotyp** (HPO).
-  Nachweis ist optional.
+  Evidenced by **phenotype** (HPO).
+  Evidence is optional.
 end note
 
 note bottom of G
-  Belegt sich mit **Molekulargenetik**.
-  Nachweis ist **Pflicht** (evidence 1..*),
-  empfohlen die MolGen-Variante.
+  Evidenced by **molecular genetics**.
+  Evidence is **mandatory** (evidence 1..*),
+  the MolGen variant is recommended.
 end note
 
 note as N
-  **Gleich in beiden:** verificationStatus erbt
-  unveraendert 0..1 (required, condition-ver-status);
-  das Modul schraenkt ihn nicht ein. Ebenso das
-  Feststellungsdatum (assertedDate) aus dem Parent.
+  **Identical in both:** verificationStatus is inherited
+  unchanged as 0..1 (required, condition-ver-status);
+  the module does not constrain it. The same holds for
+  the assertion date (assertedDate) from the parent.
 end note
 
 @enduml

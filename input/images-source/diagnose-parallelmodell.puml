@@ -1,7 +1,14 @@
 @startuml
-' Paralleles Diagnosemodell — ersetzt die drei kurzen FSH-Schnipsel auf der Seite
-' clinical-genetic-diagnosis-guide. Beschriftungen bewusst sprachneutral
-' (FHIR-Elementnamen, Codes), damit dieselbe SVG in beiden Sprachbaeumen taugt.
+' Parallel diagnosis model — English rendering.
+'
+' Language pairing (2026-09-04): every diagram on the page
+' clinical-genetic-diagnosis-guide exists twice. This file is the ENGLISH one
+' and keeps the base name, because the IG's default language is English
+' (i18n-default-lang: en); the German twin is diagnose-parallelmodell-de.puml
+' and renders to …-de.svg. Until 2026-09-04 a single German diagram served both
+' trees, so English readers were shown German labels — and its labels were
+' ASCII-transliterated ("Phaenotyp"), which is simply wrong German.
+' Keep the two files in step: a change to one belongs in the other.
 skinparam backgroundColor transparent
 skinparam shadowing false
 skinparam roundcorner 8
@@ -14,21 +21,21 @@ skinparam rectangle {
   FontColor #1a1a1a
 }
 
-title Paralleles Diagnosemodell — Verdacht, klinisch, genetisch
+title Parallel diagnosis model — suspected, clinical, genetic
 
-rectangle "**Verdachtsdiagnose**\n<size:11>Condition</size>\n<size:11>verificationStatus = **provisional**</size>\n<size:11>category = encounter-diagnosis</size>" as V #fff8e1
-rectangle "**Klinische Diagnose**\n<size:11>MII_PR_Seltene_ClinicalDiagnosis</size>\n<size:11>verificationStatus = **confirmed**</size>\n<size:11>category = encounter-diagnosis</size>\n<size:11>evidence → HPO-Observations</size>" as K #e8f5e9
-rectangle "**Genetische Diagnose**\n<size:11>MII_PR_Seltene_GeneticDiagnosis</size>\n<size:11>verificationStatus = **confirmed**</size>\n<size:11>category = SCT#782964007 Genetic disease</size>\n<size:11>evidence → MolGen-Variante</size>" as G #e3f2fd
+rectangle "**Suspected diagnosis**\n<size:11>Condition</size>\n<size:11>verificationStatus = **provisional**</size>\n<size:11>category = encounter-diagnosis</size>" as V #fff8e1
+rectangle "**Clinical diagnosis**\n<size:11>MII_PR_Seltene_ClinicalDiagnosis</size>\n<size:11>verificationStatus = **confirmed**</size>\n<size:11>category = encounter-diagnosis</size>\n<size:11>evidence → HPO observations</size>" as K #e8f5e9
+rectangle "**Genetic diagnosis**\n<size:11>MII_PR_Seltene_GeneticDiagnosis</size>\n<size:11>verificationStatus = **confirmed**</size>\n<size:11>category = SCT#782964007 Genetic disease</size>\n<size:11>evidence → MolGen variant</size>" as G #e3f2fd
 
-V -down-> K : phaenotypische\nAbklaerung
-K -right-> G : molekulargenetische\nBestaetigung
+V -down-> K : phenotypic\nwork-up
+K -right-> G : molecular\nconfirmation
 
 note bottom of K
-  **Beide bestehen nebeneinander.**
-  Die genetische Diagnose ERSETZT die
-  klinische nicht — sie ergaenzt sie.
-  Ein Patient traegt am Ende zwei
-  Condition-Ressourcen.
+  **Both exist side by side.**
+  The genetic diagnosis does NOT replace
+  the clinical one — it complements it.
+  A patient ends up carrying two
+  Condition resources.
 end note
 
 @enduml
