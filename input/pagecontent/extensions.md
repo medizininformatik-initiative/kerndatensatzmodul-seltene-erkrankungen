@@ -8,10 +8,6 @@ This page lists the FHIR extensions defined by the **Seltene Erkrankungen** modu
 base resources and profiles cannot express; the profiles that use them are on
 the [Profiles](profiles.html) page.
 
-> [TODO: List and describe your module's extensions — or remove this page if
-> your module defines none.]
-{: .ig-highlight .ig-highlight-grey}
-
 <!-- BEGIN GENERATED: artifact-list (scripts/generate-artifact-lists.py) -->
 
 The module defines the following extensions.

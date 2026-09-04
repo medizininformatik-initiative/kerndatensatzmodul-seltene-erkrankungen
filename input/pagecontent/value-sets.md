@@ -16,9 +16,10 @@ terminology server — SU-TermServ if the client certificate is configured,
 otherwise the public HL7 server `tx.fhir.org` (in which case some KDS-specific
 ValueSets may not expand completely).
 
-> [TODO: If your module uses SNOMED CT, state the edition/version used. List
-> the module's own ValueSets, or refer to the automatically generated artifact
-> list — or remove this page if your module defines none.]
+> **Open:** the SNOMED CT edition/version this module binds against is not yet
+> stated here. The MII-wide rule is the
+> [Terminology Version Policy](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Terminology-Version-Policy)
+> of the meta module.
 {: .ig-highlight .ig-highlight-grey}
 
 <!-- BEGIN GENERATED: artifact-list (scripts/generate-artifact-lists.py) -->

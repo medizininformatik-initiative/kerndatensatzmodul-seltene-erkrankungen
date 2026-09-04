@@ -181,7 +181,7 @@ This document contains the semantic annotations for a case example of Marfan syn
 
 | Resource ID | Type | Description | Date of determination | ICD-10 | Orpha |
 |--------------|-----|--------------|-------------------|---------|-------|
-| `condition-marfan-confirmed` | Condition | Marfan syndrome | 2024-12-15 | Q87.4 | 558 |
+| `mii-exa-seltene-condition-marfan-genetic` | Condition | Marfan syndrome | 2024-12-15 | Q87.4 | 558 |
 | `mii-exa-seltene-condition-cataract` | Condition | Bilateral cataract | 2024-10-15 | H26.9 | - |
 
 ##### Procedures
@@ -218,7 +218,7 @@ This document contains the semantic annotations for a case example of Marfan syn
 
 | Resource ID | Type | Description | Date | Key aspects |
 |--------------|-----|--------------|-------|------------------|
-| `clinical-impression-cardiology` | ClinicalImpression | Cardiological assessment | 2024-12-15 | Marfan confirmed, indication for surgery |
+| `mii-exa-seltene-clinical-impression-seltene-assessment` | ClinicalImpression | Cardiological assessment | 2024-12-15 | Marfan confirmed, indication for surgery |
 
 #### Bundle
 

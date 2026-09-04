@@ -142,7 +142,7 @@ This document contains the semantic annotations for a case example of spinal mus
 |--------------|-----|--------------|-------------------|-------------------|--------|
 | `mii-exa-seltene-condition-sma-suspected` | Condition | Suspected SMA | 2024-07-18 | unconfirmed | SNOMED: 80854005 |
 | `mii-exa-seltene-condition-sma-clinical` | Condition | Clinical diagnosis SMA type 1 | 2024-07-22 | provisional | ICD-10: G12.0, Orpha: 83330 |
-| `condition-sma-confirmed` | Condition | Confirmed SMA type 1 | 2024-07-26 | confirmed | ICD-10: G12.0, Orpha: 83330 |
+| `mii-exa-seltene-condition-sma-genetic` | Condition | Confirmed SMA type 1 | 2024-07-26 | confirmed | ICD-10: G12.0, Orpha: 83330 |
 
 ##### Screening and genetic findings
 
@@ -176,8 +176,8 @@ This document contains the semantic annotations for a case example of spinal mus
 |--------------|-----|--------------|-------|---------|-------------------|
 | `mii-exa-seltene-encounter-screening-001` | Encounter | Newborn screening | 2024-07-18 | Screening | `mii-exa-seltene-condition-sma-suspected` |
 | `mii-exa-seltene-encounter-ambulant-001` | Encounter | First presentation SMA center | 2024-07-22 | Outpatient | `mii-exa-seltene-condition-sma-clinical` |
-| `mii-exa-seltene-encounter-stationaer-001` | Encounter | Inpatient gene therapy | 2024-07-29/30 | Inpatient | `condition-sma-confirmed` |
-| `mii-exa-seltene-encounter-nachsorge-001` | Encounter | Follow-up | 2024-08-12 | Outpatient | `condition-sma-confirmed` |
+| `mii-exa-seltene-encounter-stationaer-001` | Encounter | Inpatient gene therapy | 2024-07-29/30 | Inpatient | `mii-exa-seltene-condition-sma-genetic` |
+| `mii-exa-seltene-encounter-nachsorge-001` | Encounter | Follow-up | 2024-08-12 | Outpatient | `mii-exa-seltene-condition-sma-genetic` |
 
 ##### Clinical assessments
 

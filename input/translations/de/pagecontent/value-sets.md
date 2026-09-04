@@ -18,10 +18,10 @@ Client-Zertifikat konfiguriert ist, sonst über den öffentlichen HL7-Server
 `tx.fhir.org` (dann expandieren einige KDS-spezifische ValueSets ggf. nicht
 vollständig).
 
-> [TODO: Falls Ihr Modul SNOMED CT nutzt, geben Sie die verwendete
-> Edition/Version an. Listen Sie die modul-eigenen ValueSets auf oder verweisen
-> Sie auf die automatisch erzeugte Artefakt-Liste — oder entfernen Sie diese
-> Seite, wenn Ihr Modul keine definiert.]
+> **Offen:** Welche SNOMED-CT-Edition und -Version dieses Modul bindet, ist hier
+> noch nicht angegeben. MII-weit gilt die
+> [Terminology Version Policy](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Terminology-Version-Policy)
+> des Meta-Moduls.
 {: .ig-highlight .ig-highlight-grey}
 
 <!-- BEGIN GENERATED: artifact-list (scripts/generate-artifact-lists.py) -->
