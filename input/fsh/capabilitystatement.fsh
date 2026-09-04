@@ -82,7 +82,11 @@ Usage: #definition
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/ClinicalImpression-subject, #reference, #SHALL)
 * insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/ClinicalImpression-encounter, #reference, #SHALL)
-* insert SupportSearchParam(date, http://hl7.org/fhir/SearchParameter/ClinicalImpression-date, #date, #SHALL)
+// Korrigiert 2026-09-04: ClinicalImpression-date gibt es in R4 nicht. Der
+// Publisher meldete "A definition could not be found for Canonical URL".
+// R4 fuehrt das Datum als gemeinsamen Parameter clinical-date, dessen base
+// unter anderem ClinicalImpression und CarePlan umfasst.
+* insert SupportSearchParam(date, http://hl7.org/fhir/SearchParameter/clinical-date, #date, #SHALL)
 * insert SupportSearchParam(status, http://hl7.org/fhir/SearchParameter/ClinicalImpression-status, #token, #SHALL)
 
 // Observation requirements
@@ -204,7 +208,8 @@ Usage: #definition
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/clinical-patient, #reference, #SHALL)
 * insert SupportSearchParam(status, http://hl7.org/fhir/SearchParameter/CarePlan-status, #token, #SHALL)
-* insert SupportSearchParam(date, http://hl7.org/fhir/SearchParameter/CarePlan-date, #date, #SHALL)
+// Korrigiert 2026-09-04, siehe oben: CarePlan-date existiert in R4 nicht.
+* insert SupportSearchParam(date, http://hl7.org/fhir/SearchParameter/clinical-date, #date, #SHALL)
 
 // FamilyMemberHistory requirements
 * insert SupportResource(FamilyMemberHistory, #SHALL)
