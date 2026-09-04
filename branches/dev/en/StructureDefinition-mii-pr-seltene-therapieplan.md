@@ -48,7 +48,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
   "name" : "MII_PR_Seltene_Therapieplan",
   "title" : "MII PR SE Therapieplan",
   "status" : "active",
-  "date" : "2026-09-04T13:01:37+00:00",
+  "date" : "2026-09-04T16:11:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

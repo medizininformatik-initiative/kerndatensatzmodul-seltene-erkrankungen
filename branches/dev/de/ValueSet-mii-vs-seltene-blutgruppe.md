@@ -24,6 +24,8 @@ ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List
 
 ### Expansion
 
+No Expansion for this valueset (Unknown Code System)
+
 -------
 
  [Beschreibung der obigen Tabelle(n)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -42,7 +44,7 @@ ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List
   "title" : "MII VS SE Blutgruppe",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T13:01:37+00:00",
+  "date" : "2026-09-04T16:11:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

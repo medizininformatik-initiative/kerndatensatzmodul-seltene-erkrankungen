@@ -43,7 +43,7 @@ Expansions are not generated for retired value sets
   "name" : "MII_VS_Seltene_ClinicalDiagnosisCategory",
   "title" : "MII VS SE Clinical Diagnosis Category (retired)",
   "status" : "retired",
-  "date" : "2026-09-04T13:01:37+00:00",
+  "date" : "2026-09-04T16:11:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

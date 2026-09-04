@@ -131,6 +131,10 @@
   },
   {
     "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/clinical-date|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/SearchParameter/ClinicalImpression-status|4.0.1"
   },
   {
@@ -200,10 +204,6 @@
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-data-absent-reason|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/clinical-date|4.0.1"
   },
   {
     "name" : "default-canonical-version",

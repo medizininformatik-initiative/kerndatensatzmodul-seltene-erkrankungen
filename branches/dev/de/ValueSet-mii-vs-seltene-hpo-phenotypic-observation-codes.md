@@ -27,6 +27,8 @@ Human Phenotype Ontology codes for phenotypic observations
 
 ### Expansion
 
+No Expansion for this valueset (Unknown Code System)
+
 -------
 
  [Beschreibung der obigen Tabelle(n)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -44,7 +46,7 @@ Human Phenotype Ontology codes for phenotypic observations
   "name" : "MII_VS_Seltene_HPOPhenotypicObservationCodes",
   "title" : "HPO Phenotypic Observation Codes",
   "status" : "active",
-  "date" : "2026-09-04T13:01:37+00:00",
+  "date" : "2026-09-04T16:11:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

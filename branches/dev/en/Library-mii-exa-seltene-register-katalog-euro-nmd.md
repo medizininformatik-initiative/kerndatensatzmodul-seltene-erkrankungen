@@ -18,7 +18,7 @@
 
 -------
 
-**Exception parsing generated Narrative (see /tmp/liquid-5f54e0d0-74a9-4191-94d0-4f7c83e45558.html): unexpected non-end of element null::a at line 135 column 50**
+**Exception parsing generated Narrative (see /tmp/liquid-7a554192-7fe8-4462-b785-8506cd3e3516.html): unexpected non-end of element null::a at line 135 column 50**
 
 
 
@@ -43,7 +43,7 @@
       "code" : "asset-collection"
     }]
   },
-  "date" : "2026-09-04T13:01:37+00:00",
+  "date" : "2026-09-04T16:11:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

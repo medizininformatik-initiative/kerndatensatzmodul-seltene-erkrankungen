@@ -111,7 +111,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_ICFAssessment",
   "title" : "MII PR SE ICF Assessment",
   "status" : "active",
-  "date" : "2026-09-04T13:01:37+00:00",
+  "date" : "2026-09-04T16:11:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

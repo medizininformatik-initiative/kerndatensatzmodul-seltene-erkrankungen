@@ -25,6 +25,8 @@ LOINC codes for indicating presence or absence of phenotypic features. Follows H
 
 ### Expansion
 
+No Expansion for this valueset (Unknown Code System)
+
 -------
 
  [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -42,7 +44,7 @@ LOINC codes for indicating presence or absence of phenotypic features. Follows H
   "name" : "MII_VS_Seltene_HPOPresenceStatus",
   "title" : "HPO Phenotype Presence Status",
   "status" : "active",
-  "date" : "2026-09-04T13:01:37+00:00",
+  "date" : "2026-09-04T16:11:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

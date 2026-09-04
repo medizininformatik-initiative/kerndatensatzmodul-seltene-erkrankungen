@@ -286,7 +286,7 @@ Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktione
           "valueCode" : "SHALL"
         }],
         "name" : "date",
-        "definition" : "http://hl7.org/fhir/SearchParameter/ClinicalImpression-date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
         "type" : "date"
       },
       {
@@ -1172,7 +1172,7 @@ Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktione
           "valueCode" : "SHALL"
         }],
         "name" : "date",
-        "definition" : "http://hl7.org/fhir/SearchParameter/CarePlan-date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
         "type" : "date"
       }]
     },
