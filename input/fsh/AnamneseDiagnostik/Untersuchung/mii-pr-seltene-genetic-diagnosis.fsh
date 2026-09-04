@@ -89,7 +89,7 @@ Mapping: FHIR-SE-GeneticDiagnosis
 Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_GeneticDiagnosis
-Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
+Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/mii-lm-seltene"
 * -> "anamneseUndDiagnostik.genetischeDiagnose" "Genetische Diagnose"
 * code.coding[icd10-gm] -> "anamneseUndDiagnostik.genetischeDiagnose" "ICD-10-GM Diagnose"
 * code.coding[orphanet] -> "anamneseUndDiagnostik.genetischeDiagnose" "Orpha-Code Diagnose"

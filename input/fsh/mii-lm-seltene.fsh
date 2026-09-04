@@ -7,15 +7,20 @@ Description: "MII LogicalModel Modul Seltene Erkraknungen"
 * insert PR_CS_VS_Version
 // BREAKING CHANGE 2026-09-04 (Nutzerentscheid): Der Canonical lautete bis
 // 2026.0.1 .../StructureDefinition/LogicalModel/Seltene und ist unter dieser
-// URL publiziert. Er folgt jetzt dem Schema {canonical}/{Typ}/{id}, das der
-// IG Publisher erwartet — damit entfaellt der Fehler "Resource id/url
-// mismatch", ohne ihn per special-url stumm zu schalten.
+// URL publiziert. Das Segment LogicalModel/ bleibt — es ist MII-weit die
+// Mehrheit (15 von 23 Modellen, base eingeschlossen) —, nur das Ende traegt
+// jetzt die Id statt des Namens.
 //
-// Preis: Verweise auf den alten Canonical laufen ins Leere, und das Modul
-// weicht vom MII-Mehrheitsmuster ab — 15 von 23 Logical Models nutzen
-// .../StructureDefinition/LogicalModel/<Name>, base eingeschlossen.
+// Damit ist EINE der beiden Publisher-Pruefungen erfuellt:
+//   IGKnowledgeProvider:456   verlangt url.endsWith("/"+id)          -> ok
+//   PublisherIGLoader:4626    verlangt url == {canonical}/{Typ}/{id} -> nein
+// Die zweite bleibt und wird per special-url in sushi-config.yaml als
+// gewollt erklaert; canonicalUrlIsOk() prueft auf Gleichheit, ein
+// zusaetzliches Pfadsegment ist dort nie zulaessig.
+//
+// Preis unveraendert: Verweise auf den alten Canonical laufen ins Leere.
 // Die 17 Mapping-Targets im Modul sind mitgezogen.
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/mii-lm-seltene"
 * anamneseUndDiagnostik 0..* BackboneElement "Diagnose"
   * untersuchungsdatum 0..1 date "Untersuchungsdatum" "Datum der durchgeführten Untersuchung eines SE-Patienten."
   * untersuchungsanlass 0..1 code "Untersuchungsanlass" "Grund für den Besuch des SE-Patienten."

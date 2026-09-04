@@ -175,7 +175,7 @@ Mapping: FHIR-SE-Familienanamnese
 Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_Familienanamnese
-Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-lm-seltene"
+Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/mii-lm-seltene"
 * -> "familienanamnese" "Familienanamnese"
 * relationship -> "familienanamnese.verwandtschaftsverhaeltnis" "Verwandtschaftsverhältnis"
 * sex -> "familienanamnese.geschlecht" "Geschlecht"
