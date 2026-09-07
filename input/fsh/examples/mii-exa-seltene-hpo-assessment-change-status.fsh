@@ -5,7 +5,7 @@ Title: "HPO Assessment mit Änderungsstatus"
 Description: "Beispiel einer HPO-Beobachtung mit dokumentiertem Änderungsstatus"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment)
 * code = $HPO#HP:0001263 "Global developmental delay"
-* subject = Reference(Patient/example)
+* subject = Reference(mii-exa-seltene-patient)
 * status = #final
 * effectiveDateTime = "2024-11-15"
 * component[status].code = $SCT#260411009 "Presence findings"

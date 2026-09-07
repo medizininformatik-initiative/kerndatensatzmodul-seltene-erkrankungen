@@ -1,0 +1,161 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="en" target-language="de" id="StructureDefinition-mii-pr-seltene-therapieplan" original="Resource StructureDefinition-mii-pr-seltene-therapieplan" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.name">
+             <notes>
+               <note id="n1">A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.</note>
+             </notes>
+        <source>MII_PR_Seltene_Therapieplan</source>
+        <target>MII_PR_Seltene_Therapieplan</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.title">
+             <notes>
+               <note id="n1">A short, descriptive, user-friendly title for the structure definition.</note>
+             </notes>
+        <source>MII PR SE Therapieplan</source>
+        <target>MII PR SE Therapieplan</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.publisher">
+             <notes>
+               <note id="n1">The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.contact.name">
+             <notes>
+               <note id="n1">The name of an individual to contact.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.mapping.workflow/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Workflow Pattern</source>
+        <target>Workflow Pattern</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.mapping.w5/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>FiveWs Pattern Mapping</source>
+        <target>FiveWs Pattern Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.mapping.v2/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>HL7 v2 Mapping</source>
+        <target>HL7 v2 Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.element.CarePlan.status/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Status der Umsetzung des beschlossenen Therapieplans</source>
+        <target>Status der Umsetzung des beschlossenen Therapieplans</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.element.CarePlan.status/comment">
+             <notes>
+               <note id="n1">Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).</note>
+             </notes>
+        <source>
+    active: Empfehlung bzw. Therapieoption in Umsetzung (Regelfall), 
+    revoked: Fall ist abgeschlossen, 
+    completed: Alle Empfehlungen bzw. Therapieoptionen ausgeschöpft oder Patient verstorben</source>
+        <target>
+    active: Empfehlung bzw. Therapieoption in Umsetzung (Regelfall), 
+    revoked: Fall ist abgeschlossen, 
+    completed: Alle Empfehlungen bzw. Therapieoptionen ausgeschöpft oder Patient verstorben</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.element.CarePlan.description/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Protokollauszug</source>
+        <target>Protokollauszug</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.element.CarePlan.description/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Protokollauszug aus dem Beschluss</source>
+        <target>Protokollauszug aus dem Beschluss</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.element.CarePlan.created/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Erstellungsdatum</source>
+        <target>Erstellungsdatum</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.element.CarePlan.created/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Erstellungsdatum des Therapieplans</source>
+        <target>Erstellungsdatum des Therapieplans</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.element.CarePlan.activity:MedikamentoesTherapie/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Medikamentöse Therapieempfehlung</source>
+        <target>Medikamentöse Therapieempfehlung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.element.CarePlan.activity:MedikamentoesTherapie/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Therapieempfehlung für eine medikamentöse Therapie (Systemtherapie, gezielte Therapie, Präventivmedikation, Gentherapie, Kombinationstherapie)</source>
+        <target>Therapieempfehlung für eine medikamentöse Therapie (Systemtherapie, gezielte Therapie, Präventivmedikation, Gentherapie, Kombinationstherapie)</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.element.CarePlan.activity:MedikamentoesTherapie/comment">
+             <notes>
+               <note id="n1">Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).</note>
+             </notes>
+        <source>Referenziert MedicationRequest-basierte Profile für alle medikamentösen Therapien</source>
+        <target>Referenziert MedicationRequest-basierte Profile für alle medikamentösen Therapien</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.element.CarePlan.activity:NichtMedikamentoesTherapie/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Nicht-medikamentöse Therapieempfehlung</source>
+        <target>Nicht-medikamentöse Therapieempfehlung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.element.CarePlan.activity:NichtMedikamentoesTherapie/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Therapieempfehlung für nicht-medikamentöse Interventionen (Ernährungstherapie, Prophylaxe, Früherkennung, humangenetische Beratung, andere)</source>
+        <target>Therapieempfehlung für nicht-medikamentöse Interventionen (Ernährungstherapie, Prophylaxe, Früherkennung, humangenetische Beratung, andere)</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.element.CarePlan.activity:NichtMedikamentoesTherapie/comment">
+             <notes>
+               <note id="n1">Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).</note>
+             </notes>
+        <source>Referenziert ServiceRequest-basierte Profile für alle nicht-medikamentösen Therapien einschließlich humangenetischer Beratung</source>
+        <target>Referenziert ServiceRequest-basierte Profile für alle nicht-medikamentösen Therapien einschließlich humangenetischer Beratung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.element.CarePlan.activity:Studieneinschlussempfehlung/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Studieneinschlussempfehlung</source>
+        <target>Studieneinschlussempfehlung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieplan" resname="StructureDefinition.element.CarePlan.activity:Studieneinschlussempfehlung/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Anfrage zum Studieneinschluss</source>
+        <target>Anfrage zum Studieneinschluss</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

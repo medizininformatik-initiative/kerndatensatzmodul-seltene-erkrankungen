@@ -1,12 +1,12 @@
 {
   "resourceType": "ValueSet",
   "status": "active",
-  "name": "HPOInheritancePatternValueSet",
+  "name": "MII_VS_Seltene_HPOInheritancePattern",
   "id": "mii-vs-seltene-hpo-inheritance-pattern",
   "title": "MII VS SE HPO Inheritance Pattern",
   "description": "Value set containing HPO terms for modes of inheritance",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-inheritance-pattern",
-  "version": "2026.0.1",
+  "version": "2027.0.0-ballot.rc1",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -59,7 +59,7 @@
           },
           {
             "code": "HP:0001428",
-            "display": "Somatic mutation"
+            "display": "Typified by somatic mosaicism"
           },
           {
             "code": "HP:0003745",
@@ -67,15 +67,15 @@
           },
           {
             "code": "HP:0010983",
-            "display": "Oligogenic"
+            "display": "Oligogenic inheritance"
           },
           {
             "code": "HP:0010982",
-            "display": "Polygenic"
+            "display": "Polygenic inheritance"
           },
           {
             "code": "HP:0001426",
-            "display": "Multifactorial inheritance"
+            "display": "Non-Mendelian inheritance"
           },
           {
             "code": "HP:0012275",

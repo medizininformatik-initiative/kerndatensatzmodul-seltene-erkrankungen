@@ -1,613 +1,215 @@
-# SMA Fallbeispiel - Semantische Annotationen
+<!-- TODO:REVIEW machine translation of source page sma-example-annotations.md (de) — Migration 2026-08-28, page-map.tsv -->
+### Overview
 
-## Übersicht
-Dieses Dokument enthält die semantischen Annotationen für ein Fallbeispiel einer Spinalen Muskelatrophie (SMA) bei einem Neugeborenen.
+This document contains the semantic annotations for a case example of spinal muscular atrophy (SMA) in a newborn.
 
-## Zeitlicher Verlauf
+### Timeline
 
-### 1. Neugeborenenscreening (18.07.2024)
-- **Verdachtsdiagnose**: Spinale Muskelatrophie (SMA)
-- **Setting**: Screening
-- **Status**: Verdacht
+#### 1. Newborn screening (2024-07-18)
+- **Suspected diagnosis**: spinal muscular atrophy (SMA)
+- **Setting**: screening
+- **Status**: suspected
 
-### 2. Ambulante Erstvorstellung (22.07.2024)
-- **Einweisungsdiagnose**: 
-  - ICD-10-GM: G12.0 "Infantile Spinale Muskelatrophie Typ 1"
+#### 2. Outpatient first presentation (2024-07-22)
+- **Admission diagnosis**:
+  - ICD-10-GM: G12.0 "Infantile spinal muscular atrophy type 1"
   - Orpha: 83330
-- **Setting**: Ambulant
-- **Zentrum**: Spezialisiertes SMA-Zentrum
+- **Setting**: outpatient
+- **Center**: specialized SMA center
 
-### 3. Molekulargenetische Diagnostik (26.07.2024)
-- **Untersuchungsmaterial**: EDTA-Blut
-- **Befund**:
-  - SMN1-Gen: 0 Kopien (pathologisch)
-  - SMN2-Gen: 2 Kopien
-- **Interpretation**: Krankheitsursächlich
-- **Bestätigung**: Klinischer Verdacht bestätigt
+#### 3. Molecular genetic diagnostics (2024-07-26)
+- **Specimen**: EDTA blood
+- **Findings**:
+  - SMN1 gene: 0 copies (pathological)
+  - SMN2 gene: 2 copies
+- **Interpretation**: disease-causing
+- **Confirmation**: clinical suspicion confirmed
 
-### 4. Stationäre Therapie (29.07.2024)
-- **Behandlung**: Gentherapeutikum
-- **Begleitmedikation**: Prednisolon (prätherapeutisch)
-- **Prozedurcode**: 6-00d.0
-- **Komplikationen**: Keine
-- **Laborwerte posttherapeutisch**:
-  - ALT: normwertig
-  - AST: normwertig
-  - Thrombozytenzahl: normwertig
+#### 4. Inpatient therapy (2024-07-29)
+- **Treatment**: gene therapeutic
+- **Concomitant medication**: prednisolone (pre-therapeutic)
+- **Procedure code**: 6-00d.0
+- **Complications**: none
+- **Post-therapeutic laboratory values**:
+  - ALT: normal
+  - AST: normal
+  - Platelet count: normal
 
-### 5. Nachsorge (12.08.2024)
-- **Setting**: Ambulant
-- **Laborwerte**:
-  - ALT: normwertig
-  - AST: normwertig
-  - Thrombozytenzahl: normwertig
-  - Troponin Ths: 106 ng/l (erhöht)
-- **Troponin-Verlauf** (prä-therapeutisch):
-  - 22.07.2024: 92 ng/l
-  - 28.07.2024: 58 ng/l
-  - 01.08.2024: 57 ng/l
-  - 12.08.2024: 106 ng/l
+#### 5. Follow-up (2024-08-12)
+- **Setting**: outpatient
+- **Laboratory values**:
+  - ALT: normal
+  - AST: normal
+  - Platelet count: normal
+  - Troponin T hs: 106 ng/l (elevated)
+- **Troponin course** (pre-therapeutic):
+  - 2024-07-22: 92 ng/l
+  - 2024-07-28: 58 ng/l
+  - 2024-08-01: 57 ng/l
+  - 2024-08-12: 106 ng/l
 
-## Semantische Annotationen
+### Semantic annotations
 
-### Patient
-- **Geschlecht**: Weiblich
-- **Geburtsdatum**: ~Juli 2024 (Neugeborenes)
-- **Relevante Merkmale**: Neugeborenes mit SMA
+#### Patient
+- **Sex**: female
+- **Date of birth**: ~July 2024 (newborn)
+- **Relevant characteristics**: newborn with SMA
 
-### Familienanamnese
-- **Urgroßmutter**: Unbekannte Muskelerkrankung
-- **Sonstige Familie**: Unauffällig
+#### Family history
+- **Great-grandmother**: unknown muscle disease
+- **Rest of family**: unremarkable
 
-### Diagnosen
-1. **Hauptdiagnose**:
-   - **Bezeichnung**: Infantile Spinale Muskelatrophie Typ 1
+#### Diagnoses
+1. **Main diagnosis**:
+   - **Name**: infantile spinal muscular atrophy type 1
    - **ICD-10-GM**: G12.0
    - **Orpha**: 83330
    - **SNOMED CT**: 80854005 (Werdnig-Hoffmann disease)
-   - **Status**: Bestätigt durch Molekulargenetik
-   - **Onset**: Neonatal
+   - **Status**: confirmed by molecular genetics
+   - **Onset**: neonatal
 
-### Genetische Befunde
-1. **SMN1-Gen Deletion**:
-   - **Gen**: SMN1 (OMIM: 600354, HGNC: HGNC:11117)
-   - **Variante**: Homozygote Deletion
-   - **Kopienanzahl**: 0
-   - **Interpretation**: Pathologisch, krankheitsursächlich
+#### Genetic findings
+1. **SMN1 gene deletion**:
+   - **Gene**: SMN1 (OMIM: 600354, HGNC: HGNC:11117)
+   - **Variant**: homozygous deletion
+   - **Copy number**: 0
+   - **Interpretation**: pathological, disease-causing
 
-2. **SMN2-Gen Kopienanzahl**:
-   - **Gen**: SMN2 (OMIM: 601627, HGNC: HGNC:11118)
-   - **Kopienanzahl**: 2
-   - **Interpretation**: Modifikator des Phänotyps
+2. **SMN2 gene copy number**:
+   - **Gene**: SMN2 (OMIM: 601627, HGNC: HGNC:11118)
+   - **Copy number**: 2
+   - **Interpretation**: phenotype modifier
 
-### Prozeduren
-1. **Gentherapie**:
-   - **OPS-Code**: 6-00d.0
-   - **SNOMED CT**: 788110002  (Gene therapy)
-   - **Datum**: 29.07.2024
-   - **Medikament**: Onasemnogene abeparvovec (Zolgensma)
+#### Procedures
+1. **Gene therapy**:
+   - **OPS code**: 6-00d.0
+   - **SNOMED CT**: 788110002 (Gene therapy)
+   - **Date**: 2024-07-29
+   - **Drug**: onasemnogene abeparvovec (Zolgensma)
    - **UNII**: MLU3LU3EVV
-   - **Begleitmedikation**: Prednisolon
+   - **Concomitant medication**: prednisolone
 
-### Laborwerte
-1. **ALT (Alanin-Aminotransferase)**:
+#### Laboratory values
+1. **ALT (alanine aminotransferase)**:
    - **LOINC**: 1742-6
-   - **Status**: Normwertig (post-therapeutisch)
+   - **Status**: normal (post-therapeutic)
 
-2. **AST (Aspartat-Aminotransferase)**:
+2. **AST (aspartate aminotransferase)**:
    - **LOINC**: 1920-8
-   - **Status**: Normwertig (post-therapeutisch)
+   - **Status**: normal (post-therapeutic)
 
-3. **Thrombozytenzahl**:
+3. **Platelet count**:
    - **LOINC**: 777-3
-   - **Status**: Normwertig (post-therapeutisch)
+   - **Status**: normal (post-therapeutic)
 
 4. **Troponin T hs**:
    - **LOINC**: 6598-7
-   - **Werte**: Prä-therapeutisch erhöht, steigend im Verlauf
-   - **Einheit**: ng/l
+   - **Values**: elevated pre-therapeutically, rising over time
+   - **Unit**: ng/l
 
-### Behandlungsplan
-- **Gentherapie**: Einmalig verabreicht
-- **Prednisolon**: Fortführung nach Entlassung
-- **Nachsorge**: 
-  - Kinderärztliche Betreuung
-  - Humangenetische Beratung
-  - Sozialpädiatrisches Zentrum
-  - Zentrumsbasierte Nachsorge
+#### Treatment plan
+- **Gene therapy**: administered once
+- **Prednisolone**: continued after discharge
+- **Follow-up**:
+  - Pediatric care
+  - Human genetic counseling
+  - Social-pediatric center
+  - Center-based follow-up
 
-## FHIR-Mapping
+### FHIR mapping
 
-### Verwendete Profile
-- **Patient**: MII KDS Patient
-- **Diagnose**: MII PR SE Diagnose
-- **Molekulargenetik**: MII PR MolGen Variante
-- **Familienanamnese**: MII PR SE Familienanamnese
-- **Laborwerte**: MII PR Labor Observation
-- **Prozedur**: MII PR Prozedur
-- **Encounter**: MII PR Encounter
+#### Profiles used
 
-### Ressourcen-Übersicht
+The list below states what the example instances actually declare in
+`meta.profile`. Resources without an entry deliberately use the plain FHIR base
+resource: this module profiles what is specific to rare diseases and points at
+the neighbouring MII modules for the rest — laboratory values belong to
+**Laborbefund**, variant findings to **Molekulargenetischer Befund**. Neither is
+a dependency of this module, and nothing here inherits from them.
 
-#### Patient und Familienanamnese
-| Ressource ID | Typ | Beschreibung | Datum | Status/Details |
+- **Clinical diagnosis** (suspected, clinical): `mii-pr-seltene-clinical-diagnosis`
+- **Genetic diagnosis** (confirmed, excluded): `mii-pr-seltene-genetic-diagnosis`
+- **Therapy recommendation, medicinal** (gene therapy): `mii-pr-seltene-therapieempfehlung`
+- **Therapy recommendation, non-medicinal** (physiotherapy): `mii-pr-seltene-therapieempfehlung-nicht-medikamentoes`
+- **Therapy performed** (NARSE): `mii-pr-seltene-therapie-durchgefuehrt`
+- **Unprofiled base resources**: Patient, the laboratory and variant Observations,
+  the MolGen DiagnosticReports, and the transaction Bundle
+
+#### Resource overview
+
+##### Patient and family history
+
+| Resource ID | Type | Description | Date | Status/details |
 |--------------|-----|--------------|-------|----------------|
-| `patient-sma-001` | Patient | Neugeborenes Mädchen | Geburt: ~01.07.2024 | ID: SMA-2024-001 |
-| `family-history-001` | FamilyMemberHistory | Urgroßmutter mit Muskelerkrankung | 22.07.2024 | Relation: unsicher |
+| `mii-exa-seltene-patient-sma-001` | Patient | Newborn girl | Birth: ~2024-07-01 | ID: SMA-2024-001 |
+| `mii-exa-seltene-family-history-001` | FamilyMemberHistory | Great-grandmother with muscle disease | 2024-07-22 | Relation: uncertain |
 
-#### Diagnose-Verlauf
-| Ressource ID | Typ | Beschreibung | Feststellungsdatum | Verification Status | Codes |
+##### Diagnosis course
+
+| Resource ID | Type | Description | Date of determination | Verification status | Codes |
 |--------------|-----|--------------|-------------------|-------------------|--------|
-| `condition-sma-suspected` | Condition | Verdacht auf SMA | 18.07.2024 | unconfirmed | SNOMED: 80854005 |
-| `condition-sma-clinical` | Condition | Klinische Diagnose SMA Typ 1 | 22.07.2024 | provisional | ICD-10: G12.0, Orpha: 83330 |
-| `condition-sma-confirmed` | Condition | Bestätigte SMA Typ 1 | 26.07.2024 | confirmed | ICD-10: G12.0, Orpha: 83330 |
+| `mii-exa-seltene-condition-sma-suspected` | Condition | Suspected SMA | 2024-07-18 | unconfirmed | SNOMED: 80854005 |
+| `mii-exa-seltene-condition-sma-clinical` | Condition | Clinical diagnosis SMA type 1 | 2024-07-22 | provisional | ICD-10: G12.0, Orpha: 83330 |
+| `mii-exa-seltene-condition-sma-genetic` | Condition | Confirmed SMA type 1 | 2024-07-26 | confirmed | ICD-10: G12.0, Orpha: 83330 |
 
-#### Screening und Genetische Befunde
-| Ressource ID | Typ | Test/Gen | Befund | Datum | Interpretation |
+##### Screening and genetic findings
+
+| Resource ID | Type | Test/gene | Finding | Date | Interpretation |
 |--------------|-----|----------|---------|-------|----------------|
-| `observation-sma-screening` | Observation | SMA Neugeborenenscreening (LOINC: 92005-8) | SMN1 Exon 7 nicht nachweisbar | 18.07.2024 | Positiv für SMA |
-| `variant-smn1-001` | Observation | SMN1 (HGNC:11117) - Konfirmatorisch | 0 Kopien (Deletion) | 26.07.2024 | Pathologisch, krankheitsursächlich |
-| `variant-smn2-001` | Observation | SMN2 (HGNC:11118) - Konfirmatorisch | 2 Kopien | 26.07.2024 | Phänotyp-Modifikator |
+| `mii-exa-seltene-observation-sma-screening` | Observation | SMA newborn screening (LOINC: 92005-8) | SMN1 exon 7 not detectable | 2024-07-18 | Positive for SMA |
+| `mii-exa-seltene-variant-smn1-001` | Observation | SMN1 (HGNC:11117) — confirmatory | 0 copies (deletion) | 2024-07-26 | Pathological, disease-causing |
+| `mii-exa-seltene-variant-smn2-001` | Observation | SMN2 (HGNC:11118) — confirmatory | 2 copies | 2024-07-26 | Phenotype modifier |
 
-#### Behandlung
-| Ressource ID | Typ | Beschreibung | Datum | Code | Details |
+##### Treatment
+
+| Resource ID | Type | Description | Date | Code | Details |
 |--------------|-----|--------------|-------|------|---------|
-| `procedure-gentherapy-001` | Procedure | Gentherapie (Onasemnogene abeparvovec) | 29.07.2024 | OPS: 6-00d.0, UNII: MLU3LU3EVV | Mit Prednisolon, ohne Komplikationen |
+| `mii-exa-seltene-procedure-gentherapy-001` | Procedure | Gene therapy (onasemnogene abeparvovec) | 2024-07-29 | OPS: 6-00d.0, UNII: MLU3LU3EVV | With prednisolone, without complications |
 
-#### Laborwerte
-| Ressource ID | Typ | Parameter | Datum | Wert | Interpretation |
+##### Laboratory values
+
+| Resource ID | Type | Parameter | Date | Value | Interpretation |
 |--------------|-----|-----------|-------|------|----------------|
-| `observation-troponin-001` | Observation | Troponin T hs | 22.07.2024 | 92 ng/l | Erhöht |
-| `observation-troponin-002` | Observation | Troponin T hs | 28.07.2024 | 58 ng/l | Erhöht |
-| `observation-troponin-003` | Observation | Troponin T hs | 01.08.2024 | 57 ng/l | Erhöht |
-| `observation-troponin-004` | Observation | Troponin T hs | 12.08.2024 | 106 ng/l | Erhöht |
-| `observation-alt-001` | Observation | ALT | 29.07.2024 | - | Normwertig |
-| `observation-ast-001` | Observation | AST | 29.07.2024 | - | Normwertig |
-| `observation-plt-001` | Observation | Thrombozytenzahl | 29.07.2024 | - | Normwertig |
+| `mii-exa-seltene-observation-troponin-001` | Observation | Troponin T hs | 2024-07-22 | 92 ng/l | Elevated |
+| `mii-exa-seltene-observation-troponin-002` | Observation | Troponin T hs | 2024-07-28 | 58 ng/l | Elevated |
+| `mii-exa-seltene-observation-troponin-003` | Observation | Troponin T hs | 2024-08-01 | 57 ng/l | Elevated |
+| `mii-exa-seltene-observation-troponin-004` | Observation | Troponin T hs | 2024-08-12 | 106 ng/l | Elevated |
+| `mii-exa-seltene-observation-alt-001` | Observation | ALT | 2024-07-29 | - | Normal |
+| `mii-exa-seltene-observation-ast-001` | Observation | AST | 2024-07-29 | - | Normal |
+| `mii-exa-seltene-observation-plt-001` | Observation | Platelet count | 2024-07-29 | - | Normal |
 
-#### Behandlungskontakte
-| Ressource ID | Typ | Beschreibung | Datum | Setting | Verknüpfte Diagnose |
+##### Encounters
+
+| Resource ID | Type | Description | Date | Setting | Linked diagnosis |
 |--------------|-----|--------------|-------|---------|-------------------|
-| `encounter-screening-001` | Encounter | Neugeborenenscreening | 18.07.2024 | Screening | `condition-sma-suspected` |
-| `encounter-ambulant-001` | Encounter | Erstvorstellung SMA-Zentrum | 22.07.2024 | Ambulant | `condition-sma-clinical` |
-| `encounter-stationaer-001` | Encounter | Stationäre Gentherapie | 29-30.07.2024 | Stationär | `condition-sma-confirmed` |
-| `encounter-nachsorge-001` | Encounter | Nachsorge | 12.08.2024 | Ambulant | `condition-sma-confirmed` |
+| `mii-exa-seltene-encounter-screening-001` | Encounter | Newborn screening | 2024-07-18 | Screening | `mii-exa-seltene-condition-sma-suspected` |
+| `mii-exa-seltene-encounter-ambulant-001` | Encounter | First presentation SMA center | 2024-07-22 | Outpatient | `mii-exa-seltene-condition-sma-clinical` |
+| `mii-exa-seltene-encounter-stationaer-001` | Encounter | Inpatient gene therapy | 2024-07-29/30 | Inpatient | `mii-exa-seltene-condition-sma-genetic` |
+| `mii-exa-seltene-encounter-nachsorge-001` | Encounter | Follow-up | 2024-08-12 | Outpatient | `mii-exa-seltene-condition-sma-genetic` |
 
-#### Klinische Beurteilungen
-| Ressource ID | Typ | Beschreibung | Datum | Encounter | Wichtige Befunde |
+##### Clinical assessments
+
+| Resource ID | Type | Description | Date | Encounter | Key findings |
 |--------------|-----|--------------|-------|-----------|------------------|
-| `clinical-impression-erstvorstellung` | ClinicalImpression | Initiale klinische Beurteilung | 22.07.2024 | `encounter-ambulant-001` | Familienanamnese, Troponin ↑, V.a. SMA Typ 1 |
-| `clinical-impression-nachsorge` | ClinicalImpression | Nachsorgebeurteilung nach Gentherapie | 12.08.2024 | `encounter-nachsorge-001` | Troponin weiter ↑ (präexistent), ALT/AST/PLT normal |
+| `mii-exa-seltene-clinical-impression-erstvorstellung` | ClinicalImpression | Initial clinical assessment | 2024-07-22 | `mii-exa-seltene-encounter-ambulant-001` | Family history, troponin ↑, suspected SMA type 1 |
+| `mii-exa-seltene-clinical-impression-nachsorge` | ClinicalImpression | Follow-up assessment after gene therapy | 2024-08-12 | `mii-exa-seltene-encounter-nachsorge-001` | Troponin still ↑ (pre-existing), ALT/AST/PLT normal |
 
-### Bundle
-| Ressource ID | Typ | Beschreibung | Anzahl Einträge |
+#### Bundle
+
+| Resource ID | Type | Description | Number of entries |
 |--------------|-----|--------------|-----------------|
-| `bundle-sma-complete` | Bundle | Transaction Bundle mit allen Ressourcen | 22 Ressourcen |
+| `mii-exa-seltene-bundle-sma-complete` | Bundle | Transaction bundle with all resources | 22 resources |
 
-## Ressourcen-Diagramme
+### Resource diagrams
 
-### Gesamtübersicht aller Ressourcen und Beziehungen
+#### Overall view of all resources and their relationships
 
-<plantuml>
-@startuml
-!define DARKBLUE #1e3a5f
-!define LIGHTBLUE #4a86e8
-!define GREEN #0d9488
-!define ORANGE #ea580c
-!define PURPLE #7c3aed
-!define RED #dc2626
-!define YELLOW #facc15
+![SMA case example resource overview](SMA_Case_Resources_Diagram.svg)
 
-skinparam backgroundColor #f8f9fa
-skinparam roundcorner 10
-skinparam shadowing true
-skinparam ArrowColor #666666
-skinparam ArrowThickness 2
+#### Timeline
 
-skinparam class {
-    BackgroundColor<<Patient>> DARKBLUE
-    BorderColor<<Patient>> DARKBLUE
-    FontColor<<Patient>> white
-    
-    BackgroundColor<<Condition>> RED
-    BorderColor<<Condition>> RED
-    FontColor<<Condition>> white
-    
-    BackgroundColor<<Observation>> GREEN
-    BorderColor<<Observation>> GREEN
-    FontColor<<Observation>> white
-    
-    BackgroundColor<<Procedure>> PURPLE
-    BorderColor<<Procedure>> PURPLE
-    FontColor<<Procedure>> white
-    
-    BackgroundColor<<Encounter>> ORANGE
-    BorderColor<<Encounter>> ORANGE
-    FontColor<<Encounter>> white
-    
-    BackgroundColor<<FamilyHistory>> LIGHTBLUE
-    BorderColor<<FamilyHistory>> LIGHTBLUE
-    FontColor<<FamilyHistory>> white
-    
-    BackgroundColor<<ClinicalImpression>> YELLOW
-    BorderColor<<ClinicalImpression>> YELLOW
-    FontColor<<ClinicalImpression>> black
-}
+![SMA case example timeline](SMA_Case_Timeline_Diagram.svg)
 
-' Patient at the center
-class "patient-sma-001" <<Patient>> {
-    Neugeborenes Mädchen
-    Geburt: ~01.07.2024
-    ID: SMA-2024-001
-}
+### Implementation
 
-' Diagnosis progression (left side)
-class "condition-sma-suspected" <<Condition>> {
-    **Verdacht auf SMA**
-    Status: unconfirmed
-    Feststellung: 18.07.2024
-    Quelle: Neugeborenenscreening
-}
-
-class "condition-sma-clinical" <<Condition>> {
-    **Klinische Diagnose SMA Typ 1**
-    Status: provisional
-    ICD-10: G12.0
-    Orpha: 83330
-    Feststellung: 22.07.2024
-}
-
-class "condition-sma-confirmed" <<Condition>> {
-    **Bestätigte SMA Typ 1**
-    Status: confirmed
-    ICD-10: G12.0
-    Orpha: 83330
-    Feststellung: 26.07.2024
-    Onset: Neonatal
-}
-
-' Screening (top left)
-class "observation-sma-screening" <<Observation>> {
-    **SMA Neugeborenenscreening**
-    SMN1 Exon 7: nicht nachweisbar
-    Ct-Wert: 0 (keine Amplifikation)
-    Datum: 18.07.2024
-}
-
-' Genetic findings (top)
-class "variant-smn1-001" <<Observation>> {
-    **SMN1 Deletion (Konfirmatorisch)**
-    Kopien: 0 (homozygot)
-    Status: Pathologisch
-    Datum: 26.07.2024
-}
-
-class "variant-smn2-001" <<Observation>> {
-    **SMN2 Kopienanzahl**
-    Kopien: 2
-    Modifikator
-    Datum: 26.07.2024
-}
-
-' Gene therapy (right)
-class "procedure-gentherapy-001" <<Procedure>> {
-    **Gentherapie**
-    OPS: 6-00d.0
-    Datum: 29.07.2024
-    Mit Prednisolon
-}
-
-' Family history (bottom left)
-class "family-history-001" <<FamilyHistory>> {
-    **Urgroßmutter**
-    Unbekannte Muskelerkrankung
-    Relation: unsicher
-    Datum: 22.07.2024
-}
-
-' Encounters (bottom)
-class "encounter-screening-001" <<Encounter>> {
-    **Neugeborenenscreening**
-    Datum: 18.07.2024
-    Typ: Screening
-}
-
-class "encounter-ambulant-001" <<Encounter>> {
-    **Erstvorstellung**
-    Datum: 22.07.2024
-    Typ: Ambulant
-    SMA-Zentrum
-}
-
-class "encounter-stationaer-001" <<Encounter>> {
-    **Stationär für Gentherapie**
-    Datum: 29-30.07.2024
-    Typ: Stationär
-}
-
-class "encounter-nachsorge-001" <<Encounter>> {
-    **Nachsorge**
-    Datum: 12.08.2024
-    Typ: Ambulant
-}
-
-' Lab observations (right side)
-class "observation-troponin-series" <<Observation>> {
-    **Troponin T hs**
-    22.07: 92 ng/l ↑
-    28.07: 58 ng/l ↑
-    01.08: 57 ng/l ↑
-    12.08: 106 ng/l ↑
-}
-
-class "observation-liver-plt" <<Observation>> {
-    **ALT, AST, Thrombozyten**
-    Post-therapeutisch
-    Status: Normwertig
-    Datum: 29.07.2024
-}
-
-' Clinical Impressions
-class "clinical-impression-erstvorstellung" <<ClinicalImpression>> {
-    **Erstvorstellung Beurteilung**
-    Datum: 22.07.2024
-    V.a. SMA Typ 1
-    Troponin erhöht
-    Genetik veranlasst
-}
-
-class "clinical-impression-nachsorge" <<ClinicalImpression>> {
-    **Nachsorge Beurteilung**
-    Datum: 12.08.2024
-    Post-Gentherapie
-    Troponin präexistent erhöht
-    Klinisch stabil
-}
-
-' Relationships - Patient at center
-"patient-sma-001" <-- "condition-sma-suspected" : subject
-"patient-sma-001" <-- "condition-sma-clinical" : subject
-"patient-sma-001" <-- "condition-sma-confirmed" : subject
-"patient-sma-001" <-- "observation-sma-screening" : subject
-"patient-sma-001" <-- "variant-smn1-001" : subject
-"patient-sma-001" <-- "variant-smn2-001" : subject
-"patient-sma-001" <-- "procedure-gentherapy-001" : subject
-"patient-sma-001" <-- "family-history-001" : patient
-"patient-sma-001" <-- "observation-troponin-series" : subject
-"patient-sma-001" <-- "observation-liver-plt" : subject
-
-' Diagnosis progression chain using replaces extension
-"condition-sma-suspected" <-- "condition-sma-clinical" : replaces
-"condition-sma-clinical" <-- "condition-sma-confirmed" : replaces
-
-' Evidence links
-"condition-sma-suspected" --> "observation-sma-screening" : evidence (screening)
-"condition-sma-confirmed" --> "variant-smn1-001" : evidence (confirmatory)
-"condition-sma-confirmed" --> "variant-smn2-001" : evidence (confirmatory)
-
-' Procedure reason
-"procedure-gentherapy-001" --> "condition-sma-confirmed" : reasonReference
-
-' Encounter diagnosis links
-"encounter-screening-001" ..> "condition-sma-suspected" : identifies
-"encounter-ambulant-001" --> "condition-sma-clinical" : diagnosis
-"encounter-stationaer-001" --> "condition-sma-confirmed" : diagnosis
-"encounter-nachsorge-001" --> "condition-sma-confirmed" : diagnosis
-
-' Encounter patient links
-"patient-sma-001" <-- "encounter-screening-001" : subject
-"patient-sma-001" <-- "encounter-ambulant-001" : subject
-"patient-sma-001" <-- "encounter-stationaer-001" : subject
-"patient-sma-001" <-- "encounter-nachsorge-001" : subject
-
-' Procedure encounter link
-"encounter-stationaer-001" <.. "procedure-gentherapy-001" : context
-
-' Clinical Impression relationships
-"clinical-impression-erstvorstellung" --> "encounter-ambulant-001" : encounter
-"clinical-impression-erstvorstellung" --> "condition-sma-clinical" : problem
-"clinical-impression-erstvorstellung" --> "observation-troponin-series" : finding
-"clinical-impression-erstvorstellung" ..> "family-history-001" : mentions
-"clinical-impression-erstvorstellung" --> "variant-smn1-001" : investigation
-"clinical-impression-erstvorstellung" --> "variant-smn2-001" : investigation
-
-"clinical-impression-nachsorge" --> "encounter-nachsorge-001" : encounter
-"clinical-impression-nachsorge" --> "condition-sma-confirmed" : problem
-"clinical-impression-nachsorge" --> "observation-troponin-series" : finding
-"clinical-impression-nachsorge" --> "clinical-impression-erstvorstellung" : previous
-
-"patient-sma-001" <-- "clinical-impression-erstvorstellung" : subject
-"patient-sma-001" <-- "clinical-impression-nachsorge" : subject
-
-' Timeline annotation
-note right of "condition-sma-suspected"
-  **Diagnose-Verlauf:**
-  1. Verdacht (18.07)
-  2. Klinisch (22.07) - replaces Verdacht
-  3. Bestätigt (26.07) - replaces Klinisch
-end note
-
-note left of "observation-troponin-series"
-  **Troponin bereits**
-  **prätherapeutisch erhöht**
-end note
-
-legend bottom center
-|= Legende |
-| <color:white,back:DARKBLUE>Patient</color> | Zentrale Patientenressource |
-| <color:white,back:RED>Condition</color> | Diagnosen mit Verlauf |
-| <color:white,back:GREEN>Observation</color> | Labor & Genetik |
-| <color:white,back:PURPLE>Procedure</color> | Gentherapie |
-| <color:white,back:ORANGE>Encounter</color> | Kontakte |
-| <color:white,back:LIGHTBLUE>FamilyHistory</color> | Familienanamnese |
-| <color:black,back:YELLOW>ClinicalImpression</color> | Klinische Beurteilung |
-| → | Referenz |
-| ⋯> | Assoziiation |
-endlegend
-
-@enduml
-</plantuml>
-
-### Zeitlicher Verlauf
-
-<plantuml>
-@startuml
-!theme plain
-skinparam backgroundColor #ffffff
-
-' Timeline sequence diagram showing progression
-title SMA Fall - Zeitlicher Verlauf und Ressourcen-Beziehungen
-
-participant "Patient\n(Neugeborenes)" as Patient #2563eb
-participant "Diagnose-\nVerlauf" as Diagnosis #dc2626
-participant "Encounters" as Encounters #ea580c
-participant "Genetik" as Genetics #059669
-participant "Therapie" as Therapy #7c3aed
-participant "Labor" as Lab #16a34a
-participant "Klinische\nBeurteilung" as ClinImp #facc15
-
-== 18.07.2024 - Neugeborenenscreening ==
-Encounters -> Patient: encounter-screening-001
-activate Encounters #ea580c
-Encounters -> Diagnosis: Verdacht auf SMA
-activate Diagnosis #dc2626
-note right of Diagnosis
-  **condition-sma-suspected**
-  verificationStatus: unconfirmed
-  Feststellungsdatum: 18.07.2024
-end note
-deactivate Encounters
-
-== 22.07.2024 - Erstvorstellung im Zentrum ==
-Encounters -> Patient: encounter-ambulant-001
-activate Encounters #ea580c
-Encounters -> Diagnosis: Klinische Diagnose
-note right of Diagnosis
-  **condition-sma-clinical**
-  verificationStatus: provisional
-  ICD-10: G12.0
-  Orpha: 83330
-  Feststellungsdatum: 22.07.2024
-  → Replaces: condition-sma-suspected
-end note
-
-Lab -> Patient: Troponin T: 92 ng/l ↑
-activate Lab #16a34a
-note right of Lab: Bereits erhöht!
-
-Patient -> Diagnosis: family-history-001
-note left of Patient
-  Urgroßmutter:
-  Unbekannte Muskelerkrankung
-end note
-
-ClinImp -> Patient: clinical-impression-erstvorstellung
-activate ClinImp #facc15
-note right of ClinImp
-  **Klinische Beurteilung:**
-  - V.a. SMA Typ 1
-  - Troponin erhöht
-  - Genetik veranlasst
-  - Prognose: guarded
-end note
-deactivate ClinImp
-
-deactivate Encounters
-
-== 26.07.2024 - Molekulargenetik ==
-Genetics -> Patient: Blutentnahme EDTA
-activate Genetics #059669
-Genetics -> Diagnosis: Genetische Bestätigung
-note right of Diagnosis
-  **condition-sma-confirmed**
-  verificationStatus: confirmed
-  Feststellungsdatum: 26.07.2024
-  → Replaces: condition-sma-clinical
-end note
-
-Genetics --> Diagnosis: variant-smn1-001
-note right of Genetics
-  **SMN1: 0 Kopien**
-  Homozygote Deletion
-  Pathologisch
-end note
-
-Genetics --> Diagnosis: variant-smn2-001
-note right of Genetics
-  **SMN2: 2 Kopien**
-  Phänotyp-Modifikator
-end note
-deactivate Genetics
-
-== 28.07.2024 - Vor Therapie ==
-Lab -> Patient: Troponin T: 58 ng/l ↑
-
-== 29.07.2024 - Gentherapie ==
-Encounters -> Patient: encounter-stationaer-001
-activate Encounters #ea580c
-Therapy -> Patient: procedure-gentherapy-001
-activate Therapy #7c3aed
-note right of Therapy
-  **Gentherapeutikum**
-  + Prednisolon
-  OPS: 6-00d.0
-  → reasonReference: condition-sma-confirmed
-end note
-
-Lab -> Patient: ALT, AST, PLT
-note right of Lab: Alle normwertig
-deactivate Therapy
-
-== 30.07.2024 ==
-Encounters -> Patient: Entlassung
-deactivate Encounters
-
-== 01.08.2024 - Post-Therapie ==
-Lab -> Patient: Troponin T: 57 ng/l ↑
-
-== 12.08.2024 - Nachsorge ==
-Encounters -> Patient: encounter-nachsorge-001
-activate Encounters #ea580c
-Lab -> Patient: Troponin T: 106 ng/l ↑
-note right of Lab
-  Weiter ansteigend!
-  Prätherapeutisch bereits erhöht
-end note
-
-Lab -> Patient: ALT, AST, PLT
-note right of Lab: Alle normwertig
-
-ClinImp -> Patient: clinical-impression-nachsorge
-activate ClinImp #facc15
-note right of ClinImp
-  **Nachsorge Beurteilung:**
-  - Klinisch stabil
-  - Troponin präexistent erhöht
-  - Gentherapie gut vertragen
-  - Weiter Prednisolon
-end note
-deactivate ClinImp
-
-deactivate Encounters
-deactivate Lab
-deactivate Diagnosis
-
-legend bottom
-|= Ressourcen-Typen und Beziehungen |
-| <back:#2563eb>Patient</back> | Zentrale Patientenressource |
-| <back:#dc2626>Condition</back> | Diagnose mit Verlauf (3 Instanzen) |
-| <back:#ea580c>Encounter</back> | Behandlungskontakte (4 Instanzen) |
-| <back:#059669>Observation</back> | Genetik & Labor (9 Instanzen) |
-| <back:#7c3aed>Procedure</back> | Gentherapie (1 Instanz) |
-| <back:#facc15>ClinicalImpression</back> | Klinische Beurteilung (2 Instanzen) |
-| → | Referenz zwischen Ressourcen |
-endlegend
-
-@enduml
-</plantuml>
-
-## Implementierung
-
-Die vollständigen FHIR-Ressourcen sind in folgenden Dateien definiert:
-- **Einzelressourcen**: [`input/fsh/sma-example-resources.fsh`](../fsh/sma-example-resources.fsh)
-- **Transaction Bundle**: [`input/fsh/sma-transaction-bundle.fsh`](../fsh/sma-transaction-bundle.fsh)
+The complete FHIR resources are defined in the FSH sources of this module (`input/fsh/Beispiel_SMA/`), including the transaction bundle.

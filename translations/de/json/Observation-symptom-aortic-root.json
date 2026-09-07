@@ -1,0 +1,43 @@
+{
+  "id" : "Observation-symptom-aortic-root",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Aortic root aneurysm",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Aortic root dilatation",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Aortenwurzeldilatation",
+      "target" : null
+    },
+    {
+      "id" : "Quantity.unit",
+      "context" : "Quantity.unit",
+      "source" : "mm",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "High",
+      "target" : null
+    },
+    {
+      "id" : "Observation.referenceRange.text",
+      "context" : "Observation.referenceRange.text",
+      "source" : "Normwert <40mm",
+      "target" : null
+    }]
+  }]
+}

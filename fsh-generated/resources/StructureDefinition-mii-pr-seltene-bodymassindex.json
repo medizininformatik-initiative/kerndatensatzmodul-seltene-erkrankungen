@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-seltene-bodymassindex",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex",
-  "version": "2026.0.1",
+  "version": "2027.0.0-ballot.rc1",
   "name": "MII_PR_Seltene_Bodymassindex",
   "title": "Body Mass Index (BMI) of the patient",
   "status": "active",
@@ -39,7 +39,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Messbefunde.BMI",
+            "map": "koerperlicheUntersuchung.bmi",
             "comment": "BMI"
           }
         ]
@@ -91,7 +91,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Messbefunde.BMI",
+            "map": "koerperlicheUntersuchung.bmi",
             "comment": "BMI-Code (LOINC 39156-5)"
           }
         ]
@@ -111,7 +111,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Patient",
+            "map": "persoenlicheInfosIndexpatient",
             "comment": "Patient/Indexpatient"
           }
         ]
@@ -128,7 +128,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Messbefunde.BMI.DatumBMI",
+            "map": "koerperlicheUntersuchung.bmi.datumBMI",
             "comment": "Datum des BMI"
           }
         ]
@@ -149,7 +149,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Messbefunde.BMI.BMI",
+            "map": "koerperlicheUntersuchung.bmi.bmi",
             "comment": "BMI SE-Patient"
           }
         ]

@@ -1,0 +1,41 @@
+@startuml
+' Parallel diagnosis model — English rendering.
+'
+' Language pairing (2026-09-04): every diagram on the page
+' clinical-genetic-diagnosis-guide exists twice. This file is the ENGLISH one
+' and keeps the base name, because the IG's default language is English
+' (i18n-default-lang: en); the German twin is diagnose-parallelmodell-de.puml
+' and renders to …-de.svg. Until 2026-09-04 a single German diagram served both
+' trees, so English readers were shown German labels — and its labels were
+' ASCII-transliterated ("Phaenotyp"), which is simply wrong German.
+' Keep the two files in step: a change to one belongs in the other.
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam roundcorner 8
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 12
+skinparam ArrowColor #555555
+skinparam rectangle {
+  BorderColor #4a86e8
+  BackgroundColor #eef4fd
+  FontColor #1a1a1a
+}
+
+title Parallel diagnosis model — suspected, clinical, genetic
+
+rectangle "**Suspected diagnosis**\n<size:11>Condition</size>\n<size:11>verificationStatus = **provisional**</size>\n<size:11>category = encounter-diagnosis</size>" as V #fff8e1
+rectangle "**Clinical diagnosis**\n<size:11>MII_PR_Seltene_ClinicalDiagnosis</size>\n<size:11>verificationStatus = **confirmed**</size>\n<size:11>category = encounter-diagnosis</size>\n<size:11>evidence → HPO observations</size>" as K #e8f5e9
+rectangle "**Genetic diagnosis**\n<size:11>MII_PR_Seltene_GeneticDiagnosis</size>\n<size:11>verificationStatus = **confirmed**</size>\n<size:11>category = SCT#782964007 Genetic disease</size>\n<size:11>evidence → MolGen variant</size>" as G #e3f2fd
+
+V -down-> K : phenotypic\nwork-up
+K -right-> G : molecular\nconfirmation
+
+note bottom of K
+  **Both exist side by side.**
+  The genetic diagnosis does NOT replace
+  the clinical one — it complements it.
+  A patient ends up carrying two
+  Condition resources.
+end note
+
+@enduml

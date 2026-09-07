@@ -1,0 +1,26 @@
+{
+  "resourceType": "Patient",
+  "id": "mii-exa-seltene-patient",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient"
+    ]
+  },
+  "name": [
+    {
+      "use": "official",
+      "family": "Mustermann",
+      "given": [
+        "Max"
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://test-krankenhaus.de/fhir/sid/patienten",
+      "value": "12345"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1990-01-01"
+}

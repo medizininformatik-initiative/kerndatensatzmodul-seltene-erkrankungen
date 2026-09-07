@@ -50,10 +50,16 @@ Description: "Therapieplan"
 * activity[NichtMedikamentoesTherapie] ^definition = "Therapieempfehlung für nicht-medikamentöse Interventionen (Ernährungstherapie, Prophylaxe, Früherkennung, humangenetische Beratung, andere)"
 * activity[NichtMedikamentoesTherapie] ^comment = "Referenziert ServiceRequest-basierte Profile für alle nicht-medikamentösen Therapien einschließlich humangenetischer Beratung"
 * activity[NichtMedikamentoesTherapie].reference 0..1 MS
-* activity[NichtMedikamentoesTherapie].reference only Reference(
-    MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes or
-    ServiceRequest
-)
+// Der blanke ServiceRequest ist hier am 2026-09-04 entfernt worden. Der
+// Slicing-Discriminator ist #profile auf reference.resolve(); solange dieser
+// Slice JEDEN ServiceRequest zulaesst, umfasst er auch
+// MII_PR_Seltene_Studieneinschluss_Anfrage, und der Publisher meldet
+// "Element matches more than one slice - NichtMedikamentoesTherapie,
+// Studieneinschlussempfehlung". Aufgefallen ist es erst, als das Beispiel
+// mii-exa-seltene-studieneinschluss-anfrage entstand. Die Slicing-Regel ist
+// #open: ein Verweis auf einen unprofilierten ServiceRequest bleibt erlaubt,
+// er faellt nur in keinen der benannten Slices.
+* activity[NichtMedikamentoesTherapie].reference only Reference(MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes)
 * activity[NichtMedikamentoesTherapie].detail MS // NOTE: Kardinalität min = 1 aus Elternprofil geerbt
 * activity[NichtMedikamentoesTherapie].detail.statusReason from MII_VS_Seltene_Empfehlung_StatusBegruendung (required)
 
@@ -99,8 +105,23 @@ Description: "Example of a Therapieplan for a patient."
 * status = #draft
 * created = 2023-03-28
 * description = "Therapieplan für den Patienten"
-* subject = Reference(Patient/example-patient)
+* subject = Reference(mii-exa-seltene-patient)
 * intent = #proposal
-* activity[MedikamentoesTherapie].reference = Reference(MedicationRequest/example-therapieempfehlung)
-* activity[NichtMedikamentoesTherapie].reference = Reference(ServiceRequest/example-nichtmed-therapie)
-* activity[Studieneinschlussempfehlung].reference = Reference(ServiceRequest/example-studieneinschluss)
+* activity[MedikamentoesTherapie].reference = Reference(MedicationRequest/mii-exa-seltene-therapieempfehlung-gentherapie-sma)
+* activity[NichtMedikamentoesTherapie].reference = Reference(ServiceRequest/mii-exa-seltene-therapieempfehlung-physiotherapie-sma)
+* activity[Studieneinschlussempfehlung].reference = Reference(ServiceRequest/mii-exa-seltene-studieneinschluss-anfrage)
+// Ergaenzt 2026-09-03: Der Therapieplan oben verwies auf drei Aktivitaeten,
+// von denen zwei auf vorhandene Empfehlungen umgebogen werden konnten. Fuer
+// die Studieneinschlussempfehlung gab es keine Instanz — das Profil
+// MII_PR_Seltene_Studieneinschluss_Anfrage war ohne Beispiel.
+Instance: mii-exa-seltene-studieneinschluss-anfrage
+InstanceOf: MII_PR_Seltene_Studieneinschluss_Anfrage
+Usage: #example
+Title: "Studieneinschlussempfehlung"
+Description: "Empfehlung, den Patienten fuer eine Studie zu evaluieren"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage)
+* status = #active
+* intent = #proposal
+* subject = Reference(mii-exa-seltene-patient)
+* authoredOn = "2023-03-28"
+* note.text = "Pruefung des Einschlusses in eine laufende Studie zur Gentherapie empfohlen."

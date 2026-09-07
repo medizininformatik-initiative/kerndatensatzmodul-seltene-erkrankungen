@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="en" target-language="de" id="StructureDefinition-mii-pr-seltene-bodymassindex" original="Resource StructureDefinition-mii-pr-seltene-bodymassindex" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.name">
+             <notes>
+               <note id="n1">A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.</note>
+             </notes>
+        <source>MII_PR_Seltene_Bodymassindex</source>
+        <target>MII_PR_Seltene_Bodymassindex</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.title">
+             <notes>
+               <note id="n1">A short, descriptive, user-friendly title for the structure definition.</note>
+             </notes>
+        <source>Body Mass Index (BMI) of the patient</source>
+        <target>Body Mass Index (BMI) of the patient</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.publisher">
+             <notes>
+               <note id="n1">The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.contact.name">
+             <notes>
+               <note id="n1">The name of an individual to contact.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.mapping.SE-LogicalModel/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Mapping FHIR zu Seltene Erkrankungen Logical Model</source>
+        <target>Mapping FHIR zu Seltene Erkrankungen Logical Model</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.mapping.workflow/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Workflow Pattern</source>
+        <target>Workflow Pattern</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.mapping.sct-concept/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>SNOMED CT Concept Domain Binding</source>
+        <target>SNOMED CT Concept Domain Binding</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.mapping.v2/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>HL7 v2 Mapping</source>
+        <target>HL7 v2 Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.mapping.w5/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>FiveWs Pattern Mapping</source>
+        <target>FiveWs Pattern Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.mapping.sct-attr/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>SNOMED CT Attribute Binding</source>
+        <target>SNOMED CT Attribute Binding</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.element.Observation/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>Messbefunde.BMI</source>
+        <target>Messbefunde.BMI</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.element.Observation/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>BMI</source>
+        <target>BMI</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.element.Observation.status/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>Status der Messung</source>
+        <target>Status der Messung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.element.Observation.status/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Beobachtungsstatus</source>
+        <target>Beobachtungsstatus</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.element.Observation.code/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>Messbefunde.BMI</source>
+        <target>Messbefunde.BMI</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.element.Observation.code/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>BMI-Code (LOINC 39156-5)</source>
+        <target>BMI-Code (LOINC 39156-5)</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.element.Observation.subject/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>Patient</source>
+        <target>Patient</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.element.Observation.subject/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Patient/Indexpatient</source>
+        <target>Patient/Indexpatient</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.element.Observation.effective[x]/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>Messbefunde.BMI.DatumBMI</source>
+        <target>Messbefunde.BMI.DatumBMI</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.element.Observation.effective[x]/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Datum des BMI</source>
+        <target>Datum des BMI</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.element.Observation.value[x].value/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>Messbefunde.BMI.BMI</source>
+        <target>Messbefunde.BMI.BMI</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-bodymassindex" resname="StructureDefinition.element.Observation.value[x].value/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>BMI SE-Patient</source>
+        <target>BMI SE-Patient</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

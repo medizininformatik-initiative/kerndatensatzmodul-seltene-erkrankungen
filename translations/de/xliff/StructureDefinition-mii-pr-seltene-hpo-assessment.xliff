@@ -1,0 +1,428 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="en" target-language="de" id="StructureDefinition-mii-pr-seltene-hpo-assessment" original="Resource StructureDefinition-mii-pr-seltene-hpo-assessment" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.name">
+             <notes>
+               <note id="n1">A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.</note>
+             </notes>
+        <source>MII_PR_Seltene_HPO_Assessment</source>
+        <target>MII_PR_Seltene_HPO_Assessment</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.title">
+             <notes>
+               <note id="n1">A short, descriptive, user-friendly title for the structure definition.</note>
+             </notes>
+        <source>MII Profile SE HPO Assessment</source>
+        <target>MII Profile SE HPO Assessment</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.publisher">
+             <notes>
+               <note id="n1">The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.contact.name">
+             <notes>
+               <note id="n1">The name of an individual to contact.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.mapping.SE-LogicalModel/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Mapping FHIR zu Seltene Erkrankungen Logical Model</source>
+        <target>Mapping FHIR zu Seltene Erkrankungen Logical Model</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.mapping.workflow/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Workflow Pattern</source>
+        <target>Workflow Pattern</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.mapping.sct-concept/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>SNOMED CT Concept Domain Binding</source>
+        <target>SNOMED CT Concept Domain Binding</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.mapping.v2/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>HL7 v2 Mapping</source>
+        <target>HL7 v2 Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.mapping.w5/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>FiveWs Pattern Mapping</source>
+        <target>FiveWs Pattern Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.mapping.sct-attr/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>SNOMED CT Attribute Binding</source>
+        <target>SNOMED CT Attribute Binding</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Phänotypisierung</source>
+        <target>Phänotypisierung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.code/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>HPO-phänotypischer Beobachtungscode</source>
+        <target>HPO-phänotypischer Beobachtungscode</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.code/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Code aus der Human Phenotype Ontology zur Beschreibung der phänotypischen Anomalie</source>
+        <target>Code aus der Human Phenotype Ontology zur Beschreibung der phänotypischen Anomalie</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.code/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.code/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>HPO-Term des Symptoms</source>
+        <target>HPO-Term des Symptoms</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.code.coding.version/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.HPOVersion</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.HPOVersion</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.code.coding.version/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Version HPO-Term</source>
+        <target>Version HPO-Term</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.subject/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Patient mit der phänotypischen Anomalie</source>
+        <target>Patient mit der phänotypischen Anomalie</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.subject/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>Patient</source>
+        <target>Patient</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.subject/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Patient/Indexpatient</source>
+        <target>Patient/Indexpatient</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.encounter/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Gesundheitskontakt, bei dem der Phänotyp beobachtet wurde</source>
+        <target>Gesundheitskontakt, bei dem der Phänotyp beobachtet wurde</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.encounter/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Untersuchungsdatum</source>
+        <target>AnamneseUndDiagnostik.Untersuchungsdatum</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.encounter/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Untersuchungsdatum</source>
+        <target>Untersuchungsdatum</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.effective[x]/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Zeitpunkt der Phänotyp-Beobachtung oder Beobachtungszeitraum</source>
+        <target>Zeitpunkt der Phänotyp-Beobachtung oder Beobachtungszeitraum</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.effective[x]:effectiveDateTime/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.effective[x]:effectiveDateTime/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Startdatum des Symptoms</source>
+        <target>Startdatum des Symptoms</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.effective[x]:effectivePeriod.start/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.effective[x]:effectivePeriod.start/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Startdatum des Symptoms</source>
+        <target>Startdatum des Symptoms</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.effective[x]:effectivePeriod.end/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.effective[x]:effectivePeriod.end/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Enddatum des Symptoms</source>
+        <target>Enddatum des Symptoms</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.value[x]/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Not used - use component instead</source>
+        <target>Not used - use component instead</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.value[x]/comment">
+             <notes>
+               <note id="n1">Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).</note>
+             </notes>
+        <source>Following HL7 Phenomics IG pattern, phenotype status and severity are captured in component elements rather than value[x].</source>
+        <target>Following HL7 Phenomics IG pattern, phenotype status and severity are captured in component elements rather than value[x].</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.note/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Zusätzliche klinische Anmerkungen zum Phänotyp</source>
+        <target>Zusätzliche klinische Anmerkungen zum Phänotyp</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.bodySite/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Körperstelle, an der der Phänotyp beobachtet wird</source>
+        <target>Körperstelle, an der der Phänotyp beobachtet wird</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.method/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Methode zur Beobachtung oder Bewertung des Phänotyps</source>
+        <target>Methode zur Beobachtung oder Bewertung des Phänotyps</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.method/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.MethodeDiagnosestellung</source>
+        <target>AnamneseUndDiagnostik.MethodeDiagnosestellung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.method/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Methode der Diagnosestellung</source>
+        <target>Methode der Diagnosestellung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.derivedFrom/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Verwandte Beobachtungen oder Bewertungen</source>
+        <target>Verwandte Beobachtungen oder Bewertungen</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.derivedFrom/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>Verweis auf zugrunde liegende Befunde</source>
+        <target>Verweis auf zugrunde liegende Befunde</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.derivedFrom/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Laborbefunde oder Bildgebung</source>
+        <target>Laborbefunde oder Bildgebung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Phenotype status, severity, and clinical modifiers</source>
+        <target>Phenotype status, severity, and clinical modifiers</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:status.code/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Phenotype status code</source>
+        <target>Phenotype status code</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:status.value[x]/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Present or Absent</source>
+        <target>Present or Absent</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:status.value[x]/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>LOINC LA9633-4 'Present' for observed phenotypes, LA9634-2 'Absent' for explicitly excluded phenotypes.</source>
+        <target>LOINC LA9633-4 'Present' for observed phenotypes, LA9634-2 'Absent' for explicitly excluded phenotypes.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:status.value[x]/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.HPOExcluded</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:status.value[x]/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>HPO-Term ausgeschlossen (true wenn LA9634-2 'Absent', false wenn LA9633-4 'Present')</source>
+        <target>HPO-Term ausgeschlossen (true wenn LA9634-2 'Absent', false wenn LA9633-4 'Present')</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:status.value[x]/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:status.value[x]/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Status HPO-Term (Present/Absent)</source>
+        <target>Status HPO-Term (Present/Absent)</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:status.interpretation/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Änderungsstatus des Symptoms/Phänotyps über Zeit</source>
+        <target>Änderungsstatus des Symptoms/Phänotyps über Zeit</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:status.interpretation/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Dokumentiert Änderungen des Phänotyps über Zeit gemäß Modellvorhaben Genomsequenzierung (MVGenomSeq). Codes: newly-added, improved, degraded, no-longer-observed, unchanged.</source>
+        <target>Dokumentiert Änderungen des Phänotyps über Zeit gemäß Modellvorhaben Genomsequenzierung (MVGenomSeq). Codes: newly-added, improved, degraded, no-longer-observed, unchanged.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:status.interpretation/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:status.interpretation/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Verlauf Symptom</source>
+        <target>Verlauf Symptom</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:status.interpretation.coding.code/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:status.interpretation.coding.code/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Change Status</source>
+        <target>Change Status</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:severity.code/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Severity modifier</source>
+        <target>Severity modifier</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:severity.value[x]/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Severity grade</source>
+        <target>Severity grade</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:severity.value[x]/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>HPO severity codes: Mild, Moderate, Severe, Profound, Borderline</source>
+        <target>HPO severity codes: Mild, Moderate, Severe, Profound, Borderline</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:severity.value[x]/mapping/SE-LogicalModel/map">
+             <notes>
+               <note id="n1">Expresses what part of the target specification corresponds to this element.</note>
+             </notes>
+        <source>AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus</source>
+        <target>AnamneseUndDiagnostik.Phaenotypisierung.HPOStatus</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-hpo-assessment" resname="StructureDefinition.element.Observation.component:severity.value[x]/mapping/SE-LogicalModel/comment">
+             <notes>
+               <note id="n1">Comments that provide information about the mapping or its use.</note>
+             </notes>
+        <source>Schweregrad (Mild/Moderate/Severe/Profound/Borderline)</source>
+        <target>Schweregrad (Mild/Moderate/Severe/Profound/Borderline)</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,40 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "mii-exa-seltene-studieneinschluss-anfrage",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage|2027.0.0-ballot.rc1"
+    ]
+  },
+  "intent": "proposal",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "110465008",
+          "system": "http://snomed.info/sct",
+          "display": "Clinical trial (procedure)"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "702475000",
+        "system": "http://snomed.info/sct",
+        "display": "Referral to clinical trial (procedure)"
+      }
+    ]
+  },
+  "status": "active",
+  "subject": {
+    "reference": "Patient/mii-exa-seltene-patient"
+  },
+  "authoredOn": "2023-03-28",
+  "note": [
+    {
+      "text": "Pruefung des Einschlusses in eine laufende Studie zur Gentherapie empfohlen."
+    }
+  ]
+}

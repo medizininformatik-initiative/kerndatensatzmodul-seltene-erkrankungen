@@ -1,0 +1,29 @@
+{
+  "resourceType": "Library",
+  "id": "mii-exa-seltene-register-katalog-euro-nmd",
+  "identifier": [
+    {
+      "system": "https://ern-euro-nmd.eu/fhir/sid/registry",
+      "value": "EURO-NMD-REG"
+    }
+  ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "code": "asset-collection",
+        "system": "http://terminology.hl7.org/CodeSystem/library-type"
+      }
+    ]
+  },
+  "name": "ERNEuroNMDRegistry",
+  "title": "ERN EURO-NMD Patient Registry — Katalogeintrag",
+  "relatedArtifact": [
+    {
+      "type": "documentation",
+      "document": {
+        "url": "https://ern-euro-nmd.eu/registry/"
+      }
+    }
+  ]
+}

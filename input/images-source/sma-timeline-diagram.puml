@@ -1,0 +1,128 @@
+@startuml SMA_Timeline_Diagram
+!theme plain
+skinparam backgroundColor #ffffff
+
+' Timeline sequence diagram showing progression
+title SMA Fall - Zeitlicher Verlauf und Ressourcen-Beziehungen
+
+participant "Patient\n(Neugeborenes)" as Patient #2563eb
+participant "Diagnose-\nVerlauf" as Diagnosis #dc2626
+participant "Encounters" as Encounters #ea580c
+participant "Genetik" as Genetics #059669
+participant "Therapie" as Therapy #7c3aed
+participant "Labor" as Lab #16a34a
+
+== 18.07.2024 - Neugeborenenscreening ==
+Encounters -> Patient: encounter-screening-001
+activate Encounters #ea580c
+Encounters -> Diagnosis: Verdacht auf SMA
+activate Diagnosis #dc2626
+note right of Diagnosis
+  **condition-sma-suspected**
+  verificationStatus: unconfirmed
+  Feststellungsdatum: 18.07.2024
+end note
+deactivate Encounters
+
+== 22.07.2024 - Erstvorstellung im Zentrum ==
+Encounters -> Patient: encounter-ambulant-001
+activate Encounters #ea580c
+Encounters -> Diagnosis: Klinische Diagnose
+note right of Diagnosis
+  **condition-sma-clinical**
+  verificationStatus: provisional
+  ICD-10: G12.0
+  Orpha: 83330
+  Feststellungsdatum: 22.07.2024
+  → Links to condition-sma-suspected
+end note
+
+Lab -> Patient: Troponin T: 92 ng/l ↑
+activate Lab #16a34a
+note right of Lab: Bereits erhöht!
+
+Patient -> Diagnosis: family-history-001
+note left of Patient
+  Urgroßmutter:
+  Unbekannte Muskelerkrankung
+end note
+deactivate Encounters
+
+== 26.07.2024 - Molekulargenetik ==
+Genetics -> Patient: Blutentnahme EDTA
+activate Genetics #059669
+Genetics -> Diagnosis: Genetische Bestätigung
+note right of Diagnosis
+  **condition-sma-confirmed**
+  verificationStatus: confirmed
+  Feststellungsdatum: 26.07.2024
+  → Links to condition-sma-clinical
+end note
+
+Genetics --> Diagnosis: variant-smn1-001
+note right of Genetics
+  **SMN1: 0 Kopien**
+  Homozygote Deletion
+  Pathologisch
+end note
+
+Genetics --> Diagnosis: variant-smn2-001
+note right of Genetics
+  **SMN2: 2 Kopien**
+  Phänotyp-Modifikator
+end note
+deactivate Genetics
+
+== 28.07.2024 - Vor Therapie ==
+Lab -> Patient: Troponin T: 58 ng/l ↑
+
+== 29.07.2024 - Gentherapie ==
+Encounters -> Patient: encounter-stationaer-001
+activate Encounters #ea580c
+Therapy -> Patient: procedure-gentherapy-001
+activate Therapy #7c3aed
+note right of Therapy
+  **Gentherapeutikum**
+  + Prednisolon
+  OPS: 6-00d.0
+  → reasonReference: condition-sma-confirmed
+end note
+
+Lab -> Patient: ALT, AST, PLT
+note right of Lab: Alle normwertig
+deactivate Therapy
+
+== 30.07.2024 ==
+Encounters -> Patient: Entlassung
+deactivate Encounters
+
+== 01.08.2024 - Post-Therapie ==
+Lab -> Patient: Troponin T: 57 ng/l ↑
+
+== 12.08.2024 - Nachsorge ==
+Encounters -> Patient: encounter-nachsorge-001
+activate Encounters #ea580c
+Lab -> Patient: Troponin T: 106 ng/l ↑
+note right of Lab
+  Weiter ansteigend!
+  Prätherapeutisch bereits erhöht
+end note
+
+Lab -> Patient: ALT, AST, PLT
+note right of Lab: Alle normwertig
+
+deactivate Encounters
+deactivate Lab
+deactivate Diagnosis
+
+legend bottom
+|= Ressourcen-Typen und Beziehungen |
+| <back:#2563eb>Patient</back> | Zentrale Patientenressource |
+| <back:#dc2626>Condition</back> | Diagnose mit Verlauf (3 Instanzen) |
+| <back:#ea580c>Encounter</back> | Behandlungskontakte (4 Instanzen) |
+| <back:#059669>Observation</back> | Genetik & Labor (9 Instanzen) |
+| <back:#7c3aed>Procedure</back> | Gentherapie (1 Instanz) |
+| → | Referenz zwischen Ressourcen |
+endlegend
+
+@enduml

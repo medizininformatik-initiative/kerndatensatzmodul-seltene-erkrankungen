@@ -1,0 +1,152 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-seltene-molgen-variant-pah-pku",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "69548-6",
+        "system": "http://loinc.org",
+        "display": "Genetic variant assessment"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-seltene-patient"
+  },
+  "effectiveDateTime": "2024-08-25",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "10828004",
+        "system": "http://snomed.info/sct",
+        "display": "Positive"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "48018-6",
+            "system": "http://loinc.org",
+            "display": "Gene studied [ID]"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "HGNC:8582",
+            "system": "http://www.genenames.org/geneId",
+            "display": "PAH"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "48002-0",
+            "system": "http://loinc.org",
+            "display": "Genomic source class"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "LA6683-2",
+            "system": "http://loinc.org",
+            "display": "Germline"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "48004-6",
+            "system": "http://loinc.org",
+            "display": "DNA change (c.HGVS)"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "text": "c.1222C>T"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "48005-3",
+            "system": "http://loinc.org",
+            "display": "Amino acid change (pHGVS)"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "text": "p.Arg408Trp"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "53034-5",
+            "system": "http://loinc.org",
+            "display": "Allelic state"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "LA6705-3",
+            "system": "http://loinc.org",
+            "display": "Homozygous"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "53037-8",
+            "system": "http://loinc.org",
+            "display": "Genetic variation clinical significance [Imp]"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "LA6668-3",
+            "system": "http://loinc.org",
+            "display": "Pathogenic"
+          }
+        ]
+      }
+    }
+  ],
+  "note": [
+    {
+      "text": "Homozygote pathogene PAH-Variante. Klassische Phenylketonurie; diaetetische Therapie indiziert."
+    }
+  ]
+}

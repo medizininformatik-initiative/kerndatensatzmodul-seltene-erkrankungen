@@ -1,0 +1,72 @@
+@startuml SMA_Resources_Simplified
+!theme plain
+skinparam linetype ortho
+skinparam nodesep 80
+skinparam ranksep 100
+
+' Color scheme
+!define PATIENT_COLOR #2563eb
+!define CONDITION_COLOR #dc2626
+!define OBSERVATION_COLOR #059669
+!define PROCEDURE_COLOR #7c3aed
+!define ENCOUNTER_COLOR #ea580c
+!define FAMILY_COLOR #0891b2
+
+' Entity definitions with stereotypes for coloring
+entity "**Patient**\nNeugeborenes Mädchen\n2024-07-01" as Patient <<Patient>> #PATIENT_COLOR
+
+' Conditions in progression
+entity "**Condition: Suspected**\n2024-07-18\nverificationStatus: unconfirmed" as C1 <<Condition>> #CONDITION_COLOR
+entity "**Condition: Clinical**\n2024-07-22\nverificationStatus: provisional\nICD-10: G12.0" as C2 <<Condition>> #CONDITION_COLOR
+entity "**Condition: Confirmed**\n2024-07-26\nverificationStatus: confirmed\nICD-10: G12.0 | Orpha: 83330" as C3 <<Condition>> #CONDITION_COLOR
+
+' Genetic observations
+entity "**Observation: SMN1**\nGene Deletion\n0 copies (pathogenic)" as SMN1 <<Observation>> #OBSERVATION_COLOR
+entity "**Observation: SMN2**\nCopy Number\n2 copies (modifier)" as SMN2 <<Observation>> #OBSERVATION_COLOR
+
+' Procedure
+entity "**Procedure**\nGentherapie\n2024-07-29\nOPS: 6-00d.0" as Proc <<Procedure>> #PROCEDURE_COLOR
+
+' Family History
+entity "**FamilyHistory**\nUrgroßmutter\nMuskelerkrankung\nRelation: unsicher" as Family <<Family>> #FAMILY_COLOR
+
+' Lab observations grouped
+entity "**Lab: Troponin T**\n22.07: 92↑\n28.07: 58↑\n01.08: 57↑\n12.08: 106↑" as Trop <<Observation>> #OBSERVATION_COLOR
+entity "**Lab: ALT/AST/PLT**\nPost-therapy\nAll normal" as Liver <<Observation>> #OBSERVATION_COLOR
+
+' Encounters
+entity "**Screening**\n2024-07-18" as E1 <<Encounter>> #ENCOUNTER_COLOR
+entity "**Erstvorstellung**\n2024-07-22" as E2 <<Encounter>> #ENCOUNTER_COLOR  
+entity "**Stationär**\n2024-07-29" as E3 <<Encounter>> #ENCOUNTER_COLOR
+entity "**Nachsorge**\n2024-08-12" as E4 <<Encounter>> #ENCOUNTER_COLOR
+
+' Core relationships
+Patient ||--o{ C1 : subject
+Patient ||--o{ C2 : subject
+Patient ||--o{ C3 : subject
+Patient ||--o{ SMN1 : subject
+Patient ||--o{ SMN2 : subject
+Patient ||--o{ Proc : subject
+Patient ||--o{ Family : patient
+Patient ||--o{ Trop : subject
+Patient ||--o{ Liver : subject
+
+' Diagnosis progression
+C1 <.. C2 : "stage.assessment"
+C2 <.. C3 : "stage.assessment"
+
+' Evidence
+C3 --> SMN1 : evidence
+C3 --> SMN2 : evidence
+
+' Procedure reason
+Proc --> C3 : reasonReference
+
+' Encounter relationships
+E1 ..> C1 : diagnosis
+E2 --> C2 : diagnosis
+E3 --> C3 : diagnosis
+E4 --> C3 : diagnosis
+E3 <.. Proc : context
+
+@enduml

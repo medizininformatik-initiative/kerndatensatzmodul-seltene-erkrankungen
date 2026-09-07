@@ -9,7 +9,7 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * ^status = #active
 
 // Add SE-specific extension to the inherited MolGen profile
-* extension contains VonSEBetroffen named vonSEBetroffen 1..1 MS
+* extension contains MII_EX_Seltene_VonSEBetroffen named vonSEBetroffen 1..1 MS
 * extension[vonSEBetroffen] ^short = "Gibt an, ob das Familienmitglied von der gleichen seltenen Erkrankung betroffen ist"
 * extension[vonSEBetroffen] ^definition = "Extension zur Angabe, ob ein Familienmitglied von der gleichen seltenen Erkrankung betroffen ist wie der Patient"
 * status MS
@@ -98,7 +98,7 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * deceasedDate 0..1 MS
 
 // alternative extension that could be used by HL7: condition-ver-status
-* extension contains VonSEBetroffen named vonSEBetroffen 1..1 MS
+* extension contains MII_EX_Seltene_VonSEBetroffen named vonSEBetroffen 1..1 MS
 
 * reasonCode MS
 * reasonCode.coding 1.. MS
@@ -176,19 +176,19 @@ Id: SE-LogicalModel
 Title: "Mapping FHIR zu Seltene Erkrankungen Logical Model"
 Source: MII_PR_Seltene_Familienanamnese
 Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
-* -> "Familienanamnese" "Familienanamnese"
-* relationship -> "Familienanamnese.Verwandtschaftsverhaeltnis" "Verwandtschaftsverhältnis"
-* sex -> "Familienanamnese.Geschlecht" "Geschlecht"
-* extension[vonSEBetroffen] -> "Familienanamnese.GleicheSE" "Gleiche SE"
-* condition.code.coding[icd10-gm] -> "Familienanamnese.AndereSE" "Andere SE (ICD-10-GM)"
-* condition.code.coding[orphanet] -> "Familienanamnese.AndereSE" "Andere SE (Orpha-Code)"
-* condition.code.coding[sct] -> "Familienanamnese.AndereSE" "Andere SE (SNOMED CT)"
-* reasonCode -> "Familienanamnese.AndereSE" "Grund/Erkrankung des Familienmitglieds"
-* condition.extension[penetrance] -> "Familienanamnese.Penetranz" "Penetranz"
-* deceasedBoolean -> "Familienanamnese.FamilienmitgliedVerstorben" "Familienmitglied verstorben"
-* deceasedDate -> "Familienanamnese.FamilienmitgliedVerstorben" "Sterbedatum"
-* deceasedAge -> "Familienanamnese.FamilienmitgliedVerstorben" "Alter bei Tod"
-* condition.contributedToDeath -> "Familienanamnese.TodDurchSE" "Tod durch seltene Erkrankung"
+* -> "familienanamnese" "Familienanamnese"
+* relationship -> "familienanamnese.verwandtschaftsverhaeltnis" "Verwandtschaftsverhältnis"
+* sex -> "familienanamnese.geschlecht" "Geschlecht"
+* extension[vonSEBetroffen] -> "familienanamnese.gleicheSE" "Gleiche SE"
+* condition.code.coding[icd10-gm] -> "familienanamnese.andereSE" "Andere SE (ICD-10-GM)"
+* condition.code.coding[orphanet] -> "familienanamnese.andereSE" "Andere SE (Orpha-Code)"
+* condition.code.coding[sct] -> "familienanamnese.andereSE" "Andere SE (SNOMED CT)"
+* reasonCode -> "familienanamnese.andereSE" "Grund/Erkrankung des Familienmitglieds"
+* condition.extension[penetrance] -> "familienanamnese.penetranz" "Penetranz"
+* deceasedBoolean -> "familienanamnese.familienmitgliedVerstorben" "Familienmitglied verstorben"
+* deceasedDate -> "familienanamnese.familienmitgliedVerstorben" "Sterbedatum"
+* deceasedAge -> "familienanamnese.familienmitgliedVerstorben" "Alter bei Tod"
+* condition.contributedToDeath -> "familienanamnese.todDurchSE" "Tod durch seltene Erkrankung"
 * condition.onsetAge -> "Alter bei Erkrankungsbeginn" "Alter bei Erkrankung"
-* patient -> "Patient" "Patient/Indexpatient"
-* date -> "Dokumentationsdatum" "Datum der Familienanamnese"
+* patient -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
+* date -> "familienanamnese.dokumentationsdatum" "Datum der Familienanamnese"

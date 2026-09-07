@@ -8,5 +8,5 @@ Description: "Beispiel einer durchgeführten Gentherapie bei Spinaler Muskelatro
 * code.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp"
 * code.coding.code = #gentherapie
 * code.coding.display = "Gentherapie"
-* subject = Reference(patient-sma-001)
+* subject = Reference(mii-exa-seltene-patient-sma-001)
 * performedDateTime = "2024-07-29"

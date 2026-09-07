@@ -8,6 +8,6 @@ Description: "Beispiel einer durchgeführten Enzymersatztherapie bei Morbus Pomp
 * code.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp"
 * code.coding.code = #stoffwechseltherapie
 * code.coding.display = "Stoffwechseltherapie"
-* subject = Reference(example)
+* subject = Reference(mii-exa-seltene-patient)
 * subject.display = "Pompe Patient"
 * performedPeriod.start = "2024-01-15"

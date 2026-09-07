@@ -1,0 +1,43 @@
+{
+  "id" : "Condition-example-metabolic-myopathy-excluded",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Mitochondriale Myopathie, anderenorts nicht klassifiziert",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Mitochondrial myopathy",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Metabolische Myopathie (ausgeschlossen)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Laktat normal",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Muskelbiopsie unauffällig",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Metabolische Myopathie ausgeschlossen. Laktat in Ruhe und unter Belastung normwertig. Muskelbiopsie ohne Hinweise auf mitochondriale Pathologie.",
+      "target" : null
+    }]
+  }]
+}

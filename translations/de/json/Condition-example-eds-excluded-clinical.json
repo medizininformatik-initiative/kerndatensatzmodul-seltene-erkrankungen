@@ -1,0 +1,37 @@
+{
+  "id" : "Condition-example-eds-excluded-clinical",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Ehlers-Danlos-Syndrom",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Ehlers-Danlos syndrome",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Ehlers-Danlos-Syndrom (ausgeschlossen)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Beighton-Score niedrig",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "EDS als Differentialdiagnose ausgeschlossen. Beighton-Score 2/9, keine Hauthyperextensibilität, keine atrophen Narben.",
+      "target" : null
+    }]
+  }]
+}

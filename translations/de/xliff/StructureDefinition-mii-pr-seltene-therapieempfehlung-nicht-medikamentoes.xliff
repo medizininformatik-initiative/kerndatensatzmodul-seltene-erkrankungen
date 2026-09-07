@@ -1,0 +1,218 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="en" target-language="de" id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" original="Resource StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.name">
+             <notes>
+               <note id="n1">A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.</note>
+             </notes>
+        <source>MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes</source>
+        <target>MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.title">
+             <notes>
+               <note id="n1">A short, descriptive, user-friendly title for the structure definition.</note>
+             </notes>
+        <source>MII PR SE Therapieempfehlung Nicht-Medikamentös</source>
+        <target>MII PR SE Therapieempfehlung Nicht-Medikamentös</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.publisher">
+             <notes>
+               <note id="n1">The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.contact.name">
+             <notes>
+               <note id="n1">The name of an individual to contact.</note>
+             </notes>
+        <source>Medizininformatik Initiative</source>
+        <target>Medizininformatik Initiative</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.mapping.workflow/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Workflow Pattern</source>
+        <target>Workflow Pattern</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.mapping.v2/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>HL7 v2 Mapping</source>
+        <target>HL7 v2 Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.mapping.w5/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>FiveWs Pattern Mapping</source>
+        <target>FiveWs Pattern Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.mapping.quick/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Quality Improvement and Clinical Knowledge (QUICK)</source>
+        <target>Quality Improvement and Clinical Knowledge (QUICK)</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.status/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Status der Umsetzung der nicht-medikamentösen Therapieempfehlung</source>
+        <target>Status der Umsetzung der nicht-medikamentösen Therapieempfehlung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.status/comment">
+             <notes>
+               <note id="n1">Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).</note>
+             </notes>
+        <source>draft: Nicht umgesetzt, active: In Umsetzung, completed: Abgeschlossen</source>
+        <target>draft: Nicht umgesetzt, active: In Umsetzung, completed: Abgeschlossen</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.intent/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>proposal</source>
+        <target>proposal</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.intent/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Da es sich um Empfehlungen handelt, wird hier 'proposal' verwendet</source>
+        <target>Da es sich um Empfehlungen handelt, wird hier 'proposal' verwendet</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.category:MVGenomSeqTherapieStrategie/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Modellvorhaben GenomSeq Therapiestrategie-Typ (Nicht-Medikamentös)</source>
+        <target>Modellvorhaben GenomSeq Therapiestrategie-Typ (Nicht-Medikamentös)</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.category:MVGenomSeqTherapieStrategie/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Kategorisierung der nicht-medikamentösen Therapieempfehlung nach Modellvorhaben GenomSeq</source>
+        <target>Kategorisierung der nicht-medikamentösen Therapieempfehlung nach Modellvorhaben GenomSeq</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.category:MVGenomSeqTherapieStrategie/comment">
+             <notes>
+               <note id="n1">Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).</note>
+             </notes>
+        <source>Dieses Feld ist spezifisch für die Integration mit Modellvorhaben GenomSeq. Es ermöglicht die Kategorisierung gemäß RareDiseasesPlan.recommendedTherapies.strategy. Nur für nicht-medikamentöse Strategien: prophylactic, early-detection, nutrition, other.</source>
+        <target>Dieses Feld ist spezifisch für die Integration mit Modellvorhaben GenomSeq. Es ermöglicht die Kategorisierung gemäß RareDiseasesPlan.recommendedTherapies.strategy. Nur für nicht-medikamentöse Strategien: prophylactic, early-detection, nutrition, other.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.category:MVGenomSeqTherapieTyp/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Modellvorhaben GenomSeq Therapietyp (Kausal/Symptomatisch)</source>
+        <target>Modellvorhaben GenomSeq Therapietyp (Kausal/Symptomatisch)</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.category:MVGenomSeqTherapieTyp/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Kategorisierung der Therapieempfehlung nach Therapietyp (kausal vs. symptomatisch) gemäß Modellvorhaben GenomSeq</source>
+        <target>Kategorisierung der Therapieempfehlung nach Therapietyp (kausal vs. symptomatisch) gemäß Modellvorhaben GenomSeq</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.category:MVGenomSeqTherapieTyp/comment">
+             <notes>
+               <note id="n1">Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).</note>
+             </notes>
+        <source>Dieses Feld ermöglicht die Unterscheidung, ob die Therapie die zugrundeliegende Ursache der Erkrankung adressiert (kausal) oder Symptome und Manifestationen behandelt (symptomatisch). Entspricht RareDiseasesPlan.recommendedTherapies.therapyType aus MV GenomSeq.</source>
+        <target>Dieses Feld ermöglicht die Unterscheidung, ob die Therapie die zugrundeliegende Ursache der Erkrankung adressiert (kausal) oder Symptome und Manifestationen behandelt (symptomatisch). Entspricht RareDiseasesPlan.recommendedTherapies.therapyType aus MV GenomSeq.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.priority/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Dringlichkeit der Therapieempfehlung</source>
+        <target>Dringlichkeit der Therapieempfehlung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.code/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Art der nicht-medikamentösen Intervention</source>
+        <target>Art der nicht-medikamentösen Intervention</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.code/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Spezifische Codierung der empfohlenen nicht-medikamentösen Therapie</source>
+        <target>Spezifische Codierung der empfohlenen nicht-medikamentösen Therapie</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.subject/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Patient, für den die Therapie empfohlen wird</source>
+        <target>Patient, für den die Therapie empfohlen wird</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.encounter/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Behandlungskontext der Empfehlung</source>
+        <target>Behandlungskontext der Empfehlung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.occurrence[x]/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Empfohlener Zeitpunkt oder Zeitraum für die Intervention</source>
+        <target>Empfohlener Zeitpunkt oder Zeitraum für die Intervention</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.requester/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Empfehlender Arzt/Einrichtung</source>
+        <target>Empfehlender Arzt/Einrichtung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.performer/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Vorgesehener Durchführender der Intervention</source>
+        <target>Vorgesehener Durchführender der Intervention</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.reasonCode/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Grund für die Therapieempfehlung (codiert)</source>
+        <target>Grund für die Therapieempfehlung (codiert)</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.reasonReference/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Verweis auf zugrundeliegende Diagnose oder Befund</source>
+        <target>Verweis auf zugrundeliegende Diagnose oder Befund</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.supportingInfo/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Unterstützende Informationen zur Empfehlung</source>
+        <target>Unterstützende Informationen zur Empfehlung</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes" resname="StructureDefinition.element.ServiceRequest.note/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Zusätzliche Anmerkungen zur Therapieempfehlung</source>
+        <target>Zusätzliche Anmerkungen zur Therapieempfehlung</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

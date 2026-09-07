@@ -1,0 +1,28 @@
+{
+  "resourceType": "Encounter",
+  "id": "mii-exa-seltene-encounter-genetic-consultation",
+  "status": "finished",
+  "class": {
+    "code": "AMB",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "display": "ambulatory"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "79841006",
+          "system": "http://snomed.info/sct",
+          "display": "Genetic counseling"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/mii-exa-seltene-patient"
+  },
+  "period": {
+    "start": "2024-09-15",
+    "end": "2024-09-15"
+  }
+}

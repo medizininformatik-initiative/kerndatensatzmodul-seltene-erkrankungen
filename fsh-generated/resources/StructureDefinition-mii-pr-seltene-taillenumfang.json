@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-seltene-taillenumfang",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-taillenumfang",
-  "version": "2026.0.1",
+  "version": "2027.0.0-ballot.rc1",
   "name": "MII_PR_Seltene_Taillenumfang",
   "title": "MII PR SE Taillenumfang",
   "status": "active",
@@ -39,7 +39,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Messbefunde.Taillenumfang",
+            "map": "koerperlicheUntersuchung.taillenumfang",
             "comment": "Taillenumfang"
           }
         ]
@@ -79,13 +79,14 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Taillenumfang auf Nabelhöhe",
+        "short": "Taillenumfang",
+        "comment": "Die Messvorschrift ist bewusst offen gelassen. Wer die Landmarke festhalten muss, kann statt des generischen Codes 1162535003 (Mittelpunkt zwischen unterster Rippe und Beckenkamm) oder 1162536002 (schmalste Stelle) verwenden.",
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "8280-0",
-              "system": "http://loinc.org",
-              "display": "Waist Circumference at umbilicus by Tape measure"
+              "code": "276361009",
+              "system": "http://snomed.info/sct",
+              "display": "Waist circumference"
             }
           ]
         },
@@ -107,7 +108,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Patient",
+            "map": "persoenlicheInfosIndexpatient",
             "comment": "Patient/Indexpatient"
           }
         ]
@@ -124,7 +125,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Messbefunde.Taillenumfang.Datum",
+            "map": "koerperlicheUntersuchung.taillenumfang.datumTaillenumfang",
             "comment": "Datum der Messung"
           }
         ]
@@ -145,7 +146,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Messbefunde.Taillenumfang",
+            "map": "koerperlicheUntersuchung.taillenumfang.taillenumfang",
             "comment": "Taillenumfang in cm"
           }
         ]

@@ -1,0 +1,59 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-seltene-icf-umweltfaktor",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment|2027.0.0-ballot.rc1"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "survey",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "facilitator",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "+3",
+            "system": "https://terminologien.bfarm.de/fhir/CodeSystem/icf-q-foerderfaktoren",
+            "display": "Förderfaktor erheblich ausgeprägt (hoch, äußerst ...) 50-95%"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "e1201",
+        "system": "http://hl7.org/fhir/sid/icf",
+        "display": "Assistive products and technology for personal indoor and outdoor mobility and transportation"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-seltene-patient-sma-001"
+  },
+  "effectiveDateTime": "2025-07-01",
+  "note": [
+    {
+      "text": "Angepasste Sitzschale und Lagerungshilfen."
+    }
+  ]
+}

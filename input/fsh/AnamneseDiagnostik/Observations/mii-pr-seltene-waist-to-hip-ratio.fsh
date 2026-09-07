@@ -4,7 +4,18 @@ Parent:      Observation
 Title:       "Waist-to-Hip Ratio of the patient"
 Description: "Describes the Waist-to-Hip Ratio of the patient."
 
-* code = http://loinc.org#8280-0 "Waist-hip ratio"
+// KORRIGIERT (Nutzerhinweis 2026-09-02): hier stand LOINC 8280-0, beschriftet als
+// "Waist-hip ratio". 8280-0 ist aber der TAILLENUMFANG ("Waist Circumference at
+// umbilicus by Tape measure") und wurde zugleich vom Taillenumfang-Profil
+// verwendet — zwei Profile teilten sich einen Code, und eines behauptete ein
+// Verhaeltnis zu sein, waehrend es einen Umfang kodierte. Wer auf 8280-0 suchte,
+// bekam Umfaenge und Quotienten vermischt zurueck.
+// LOINC kennt kein Taille-Huefte-Verhaeltnis (geprueft ueber $expand: nur
+// Umfaenge, Protokolle und 97058-2 "Waist circumference score for risk
+// calculation"). SNOMED kennt es: 248367009 "Waist/hip ratio" — der Term traegt
+// einen Schraegstrich, weshalb Suchen nach "waist to hip" oder "hip ratio" ihn
+// nicht finden.
+* code = $SCT#248367009 "Waist/hip ratio"
 * subject MS
 * status MS
 * status = #draft

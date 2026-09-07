@@ -1,0 +1,48 @@
+@startuml
+' Decision tree: which diagnosis profile when — English rendering.
+' German twin: diagnose-entscheidungsbaum-de.puml (renders to …-de.svg).
+' See the header of diagnose-parallelmodell.puml for why the pair exists.
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 12
+skinparam ArrowColor #555555
+skinparam activity {
+  BorderColor #4a86e8
+  BackgroundColor #eef4fd
+  DiamondBorderColor #b8860b
+  DiamondBackgroundColor #fff8e1
+  FontColor #1a1a1a
+}
+
+title Which diagnosis profile when?
+
+start
+:A finding or a suspicion exists;
+
+if (Molecular genetic\nresult available?) then (no)
+  :**Clinical diagnosis**\nMII_PR_Seltene_ClinicalDiagnosis;
+  :set code.coding[hpo];
+  :evidence.detail → HPO observation;
+  if (Diagnosis established?) then (no)
+    :verificationStatus = provisional;
+  else (yes)
+    :verificationStatus = confirmed;
+  endif
+else (yes)
+  :**Genetic diagnosis**\nMII_PR_Seltene_GeneticDiagnosis;
+  :category = SCT#782964007\nGenetic disease  (mandatory);
+  :set code.coding[omim];
+  :evidence.detail → MolGen variant;
+  :verificationStatus = confirmed;
+  note right
+    An existing clinical
+    diagnosis stays as it is —
+    it is not replaced.
+  end note
+endif
+
+:ClinicalImpression links both\nvia problem and finding;
+stop
+
+@enduml

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-seltene-symptom-condition",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition",
-  "version": "2026.0.1",
+  "version": "2027.0.0-ballot.rc1",
   "name": "MII_PR_Seltene_Symptom_Condition",
   "title": "MII Profile SE Symptom Condition",
   "status": "active",
@@ -39,7 +39,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung",
+            "map": "anamneseUndDiagnostik.phaenotypisierung",
             "comment": "Phänotypisierung als Condition"
           }
         ]
@@ -100,7 +100,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung.VerlaufSymptom",
+            "map": "anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom",
             "comment": "Schweregrad/Verlauf"
           }
         ]
@@ -148,7 +148,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+            "map": "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
             "comment": "HPO-Term des Symptoms"
           }
         ]
@@ -183,7 +183,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung",
+            "map": "anamneseUndDiagnostik.phaenotypisierung",
             "comment": "SNOMED CT Symptom"
           }
         ]
@@ -218,7 +218,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung",
+            "map": "anamneseUndDiagnostik.phaenotypisierung",
             "comment": "ICD-10-GM Symptom"
           }
         ]
@@ -253,7 +253,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung",
+            "map": "anamneseUndDiagnostik.phaenotypisierung",
             "comment": "MONDO Symptom (internationale Interoperabilität)"
           }
         ]
@@ -297,7 +297,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Patient",
+            "map": "persoenlicheInfosIndexpatient",
             "comment": "Patient/Indexpatient"
           }
         ]
@@ -309,7 +309,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Untersuchungsdatum",
+            "map": "anamneseUndDiagnostik.untersuchungsdatum",
             "comment": "Untersuchungskontakt"
           }
         ]
@@ -345,7 +345,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+            "map": "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
             "comment": "Startdatum des Symptoms"
           }
         ]
@@ -368,7 +368,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+            "map": "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
             "comment": "Beginn Symptomzeitraum"
           }
         ]
@@ -379,7 +379,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.ZeitraumSymptom",
+            "map": "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
             "comment": "Ende Symptomzeitraum"
           }
         ]
@@ -398,7 +398,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.AlterSymptom",
+            "map": "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.alterSymptom",
             "comment": "Alter bei Symptombeginn"
           }
         ]
@@ -417,7 +417,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung.ZeitraumSymptom.Lebensphase",
+            "map": "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase",
             "comment": "Lebensphase Symptom"
           }
         ]
@@ -465,7 +465,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Untersuchungsdatum",
+            "map": "anamneseUndDiagnostik.untersuchungsdatum",
             "comment": "Dokumentationsdatum"
           }
         ]
@@ -513,7 +513,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+            "map": "anamneseUndDiagnostik.phaenotypisierung.hpoTerm",
             "comment": "Unterstützende HPO-Symptome"
           }
         ]
@@ -535,7 +535,7 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "AnamneseUndDiagnostik.Phaenotypisierung",
+            "map": "anamneseUndDiagnostik.phaenotypisierung",
             "comment": "Verweis auf Beobachtungen"
           }
         ]

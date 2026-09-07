@@ -4,7 +4,7 @@ Description: "Example Patient Family Anamnesis"
 Usage: #example
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese)
 * status = #completed
-* patient = Reference(Patient/example)
+* patient = Reference(mii-exa-seltene-patient)
 * reasonCode = http://www.orpha.net#666
 * relationship = $SCT#65656005 "Natural mother"
 * sex = #female

@@ -1,0 +1,79 @@
+{
+  "id" : "ClinicalImpression-clinical-impression-nachsorge",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "ClinicalImpression.summary",
+      "context" : "ClinicalImpression.summary",
+      "source" : "Erste Nachsorge 14 Tage nach Gentherapie. Klinisch stabil. Troponin T weiter erhöht (106 ng/l), war jedoch bereits prätherapeutisch erhöht.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Troponin above reference range",
+      "target" : null
+    },
+    {
+      "id" : "ClinicalImpression.finding.basis",
+      "context" : "ClinicalImpression.finding.basis",
+      "source" : "Troponin-Verlauf: 22.07: 92 ng/l, 28.07: 58 ng/l, 01.08: 57 ng/l, 12.08: 106 ng/l",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Alanine aminotransferase level within reference range",
+      "target" : null
+    },
+    {
+      "id" : "ClinicalImpression.finding.basis",
+      "context" : "ClinicalImpression.finding.basis",
+      "source" : "ALT normwertig",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Aspartate aminotransferase/serum glutamic oxaloacetic transaminase level within reference range",
+      "target" : null
+    },
+    {
+      "id" : "ClinicalImpression.finding.basis",
+      "context" : "ClinicalImpression.finding.basis",
+      "source" : "AST normwertig",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Platelet count normal",
+      "target" : null
+    },
+    {
+      "id" : "ClinicalImpression.finding.basis",
+      "context" : "ClinicalImpression.finding.basis",
+      "source" : "Thrombozytenzahl normwertig",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Guarded prognosis",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Standardisierte Nachsorgeuntersuchung nach Gentherapie gemäß Zentrumsprotokoll",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Troponin-Erhöhung präexistent, nicht therapieassoziiert. Gentherapie gut vertragen. Weiterführung der Prednisolon-Therapie. Nächste Kontrolle in 4 Wochen.",
+      "target" : null
+    }]
+  }]
+}

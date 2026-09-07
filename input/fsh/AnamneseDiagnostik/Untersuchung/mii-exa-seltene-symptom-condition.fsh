@@ -21,7 +21,7 @@ Description: "Example of a symptom condition in the context of rare diseases usi
 * severity.text = "Mild severity"
 
 // Subject reference (example patient)
-* subject = Reference(Patient/example-patient)
+* subject = Reference(mii-exa-seltene-patient)
 * subject.display = "Example Patient"
 
 // Temporal information - onset at age 15

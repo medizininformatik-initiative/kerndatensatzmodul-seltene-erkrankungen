@@ -1,290 +1,176 @@
-# Leitfaden: Klinische vs. Genetische Diagnose bei Seltenen Erkrankungen
+<!-- TODO:REVIEW machine translation of source page clinical-genetic-diagnosis-guide.md (de) — Migration 2026-08-28, page-map.tsv -->
+### Overview
 
-## Übersicht
+In the modeling of rare diseases we distinguish between two kinds of diagnosis:
 
-In der Modellierung seltener Erkrankungen unterscheiden wir zwischen zwei Arten der Diagnosestellung:
+1. **Clinical diagnosis** (`MII_PR_Seltene_ClinicalDiagnosis`) — based on phenotypic features
+2. **Genetic diagnosis** (`MII_PR_Seltene_GeneticDiagnosis`) — molecularly confirmed
 
-1. **Klinische Diagnose** (`MII_PR_SE_ClinicalDiagnosis`) - Basierend auf phänotypischen Merkmalen
-2. **Genetische Diagnose** (`MII_PR_SE_GeneticDiagnosis`) - Molekulargenetisch bestätigt
+This distinction is important because many rare diseases are first suspected clinically and later confirmed genetically.
 
-Diese Unterscheidung ist wichtig, da viele seltene Erkrankungen zunächst klinisch vermutet und später genetisch bestätigt werden.
+### Clinical diagnosis
 
-## Klinische Diagnose
+#### Usage
 
-### Verwendung
-Die klinische Diagnose wird verwendet, wenn:
-- Die Diagnose auf klinischen Befunden und Symptomen basiert
-- Eine genetische Testung noch aussteht oder nicht verfügbar ist
-- Die Diagnose phänotypisch gestellt wird (z.B. bei charakteristischen Syndromen)
+The clinical diagnosis is used when:
+- The diagnosis is based on clinical findings and symptoms
+- Genetic testing is still pending or not available
+- The diagnosis is made phenotypically (e.g. for characteristic syndromes)
 
-### Besonderheiten
-- **HPO-Codes**: Zusätzlicher Slice für Human Phenotype Ontology Codes
-- **Phänotypische Evidenz**: Evidence.detail verweist auf HPO-kodierte Symptom-Observations
-- **Verifikationsstatus**: Typischerweise "provisional" oder "differential"
-- **Kategorie**: Optional spezifische Kategorisierung (z.B. "Syndrome", "Rare disease")
+#### Specifics
 
-### Beispiel FSH
-```fsh
-Instance: marfan-clinical-diagnosis
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
-* verificationStatus = $condition-ver-status#provisional
-* category[+] = $condition-category#encounter-diagnosis
-* category[clinical] = $SCT#47367009 "Syndrome"
-* code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
-* code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
-* code.coding[omim] = http://omim.org#154700 "Marfan syndrome"
-* evidence[+].detail = Reference(observation-aortic-dilatation)  // HPO: HP:0002616
-* evidence[+].detail = Reference(observation-lens-dislocation)   // HPO: HP:0001083
-* evidence[+].detail = Reference(observation-tall-stature)       // HPO: HP:0000098
-* extension[ageOfOnset].valueCodeableConcept = http://hpo.jax.org/app/#HP:0003577 "Congenital onset"
-* extension[inheritancePattern].valueCodeableConcept = http://hpo.jax.org/app/#HP:0000006 "Autosomal dominant"
-```
+- **HPO codes**: additional slice `code.coding[hpo]` (0..*), required-bound to the
+  HPO phenotype code value set
+- **Phenotypic evidence**: evidence.detail references HPO-coded symptom observations
+- **Verification status**: **not** constrained by the profile (0..1, inherited required
+  binding to `condition-ver-status`); "provisional" or "differential" are recommended
+  while genetic confirmation is pending
+- **Category**: `category` is mandatory (1..*), but its value is not fixed. It states the
+  role in the record (`problem-list-item` or `encounter-diagnosis`), not the kind of
+  disease — a module-wide binding to disease kinds would be conceptually wrong here.
 
-## Genetische Diagnose
+#### Structural comparison
 
-### Verwendung
-Die genetische Diagnose wird verwendet, wenn:
-- Die Diagnose durch molekulargenetische Untersuchung bestätigt wurde
-- Pathogene Varianten identifiziert wurden
-- Eine eindeutige genetische Ursache nachgewiesen ist
+![Clinical versus genetic diagnosis — structural comparison](diagnose-klinisch-vs-genetisch.svg)
 
-### Besonderheiten
-- **OMIM-Codes**: Zusätzlicher Slice für Online Mendelian Inheritance in Man Codes
-- **MolGen-Evidenz**: Evidence.detail MUSS auf MolGen-Ressourcen verweisen:
-  - `MII_PR_MolGen_Variante` für einzelne Varianten
-  - `MII_PR_MolGen_DiagnostischeImplikation` für umfassende genetische Berichte
-- **Verifikationsstatus**: Typischerweise "confirmed"
-- **Genetische Zusatzinformationen**: Penetranz, genetische Basis
-- **Kategorie**: PFLICHT: `782964007 | Genetic disease |` zur eindeutigen Kennzeichnung
+The spelled-out instances live with the profiles themselves; what matters here is the difference, not the syntax.
 
-### Beispiel FSH
-```fsh
-Instance: sma-genetic-diagnosis
-InstanceOf: MII_PR_SE_GeneticDiagnosis
-* verificationStatus = $condition-ver-status#confirmed
-* category[+] = $condition-category#encounter-diagnosis
-* category[genetic] = $SCT#782964007 "Genetic disease"
-* code.coding[icd10-gm] = $ICD10GM#G12.0 "Infantile spinale Muskelatrophie, Typ I"
-* code.coding[orphanet] = http://www.orpha.net#83330 "SMA type 1"
-* code.coding[omim] = http://omim.org#253300 "Spinal muscular atrophy, type I"
-* evidence[+].code = $SCT#106221001 "Genetic finding"
-* evidence[=].detail = Reference(variant-smn1-deletion)  // MolGen Variante
-* evidence[+].detail = Reference(diagnostic-report-sma)   // MolGen DiagnostischeImplikation
-* extension[geneticBasis].valueCodeableConcept = $SCT#264530000 "Single gene disorder"
-* extension[inheritancePattern].valueCodeableConcept = http://hpo.jax.org/app/#HP:0000007 "Autosomal recessive"
-* extension[penetrance].valueCodeableConcept = http://hpo.jax.org/app/#HP:0025169 "Complete penetrance"
-```
+### Genetic diagnosis
 
-## Paralleles Diagnosemodell
+#### Usage
 
-Bei seltenen Erkrankungen existieren klinische und genetische Diagnosen **parallel** zueinander:
+The genetic diagnosis is used when:
+- The diagnosis has been confirmed by molecular genetic examination
+- Pathogenic variants have been identified
+- A definite genetic cause has been demonstrated
 
-### 1. Verdachtsdiagnose (Screening/Initial)
-```fsh
-* verificationStatus = #provisional
-* category = #encounter-diagnosis
-```
+#### Specifics
 
-### 2. Klinische Diagnose
-```fsh
-* verificationStatus = #confirmed
-* category[clinical] = "clinical"
-```
+- **OMIM codes**: additional slice for Online Mendelian Inheritance in Man codes
+- **Genetic evidence**: `evidence` is mandatory (1..*), `evidence.detail` (1..*) references
+  an Observation or DiagnosticReport. The profile does not constrain the target profiles;
+  the MolGen resources are recommended:
+  - `MII_PR_MolGen_Variante` for individual variants
+  - `MII_PR_MolGen_DiagnostischeImplikation` for comprehensive genetic reports
+- **Genetic evidence marker**: `evidence.code.coding[geneticEvidence]` carries
+  `106221001 | Genetic finding |`
+- **Verification status**: **not** constrained by the profile; "confirmed" is recommended
+- **Additional genetic information**: `penetrance` extension
+- **Category**: MANDATORY: `782964007 | Genetic disease |` for unambiguous labeling
 
-### 3. Genetische Diagnose (parallel zur klinischen)
-```fsh
-* verificationStatus = #confirmed
-* category[genetic] = $SCT#782964007 "Genetic disease"
-```
+### Parallel diagnosis model
 
-**Wichtig:** Die genetische Diagnose ersetzt NICHT die klinische Diagnose. Beide existieren parallel und ergänzen sich gegenseitig.
+In rare diseases, clinical and genetic diagnoses exist **in parallel**:
 
-## Entscheidungsbaum
+![Parallel diagnosis model](diagnose-parallelmodell.svg)
 
-```plantuml
-@startuml
-!define YELLOW #facc15
-!define RED #dc2626
-!define GREEN #0d9488
-!define BLUE #4a86e8
+The diagram shows all three stages: the suspected diagnosis from screening or first
+contact, the clinical diagnosis after phenotypic work-up, and the genetic diagnosis
+after molecular confirmation.
 
-skinparam backgroundColor #f8f9fa
-skinparam roundcorner 10
-skinparam ArrowColor #666666
-skinparam ArrowThickness 2
+**Important:** The genetic diagnosis does NOT replace the clinical diagnosis. Both exist in parallel and complement each other.
 
-skinparam activity {
-    BackgroundColor<<suspected>> #fff2cc
-    BorderColor<<suspected>> #d6b656
-    BackgroundColor<<clinical>> RED
-    FontColor<<clinical>> white
-    BackgroundColor<<genetic>> RED
-    FontColor<<genetic>> white
-    BackgroundColor<<impression>> YELLOW
-    BorderColor<<impression>> #d4a017
-}
+### Decision tree
 
-(*) --> "Seltene Erkrankung vermutet" <<suspected>>
+![Decision tree: which diagnosis profile when](diagnose-entscheidungsbaum.svg)
 
-"Seltene Erkrankung vermutet" --> "ClinicalImpression erstellen" <<impression>>
+The ClinicalImpression links the stages: problem → suspected diagnosis, finding →
+clinical diagnosis, finding → genetic diagnosis, investigation → examinations.
 
-"ClinicalImpression erstellen" --> "Untersuchungen durchführen"
+### Practical notes
 
-"Untersuchungen durchführen" --> "Phänotypische Analyse"
-"Untersuchungen durchführen" --> "Genetische Analyse"
+#### When to use which profile?
 
-"Phänotypische Analyse" --> "MII_PR_SE_ClinicalDiagnosis" <<clinical>>
-"Genetische Analyse" --> "MII_PR_SE_GeneticDiagnosis" <<genetic>>
-
-"MII_PR_SE_ClinicalDiagnosis" --> "HPO-Codes hinzufügen"
-"MII_PR_SE_ClinicalDiagnosis" --> "HPO-Symptome verlinken"
-"HPO-Codes hinzufügen" --> "Status: confirmed"
-"HPO-Symptome verlinken" --> "Status: confirmed"
-
-"MII_PR_SE_GeneticDiagnosis" --> "OMIM-Code hinzufügen"
-"MII_PR_SE_GeneticDiagnosis" --> "MolGen-Variante verlinken"
-"MII_PR_SE_GeneticDiagnosis" --> "Diagnostische Implikation"
-"OMIM-Code hinzufügen" --> "Status: confirmed"
-"MolGen-Variante verlinken" --> "Status: confirmed"
-"Diagnostische Implikation" --> "Status: confirmed"
-
-"ClinicalImpression erstellen" ..> "problem: Verdachtsdiagnose" : referenziert
-"ClinicalImpression erstellen" ..> "finding: Klinische Diagnose" : referenziert
-"ClinicalImpression erstellen" ..> "finding: Genetische Diagnose" : referenziert
-
-note right of "ClinicalImpression erstellen"
-  **ClinicalImpression verbindet:**
-  - problem → Verdachtsdiagnose
-  - finding → Klinische Diagnose
-  - finding → Genetische Diagnose
-  - investigation → Untersuchungen
-end note
-
-note bottom
-  **Wichtig:** Klinische und genetische Diagnose
-  existieren **parallel** und ergänzen sich gegenseitig
-end note
-
-@enduml
-```
-
-## Praktische Hinweise
-
-### Wann welches Profil verwenden?
-
-| Situation | Profil | Verifikationsstatus |
+| Situation | Profile | Verification status |
 |-----------|--------|-------------------|
-| Neugeborenenscreening positiv | ClinicalDiagnosis | unconfirmed |
-| Klinisch eindeutiges Syndrom | ClinicalDiagnosis | provisional |
-| Genetisch bestätigt | GeneticDiagnosis | confirmed |
-| Klinisch + genetisch bestätigt | **Beide Profile parallel** | confirmed |
-| **Ausgeschlossene Diagnose** | Entsprechendes Profil | **refuted** |
-| Differentialdiagnose | ClinicalDiagnosis | differential |
+| Newborn screening positive | ClinicalDiagnosis | unconfirmed |
+| Clinically unambiguous syndrome | ClinicalDiagnosis | provisional |
+| Genetically confirmed | GeneticDiagnosis | confirmed |
+| Clinically + genetically confirmed | **Both profiles in parallel** | confirmed |
+| **Excluded diagnosis** | Corresponding profile | **refuted** |
+| Differential diagnosis | ClinicalDiagnosis | differential |
 
-### Verlinkung zwischen Diagnosen mittels ClinicalImpression
+#### Linking diagnoses via ClinicalImpression
 
-Die **ClinicalImpression** verbindet die verschiedenen Diagnosestadien:
+The **ClinicalImpression** links the different diagnostic stages:
 
-1. **problem**: Verweis auf die Verdachtsdiagnose (Grund der Untersuchung)
-2. **finding**: Verweise auf die bestätigten Diagnosen (klinisch UND genetisch)
-3. **investigation**: Verweise auf durchgeführte Untersuchungen
+1. **problem**: reference to the suspected diagnosis (reason for the examination)
+2. **finding**: references to the confirmed diagnoses (clinical AND genetic)
+3. **investigation**: references to the examinations performed
 
-```fsh
-Instance: clinical-impression-se
-InstanceOf: ClinicalImpression
-* problem[+] = Reference(condition-verdacht)  // Ausgangspunkt
-* finding[+].itemReference = Reference(condition-klinisch)  // Ergebnis
-* finding[+].itemReference = Reference(condition-genetisch) // Ergebnis
-* investigation[+].item = Reference(observation-hpo-symptom)
-* investigation[+].item = Reference(observation-genetic-variant)
-```
+Both diagnoses remain as independent resources and document different aspects of the same disease.
 
-Beide Diagnosen bleiben als eigenständige Ressourcen erhalten und dokumentieren verschiedene Aspekte derselben Erkrankung.
+#### Evidence linking
 
-### Evidence-Verlinkung
+**Clinical diagnosis:**
+- Evidence → Observation with HPO-coded symptoms
+- Evidence → DiagnosticReport with clinical findings
+- Evidence → ClinicalImpression with clinical assessment
 
-**Klinische Diagnose:**
-- Evidence → Observation mit HPO-kodierten Symptomen
-- Evidence → DiagnosticReport mit klinischen Befunden
-- Evidence → ClinicalImpression mit klinischer Beurteilung
+**Genetic diagnosis:**
+- Evidence → MolGen variant (Observation)
+- Evidence → MolGen diagnostic implication (DiagnosticReport)
+- Evidence → MolGen examined region (Observation)
 
-**Genetische Diagnose:**
-- Evidence → MolGen Variante (Observation)
-- Evidence → MolGen DiagnostischeImplikation (DiagnosticReport)
-- Evidence → MolGen Untersuchte Region (Observation)
+### Validation
 
-## Validierung
+#### Checklist, clinical diagnosis
+- [ ] `category` set — **mandatory** (1..*)
+- [ ] HPO code in `code.coding[hpo]` where the phenotype is known (the profile does not
+      enforce it, but for rare diseases it carries the actual content)
+- [ ] `evidence.detail` referencing phenotypic observations
+- [ ] Appropriate `verificationStatus`
 
-### Pflichtfelder Klinische Diagnose
-- [ ] Mindestens ein HPO-Code im code.coding Slice
-- [ ] Evidence.detail mit Verweis auf phänotypische Observations
-- [ ] Angemessener verificationStatus
+#### Checklist, genetic diagnosis
+- [ ] `category` = `782964007 | Genetic disease |` — **mandatory**, fixed value
+- [ ] At least one `evidence` with `evidence.detail` — **mandatory** (1..*)
+- [ ] OMIM code if available
+- [ ] `evidence.code.coding[geneticEvidence]` = `106221001 | Genetic finding |`
+- [ ] `verificationStatus = confirmed` for a confirmed diagnosis
 
-### Pflichtfelder Genetische Diagnose
-- [ ] OMIM-Code wenn verfügbar
-- [ ] Mindestens eine evidence.detail zu MolGen-Ressource
-- [ ] verificationStatus = confirmed (bei bestätigter Diagnose)
-- [ ] evidence.code mit "Genetic finding"
+### Excluded diagnoses
 
-## Ausgeschlossene Diagnosen
+#### Important note
 
-### Wichtiger Hinweis
-**Ausgeschlossene Diagnosen (refuted) MÜSSEN ebenfalls dokumentiert werden!**
+**Excluded diagnoses (refuted) MUST also be documented!**
 
-Bei seltenen Erkrankungen ist die Dokumentation ausgeschlossener Diagnosen essentiell für:
-- Vermeidung redundanter Diagnostik
-- Dokumentation des diagnostischen Prozesses
-- Unterstützung bei Differentialdiagnosen
-- Forschung und Registerdaten
+For rare diseases, the documentation of excluded diagnoses is essential for:
+- Avoiding redundant diagnostics
+- Documenting the diagnostic process
+- Supporting differential diagnoses
+- Research and registry data
 
-### Modellierung ausgeschlossener Diagnosen
+#### Modeling excluded diagnoses
 
-#### Klinisch ausgeschlossen
-```fsh
-Instance: marfan-excluded-clinical
-InstanceOf: MII_PR_SE_ClinicalDiagnosis
-* verificationStatus = $condition-ver-status#refuted
-* clinicalStatus = $condition-clinical#inactive
-* category[clinical] = $SCT#47367009 "Syndrome"
-* code.coding[icd10-gm] = $ICD10GM#Q87.4 "Marfan-Syndrom"
-* code.coding[orphanet] = http://www.orpha.net#558 "Marfan syndrome"
-* note.text = "Marfan-Syndrom klinisch ausgeschlossen. Ghent-Kriterien nicht erfüllt."
-```
+Excluded diagnoses use the same profile as confirmed ones; only the status differs:
 
-#### Genetisch ausgeschlossen
-```fsh
-Instance: sma-excluded-genetic
-InstanceOf: MII_PR_SE_GeneticDiagnosis
-* verificationStatus = $condition-ver-status#refuted
-* clinicalStatus = $condition-clinical#inactive
-* category[genetic] = $SCT#782964007 "Genetic disease"
-* code.coding[orphanet] = http://www.orpha.net#83330 "SMA"
-* code.coding[omim] = http://omim.org#253300 "SMA type I"
-* evidence[+].code = $SCT#106221001 "Genetic finding"
-* evidence[=].detail = Reference(molgen-smn1-normal)
-* note.text = "SMN1-Gen normal (2 Kopien). SMA ausgeschlossen."
-```
+| Field | Clinically excluded | Genetically excluded |
+|---|---|---|
+| Profile | `MII_PR_Seltene_ClinicalDiagnosis` | `MII_PR_Seltene_GeneticDiagnosis` |
+| `verificationStatus` | `refuted` | `refuted` |
+| `clinicalStatus` | `inactive` | `inactive` |
+| Justification | `note.text` | `note.text` |
+| Evidence | negative phenotypic finding | negative molecular finding |
 
-### Best Practices für ausgeschlossene Diagnosen
+#### Best practices for excluded diagnoses
 
-1. **Immer dokumentieren wenn:**
-   - Eine Verdachtsdiagnose widerlegt wurde
-   - Genetische Tests negativ sind
-   - Differentialdiagnosen ausgeschlossen werden
+1. **Always document when:**
+   - A suspected diagnosis has been refuted
+   - Genetic tests are negative
+   - Differential diagnoses are excluded
 
-2. **Pflichtangaben:**
+2. **Mandatory information:**
    - `verificationStatus = refuted`
    - `clinicalStatus = inactive`
-   - Begründung in `note.text`
-   - Evidence wenn vorhanden
+   - Justification in `note.text`
+   - Evidence if available
 
-3. **Zeitliche Dokumentation:**
-   - `recordedDate`: Wann wurde ausgeschlossen
-   - `abatementDateTime`: Zeitpunkt des Ausschlusses
+3. **Temporal documentation:**
+   - `recordedDate`: when it was excluded
+   - `abatementDateTime`: time of exclusion
 
-## Beispiele
+### Examples
 
-Vollständige Beispiele finden sich in:
-- [SMA-Fallbeispiel](sma-example-annotations.html) - Diagnose-Verlauf von Screening bis genetischer Bestätigung
-- [Marfan-Fallbeispiel](marfan-example-annotations.html) - Klinische Diagnose mit phänotypischen Merkmalen
-- [Ausgeschlossene Diagnosen](excluded-diagnosis-examples.html) - Beispiele für refuted Diagnosen
+Complete examples can be found in:
+- [SMA case example](sma-example-annotations.html) — diagnostic course from screening to genetic confirmation
+- [Marfan case example](marfan-example-annotations.html) — clinical diagnosis with phenotypic features

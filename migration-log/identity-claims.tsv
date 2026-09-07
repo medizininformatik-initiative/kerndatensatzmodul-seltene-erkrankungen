@@ -1,0 +1,12 @@
+2026-08-28T12:22:47Z	id	S	sushi-config.yaml	mii-ig-seltene-erkrankungen-v2026-de	2.1	read
+2026-08-28T12:22:47Z	canonical	S	sushi-config.yaml==package.json(canonical)	https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene	2.1	read
+2026-08-28T12:22:47Z	packageId	S	package.json(name); sushi-config traegt kein packageId-Feld (SUSHI-Default=id? nein: publiziertes Paket bestaetigt)	de.medizininformatikinitiative.kerndatensatz.seltene	2.1	read
+2026-08-28T12:22:47Z	name	S	sushi-config.yaml	MIIIGModulSelteneErkrankungen	2.1	read
+2026-08-28T12:22:47Z	title	S	sushi-config.yaml (package.json title 'MII IG Seltene Erkrankungen' weicht ab — sushi-config gewinnt)	MII IG Kerndatensatz-Modul Seltene Erkrankungen	2.1	read
+2026-08-28T12:22:47Z	version	S	sushi-config.yaml==package.json; Ziel-Version 2027.0.0-ballot = User-Entscheid 2026-08-28 (einzige Human-Decision der Identitaet, analog Bildgebung)	2026.0.1	2.1	read
+2026-08-28T12:22:47Z	status	S	sushi-config.yaml	active	2.1	read
+2026-08-28T12:22:47Z	releaseLabel	S	sushi-config.yaml	ci-build	2.1	read
+2026-08-28T12:22:47Z	publisher	S	sushi-config.yaml	Medizininformatik Initiative | https://www.medizininformatik-initiative.de/	2.1	read
+2026-08-28T12:22:47Z	fhirVersion	S	sushi-config.yaml	4.0.1	2.1	read
+2026-08-28T12:22:47Z	copyrightYear	S	sushi-config.yaml	2022+	2.1	read
+2026-08-28T12:22:47Z	license	-	kein license in sushi-config/package.json, keine LICENSE-Datei, kein Impressums-Statement; Artefakt-Ebene nutzt LicenseCodeableCCBY40 (CC-BY-4.0, input/fsh/rulesets/license-terms.fsh) -> Gate A ①, NICHT defaulten	nirgends deklariert	2.1	absent

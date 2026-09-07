@@ -1,0 +1,35 @@
+{
+  "resourceType": "Consent",
+  "id": "mii-exa-seltene-register-einwilligung",
+  "status": "active",
+  "scope": {
+    "coding": [
+      {
+        "code": "research",
+        "system": "http://terminology.hl7.org/CodeSystem/consentscope"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "research",
+          "system": "http://terminology.hl7.org/CodeSystem/consentcategorycodes"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/mii-exa-seltene-patient-sma-001"
+  },
+  "dateTime": "2024-08-15",
+  "policyRule": {
+    "coding": [
+      {
+        "code": "cric",
+        "system": "http://terminology.hl7.org/CodeSystem/consentpolicycodes"
+      }
+    ]
+  }
+}

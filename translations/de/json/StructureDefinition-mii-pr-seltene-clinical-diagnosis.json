@@ -1,0 +1,247 @@
+{
+  "id" : "StructureDefinition-mii-pr-seltene-clinical-diagnosis",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "StructureDefinition.name",
+      "context" : "A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.",
+      "source" : "MII_PR_Seltene_ClinicalDiagnosis",
+      "target" : "MII_PR_Seltene_ClinicalDiagnosis"
+    },
+    {
+      "id" : "StructureDefinition.title",
+      "context" : "A short, descriptive, user-friendly title for the structure definition.",
+      "source" : "MII PR SE Clinical Diagnosis",
+      "target" : "MII PR SE Clinical Diagnosis"
+    },
+    {
+      "id" : "StructureDefinition.publisher",
+      "context" : "The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.",
+      "source" : "Medizininformatik Initiative",
+      "target" : "Medizininformatik Initiative"
+    },
+    {
+      "id" : "StructureDefinition.contact.name",
+      "context" : "The name of an individual to contact.",
+      "source" : "Medizininformatik Initiative",
+      "target" : "Medizininformatik Initiative"
+    },
+    {
+      "id" : "StructureDefinition.mapping.SE-LogicalModel/name",
+      "context" : "A name for the specification that is being mapped to.",
+      "source" : "Mapping FHIR zu Seltene Erkrankungen Logical Model",
+      "target" : "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+    },
+    {
+      "id" : "StructureDefinition.mapping.LogicalModel/name",
+      "context" : "A name for the specification that is being mapped to.",
+      "source" : "FHIR-Profil zu LogicalModel Mapping",
+      "target" : "FHIR-Profil zu LogicalModel Mapping"
+    },
+    {
+      "id" : "StructureDefinition.mapping.workflow/name",
+      "context" : "A name for the specification that is being mapped to.",
+      "source" : "Workflow Pattern",
+      "target" : "Workflow Pattern"
+    },
+    {
+      "id" : "StructureDefinition.mapping.sct-concept/name",
+      "context" : "A name for the specification that is being mapped to.",
+      "source" : "SNOMED CT Concept Domain Binding",
+      "target" : "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "id" : "StructureDefinition.mapping.v2/name",
+      "context" : "A name for the specification that is being mapped to.",
+      "source" : "HL7 v2 Mapping",
+      "target" : "HL7 v2 Mapping"
+    },
+    {
+      "id" : "StructureDefinition.mapping.w5/name",
+      "context" : "A name for the specification that is being mapped to.",
+      "source" : "FiveWs Pattern Mapping",
+      "target" : "FiveWs Pattern Mapping"
+    },
+    {
+      "id" : "StructureDefinition.mapping.sct-attr/name",
+      "context" : "A name for the specification that is being mapped to.",
+      "source" : "SNOMED CT Attribute Binding",
+      "target" : "SNOMED CT Attribute Binding"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition/mapping/SE-LogicalModel/map",
+      "context" : "Expresses what part of the target specification corresponds to this element.",
+      "source" : "AnamneseUndDiagnostik.KlinischeDiagnose",
+      "target" : "AnamneseUndDiagnostik.KlinischeDiagnose"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition/mapping/SE-LogicalModel/comment",
+      "context" : "Comments that provide information about the mapping or its use.",
+      "source" : "Klinische Diagnose",
+      "target" : "Klinische Diagnose"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.extension:Feststellungsdatum.value[x]/mapping/SE-LogicalModel/map",
+      "context" : "Expresses what part of the target specification corresponds to this element.",
+      "source" : "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+      "target" : "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.extension:Feststellungsdatum.value[x]/mapping/SE-LogicalModel/comment",
+      "context" : "Comments that provide information about the mapping or its use.",
+      "source" : "Feststellungsdatum klinische SE-Diagnose",
+      "target" : "Feststellungsdatum klinische SE-Diagnose"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.code.coding:icd10-gm/mapping/SE-LogicalModel/map",
+      "context" : "Expresses what part of the target specification corresponds to this element.",
+      "source" : "AnamneseUndDiagnostik.KlinischeDiagnose",
+      "target" : "AnamneseUndDiagnostik.KlinischeDiagnose"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.code.coding:icd10-gm/mapping/SE-LogicalModel/comment",
+      "context" : "Comments that provide information about the mapping or its use.",
+      "source" : "ICD-10-GM Diagnose",
+      "target" : "ICD-10-GM Diagnose"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.code.coding:orphanet/mapping/SE-LogicalModel/map",
+      "context" : "Expresses what part of the target specification corresponds to this element.",
+      "source" : "AnamneseUndDiagnostik.KlinischeDiagnose",
+      "target" : "AnamneseUndDiagnostik.KlinischeDiagnose"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.code.coding:orphanet/mapping/SE-LogicalModel/comment",
+      "context" : "Comments that provide information about the mapping or its use.",
+      "source" : "Orpha-Code Diagnose",
+      "target" : "Orpha-Code Diagnose"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.code.coding:hpo/short",
+      "context" : "A concise description of what this element means (e.g. for use in autogenerated summaries).",
+      "source" : "HPO Phenotype code",
+      "target" : "HPO Phenotype code"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.code.coding:hpo/definition",
+      "context" : "Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).",
+      "source" : "Human Phenotype Ontology code describing the phenotypic manifestation of the rare disease",
+      "target" : "Human Phenotype Ontology code describing the phenotypic manifestation of the rare disease"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.code.coding:hpo/comment",
+      "context" : "Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).",
+      "source" : "For rare diseases, HPO codes should be provided to describe the phenotypic presentation",
+      "target" : "For rare diseases, HPO codes should be provided to describe the phenotypic presentation"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.code.coding:hpo/mapping/SE-LogicalModel/map",
+      "context" : "Expresses what part of the target specification corresponds to this element.",
+      "source" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+      "target" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.code.coding:hpo/mapping/SE-LogicalModel/comment",
+      "context" : "Comments that provide information about the mapping or its use.",
+      "source" : "HPO-Term des Symptoms",
+      "target" : "HPO-Term des Symptoms"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.subject/mapping/SE-LogicalModel/map",
+      "context" : "Expresses what part of the target specification corresponds to this element.",
+      "source" : "Patient",
+      "target" : "Patient"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.subject/mapping/SE-LogicalModel/comment",
+      "context" : "Comments that provide information about the mapping or its use.",
+      "source" : "Patient/Indexpatient",
+      "target" : "Patient/Indexpatient"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.encounter/mapping/SE-LogicalModel/map",
+      "context" : "Expresses what part of the target specification corresponds to this element.",
+      "source" : "AnamneseUndDiagnostik.Untersuchungsdatum",
+      "target" : "AnamneseUndDiagnostik.Untersuchungsdatum"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.encounter/mapping/SE-LogicalModel/comment",
+      "context" : "Comments that provide information about the mapping or its use.",
+      "source" : "Untersuchungsdatum",
+      "target" : "Untersuchungsdatum"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.onset[x]/mapping/SE-LogicalModel/map",
+      "context" : "Expresses what part of the target specification corresponds to this element.",
+      "source" : "AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia",
+      "target" : "AnamneseUndDiagnostik.KlinischeDiagnose.AlterKlinischeDia"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.onset[x]/mapping/SE-LogicalModel/comment",
+      "context" : "Comments that provide information about the mapping or its use.",
+      "source" : "Alter/Zeitpunkt bei klinischer SE-Diagnose",
+      "target" : "Alter/Zeitpunkt bei klinischer SE-Diagnose"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.onset[x]:onsetDateTime/mapping/SE-LogicalModel/map",
+      "context" : "Expresses what part of the target specification corresponds to this element.",
+      "source" : "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia",
+      "target" : "AnamneseUndDiagnostik.KlinischeDiagnose.FeststellungsdatumKlinischeDia"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.onset[x]:onsetDateTime/mapping/SE-LogicalModel/comment",
+      "context" : "Comments that provide information about the mapping or its use.",
+      "source" : "Feststellungsdatum klinische SE-Diagnose",
+      "target" : "Feststellungsdatum klinische SE-Diagnose"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.stage.assessment/short",
+      "context" : "A concise description of what this element means (e.g. for use in autogenerated summaries).",
+      "source" : "Reference to HPO-based severity assessment",
+      "target" : "Reference to HPO-based severity assessment"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.stage.type/short",
+      "context" : "A concise description of what this element means (e.g. for use in autogenerated summaries).",
+      "source" : "Stage type (e.g., severity, progression)",
+      "target" : "Stage type (e.g., severity, progression)"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.evidence.code/short",
+      "context" : "A concise description of what this element means (e.g. for use in autogenerated summaries).",
+      "source" : "Manifestation/symptom supporting the diagnosis",
+      "target" : "Manifestation/symptom supporting the diagnosis"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.evidence.code/mapping/SE-LogicalModel/map",
+      "context" : "Expresses what part of the target specification corresponds to this element.",
+      "source" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm",
+      "target" : "AnamneseUndDiagnostik.Phaenotypisierung.HPOTerm"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.evidence.code/mapping/SE-LogicalModel/comment",
+      "context" : "Comments that provide information about the mapping or its use.",
+      "source" : "Unterstützende HPO-Symptome",
+      "target" : "Unterstützende HPO-Symptome"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.evidence.detail/short",
+      "context" : "A concise description of what this element means (e.g. for use in autogenerated summaries).",
+      "source" : "Reference to Observation resources containing HPO-coded symptoms",
+      "target" : "Reference to Observation resources containing HPO-coded symptoms"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.evidence.detail/mapping/SE-LogicalModel/map",
+      "context" : "Expresses what part of the target specification corresponds to this element.",
+      "source" : "AnamneseUndDiagnostik.Phaenotypisierung",
+      "target" : "AnamneseUndDiagnostik.Phaenotypisierung"
+    },
+    {
+      "id" : "StructureDefinition.element.Condition.evidence.detail/mapping/SE-LogicalModel/comment",
+      "context" : "Comments that provide information about the mapping or its use.",
+      "source" : "Verweis auf Phänotypisierung",
+      "target" : "Verweis auf Phänotypisierung"
+    }]
+  }]
+}
