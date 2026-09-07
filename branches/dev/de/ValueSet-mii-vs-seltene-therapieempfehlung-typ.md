@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-typ | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_VS_Seltene_TherapieempfehlungTyp |
+| Active Stand: 2026-09-07 | *Maschinenlesbarer Name*:MII_VS_Seltene_TherapieempfehlungTyp |
 
  
 ValueSet für Therapietypen (kausal/symptomatisch) bei seltenen Erkrankungen (Modellvorhaben GenomSeq) 
@@ -42,7 +42,7 @@ ValueSet für Therapietypen (kausal/symptomatisch) bei seltenen Erkrankungen (Mo
   "name" : "MII_VS_Seltene_TherapieempfehlungTyp",
   "title" : "MII VS SE Therapieempfehlung Typ",
   "status" : "active",
-  "date" : "2026-09-04T16:57:12+00:00",
+  "date" : "2026-09-07T15:50:41+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

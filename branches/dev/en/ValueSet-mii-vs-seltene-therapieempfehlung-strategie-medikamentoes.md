@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-medikamentoes | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-04 | *Computable Name*:MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes |
+| Active as of 2026-09-07 | *Computable Name*:MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes |
 
  
 ValueSet für medikamentöse Therapiestrategien (für MedicationRequest Profile) - Verwendet für MedicationRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq 
@@ -41,7 +41,7 @@ ValueSet für medikamentöse Therapiestrategien (für MedicationRequest Profile)
   "name" : "MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes",
   "title" : "MII VS SE Therapieempfehlung Strategie - Medikamentös",
   "status" : "active",
-  "date" : "2026-09-04T16:57:12+00:00",
+  "date" : "2026-09-07T15:50:41+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

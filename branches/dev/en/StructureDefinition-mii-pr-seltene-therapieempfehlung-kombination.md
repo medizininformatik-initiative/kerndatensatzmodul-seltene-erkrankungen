@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-kombination | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-04 | *Computable Name*:MII_PR_Seltene_Therapieempfehlung_Kombination |
+| Active as of 2026-09-07 | *Computable Name*:MII_PR_Seltene_Therapieempfehlung_Kombination |
 
  
 Therapieempfehlung für eine medikamentöse Kombinationstherapie 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
   "name" : "MII_PR_Seltene_Therapieempfehlung_Kombination",
   "title" : "MII PR SE Therapieempfehlung Kombinationstherapie",
   "status" : "active",
-  "date" : "2026-09-04T16:57:12+00:00",
+  "date" : "2026-09-07T15:50:41+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
