@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-seltene-hueftumfang"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hueftumfang|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-seltene-hueftumfang</b></p><a name="de-mii-exa-seltene-hueftumfang"> </a><a name="de-hcmii-exa-seltene-hueftumfang"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-hueftumfang.html">MII PR SE Hüftumfang</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 284472007}">Hip circumference</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient.html">Beispielpatient</a></p><p><b>effective</b>: 2024-08-08 10:00:00+0200</p><p><b>value</b>: 98 cm<span style="background: LightGoldenRodYellow"> (Details: UCUM  codecm = 'cm')</span></p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="vital-signs"/>
+      <display value="Vital Signs"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="284472007"/>
+      <display value="Hip circumference"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-seltene-patient"/>
+    <display value="Beispielpatient"/>
+  </subject>
+  <effectiveDateTime value="2024-08-08T10:00:00+02:00"/>
+  <valueQuantity>
+    <value value="98"/>
+    <unit value="cm"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="cm"/>
+  </valueQuantity>
+</Observation>

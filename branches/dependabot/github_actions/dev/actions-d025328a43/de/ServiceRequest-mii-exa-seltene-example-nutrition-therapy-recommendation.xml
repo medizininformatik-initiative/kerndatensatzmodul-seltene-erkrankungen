@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-seltene-example-nutrition-therapy-recommendation"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ServiceRequest mii-exa-seltene-example-nutrition-therapy-recommendation</b></p><a name="de-mii-exa-seltene-example-nutrition-therapy-recommendation"> </a><a name="de-hcmii-exa-seltene-example-nutrition-therapy-recommendation"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html">MII PR SE Therapieempfehlung Nicht-Medikamentös</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>category</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie nutrition}">Ernährungstherapie</span>, <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ causal}">Kausal</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 61310001}">Phenylalaninreduzierte Diät bei Phenylketonurie</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient.html">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>occurrence</b>: 2024-01-01 --&gt; (ongoing)</p><p><b>reasonReference</b>: <a href="Condition-mii-exa-seltene-condition-pku-diagnosis.html">Condition Phenylketonuria</a></p><p><b>note</b>: </p><blockquote><div><p>Lebenslange phenylalaninarme Diät erforderlich, regelmäßige Kontrolle der Phe-Spiegel</p>
+</div></blockquote></div>
+  </text>
+  <status value="active"/>
+  <intent value="proposal"/>
+  <category>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"/>
+      <code value="nutrition"/>
+      <display value="Ernährungstherapie"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ"/>
+      <code value="causal"/>
+      <display value="Kausal"/>
+    </coding>
+  </category>
+  <priority value="routine"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="61310001"/>
+      <display value="Nutrition education"/>
+    </coding>
+    <text value="Phenylalaninreduzierte Diät bei Phenylketonurie"/>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-seltene-patient"/>
+  </subject>
+  <occurrencePeriod>
+    <start value="2024-01-01"/>
+  </occurrencePeriod>
+  <reasonReference>
+    <reference value="Condition/mii-exa-seltene-condition-pku-diagnosis"/>
+  </reasonReference>
+  <note>
+    <text value="Lebenslange phenylalaninarme Diät erforderlich, regelmäßige Kontrolle der Phe-Spiegel"/>
+  </note>
+</ServiceRequest>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-seltene-narse-stoffwechseltherapie-pompe"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-seltene-narse-stoffwechseltherapie-pompe</b></p><a name="de-mii-exa-seltene-narse-stoffwechseltherapie-pompe"> </a><a name="de-hcmii-exa-seltene-narse-stoffwechseltherapie-pompe"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-therapie-durchgefuehrt.html">MII PR Seltene Erkrankungen Therapie Durchgeführt</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: In Progress</p><p><b>code</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp stoffwechseltherapie}">Stoffwechseltherapie</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient.html">Pompe Patient</a></p><p><b>performed</b>: 2024-01-15 --&gt; (ongoing)</p></div>
+  </text>
+  <status value="in-progress"/>
+  <code>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp"/>
+      <code value="stoffwechseltherapie"/>
+      <display value="Stoffwechseltherapie"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-seltene-patient"/>
+    <display value="Pompe Patient"/>
+  </subject>
+  <performedPeriod>
+    <start value="2024-01-15"/>
+  </performedPeriod>
+</Procedure>
