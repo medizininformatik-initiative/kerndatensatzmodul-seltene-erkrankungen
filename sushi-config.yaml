@@ -36,12 +36,18 @@ releaseLabel: ci-build # Quelle gewinnt (2027.0.0-ballot.rc1 ist kein formales R
 license: CC-BY-4.0
 # Must equal the publication date; go-publish.yml validates this.
 #
-# ACHTUNG BEIM RELEASE-BUILD AM 2026-09-14: dieses Feld MUSS dann auf
-# "2026-09-14" gezogen werden. go-publish.yml prueft date gegen das
-# Publikationsdatum und bricht sonst ab. Der aktuelle Wert bezeichnet den Stand,
-# zu dem der Ballot-Entwurf inhaltlich vollstaendig war — nicht den geplanten
-# Publikationstermin. Ballotierung startet am 2026-09-15, letzter Build 09-14.
-date: "2026-09-02" # Gate A ① (A-7) ENTSCHIEDEN 2026-09-02; zuvor 2026-08-28 = Migrationsdatum
+# Publikationsdatum des rc1. go-publish.yml prueft dieses Feld hart gegen das
+# Datum der Veroeffentlichung und bricht bei Abweichung ab.
+#
+# ACHTUNG BEIM BALLOT-BUILD AM 2026-09-14: dann MUSS hier "2026-09-14" stehen.
+# Der rc1 vom 2026-09-07 ist ein Zwischenstand, auf den andere Module pinnen
+# koennen; die Ballotierungsfassung wird ein eigener Tag mit eigenem Datum.
+# Ballotierung startet am 2026-09-15.
+#
+# Nicht zu verwechseln mit approvalDate weiter unten: das steht auf 2026-09-02
+# und bezeichnet den Tag, an dem der Inhalt freigegeben wurde, nicht den Tag der
+# Veroeffentlichung. Beide duerfen auseinanderliegen und tun es hier.
+date: "2026-09-07" # Nutzerentscheid 2026-09-07: rc1 wird heute publiziert
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # package.json nutzt m49#276 (ebenfalls DE) — Template-Idiom übernommen
 publisher:
   name: Medizininformatik Initiative
