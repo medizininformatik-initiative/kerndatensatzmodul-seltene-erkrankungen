@@ -99,7 +99,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Geburtslaenge",
   "title" : "MII PR SE Geburtslänge",
   "status" : "active",
-  "date" : "2026-09-08T09:32:56+00:00",
+  "date" : "2026-09-08T15:03:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

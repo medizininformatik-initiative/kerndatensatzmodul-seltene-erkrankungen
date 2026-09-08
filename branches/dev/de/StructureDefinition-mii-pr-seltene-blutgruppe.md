@@ -116,7 +116,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Blutgruppe",
   "title" : "MII PR SE Blutgruppe",
   "status" : "active",
-  "date" : "2026-09-08T09:32:56+00:00",
+  "date" : "2026-09-08T15:03:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -251,8 +251,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Art der Blutgruppenbestimmung",
-        "comment" : "882-1 für AB0+Rh oder 883-9 für nur AB0"
+        "map" : "koerperlicheUntersuchung.blutgruppe",
+        "comment" : "Art der Blutgruppenbestimmung: 882-1 für AB0+Rh oder 883-9 für nur AB0"
       }]
     },
     {
@@ -341,8 +341,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Datum der Blutgruppenbestimmung",
-        "comment" : "Bestimmungsdatum"
+        "map" : "Nicht im Datensatz",
+        "comment" : "Bestimmungsdatum; bewusst kein Datenpunkt des Modells"
       }]
     },
     {

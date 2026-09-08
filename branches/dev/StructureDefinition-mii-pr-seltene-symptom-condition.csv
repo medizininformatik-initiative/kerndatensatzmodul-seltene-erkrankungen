@@ -232,7 +232,7 @@ Age {[]} {[]}Period {[]} {[]}Range {[]} {[]}string {[]} {[]}","Auflösung der Sy
 "Condition.abatement[x]:abatementDateTime","Condition.abatement[x]","abatementDateTime","","",0,1,"","","","dateTime {[]} {[]}
 ","When in resolution/remission","The date or estimated date that the condition resolved or went into remission. This is called ""abatement"" because of the many overloaded connotations associated with ""remission"" or ""resolution"" - Conditions are never really resolved, but they can abate.","There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.","","","","","","","","",,,,,"",,,,"Condition.abatement[x]",0,1,"con-4
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","Ende des Symptoms","FiveWs.done[x]"
+","anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom","FiveWs.done[x]"
 "Condition.recordedDate","Condition.recordedDate","","","",0,1,"Y","","Y","dateTime {[]} {[]}
 ","Date record was first recorded","The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date.","","","","","","","","","",,,,,"",,,,"Condition.recordedDate",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","anamneseUndDiagnostik.untersuchungsdatum","REL-11","FiveWs.recorded"

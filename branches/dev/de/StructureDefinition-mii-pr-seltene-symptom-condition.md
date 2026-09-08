@@ -177,7 +177,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Symptom_Condition",
   "title" : "MII Profile SE Symptom Condition",
   "status" : "active",
-  "date" : "2026-09-08T09:32:56+00:00",
+  "date" : "2026-09-08T15:03:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -617,7 +617,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
-        "map" : "Ende des Symptoms",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom",
         "comment" : "Enddatum des Symptoms"
       }]
     },
