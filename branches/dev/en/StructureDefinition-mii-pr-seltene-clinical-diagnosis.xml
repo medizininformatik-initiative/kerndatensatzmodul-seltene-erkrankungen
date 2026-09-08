@@ -131,7 +131,7 @@
   <name value="MII_PR_Seltene_ClinicalDiagnosis"/>
   <title value="MII PR SE Clinical Diagnosis"/>
   <status value="active"/>
-  <date value="2026-09-08T09:14:37+00:00"/>
+  <date value="2026-09-08T09:32:56+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -10254,7 +10254,7 @@
       <path value="Condition.evidence.detail"/>
       <short value="Reference to the findings supporting or refuting the diagnosis"/>
       <definition value="Links to other relevant information, including pathology reports."/>
-      <comment value="Typischerweise HPO-kodierte Symptom-Observations; ein DiagnosticReport ist zulaessig, wenn der Beleg ein Befundbericht ist (etwa eine Biopsie)."/>
+      <comment value="Typischerweise HPO-kodierte Symptom-Observations; ein DiagnosticReport ist zulässig, wenn der Beleg ein Befundbericht ist (etwa eine Biopsie)."/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -10506,7 +10506,7 @@
     <element id="Condition.evidence.detail">
       <path value="Condition.evidence.detail"/>
       <short value="Reference to the findings supporting or refuting the diagnosis"/>
-      <comment value="Typischerweise HPO-kodierte Symptom-Observations; ein DiagnosticReport ist zulaessig, wenn der Beleg ein Befundbericht ist (etwa eine Biopsie)."/>
+      <comment value="Typischerweise HPO-kodierte Symptom-Observations; ein DiagnosticReport ist zulässig, wenn der Beleg ein Befundbericht ist (etwa eine Biopsie)."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>

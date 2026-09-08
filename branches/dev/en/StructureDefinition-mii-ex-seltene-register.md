@@ -11,7 +11,7 @@
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register | *Version*:2027.0.0-ballot.rc1 |
 | Active as of 2026-09-08 | *Computable Name*:MII_EX_Seltene_Register |
 
-Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.
+Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug läuft über ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.
 
 **Context of Use**
 
@@ -45,7 +45,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-re
   "name" : "MII_EX_Seltene_Register",
   "title" : "MII EX SE Register",
   "status" : "active",
-  "date" : "2026-09-08T09:14:37+00:00",
+  "date" : "2026-09-08T09:32:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -67,7 +67,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-re
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.",
+  "description" : "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug läuft über ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -90,7 +90,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-re
       "id" : "Extension",
       "path" : "Extension",
       "short" : "MII EX SE Register",
-      "definition" : "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt."
+      "definition" : "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug läuft über ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt."
     },
     {
       "id" : "Extension.extension",

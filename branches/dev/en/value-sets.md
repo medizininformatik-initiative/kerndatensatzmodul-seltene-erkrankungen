@@ -47,6 +47,6 @@ The module defines the following value sets. Value sets that only bundle codes o
 
 | | | |
 | :--- | :--- | :--- |
-| MII VS SE Clinical Diagnosis Category (retired) | [`mii-vs-seltene-clinical-diagnosis-category`](ValueSet-mii-vs-seltene-clinical-diagnosis-category.md) | RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code. |
+| MII VS SE Clinical Diagnosis Category (retired) | [`mii-vs-seltene-clinical-diagnosis-category`](ValueSet-mii-vs-seltene-clinical-diagnosis-category.md) | RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehört in Condition.code. |
 | MII VS SE Genetic Basis (retired) | [`mii-vs-seltene-genetic-basis`](ValueSet-mii-vs-seltene-genetic-basis.md) | RETIRED. Nicht verwenden. Acht der neun enthaltenen SNOMED-Codes bezeichnen etwas anderes als ihr Display behauptet oder existieren nicht; das ValueSet muss neu erstellt werden. |
 

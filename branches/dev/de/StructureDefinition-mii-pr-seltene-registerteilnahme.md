@@ -97,7 +97,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Registerteilnahme",
   "title" : "MII PR SE Registerteilnahme",
   "status" : "active",
-  "date" : "2026-09-08T09:14:37+00:00",
+  "date" : "2026-09-08T09:32:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -175,7 +175,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "ResearchSubject.extension",
       "sliceName" : "register",
       "short" : "Katalogeintrag des Registers als Library (optional)",
-      "comment" : "Optionaler Verweis auf den Library-Katalogeintrag nach mii-pr-studie-register. Der verbindliche Registerbezug laeuft ueber study, weil R4 das so erzwingt.",
+      "comment" : "Optionaler Verweis auf den Library-Katalogeintrag nach mii-pr-studie-register. Der verbindliche Registerbezug läuft über study, weil R4 das so erzwingt.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -223,7 +223,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     {
       "id" : "ResearchSubject.study",
       "path" : "ResearchSubject.study",
-      "short" : "Das Register, als ResearchStudy gefuehrt",
+      "short" : "Das Register, als ResearchStudy geführt",
       "comment" : "In R4 ist study 1..1 Pflicht und auf ResearchStudy festgelegt. Ein Register muss daher als ResearchStudy vorliegen; der Library-Katalogeintrag des Moduls Studie kann hier nicht stehen. Siehe Kopfkommentar.",
       "mustSupport" : true,
       "mapping" : [{
@@ -241,7 +241,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "id" : "ResearchSubject.consent",
       "path" : "ResearchSubject.consent",
       "short" : "Nur zu setzen, wenn die Einwilligung am dokumentierenden Standort tatsaechlich als Ressource vorliegt",
-      "comment" : "Eine Registeraufnahme beruht selbstverstaendlich auf einer Einwilligung — aber die liegt beim Registerbetreiber. Ein Standort, der die Teilnahme nur nachhaelt, kann sie nicht referenzieren. Die Angabe leer zu lassen bedeutet daher NICHT, dass keine Einwilligung existiert, sondern nur, dass sie hier nicht als FHIR-Ressource greifbar ist. Genau deshalb leitet dieses Profil nicht vom Probanden-Profil des Moduls Studie ab, das consent mit 1..1 fordert.",
+      "comment" : "Eine Registeraufnahme beruht selbstverständlich auf einer Einwilligung — aber die liegt beim Registerbetreiber. Ein Standort, der die Teilnahme nur nachhält, kann sie nicht referenzieren. Die Angabe leer zu lassen bedeutet daher NICHT, dass keine Einwilligung existiert, sondern nur, dass sie hier nicht als FHIR-Ressource greifbar ist. Genau deshalb leitet dieses Profil nicht vom Probanden-Profil des Moduls Studie ab, das consent mit 1..1 fordert.",
       "mustSupport" : true
     }]
   }

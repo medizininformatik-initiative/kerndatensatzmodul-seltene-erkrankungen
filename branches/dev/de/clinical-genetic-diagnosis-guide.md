@@ -32,7 +32,7 @@ Die klinische Diagnose wird verwendet, wenn:
 * **HPO-Codes**: Zusätzlicher Slice `code.coding[hpo]` (0..*), required gebunden an das ValueSet der HPO-Phänotypcodes
 * **Phänotypische Evidenz**: Evidence.detail verweist auf HPO-kodierte Symptom-Observations
 * **Verifikationsstatus**: Vom Profil **nicht** eingeschränkt (0..1, geerbte required- Bindung an `condition-ver-status`); empfohlen "provisional" oder "differential", solange die genetische Bestätigung aussteht
-* **Kategorie**: `category` ist Pflicht (1..*), der Wert bleibt frei. Er beschreibt die Rolle im Record (`problem-list-item` oder `encounter-diagnosis`), nicht die Art der Erkrankung — eine modulweite Bindung an Krankheitsarten waere hier fachlich falsch.
+* **Kategorie**: `category` ist Pflicht (1..*), der Wert bleibt frei. Er beschreibt die Rolle im Record (`problem-list-item` oder `encounter-diagnosis`), nicht die Art der Erkrankung — eine modulweite Bindung an Krankheitsarten wäre hier fachlich falsch.
 
 ### Strukturvergleich
 

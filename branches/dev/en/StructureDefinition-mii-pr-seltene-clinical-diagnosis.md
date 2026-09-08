@@ -153,7 +153,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
   "name" : "MII_PR_Seltene_ClinicalDiagnosis",
   "title" : "MII PR SE Clinical Diagnosis",
   "status" : "active",
-  "date" : "2026-09-08T09:14:37+00:00",
+  "date" : "2026-09-08T09:32:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -418,7 +418,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "id" : "Condition.evidence.detail",
       "path" : "Condition.evidence.detail",
       "short" : "Reference to the findings supporting or refuting the diagnosis",
-      "comment" : "Typischerweise HPO-kodierte Symptom-Observations; ein DiagnosticReport ist zulaessig, wenn der Beleg ein Befundbericht ist (etwa eine Biopsie).",
+      "comment" : "Typischerweise HPO-kodierte Symptom-Observations; ein DiagnosticReport ist zulässig, wenn der Beleg ein Befundbericht ist (etwa eine Biopsie).",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Observation",

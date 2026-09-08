@@ -104,13 +104,15 @@ The elements of the logical data model are mapped to the FamilyMemberHistory pro
 
 | | | |
 | :--- | :--- | :--- |
-| Familienanamnese.Verwandtschaftsverhaeltnis | FamilyMemberHistory.relationship | Biological relationship to the index patient |
-| Familienanamnese.Geschlecht | FamilyMemberHistory.sex | Sex of the family member |
-| Familienanamnese.GleicheSE | FamilyMemberHistory.condition.code | If the code is identical to the index patient's diagnosis |
-| Familienanamnese.AndereSE | FamilyMemberHistory.condition.code | If the code differs from the index patient's diagnosis |
-| Familienanamnese.Penetranz | FamilyMemberHistory.condition.extension:penetranz | Extension for missing clinical penetrance despite a genetic diagnosis in family members |
-| Familienanamnese.FamilienmitgliedVerstorben | FamilyMemberHistory.deceased[x] | Vital status of the family member |
-| Familienanamnese.TodDurchSE | FamilyMemberHistory.condition.contributedToDeath | Indicates whether the disease contributed to death |
+| `familienanamnese.verwandtschaftsverhaeltnis` | FamilyMemberHistory.relationship | Biological relationship to the index patient |
+| `familienanamnese.geschlecht` | FamilyMemberHistory.sex | Sex of the family member |
+| `familienanamnese.gleicheSE` | FamilyMemberHistory.condition.code | If the code is identical to the index patient's diagnosis |
+| `familienanamnese.andereSE` | FamilyMemberHistory.condition.code | If the code differs from the index patient's diagnosis |
+| `familienanamnese.penetranz` | FamilyMemberHistory.condition.extension:penetranz | Extension for missing clinical penetrance despite a genetic diagnosis in family members |
+| `familienanamnese.familienmitgliedVerstorben` | FamilyMemberHistory.deceased[x] | Vital status of the family member |
+| `familienanamnese.todDurchSE` | FamilyMemberHistory.condition.contributedToDeath | Indicates whether the disease contributed to death |
+| `familienanamnese.dokumentationsdatum` | FamilyMemberHistory.date | Date the family history was taken or recorded |
+| `familienanamnese.konsanguinitaetEltern` | Observation (`mii-pr-seltene-consanguinity`) | Consanguinity of the parents; a profile of its own, not part of FamilyMemberHistory |
 
 -------
 
@@ -147,7 +149,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
   "name" : "MII_PR_Seltene_Familienanamnese",
   "title" : "MII PR SE Familienanamnese",
   "status" : "active",
-  "date" : "2026-09-08T09:14:37+00:00",
+  "date" : "2026-09-08T09:32:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

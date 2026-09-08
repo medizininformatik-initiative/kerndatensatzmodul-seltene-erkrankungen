@@ -68,7 +68,7 @@ Diese definieren Einschränkungen für FHIR-Datentypen für Systeme, die mit die
 | [ MII EX SE Empfehlung Priorität  ](StructureDefinition-mii-ex-seltene-empfehlung-prioritaet.md) | Priorität der (einzelnen) Empfehlung |
 | [ MII EX SE Empfehlung Publikation  ](StructureDefinition-mii-ex-seltene-empfehlung-publikation.md) | Verweis auf Publikation der (einzelnen) Empfehlung |
 | [ MII EX SE Penetrance  ](StructureDefinition-mii-ex-seltene-penetrance.md) | Extension to capture the penetrance of genetic variants associated with a rare disease |
-| [ MII EX SE Register  ](StructureDefinition-mii-ex-seltene-register.md) | Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt. |
+| [ MII EX SE Register  ](StructureDefinition-mii-ex-seltene-register.md) | Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug läuft über ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt. |
 | [ MII_EX_Seltene_VonSEBetroffen  ](StructureDefinition-mii-ex-seltene-von-se-betroffen.md) | Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist. |
 
 ### Terminologie: ValueSets 
@@ -81,7 +81,7 @@ Diese definieren Wertemengen, die von Systemen verwendet werden, die mit dem Imp
 | [ HPO Phenotypic Observation Codes  ](ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.md) | Human Phenotype Ontology codes for phenotypic observations |
 | [ HPO Severity  ](ValueSet-mii-vs-seltene-hpo-severity.md) | HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Phenomics IG component pattern. |
 | [ MII VS SE Blutgruppe  ](ValueSet-mii-vs-seltene-blutgruppe.md) | ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List für 882-1 |
-| [ MII VS SE Clinical Diagnosis Category (retired)  ](ValueSet-mii-vs-seltene-clinical-diagnosis-category.md) | RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code. |
+| [ MII VS SE Clinical Diagnosis Category (retired)  ](ValueSet-mii-vs-seltene-clinical-diagnosis-category.md) | RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehört in Condition.code. |
 | [ MII VS SE Empfehlung Status Begründung  ](ValueSet-mii-vs-seltene-empfehlung-status-begruendung.md) | ValueSet für Begründung bei fehlender Empfehlung |
 | [ MII VS SE Genetic Basis (retired)  ](ValueSet-mii-vs-seltene-genetic-basis.md) | RETIRED. Nicht verwenden. Acht der neun enthaltenen SNOMED-Codes bezeichnen etwas anderes als ihr Display behauptet oder existieren nicht; das ValueSet muss neu erstellt werden. |
 | [ MII VS SE HPO Age of Onset  ](ValueSet-mii-vs-seltene-hpo-age-of-onset.md) | Value set containing HPO terms for age of onset of diseases |
@@ -141,7 +141,7 @@ Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Sy
 | [ BRCA1/2 Panel - Diagnostische Implikation  ](DiagnosticReport-mii-exa-seltene-molgen-brca-panel.md) | Hereditäres Karzinom-Panel |
 | [ Beinlängendifferenz  ](Observation-mii-exa-seltene-observation-leg-asymmetry.md) | Beinlängendifferenz mit rechts verkürztem Bein |
 | [ Beispiel Aortenwurzelersatz bei Marfan-Syndrom  ](ServiceRequest-mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan.md) | Beispiel einer nicht-medikamentösen Therapieempfehlung für Aortenwurzelersatz bei Marfan-Syndrom |
-| [ Beispiel Einwilligung zur Registerteilnahme  ](Consent-mii-exa-seltene-register-einwilligung.md) | Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusaetzliche Huerde. |
+| [ Beispiel Einwilligung zur Registerteilnahme  ](Consent-mii-exa-seltene-register-einwilligung.md) | Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusätzliche Huerde. |
 | [ Beispiel Ernährungstherapie-Empfehlung  ](ServiceRequest-mii-exa-seltene-example-nutrition-therapy-recommendation.md) | Beispiel einer Ernährungstherapie-Empfehlung bei Phenylketonurie |
 | [ Beispiel Früherkennungsprogramm-Empfehlung  ](ServiceRequest-mii-exa-seltene-example-early-detection-recommendation.md) | Beispiel einer Empfehlung für regelmäßige Früherkennungsuntersuchungen |
 | [ Beispiel Geburtsgewicht  ](Observation-mii-exa-seltene-geburtsgewicht.md) | Geburtsgewicht im Normbereich. Ausgangswert für die Beurteilung der bei SMA Typ 1 häufigen späteren Gedeihstörung. |
@@ -158,12 +158,12 @@ Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Sy
 | [ Beispiel Registerteilnahme — ERN EURO-NMD  ](ResearchSubject-mii-exa-seltene-registerteilnahme.md) | Teilnahme des SMA-Kindes am EURO-NMD-Register. Die Kennung ist das registereigene Pseudonym, nicht die Patienten-ID des Standorts. |
 | [ Body Mass Index (BMI) Example  ](Observation-mii-exa-seltene-bodymassindex.md) | Example of a Body Mass Index (BMI) observation for a patient. |
 | [ CF Diagnostische Implikation - MolGen  ](DiagnosticReport-mii-exa-seltene-molgen-cf-diagnostic.md) | Mukoviszidose genetischer Befund |
-| [ CFTR F508del - heterozygoter Anlagetraeger  ](Observation-mii-exa-seltene-molgen-cftr-heterozygous-carrier.md) | Nur eine CFTR-Mutation nachweisbar; schliesst Mukoviszidose aus |
+| [ CFTR F508del - heterozygoter Anlageträger  ](Observation-mii-exa-seltene-molgen-cftr-heterozygous-carrier.md) | Nur eine CFTR-Mutation nachweisbar; schliesst Mukoviszidose aus |
 | [ CFTR F508del Homozygot - MolGen Variante  ](Observation-mii-exa-seltene-molgen-variant-cftr-f508del-homozygous.md) | Homozygote F508del Mutation bei Mukoviszidose |
 | [ Chronische Diarrhoe - HPO-kodiert  ](Observation-mii-exa-seltene-chronic-diarrhea.md) | Chronische Durchfälle bei CF |
 | [ Consanguinity - Eltern blutsverwandt  ](Observation-mii-exa-seltene-consanguinity.md) | Beispiel: Bei einem Indexpatienten mit Verdacht auf eine autosomal-rezessive seltene Erkrankung ist dokumentiert, dass die Eltern blutsverwandt sind (Cousins 1. Grades). |
 | [ DMD Exon 45 - Diagnostische Implikation (Duchenne)  ](DiagnosticReport-mii-exa-seltene-molgen-diagnostic-dmd-duchenne.md) | Diagnostischer Bericht Duchenne-Muskeldystrophie |
-| [ DMD Exon 45 Deletion - MolGen Variante  ](Observation-mii-exa-seltene-molgen-variant-dmd-deletion-exon45.md) | Out-of-frame Deletion im DMD-Gen (Exon 45) — fuehrt zu Duchenne |
+| [ DMD Exon 45 Deletion - MolGen Variante  ](Observation-mii-exa-seltene-molgen-variant-dmd-deletion-exon45.md) | Out-of-frame Deletion im DMD-Gen (Exon 45) — führt zu Duchenne |
 | [ DMD Exon 45-47 - Diagnostische Implikation (Becker)  ](DiagnosticReport-mii-exa-seltene-molgen-diagnostic-dmd.md) | Diagnostischer Bericht: in-frame Deletion, Becker- statt Duchenne-Muskeldystrophie |
 | [ DMD Exon 45-47 Deletion - MolGen Variante  ](Observation-mii-exa-seltene-molgen-variant-dmd-deletion-exon45-47.md) | In-frame Deletion im DMD-Gen (Exons 45-47) — vereinbar mit Becker, nicht mit Duchenne |
 | [ Duchenne ausgeschlossen - Becker bestätigt  ](Condition-mii-exa-seltene-example-dmd-excluded-bmd-confirmed.md) | Duchenne-Muskeldystrophie ausgeschlossen, stattdessen Becker-Muskeldystrophie |
@@ -243,7 +243,7 @@ Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Sy
 | [ SMN1 Gen Deletion - MolGen Variante  ](Observation-mii-exa-seltene-molgen-variant-smn1-deletion.md) | Homozygote Deletion des SMN1-Gens bei SMA |
 | [ SMN2 Gen - Kopienanzahl  ](Observation-mii-exa-seltene-variant-smn2-001.md) | 2 Kopien des SMN2-Gens nachgewiesen |
 | [ Stationärer Aufenthalt zur Gentherapie  ](Encounter-mii-exa-seltene-encounter-stationaer-001.md) | Stationäre Aufnahme für Gentherapie |
-| [ Studieneinschlussempfehlung  ](ServiceRequest-mii-exa-seltene-studieneinschluss-anfrage.md) | Empfehlung, den Patienten fuer eine Studie zu evaluieren |
+| [ Studieneinschlussempfehlung  ](ServiceRequest-mii-exa-seltene-studieneinschluss-anfrage.md) | Empfehlung, den Patienten für eine Studie zu evaluieren |
 | [ Taillenumfang Beispiel  ](Observation-mii-exa-seltene-taillenumfang.md) | Beispiel einer Taillenumfang-Messung bei einem Patienten mit seltener Erkrankung. |
 | [ Therapieplan Example  ](CarePlan-mii-exa-seltene-therapieplan.md) | Example of a Therapieplan for a patient. |
 | [ Thoraxschmerzen  ](Observation-mii-exa-seltene-symptom-chest-pain.md) | Akute Thoraxschmerzen als Präsentationssymptom |

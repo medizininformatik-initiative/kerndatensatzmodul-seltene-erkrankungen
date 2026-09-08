@@ -12,7 +12,7 @@
 | Retired as of 2026-09-08 | *Computable Name*:MII_VS_Seltene_ClinicalDiagnosisCategory |
 
  
-RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code. 
+RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehört in Condition.code. 
 
  **References** 
 
@@ -43,7 +43,7 @@ Expansions are not generated for retired value sets
   "name" : "MII_VS_Seltene_ClinicalDiagnosisCategory",
   "title" : "MII VS SE Clinical Diagnosis Category (retired)",
   "status" : "retired",
-  "date" : "2026-09-08T09:14:37+00:00",
+  "date" : "2026-09-08T09:32:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -65,7 +65,7 @@ Expansions are not generated for retired value sets
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code.",
+  "description" : "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehört in Condition.code.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

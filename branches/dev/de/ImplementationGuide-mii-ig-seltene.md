@@ -1646,7 +1646,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
         "reference" : "Consent/mii-exa-seltene-register-einwilligung"
       },
       "name" : "Beispiel Einwilligung zur Registerteilnahme",
-      "description" : "Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusaetzliche Huerde.",
+      "description" : "Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusätzliche Huerde.",
       "exampleBoolean" : true
     },
     {
@@ -1965,7 +1965,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       "reference" : {
         "reference" : "Observation/mii-exa-seltene-molgen-cftr-heterozygous-carrier"
       },
-      "name" : "CFTR F508del - heterozygoter Anlagetraeger",
+      "name" : "CFTR F508del - heterozygoter Anlageträger",
       "description" : "Nur eine CFTR-Mutation nachweisbar; schliesst Mukoviszidose aus",
       "exampleBoolean" : true
     },
@@ -2046,7 +2046,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
         "reference" : "Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45"
       },
       "name" : "DMD Exon 45 Deletion - MolGen Variante",
-      "description" : "Out-of-frame Deletion im DMD-Gen (Exon 45) — fuehrt zu Duchenne",
+      "description" : "Out-of-frame Deletion im DMD-Gen (Exon 45) — führt zu Duchenne",
       "exampleBoolean" : true
     },
     {
@@ -3102,7 +3102,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
         "reference" : "StructureDefinition/mii-ex-seltene-register"
       },
       "name" : "MII EX SE Register",
-      "description" : "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.",
+      "description" : "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug läuft über ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.",
       "exampleBoolean" : false
     },
     {
@@ -3534,7 +3534,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
         "reference" : "ValueSet/mii-vs-seltene-clinical-diagnosis-category"
       },
       "name" : "MII VS SE Clinical Diagnosis Category (retired)",
-      "description" : "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code.",
+      "description" : "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehört in Condition.code.",
       "exampleBoolean" : false
     },
     {
@@ -4349,7 +4349,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
         "reference" : "ServiceRequest/mii-exa-seltene-studieneinschluss-anfrage"
       },
       "name" : "Studieneinschlussempfehlung",
-      "description" : "Empfehlung, den Patienten fuer eine Studie zu evaluieren",
+      "description" : "Empfehlung, den Patienten für eine Studie zu evaluieren",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage"
     },
     {

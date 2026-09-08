@@ -1111,7 +1111,7 @@
         <reference value="Consent/mii-exa-seltene-register-einwilligung"/>
       </reference>
       <name value="Beispiel Einwilligung zur Registerteilnahme"/>
-      <description value="Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusaetzliche Huerde."/>
+      <description value="Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusätzliche Huerde."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1330,7 +1330,7 @@
       <reference>
         <reference value="Observation/mii-exa-seltene-molgen-cftr-heterozygous-carrier"/>
       </reference>
-      <name value="CFTR F508del - heterozygoter Anlagetraeger"/>
+      <name value="CFTR F508del - heterozygoter Anlageträger"/>
       <description value="Nur eine CFTR-Mutation nachweisbar; schliesst Mukoviszidose aus"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -1386,7 +1386,7 @@
         <reference value="Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45"/>
       </reference>
       <name value="DMD Exon 45 Deletion - MolGen Variante"/>
-      <description value="Out-of-frame Deletion im DMD-Gen (Exon 45) — fuehrt zu Duchenne"/>
+      <description value="Out-of-frame Deletion im DMD-Gen (Exon 45) — führt zu Duchenne"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -2112,7 +2112,7 @@
         <reference value="StructureDefinition/mii-ex-seltene-register"/>
       </reference>
       <name value="MII EX SE Register"/>
-      <description value="Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt."/>
+      <description value="Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug läuft über ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2409,7 +2409,7 @@
         <reference value="ValueSet/mii-vs-seltene-clinical-diagnosis-category"/>
       </reference>
       <name value="MII VS SE Clinical Diagnosis Category (retired)"/>
-      <description value="RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code."/>
+      <description value="RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehört in Condition.code."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2969,7 +2969,7 @@
         <reference value="ServiceRequest/mii-exa-seltene-studieneinschluss-anfrage"/>
       </reference>
       <name value="Studieneinschlussempfehlung"/>
-      <description value="Empfehlung, den Patienten fuer eine Studie zu evaluieren"/>
+      <description value="Empfehlung, den Patienten für eine Studie zu evaluieren"/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage"/>
     </resource>
     <resource>
