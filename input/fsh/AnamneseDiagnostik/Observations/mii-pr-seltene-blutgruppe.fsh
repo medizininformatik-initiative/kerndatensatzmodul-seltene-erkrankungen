@@ -77,7 +77,11 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * valueCodeableConcept.coding[loinc] -> "koerperlicheUntersuchung.blutgruppe" "Blutgruppe (LOINC)"
 * valueCodeableConcept.coding[snomed] -> "koerperlicheUntersuchung.blutgruppe" "Blutgruppe (SNOMED CT)"
 * valueCodeableConcept.text -> "koerperlicheUntersuchung.blutgruppe" "Blutgruppe (Text)"
-* effectiveDateTime -> "Datum der Blutgruppenbestimmung" "Bestimmungsdatum"
+// Kein Gegenstueck im Datensatzmodell, und das ist Absicht: die Blutgruppe
+// ist konstant, das Bestimmungsdatum beschreibt die Untersuchung und nicht
+// den Patienten (Nutzerentscheid 2026-09-08). Das Feld bleibt im Profil —
+// FHIR verlangt es fuer eine Observation —, hat aber keinen Datenpunkt.
+* effectiveDateTime -> "Nicht im Datensatz" "Bestimmungsdatum; bewusst kein Datenpunkt des Modells"
 * subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
 * status -> "Status der Messung" "Beobachtungsstatus"
-* code -> "Art der Blutgruppenbestimmung" "882-1 für AB0+Rh oder 883-9 für nur AB0"
+* code -> "koerperlicheUntersuchung.blutgruppe" "Art der Blutgruppenbestimmung: 882-1 für AB0+Rh oder 883-9 für nur AB0"
