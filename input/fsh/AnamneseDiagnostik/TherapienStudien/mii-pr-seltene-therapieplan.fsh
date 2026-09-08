@@ -118,7 +118,7 @@ Instance: mii-exa-seltene-studieneinschluss-anfrage
 InstanceOf: MII_PR_Seltene_Studieneinschluss_Anfrage
 Usage: #example
 Title: "Studieneinschlussempfehlung"
-Description: "Empfehlung, den Patienten fuer eine Studie zu evaluieren"
+Description: "Empfehlung, den Patienten für eine Studie zu evaluieren"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage)
 * status = #active
 * intent = #proposal

@@ -64,7 +64,7 @@
 Extension:   MII_EX_Seltene_Register
 Id:          mii-ex-seltene-register
 Title:       "MII EX SE Register"
-Description: "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt."
+Description: "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug läuft über ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register"
 * insert PR_CS_VS_Version
 * insert Publisher
@@ -87,7 +87,7 @@ Description: "Teilnahme einer Person an einem Register für seltene Erkrankungen
 
 * extension contains MII_EX_Seltene_Register named register 0..1 MS
 * extension[register] ^short = "Katalogeintrag des Registers als Library (optional)"
-* extension[register] ^comment = "Optionaler Verweis auf den Library-Katalogeintrag nach mii-pr-studie-register. Der verbindliche Registerbezug laeuft ueber study, weil R4 das so erzwingt."
+* extension[register] ^comment = "Optionaler Verweis auf den Library-Katalogeintrag nach mii-pr-studie-register. Der verbindliche Registerbezug läuft über study, weil R4 das so erzwingt."
 
 * identifier 0..1 MS
 * identifier ^short = "Pseudonym der Person im Register"
@@ -106,11 +106,11 @@ Description: "Teilnahme einer Person an einem Register für seltene Erkrankungen
 
 * consent 0..1 MS
 * consent ^short = "Nur zu setzen, wenn die Einwilligung am dokumentierenden Standort tatsaechlich als Ressource vorliegt"
-* consent ^comment = "Eine Registeraufnahme beruht selbstverstaendlich auf einer Einwilligung — aber die liegt beim Registerbetreiber. Ein Standort, der die Teilnahme nur nachhaelt, kann sie nicht referenzieren. Die Angabe leer zu lassen bedeutet daher NICHT, dass keine Einwilligung existiert, sondern nur, dass sie hier nicht als FHIR-Ressource greifbar ist. Genau deshalb leitet dieses Profil nicht vom Probanden-Profil des Moduls Studie ab, das consent mit 1..1 fordert."
+* consent ^comment = "Eine Registeraufnahme beruht selbstverständlich auf einer Einwilligung — aber die liegt beim Registerbetreiber. Ein Standort, der die Teilnahme nur nachhält, kann sie nicht referenzieren. Die Angabe leer zu lassen bedeutet daher NICHT, dass keine Einwilligung existiert, sondern nur, dass sie hier nicht als FHIR-Ressource greifbar ist. Genau deshalb leitet dieses Profil nicht vom Probanden-Profil des Moduls Studie ab, das consent mit 1..1 fordert."
 
 * study 1..1 MS
 * study only Reference(ResearchStudy)
-* study ^short = "Das Register, als ResearchStudy gefuehrt"
+* study ^short = "Das Register, als ResearchStudy geführt"
 * study ^comment = "In R4 ist study 1..1 Pflicht und auf ResearchStudy festgelegt. Ein Register muss daher als ResearchStudy vorliegen; der Library-Katalogeintrag des Moduls Studie kann hier nicht stehen. Siehe Kopfkommentar."
 
 

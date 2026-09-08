@@ -80,13 +80,15 @@ Die Elemente des logischen Datenmodells werden wie folgt auf das FamilyMemberHis
 
 | Logisches Datenmodell | FHIR-Pfad | Erläuterung |
 |----------------------|-----------|-------------|
-| Familienanamnese.Verwandtschaftsverhaeltnis | FamilyMemberHistory.relationship | Biologisches Verwandtschaftsverhältnis zum Indexpatienten |
-| Familienanamnese.Geschlecht | FamilyMemberHistory.sex | Geschlecht des Familienmitglieds |
-| Familienanamnese.GleicheSE | FamilyMemberHistory.condition.code | Wenn Code identisch mit Indexpatient-Diagnose |
-| Familienanamnese.AndereSE | FamilyMemberHistory.condition.code | Wenn Code unterschiedlich zur Indexpatient-Diagnose |
-| Familienanamnese.Penetranz | FamilyMemberHistory.condition.extension:penetranz | Extension für fehlende klinische Penetranz trotz genetischer Diagnose bei Familienmitgliedern |
-| Familienanamnese.FamilienmitgliedVerstorben | FamilyMemberHistory.deceased[x] | Vitalstatus des Familienmitglieds |
-| Familienanamnese.TodDurchSE | FamilyMemberHistory.condition.contributedToDeath | Gibt an, ob die Erkrankung zum Tod beigetragen hat |
+| `familienanamnese.verwandtschaftsverhaeltnis` | FamilyMemberHistory.relationship | Biologisches Verwandtschaftsverhältnis zum Indexpatienten |
+| `familienanamnese.geschlecht` | FamilyMemberHistory.sex | Geschlecht des Familienmitglieds |
+| `familienanamnese.gleicheSE` | FamilyMemberHistory.condition.code | Wenn Code identisch mit Indexpatient-Diagnose |
+| `familienanamnese.andereSE` | FamilyMemberHistory.condition.code | Wenn Code unterschiedlich zur Indexpatient-Diagnose |
+| `familienanamnese.penetranz` | FamilyMemberHistory.condition.extension:penetranz | Extension für fehlende klinische Penetranz trotz genetischer Diagnose bei Familienmitgliedern |
+| `familienanamnese.familienmitgliedVerstorben` | FamilyMemberHistory.deceased[x] | Vitalstatus des Familienmitglieds |
+| `familienanamnese.todDurchSE` | FamilyMemberHistory.condition.contributedToDeath | Gibt an, ob die Erkrankung zum Tod beigetragen hat |
+| `familienanamnese.dokumentationsdatum` | FamilyMemberHistory.date | Datum der Erhebung beziehungsweise Dokumentation |
+| `familienanamnese.konsanguinitaetEltern` | Observation (`mii-pr-seltene-consanguinity`) | Blutsverwandtschaft der Eltern; eigenes Profil, nicht Teil der FamilyMemberHistory |
 
 ---
 

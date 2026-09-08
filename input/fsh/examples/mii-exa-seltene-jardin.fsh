@@ -174,7 +174,7 @@ Instance:    mii-exa-seltene-register-einwilligung
 InstanceOf:  Consent
 Usage:       #example
 Title:       "Beispiel Einwilligung zur Registerteilnahme"
-Description: "Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusaetzliche Huerde."
+Description: "Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusätzliche Huerde."
 * status = #active
 * scope = http://terminology.hl7.org/CodeSystem/consentscope#research
 * category = http://terminology.hl7.org/CodeSystem/consentcategorycodes#research

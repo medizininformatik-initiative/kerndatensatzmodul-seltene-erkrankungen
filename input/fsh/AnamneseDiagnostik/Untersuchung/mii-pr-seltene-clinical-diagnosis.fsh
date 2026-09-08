@@ -69,7 +69,7 @@ Description: "Profile for clinical diagnosis of rare diseases with HPO phenotype
 // legitime klinische Evidenz. Das Schwesterprofil GeneticDiagnosis erlaubt
 // beide Typen seit jeher. Eine Lockerung: bisher gueltige Instanzen bleiben es.
 * evidence.detail only Reference(Observation or DiagnosticReport)
-* evidence.detail ^comment = "Typischerweise HPO-kodierte Symptom-Observations; ein DiagnosticReport ist zulaessig, wenn der Beleg ein Befundbericht ist (etwa eine Biopsie)."
+* evidence.detail ^comment = "Typischerweise HPO-kodierte Symptom-Observations; ein DiagnosticReport ist zulässig, wenn der Beleg ein Befundbericht ist (etwa eine Biopsie)."
 
 // Stage assessment can reference HPO severity assessments
 * stage.assessment MS

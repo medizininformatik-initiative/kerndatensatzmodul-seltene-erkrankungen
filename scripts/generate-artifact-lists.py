@@ -54,8 +54,8 @@ INTRO = {
               "codes of an external terminology are listed here as well, because their "
               "canonical is owned by this module.",
         "de": "Das Modul definiert die folgenden ValueSets. Auch solche, die lediglich "
-              "Codes einer externen Terminologie buendeln, stehen hier &mdash; ihr "
-              "Canonical gehoert diesem Modul.",
+              "Codes einer externen Terminologie bündeln, stehen hier &mdash; ihr "
+              "Canonical gehört diesem Modul.",
     },
     "code-systems": {
         "en": "Beyond the external terminologies described above, the module defines the "
@@ -63,14 +63,14 @@ INTRO = {
               "terminology carries the concept.",
         "de": "Neben den oben beschriebenen externen Terminologien definiert das Modul die "
               "folgenden eigenen CodeSystems. Sie bestehen dort, wo keine publizierte "
-              "Terminologie das Konzept fuehrt.",
+              "Terminologie das Konzept führt.",
     },
 }
 
 RETIRED_NOTE = {
     "en": "**Retired.** The following artefacts remain resolvable but must no longer be "
           "used in new implementations:",
-    "de": "**Zurueckgezogen.** Die folgenden Artefakte bleiben aufloesbar, sollen in neuen "
+    "de": "**Zurückgezogen.** Die folgenden Artefakte bleiben auflösbar, sollen in neuen "
           "Implementierungen aber nicht mehr verwendet werden:",
 }
 

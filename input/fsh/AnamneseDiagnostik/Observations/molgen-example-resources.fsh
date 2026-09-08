@@ -195,7 +195,7 @@ Instance: mii-exa-seltene-molgen-variant-dmd-deletion-exon45
 InstanceOf: Observation
 Usage: #example
 Title: "DMD Exon 45 Deletion - MolGen Variante"
-Description: "Out-of-frame Deletion im DMD-Gen (Exon 45) — fuehrt zu Duchenne"
+Description: "Out-of-frame Deletion im DMD-Gen (Exon 45) — führt zu Duchenne"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * code = $LNC#69548-6 "Genetic variant assessment"

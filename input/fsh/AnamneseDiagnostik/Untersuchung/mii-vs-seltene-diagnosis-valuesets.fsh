@@ -15,7 +15,7 @@
 ValueSet: MII_VS_Seltene_ClinicalDiagnosisCategory
 Id: mii-vs-seltene-clinical-diagnosis-category
 Title: "MII VS SE Clinical Diagnosis Category (retired)"
-Description: "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code."
+Description: "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehört in Condition.code."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category"
 * insert PR_CS_VS_Version
 * insert Publisher
