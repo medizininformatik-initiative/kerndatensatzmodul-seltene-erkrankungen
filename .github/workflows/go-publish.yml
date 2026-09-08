@@ -76,7 +76,7 @@ on:
       release_ref:
         description: "Immutable release tag to publish"
         required: true
-        default: "v{{CALVER_VERSION}}"
+        default: "v2027.0.0-ballot.rc1"
         type: string
       publication_date:
         description: "Publication date (YYYY-MM-DD, must match sushi-config.yaml); blank uses the tagged commit date"
@@ -99,11 +99,15 @@ concurrency:
 env:
   # The module's FHIR canonical (MII convention — for example,
   # kerndatensatz-basis uses .../fhir/modul-base).
-  EXPECTED_CANONICAL: "https://www.medizininformatik-initiative.de/fhir/modul-{{MODULE_SLUG}}"
+  # Aus sushi-config.yaml uebernommen, NICHT aus der Vorlage abgeleitet: die
+  # Vorlage schreibt .../fhir/modul-<slug>, unser Canonical traegt aber ext/.
+  # Blosses Ersetzen des Platzhalters haette hier still den falschen Wert
+  # gesetzt und den Vergleich gegen sushi-config.yaml scheitern lassen.
+  EXPECTED_CANONICAL: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene"
   # The publication website: GitHub Pages under the creating org. Deliberately
   # different from the canonical ("canonical-mismatch").
-  EXPECTED_PUBLICATION_BASE: "https://{{GITHUB_ORG}}.github.io/{{REPO_NAME}}"
-  EXPECTED_PACKAGE_ID: "de.medizininformatikinitiative.kerndatensatz.{{MODULE_SLUG}}"
+  EXPECTED_PUBLICATION_BASE: "https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen"
+  EXPECTED_PACKAGE_ID: "de.medizininformatikinitiative.kerndatensatz.seltene"
   # Pinned toolchain (bumped by the scheduled dependency check, never floating).
   # Must stay identical to ig-publisher.yml and module-release.yml —
   # scripts/toolchain-pins.test.mjs fails the build if they drift apart.
