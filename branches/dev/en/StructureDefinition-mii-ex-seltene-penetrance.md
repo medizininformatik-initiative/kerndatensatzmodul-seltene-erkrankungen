@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-07 | *Computable Name*:MII_EX_Seltene_Penetrance |
+| Active as of 2026-09-08 | *Computable Name*:MII_EX_Seltene_Penetrance |
 
 Extension to capture the penetrance of genetic variants associated with a rare disease
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-pe
   "name" : "MII_EX_Seltene_Penetrance",
   "title" : "MII EX SE Penetrance",
   "status" : "active",
-  "date" : "2026-09-07T16:06:13+00:00",
+  "date" : "2026-09-08T09:14:37+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

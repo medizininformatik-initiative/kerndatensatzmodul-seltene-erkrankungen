@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-07 | *Maschinenlesbarer Name*:MII_LM_Seltene |
+| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_LM_Seltene |
 
  
 MII LogicalModel Modul Seltene Erkraknungen 
@@ -85,7 +85,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
   "name" : "MII_LM_Seltene",
   "title" : "MII LM SE",
   "status" : "active",
-  "date" : "2026-09-07T16:06:13+00:00",
+  "date" : "2026-09-08T09:14:37+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

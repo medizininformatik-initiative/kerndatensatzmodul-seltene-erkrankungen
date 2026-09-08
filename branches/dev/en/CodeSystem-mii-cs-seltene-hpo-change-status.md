@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-07 | *Computable Name*:MII_CS_Seltene_HPO_ChangeStatus |
+| Active as of 2026-09-08 | *Computable Name*:MII_CS_Seltene_HPO_ChangeStatus |
 
  
 CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit. Eigene Codes des Moduls: HPO führt für diesen Zweck nichts. Sein Zweig Clinical course (HP:0031797) beschreibt den Verlauf der Krankheit — Onset, Pace of progression, Temporal pattern, Disease remission —, nicht die Veränderung eines einzelnen Phänotyps zwischen zwei Erhebungen. Vier der fünf Konzepte haben SNOMED-CT-Entsprechungen, die je Code unten angegeben sind; für newly-added führt SNOMED kein generisches Konzept. 
@@ -37,7 +37,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Seltene Erkrankungen HPO Change Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-07T16:06:13+00:00",
+  "date" : "2026-09-08T09:14:37+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

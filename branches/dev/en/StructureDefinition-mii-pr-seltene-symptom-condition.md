@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-07 | *Computable Name*:MII_PR_Seltene_Symptom_Condition |
+| Active as of 2026-09-08 | *Computable Name*:MII_PR_Seltene_Symptom_Condition |
 
  
 Profile for symptom-based conditions in the context of rare diseases. This profile captures symptomatic conditions with temporal characteristics, complementing the HPO Assessment Observation profile. 
@@ -113,7 +113,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-sy
   "name" : "MII_PR_Seltene_Symptom_Condition",
   "title" : "MII Profile SE Symptom Condition",
   "status" : "active",
-  "date" : "2026-09-07T16:06:13+00:00",
+  "date" : "2026-09-08T09:14:37+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

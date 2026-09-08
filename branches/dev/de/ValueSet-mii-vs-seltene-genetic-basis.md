@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-genetic-basis | *Version*:2027.0.0-ballot.rc1 |
-| Retired Stand: 2026-09-07 | *Maschinenlesbarer Name*:MII_VS_Seltene_GeneticBasis |
+| Retired Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_VS_Seltene_GeneticBasis |
 
  
 RETIRED. Nicht verwenden. Acht der neun enthaltenen SNOMED-Codes bezeichnen etwas anderes als ihr Display behauptet oder existieren nicht; das ValueSet muss neu erstellt werden. 
@@ -43,7 +43,7 @@ Expansions are not generated for retired value sets
   "name" : "MII_VS_Seltene_GeneticBasis",
   "title" : "MII VS SE Genetic Basis (retired)",
   "status" : "retired",
-  "date" : "2026-09-07T16:06:13+00:00",
+  "date" : "2026-09-08T09:14:37+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

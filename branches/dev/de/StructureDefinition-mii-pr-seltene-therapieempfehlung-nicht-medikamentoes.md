@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-07 | *Maschinenlesbarer Name*:MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes |
+| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes |
 
  
 Therapieempfehlung für nicht-medikamentöse Interventionen bei seltenen Erkrankungen (z.B. Ernährungstherapie, Gentherapie, Prophylaxe, Früherkennung) 
@@ -187,7 +187,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes",
   "title" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
   "status" : "active",
-  "date" : "2026-09-07T16:06:13+00:00",
+  "date" : "2026-09-08T09:14:37+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
