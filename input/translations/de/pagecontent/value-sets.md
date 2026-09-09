@@ -26,7 +26,7 @@ vollständig).
 
 <!-- BEGIN GENERATED: artifact-list (scripts/generate-artifact-lists.py) -->
 
-Das Modul definiert die folgenden ValueSets. Auch solche, die lediglich Codes einer externen Terminologie buendeln, stehen hier &mdash; ihr Canonical gehoert diesem Modul.
+Das Modul definiert die folgenden ValueSets. Auch solche, die lediglich Codes einer externen Terminologie bündeln, stehen hier &mdash; ihr Canonical gehört diesem Modul.
 
 | Titel | Id | Zweck |
 |---|---|---|
@@ -58,11 +58,11 @@ Das Modul definiert die folgenden ValueSets. Auch solche, die lediglich Codes ei
 | MII VS SE Therapieempfehlung Typ | [`mii-vs-seltene-therapieempfehlung-typ`](ValueSet-mii-vs-seltene-therapieempfehlung-typ.html) | ValueSet für Therapietypen (kausal/symptomatisch) bei seltenen Erkrankungen (Modellvorhaben GenomSeq) |
 | Von SE betroffen Value Set | [`mii-vs-seltene-von-se-betroffen`](ValueSet-mii-vs-seltene-von-se-betroffen.html) | ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Verwendet SNOMED CT codes für internationale Interoperabilität. |
 
-**Zurueckgezogen.** Die folgenden Artefakte bleiben aufloesbar, sollen in neuen Implementierungen aber nicht mehr verwendet werden:
+**Zurückgezogen.** Die folgenden Artefakte bleiben auflösbar, sollen in neuen Implementierungen aber nicht mehr verwendet werden:
 
 | Titel | Id | Zweck |
 |---|---|---|
-| MII VS SE Clinical Diagnosis Category (retired) | [`mii-vs-seltene-clinical-diagnosis-category`](ValueSet-mii-vs-seltene-clinical-diagnosis-category.html) | RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code. |
+| MII VS SE Clinical Diagnosis Category (retired) | [`mii-vs-seltene-clinical-diagnosis-category`](ValueSet-mii-vs-seltene-clinical-diagnosis-category.html) | RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehört in Condition.code. |
 | MII VS SE Genetic Basis (retired) | [`mii-vs-seltene-genetic-basis`](ValueSet-mii-vs-seltene-genetic-basis.html) | RETIRED. Nicht verwenden. Acht der neun enthaltenen SNOMED-Codes bezeichnen etwas anderes als ihr Display behauptet oder existieren nicht; das ValueSet muss neu erstellt werden. |
 
 <!-- END GENERATED: artifact-list -->

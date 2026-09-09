@@ -47,6 +47,16 @@
       {
         "id": "FamilyMemberHistory.extension",
         "path": "FamilyMemberHistory.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "min": 1
       },
       {
@@ -210,6 +220,20 @@
             "comment": "Grund/Erkrankung des Familienmitglieds"
           }
         ]
+      },
+      {
+        "id": "FamilyMemberHistory.condition.extension",
+        "path": "FamilyMemberHistory.condition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
       },
       {
         "id": "FamilyMemberHistory.condition.extension:penetrance",

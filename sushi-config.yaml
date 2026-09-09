@@ -47,7 +47,7 @@ license: CC-BY-4.0
 # Nicht zu verwechseln mit approvalDate weiter unten: das steht auf 2026-09-02
 # und bezeichnet den Tag, an dem der Inhalt freigegeben wurde, nicht den Tag der
 # Veroeffentlichung. Beide duerfen auseinanderliegen und tun es hier.
-date: "2026-09-07" # Nutzerentscheid 2026-09-07: rc1 wird heute publiziert
+date: "2026-09-09" # Publikationstag des rc1; am 2026-09-07 gesetzt, nachgezogen als sich der Tag verschob
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # package.json nutzt m49#276 (ebenfalls DE) — Template-Idiom übernommen
 publisher:
   name: Medizininformatik Initiative
@@ -156,16 +156,35 @@ dependencies:
   # Getestet 2026-09-02: SUSHI 0 Errors / 0 Warnings, Ressourcenzahlen
   # unveraendert (meta 173, base 36), es fehlt also nichts.
   # Zweiter Schritt 2026-09-02: studie -> 2027.0.0-ballot.rc1, basisprofil -> 1.6.0.
-  # NICHT mitgezogen: icu bietet zwar ein 2027.0.0 an, aber ohne Herausgeber-Signal —
-  # die package.json traegt weder Datum noch Titel, und dist-tags.latest steht auf
-  # 2026.0.2, also nicht einmal auf dem neuesten 2026er Stand. molgen und medikation
-  # haben noch keine 2027er Linie, sie folgen laut Modulverantwortlichem in Kuerze.
+  # Dritter Schritt 2026-09-09: molgen -> 2027.0.0-ballot.rc2. Der RC erschien am
+  # 2026-09-08 und traegt anders als frueher ein Herausgeber-Signal — date und
+  # title stehen in der package.json. Geprueft: keine Ressource entfallen, eine
+  # dazugekommen (die IG-Ressource selbst), alle sechs von uns aliasierten
+  # Canonicals unveraendert vorhanden, SUSHI 0/0.
+  #
+  # Vierter Schritt 2026-09-09: icu -> 2027.0.0-ballot.rc2 (Nutzerentscheid).
+  # Das fehlende Herausgeber-Signal besteht fort — die package.json traegt weder
+  # date noch title noch status, und dist-tags.latest steht weiterhin auf
+  # 2026.0.2, also aelter als der bisherige Pin 2026.0.3. Der Umstieg erfolgt
+  # bewusst trotzdem, damit die 2027er Linie geschlossen ist.
+  #
+  # Geprueft: mii-pr-icu-muv-kopfumfang, das EINZIGE hier verwendete Artefakt
+  # (Parent von mii-pr-seltene-kopfumfang), ist in rc2 vorhanden und aktiv.
+  # 119 -> 123 Canonicals, fuenf neu, eines entfallen: das ICU-Logical-Model
+  # mii-lm-icu-logicalmodel ist in rc2 ersatzlos gestrichen. Fuer dieses Modul
+  # folgenlos, da nicht verwendet. SUSHI 0/0.
+  #
+  # medikation hat weiterhin keine 2027er Linie (latest 2026.0.1 = unser Pin).
+  #
+  # laborbefund fuehrt inzwischen 2027.0.0-ballot.rc4, ist aber KEINE
+  # Abhaengigkeit dieses Moduls — siehe die Festlegung auf profiles.html:
+  # kuenftige Laborparameter erben von dort, dann ist der Pin nachzutragen.
   # war 2026.0.0
   de.medizininformatikinitiative.kerndatensatz.meta: 2027.0.0-ballot.rc3
   # Quelle: 2026.0.x
-  de.medizininformatikinitiative.kerndatensatz.molgen: 2026.0.4
+  de.medizininformatikinitiative.kerndatensatz.molgen: 2027.0.0-ballot.rc2
   # Quelle: 2026.0.x
-  de.medizininformatikinitiative.kerndatensatz.icu: 2026.0.3
+  de.medizininformatikinitiative.kerndatensatz.icu: 2027.0.0-ballot.rc2
   # war 2026.0.2
   de.medizininformatikinitiative.kerndatensatz.studie: 2027.0.0-ballot.rc1
   # war 2026.0.1

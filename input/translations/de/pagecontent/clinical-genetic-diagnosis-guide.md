@@ -27,7 +27,7 @@ Die klinische Diagnose wird verwendet, wenn:
   solange die genetische Bestätigung aussteht
 - **Kategorie**: `category` ist Pflicht (1..*), der Wert bleibt frei. Er beschreibt die
   Rolle im Record (`problem-list-item` oder `encounter-diagnosis`), nicht die Art der
-  Erkrankung — eine modulweite Bindung an Krankheitsarten waere hier fachlich falsch.
+  Erkrankung — eine modulweite Bindung an Krankheitsarten wäre hier fachlich falsch.
 
 ### Strukturvergleich
 

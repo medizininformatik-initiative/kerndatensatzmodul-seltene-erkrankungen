@@ -110,8 +110,8 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Art der Blutgruppenbestimmung",
-            "comment": "882-1 für AB0+Rh oder 883-9 für nur AB0"
+            "map": "koerperlicheUntersuchung.blutgruppe",
+            "comment": "Art der Blutgruppenbestimmung: 882-1 für AB0+Rh oder 883-9 für nur AB0"
           }
         ]
       },
@@ -216,8 +216,8 @@
         "mapping": [
           {
             "identity": "SE-LogicalModel",
-            "map": "Datum der Blutgruppenbestimmung",
-            "comment": "Bestimmungsdatum"
+            "map": "Nicht im Datensatz",
+            "comment": "Bestimmungsdatum; bewusst kein Datenpunkt des Modells"
           }
         ]
       },

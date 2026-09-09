@@ -146,7 +146,7 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * onsetPeriod.end -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom" "Ende Symptomzeitraum"
 * onsetAge -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.alterSymptom" "Alter bei Symptombeginn"
 * onsetString -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase" "Lebensphase Symptom"
-* abatementDateTime -> "Ende des Symptoms" "Enddatum des Symptoms"
+* abatementDateTime -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom" "Enddatum des Symptoms"
 * evidence.code -> "anamneseUndDiagnostik.phaenotypisierung.hpoTerm" "Unterstützende HPO-Symptome"
 * evidence.detail -> "anamneseUndDiagnostik.phaenotypisierung" "Verweis auf Beobachtungen"
 * subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"

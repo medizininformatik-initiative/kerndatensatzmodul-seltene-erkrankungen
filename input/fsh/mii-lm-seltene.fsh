@@ -75,6 +75,13 @@ Description: "MII LogicalModel Modul Seltene Erkraknungen"
   * hueftumfang 0..* BackboneElement "Hüftumfang"
     * hueftumfang 0..1 decimal "Hüftumfang in cm" "Hüftumfang des SE-Patienten in cm."
     * datumHueftumfang 0..1 dateTime "Datum Hüftumfang" "Datum der Hüftumfangsmessung."
+  // BEWUSST OHNE Datumsfeld (Nutzerentscheid 2026-09-08). Alle anderen
+  // Messbefunde dieser Gruppe fuehren ihr datumX — Koerpergewicht,
+  // Koerpergroesse, BMI, Kopf-, Taillen- und Hueftumfang. Die Blutgruppe
+  // nicht, weil sie konstant ist: das Datum der Bestimmung ist eine Angabe
+  // ueber die Untersuchung, nicht ueber den Patienten, und fuer die
+  // Auswertung ohne Belang. Die Asymmetrie ist also Absicht und keine
+  // Luecke — bitte nicht "nachziehen".
   * blutgruppe 0..1 code "Blutgruppe" "Blutgruppe des SE-Patienten (AB0 und Rhesusfaktor)."
 * persoenlicheInfosIndexpatient 0..* BackboneElement "Persönliche Informationen des Indexpatienten"
   * tod 0..1 BackboneElement "Tod"

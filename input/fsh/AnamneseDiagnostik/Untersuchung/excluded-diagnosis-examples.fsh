@@ -300,7 +300,7 @@ Description: "Muskelbiopsie ohne Hinweis auf mitochondriale Pathologie"
 Instance: mii-exa-seltene-molgen-cftr-heterozygous-carrier
 InstanceOf: Observation
 Usage: #example
-Title: "CFTR F508del - heterozygoter Anlagetraeger"
+Title: "CFTR F508del - heterozygoter Anlageträger"
 Description: "Nur eine CFTR-Mutation nachweisbar; schliesst Mukoviszidose aus"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory

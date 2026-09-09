@@ -105,3 +105,11 @@ jobs:
       # every branch and in every module created from this template.
       - name: Check the language model (English default, German translation)
         run: bash scripts/language-model-check.sh
+
+      # Ergaenzt 2026-09-07: Der erste go-publish-Trockenlauf scheiterte daran,
+      # dass go-publish.yml selbst noch vier unersetzte Vorlagen-Platzhalter
+      # trug. Der guard von module-release.yml prueft nur sushi-config.yaml; die
+      # Workflows pruefte niemand — und ihr Fehler zeigt sich erst beim
+      # Publizieren.
+      - name: Check the workflows for unreplaced template placeholders
+        run: bash scripts/workflow-placeholder-check.sh
