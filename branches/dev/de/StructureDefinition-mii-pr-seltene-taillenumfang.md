@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-taillenumfang | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_PR_Seltene_Taillenumfang |
+| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_PR_Seltene_Taillenumfang |
 
  
 Profil zur Dokumentation des Taillenumfangs (Bauchumfang auf Nabelhöhe) eines Patienten. Relevant für seltene Erkrankungen mit metabolischen Komponenten oder Skelettdysplasien. 
@@ -110,7 +110,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Taillenumfang",
   "title" : "MII PR SE Taillenumfang",
   "status" : "active",
-  "date" : "2026-09-08T15:03:47+00:00",
+  "date" : "2026-09-09T09:29:55+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

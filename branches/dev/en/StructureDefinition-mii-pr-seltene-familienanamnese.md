@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-08 | *Computable Name*:MII_PR_Seltene_Familienanamnese |
+| Active as of 2026-09-09 | *Computable Name*:MII_PR_Seltene_Familienanamnese |
 
  
 
@@ -149,7 +149,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
   "name" : "MII_PR_Seltene_Familienanamnese",
   "title" : "MII PR SE Familienanamnese",
   "status" : "active",
-  "date" : "2026-09-08T15:03:47+00:00",
+  "date" : "2026-09-09T09:29:55+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -188,6 +188,21 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
   {
     "identity" : "MII-KDS",
     "name" : "MII KDS Mapping"
+  },
+  {
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
   }],
   "kind" : "resource",
   "abstract" : false,
@@ -207,6 +222,14 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
     {
       "id" : "FamilyMemberHistory.extension",
       "path" : "FamilyMemberHistory.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      },
       "min" : 1
     },
     {
@@ -340,6 +363,18 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
         "map" : "familienanamnese.andereSE",
         "comment" : "Grund/Erkrankung des Familienmitglieds"
       }]
+    },
+    {
+      "id" : "FamilyMemberHistory.condition.extension",
+      "path" : "FamilyMemberHistory.condition.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
     },
     {
       "id" : "FamilyMemberHistory.condition.extension:penetrance",

@@ -43,6 +43,14 @@ This IG contains the following dependencies on other IGs.
 
 
 
+
+
+
+
+
+
+
+
 > **Where the versions come from.** Every package in the table is pinned directly in [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/sushi-config.yaml) (`dependencies:`) — including `hl7.terminology.r4` (THO) and `hl7.fhir.uv.extensions.r4`, and those two deliberately so: the IG Publisher's [automatic-packages rule](https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages) consults only this guide's **own** dependency list, so without a direct pin every build would silently inject the latest THO/extensions release — a version pinned by the MII meta package alone cannot control the build (verified in the publisher source at the pinned release). A weekly check warns when these two pins drift from what the pinned meta package ships, and the exact versions a concrete build used are recorded in its `qa-versions.json` output.
 
 ### Global Profiles
@@ -57,13 +65,13 @@ This publication includes IP covered under the following statements.
 
 * BfArM - Bundesinstitut für Arzneimittel und Medizinprodukte
 
-* [ATC](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/atc): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MedicationRequest/mii-exa-seltene-therapieempfehlung-losartan-marfan](MedicationRequest-mii-exa-seltene-therapieempfehlung-losartan-marfan.md) and [MedicationStatement/mii-exa-seltene-medication-losartan](MedicationStatement-mii-exa-seltene-medication-losartan.md)
+* [ATC](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2026.0.3&canonical=http://fhir.de/CodeSystem/bfarm/atc): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MedicationRequest/mii-exa-seltene-therapieempfehlung-losartan-marfan](MedicationRequest-mii-exa-seltene-therapieempfehlung-losartan-marfan.md) and [MedicationStatement/mii-exa-seltene-medication-losartan](MedicationStatement-mii-exa-seltene-medication-losartan.md)
 
 
 * BfArM 1994 - 2024 - Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM)
 
-* [Alpha-ID](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/alpha-id): [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md) and [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md)
-* [OPS](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/ops): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md), [Procedure/mii-exa-seltene-procedure-aortic-planned](Procedure-mii-exa-seltene-procedure-aortic-planned.md), [Procedure/mii-exa-seltene-procedure-cataract-surgery](Procedure-mii-exa-seltene-procedure-cataract-surgery.md) and [ServiceRequest/mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan](ServiceRequest-mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan.md)
+* [Alpha-ID](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2026.0.3&canonical=http://fhir.de/CodeSystem/bfarm/alpha-id): [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md) and [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md)
+* [OPS](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2026.0.3&canonical=http://fhir.de/CodeSystem/bfarm/ops): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md), [Procedure/mii-exa-seltene-procedure-aortic-planned](Procedure-mii-exa-seltene-procedure-aortic-planned.md), [Procedure/mii-exa-seltene-procedure-cataract-surgery](Procedure-mii-exa-seltene-procedure-cataract-surgery.md) and [ServiceRequest/mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan](ServiceRequest-mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan.md)
 
 
 * Copyrights permitted under terms specified by [Creative Commons Attribution 4.0 International (CC BY 4.0) ](https://creativecommons.org/licenses/by/4.0/legalcode) .Consistent with the terms of CC BY 4.0, HL7 is permitted to share, copy and redistribute the material in any medium or format and adapt, remix, transform, and build upon the material for its purposes as long as the CC BY 4.0 license terms are upheld. HL7 must must give appropriate credit, provide a link to the license, and indicate if changes were made. HL7 may do so in any reasonable manner, but not in any way that suggests the licensor endorses HL7 or it's use. And HL7 may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
@@ -73,7 +81,7 @@ This publication includes IP covered under the following statements.
 
 * IFA GmbH
 
-* [PZN](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/ifa/pzn): [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md)
+* [PZN](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2026.0.3&canonical=http://fhir.de/CodeSystem/ifa/pzn): [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md)
 
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
@@ -141,7 +149,7 @@ This publication includes IP covered under the following statements.
 
 * WHO, BfArM 1994 - 2024 - Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM)
 
-* [ICD-10-GM](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/icd-10-gm): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 11 more, [Condition/mii-exa-seltene-condition-cataract](Condition-mii-exa-seltene-condition-cataract.md), [Condition/mii-exa-seltene-condition-marfan-suspected](Condition-mii-exa-seltene-condition-marfan-suspected.md), [Condition/mii-exa-seltene-condition-sma-clinical](Condition-mii-exa-seltene-condition-sma-clinical.md), [Condition/mii-exa-seltene-example-eds-excluded-clinical](Condition-mii-exa-seltene-example-eds-excluded-clinical.md), [Condition/mii-exa-seltene-example-metabolic-myopathy-excluded](Condition-mii-exa-seltene-example-metabolic-myopathy-excluded.md), [Condition/mii-exa-seltene-example-noonan-clinical-diagnosis](Condition-mii-exa-seltene-example-noonan-clinical-diagnosis.md), [FamilyMemberHistory/mii-exa-seltene-familienanamnese](FamilyMemberHistory-mii-exa-seltene-familienanamnese.md), [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md), [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md) and [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md)
+* [ICD-10-GM](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2026.0.3&canonical=http://fhir.de/CodeSystem/bfarm/icd-10-gm): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 11 more, [Condition/mii-exa-seltene-condition-cataract](Condition-mii-exa-seltene-condition-cataract.md), [Condition/mii-exa-seltene-condition-marfan-suspected](Condition-mii-exa-seltene-condition-marfan-suspected.md), [Condition/mii-exa-seltene-condition-sma-clinical](Condition-mii-exa-seltene-condition-sma-clinical.md), [Condition/mii-exa-seltene-example-eds-excluded-clinical](Condition-mii-exa-seltene-example-eds-excluded-clinical.md), [Condition/mii-exa-seltene-example-metabolic-myopathy-excluded](Condition-mii-exa-seltene-example-metabolic-myopathy-excluded.md), [Condition/mii-exa-seltene-example-noonan-clinical-diagnosis](Condition-mii-exa-seltene-example-noonan-clinical-diagnosis.md), [FamilyMemberHistory/mii-exa-seltene-familienanamnese](FamilyMemberHistory-mii-exa-seltene-familienanamnese.md), [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md), [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md) and [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md)
 
 
 ### IG Parameter Settings and Expansion Parameters
@@ -356,9 +364,9 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_molgen",
-    "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.molgen/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.molgen",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.molgen",
-    "version" : "2026.0.4"
+    "version" : "2027.0.0-ballot.rc2"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_icu",

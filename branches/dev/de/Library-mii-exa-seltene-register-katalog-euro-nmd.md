@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Library/mii-exa-seltene-register-katalog-euro-nmd | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:ERNEuroNMDRegistry |
+| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:ERNEuroNMDRegistry |
 | *Weitere Identifikatoren:*https://ern-euro-nmd.eu/fhir/sid/registry#EURO-NMD-REG | |
 
 -------
@@ -18,7 +18,7 @@
 
 -------
 
-**Exception parsing generated Narrative (see /tmp/liquid-a7252816-2ddb-4065-9554-643d21510cc9.html): unexpected non-end of element null::a at line 135 column 50**
+**Exception parsing generated Narrative (see /tmp/liquid-cb8c263c-df55-4a26-9a48-e5b957732896.html): unexpected non-end of element null::a at line 135 column 50**
 
 
 
@@ -43,7 +43,7 @@
       "code" : "asset-collection"
     }]
   },
-  "date" : "2026-09-08T15:03:47+00:00",
+  "date" : "2026-09-09T09:29:55+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

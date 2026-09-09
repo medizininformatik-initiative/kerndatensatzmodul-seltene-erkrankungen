@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_VS_Seltene_TherapieempfehlungStrategie |
+| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_VS_Seltene_TherapieempfehlungStrategie |
 
  
 ValueSet für Strategietypen von Therapieempfehlungen bei seltenen Erkrankungen (Modellvorhaben GenomSeq) 
@@ -41,7 +41,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "MII_VS_Seltene_TherapieempfehlungStrategie",
   "title" : "MII VS SE Therapieempfehlung Strategie",
   "status" : "active",
-  "date" : "2026-09-08T15:03:47+00:00",
+  "date" : "2026-09-09T09:29:55+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

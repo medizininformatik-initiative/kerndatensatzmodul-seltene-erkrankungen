@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_PR_Seltene_Familienanamnese |
+| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_PR_Seltene_Familienanamnese |
 
  
 
@@ -142,13 +142,13 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese) 
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.rc2/StructureDefinition-mii-pr-molgen-familienanamnese.html) 
 
 #### Terminology Bindings
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese) 
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.rc2/StructureDefinition-mii-pr-molgen-familienanamnese.html) 
 
 ** Summary **
 
@@ -177,7 +177,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese) 
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.rc2/StructureDefinition-mii-pr-molgen-familienanamnese.html) 
 
  **Snapshot-AnsichtView** 
 
@@ -185,7 +185,7 @@ Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://simpl
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese) 
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.rc2/StructureDefinition-mii-pr-molgen-familienanamnese.html) 
 
 ** Summary **
 
@@ -223,7 +223,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Familienanamnese",
   "title" : "MII PR SE Familienanamnese",
   "status" : "active",
-  "date" : "2026-09-08T15:03:47+00:00",
+  "date" : "2026-09-09T09:29:55+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -262,6 +262,21 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   {
     "identity" : "MII-KDS",
     "name" : "MII KDS Mapping"
+  },
+  {
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
   }],
   "kind" : "resource",
   "abstract" : false,
@@ -281,6 +296,14 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     {
       "id" : "FamilyMemberHistory.extension",
       "path" : "FamilyMemberHistory.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      },
       "min" : 1
     },
     {
@@ -414,6 +437,18 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
         "map" : "familienanamnese.andereSE",
         "comment" : "Grund/Erkrankung des Familienmitglieds"
       }]
+    },
+    {
+      "id" : "FamilyMemberHistory.condition.extension",
+      "path" : "FamilyMemberHistory.condition.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
     },
     {
       "id" : "FamilyMemberHistory.condition.extension:penetrance",
