@@ -679,7 +679,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang|2026.0.3"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-canonical-version",
@@ -951,7 +951,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "http://ig.fhir.de/igs/medication/StructureDefinition/DosageDE|1.0.0"
+    "valueCanonical" : "http://ig.fhir.de/igs/medication/StructureDefinition/DosageDE|1.0.7"
   },
   {
     "name" : "default-valueset-version",
@@ -959,7 +959,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "http://ig.fhir.de/igs/medication/StructureDefinition/TimingDE|1.0.0"
+    "valueCanonical" : "http://ig.fhir.de/igs/medication/StructureDefinition/TimingDE|1.0.7"
   },
   {
     "name" : "default-canonical-version",
@@ -995,7 +995,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "http://ig.fhir.de/igs/medication/ValueSet/DosageDoseQuantityDE|1.0.0"
+    "valueCanonical" : "http://ig.fhir.de/igs/medication/ValueSet/DosageDoseQuantityDE|1.0.7"
   },
   {
     "name" : "default-canonical-version",

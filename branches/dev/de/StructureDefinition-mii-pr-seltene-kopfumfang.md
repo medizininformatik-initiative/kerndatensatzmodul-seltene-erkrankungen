@@ -55,13 +55,13 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang) 
+Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang) 
 
 #### Terminology Bindings
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang) 
+Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang) 
 
 ** Summary **
 
@@ -73,7 +73,7 @@ Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang) 
+Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang) 
 
  **Snapshot-AnsichtView** 
 
@@ -81,7 +81,7 @@ Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang) 
+Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang) 
 
 ** Summary **
 
@@ -102,7 +102,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Kopfumfang",
   "title" : "MII PR SE Kopfumfang",
   "status" : "active",
-  "date" : "2026-09-09T09:29:55+00:00",
+  "date" : "2026-09-09T10:02:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
