@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-seltene-example-cf-genetic"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Condition mii-exa-seltene-example-cf-genetic</b></p><a name="mii-exa-seltene-example-cf-genetic"> </a><a name="hcmii-exa-seltene-example-cf-genetic"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-genetic-diagnosis.html">MII PR SE Genetic Diagnosis</a> version: 2027.0.0-ballot.rc1</p></div><p><b>Condition Asserted Date</b>: 2024-08-25</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 782964007}">Genetic disease</span></p><p><b>code</b>: <span title="Codes:{http://omim.org 219700}, {http://snomed.info/sct 190905008}, {http://www.orpha.net 586}">Cystic fibrosis</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient.html">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>recordedDate</b>: 2024-08-25</p><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 106221001}">Genetic finding</span></p><p><b>detail</b>: <a href="Observation-mii-exa-seltene-molgen-variant-cftr-f508del-homozygous.html">Observation Genetic variant assessment</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 405824009}">Genetic test</span></p><p><b>detail</b>: <a href="DiagnosticReport-mii-exa-seltene-molgen-cf-diagnostic.html">Diagnostic Report for 'Genetic analysis report' for '-&gt;Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)'</a></p></blockquote><p><b>note</b>: </p><blockquote><div><p>Homozygot für F508del (c.1521_1523delCTT) im CFTR-Gen. Schwerer Phänotyp zu erwarten.</p>
+</div></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+    <valueDateTime value="2024-08-25"/>
+  </extension>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="782964007"/>
+      <display value="Genetic disease"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://omim.org"/>
+      <version value="2024"/>
+      <code value="219700"/>
+      <display value="Cystic fibrosis"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="190905008"/>
+      <display value="Cystic fibrosis"/>
+    </coding>
+    <coding>
+      <system value="http://www.orpha.net"/>
+      <code value="586"/>
+      <display value="Cystic fibrosis"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-seltene-patient"/>
+  </subject>
+  <recordedDate value="2024-08-25"/>
+  <evidence>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="106221001"/>
+        <display value="Genetic finding"/>
+      </coding>
+    </code>
+    <detail>
+      <reference value="Observation/mii-exa-seltene-molgen-variant-cftr-f508del-homozygous"/>
+    </detail>
+  </evidence>
+  <evidence>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="405824009"/>
+        <display value="Genetic test"/>
+      </coding>
+    </code>
+    <detail>
+      <reference value="DiagnosticReport/mii-exa-seltene-molgen-cf-diagnostic"/>
+    </detail>
+  </evidence>
+  <note>
+    <text value="Homozygot für F508del (c.1521_1523delCTT) im CFTR-Gen. Schwerer Phänotyp zu erwarten."/>
+  </note>
+</Condition>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-seltene-aortic-root-dilatation"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-seltene-aortic-root-dilatation</b></p><a name="mii-exa-seltene-aortic-root-dilatation"> </a><a name="hcmii-exa-seltene-aortic-root-dilatation"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-hpo-assessment.html">MII Profile SE HPO Assessment</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category imaging}">Imaging</span></p><p><b>code</b>: <span title="Codes:{http://human-phenotype-ontology.org HP:0002616}, {http://snomed.info/sct 251036003}">Aortenwurzeldilatation</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient.html">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>effective</b>: 2024-12-15</p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p><p><b>note</b>: </p><blockquote><div><p>Aortenwurzeldurchmesser 48mm (Referenz &lt;40mm)</p>
+</div></blockquote><p><b>method</b>: <span title="Codes:{http://snomed.info/sct 40701008}">Echocardiography</span></p><h3>Components</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 260411009}">Presence findings</span></td><td><span title="Codes:{http://loinc.org LA9633-4}">Present</span></td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="imaging"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://human-phenotype-ontology.org"/>
+      <code value="HP:0002616"/>
+      <display value="Aortic root aneurysm"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="251036003"/>
+      <display value="Aortic root dilatation"/>
+    </coding>
+    <text value="Aortenwurzeldilatation"/>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-seltene-patient"/>
+  </subject>
+  <effectiveDateTime value="2024-12-15"/>
+  <interpretation>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+      <code value="H"/>
+      <display value="High"/>
+    </coding>
+  </interpretation>
+  <note>
+    <text value="Aortenwurzeldurchmesser 48mm (Referenz &lt;40mm)"/>
+  </note>
+  <method>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="40701008"/>
+      <display value="Echocardiography"/>
+    </coding>
+  </method>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="260411009"/>
+        <display value="Presence findings"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="LA9633-4"/>
+        <display value="Present"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>

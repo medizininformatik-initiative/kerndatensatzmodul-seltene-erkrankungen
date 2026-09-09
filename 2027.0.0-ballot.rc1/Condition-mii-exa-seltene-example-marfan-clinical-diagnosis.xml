@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-seltene-example-marfan-clinical-diagnosis"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis|2027.0.0-ballot.rc1"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Condition mii-exa-seltene-example-marfan-clinical-diagnosis</b></p><a name="mii-exa-seltene-example-marfan-clinical-diagnosis"> </a><a name="hcmii-exa-seltene-example-marfan-clinical-diagnosis"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-clinical-diagnosis.html">MII PR SE Clinical Diagnosis</a> version: 2027.0.0-ballot.rc1</p></div><p><b>Condition Asserted Date</b>: 2024-12-15</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status provisional}">Provisional</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}">Encounter Diagnosis</span></p><p><b>code</b>: <span title="Codes:{http://omim.org 154700}, {http://snomed.info/sct 19346006}, {http://www.orpha.net 558}">Marfan-Syndrom, klinisch diagnostiziert</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient.html">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>encounter</b>: <a href="Encounter-mii-exa-seltene-encounter-cardiology-consultation.html">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Seen in cardiac clinic (finding); period = 2024-12-15 --&gt; 2024-12-15</a></p><p><b>recordedDate</b>: 2024-12-15</p><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title="Codes:{http://human-phenotype-ontology.org HP:0002616}">Aortenwurzeldilatation</span></p><p><b>detail</b>: <a href="Observation-mii-exa-seltene-aortic-root-dilatation.html">Observation Aortic root aneurysm</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title="Codes:{http://human-phenotype-ontology.org HP:0001083}">Linsenluxation</span></p><p><b>detail</b>: <a href="Observation-mii-exa-seltene-lens-dislocation.html">Observation Ectopia lentis</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title="Codes:{http://human-phenotype-ontology.org HP:0000098}">Hochwuchs</span></p><p><b>detail</b>: <a href="Observation-mii-exa-seltene-tall-stature.html">Observation Tall stature</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title="Codes:{http://human-phenotype-ontology.org HP:0001166}">Arachnodaktylie</span></p><p><b>detail</b>: <a href="Observation-mii-exa-seltene-arachnodactyly.html">Observation Arachnodactyly</a></p></blockquote><p><b>note</b>: </p><blockquote><div><p>Klinische Diagnose basierend auf Ghent-Kriterien. Patient erfüllt Major-Kriterien in kardiovaskulärem und ophthalmologischem System. Genetische Testung wird veranlasst.</p>
+</div></blockquote></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Condition mii-exa-seltene-example-marfan-clinical-diagnosis</b></p><a name="de-mii-exa-seltene-example-marfan-clinical-diagnosis"> </a><a name="de-hcmii-exa-seltene-example-marfan-clinical-diagnosis"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-seltene-clinical-diagnosis.html">MII PR SE Clinical Diagnosis</a> version: 2027.0.0-ballot.rc1</p></div><p><b>Condition Asserted Date</b>: 2024-12-15</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status provisional}">Provisional</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}">Encounter Diagnosis</span></p><p><b>code</b>: <span title="Codes:{http://omim.org 154700}, {http://snomed.info/sct 19346006}, {http://www.orpha.net 558}">Marfan-Syndrom, klinisch diagnostiziert</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient.html">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>encounter</b>: <a href="Encounter-mii-exa-seltene-encounter-cardiology-consultation.html">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Seen in cardiac clinic (finding); period = 2024-12-15 --&gt; 2024-12-15</a></p><p><b>recordedDate</b>: 2024-12-15</p><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title="Codes:{http://human-phenotype-ontology.org HP:0002616}">Aortenwurzeldilatation</span></p><p><b>detail</b>: <a href="Observation-mii-exa-seltene-aortic-root-dilatation.html">Observation Aortic root aneurysm</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title="Codes:{http://human-phenotype-ontology.org HP:0001083}">Linsenluxation</span></p><p><b>detail</b>: <a href="Observation-mii-exa-seltene-lens-dislocation.html">Observation Ectopia lentis</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title="Codes:{http://human-phenotype-ontology.org HP:0000098}">Hochwuchs</span></p><p><b>detail</b>: <a href="Observation-mii-exa-seltene-tall-stature.html">Observation Tall stature</a></p></blockquote><blockquote><p><b>evidence</b></p><p><b>code</b>: <span title="Codes:{http://human-phenotype-ontology.org HP:0001166}">Arachnodaktylie</span></p><p><b>detail</b>: <a href="Observation-mii-exa-seltene-arachnodactyly.html">Observation Arachnodactyly</a></p></blockquote><p><b>note</b>: </p><blockquote><div><p>Klinische Diagnose basierend auf Ghent-Kriterien. Patient erfüllt Major-Kriterien in kardiovaskulärem und ophthalmologischem System. Genetische Testung wird veranlasst.</p>
+</div></blockquote></div></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+    <valueDateTime value="2024-12-15"/>
+  </extension>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="provisional"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+      <code value="encounter-diagnosis"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://omim.org"/>
+      <version value="2024"/>
+      <code value="154700"/>
+      <display value="Marfan syndrome"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="19346006"/>
+      <display value="Marfan syndrome"/>
+    </coding>
+    <coding>
+      <system value="http://www.orpha.net"/>
+      <code value="558"/>
+      <display value="Marfan syndrome"/>
+    </coding>
+    <text value="Marfan-Syndrom, klinisch diagnostiziert"/>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-seltene-patient"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/mii-exa-seltene-encounter-cardiology-consultation"/>
+  </encounter>
+  <recordedDate value="2024-12-15"/>
+  <evidence>
+    <code>
+      <coding>
+        <system value="http://human-phenotype-ontology.org"/>
+        <code value="HP:0002616"/>
+        <display value="Aortic root aneurysm"/>
+      </coding>
+      <text value="Aortenwurzeldilatation"/>
+    </code>
+    <detail>
+      <reference value="Observation/mii-exa-seltene-aortic-root-dilatation"/>
+    </detail>
+  </evidence>
+  <evidence>
+    <code>
+      <coding>
+        <system value="http://human-phenotype-ontology.org"/>
+        <code value="HP:0001083"/>
+        <display value="Ectopia lentis"/>
+      </coding>
+      <text value="Linsenluxation"/>
+    </code>
+    <detail>
+      <reference value="Observation/mii-exa-seltene-lens-dislocation"/>
+    </detail>
+  </evidence>
+  <evidence>
+    <code>
+      <coding>
+        <system value="http://human-phenotype-ontology.org"/>
+        <code value="HP:0000098"/>
+        <display value="Tall stature"/>
+      </coding>
+      <text value="Hochwuchs"/>
+    </code>
+    <detail>
+      <reference value="Observation/mii-exa-seltene-tall-stature"/>
+    </detail>
+  </evidence>
+  <evidence>
+    <code>
+      <coding>
+        <system value="http://human-phenotype-ontology.org"/>
+        <code value="HP:0001166"/>
+        <display value="Arachnodactyly"/>
+      </coding>
+      <text value="Arachnodaktylie"/>
+    </code>
+    <detail>
+      <reference value="Observation/mii-exa-seltene-arachnodactyly"/>
+    </detail>
+  </evidence>
+  <note>
+    <text value="Klinische Diagnose basierend auf Ghent-Kriterien. Patient erfüllt Major-Kriterien in kardiovaskulärem und ophthalmologischem System. Genetische Testung wird veranlasst."/>
+  </note>
+</Condition>
