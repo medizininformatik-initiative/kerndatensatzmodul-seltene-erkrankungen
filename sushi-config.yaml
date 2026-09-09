@@ -162,11 +162,17 @@ dependencies:
   # dazugekommen (die IG-Ressource selbst), alle sechs von uns aliasierten
   # Canonicals unveraendert vorhanden, SUSHI 0/0.
   #
-  # WEITER NICHT mitgezogen: icu. Es bietet inzwischen 2027.0.0-ballot.rc1, rc2
-  # und 2027.0.0 an, aber die package.json traegt bis heute weder date noch title
-  # noch status, und dist-tags.latest steht auf 2026.0.2 — aelter als unser
-  # eigener Pin 2026.0.3. Ohne Herausgeber-Signal kein Umstieg; die Lage ist
-  # unveraendert seit 2026-08-28.
+  # Vierter Schritt 2026-09-09: icu -> 2027.0.0-ballot.rc2 (Nutzerentscheid).
+  # Das fehlende Herausgeber-Signal besteht fort — die package.json traegt weder
+  # date noch title noch status, und dist-tags.latest steht weiterhin auf
+  # 2026.0.2, also aelter als der bisherige Pin 2026.0.3. Der Umstieg erfolgt
+  # bewusst trotzdem, damit die 2027er Linie geschlossen ist.
+  #
+  # Geprueft: mii-pr-icu-muv-kopfumfang, das EINZIGE hier verwendete Artefakt
+  # (Parent von mii-pr-seltene-kopfumfang), ist in rc2 vorhanden und aktiv.
+  # 119 -> 123 Canonicals, fuenf neu, eines entfallen: das ICU-Logical-Model
+  # mii-lm-icu-logicalmodel ist in rc2 ersatzlos gestrichen. Fuer dieses Modul
+  # folgenlos, da nicht verwendet. SUSHI 0/0.
   #
   # medikation hat weiterhin keine 2027er Linie (latest 2026.0.1 = unser Pin).
   #
@@ -178,7 +184,7 @@ dependencies:
   # Quelle: 2026.0.x
   de.medizininformatikinitiative.kerndatensatz.molgen: 2027.0.0-ballot.rc2
   # Quelle: 2026.0.x
-  de.medizininformatikinitiative.kerndatensatz.icu: 2026.0.3
+  de.medizininformatikinitiative.kerndatensatz.icu: 2027.0.0-ballot.rc2
   # war 2026.0.2
   de.medizininformatikinitiative.kerndatensatz.studie: 2027.0.0-ballot.rc1
   # war 2026.0.1
