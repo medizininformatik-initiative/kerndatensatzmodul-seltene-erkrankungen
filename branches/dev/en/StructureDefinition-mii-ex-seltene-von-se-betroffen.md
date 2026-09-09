@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-vo
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_EX_Seltene_VonSEBetroffen",
   "status" : "active",
-  "date" : "2026-09-09T10:02:49+00:00",
+  "date" : "2026-09-09T11:08:17+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
