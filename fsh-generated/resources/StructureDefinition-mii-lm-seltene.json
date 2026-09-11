@@ -267,6 +267,19 @@
         ]
       },
       {
+        "id": "Seltene.anamneseUndDiagnostik.genetischeDiagnose.omimCode",
+        "path": "Seltene.anamneseUndDiagnostik.genetischeDiagnose.omimCode",
+        "short": "OMIM-Code",
+        "definition": "Kennung der Erkrankung in Online Mendelian Inheritance in Man. Ergaenzt die Kodierung aus dem Modul Diagnose um die genspezifische Zuordnung; fuer monogene Erkrankungen praeziser als ICD-10-GM.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
         "id": "Seltene.anamneseUndDiagnostik.genetischeDiagnose.zeitpunktGenDia",
         "path": "Seltene.anamneseUndDiagnostik.genetischeDiagnose.zeitpunktGenDia",
         "short": "Zeitpunkt genetische SE-Diagnose",

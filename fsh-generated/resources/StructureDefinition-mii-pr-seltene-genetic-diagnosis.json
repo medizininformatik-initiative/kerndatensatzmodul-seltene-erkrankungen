@@ -205,7 +205,7 @@
         "id": "Condition.category",
         "path": "Condition.category",
         "short": "Kategorisierung als genetische Erkrankung",
-        "definition": "Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung",
+        "definition": "Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung. Bewusste Nutzung der extensible-Bindung von Condition.category: Der Wert bezeichnet nicht die Rolle im Datensatz, sondern macht die genetische Sicherung registeruebergreifend auswertbar.",
         "min": 1,
         "patternCodeableConcept": {
           "coding": [
@@ -264,6 +264,11 @@
             "identity": "SE-LogicalModel",
             "map": "anamneseUndDiagnostik.genetischeDiagnose",
             "comment": "OMIM-Code Diagnose"
+          },
+          {
+            "identity": "SE-LogicalModel",
+            "map": "anamneseUndDiagnostik.genetischeDiagnose.omimCode",
+            "comment": "OMIM-Code der Erkrankung"
           }
         ]
       },

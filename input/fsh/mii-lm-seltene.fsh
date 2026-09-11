@@ -40,6 +40,16 @@ Description: "MII LogicalModel Modul Seltene Erkraknungen"
     * feststellungsdatumKlinischeDia 0..1 date "Feststellungsdatum klinische SE-Diagnose" "Datum, an dem die klinische SE-Diagnose festgestellt wurde."
     * alterKlinischeDia 0..1 integer "Alter bei klinischer SE-Diagnose" "Alter, in dem die klinische SE-Diagnose gestellt wurde."
   * genetischeDiagnose 0..* BackboneElement "Zeitraum der genetischen SE-Diagnose"  
+    // Ergaenzt 2026-09-11 (Nutzerentscheid, ohne formale Freigabe des
+    // Datensatzgremiums — bewusst so vermerkt). Anlass war ein Review-Hinweis:
+    // das Profil mii-pr-seltene-genetic-diagnosis fuehrt einen eigenen Slice
+    // code.coding[omim], das Datensatzmodell kannte ihn nicht.
+    //
+    // Nur OMIM steht hier. ICD-10-GM, Alpha-ID, SNOMED CT und ORPHA kommen aus
+    // dem MII-Modul Diagnose, von dem die Diagnoseprofile dieses Moduls
+    // abgeleitet sind; sie werden dort gefuehrt und hier nicht wiederholt.
+    // OMIM ist der einzige Diagnosecode, den dieses Modul selbst hinzufuegt.
+    * omimCode 0..* code "OMIM-Code" "Kennung der Erkrankung in Online Mendelian Inheritance in Man. Ergaenzt die Kodierung aus dem Modul Diagnose um die genspezifische Zuordnung; fuer monogene Erkrankungen praeziser als ICD-10-GM." 
     * zeitpunktGenDia 0..1 code "Zeitpunkt genetische SE-Diagnose" "Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der genetischen SE-Diagnose."
     * feststellungsdatumGenDia 0..1 date "Feststellungsdatum genetische SE-Diagnose" "Datum, an dem die genetische SE-Diagnose festgestellt wurde."
     * alterGenDia 0..1 integer "Alter bei genetischer SE-Diagnose" "Alter, in dem die genetische SE-Diagnose gestellt wurde."

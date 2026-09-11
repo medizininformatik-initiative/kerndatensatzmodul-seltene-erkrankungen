@@ -12,7 +12,6 @@ Description: "Profile for genetically confirmed diagnosis of rare diseases with 
 // Inherit all constraints from parent Diagnose profile
 * clinicalStatus MS
 * verificationStatus MS
-* category 1..* MS
 * severity MS
 * code MS
 * bodySite MS
@@ -27,12 +26,37 @@ Description: "Profile for genetically confirmed diagnosis of rare diseases with 
 * evidence MS
 * note MS
 
-// Add specific category for genetic diseases
-// Since the parent profile doesn't slice category, we just add as a required value
+// KATEGORIE — bewusste Abweichung, begruendet (Nutzerentscheid 2026-09-11,
+// nach einem Review-Hinweis auf die Ungleichbehandlung gegenueber der
+// klinischen Diagnose).
+//
+// Condition.category ist in FHIR R4 0..* und EXTENSIBLE an condition-category
+// gebunden (problem-list-item | encounter-diagnosis). Eine extensible Bindung
+// erlaubt ausdruecklich Codes ausserhalb des ValueSets, wenn keiner der
+// enthaltenen passt — die Spezifikation merkt am Element selbst an, die
+// Kategorisierung sei "often highly contextual". Der feste Wert hier ist also
+// keine Regelverletzung, sondern die vorgesehene Nutzung einer extensible
+// Bindung.
+//
+// Warum ueberhaupt: Die Kennzeichnung als genetisch gesicherte Erkrankung ist
+// das Merkmal, ueber das dieses Modul registeruebergreifend gefunden werden
+// will. Sie steht nicht in Condition.code — dort steht die Erkrankung selbst
+// (ICD-10-GM, ORPHA, OMIM) — und laesst sich aus dem Code auch nicht
+// herleiten, weil dieselbe Erkrankung klinisch oder genetisch gesichert sein
+// kann. Genau diese Unterscheidung traegt das Modul in zwei getrennten
+// Profilen, und category macht sie fuer eine Suche auswertbar.
+//
+// OFFEN und im Guide benannt: patternCodeableConcept auf einem wiederholbaren
+// Element verlangt, dass JEDE Wiederholung dem Muster entspricht. Eine zweite
+// Kategorie — etwa encounter-diagnosis fuer die Rolle im Datensatz — ist damit
+// derzeit unzulaessig. Alle zehn Beispiele fuehren folgerichtig nur diesen
+// einen Wert. Sauberer waere ein offener Slice, der 782964007 verlangt und
+// weitere Kategorien zulaesst; das aendert die publizierte Constraint-Form und
+// gehoert daher in die Ballotierung.
 * category 1..* MS
 * category = $SCT#782964007 "Genetic disease"
 * category ^short = "Kategorisierung als genetische Erkrankung"
-* category ^definition = "Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung"
+* category ^definition = "Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung. Bewusste Nutzung der extensible-Bindung von Condition.category: Der Wert bezeichnet nicht die Rolle im Datensatz, sondern macht die genetische Sicherung registeruebergreifend auswertbar."
 
 // Add OMIM slice to the existing code slices
 * code.coding ^slicing.discriminator[+].type = #pattern
@@ -107,6 +131,7 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * onset[x] -> "anamneseUndDiagnostik.genetischeDiagnose.alterGenDia" "Alter/Zeitpunkt bei genetischer SE-Diagnose"
 * onsetDateTime -> "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia" "Feststellungsdatum genetische SE-Diagnose"
 * evidence.code -> "anamneseUndDiagnostik.methodeDiagnosestellung" "Methode der Diagnosestellung"
+* code.coding[omim] -> "anamneseUndDiagnostik.genetischeDiagnose.omimCode" "OMIM-Code der Erkrankung"
 * evidence.detail -> "Verweis auf MolGen Variante/DiagnostischeImplikation" "Genetische Befunde"
 * subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
 * encounter -> "anamneseUndDiagnostik.untersuchungsdatum" "Untersuchungsdatum"

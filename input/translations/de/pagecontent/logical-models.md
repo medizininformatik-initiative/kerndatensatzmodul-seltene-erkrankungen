@@ -31,6 +31,7 @@ Die folgende Tabelle wird aus dem publizierten Logical Model (`mii-lm-seltene`) 
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`feststellungsdatumKlinischeDia` | 0..1 | date | Datum, an dem die klinische SE-Diagnose festgestellt wurde. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`alterKlinischeDia` | 0..1 | integer | Alter, in dem die klinische SE-Diagnose gestellt wurde. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`genetischeDiagnose` | 0..* | BackboneElement | Zeitraum der genetischen SE-Diagnose |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`omimCode` | 0..* | code | Kennung der Erkrankung in Online Mendelian Inheritance in Man. Ergaenzt die Kodierung aus dem Modul Diagnose um die genspezifische Zuordnung; fuer monogene Erkrankungen praeziser als ICD-10-GM. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`zeitpunktGenDia` | 0..1 | code | Auswahl der Altersangabe (Lebensphase) des Zeitpunktes der genetischen SE-Diagnose. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`feststellungsdatumGenDia` | 0..1 | date | Datum, an dem die genetische SE-Diagnose festgestellt wurde. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`alterGenDia` | 0..1 | integer | Alter, in dem die genetische SE-Diagnose gestellt wurde. |

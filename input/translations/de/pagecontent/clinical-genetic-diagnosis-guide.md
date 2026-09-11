@@ -69,15 +69,32 @@ Die beiden Profile behandeln `category` ungleich, und das ist erklärungsbedürf
 Datensatz** — der Kurztext des Elements lautet wörtlich `problem-list-item |
 encounter-diagnosis`. Die Art der Erkrankung gehört dagegen in `Condition.code`.
 
-Die klinische Diagnose folgt dem: Sie verlangt eine Kategorie, schreibt aber keinen
-Wert vor. Die genetische Diagnose setzt stattdessen einen festen Code, der eine
-Krankheitsart bezeichnet — sie nutzt das Feld also anders, als FHIR es vorsieht.
+Die klinische Diagnose folgt dem: Sie verlangt eine Kategorie, schreibt aber keinen Wert
+vor. Die genetische Diagnose setzt zusätzlich einen festen Code — **bewusst**, und zwar
+aus zwei Gründen.
 
-Das ist ein bekannter offener Punkt. Aus demselben Grund wurde das ValueSet
-`mii-vs-seltene-clinical-diagnosis-category` im September 2026 zurückgezogen: Es band
-`category` an Krankheitsarten und beantwortete damit die falsche Frage. Der feste Wert
-der genetischen Diagnose ist seit 2026.0.1 publiziert und in Gebrauch; ob er bleibt,
-wird im Rahmen der Ballotierung entschieden.
+**Es ist zulässig.** `Condition.category` ist `0..*` und **extensible** an
+`condition-category` gebunden. Eine extensible Bindung erlaubt ausdrücklich Codes
+außerhalb des ValueSets, wenn keiner der enthaltenen passt; die FHIR-Spezifikation merkt
+am Element selbst an, die Kategorisierung sei „often highly contextual".
+
+**Es ist nötig.** Ob eine Erkrankung genetisch gesichert ist, steht nicht in
+`Condition.code` — dort steht die Erkrankung selbst — und lässt sich daraus auch nicht
+herleiten, weil dieselbe Erkrankung klinisch oder genetisch gesichert sein kann. Genau
+diese Unterscheidung trägt das Modul in zwei getrennten Profilen; `category` macht sie
+für eine registerübergreifende Suche auswertbar.
+
+Abzugrenzen vom zurückgezogenen ValueSet `mii-vs-seltene-clinical-diagnosis-category`:
+Das band `category` modulweit an Krankheitsarten *anstelle* der Rolle und beantwortete
+damit die falsche Frage. Hier geht es um ein einzelnes, begründetes Zusatzmerkmal.
+
+> **Offener Punkt für die Ballotierung.** `patternCodeableConcept` auf einem
+> wiederholbaren Element verlangt, dass *jede* Wiederholung dem Muster entspricht. Eine
+> zweite Kategorie — etwa `encounter-diagnosis` für die Rolle im Datensatz — ist damit
+> derzeit unzulässig, und alle Beispiele führen folgerichtig nur diesen einen Wert.
+> Sauberer wäre ein offener Slice, der `782964007` verlangt und weitere Kategorien
+> zulässt. Das ändert die publizierte Constraint-Form und steht deshalb zur Kommentierung.
+{: .ig-highlight .ig-highlight-blue}
 
 ## Paralleles Diagnosemodell
 
