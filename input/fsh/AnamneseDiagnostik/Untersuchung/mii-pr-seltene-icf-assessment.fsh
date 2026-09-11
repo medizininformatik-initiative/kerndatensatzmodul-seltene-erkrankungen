@@ -7,6 +7,21 @@
 // Erkrankungen did not cover this at all.
 // Tracking: GitHub issue #36, ballot ticket HDB-784.
 //
+// SERVER GAP, measured 2026-09-11 against the published rc1: SU-TermServ does
+// not carry http://hl7.org/fhir/sid/icf. The rendered ValueSet-mii-vs-seltene-icf
+// page says "No Expansion for this valueset (Unknown Code System)", and the CI
+// terminology server is the only one the build talks to (TX_URL points at the
+// local mTLS proxy, there is no tx.fhir.org fallback). Against tx.fhir.org the
+// same value set expands to 1616 concepts, so the classification is fine; it is
+// simply not loaded on the MII server.
+//
+// DO NOT "fix" this by loosening the required binding below. The binding is what
+// JARDIN and ERDRI-CDS ask for, and the module keeps it deliberately (user
+// decision 2026-09-11). The fix belongs on the server: load the BfArM package
+// bfarm.terminologien.icf. Until then the limitation is stated on the ValueSets
+// page in both languages, and validation of ICF categories against the MII
+// server will not resolve.
+//
 // TERMINOLOGY, resolved against the BfArM FHIR package
 // bfarm.terminologien.icf#2005.0.0 (inspected 2026-09-01):
 //   * The classification itself is published under the HL7 canonical

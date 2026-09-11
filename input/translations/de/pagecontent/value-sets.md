@@ -24,6 +24,20 @@ vollständig).
 > des Meta-Moduls.
 {: .ig-highlight .ig-highlight-grey}
 
+> **Bekannte Einschränkung — ICF:** `mii-vs-seltene-icf` expandiert in dieser
+> Publikation nicht. Der MII-Terminologieserver führt
+> `http://hl7.org/fhir/sid/icf` derzeit nicht und meldet es als unbekanntes
+> CodeSystem. Betroffen ist [`mii-pr-seltene-icf-assessment`](StructureDefinition-mii-pr-seltene-icf-assessment.html),
+> dessen `code.coding` **required** gegen dieses ValueSet gebunden ist: Wer gegen
+> denselben Server validiert, kann ICF-Kategorien nicht prüfen lassen. Die
+> Bindung ist gewollt und bleibt bestehen — ICF-Unterstützung ist eine
+> Anforderung des JARDIN-MDS-Entwurfs und des ERDRI-CDS —, die Lücke liegt also
+> beim Serverbetrieb und nicht am Profil. Sie schließt sich, sobald das
+> BfArM-Paket `bfarm.terminologien.icf` auf dem Terminologieserver geladen ist.
+> Die ICF-Codes selbst bleiben gültig und können unabhängig davon verwendet
+> werden.
+{: .ig-highlight .ig-highlight-grey}
+
 <!-- BEGIN GENERATED: artifact-list (scripts/generate-artifact-lists.py) -->
 
 Das Modul definiert die folgenden ValueSets. Auch solche, die lediglich Codes einer externen Terminologie bündeln, stehen hier &mdash; ihr Canonical gehört diesem Modul.

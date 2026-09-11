@@ -22,6 +22,19 @@ ValueSets may not expand completely).
 > of the meta module.
 {: .ig-highlight .ig-highlight-grey}
 
+> **Known limitation — ICF:** `mii-vs-seltene-icf` does not expand in this
+> publication. The MII terminology server does not currently carry
+> `http://hl7.org/fhir/sid/icf` and reports it as an unknown code system. This
+> affects [`mii-pr-seltene-icf-assessment`](StructureDefinition-mii-pr-seltene-icf-assessment.html),
+> whose `code.coding` is bound **required** against that value set: an
+> implementation validating against the same server cannot have ICF categories
+> checked. The binding is deliberate and stays — ICF support is a requirement of
+> the JARDIN MDS draft and the ERDRI-CDS — so the gap is one of server
+> provisioning, not of the profile. It closes once the BfArM package
+> `bfarm.terminologien.icf` is loaded on the terminology server. ICF codes
+> themselves remain valid and may be used regardless.
+{: .ig-highlight .ig-highlight-grey}
+
 <!-- BEGIN GENERATED: artifact-list (scripts/generate-artifact-lists.py) -->
 
 The module defines the following value sets. Value sets that only bundle codes of an external terminology are listed here as well, because their canonical is owned by this module.
