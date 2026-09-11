@@ -349,9 +349,49 @@ as the English page); resource translations are <code class="language-plaintext 
 <code class="language-plaintext highlighter-rouge">input/translations/de/</code>. Details:
 <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/docs/recipes/add-translation.md"><code class="language-plaintext highlighter-rouge">docs/recipes/add-translation.md</code></a> in this repository.</p>
 
+<p><strong>State of translation</strong> (v2027.0.0-ballot.rc1):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Part</th>
+      <th>State</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Narrative pages</td>
+      <td>22 of 22 translated</td>
+    </tr>
+    <tr>
+      <td>Page titles, breadcrumbs, table of contents</td>
+      <td>25 of 25 units translated (one <code class="language-plaintext highlighter-rouge">.po</code> file)</td>
+    </tr>
+    <tr>
+      <td>Navigation menu</td>
+      <td>maintained separately per language (<code class="language-plaintext highlighter-rouge">includes/menu.xml</code>)</td>
+    </tr>
+    <tr>
+      <td>Titles and descriptions of profiles, value sets and code systems</td>
+      <td><strong>not translated</strong> — all 64 artefacts render in English in both language trees</td>
+    </tr>
+  </tbody>
+</table>
+
 <blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Record which parts of your module are already translated into German.]</p>
+  <p><strong>Known gap:</strong> the last row. Artefact titles and descriptions reach the reader
+from the resources themselves, not from the page sources, so translating them
+means adding translation units for each element rather than editing a page. The
+module has not done this, and a reader on <code class="language-plaintext highlighter-rouge">/de/</code> therefore meets English text on
+every artefact page. This is a gap in coverage, not in correctness: the German
+narrative pages explain every artefact, and the codes and bindings are
+language-independent.</p>
 </blockquote>
+
+<p>One note on provenance: the predecessor guide on Simplifier was written in German.
+The chapters carried over from it were machine-translated into English during the
+migration and are under editorial review, so the German wording is the older of the
+two for those pages.</p>
 
 
 
@@ -378,7 +418,7 @@ as the English page); resource translations are <code class="language-plaintext 
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 11, 2026 10:52+0000">2026-09-11</span>
+          Generated <span title="Fri, Sep 11, 2026 12:45+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

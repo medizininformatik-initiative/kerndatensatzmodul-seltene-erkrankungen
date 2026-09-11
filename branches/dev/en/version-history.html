@@ -421,11 +421,47 @@ The repository variable <code class="language-plaintext highlighter-rouge">ENABL
 feature off — the publisher's comparison in every build workflow and this
 demonstration alike; a created module never renders the demonstration.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: If your module has a versioning policy of its own beyond the KDS scheme
-— for example a support window for older versions, or a deprecation policy for
-profiles — describe it here. Delete this prompt afterwards.]</p>
-</blockquote>
+<h3 id="withdrawing-artefacts">Withdrawing artefacts</h3>
+
+<p>Beyond the KDS scheme the module follows one rule of its own, and has applied it
+twice so far: an artefact that turns out to be wrong is <strong>retired, not deleted</strong>.</p>
+
+<ul>
+  <li>Its canonical stays resolvable, so data already carrying it remains readable.</li>
+  <li>Its <code class="language-plaintext highlighter-rouge">status</code> becomes <code class="language-plaintext highlighter-rouge">retired</code>, which keeps conformance tooling from binding it
+afresh.</li>
+  <li>Its title gains the suffix <code class="language-plaintext highlighter-rouge">(retired)</code>, and its description opens with
+<code class="language-plaintext highlighter-rouge">RETIRED. Nicht verwenden.</code> followed by the reason, so the finding is visible
+without consulting the change history.</li>
+</ul>
+
+<p>Deleting would be the worse choice: a canonical published once is, from that moment
+on, someone else's dependency. Retired artefacts are listed separately in the
+artefact tables rather than silently dropped.</p>
+
+<p>Withdrawn so far, both in version 2027.0.0-ballot.rc1:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artefact</th>
+      <th>Reason</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="ValueSet-mii-vs-seltene-clinical-diagnosis-category.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-clinical-diagnosis-category</code></a></td>
+      <td>Answered the wrong question: <code class="language-plaintext highlighter-rouge">Condition.category</code> denotes the role of the condition in the record, not the kind of disease. The kind belongs in <code class="language-plaintext highlighter-rouge">Condition.code</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-seltene-genetic-basis.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-genetic-basis</code></a></td>
+      <td>Eight of its nine SNOMED CT codes denoted something other than their display claimed, or did not exist. Not repairable, and the extension that bound it was never attached to a profile.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The module defines <strong>no support window of its own</strong> for older versions; the KDS
+scheme described above governs that.</p>
 
 
 
@@ -452,7 +488,7 @@ profiles — describe it here. Delete this prompt afterwards.]</p>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 11, 2026 10:52+0000">2026-09-11</span>
+          Generated <span title="Fri, Sep 11, 2026 12:45+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

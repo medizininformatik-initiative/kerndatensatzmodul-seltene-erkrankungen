@@ -617,11 +617,26 @@ it with <code class="language-plaintext highlighter-rouge">path-expansion-params
 then have one stable place to inspect the parameters used for expansion and
 package pinning.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Add the manifest for your module (see the commented blocks in
-<code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>) and link the generated <code class="language-plaintext highlighter-rouge">Parameters</code> resource page here,
-or state explicitly that this module does not pin expansion parameters.]</p>
-</blockquote>
+<p>This module does pin its expansion parameters. The seed lives in
+<code class="language-plaintext highlighter-rouge">input/resources/Parameters-expansion-manifest.json</code>, the publisher fills it during
+the build, and the result is published as
+<a href="Parameters-mii-param-seltene-manifest.html"><code class="language-plaintext highlighter-rouge">mii-param-seltene-manifest</code></a> — 253
+parameters in this release. It is linked from the <code class="language-plaintext highlighter-rouge">ImplementationGuide</code> via
+<code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code> and named to the publisher through <code class="language-plaintext highlighter-rouge">path-expansion-params</code>
+and <code class="language-plaintext highlighter-rouge">pin-manifest</code>.</p>
+
+<p>The seed pins the two things the build cannot derive on its own:</p>
+
+<ul>
+  <li><strong>SNOMED CT</strong> to the International Edition, version <code class="language-plaintext highlighter-rouge">20260701</code> — the same
+release that <code class="language-plaintext highlighter-rouge">kerndatensatz-base</code> and <code class="language-plaintext highlighter-rouge">kerndatensatz-molgen</code> pin on the 2027
+line, so a code means the same thing across the modules of one release.</li>
+  <li>the <strong>artifact version policy</strong> code system to <code class="language-plaintext highlighter-rouge">3.0.0</code>.</li>
+</ul>
+
+<p>Everything else in the published manifest is the build's own record of what it
+resolved, and is therefore the place to look when an expansion needs to be
+reproduced exactly.</p>
 
 <h4 id="relationship-to-fair">Relationship to FAIR</h4>
 
@@ -781,11 +796,11 @@ asserted to be a persistently identified FAIR dataset.</p>
   </tbody>
 </table>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: The table lists the indicators of priority <em>Essential</em>. If your module
-wants the complete self-assessment, extend it with the <em>Important</em> and
-<em>Useful</em> indicators — <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> carries the full table.]</p>
-</blockquote>
+<p>The table deliberately lists the indicators of priority <em>Essential</em> only.
+The <em>Important</em> and <em>Useful</em> indicators are not assessed here: this section is an
+informative self-assessment, and a longer table would suggest a degree of formal
+evaluation that has not taken place. <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> carries the full table
+for modules that want the complete picture.</p>
 
 <h4 id="practical-use">Practical use</h4>
 
@@ -831,7 +846,7 @@ metadata.</p>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 11, 2026 10:52+0000">2026-09-11</span>
+          Generated <span title="Fri, Sep 11, 2026 12:45+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

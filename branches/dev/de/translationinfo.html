@@ -316,10 +316,49 @@ Dateiname wie die englische Seite); Ressourcen-Übersetzungen als <code class="l
 unter <code class="language-plaintext highlighter-rouge">input/translations/de/</code>. Details:
 <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/docs/recipes/add-translation.md"><code class="language-plaintext highlighter-rouge">docs/recipes/add-translation.md</code></a> in diesem Repository.</p>
 
+<p><strong>Übersetzungsstand</strong> (v2027.0.0-ballot.rc1):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Teil</th>
+      <th>Stand</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Erzählende Seiten</td>
+      <td>22 von 22 übersetzt</td>
+    </tr>
+    <tr>
+      <td>Seitentitel, Brotkrumen, Inhaltsverzeichnis</td>
+      <td>25 von 25 Einheiten übersetzt (eine <code class="language-plaintext highlighter-rouge">.po</code>-Datei)</td>
+    </tr>
+    <tr>
+      <td>Navigationsmenü</td>
+      <td>je Sprache eigenständig gepflegt (<code class="language-plaintext highlighter-rouge">includes/menu.xml</code>)</td>
+    </tr>
+    <tr>
+      <td>Titel und Beschreibungen von Profilen, ValueSets und CodeSystems</td>
+      <td><strong>nicht übersetzt</strong> — alle 64 Artefakte erscheinen in beiden Sprachbäumen englisch</td>
+    </tr>
+  </tbody>
+</table>
+
 <blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Vermerken Sie, welche Teile des Moduls bereits ins Deutsche übersetzt
-sind.]</p>
+  <p><strong>Bekannte Lücke:</strong> die letzte Zeile. Titel und Beschreibungen der Artefakte
+erreichen die Lesenden aus den Ressourcen selbst und nicht aus den Seitenquellen;
+sie zu übersetzen heißt daher, je Element Übersetzungseinheiten anzulegen, statt
+eine Seite zu bearbeiten. Das hat das Modul nicht getan, und wer auf <code class="language-plaintext highlighter-rouge">/de/</code>
+unterwegs ist, trifft deshalb auf jeder Artefaktseite auf englischen Text. Das ist
+eine Lücke in der Abdeckung, nicht in der Richtigkeit: Die deutschen Seiten
+erläutern jedes Artefakt, und Codes wie Bindings sind sprachunabhängig.</p>
 </blockquote>
+
+<p>Ein Hinweis zur Herkunft: Der Vorgänger-Leitfaden auf Simplifier war deutsch
+verfasst. Die von dort übernommenen Kapitel wurden bei der Migration maschinell ins
+Englische übersetzt und stehen in redaktioneller Durchsicht; für diese Seiten ist
+die deutsche Fassung also die ältere der beiden.</p>
 
 
 
@@ -346,7 +385,7 @@ sind.]</p>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 11, 2026 10:52+0000">2026-09-11</span>
+          Erstellt <span title="Fri, Sep 11, 2026 12:45+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

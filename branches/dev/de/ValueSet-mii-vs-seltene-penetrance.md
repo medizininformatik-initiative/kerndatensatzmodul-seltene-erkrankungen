@@ -41,7 +41,7 @@ Value set for qualitative descriptions of genetic penetrance, drawn from the HPO
   "name" : "MII_VS_Seltene_Penetrance",
   "title" : "MII VS SE Penetrance",
   "status" : "active",
-  "date" : "2026-09-11T10:52:45+00:00",
+  "date" : "2026-09-11T12:45:52+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

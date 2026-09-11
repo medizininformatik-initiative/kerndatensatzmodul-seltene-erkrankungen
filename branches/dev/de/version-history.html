@@ -392,12 +392,48 @@ Die Repository-Variable <code class="language-plaintext highlighter-rouge">ENABL
 gesamte Feature ab — den Publisher-Vergleich in allen Build-Workflows ebenso
 wie diese Demonstration; ein erstelltes Modul rendert die Demonstration nie.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Falls Ihr Modul über das KDS-Schema hinaus eine eigene
-Versionierungs-Politik hat — etwa einen Unterstützungszeitraum für ältere
-Versionen oder eine Abkündigungs-Politik für Profile —, beschreiben Sie sie
-hier. Löschen Sie diesen Hinweis anschließend.]</p>
-</blockquote>
+<h3 id="zurückziehen-von-artefakten">Zurückziehen von Artefakten</h3>
+
+<p>Über das KDS-Schema hinaus befolgt das Modul eine eigene Regel, die es bisher
+zweimal angewandt hat: Ein Artefakt, das sich als falsch erweist, wird
+<strong>zurückgezogen und nicht gelöscht</strong>.</p>
+
+<ul>
+  <li>Sein Canonical bleibt auflösbar, damit bereits erhobene Daten lesbar bleiben.</li>
+  <li>Sein <code class="language-plaintext highlighter-rouge">status</code> wird <code class="language-plaintext highlighter-rouge">retired</code>; das hält Konformitätswerkzeuge davon ab, es erneut
+zu binden.</li>
+  <li>Sein Titel erhält den Zusatz <code class="language-plaintext highlighter-rouge">(retired)</code>, und seine Beschreibung beginnt mit
+<code class="language-plaintext highlighter-rouge">RETIRED. Nicht verwenden.</code> samt Begründung — der Befund ist damit sichtbar, ohne
+die Änderungshistorie zu bemühen.</li>
+</ul>
+
+<p>Löschen wäre die schlechtere Wahl: Ein einmal veröffentlichtes Canonical ist von
+diesem Augenblick an die Abhängigkeit anderer. Zurückgezogene Artefakte stehen in
+den Artefakttabellen gesondert und verschwinden nicht stillschweigend.</p>
+
+<p>Bisher zurückgezogen, beides in Version 2027.0.0-ballot.rc1:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artefakt</th>
+      <th>Grund</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="ValueSet-mii-vs-seltene-clinical-diagnosis-category.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-clinical-diagnosis-category</code></a></td>
+      <td>Beantwortete die falsche Frage: <code class="language-plaintext highlighter-rouge">Condition.category</code> bezeichnet die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehört in <code class="language-plaintext highlighter-rouge">Condition.code</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-seltene-genetic-basis.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-genetic-basis</code></a></td>
+      <td>Acht seiner neun SNOMED-CT-Codes bezeichneten etwas anderes als ihr Display behauptete oder existierten nicht. Nicht reparabel; die bindende Extension war zudem nie an ein Profil angeschlossen.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Eine <strong>eigene Unterstützungsfrist</strong> für ältere Versionen legt das Modul nicht fest;
+dafür gilt das oben beschriebene KDS-Schema.</p>
 
 
 
@@ -424,7 +460,7 @@ hier. Löschen Sie diesen Hinweis anschließend.]</p>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 11, 2026 10:52+0000">2026-09-11</span>
+          Erstellt <span title="Fri, Sep 11, 2026 12:45+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -585,12 +585,27 @@ Publisher mit <code class="language-plaintext highlighter-rouge">path-expansion-
 Werkzeuge haben dann eine stabile Stelle, an der die Parameter für Expansion und
 Paket-Pinnung einsehbar sind.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Ergänzen Sie das Manifest Ihres Moduls (siehe die auskommentierten
-Blöcke in <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>) und verlinken Sie hier die erzeugte
-<code class="language-plaintext highlighter-rouge">Parameters</code>-Seite — oder halten Sie ausdrücklich fest, dass dieses Modul
-keine Expansions-Parameter pinnt.]</p>
-</blockquote>
+<p>Dieses Modul pinnt seine Expansionsparameter. Das Saatgut liegt in
+<code class="language-plaintext highlighter-rouge">input/resources/Parameters-expansion-manifest.json</code>, der Publisher füllt es während
+des Builds, und das Ergebnis erscheint als
+<a href="Parameters-mii-param-seltene-manifest.html"><code class="language-plaintext highlighter-rouge">mii-param-seltene-manifest</code></a> — 253
+Parameter in dieser Auflage. Verlinkt ist es aus dem <code class="language-plaintext highlighter-rouge">ImplementationGuide</code> über
+<code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code> und dem Publisher über <code class="language-plaintext highlighter-rouge">path-expansion-params</code> und
+<code class="language-plaintext highlighter-rouge">pin-manifest</code> benannt.</p>
+
+<p>Das Saatgut pinnt die beiden Dinge, die der Build nicht selbst herleiten kann:</p>
+
+<ul>
+  <li><strong>SNOMED CT</strong> auf die International Edition, Version <code class="language-plaintext highlighter-rouge">20260701</code> — dieselbe
+Ausgabe, die <code class="language-plaintext highlighter-rouge">kerndatensatz-base</code> und <code class="language-plaintext highlighter-rouge">kerndatensatz-molgen</code> auf der 2027er
+Linie pinnen, damit ein Code über die Module einer Auflage hinweg dasselbe
+bedeutet.</li>
+  <li>das CodeSystem der <strong>Artefakt-Versionspolitik</strong> auf <code class="language-plaintext highlighter-rouge">3.0.0</code>.</li>
+</ul>
+
+<p>Alles Weitere im publizierten Manifest ist die Mitschrift des Builds über das, was
+er aufgelöst hat — und damit die Stelle, an der nachzusehen ist, wenn eine
+Expansion exakt reproduziert werden soll.</p>
 
 <h4 id="bezug-zu-fair">Bezug zu FAIR</h4>
 
@@ -752,12 +767,11 @@ dauerhaft identifizierter FAIR-Datensatz behauptet.</p>
   </tbody>
 </table>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Die Tabelle führt die Indikatoren der Priorität <em>Essential</em> auf. Wenn
-Ihr Modul die vollständige Selbsteinschätzung will, ergänzen Sie die
-Indikatoren der Prioritäten <em>Important</em> und <em>Useful</em> — <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code>
-führt die vollständige Tabelle.]</p>
-</blockquote>
+<p>Die Tabelle führt bewusst nur die Indikatoren der Priorität <em>Essential</em> auf.
+Die Indikatoren <em>Important</em> und <em>Useful</em> werden hier nicht bewertet: Dieser Abschnitt
+ist eine informative Selbsteinschätzung, und eine längere Tabelle würde ein Maß an
+förmlicher Prüfung nahelegen, das nicht stattgefunden hat. Die vollständige Tabelle
+führt <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> für Module, die das ganze Bild wollen.</p>
 
 <h4 id="praktische-nutzung">Praktische Nutzung</h4>
 
@@ -805,7 +819,7 @@ Ressourcen die vollständigen maschinenlesbaren Metadaten.</p>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 11, 2026 10:52+0000">2026-09-11</span>
+          Erstellt <span title="Fri, Sep 11, 2026 12:45+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

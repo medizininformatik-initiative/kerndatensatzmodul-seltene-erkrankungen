@@ -41,5 +41,22 @@ From the second **formal publication** on, this guide also publishes a **machine
 
 **The demonstration below** (this template repository's preview only) shows the same kind of report before any formal publication exists: the build compares itself against the previous `dev` preview using the FHIR validator's `-compare` command and publishes the result at `comparison-demo/index.html`. The repository variable `ENABLE_VERSION_COMPARISON=false` switches the whole feature off — the publisher's comparison in every build workflow and this demonstration alike; a created module never renders the demonstration.
 
-> [TODO: If your module has a versioning policy of its own beyond the KDS scheme — for example a support window for older versions, or a deprecation policy for profiles — describe it here. Delete this prompt afterwards.]
+### Withdrawing artefacts
+
+Beyond the KDS scheme the module follows one rule of its own, and has applied it twice so far: an artefact that turns out to be wrong is **retired, not deleted**.
+
+* Its canonical stays resolvable, so data already carrying it remains readable.
+* Its `status` becomes `retired`, which keeps conformance tooling from binding it afresh.
+* Its title gains the suffix `(retired)`, and its description opens with `RETIRED. Nicht verwenden.` followed by the reason, so the finding is visible without consulting the change history.
+
+Deleting would be the worse choice: a canonical published once is, from that moment on, someone else's dependency. Retired artefacts are listed separately in the artefact tables rather than silently dropped.
+
+Withdrawn so far, both in version 2027.0.0-ballot.rc1:
+
+| | |
+| :--- | :--- |
+| [`mii-vs-seltene-clinical-diagnosis-category`](ValueSet-mii-vs-seltene-clinical-diagnosis-category.md) | Answered the wrong question:`Condition.category`denotes the role of the condition in the record, not the kind of disease. The kind belongs in`Condition.code`. |
+| [`mii-vs-seltene-genetic-basis`](ValueSet-mii-vs-seltene-genetic-basis.md) | Eight of its nine SNOMED CT codes denoted something other than their display claimed, or did not exist. Not repairable, and the extension that bound it was never attached to a profile. |
+
+The module defines **no support window of its own** for older versions; the KDS scheme described above governs that.
 
