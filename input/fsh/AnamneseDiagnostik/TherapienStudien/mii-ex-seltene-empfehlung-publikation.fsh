@@ -4,6 +4,8 @@ Context: MedicationRequest, RequestGroup, ServiceRequest
 Title: "MII EX SE Empfehlung Publikation"
 Description: "Verweis auf Publikation der (einzelnen) Empfehlung"
 * insert PR_CS_VS_Version
+* insert CRMIExtensionMetadata
+* ^experimental = false
 
 * value[x] 1..1 MS
 * value[x] only string or Identifier

@@ -6,6 +6,8 @@ Description: "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines
 
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIProfileMetadata
+* ^experimental = false
 * ^status = #active
 
 * code ^short = "Kopfumfang okzipital-frontal"

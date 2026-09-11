@@ -99,12 +99,42 @@ In diesem Gerüst nicht aktiviert, aber als auskommentierte Blöcke in
   [CRMI-Manifest-Parameters](https://hl7.org/fhir/uv/crmi/STU2/en/StructureDefinition-crmi-manifestparameters.html)-Ressource
   und den Parametern `path-expansion-params` / `pin-manifest`.
 
-> [TODO: Aktivieren Sie die für Ihr Modul nötigen Blöcke und ziehen Sie die
-> Tabellen oben nach. Wenn Ihr Modul die CRMI-Shareable-/Publishable-Profile
-> zusätzlich auf seine eigenen StructureDefinitions, CapabilityStatements,
-> CodeSysteme und ValueSets anwendet — das Idiom aus `kerndatensatz-basis` ist
-> ein gemeinsames `RuleSet` in [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/input/fsh/rulesets/crmi.fsh) —, ergänzen Sie die
-> entsprechenden Zeilen.]
+##### CRMI-Profile auf den eigenen Artefakten
+
+Seit dem 2026-09-11 beansprucht jedes Artefakt dieses Moduls die passenden
+CRMI-Profile und trägt dieselben Governance-Metadaten wie der
+`ImplementationGuide` selbst. Die Regeln stehen in
+[`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/input/fsh/rulesets/crmi.fsh),
+aus `kerndatensatz-basis` portiert, und werden über je ein Sammel-RuleSet pro
+Artefakttyp angewandt:
+
+| Artefakttyp | Beanspruchte CRMI-Profile | Anzahl |
+|---|---|---|
+| Profile, Extensions, Datensatzmodell | `crmi-shareablestructuredefinition`, `crmi-publishablestructuredefinition` | 29 |
+| ValueSets | `crmi-shareablevalueset`, `crmi-publishablevalueset` | 29 |
+| CodeSystems | `crmi-shareablecodesystem`, `crmi-publishablecodesystem` | 6 |
+| CapabilityStatement | `crmi-shareablecapabilitystatement`, `crmi-publishablecapabilitystatement` | 1 |
+
+Neben dem Profilanspruch trägt jedes Artefakt `cqf-knowledgeCapability`,
+`artifact-usage`, `artifact-versionPolicy`, `resource-approvalDate`,
+`artifact-topic` und die Beitragenden-Extensions. Wer ein Artefakt für sich allein
+liest — außerhalb des Leitfadens —, erfährt damit weiterhin, wer dafür einsteht
+und wozu es dient.
+
+`crmi-computablevalueset` wird bewusst **nicht** beansprucht: Es verlangt eine
+compose-Definition, die nicht jedes ValueSet dieses Moduls hat, und
+`kerndatensatz-basis` beansprucht es ebenfalls nur bei einem von vierzehn.
+
+> **Offener Punkt für den Ballot:** Drei Profile leiten von einem Profil eines
+> Nachbarmoduls ab — die beiden Diagnoseprofile vom `Diagnose`-Profil aus
+> `kerndatensatz-base`, die Therapieempfehlung vom `MedicationRequest`-Profil aus
+> `kerndatensatz-medikation`. Eine abgeleitete `StructureDefinition` erbt die
+> Metadaten-Extensions ihres Elternprofils, und die nennen den Autor des
+> **Elternmoduls**. Diese drei beanspruchen deshalb nur die CRMI-Profile und
+> wiederholen die Metadaten nicht: Ein andersartiger Wert lässt sich am selben
+> Extension-Index nicht ersetzen, ohne dass beide stehen bleiben. Ob ein
+> abgeleitetes Profil die Governance-Metadaten seines Elternmoduls überhaupt erben
+> sollte, ist eine Frage der MII-weiten Konventionen und nicht dieses Moduls.
 {: .ig-highlight .ig-highlight-grey}
 
 ##### CodeSystem-Supplements

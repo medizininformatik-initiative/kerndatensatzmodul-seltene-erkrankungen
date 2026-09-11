@@ -5,6 +5,8 @@ Title: "MII PR Seltene Erkrankungen Therapie Durchgeführt"
 Description: "Minimales Profil zur Dokumentation durchgeführter Therapien bei Seltenen Erkrankungen gemäß NARSE-Klassifikation. Dieses Profil erfasst Therapien unabhängig vom Durchführungsort (ambulant, stationär, außerhalb des Krankenhauses)."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIProfileMetadata
+* ^experimental = false
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapie-durchgefuehrt"
 * ^status = #active
 

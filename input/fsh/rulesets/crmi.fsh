@@ -15,7 +15,7 @@
 //
 // basis literals replaced by this repository's placeholders:
 //   "2019+ Medical Informatics Initiative (MII)" → "2022+ …"
-//   the basis artifact-author contact email      → TODO:REVIEW
+//   the basis artifact-author contact email      → thomas.debertshaeuser@charite.de
 // The approval date and the artifact topic stay RuleSet PARAMETERS (as in
 // basis); pass 2026-08-28 / C4873 at the call site.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -70,7 +70,8 @@ RuleSet: CRMIArtifactTopicInstance(system, code)
 * extension[=].valueCodeableConcept.coding[+] = {system}#{code}
 
 // ── Artifact contributors ────────────────────────────────────────────────────
-// Author = the module author (TODO:REVIEW). Editor / reviewer /
+// Author = the module author, decided 2026-09-02 and identical to the address
+// carried by the ImplementationGuide itself (sushi-config.yaml). Editor / reviewer /
 // endorser are the MII-wide governance bodies and apply to every KDS module —
 // the same values sushi-config.yaml sets on the IG resource. Adjust only if your
 // module's governance differs.
@@ -78,7 +79,7 @@ RuleSet: CRMIArtifactTopicInstance(system, code)
 RuleSet: CRMIArtifactContributors
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-author"
 * ^extension[=].valueContactDetail.telecom[+].system = #email
-* ^extension[=].valueContactDetail.telecom[=].value = "TODO:REVIEW"
+* ^extension[=].valueContactDetail.telecom[=].value = "thomas.debertshaeuser@charite.de"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-editor"
 * ^extension[=].valueContactDetail.name = "Taskforce Core Data Set"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-reviewer"
@@ -101,7 +102,7 @@ RuleSet: CRMIArtifactContributors
 RuleSet: CRMIArtifactContributorsInstance
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-author"
 * extension[=].valueContactDetail.telecom[+].system = #email
-* extension[=].valueContactDetail.telecom[=].value = "TODO:REVIEW"
+* extension[=].valueContactDetail.telecom[=].value = "thomas.debertshaeuser@charite.de"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-editor"
 * extension[=].valueContactDetail.name = "Taskforce Core Data Set"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-reviewer"
@@ -201,3 +202,115 @@ RuleSet: CRMIKnowledgeCapabilitiesValueSet
 * ^extension[=].valueCode = #publishable
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
 * ^extension[=].valueCode = #computable
+
+// ── Sammel-RuleSets je Artefakttyp ───────────────────────────────────────────
+//
+// Angelegt 2026-09-11. Bis dahin war crmi.fsh vollstaendig aus base portiert,
+// aber NIRGENDS aufgerufen: der ImplementationGuide beanspruchte die drei
+// CRMI-IG-Profile (ueber sushi-config.yaml), die 64 eigenen Artefakte keines.
+// Gemessen trugen meta 3 von 3 und base 33 von 34 ihrer Artefakte ein
+// CRMI-Profil, dieses Modul 0 von 64.
+//
+// Ein Aufruf je Artefakt statt acht: die Bausteine oben bleiben einzeln
+// verfuegbar, der Regelfall ist aber genau eine Zeile. Die Parameter
+// (Freigabedatum, NCI-Thema) stehen hier EINMAL und stammen aus
+// sushi-config.yaml -- dort sind sie am 2026-09-02 entschieden worden.
+//
+// experimental steht bewusst NICHT in diesen RuleSets: 18 Artefakte setzen es
+// bereits selbst, und eine zweite Zuweisung desselben Wertes waere Rauschen.
+// Wo es fehlte, ist es am Artefakt ergaenzt worden.
+//
+// KEIN Computable-Profil auf ValueSets: crmi-computablevalueset verlangt eine
+// compose-Definition, die nicht jedes ValueSet dieses Moduls hat. base setzt es
+// ebenfalls nur auf einem von vierzehn. Die knowledgeCapability #computable
+// bleibt davon unberuehrt -- sie beschreibt, was der Server kann, nicht was die
+// Ressource behauptet.
+
+RuleSet: CRMIProfileMetadata
+* insert CRMIShareableStructureDefinition
+* insert CRMIPublishableStructureDefinition
+* insert CRMIKnowledgeCapabilitiesStructureDefinition
+* insert CRMIArtifactUsageProfile
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-09-02)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C4873)
+* insert CRMIArtifactContributors
+
+RuleSet: CRMIExtensionMetadata
+* insert CRMIShareableStructureDefinition
+* insert CRMIPublishableStructureDefinition
+* insert CRMIKnowledgeCapabilitiesStructureDefinition
+* insert CRMIArtifactUsageExtension
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-09-02)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C4873)
+* insert CRMIArtifactContributors
+
+RuleSet: CRMILogicalModelMetadata
+* insert CRMIShareableStructureDefinition
+* insert CRMIPublishableStructureDefinition
+* insert CRMIKnowledgeCapabilitiesStructureDefinition
+* insert CRMIArtifactUsageLogicalModel
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-09-02)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C4873)
+* insert CRMIArtifactContributors
+
+RuleSet: CRMIValueSetMetadata
+* insert CRMIShareableValueSet
+* insert CRMIPublishableValueSet
+* insert CRMIKnowledgeCapabilitiesValueSet
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-09-02)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C4873)
+* insert CRMIArtifactContributors
+
+RuleSet: CRMICodeSystemMetadata
+* insert CRMIShareableCodeSystem
+* insert CRMIPublishableCodeSystem
+* insert CRMIKnowledgeCapabilitiesCodeSystem
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-09-02)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C4873)
+* insert CRMIArtifactContributors
+
+// ── Profile mit MII-Elternprofil ─────────────────────────────────────────────
+//
+// Drei Profile leiten nicht von einer nackten FHIR-Ressource ab, sondern von
+// einem Profil eines Nachbarmoduls:
+//
+//   MII_PR_Seltene_ClinicalDiagnosis   → base   .../modul-diagnose/…/Diagnose
+//   MII_PR_Seltene_GeneticDiagnosis    → base   .../modul-diagnose/…/Diagnose
+//   MII_PR_Seltene_Therapieempfehlung  → medikation .../MedicationRequest
+//
+// Deren StructureDefinition traegt bereits 14 eigene Metadaten-Extensions, und
+// SUSHI setzt die des Kindes AUF DIESE DRAUF: ^extension[+] zaehlt ab dem
+// geerbten Bestand, trifft indexweise auf fremde value[x]-Typen und erzeugt
+// "multiple choice value assignments for choice element
+// StructureDefinition.extension.value[x]" (gemessen 2026-09-11: 7 Fehler).
+//
+// Deshalb beanspruchen diese drei nur die CRMI-Profile und verzichten auf die
+// Metadaten-Extensions — die kommen ohnehin vom Elternprofil.
+//
+// ACHTUNG, offener Punkt fuer den Ballot: dadurch tragen sie die Metadaten des
+// ELTERNMODULS. Die publizierte rc1 nennt bei allen dreien
+// artifact-author = julian.sass@charite.de, also den Autor von base, nicht den
+// dieses Moduls. Das ist aelter als diese Aenderung und in FSH nicht sauber zu
+// ueberschreiben: ein geerbtes valueCoding laesst sich nicht durch ein
+// valueCode am selben Index ersetzen, ohne dass beide stehen bleiben. Zu
+// klaeren ist, ob ein abgeleitetes Profil die Metadaten seines Elternmoduls
+// ueberhaupt erben sollte — die Frage gehoert nach oben, nicht in dieses Modul.
+
+RuleSet: CRMIProfileMetadataInherited
+* insert CRMIShareableStructureDefinition
+* insert CRMIPublishableStructureDefinition
+
+RuleSet: CRMICapabilityStatementMetadata
+* insert CRMIShareableCapabilityStatement
+* insert CRMIPublishableCapabilityStatement
+* insert CRMIKnowledgeCapabilitiesCapabilityStatement
+* insert CRMIArtifactUsageCapabilityStatement
+* insert CRMIVersionPolicyStrictInstance
+* insert CRMIApprovalDateInstance(2026-09-02)
+* insert CRMIArtifactTopicInstance(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C4873)
+* insert CRMIArtifactContributorsInstance

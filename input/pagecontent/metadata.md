@@ -98,11 +98,40 @@ Not enabled in this scaffold, but prepared as commented blocks in
   [CRMI Manifest Parameters](https://hl7.org/fhir/uv/crmi/STU2/en/StructureDefinition-crmi-manifestparameters.html)
   resource and the `path-expansion-params` / `pin-manifest` parameters.
 
-> [TODO: Enable the blocks your module needs and then update the tables above.
-> If your module also applies the CRMI shareable/publishable profiles to its own
-> StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets — the
-> `kerndatensatz-basis` idiom is a shared `RuleSet` in
-> [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/input/fsh/rulesets/crmi.fsh) — add the corresponding rows here.]
+##### CRMI profiles on the module's own artefacts
+
+Since 2026-09-11 every artefact of this module claims the matching CRMI profiles
+and carries the same governance metadata as the `ImplementationGuide` itself. The
+rules live in [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/input/fsh/rulesets/crmi.fsh),
+ported from `kerndatensatz-basis`, and are applied through one composite rule set
+per artefact type:
+
+| Artefact type | Claimed CRMI profiles | Count |
+|---|---|---|
+| Profiles, extensions, logical model | `crmi-shareablestructuredefinition`, `crmi-publishablestructuredefinition` | 29 |
+| ValueSets | `crmi-shareablevalueset`, `crmi-publishablevalueset` | 29 |
+| CodeSystems | `crmi-shareablecodesystem`, `crmi-publishablecodesystem` | 6 |
+| CapabilityStatement | `crmi-shareablecapabilitystatement`, `crmi-publishablecapabilitystatement` | 1 |
+
+Alongside the profile claim each artefact carries `cqf-knowledgeCapability`,
+`artifact-usage`, `artifact-versionPolicy`, `resource-approvalDate`,
+`artifact-topic` and the contributor extensions, so an artefact read on its own —
+outside the guide — still states who is responsible for it and what it is for.
+
+`crmi-computablevalueset` is deliberately **not** claimed: it requires a compose
+definition that not every value set of this module has, and `kerndatensatz-basis`
+likewise claims it on only one of fourteen.
+
+> **Open point for the ballot:** three profiles derive from a profile of a
+> neighbouring module — the two diagnosis profiles from the `Diagnose` profile of
+> `kerndatensatz-base`, the therapy recommendation from the `MedicationRequest`
+> profile of `kerndatensatz-medikation`. A derived `StructureDefinition` inherits
+> the metadata extensions of its parent, and those name the **parent module's**
+> author. These three therefore claim only the CRMI profiles and do not restate
+> the metadata: a value of a different type cannot be overwritten at the same
+> extension index without both remaining in place. Whether a derived profile
+> should inherit its parent module's governance metadata at all is a question for
+> the MII-wide conventions, not for this module.
 {: .ig-highlight .ig-highlight-grey}
 
 ##### CodeSystem supplements

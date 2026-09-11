@@ -5,6 +5,8 @@ Title:       "MII PR SE Blutgruppe"
 Description: "Observation-Profil für die Erfassung der Blutgruppe (AB0 und Rhesusfaktor) im Kontext seltener Erkrankungen"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIProfileMetadata
+* ^experimental = false
 
 * id MS
 * meta MS

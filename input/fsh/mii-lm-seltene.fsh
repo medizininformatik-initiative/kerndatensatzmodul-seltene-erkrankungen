@@ -21,6 +21,8 @@ Description: "MII LogicalModel Modul Seltene Erkraknungen"
 // soziodemographie, pros, patho, studie); die zehn mit LogicalModel/<Name>
 // nehmen stattdessen die eine Publisher-Meldung in Kauf. Wir tun dasselbe
 // und erklaeren sie per special-url in sushi-config.yaml.
+* insert CRMILogicalModelMetadata
+* ^experimental = false
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
 * anamneseUndDiagnostik 0..* BackboneElement "Diagnose"
   * untersuchungsdatum 0..1 date "Untersuchungsdatum" "Datum der durchgeführten Untersuchung eines SE-Patienten."

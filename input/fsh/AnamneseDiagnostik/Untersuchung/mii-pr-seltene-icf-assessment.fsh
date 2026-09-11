@@ -128,6 +128,8 @@ Title:       "MII PR SE ICF Assessment"
 Description: "Observation profile grading a single ICF category for a patient, as required by the JARDIN MDS draft and the ERDRI-CDS. Observation.code carries the ICF category; the WHO qualifiers are carried as components, because body structures take three of them and activities/participation take two (capacity and performance)."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIProfileMetadata
+* ^experimental = false
 * obeys mii-icf-1 and mii-icf-2 and mii-icf-3 and mii-icf-4 and mii-icf-5
 
 * id MS
@@ -230,6 +232,7 @@ Title:       "MII CS SE ICF Qualifier Kind"
 Description: "Names which ICF qualifier a component carries. This is a slot name, not a scale — the scales themselves are the seven BfArM code systems. Defined locally because neither the ICF nor BfArM publishes identifiers for the qualifier positions, and because capacity and performance share one scale and can only be told apart here."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMICodeSystemMetadata
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal"
 * ^status = #active
 * ^experimental = false
@@ -253,6 +256,7 @@ Title:       "MII VS SE ICF Qualifier Kind"
 Description: "All qualifier kinds usable as a component code in the ICF assessment profile."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIValueSetMetadata
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf-beurteilungsmerkmal"
 * ^status = #active
 * ^experimental = false
@@ -265,6 +269,7 @@ Title:       "MII VS SE ICF Categories"
 Description: "All categories of the WHO International Classification of Functioning, Disability and Health. Defined intensionally over the whole classification rather than enumerated: which categories are relevant depends entirely on the disease, and any curated subset would be wrong for the next rare disease. German display text comes from the BfArM language supplement, so the value set does not need a German twin."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIValueSetMetadata
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf"
 * ^status = #active
 * ^experimental = false

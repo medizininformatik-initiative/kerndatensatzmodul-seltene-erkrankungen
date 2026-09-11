@@ -5,6 +5,8 @@ Title: "MII PR SE Therapieempfehlung Systemische Therapie"
 Description: "Therapieempfehlung für eine medikamentöse Systemische Therapie"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIProfileMetadataInherited
+* ^experimental = false
 * ^status = #active
 
 * status ^short = "active | on-hold | cancelled | completed | entered-in-error | stopped | draft | unknown"

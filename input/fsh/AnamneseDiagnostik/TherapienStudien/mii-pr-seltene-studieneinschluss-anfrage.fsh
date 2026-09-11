@@ -5,6 +5,8 @@ Title: "MII PR SE Studieneinschluss Anfrage"
 Description: "Anfrage zum Studieneinschluss"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIProfileMetadata
+* ^experimental = false
 * ^status = #active
 
 * status MS

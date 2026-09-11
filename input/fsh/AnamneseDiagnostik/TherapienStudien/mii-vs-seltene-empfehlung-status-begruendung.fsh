@@ -3,4 +3,6 @@ Id: mii-vs-seltene-empfehlung-status-begruendung
 Title: "MII VS SE Empfehlung Status Begründung"
 Description: "ValueSet für Begründung bei fehlender Empfehlung"
 * insert PR_CS_VS_Version
+* insert CRMIValueSetMetadata
+* ^experimental = false
 * include codes from system MII_CS_Seltene_Empfehlung_StatusBegruendung

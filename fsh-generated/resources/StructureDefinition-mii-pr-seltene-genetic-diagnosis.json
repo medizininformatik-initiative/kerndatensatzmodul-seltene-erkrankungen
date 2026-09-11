@@ -1,6 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-pr-seltene-genetic-diagnosis",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
+    ]
+  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
@@ -117,6 +123,7 @@
   "name": "MII_PR_Seltene_GeneticDiagnosis",
   "title": "MII PR SE Genetic Diagnosis",
   "status": "active",
+  "experimental": false,
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {

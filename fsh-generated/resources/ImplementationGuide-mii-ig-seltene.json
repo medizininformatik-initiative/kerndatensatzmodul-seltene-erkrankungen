@@ -1097,6 +1097,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-ex-seltene-von-se-betroffen"
+        },
+        "name": "MII EX SE Von SE betroffen",
+        "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Patient/mii-exa-seltene-patient"
         },
         "name": "MII EXA SE Beispielpatient",
@@ -1501,14 +1509,6 @@
         },
         "exampleBoolean": false,
         "name": "mii-param-seltene-manifest"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-ex-seltene-von-se-betroffen"
-        },
-        "name": "MII_EX_Seltene_VonSEBetroffen",
-        "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
-        "exampleBoolean": false
       },
       {
         "reference": {

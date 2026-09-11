@@ -5,6 +5,8 @@ Title: "MII PR SE Therapieempfehlung Kombinationstherapie"
 Description: "Therapieempfehlung für eine medikamentöse Kombinationstherapie"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIProfileMetadata
+* ^experimental = false
 * ^status = #active
 
 * identifier MS
