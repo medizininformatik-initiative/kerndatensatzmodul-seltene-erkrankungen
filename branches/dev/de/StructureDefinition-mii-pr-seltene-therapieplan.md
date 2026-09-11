@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_PR_Seltene_Therapieplan |
+| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_PR_Seltene_Therapieplan |
 
  
 Therapieplan 
@@ -132,7 +132,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "name" : "MII_PR_Seltene_Therapieplan",
   "title" : "MII PR SE Therapieplan",
   "status" : "active",
-  "date" : "2026-09-09T11:49:20+00:00",
+  "date" : "2026-09-11T10:52:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

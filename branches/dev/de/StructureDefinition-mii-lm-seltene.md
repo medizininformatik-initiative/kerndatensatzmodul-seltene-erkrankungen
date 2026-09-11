@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_LM_Seltene |
+| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_LM_Seltene |
 
  
 MII LogicalModel Modul Seltene Erkraknungen 
@@ -85,7 +85,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
   "name" : "MII_LM_Seltene",
   "title" : "MII LM SE",
   "status" : "active",
-  "date" : "2026-09-09T11:49:20+00:00",
+  "date" : "2026-09-11T10:52:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -324,6 +324,17 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       "max" : "*",
       "type" : [{
         "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "Seltene.anamneseUndDiagnostik.genetischeDiagnose.omimCode",
+      "path" : "Seltene.anamneseUndDiagnostik.genetischeDiagnose.omimCode",
+      "short" : "OMIM-Code",
+      "definition" : "Kennung der Erkrankung in Online Mendelian Inheritance in Man. Ergaenzt die Kodierung aus dem Modul Diagnose um die genspezifische Zuordnung; fuer monogene Erkrankungen praeziser als ICD-10-GM.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
       }]
     },
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Seltene_GeneticDiagnosis |
+| Active as of 2026-09-11 | *Computable Name*:MII_PR_Seltene_GeneticDiagnosis |
 
  
 Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and links to MolGen variant/diagnostic implication resources. This profile is used when a rare disease diagnosis has been confirmed through genetic testing. 
@@ -153,7 +153,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
   "name" : "MII_PR_Seltene_GeneticDiagnosis",
   "title" : "MII PR SE Genetic Diagnosis",
   "status" : "active",
-  "date" : "2026-09-09T11:49:20+00:00",
+  "date" : "2026-09-11T10:52:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -227,13 +227,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
     "element" : [{
       "id" : "Condition",
       "path" : "Condition",
-      "constraint" : [{
-        "key" : "se-genetic-evidence",
-        "severity" : "error",
-        "human" : "Genetic diagnosis must have at least one evidence.detail referencing a MolGen resource",
-        "expression" : "evidence.exists() and evidence.detail.exists()",
-        "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
-      }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
         "map" : "anamneseUndDiagnostik.genetischeDiagnose",
@@ -282,7 +275,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "id" : "Condition.category",
       "path" : "Condition.category",
       "short" : "Kategorisierung als genetische Erkrankung",
-      "definition" : "Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung",
+      "definition" : "Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung. Bewusste Nutzung der extensible-Bindung von Condition.category: Der Wert bezeichnet nicht die Rolle im Datensatz, sondern macht die genetische Sicherung registeruebergreifend auswertbar.",
       "min" : 1,
       "patternCodeableConcept" : {
         "coding" : [{
@@ -334,6 +327,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
         "identity" : "SE-LogicalModel",
         "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "OMIM-Code Diagnose"
+      },
+      {
+        "identity" : "SE-LogicalModel",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.omimCode",
+        "comment" : "OMIM-Code der Erkrankung"
       }]
     },
     {

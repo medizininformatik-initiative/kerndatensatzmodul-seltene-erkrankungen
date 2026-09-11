@@ -303,6 +303,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li><a href="#genetische-diagnose" id="markdown-toc-genetische-diagnose">Genetische Diagnose</a>        <ul>
           <li><a href="#verwendung-1" id="markdown-toc-verwendung-1">Verwendung</a></li>
           <li><a href="#besonderheiten-1" id="markdown-toc-besonderheiten-1">Besonderheiten</a></li>
+          <li><a href="#warum-die-kategorie-sich-unterscheidet" id="markdown-toc-warum-die-kategorie-sich-unterscheidet">Warum die Kategorie sich unterscheidet</a></li>
         </ul>
       </li>
       <li><a href="#paralleles-diagnosemodell" id="markdown-toc-paralleles-diagnosemodell">Paralleles Diagnosemodell</a></li>
@@ -362,9 +363,9 @@ das ValueSet der HPO-Phänotypcodes</li>
   <li><strong>Verifikationsstatus</strong>: Vom Profil <strong>nicht</strong> eingeschränkt (0..1, geerbte required-
 Bindung an <code class="language-plaintext highlighter-rouge">condition-ver-status</code>); empfohlen "provisional" oder "differential",
 solange die genetische Bestätigung aussteht</li>
-  <li><strong>Kategorie</strong>: <code class="language-plaintext highlighter-rouge">category</code> ist Pflicht (1..*), der Wert bleibt frei. Er beschreibt die
-Rolle im Record (<code class="language-plaintext highlighter-rouge">problem-list-item</code> oder <code class="language-plaintext highlighter-rouge">encounter-diagnosis</code>), nicht die Art der
-Erkrankung — eine modulweite Bindung an Krankheitsarten wäre hier fachlich falsch.</li>
+  <li><strong>Kategorie</strong>: <code class="language-plaintext highlighter-rouge">category</code> ist Pflicht (1..<em>), der Wert bleibt frei — üblich sind
+<code class="language-plaintext highlighter-rouge">problem-list-item</code> oder <code class="language-plaintext highlighter-rouge">encounter-diagnosis</code>. Warum die genetische Diagnose das
+anders handhabt, steht weiter unten unter *Warum die Kategorie sich unterscheidet</em>.</li>
 </ul>
 
 <h3 id="strukturvergleich">Strukturvergleich</h3>
@@ -400,6 +401,61 @@ empfohlen sind die MolGen-Ressourcen:
   <li><strong>Genetische Zusatzinformation</strong>: Extension <code class="language-plaintext highlighter-rouge">penetrance</code></li>
   <li><strong>Kategorie</strong>: PFLICHT: <code class="language-plaintext highlighter-rouge">782964007 | Genetic disease |</code> zur eindeutigen Kennzeichnung</li>
 </ul>
+
+<h3 id="warum-die-kategorie-sich-unterscheidet">Warum die Kategorie sich unterscheidet</h3>
+
+<p>Die beiden Profile behandeln <code class="language-plaintext highlighter-rouge">category</code> ungleich, und das ist erklärungsbedürftig:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th><code class="language-plaintext highlighter-rouge">category</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Klinische Diagnose</td>
+      <td>Pflicht, Wert frei</td>
+    </tr>
+    <tr>
+      <td>Genetische Diagnose</td>
+      <td>Pflicht, fester Wert <code class="language-plaintext highlighter-rouge">782964007 \| Genetic disease \|</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">Condition.category</code> beantwortet in FHIR die Frage nach der <strong>Rolle der Condition im
+Datensatz</strong> — der Kurztext des Elements lautet wörtlich <code class="language-plaintext highlighter-rouge">problem-list-item |
+encounter-diagnosis</code>. Die Art der Erkrankung gehört dagegen in <code class="language-plaintext highlighter-rouge">Condition.code</code>.</p>
+
+<p>Die klinische Diagnose folgt dem: Sie verlangt eine Kategorie, schreibt aber keinen Wert
+vor. Die genetische Diagnose setzt zusätzlich einen festen Code — <strong>bewusst</strong>, und zwar
+aus zwei Gründen.</p>
+
+<p><strong>Es ist zulässig.</strong> <code class="language-plaintext highlighter-rouge">Condition.category</code> ist <code class="language-plaintext highlighter-rouge">0..*</code> und <strong>extensible</strong> an
+<code class="language-plaintext highlighter-rouge">condition-category</code> gebunden. Eine extensible Bindung erlaubt ausdrücklich Codes
+außerhalb des ValueSets, wenn keiner der enthaltenen passt; die FHIR-Spezifikation merkt
+am Element selbst an, die Kategorisierung sei „often highly contextual".</p>
+
+<p><strong>Es ist nötig.</strong> Ob eine Erkrankung genetisch gesichert ist, steht nicht in
+<code class="language-plaintext highlighter-rouge">Condition.code</code> — dort steht die Erkrankung selbst — und lässt sich daraus auch nicht
+herleiten, weil dieselbe Erkrankung klinisch oder genetisch gesichert sein kann. Genau
+diese Unterscheidung trägt das Modul in zwei getrennten Profilen; <code class="language-plaintext highlighter-rouge">category</code> macht sie
+für eine registerübergreifende Suche auswertbar.</p>
+
+<p>Abzugrenzen vom zurückgezogenen ValueSet <code class="language-plaintext highlighter-rouge">mii-vs-seltene-clinical-diagnosis-category</code>:
+Das band <code class="language-plaintext highlighter-rouge">category</code> modulweit an Krankheitsarten <em>anstelle</em> der Rolle und beantwortete
+damit die falsche Frage. Hier geht es um ein einzelnes, begründetes Zusatzmerkmal.</p>
+
+<blockquote class="ig-highlight ig-highlight-blue">
+  <p><strong>Offener Punkt für die Ballotierung.</strong> <code class="language-plaintext highlighter-rouge">patternCodeableConcept</code> auf einem
+wiederholbaren Element verlangt, dass <em>jede</em> Wiederholung dem Muster entspricht. Eine
+zweite Kategorie — etwa <code class="language-plaintext highlighter-rouge">encounter-diagnosis</code> für die Rolle im Datensatz — ist damit
+derzeit unzulässig, und alle Beispiele führen folgerichtig nur diesen einen Wert.
+Sauberer wäre ein offener Slice, der <code class="language-plaintext highlighter-rouge">782964007</code> verlangt und weitere Kategorien
+zulässt. Das ändert die publizierte Constraint-Form und steht deshalb zur Kommentierung.</p>
+</blockquote>
 
 <h2 id="paralleles-diagnosemodell">Paralleles Diagnosemodell</h2>
 
@@ -625,7 +681,7 @@ allein über den Status:</p>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 11:49+0000">2026-09-09</span>
+          Erstellt <span title="Fri, Sep 11, 2026 10:52+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

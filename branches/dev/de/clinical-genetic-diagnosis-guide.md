@@ -32,7 +32,7 @@ Die klinische Diagnose wird verwendet, wenn:
 * **HPO-Codes**: Zusätzlicher Slice `code.coding[hpo]` (0..*), required gebunden an das ValueSet der HPO-Phänotypcodes
 * **Phänotypische Evidenz**: Evidence.detail verweist auf HPO-kodierte Symptom-Observations
 * **Verifikationsstatus**: Vom Profil **nicht** eingeschränkt (0..1, geerbte required- Bindung an `condition-ver-status`); empfohlen "provisional" oder "differential", solange die genetische Bestätigung aussteht
-* **Kategorie**: `category` ist Pflicht (1..*), der Wert bleibt frei. Er beschreibt die Rolle im Record (`problem-list-item` oder `encounter-diagnosis`), nicht die Art der Erkrankung — eine modulweite Bindung an Krankheitsarten wäre hier fachlich falsch.
+* **Kategorie**: `category` ist Pflicht (1..**), der Wert bleibt frei — üblich sind `problem-list-item` oder `encounter-diagnosis`. Warum die genetische Diagnose das anders handhabt, steht weiter unten unter *Warum die Kategorie sich unterscheidet**.
 
 ### Strukturvergleich
 
@@ -61,6 +61,27 @@ Die genetische Diagnose wird verwendet, wenn:
 * **Verifikationsstatus**: Vom Profil **nicht** eingeschränkt; empfohlen "confirmed"
 * **Genetische Zusatzinformation**: Extension `penetrance`
 * **Kategorie**: PFLICHT: `782964007 | Genetic disease |` zur eindeutigen Kennzeichnung
+
+### Warum die Kategorie sich unterscheidet
+
+Die beiden Profile behandeln `category` ungleich, und das ist erklärungsbedürftig:
+
+| | |
+| :--- | :--- |
+| Klinische Diagnose | Pflicht, Wert frei |
+| Genetische Diagnose | Pflicht, fester Wert`782964007 \| Genetic disease \|` |
+
+`Condition.category` beantwortet in FHIR die Frage nach der **Rolle der Condition im Datensatz** — der Kurztext des Elements lautet wörtlich `problem-list-item | encounter-diagnosis`. Die Art der Erkrankung gehört dagegen in `Condition.code`.
+
+Die klinische Diagnose folgt dem: Sie verlangt eine Kategorie, schreibt aber keinen Wert vor. Die genetische Diagnose setzt zusätzlich einen festen Code — **bewusst**, und zwar aus zwei Gründen.
+
+**Es ist zulässig.** `Condition.category` ist `0..*` und **extensible** an `condition-category` gebunden. Eine extensible Bindung erlaubt ausdrücklich Codes außerhalb des ValueSets, wenn keiner der enthaltenen passt; die FHIR-Spezifikation merkt am Element selbst an, die Kategorisierung sei „often highly contextual".
+
+**Es ist nötig.** Ob eine Erkrankung genetisch gesichert ist, steht nicht in `Condition.code` — dort steht die Erkrankung selbst — und lässt sich daraus auch nicht herleiten, weil dieselbe Erkrankung klinisch oder genetisch gesichert sein kann. Genau diese Unterscheidung trägt das Modul in zwei getrennten Profilen; `category` macht sie für eine registerübergreifende Suche auswertbar.
+
+Abzugrenzen vom zurückgezogenen ValueSet `mii-vs-seltene-clinical-diagnosis-category`: Das band `category` modulweit an Krankheitsarten **anstelle** der Rolle und beantwortete damit die falsche Frage. Hier geht es um ein einzelnes, begründetes Zusatzmerkmal.
+
+> **Offener Punkt für die Ballotierung.** `patternCodeableConcept` auf einem wiederholbaren Element verlangt, dass **jede** Wiederholung dem Muster entspricht. Eine zweite Kategorie — etwa `encounter-diagnosis` für die Rolle im Datensatz — ist damit derzeit unzulässig, und alle Beispiele führen folgerichtig nur diesen einen Wert. Sauberer wäre ein offener Slice, der `782964007` verlangt und weitere Kategorien zulässt. Das ändert die publizierte Constraint-Form und steht deshalb zur Kommentierung.
 
 ## Paralleles Diagnosemodell
 

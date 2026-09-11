@@ -297,7 +297,8 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-        "code" : "C4873"
+        "code" : "C4873",
+        "display" : "Rare Disorder"
       }]
     }
   }],
@@ -3865,7 +3866,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-seltene-nbs-target-analyte"
       },
       "name" : "MII VS Seltene Erkrankungen NBS Leitanalyten der Zielkrankheiten",
-      "description" : "Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie § 17 Abs. 1 (20 Zielkrankheiten) und § 23 ff. (Mukoviszidose). Je Zielkrankheit der Analyt, über den sie im Screening erkannt wird.",
+      "description" : "Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie § 17 Abs. 1 (20 Zielkrankheiten) und 23 ff. (Mukoviszidose). Je Zielkrankheit der Analyt, über den sie im Screening erkannt wird.",
       "exampleBoolean" : false
     },
     {

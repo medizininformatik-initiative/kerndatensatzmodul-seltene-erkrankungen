@@ -376,9 +376,9 @@ HPO phenotype code value set</li>
   <li><strong>Verification status</strong>: <strong>not</strong> constrained by the profile (0..1, inherited required
 binding to <code class="language-plaintext highlighter-rouge">condition-ver-status</code>); "provisional" or "differential" are recommended
 while genetic confirmation is pending</li>
-  <li><strong>Category</strong>: <code class="language-plaintext highlighter-rouge">category</code> is mandatory (1..*), but its value is not fixed. It states the
-role in the record (<code class="language-plaintext highlighter-rouge">problem-list-item</code> or <code class="language-plaintext highlighter-rouge">encounter-diagnosis</code>), not the kind of
-disease — a module-wide binding to disease kinds would be conceptually wrong here.</li>
+  <li><strong>Category</strong>: <code class="language-plaintext highlighter-rouge">category</code> is mandatory (1..<em>) but its value is not fixed — typically
+<code class="language-plaintext highlighter-rouge">problem-list-item</code> or <code class="language-plaintext highlighter-rouge">encounter-diagnosis</code>. Why the genetic diagnosis handles this
+differently is explained below under *Why the category differs</em>.</li>
 </ul>
 
 <h4 id="structural-comparison">Structural comparison</h4>
@@ -416,6 +416,61 @@ the MolGen resources are recommended:
   <li><strong>Additional genetic information</strong>: <code class="language-plaintext highlighter-rouge">penetrance</code> extension</li>
   <li><strong>Category</strong>: MANDATORY: <code class="language-plaintext highlighter-rouge">782964007 | Genetic disease |</code> for unambiguous labeling</li>
 </ul>
+
+<h4 id="why-the-category-differs">Why the category differs</h4>
+
+<p>The two profiles treat <code class="language-plaintext highlighter-rouge">category</code> differently, and that deserves an explanation:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th><code class="language-plaintext highlighter-rouge">category</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Clinical diagnosis</td>
+      <td>mandatory, value free</td>
+    </tr>
+    <tr>
+      <td>Genetic diagnosis</td>
+      <td>mandatory, fixed value <code class="language-plaintext highlighter-rouge">782964007 \| Genetic disease \|</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In FHIR, <code class="language-plaintext highlighter-rouge">Condition.category</code> answers the question of the <strong>condition's role in the
+record</strong> — the element's short text reads literally <code class="language-plaintext highlighter-rouge">problem-list-item |
+encounter-diagnosis</code>. The kind of disease belongs in <code class="language-plaintext highlighter-rouge">Condition.code</code>.</p>
+
+<p>The clinical diagnosis follows that: it requires a category but prescribes no value. The
+genetic diagnosis additionally fixes a code — <strong>deliberately</strong>, for two reasons.</p>
+
+<p><strong>It is permitted.</strong> <code class="language-plaintext highlighter-rouge">Condition.category</code> is <code class="language-plaintext highlighter-rouge">0..*</code> and bound <strong>extensibly</strong> to
+<code class="language-plaintext highlighter-rouge">condition-category</code>. An extensible binding explicitly allows codes outside the value set
+where none of them fits; FHIR itself notes on the element that the categorization is
+"often highly contextual".</p>
+
+<p><strong>It is needed.</strong> Whether a disease is genetically confirmed is not stated in
+<code class="language-plaintext highlighter-rouge">Condition.code</code> — that carries the disease itself — and cannot be derived from it,
+because the same disease may be confirmed clinically or genetically. The module carries
+that distinction in two separate profiles; <code class="language-plaintext highlighter-rouge">category</code> makes it searchable across
+registries.</p>
+
+<p>To be distinguished from the retired value set
+<code class="language-plaintext highlighter-rouge">mii-vs-seltene-clinical-diagnosis-category</code>: that bound <code class="language-plaintext highlighter-rouge">category</code> module-wide to kinds
+of disease <em>instead of</em> the record role, and so answered the wrong question. This is a
+single, reasoned additional marker.</p>
+
+<blockquote class="ig-highlight ig-highlight-blue">
+  <p><strong>Open point for the ballot.</strong> <code class="language-plaintext highlighter-rouge">patternCodeableConcept</code> on a repeating element requires
+<em>every</em> repetition to match the pattern. A second category — <code class="language-plaintext highlighter-rouge">encounter-diagnosis</code> for
+the record role, say — is therefore not currently allowed, and all examples accordingly
+carry only this one value. An open slice requiring <code class="language-plaintext highlighter-rouge">782964007</code> while admitting further
+categories would be cleaner. That changes the published constraint shape and is
+therefore put up for comment.</p>
+</blockquote>
 
 <h3 id="parallel-diagnosis-model">Parallel diagnosis model</h3>
 
@@ -644,7 +699,7 @@ clinical diagnosis, finding → genetic diagnosis, investigation → examination
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 9, 2026 11:49+0000">2026-09-09</span>
+          Generated <span title="Fri, Sep 11, 2026 10:52+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hueftumfang | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Seltene_Hueftumfang |
+| Active as of 2026-09-11 | *Computable Name*:MII_PR_Seltene_Hueftumfang |
 
  
 Profil zur Dokumentation des Hüftumfangs (maximale Gesäßprotuberanz) eines Patienten. Relevant für seltene Erkrankungen mit Auswirkungen auf die Körperproportionen, metabolische Erkrankungen oder Skelettdysplasien. 
@@ -74,7 +74,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-hu
   "name" : "MII_PR_Seltene_Hueftumfang",
   "title" : "MII PR SE Hüftumfang",
   "status" : "active",
-  "date" : "2026-09-09T11:49:20+00:00",
+  "date" : "2026-09-11T10:52:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
