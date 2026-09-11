@@ -158,11 +158,25 @@ Publisher mit `path-expansion-params` und `pin-manifest` darauf hin. Lesende wie
 Werkzeuge haben dann eine stabile Stelle, an der die Parameter für Expansion und
 Paket-Pinnung einsehbar sind.
 
-> [TODO: Ergänzen Sie das Manifest Ihres Moduls (siehe die auskommentierten
-> Blöcke in `sushi-config.yaml`) und verlinken Sie hier die erzeugte
-> `Parameters`-Seite — oder halten Sie ausdrücklich fest, dass dieses Modul
-> keine Expansions-Parameter pinnt.]
-{: .ig-highlight .ig-highlight-grey}
+Dieses Modul pinnt seine Expansionsparameter. Das Saatgut liegt in
+`input/resources/Parameters-expansion-manifest.json`, der Publisher füllt es während
+des Builds, und das Ergebnis erscheint als
+[`mii-param-seltene-manifest`](Parameters-mii-param-seltene-manifest.html) — 253
+Parameter in dieser Auflage. Verlinkt ist es aus dem `ImplementationGuide` über
+`cqf-expansionParameters` und dem Publisher über `path-expansion-params` und
+`pin-manifest` benannt.
+
+Das Saatgut pinnt die beiden Dinge, die der Build nicht selbst herleiten kann:
+
+* **SNOMED CT** auf die International Edition, Version `20260701` — dieselbe
+  Ausgabe, die `kerndatensatz-base` und `kerndatensatz-molgen` auf der 2027er
+  Linie pinnen, damit ein Code über die Module einer Auflage hinweg dasselbe
+  bedeutet.
+* das CodeSystem der **Artefakt-Versionspolitik** auf `3.0.0`.
+
+Alles Weitere im publizierten Manifest ist die Mitschrift des Builds über das, was
+er aufgelöst hat — und damit die Stelle, an der nachzusehen ist, wenn eine
+Expansion exakt reproduziert werden soll.
 
 #### Bezug zu FAIR
 
@@ -214,11 +228,11 @@ dauerhaft identifizierter FAIR-Datensatz behauptet.
 | R1.3 | RDA-R1.3-01D | Daten entsprechen einem Community-Standard | Die Beispiele deklarieren die Profile dieses Moduls. Produktiv muss die Konformität gegen Profile, Bindings und CapabilityStatement-Erwartungen validiert werden. |
 | R1.3 | RDA-R1.3-02M | Metadaten sind gemäß einem Community-Standard maschinenverständlich | CRMI-konforme FHIR-Metadaten als JSON/XML und als FHIR-Paket im NPM-Format des IG-Publisher-Ökosystems. |
 
-> [TODO: Die Tabelle führt die Indikatoren der Priorität *Essential* auf. Wenn
-> Ihr Modul die vollständige Selbsteinschätzung will, ergänzen Sie die
-> Indikatoren der Prioritäten *Important* und *Useful* — `kerndatensatz-basis`
-> führt die vollständige Tabelle.]
-{: .ig-highlight .ig-highlight-grey}
+Die Tabelle führt bewusst nur die Indikatoren der Priorität *Essential* auf.
+Die Indikatoren *Important* und *Useful* werden hier nicht bewertet: Dieser Abschnitt
+ist eine informative Selbsteinschätzung, und eine längere Tabelle würde ein Maß an
+förmlicher Prüfung nahelegen, das nicht stattgefunden hat. Die vollständige Tabelle
+führt `kerndatensatz-basis` für Module, die das ganze Bild wollen.
 
 #### Praktische Nutzung
 
