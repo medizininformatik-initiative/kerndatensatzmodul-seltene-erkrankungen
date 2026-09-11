@@ -137,11 +137,19 @@ extension:
     valueMarkdown: "Use this ImplementationGuide resource as a computable definition of all the parts of the corresponding module of the Medical Informatics Initiative core data set."
   - url: http://hl7.org/fhir/StructureDefinition/artifact-purpose
     valueMarkdown: "Provide the computable publication unit for the MII Core Dataset Seltene Erkrankungen (rare diseases) module, enabling implementers to discover, validate, version, and apply the specification consistently."
+  # Thema des Artefakts. meta fuehrt hier C80260 "Infrastructure", was fuer ein
+  # Infrastrukturmodul stimmt; fuer dieses Modul ist C4873 "Rare Disorder" die
+  # zutreffende Wahl. Am 2026-09-11 gegen die NCI-EVS-API geprueft — der Code
+  # existiert und bedeutet genau das. Das display steht jetzt dabei: Der
+  # IG Publisher meldet den Code als unbekannt, weil tx.fhir.org den
+  # NCI-Thesaurus nicht fuehrt (wie HPO und MONDO), und ohne display saehe ein
+  # Leser nur "C4873".
   - url: http://hl7.org/fhir/StructureDefinition/artifact-topic
     valueCodeableConcept:
       coding:
         - system: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
-          code: "C4873" # Rare Disorder (NCI Thesaurus) — TODO:REVIEW Gate A
+          code: "C4873"
+          display: "Rare Disorder"
 dependencies:
   # ── Quell-Abhängigkeiten (unverändert übernommen; floating Pins der Quelle
   # (2026.0.x / 1.5.x) sind auf die am 2026-08-28 aufgelösten Registry-Stände
