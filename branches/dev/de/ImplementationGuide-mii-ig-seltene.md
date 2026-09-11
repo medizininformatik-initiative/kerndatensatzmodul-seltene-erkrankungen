@@ -3120,6 +3120,22 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-mii-ex-seltene-von-se-betroffen.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/mii-ex-seltene-von-se-betroffen"
+      },
+      "name" : "MII EX SE Von SE betroffen",
+      "description" : "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
       },
       {
@@ -3930,22 +3946,6 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
         "reference" : "Parameters/mii-param-seltene-manifest"
       },
       "name" : "mii-param-seltene-manifest",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "StructureDefinition-mii-ex-seltene-von-se-betroffen.html"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/mii-ex-seltene-von-se-betroffen"
-      },
-      "name" : "MII_EX_Seltene_VonSEBetroffen",
-      "description" : "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
       "exampleBoolean" : false
     },
     {

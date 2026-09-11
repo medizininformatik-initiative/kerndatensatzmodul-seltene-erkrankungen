@@ -129,7 +129,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Katalogeintrag des Registers (Library nach mii-pr-studie-register)","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "mii-ex-seltene-von-se-betroffen","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Extension","Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","MII EX SE Von SE betroffen","Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "mii-ex-seltene-von-se-betroffen","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}

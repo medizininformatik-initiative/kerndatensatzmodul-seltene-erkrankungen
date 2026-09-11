@@ -14,7 +14,7 @@
 
 Profile: [MII PR SE Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md) version: 2027.0.0-ballot.rc1
 
-**MII_EX_Seltene_VonSEBetroffen**: Unknown
+**MII EX SE Von SE betroffen**: Unknown
 
 **status**: Completed
 

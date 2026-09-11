@@ -2099,6 +2099,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-ex-seltene-von-se-betroffen"/>
+      </reference>
+      <name value="MII EX SE Von SE betroffen"/>
+      <description value="Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Patient"/>
       </extension>
       <reference>
@@ -2655,17 +2666,6 @@
         <reference value="Parameters/mii-param-seltene-manifest"/>
       </reference>
       <name value="mii-param-seltene-manifest"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/mii-ex-seltene-von-se-betroffen"/>
-      </reference>
-      <name value="MII_EX_Seltene_VonSEBetroffen"/>
-      <description value="Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

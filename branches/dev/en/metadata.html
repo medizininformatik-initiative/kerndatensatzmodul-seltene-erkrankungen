@@ -538,12 +538,66 @@ together with a
 resource and the <code class="language-plaintext highlighter-rouge">path-expansion-params</code> / <code class="language-plaintext highlighter-rouge">pin-manifest</code> parameters.</li>
 </ul>
 
+<h5 id="crmi-profiles-on-the-modules-own-artefacts">CRMI profiles on the module's own artefacts</h5>
+
+<p>Since 2026-09-11 every artefact of this module claims the matching CRMI profiles
+and carries the same governance metadata as the <code class="language-plaintext highlighter-rouge">ImplementationGuide</code> itself. The
+rules live in <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/input/fsh/rulesets/crmi.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code></a>,
+ported from <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code>, and are applied through one composite rule set
+per artefact type:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artefact type</th>
+      <th>Claimed CRMI profiles</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Profiles, extensions, logical model</td>
+      <td><code class="language-plaintext highlighter-rouge">crmi-shareablestructuredefinition</code>, <code class="language-plaintext highlighter-rouge">crmi-publishablestructuredefinition</code></td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>ValueSets</td>
+      <td><code class="language-plaintext highlighter-rouge">crmi-shareablevalueset</code>, <code class="language-plaintext highlighter-rouge">crmi-publishablevalueset</code></td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>CodeSystems</td>
+      <td><code class="language-plaintext highlighter-rouge">crmi-shareablecodesystem</code>, <code class="language-plaintext highlighter-rouge">crmi-publishablecodesystem</code></td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>CapabilityStatement</td>
+      <td><code class="language-plaintext highlighter-rouge">crmi-shareablecapabilitystatement</code>, <code class="language-plaintext highlighter-rouge">crmi-publishablecapabilitystatement</code></td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Alongside the profile claim each artefact carries <code class="language-plaintext highlighter-rouge">cqf-knowledgeCapability</code>,
+<code class="language-plaintext highlighter-rouge">artifact-usage</code>, <code class="language-plaintext highlighter-rouge">artifact-versionPolicy</code>, <code class="language-plaintext highlighter-rouge">resource-approvalDate</code>,
+<code class="language-plaintext highlighter-rouge">artifact-topic</code> and the contributor extensions, so an artefact read on its own —
+outside the guide — still states who is responsible for it and what it is for.</p>
+
+<p><code class="language-plaintext highlighter-rouge">crmi-computablevalueset</code> is deliberately <strong>not</strong> claimed: it requires a compose
+definition that not every value set of this module has, and <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code>
+likewise claims it on only one of fourteen.</p>
+
 <blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Enable the blocks your module needs and then update the tables above.
-If your module also applies the CRMI shareable/publishable profiles to its own
-StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets — the
-<code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> idiom is a shared <code class="language-plaintext highlighter-rouge">RuleSet</code> in
-<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/input/fsh/rulesets/crmi.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code></a> — add the corresponding rows here.]</p>
+  <p><strong>Open point for the ballot:</strong> three profiles derive from a profile of a
+neighbouring module — the two diagnosis profiles from the <code class="language-plaintext highlighter-rouge">Diagnose</code> profile of
+<code class="language-plaintext highlighter-rouge">kerndatensatz-base</code>, the therapy recommendation from the <code class="language-plaintext highlighter-rouge">MedicationRequest</code>
+profile of <code class="language-plaintext highlighter-rouge">kerndatensatz-medikation</code>. A derived <code class="language-plaintext highlighter-rouge">StructureDefinition</code> inherits
+the metadata extensions of its parent, and those name the <strong>parent module's</strong>
+author. These three therefore claim only the CRMI profiles and do not restate
+the metadata: a value of a different type cannot be overwritten at the same
+extension index without both remaining in place. Whether a derived profile
+should inherit its parent module's governance metadata at all is a question for
+the MII-wide conventions, not for this module.</p>
 </blockquote>
 
 <h5 id="codesystem-supplements">CodeSystem supplements</h5>
@@ -846,7 +900,7 @@ metadata.</p>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 11, 2026 12:45+0000">2026-09-11</span>
+          Generated <span title="Fri, Sep 11, 2026 14:10+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

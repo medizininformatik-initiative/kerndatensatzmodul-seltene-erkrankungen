@@ -58,7 +58,7 @@
     },
     {
       "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-von-se-betroffen",
-      "title": "MII_EX_Seltene_VonSEBetroffen",
+      "title": "MII EX SE Von SE betroffen",
       "types": [
         "CodeableConcept"
       ]
@@ -145,29 +145,45 @@
       "FamilyMemberHistory.condition.code.coding"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-author": [
+      "CapabilityStatement",
+      "CodeSystem",
       "ImplementationGuide",
-      "StructureDefinition"
+      "StructureDefinition",
+      "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-editor": [
+      "CapabilityStatement",
+      "CodeSystem",
       "ImplementationGuide",
-      "StructureDefinition"
+      "StructureDefinition",
+      "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-endorser": [
+      "CapabilityStatement",
+      "CodeSystem",
       "ImplementationGuide",
-      "StructureDefinition"
+      "StructureDefinition",
+      "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-purpose": [
       "ImplementationGuide"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-reviewer": [
+      "CapabilityStatement",
+      "CodeSystem",
       "ImplementationGuide",
-      "StructureDefinition"
+      "StructureDefinition",
+      "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-topic": [
+      "CapabilityStatement",
+      "CodeSystem",
       "ImplementationGuide",
-      "StructureDefinition"
+      "StructureDefinition",
+      "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-usage": [
+      "CapabilityStatement",
       "ImplementationGuide",
       "StructureDefinition"
     ],
@@ -176,8 +192,11 @@
       "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy": [
+      "CapabilityStatement",
+      "CodeSystem",
       "ImplementationGuide",
-      "StructureDefinition"
+      "StructureDefinition",
+      "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/bodySite": [
       "Condition.bodySite"
@@ -199,8 +218,11 @@
       "ImplementationGuide"
     ],
     "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability": [
+      "CapabilityStatement",
+      "CodeSystem",
       "ImplementationGuide",
-      "StructureDefinition"
+      "StructureDefinition",
+      "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
@@ -230,8 +252,11 @@
       "ServiceRequest"
     ],
     "http://hl7.org/fhir/StructureDefinition/resource-approvalDate": [
+      "CapabilityStatement",
+      "CodeSystem",
       "ImplementationGuide",
-      "StructureDefinition"
+      "StructureDefinition",
+      "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod": [
       "ImplementationGuide",
