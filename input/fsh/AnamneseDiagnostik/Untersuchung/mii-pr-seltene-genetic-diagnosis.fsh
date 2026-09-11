@@ -76,13 +76,22 @@ Description: "Profile for genetically confirmed diagnosis of rare diseases with 
 * extension[penetrance] ^short = "Penetranz der genetischen Variante"
 * extension[penetrance] ^definition = "Angabe zur Penetranz der genetischen Variante bei dieser Erkrankung"
 
-// Apply invariant to ensure genetic evidence
-* obeys se-genetic-evidence
-
-Invariant: se-genetic-evidence
-Description: "Genetic diagnosis must have at least one evidence.detail referencing a MolGen resource"
-Expression: "evidence.exists() and evidence.detail.exists()"
-Severity: #error
+// Die Invariante se-genetic-evidence ist am 2026-09-11 entfallen (Hinweis aus
+// dem Review). Sie lautete:
+//   Expression: "evidence.exists() and evidence.detail.exists()"
+// und war vollstaendig redundant: evidence ist in diesem Profil 1..*, und
+// evidence.detail ebenfalls 1..*. Beide Teilbedingungen sind damit schon durch
+// die Kardinalitaeten erzwungen — die Invariante konnte nie greifen, ohne dass
+// zuvor schon die Kardinalitaet verletzt gewesen waere.
+//
+// Ihre Beschreibung behauptete zudem mehr, als der Ausdruck pruefte ("at least
+// one evidence.detail referencing a MolGen resource"): weder der Ausdruck noch
+// das Profil binden evidence.detail an ein MolGen-Profil, targetProfile ist
+// generisch Observation | DiagnosticReport. Eine Constraint, die etwas anderes
+// verspricht als sie prueft, ist schlechter als keine.
+//
+// Entfernen aendert das Verhalten nicht: Was die Invariante forderte, fordern
+// die Kardinalitaeten weiterhin.
 
 // Mapping to Logical Model
 Mapping: FHIR-SE-GeneticDiagnosis

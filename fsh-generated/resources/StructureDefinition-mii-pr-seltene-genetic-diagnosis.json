@@ -147,15 +147,6 @@
       {
         "id": "Condition",
         "path": "Condition",
-        "constraint": [
-          {
-            "key": "se-genetic-evidence",
-            "severity": "error",
-            "human": "Genetic diagnosis must have at least one evidence.detail referencing a MolGen resource",
-            "expression": "evidence.exists() and evidence.detail.exists()",
-            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
-          }
-        ],
         "mapping": [
           {
             "identity": "SE-LogicalModel",

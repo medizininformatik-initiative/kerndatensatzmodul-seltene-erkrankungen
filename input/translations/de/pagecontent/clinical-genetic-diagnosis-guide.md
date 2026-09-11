@@ -25,9 +25,9 @@ Die klinische Diagnose wird verwendet, wenn:
 - **Verifikationsstatus**: Vom Profil **nicht** eingeschränkt (0..1, geerbte required-
   Bindung an `condition-ver-status`); empfohlen "provisional" oder "differential",
   solange die genetische Bestätigung aussteht
-- **Kategorie**: `category` ist Pflicht (1..*), der Wert bleibt frei. Er beschreibt die
-  Rolle im Record (`problem-list-item` oder `encounter-diagnosis`), nicht die Art der
-  Erkrankung — eine modulweite Bindung an Krankheitsarten wäre hier fachlich falsch.
+- **Kategorie**: `category` ist Pflicht (1..*), der Wert bleibt frei — üblich sind
+  `problem-list-item` oder `encounter-diagnosis`. Warum die genetische Diagnose das
+  anders handhabt, steht weiter unten unter *Warum die Kategorie sich unterscheidet*.
 
 ### Strukturvergleich
 
@@ -55,6 +55,29 @@ Die genetische Diagnose wird verwendet, wenn:
 - **Verifikationsstatus**: Vom Profil **nicht** eingeschränkt; empfohlen "confirmed"
 - **Genetische Zusatzinformation**: Extension `penetrance`
 - **Kategorie**: PFLICHT: `782964007 | Genetic disease |` zur eindeutigen Kennzeichnung
+
+### Warum die Kategorie sich unterscheidet
+
+Die beiden Profile behandeln `category` ungleich, und das ist erklärungsbedürftig:
+
+| | `category` |
+|---|---|
+| Klinische Diagnose | Pflicht, Wert frei |
+| Genetische Diagnose | Pflicht, fester Wert `782964007 \| Genetic disease \|` |
+
+`Condition.category` beantwortet in FHIR die Frage nach der **Rolle der Condition im
+Datensatz** — der Kurztext des Elements lautet wörtlich `problem-list-item |
+encounter-diagnosis`. Die Art der Erkrankung gehört dagegen in `Condition.code`.
+
+Die klinische Diagnose folgt dem: Sie verlangt eine Kategorie, schreibt aber keinen
+Wert vor. Die genetische Diagnose setzt stattdessen einen festen Code, der eine
+Krankheitsart bezeichnet — sie nutzt das Feld also anders, als FHIR es vorsieht.
+
+Das ist ein bekannter offener Punkt. Aus demselben Grund wurde das ValueSet
+`mii-vs-seltene-clinical-diagnosis-category` im September 2026 zurückgezogen: Es band
+`category` an Krankheitsarten und beantwortete damit die falsche Frage. Der feste Wert
+der genetischen Diagnose ist seit 2026.0.1 publiziert und in Gebrauch; ob er bleibt,
+wird im Rahmen der Ballotierung entschieden.
 
 ## Paralleles Diagnosemodell
 

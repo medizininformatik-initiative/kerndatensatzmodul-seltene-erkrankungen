@@ -25,9 +25,9 @@ The clinical diagnosis is used when:
 - **Verification status**: **not** constrained by the profile (0..1, inherited required
   binding to `condition-ver-status`); "provisional" or "differential" are recommended
   while genetic confirmation is pending
-- **Category**: `category` is mandatory (1..*), but its value is not fixed. It states the
-  role in the record (`problem-list-item` or `encounter-diagnosis`), not the kind of
-  disease — a module-wide binding to disease kinds would be conceptually wrong here.
+- **Category**: `category` is mandatory (1..*) but its value is not fixed — typically
+  `problem-list-item` or `encounter-diagnosis`. Why the genetic diagnosis handles this
+  differently is explained below under *Why the category differs*.
 
 #### Structural comparison
 
@@ -57,6 +57,28 @@ The genetic diagnosis is used when:
 - **Verification status**: **not** constrained by the profile; "confirmed" is recommended
 - **Additional genetic information**: `penetrance` extension
 - **Category**: MANDATORY: `782964007 | Genetic disease |` for unambiguous labeling
+
+#### Why the category differs
+
+The two profiles treat `category` differently, and that deserves an explanation:
+
+| | `category` |
+|---|---|
+| Clinical diagnosis | mandatory, value free |
+| Genetic diagnosis | mandatory, fixed value `782964007 \| Genetic disease \|` |
+
+In FHIR, `Condition.category` answers the question of the **condition's role in the
+record** — the element's short text reads literally `problem-list-item |
+encounter-diagnosis`. The kind of disease belongs in `Condition.code`.
+
+The clinical diagnosis follows that: it requires a category but prescribes no value. The
+genetic diagnosis instead fixes a code denoting a kind of disease — using the field
+differently from what FHIR intends.
+
+This is a known open point. The value set `mii-vs-seltene-clinical-diagnosis-category`
+was retired in September 2026 for exactly this reason: it bound `category` to kinds of
+disease and so answered the wrong question. The genetic diagnosis's fixed value has been
+published since 2026.0.1 and is in use; whether it stays is a question for the ballot.
 
 ### Parallel diagnosis model
 
