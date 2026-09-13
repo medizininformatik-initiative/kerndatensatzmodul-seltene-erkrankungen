@@ -79,7 +79,19 @@
 // HL7 Gender Harmony already provided the standard and MII_PR_Person_Patient
 // already provided the place, so the point was referred to the base module
 // instead of modelled here. For this one, neither existed. Should a more
-// general module take it on, it belongs there.
+// general module take it on, it belongs there — a module for SYMPTOMS AND THE
+// CLINICAL PHENOTYPE is the natural candidate, and the module's own information
+// model already draws one (information-model/logical-model-uml.pu names the
+// package MII_Modul_Symptom_klinischer_Phaenotyp as the parent of this module's
+// symptom artifacts).
+//
+// Since 2026-09-13 this reasoning is no longer buried in a source comment: the
+// intro note of this profile states it for READERS of the guide, in both
+// languages, and invites ballot comments on it.
+//   input/intro-notes/StructureDefinition-mii-pr-seltene-icf-assessment-intro.md
+//   input/translations/de/intro-notes/…-intro.md
+// It also carries the two other open points above (package availability, which
+// edition) and the SERVER GAP. Keep the two in step when any of them moves.
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
