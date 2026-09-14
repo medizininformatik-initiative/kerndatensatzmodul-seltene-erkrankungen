@@ -1,4 +1,4 @@
-# Echokardiographie - Mitralklappeninsuffizienz - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# Echokardiographie - Mitralklappeninsuffizienz - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

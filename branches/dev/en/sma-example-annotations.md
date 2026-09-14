@@ -1,4 +1,4 @@
-# Case Example Spinal Muscular Atrophy (SMA) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# Case Example Spinal Muscular Atrophy (SMA) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Case Example Spinal Muscular Atrophy (SMA)**

@@ -1,4 +1,4 @@
-# MII PR SE Therapieempfehlung Kombinationstherapie - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# MII PR SE Therapieempfehlung Kombinationstherapie - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-kombination | *Version*:2027.0.0-ballot.rc1 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-kombination | *Version*:2027.0.0-ballot |
 | Active as of 2026-09-14 | *Computable Name*:MII_PR_Seltene_Therapieempfehlung_Kombination |
 
  
@@ -138,12 +138,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-kombination",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Seltene_Therapieempfehlung_Kombination",
   "title" : "MII PR SE Therapieempfehlung Kombinationstherapie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T08:42:11+00:00",
+  "date" : "2026-09-14T10:17:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

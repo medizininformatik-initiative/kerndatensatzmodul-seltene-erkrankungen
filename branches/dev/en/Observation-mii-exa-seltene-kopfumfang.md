@@ -1,4 +1,4 @@
-# Kopfumfang Beispiel - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# Kopfumfang Beispiel - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR SE Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR SE Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md) version: 2027.0.0-ballot
 
 **status**: Final
 
@@ -35,7 +35,7 @@ Profile: [MII PR SE Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md
   "resourceType" : "Observation",
   "id" : "mii-exa-seltene-kopfumfang",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang|2027.0.0-ballot"]
   },
   "status" : "final",
   "category" : [{

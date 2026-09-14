@@ -1,4 +1,4 @@
-# Beispiel Geburtsgewicht - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# Beispiel Geburtsgewicht - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR SE Geburtsgewicht](StructureDefinition-mii-pr-seltene-geburtsgewicht.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR SE Geburtsgewicht](StructureDefinition-mii-pr-seltene-geburtsgewicht.md) version: 2027.0.0-ballot
 
 **status**: Final
 
@@ -35,7 +35,7 @@ Profile: [MII PR SE Geburtsgewicht](StructureDefinition-mii-pr-seltene-geburtsge
   "resourceType" : "Observation",
   "id" : "mii-exa-seltene-geburtsgewicht",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geburtsgewicht|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geburtsgewicht|2027.0.0-ballot"]
   },
   "status" : "final",
   "category" : [{

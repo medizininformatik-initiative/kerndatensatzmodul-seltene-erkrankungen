@@ -1,4 +1,4 @@
-# MII Example SE Symptom Condition - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# MII Example SE Symptom Condition - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII Profile SE Symptom Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md) version: 2027.0.0-ballot.rc1
+Profile: [MII Profile SE Symptom Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md) version: 2027.0.0-ballot
 
 **clinicalStatus**: Active
 
@@ -55,7 +55,7 @@ Patient reports progressive muscle weakness affecting daily activities, particul
   "resourceType" : "Condition",
   "id" : "mii-exa-seltene-symptom-condition",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition|2027.0.0-ballot"]
   },
   "clinicalStatus" : {
     "coding" : [{

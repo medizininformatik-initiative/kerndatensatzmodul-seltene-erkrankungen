@@ -1,6 +1,6 @@
 {
   "package": "de.medizininformatikinitiative.kerndatensatz.seltene",
-  "version": "2027.0.0-ballot.rc1",
+  "version": "2027.0.0-ballot",
   "fhirVersion": "4.0.1",
   "jurisdiction": "DE",
   "extensions": [
@@ -136,9 +136,8 @@
       "FamilyMemberHistory.condition.code.coding"
     ],
     "http://fhir.de/StructureDefinition/lebensphase": [
-      "Condition.onset[x]",
-      "Condition.onset[x].end",
-      "Condition.onset[x].start"
+      "Condition.abatement[x]",
+      "Condition.onset[x]"
     ],
     "http://fhir.de/StructureDefinition/seitenlokalisation": [
       "Condition.code.coding",
@@ -244,9 +243,6 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/package-source": [
       "ImplementationGuide"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/regex": [
-      "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/StructureDefinition/request-statusReason": [
       "ServiceRequest"

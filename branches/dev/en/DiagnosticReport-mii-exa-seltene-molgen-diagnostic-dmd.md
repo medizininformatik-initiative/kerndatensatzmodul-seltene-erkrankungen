@@ -1,4 +1,4 @@
-# DMD Exon 45-47 - Diagnostische Implikation (Becker) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# DMD Exon 45-47 - Diagnostische Implikation (Becker) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

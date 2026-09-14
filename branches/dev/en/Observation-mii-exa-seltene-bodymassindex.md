@@ -1,4 +1,4 @@
-# Body Mass Index (BMI) Example - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# Body Mass Index (BMI) Example - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [Body Mass Index (BMI) of the patient](StructureDefinition-mii-pr-seltene-bodymassindex.md) version: 2027.0.0-ballot.rc1
+Profile: [Body Mass Index (BMI) of the patient](StructureDefinition-mii-pr-seltene-bodymassindex.md) version: 2027.0.0-ballot
 
 **status**: Final
 
@@ -35,7 +35,7 @@ Profile: [Body Mass Index (BMI) of the patient](StructureDefinition-mii-pr-selte
   "resourceType" : "Observation",
   "id" : "mii-exa-seltene-bodymassindex",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-bodymassindex|2027.0.0-ballot"]
   },
   "status" : "final",
   "category" : [{

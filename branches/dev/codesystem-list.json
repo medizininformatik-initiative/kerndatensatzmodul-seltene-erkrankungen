@@ -1,7 +1,7 @@
 {
   "codeSystems" : [{
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-empfehlung-status-begruendung",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot",
     "status" : "active",
     "name" : "MII_CS_Seltene_Empfehlung_StatusBegruendung",
     "title" : "MII CS SE Empfehlung Status Begründung",
@@ -12,19 +12,19 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-hpo-change-status",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot",
     "status" : "active",
     "name" : "MII_CS_Seltene_HPO_ChangeStatus",
     "title" : "MII CS Seltene Erkrankungen HPO Change Status",
     "description" : "CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit. Eigene Codes des Moduls: HPO führt für diesen Zweck nichts. Sein Zweig Clinical course (HP:0031797) beschreibt den Verlauf der Krankheit — Onset, Pace of progression, Temporal pattern, Disease remission —, nicht die Veränderung eines einzelnen Phänotyps zwischen zwei Erhebungen. Vier der fünf Konzepte haben SNOMED-CT-Entsprechungen, die je Code unten angegeben sind; für newly-added führt SNOMED kein generisches Konzept.",
     "uses" : {
     },
-    "ValueSet-mii-vs-seltene-symptom-change-status-combined.html" : "MII VS Seltene Erkrankungen Symptom Change Status (Combined)",
-    "ValueSet-mii-vs-seltene-hpo-change-status.html" : "MII VS Seltene Erkrankungen HPO Change Status"
+    "ValueSet-mii-vs-seltene-hpo-change-status.html" : "MII VS Seltene Erkrankungen HPO Change Status",
+    "ValueSet-mii-vs-seltene-symptom-change-status-combined.html" : "MII VS Seltene Erkrankungen Symptom Change Status (Combined)"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot",
     "status" : "active",
     "name" : "MII_CS_Seltene_ICFBeurteilungsmerkmal",
     "title" : "MII CS SE ICF Qualifier Kind",
@@ -35,7 +35,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot",
     "status" : "active",
     "name" : "MII_CS_Seltene_NARSE_Therapietyp",
     "title" : "MII CS Seltene Erkrankungen NARSE Therapietyp",
@@ -46,7 +46,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot",
     "status" : "active",
     "name" : "MII_CS_Seltene_TherapieempfehlungStrategie",
     "title" : "MII CS SE Therapieempfehlung Strategie",
@@ -54,12 +54,12 @@
     "uses" : {
     },
     "ValueSet-mii-vs-seltene-therapieempfehlung-strategie-medikamentoes.html" : "MII VS SE Therapieempfehlung Strategie - Medikamentös",
-    "ValueSet-mii-vs-seltene-therapieempfehlung-strategie.html" : "MII VS SE Therapieempfehlung Strategie",
-    "ValueSet-mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes.html" : "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös"
+    "ValueSet-mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes.html" : "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
+    "ValueSet-mii-vs-seltene-therapieempfehlung-strategie.html" : "MII VS SE Therapieempfehlung Strategie"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot",
     "status" : "active",
     "name" : "MII_CS_Seltene_TherapieempfehlungTyp",
     "title" : "MII CS SE Therapieempfehlung Typ",

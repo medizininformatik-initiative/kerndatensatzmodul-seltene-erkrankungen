@@ -1,4 +1,4 @@
-# ICF example — body function (chapter b), one qualifier - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# ICF example — body function (chapter b), one qualifier - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR SE ICF Assessment](StructureDefinition-mii-pr-seltene-icf-assessment.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR SE ICF Assessment](StructureDefinition-mii-pr-seltene-icf-assessment.md) version: 2027.0.0-ballot
 
 **status**: Final
 
@@ -40,7 +40,7 @@ Profile: [MII PR SE ICF Assessment](StructureDefinition-mii-pr-seltene-icf-asses
   "resourceType" : "Observation",
   "id" : "mii-exa-seltene-icf-koerperfunktion",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment|2027.0.0-ballot"]
   },
   "status" : "final",
   "category" : [{

@@ -1,4 +1,4 @@
-# Case Example Marfan Syndrome - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# Case Example Marfan Syndrome - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Case Example Marfan Syndrome**

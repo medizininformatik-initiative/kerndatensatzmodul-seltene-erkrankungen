@@ -1,4 +1,4 @@
-# Klinische Beurteilung - Erstvorstellung - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# Klinische Beurteilung - Erstvorstellung - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII Profile SE Clinical Impression](StructureDefinition-mii-pr-seltene-clinical-impression.md) version: 2027.0.0-ballot.rc1
+Profile: [MII Profile SE Clinical Impression](StructureDefinition-mii-pr-seltene-clinical-impression.md) version: 2027.0.0-ballot
 
 **status**: Completed
 
@@ -61,7 +61,7 @@ Klinisches Bild vereinbar mit SMA Typ 1. Molekulargenetische Bestätigung ausste
   "resourceType" : "ClinicalImpression",
   "id" : "mii-exa-seltene-clinical-impression-erstvorstellung",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression|2027.0.0-ballot"]
   },
   "status" : "completed",
   "subject" : {

@@ -1,4 +1,4 @@
-# Home - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# Home - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_IG_Seltene_Erkrankungen |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-13 | *Computable Name*:MII_IG_Seltene_Erkrankungen |
 
 This specification describes the FHIR representation of the Core Data Set (KDS) module Rare Diseases (Seltene Erkrankungen) of the German Medical Informatics Initiative (MII). The following pages describe the module's use cases as well as the associated FHIR profiles and terminology resources in their binding form.
 

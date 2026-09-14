@@ -1,4 +1,4 @@
-# Studieneinschlussempfehlung - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# Studieneinschlussempfehlung - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR SE Studieneinschluss Anfrage](StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR SE Studieneinschluss Anfrage](StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.md) version: 2027.0.0-ballot
 
 **status**: Active
 
@@ -42,7 +42,7 @@ Pruefung des Einschlusses in eine laufende Studie zur Gentherapie empfohlen.
   "resourceType" : "ServiceRequest",
   "id" : "mii-exa-seltene-studieneinschluss-anfrage",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage|2027.0.0-ballot"]
   },
   "status" : "active",
   "intent" : "proposal",

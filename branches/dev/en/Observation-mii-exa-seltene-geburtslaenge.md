@@ -1,4 +1,4 @@
-# Beispiel Geburtslänge - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# Beispiel Geburtslänge - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR SE Geburtslänge](StructureDefinition-mii-pr-seltene-geburtslaenge.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR SE Geburtslänge](StructureDefinition-mii-pr-seltene-geburtslaenge.md) version: 2027.0.0-ballot
 
 **status**: Final
 
@@ -35,7 +35,7 @@ Profile: [MII PR SE Geburtslänge](StructureDefinition-mii-pr-seltene-geburtslae
   "resourceType" : "Observation",
   "id" : "mii-exa-seltene-geburtslaenge",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geburtslaenge|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-geburtslaenge|2027.0.0-ballot"]
   },
   "status" : "final",
   "category" : [{

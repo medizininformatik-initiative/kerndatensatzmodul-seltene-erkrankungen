@@ -1,4 +1,4 @@
-# MII EX SE Penetrance - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# MII EX SE Penetrance - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance | *Version*:2027.0.0-ballot.rc1 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance | *Version*:2027.0.0-ballot |
 | Active as of 2026-09-14 | *Computable Name*:MII_EX_Seltene_Penetrance |
 
 Extension to capture the penetrance of genetic variants associated with a rare disease
@@ -134,12 +134,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-pe
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_EX_Seltene_Penetrance",
   "title" : "MII EX SE Penetrance",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T08:42:11+00:00",
+  "date" : "2026-09-14T10:17:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

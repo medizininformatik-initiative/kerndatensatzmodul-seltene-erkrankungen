@@ -1,4 +1,4 @@
-# Taillenumfang Beispiel - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# Taillenumfang Beispiel - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR SE Taillenumfang](StructureDefinition-mii-pr-seltene-taillenumfang.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR SE Taillenumfang](StructureDefinition-mii-pr-seltene-taillenumfang.md) version: 2027.0.0-ballot
 
 **status**: Final
 
@@ -35,7 +35,7 @@ Profile: [MII PR SE Taillenumfang](StructureDefinition-mii-pr-seltene-taillenumf
   "resourceType" : "Observation",
   "id" : "mii-exa-seltene-taillenumfang",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-taillenumfang|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-taillenumfang|2027.0.0-ballot"]
   },
   "status" : "final",
   "category" : [{

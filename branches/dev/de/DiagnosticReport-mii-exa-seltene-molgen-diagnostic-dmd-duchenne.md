@@ -1,4 +1,4 @@
-# DMD Exon 45 - Diagnostische Implikation (Duchenne) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# DMD Exon 45 - Diagnostische Implikation (Duchenne) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
