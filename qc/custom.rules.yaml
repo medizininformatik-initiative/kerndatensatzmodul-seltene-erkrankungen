@@ -25,7 +25,7 @@
   # MUSS mit sushi-config.yaml:version und rulesets/version.fsh uebereinstimmen.
   # Stand 2026-09-03: 2027.0.0-ballot.rc1. Die Liste stand bis dahin auf
   # 2026.0.0 und meldete deshalb jede Ressource als fehlerhaft versioniert.
-  predicate: version.exists() and (version in ('2027.0.0-ballot.rc1'))
+  predicate: version.exists() and (version in ('2027.0.0-ballot'))
   error-message: "version not filled (correctly)"
   files:
     - /**/*.xml

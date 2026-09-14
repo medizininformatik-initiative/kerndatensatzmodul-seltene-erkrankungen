@@ -119,7 +119,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis",
-  "version": "2027.0.0-ballot.rc1",
+  "version": "2027.0.0-ballot",
   "name": "MII_PR_Seltene_ClinicalDiagnosis",
   "title": "MII PR SE Clinical Diagnosis",
   "status": "active",
@@ -304,11 +304,6 @@
             "comment": "Feststellungsdatum klinische SE-Diagnose"
           }
         ]
-      },
-      {
-        "id": "Condition.abatement[x]",
-        "path": "Condition.abatement[x]",
-        "mustSupport": true
       },
       {
         "id": "Condition.recorder",

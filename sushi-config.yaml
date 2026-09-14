@@ -21,11 +21,14 @@ description: "FHIR profiles for representing rare disease data (phenotyping, fam
 status: active # draft | active | retired | unknown
 # MII CalVer YYYY.n.n; Ziel-Version 2027.0.0-ballot = User-Entscheid 2026-08-28
 # (Quelle: 2026.0.1). Analog Modul Bildgebung.
-version: "2027.0.0-ballot.rc1"
+version: "2027.0.0-ballot"
 packageId: de.medizininformatikinitiative.kerndatensatz.seltene
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: "2022+"
-releaseLabel: ci-build # Quelle gewinnt (2027.0.0-ballot.rc1 ist kein formales Release)
+releaseLabel: ballot # Ballotfassung. Bis 2027.0.0-ballot.rc1 stand hier ci-build,
+                     # was fuer eine formale Publikation falsch ist. kerndatensatz-base
+                     # fuehrt fuer seine Ballotfassung ebenfalls status=ballot und
+                     # Release-Label=ballot (geprueft 2026-09-13 im dortigen QA-Report).
 # Gate A ① (A-1) ENTSCHIEDEN am 2026-08-31 durch den Modulverantwortlichen:
 # CC-BY-4.0. Die Quelle deklarierte auf IG-Ebene nirgends eine Lizenz (kein Feld
 # in sushi-config/package.json, keine LICENSE-Datei, kein Impressums-Statement);
@@ -47,7 +50,7 @@ license: CC-BY-4.0
 # Nicht zu verwechseln mit approvalDate weiter unten: das steht auf 2026-09-02
 # und bezeichnet den Tag, an dem der Inhalt freigegeben wurde, nicht den Tag der
 # Veroeffentlichung. Beide duerfen auseinanderliegen und tun es hier.
-date: "2026-09-09" # Publikationstag des rc1; am 2026-09-07 gesetzt, nachgezogen als sich der Tag verschob
+date: "2026-09-13" # Publikationstag der Ballotfassung
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # package.json nutzt m49#276 (ebenfalls DE) — Template-Idiom übernommen
 publisher:
   name: Medizininformatik Initiative
@@ -197,13 +200,13 @@ dependencies:
   # Umstellung nennt keine erzeugte Ressource mehr modul-icu. Spart 124
   # Ressourcen im Restore. Die Begruendung im Kopf jenes Profils.
   # war 2026.0.0
-  de.medizininformatikinitiative.kerndatensatz.meta: 2027.0.0-ballot.rc3
+  de.medizininformatikinitiative.kerndatensatz.meta: 2027.0.0-ballot
   # Quelle: 2026.0.x
   de.medizininformatikinitiative.kerndatensatz.molgen: 2027.0.0-ballot.1
   # war 2026.0.2
   de.medizininformatikinitiative.kerndatensatz.studie: 2027.0.0-ballot.rc1
   # war 2026.0.1
-  de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot.rc1
+  de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot
   # Quelle: 2026.0.x
   de.medizininformatikinitiative.kerndatensatz.medikation: 2027.0.0-ballot
   # ── Template-Maschinerie (Gate A dokumentiert, Skill Schritt 3) ────────────
@@ -211,8 +214,12 @@ dependencies:
   hl7.fhir.uv.crmi: 2.0.0
   # THO direkt gepinnt — Injection-Guard; 7.3.0 kennt den Code 'package' des
   # artifact-version-policy-CS (behebt die bekannten Baseline-THO-Fehler).
-  hl7.terminology.r4: 7.3.0
-  hl7.fhir.uv.extensions.r4: 5.3.0
+  # THO und Extensions Pack laufen im Gleichschritt mit meta — meta ist dafuer
+  # die Quelle der Wahrheit der Modulfamilie (scripts/meta-pin-drift.mjs prueft
+  # das). Standen bis 2026-09-13 auf 7.3.0 bzw. 5.3.0 und lagen damit VOR meta;
+  # mit meta 2027.0.0-ballot sind es 7.1.0 und 5.2.0. SUSHI 0/0 nach dem Angleich.
+  hl7.terminology.r4: 7.1.0
+  hl7.fhir.uv.extensions.r4: 5.2.0
 pages:
   index.md:
     title: Home

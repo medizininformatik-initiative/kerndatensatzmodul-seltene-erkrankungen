@@ -6,10 +6,10 @@
 // Version des Vorgaengerreleases, neun gar keine. Der Simplifier-QC meldet
 // das als "version not filled (correctly)".
 RuleSet: Version
-* version = "2027.0.0-ballot.rc1"
+* version = "2027.0.0-ballot"
 
 RuleSet: PR_CS_VS_Version
-* ^version = "2027.0.0-ballot.rc1"
+* ^version = "2027.0.0-ballot"
 
 RuleSet: MetaProfile(canonical)
-* meta.profile[+] = "{canonical}|2027.0.0-ballot.rc1"
+* meta.profile[+] = "{canonical}|2027.0.0-ballot"
