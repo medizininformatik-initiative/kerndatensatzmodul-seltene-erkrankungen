@@ -60,7 +60,7 @@ Mandatory: 2 elements(1 nested mandatory element)
 
 This structure refers to these other structures:
 
-* [MII PR Studie Studie (https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.studie@2027.0.0-ballot.rc1&canonical=https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)
+* [MII PR Studie Studie (https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-studie/2027.0.0-ballot/StructureDefinition-mii-pr-studie-studie.html)
 
 **Extensions**
 
@@ -104,7 +104,7 @@ Mandatory: 2 elements(1 nested mandatory element)
 
 This structure refers to these other structures:
 
-* [MII PR Studie Studie (https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.studie@2027.0.0-ballot.rc1&canonical=https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)
+* [MII PR Studie Studie (https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-studie/2027.0.0-ballot/StructureDefinition-mii-pr-studie-studie.html)
 
 **Extensions**
 
@@ -232,7 +232,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "title" : "MII PR SE Studieneinschluss Anfrage",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T14:24:38+00:00",
+  "date" : "2026-09-14T17:50:54+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
