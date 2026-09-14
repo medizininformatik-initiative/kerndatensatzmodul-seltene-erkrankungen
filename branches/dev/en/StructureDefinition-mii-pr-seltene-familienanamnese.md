@@ -259,7 +259,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
   "title" : "MII PR SE Familienanamnese",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T20:28:04+00:00",
+  "date" : "2026-09-14T21:28:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
