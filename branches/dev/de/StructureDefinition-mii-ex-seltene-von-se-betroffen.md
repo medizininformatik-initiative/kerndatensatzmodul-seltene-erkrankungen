@@ -177,7 +177,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-selte
   "title" : "MII EX SE Von SE betroffen",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T17:50:54+00:00",
+  "date" : "2026-09-14T18:57:54+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

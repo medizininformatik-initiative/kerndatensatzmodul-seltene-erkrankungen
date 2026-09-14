@@ -136,7 +136,7 @@ ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Ver
   "title" : "Von SE betroffen Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T17:50:54+00:00",
+  "date" : "2026-09-14T18:57:54+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
