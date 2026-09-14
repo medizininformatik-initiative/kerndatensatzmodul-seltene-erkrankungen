@@ -135,7 +135,8 @@
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-        "code" : "C4873"
+        "code" : "C4873",
+        "display" : "Rare Disorder"
       }]
     }
   }],
@@ -158,7 +159,7 @@
   },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02",
+  "date" : "2026-09-09",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -205,15 +206,15 @@
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_molgen",
-    "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.molgen/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.molgen",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.molgen",
-    "version" : "2026.0.4"
+    "version" : "2027.0.0-ballot.rc2"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_icu",
     "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.icu/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.icu",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.icu",
-    "version" : "2026.0.3"
+    "version" : "2027.0.0-ballot.rc2"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_studie",
@@ -1439,7 +1440,7 @@
         "reference" : "Consent/mii-exa-seltene-register-einwilligung"
       },
       "name" : "Beispiel Einwilligung zur Registerteilnahme",
-      "description" : "Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusaetzliche Huerde.",
+      "description" : "Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusätzliche Huerde.",
       "exampleBoolean" : true
     },
     {
@@ -1678,7 +1679,7 @@
       "reference" : {
         "reference" : "Observation/mii-exa-seltene-molgen-cftr-heterozygous-carrier"
       },
-      "name" : "CFTR F508del - heterozygoter Anlagetraeger",
+      "name" : "CFTR F508del - heterozygoter Anlageträger",
       "description" : "Nur eine CFTR-Mutation nachweisbar; schliesst Mukoviszidose aus",
       "exampleBoolean" : true
     },
@@ -1739,7 +1740,7 @@
         "reference" : "Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45"
       },
       "name" : "DMD Exon 45 Deletion - MolGen Variante",
-      "description" : "Out-of-frame Deletion im DMD-Gen (Exon 45) — fuehrt zu Duchenne",
+      "description" : "Out-of-frame Deletion im DMD-Gen (Exon 45) — führt zu Duchenne",
       "exampleBoolean" : true
     },
     {
@@ -2531,7 +2532,19 @@
         "reference" : "StructureDefinition/mii-ex-seltene-register"
       },
       "name" : "MII EX SE Register",
-      "description" : "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.",
+      "description" : "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug läuft über ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/mii-ex-seltene-von-se-betroffen"
+      },
+      "name" : "MII EX SE Von SE betroffen",
+      "description" : "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
       "exampleBoolean" : false
     },
     {
@@ -2855,7 +2868,7 @@
         "reference" : "ValueSet/mii-vs-seltene-clinical-diagnosis-category"
       },
       "name" : "MII VS SE Clinical Diagnosis Category (retired)",
-      "description" : "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code.",
+      "description" : "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehört in Condition.code.",
       "exampleBoolean" : false
     },
     {
@@ -3095,7 +3108,7 @@
         "reference" : "ValueSet/mii-vs-seltene-nbs-target-analyte"
       },
       "name" : "MII VS Seltene Erkrankungen NBS Leitanalyten der Zielkrankheiten",
-      "description" : "Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie § 17 Abs. 1 (20 Zielkrankheiten) und § 23 ff. (Mukoviszidose). Je Zielkrankheit der Analyt, über den sie im Screening erkannt wird.",
+      "description" : "Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie § 17 Abs. 1 (20 Zielkrankheiten) und 23 ff. (Mukoviszidose). Je Zielkrankheit der Analyt, über den sie im Screening erkannt wird.",
       "exampleBoolean" : false
     },
     {
@@ -3143,18 +3156,6 @@
         "reference" : "Parameters/mii-param-seltene-manifest"
       },
       "name" : "mii-param-seltene-manifest",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/mii-ex-seltene-von-se-betroffen"
-      },
-      "name" : "MII_EX_Seltene_VonSEBetroffen",
-      "description" : "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
       "exampleBoolean" : false
     },
     {
@@ -3466,7 +3467,7 @@
         "reference" : "ServiceRequest/mii-exa-seltene-studieneinschluss-anfrage"
       },
       "name" : "Studieneinschlussempfehlung",
-      "description" : "Empfehlung, den Patienten fuer eine Studie zu evaluieren",
+      "description" : "Empfehlung, den Patienten für eine Studie zu evaluieren",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage"
     },
     {

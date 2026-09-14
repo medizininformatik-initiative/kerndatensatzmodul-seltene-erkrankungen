@@ -1,10 +1,10 @@
-# CFTR F508del - heterozygoter Anlagetraeger - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# CFTR F508del - heterozygoter Anlageträger - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **CFTR F508del - heterozygoter Anlagetraeger**
+* **CFTR F508del - heterozygoter Anlageträger**
 
-## Example Observation: CFTR F508del - heterozygoter Anlagetraeger
+## Example Observation: CFTR F508del - heterozygoter Anlageträger
 
 -------
 

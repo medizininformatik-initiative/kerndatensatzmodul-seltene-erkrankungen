@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-07 | *Computable Name*:MII_PR_Seltene_ClinicalDiagnosis |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Seltene_ClinicalDiagnosis |
 
  
 Profile for clinical diagnosis of rare diseases with HPO phenotype codes. This profile is used for clinically diagnosed rare diseases based on phenotypic presentation. 
@@ -43,6 +43,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
 {
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-seltene-clinical-diagnosis",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
+  },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
@@ -153,7 +157,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
   "name" : "MII_PR_Seltene_ClinicalDiagnosis",
   "title" : "MII PR SE Clinical Diagnosis",
   "status" : "active",
-  "date" : "2026-09-07T01:49:31+00:00",
+  "experimental" : false,
+  "date" : "2026-09-14T01:49:39+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -418,7 +423,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
       "id" : "Condition.evidence.detail",
       "path" : "Condition.evidence.detail",
       "short" : "Reference to the findings supporting or refuting the diagnosis",
-      "comment" : "Typischerweise HPO-kodierte Symptom-Observations; ein DiagnosticReport ist zulaessig, wenn der Beleg ein Befundbericht ist (etwa eine Biopsie).",
+      "comment" : "Typischerweise HPO-kodierte Symptom-Observations; ein DiagnosticReport ist zulässig, wenn der Beleg ein Befundbericht ist (etwa eine Biopsie).",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Observation",

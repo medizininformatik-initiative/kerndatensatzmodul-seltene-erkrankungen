@@ -12,7 +12,7 @@ Im Neugeborenenscreening wird eine Seltene Erkrankung am häufigsten zuerst gefu
 
 ### Die Zielkrankheiten
 
-Die G-BA Kinder-Richtlinie (Fassung vom 15.05.2025, in Kraft seit 01.01.2026) nennt in § 17 Absatz 1 **20 Zielkrankheiten**. Das Screening auf Mukoviszidose ist ein rechtlich eigenständiges Programm nach § 23 ff. und unten separat aufgeführt. Seit Mai 2026 gehören Vitamin-B12-Mangel, Homocystinurie, Propionazidämie und Methylmalonazidurie dazu — vier Ergänzungen, die ältere Übersichten „des deutschen Neugeborenenscreenings" nicht enthalten.
+Die G-BA Kinder-Richtlinie (Fassung vom 15.05.2025, in Kraft seit 01.01.2026) nennt in § 17 Absatz 1 **20 Zielkrankheiten**. Das Screening auf Mukoviszidose ist ein rechtlich eigenständiges Programm nach 23 ff. und unten separat aufgeführt. Seit Mai 2026 gehören Vitamin-B12-Mangel, Homocystinurie, Propionazidämie und Methylmalonazidurie dazu — vier Ergänzungen, die ältere Übersichten „des deutschen Neugeborenenscreenings" nicht enthalten.
 
 Jede Zielkrankheit wird über einen **Leitanalyten** erkannt. Die Zuordnung ist in beide Richtungen nicht 1:1: Propionylcarnitin (C3) ist der Leitanalyt für drei Zielkrankheiten zugleich, während die eine Zielkrankheit „Carnitinzyklusdefekte" drei Analyte braucht. Deshalb enthält das zugehörige ValueSet 21 Codes und nicht 21 Krankheiten.
 
@@ -27,9 +27,9 @@ Jede Zielkrankheit wird über einen **Leitanalyten** erkannt. Die Zuordnung ist 
 | 7 | MCAD-Mangel | Octanoylcarnitin (C8) | `53175-6` | 42 | E71.3 |
 | 8 | LCHAD-Mangel | C16-OH | `50125-4` | 5 | E71.3 |
 | 9 | VLCAD-Mangel | C14:1 | `53191-3` | 26793 | E71.3 |
-| 10 | Carnitinzyklusdefekte — CPT-I | freies Carnitin (C0) | `38481-8` | 156 | E71.3 |
-| 10 | Carnitinzyklusdefekte — CPT-II | Palmitoylcarnitin (C16) | `53199-6` | 157 | E71.3 |
-| 10 | Carnitinzyklusdefekte — CACT | C0/(C16+C18) | `53235-8` | 159 | E71.3 |
+| 10a | Carnitinzyklusdefekte — CPT-I | freies Carnitin (C0) | `38481-8` | 156 | E71.3 |
+| 10b | Carnitinzyklusdefekte — CPT-II | Palmitoylcarnitin (C16) | `53199-6` | 157 | E71.3 |
+| 10c | Carnitinzyklusdefekte — CACT | C0/(C16+C18) | `53235-8` | 159 | E71.3 |
 | 11 | Glutarazidurie Typ I | Glutarylcarnitin (C5-DC) | `45207-8` | 25 | E72.3 |
 | 12 | Isovalerianazidämie | Isovalerylcarnitin (C5) | `42920-9` | 33 | E71.1 |
 | 13 | Tyrosinämie Typ I | Succinylaceton | `53231-7` | 882 | E70.2 |
@@ -50,7 +50,7 @@ Sechs ValueSets gehören zu diesem Modul. Fünf davon sind **aus der LOINC-SNOME
 
 | | | |
 | :--- | :--- | :--- |
-| [NBS-Leitanalyten](ValueSet-mii-vs-seltene-nbs-target-analyte.md) | 21 | kuratiert: § 17 Abs. 1 und § 23 ff. der Richtlinie |
+| [NBS-Leitanalyten](ValueSet-mii-vs-seltene-nbs-target-analyte.md) | 21 | kuratiert: § 17 Abs. 1 und 23 ff. der Richtlinie |
 | [Acylcarnitine in Trockenblut](ValueSet-mii-vs-seltene-nbs-acylcarnitine-dbs.md) | 78 | ECL über die Ontologie |
 | [Aminosäuren in Trockenblut](ValueSet-mii-vs-seltene-nbs-aminoacid-dbs.md) | 96 | ECL über die Ontologie |
 | [Enzymaktivitäten in Trockenblut](ValueSet-mii-vs-seltene-nbs-enzyme-activity-dbs.md) | 34 | ECL über die Ontologie |
@@ -103,7 +103,9 @@ Führt ein Screeningbefund zu einer Diagnose, gehört diese in die Profile diese
 
 ### Grenzen — was LOINC nicht hergibt
 
-Diese Lücken wurden durch Suchen festgestellt, nicht angenommen. Sie sind wichtig, weil an jeder von ihnen sonst ein Code erfunden wird.
+Die Tabelle führt die Codes auf, nach denen dieses Modul gesucht und die es **nicht** gefunden hat. Jeder Eintrag ist unmittelbar gegen LOINC geprüft und nicht erschlossen — „fehlt" heißt also gesucht und nicht vorhanden, nicht bloß uns unbekannt.
+
+Warum das zählt: Wo ein Code fehlt, braucht eine Implementierung trotzdem einen und vergibt ihn lokal. Die Lücken hier zu benennen sorgt dafür, dass dieselbe Lücke an allen Standorten dieselbe Behelfslösung bekommt statt an jedem einen eigenen privaten Code.
 
 | | | |
 | :--- | :--- | :--- |
@@ -124,7 +126,7 @@ Eine methodische Einschränkung: Die Anzeigetexte stammen von tx.fhir.org, das d
 
 ### Quellen
 
-* G-BA Kinder-Richtlinie, Fassung vom 15.05.2025, in Kraft 01.01.2026 — § 17 (Zielkrankheiten), § 23 ff. (Mukoviszidose)
+* G-BA Kinder-Richtlinie, Fassung vom 15.05.2025, in Kraft 01.01.2026 — § 17 (Zielkrankheiten), 23 ff. (Mukoviszidose)
 * LOINC 2.82 über tx.fhir.org
 * LOINC-SNOMED-Edition, Snowstorm-Branch `MAIN/SNOMEDCT-LOINC`, Version 2026-03-21
 * ORPHA 2025 und ICD-10-GM 2026 über den MII-Ontoserver

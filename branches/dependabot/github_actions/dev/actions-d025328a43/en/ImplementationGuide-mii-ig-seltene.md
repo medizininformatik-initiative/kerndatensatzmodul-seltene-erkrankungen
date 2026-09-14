@@ -43,6 +43,17 @@ This IG contains the following dependencies on other IGs.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 > **Where the versions come from.** Every package in the table is pinned directly in [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/sushi-config.yaml) (`dependencies:`) — including `hl7.terminology.r4` (THO) and `hl7.fhir.uv.extensions.r4`, and those two deliberately so: the IG Publisher's [automatic-packages rule](https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages) consults only this guide's **own** dependency list, so without a direct pin every build would silently inject the latest THO/extensions release — a version pinned by the MII meta package alone cannot control the build (verified in the publisher source at the pinned release). A weekly check warns when these two pins drift from what the pinned meta package ships, and the exact versions a concrete build used are recorded in its `qa-versions.json` output.
 
 ### Global Profiles
@@ -57,13 +68,13 @@ This publication includes IP covered under the following statements.
 
 * BfArM - Bundesinstitut für Arzneimittel und Medizinprodukte
 
-* [ATC](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/atc): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MedicationRequest/mii-exa-seltene-therapieempfehlung-losartan-marfan](MedicationRequest-mii-exa-seltene-therapieempfehlung-losartan-marfan.md) and [MedicationStatement/mii-exa-seltene-medication-losartan](MedicationStatement-mii-exa-seltene-medication-losartan.md)
+* [ATC](https://simplifier.net/resolve?scope=de.gematik.ti@1.3.1&canonical=http://fhir.de/CodeSystem/bfarm/atc): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MedicationRequest/mii-exa-seltene-therapieempfehlung-losartan-marfan](MedicationRequest-mii-exa-seltene-therapieempfehlung-losartan-marfan.md) and [MedicationStatement/mii-exa-seltene-medication-losartan](MedicationStatement-mii-exa-seltene-medication-losartan.md)
 
 
 * BfArM 1994 - 2024 - Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM)
 
-* [Alpha-ID](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/alpha-id): [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md) and [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md)
-* [OPS](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/ops): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md), [Procedure/mii-exa-seltene-procedure-aortic-planned](Procedure-mii-exa-seltene-procedure-aortic-planned.md), [Procedure/mii-exa-seltene-procedure-cataract-surgery](Procedure-mii-exa-seltene-procedure-cataract-surgery.md) and [ServiceRequest/mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan](ServiceRequest-mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan.md)
+* [Alpha-ID](https://simplifier.net/resolve?scope=de.gematik.ti@1.3.1&canonical=http://fhir.de/CodeSystem/bfarm/alpha-id): [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md) and [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md)
+* [OPS](https://simplifier.net/resolve?scope=de.gematik.ti@1.3.1&canonical=http://fhir.de/CodeSystem/bfarm/ops): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md), [Procedure/mii-exa-seltene-procedure-aortic-planned](Procedure-mii-exa-seltene-procedure-aortic-planned.md), [Procedure/mii-exa-seltene-procedure-cataract-surgery](Procedure-mii-exa-seltene-procedure-cataract-surgery.md) and [ServiceRequest/mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan](ServiceRequest-mii-exa-seltene-therapieempfehlung-aortenwurzelersatz-marfan.md)
 
 
 * Copyrights permitted under terms specified by [Creative Commons Attribution 4.0 International (CC BY 4.0) ](https://creativecommons.org/licenses/by/4.0/legalcode) .Consistent with the terms of CC BY 4.0, HL7 is permitted to share, copy and redistribute the material in any medium or format and adapt, remix, transform, and build upon the material for its purposes as long as the CC BY 4.0 license terms are upheld. HL7 must must give appropriate credit, provide a link to the license, and indicate if changes were made. HL7 may do so in any reasonable manner, but not in any way that suggests the licensor endorses HL7 or it's use. And HL7 may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
@@ -73,7 +84,7 @@ This publication includes IP covered under the following statements.
 
 * IFA GmbH
 
-* [PZN](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/ifa/pzn): [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md)
+* [PZN](https://simplifier.net/resolve?scope=de.gematik.ti@1.3.1&canonical=http://fhir.de/CodeSystem/ifa/pzn): [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md)
 
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
@@ -141,7 +152,7 @@ This publication includes IP covered under the following statements.
 
 * WHO, BfArM 1994 - 2024 - Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM)
 
-* [ICD-10-GM](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=http://fhir.de/CodeSystem/bfarm/icd-10-gm): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 11 more, [Condition/mii-exa-seltene-condition-cataract](Condition-mii-exa-seltene-condition-cataract.md), [Condition/mii-exa-seltene-condition-marfan-suspected](Condition-mii-exa-seltene-condition-marfan-suspected.md), [Condition/mii-exa-seltene-condition-sma-clinical](Condition-mii-exa-seltene-condition-sma-clinical.md), [Condition/mii-exa-seltene-example-eds-excluded-clinical](Condition-mii-exa-seltene-example-eds-excluded-clinical.md), [Condition/mii-exa-seltene-example-metabolic-myopathy-excluded](Condition-mii-exa-seltene-example-metabolic-myopathy-excluded.md), [Condition/mii-exa-seltene-example-noonan-clinical-diagnosis](Condition-mii-exa-seltene-example-noonan-clinical-diagnosis.md), [FamilyMemberHistory/mii-exa-seltene-familienanamnese](FamilyMemberHistory-mii-exa-seltene-familienanamnese.md), [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md), [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md) and [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md)
+* [ICD-10-GM](https://simplifier.net/resolve?scope=de.gematik.ti@1.3.1&canonical=http://fhir.de/CodeSystem/bfarm/icd-10-gm): [Bundle/mii-exa-seltene-bundle-marfan-complete](Bundle-mii-exa-seltene-bundle-marfan-complete.md), [Bundle/mii-exa-seltene-bundle-sma-complete](Bundle-mii-exa-seltene-bundle-sma-complete.md)... Show 11 more, [Condition/mii-exa-seltene-condition-cataract](Condition-mii-exa-seltene-condition-cataract.md), [Condition/mii-exa-seltene-condition-marfan-suspected](Condition-mii-exa-seltene-condition-marfan-suspected.md), [Condition/mii-exa-seltene-condition-sma-clinical](Condition-mii-exa-seltene-condition-sma-clinical.md), [Condition/mii-exa-seltene-example-eds-excluded-clinical](Condition-mii-exa-seltene-example-eds-excluded-clinical.md), [Condition/mii-exa-seltene-example-metabolic-myopathy-excluded](Condition-mii-exa-seltene-example-metabolic-myopathy-excluded.md), [Condition/mii-exa-seltene-example-noonan-clinical-diagnosis](Condition-mii-exa-seltene-example-noonan-clinical-diagnosis.md), [FamilyMemberHistory/mii-exa-seltene-familienanamnese](FamilyMemberHistory-mii-exa-seltene-familienanamnese.md), [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md), [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md) and [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md)
 
 
 ### IG Parameter Settings and Expansion Parameters
@@ -286,7 +297,8 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-        "code" : "C4873"
+        "code" : "C4873",
+        "display" : "Rare Disorder"
       }]
     }
   }],
@@ -309,7 +321,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
   },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02",
+  "date" : "2026-09-09",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -356,15 +368,15 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_molgen",
-    "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.molgen/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.molgen",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.molgen",
-    "version" : "2026.0.4"
+    "version" : "2027.0.0-ballot.rc2"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_icu",
     "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.icu/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.icu",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.icu",
-    "version" : "2026.0.3"
+    "version" : "2027.0.0-ballot.rc2"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_studie",
@@ -1646,7 +1658,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Consent/mii-exa-seltene-register-einwilligung"
       },
       "name" : "Beispiel Einwilligung zur Registerteilnahme",
-      "description" : "Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusaetzliche Huerde.",
+      "description" : "Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusätzliche Huerde.",
       "exampleBoolean" : true
     },
     {
@@ -1965,7 +1977,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       "reference" : {
         "reference" : "Observation/mii-exa-seltene-molgen-cftr-heterozygous-carrier"
       },
-      "name" : "CFTR F508del - heterozygoter Anlagetraeger",
+      "name" : "CFTR F508del - heterozygoter Anlageträger",
       "description" : "Nur eine CFTR-Mutation nachweisbar; schliesst Mukoviszidose aus",
       "exampleBoolean" : true
     },
@@ -2046,7 +2058,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45"
       },
       "name" : "DMD Exon 45 Deletion - MolGen Variante",
-      "description" : "Out-of-frame Deletion im DMD-Gen (Exon 45) — fuehrt zu Duchenne",
+      "description" : "Out-of-frame Deletion im DMD-Gen (Exon 45) — führt zu Duchenne",
       "exampleBoolean" : true
     },
     {
@@ -3102,7 +3114,23 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "StructureDefinition/mii-ex-seltene-register"
       },
       "name" : "MII EX SE Register",
-      "description" : "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.",
+      "description" : "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug läuft über ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-mii-ex-seltene-von-se-betroffen.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/mii-ex-seltene-von-se-betroffen"
+      },
+      "name" : "MII EX SE Von SE betroffen",
+      "description" : "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
       "exampleBoolean" : false
     },
     {
@@ -3534,7 +3562,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-seltene-clinical-diagnosis-category"
       },
       "name" : "MII VS SE Clinical Diagnosis Category (retired)",
-      "description" : "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code.",
+      "description" : "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehört in Condition.code.",
       "exampleBoolean" : false
     },
     {
@@ -3854,7 +3882,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-seltene-nbs-target-analyte"
       },
       "name" : "MII VS Seltene Erkrankungen NBS Leitanalyten der Zielkrankheiten",
-      "description" : "Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie § 17 Abs. 1 (20 Zielkrankheiten) und § 23 ff. (Mukoviszidose). Je Zielkrankheit der Analyt, über den sie im Screening erkannt wird.",
+      "description" : "Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie § 17 Abs. 1 (20 Zielkrankheiten) und 23 ff. (Mukoviszidose). Je Zielkrankheit der Analyt, über den sie im Screening erkannt wird.",
       "exampleBoolean" : false
     },
     {
@@ -3918,22 +3946,6 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Parameters/mii-param-seltene-manifest"
       },
       "name" : "mii-param-seltene-manifest",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "StructureDefinition-mii-ex-seltene-von-se-betroffen.html"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/mii-ex-seltene-von-se-betroffen"
-      },
-      "name" : "MII_EX_Seltene_VonSEBetroffen",
-      "description" : "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
       "exampleBoolean" : false
     },
     {
@@ -4349,7 +4361,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ServiceRequest/mii-exa-seltene-studieneinschluss-anfrage"
       },
       "name" : "Studieneinschlussempfehlung",
-      "description" : "Empfehlung, den Patienten fuer eine Studie zu evaluieren",
+      "description" : "Empfehlung, den Patienten für eine Studie zu evaluieren",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage"
     },
     {

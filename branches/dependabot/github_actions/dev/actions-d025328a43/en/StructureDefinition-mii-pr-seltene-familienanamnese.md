@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-07 | *Computable Name*:MII_PR_Seltene_Familienanamnese |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Seltene_Familienanamnese |
 
  
 
@@ -104,13 +104,15 @@ The elements of the logical data model are mapped to the FamilyMemberHistory pro
 
 | | | |
 | :--- | :--- | :--- |
-| Familienanamnese.Verwandtschaftsverhaeltnis | FamilyMemberHistory.relationship | Biological relationship to the index patient |
-| Familienanamnese.Geschlecht | FamilyMemberHistory.sex | Sex of the family member |
-| Familienanamnese.GleicheSE | FamilyMemberHistory.condition.code | If the code is identical to the index patient's diagnosis |
-| Familienanamnese.AndereSE | FamilyMemberHistory.condition.code | If the code differs from the index patient's diagnosis |
-| Familienanamnese.Penetranz | FamilyMemberHistory.condition.extension:penetranz | Extension for missing clinical penetrance despite a genetic diagnosis in family members |
-| Familienanamnese.FamilienmitgliedVerstorben | FamilyMemberHistory.deceased[x] | Vital status of the family member |
-| Familienanamnese.TodDurchSE | FamilyMemberHistory.condition.contributedToDeath | Indicates whether the disease contributed to death |
+| `familienanamnese.verwandtschaftsverhaeltnis` | FamilyMemberHistory.relationship | Biological relationship to the index patient |
+| `familienanamnese.geschlecht` | FamilyMemberHistory.sex | Sex of the family member |
+| `familienanamnese.gleicheSE` | FamilyMemberHistory.condition.code | If the code is identical to the index patient's diagnosis |
+| `familienanamnese.andereSE` | FamilyMemberHistory.condition.code | If the code differs from the index patient's diagnosis |
+| `familienanamnese.penetranz` | FamilyMemberHistory.condition.extension:penetranz | Extension for missing clinical penetrance despite a genetic diagnosis in family members |
+| `familienanamnese.familienmitgliedVerstorben` | FamilyMemberHistory.deceased[x] | Vital status of the family member |
+| `familienanamnese.todDurchSE` | FamilyMemberHistory.condition.contributedToDeath | Indicates whether the disease contributed to death |
+| `familienanamnese.dokumentationsdatum` | FamilyMemberHistory.date | Date the family history was taken or recorded |
+| `familienanamnese.konsanguinitaetEltern` | Observation (`mii-pr-seltene-consanguinity`) | Consanguinity of the parents; a profile of its own, not part of FamilyMemberHistory |
 
 -------
 
@@ -142,12 +144,107 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
 {
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-seltene-familienanamnese",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-09-02"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C4873"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese",
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Seltene_Familienanamnese",
   "title" : "MII PR SE Familienanamnese",
   "status" : "active",
-  "date" : "2026-09-07T01:49:31+00:00",
+  "experimental" : false,
+  "date" : "2026-09-14T01:49:39+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -186,6 +283,21 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
   {
     "identity" : "MII-KDS",
     "name" : "MII KDS Mapping"
+  },
+  {
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
   }],
   "kind" : "resource",
   "abstract" : false,
@@ -205,6 +317,14 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
     {
       "id" : "FamilyMemberHistory.extension",
       "path" : "FamilyMemberHistory.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      },
       "min" : 1
     },
     {
@@ -338,6 +458,18 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-fa
         "map" : "familienanamnese.andereSE",
         "comment" : "Grund/Erkrankung des Familienmitglieds"
       }]
+    },
+    {
+      "id" : "FamilyMemberHistory.condition.extension",
+      "path" : "FamilyMemberHistory.condition.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
     },
     {
       "id" : "FamilyMemberHistory.condition.extension:penetrance",

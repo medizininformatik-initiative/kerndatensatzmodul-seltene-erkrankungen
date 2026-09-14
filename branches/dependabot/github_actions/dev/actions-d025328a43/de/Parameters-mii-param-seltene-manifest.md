@@ -19,11 +19,27 @@
   },
   "parameter" : [{
     "name" : "system-version",
-    "valueCanonical" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250701"
+    "valueCanonical" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701"
   },
   {
     "name" : "system-version",
     "valueCanonical" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes|3.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset|2.0.0"
   },
   {
     "name" : "system-version",
@@ -52,6 +68,14 @@
   {
     "name" : "system-version",
     "valueCanonical" : "http://terminology.hl7.org/CodeSystem/v2-0532|3.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecapabilitystatement|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecapabilitystatement|2.0.0"
   },
   {
     "name" : "default-canonical-version",
@@ -483,6 +507,14 @@
   },
   {
     "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Extension|4.0.1"
   },
   {
@@ -619,43 +651,11 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese|2026.0.4"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/languages|4.0.1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-von-se-betroffen|2027.0.0-ballot.rc1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/PlanDefinition|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Questionnaire|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/ActivityDefinition|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Measure|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/OperationDefinition|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/history-absent-reason|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Reference|4.0.1"
   },
   {
     "name" : "default-valueset-version",
@@ -663,47 +663,27 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed|2026.0.4"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad|2026.0.4"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis|2026.0.4"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-familiare-linie|2026.0.4"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-familiare-linie|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "http://terminology.hl7.org/ValueSet/v3-PersonalRelationshipRoleType|3.0.0"
   },
   {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/clinical-findings|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance|4.0.1"
-  },
-  {
     "name" : "default-canonical-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance|2027.0.0-ballot.rc1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/condition-code|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/condition-outcome|4.0.1"
   },
   {
     "name" : "default-valueset-version",
@@ -731,11 +711,15 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang|2026.0.3"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://fhir.de/StructureDefinition/observation-de-vitalsign|1.6.0"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/languages|4.0.1"
   },
   {
     "name" : "default-canonical-version",
@@ -748,6 +732,10 @@
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/NutritionOrder|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Reference|4.0.1"
   },
   {
     "name" : "default-canonical-version",
@@ -979,6 +967,10 @@
   },
   {
     "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/condition-code|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
     "valueCanonical" : "http://hl7.org/fhir/ValueSet/medicationrequest-course-of-therapy|4.0.1"
   },
   {
@@ -991,7 +983,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "http://ig.fhir.de/igs/medication/StructureDefinition/DosageDE|1.0.0"
+    "valueCanonical" : "http://ig.fhir.de/igs/medication/StructureDefinition/DosageDE|1.0.7"
   },
   {
     "name" : "default-valueset-version",
@@ -999,7 +991,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "http://ig.fhir.de/igs/medication/StructureDefinition/TimingDE|1.0.0"
+    "valueCanonical" : "http://ig.fhir.de/igs/medication/StructureDefinition/TimingDE|1.0.7"
   },
   {
     "name" : "default-canonical-version",
@@ -1035,7 +1027,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "http://ig.fhir.de/igs/medication/ValueSet/DosageDoseQuantityDE|1.0.0"
+    "valueCanonical" : "http://ig.fhir.de/igs/medication/ValueSet/DosageDoseQuantityDE|1.0.7"
   },
   {
     "name" : "default-canonical-version",

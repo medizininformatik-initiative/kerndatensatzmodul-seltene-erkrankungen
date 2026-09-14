@@ -41,11 +41,11 @@ The profile information of the whole guide in a single CSV or Excel file — use
 
 The `ImplementationGuide` resource carries the technical details of this publication, including its dependencies and publication parameters.
 
-> [TODO: This template ships no page for that resource, so there is nothing to link here yet. `kerndatensatz-basis` publishes one as `input/pagecontent/ImplementationGuide-mii-ig-base.md`, registered under `pages:` in `sushi-config.yaml`. Add the equivalent for your module in both languages and link it from here. The file name must carry your slug literally: a `pages:` file name cannot hold a placeholder, because the placeholder substitution rewrites file contents, not file names.]
+* [ImplementationGuide resource](ImplementationGuide-mii-ig-seltene.md)
 
 #### Version history
 
 Earlier versions and the detailed change history are on the [Versioning](version-history.md) and [Changelog](changes.md) pages.
 
-> [TODO: Add any further downloads your module offers — for example an example bundle, a data dictionary or a mapping table — and remove the entries above that your build does not produce.]
+The module offers no downloads beyond those listed above. Every link on this page was checked against the published build; the example bundles of the two case studies are contained in `examples.json.zip` and `examples.xml.zip`.
 

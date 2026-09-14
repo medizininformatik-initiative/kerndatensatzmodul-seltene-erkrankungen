@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="10129bae-749e-4299-a5bc-34cd7aa05744"/>
+  <id value="17b59b8d-63ed-4e2f-985a-57f355c27f45"/>
   <meta>
-    <lastUpdated value="2026-09-07T01:49:31.001+00:00"/>
+    <lastUpdated value="2026-09-14T01:49:39.056+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-empfehlung-status-begruendung"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -71,7 +75,8 @@
         <name value="MII_VS_Seltene_Empfehlung_StatusBegruendung"/>
         <title value="MII VS SE Empfehlung Status Begründung"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -80,8 +85,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2cda5286-4a3e-49b3-bca3-dc5751e1e01c"/>
-          <timestamp value="2026-09-07T01:53:52+00:00"/>
+          <identifier value="urn:uuid:45d83d23-4c7b-42b5-af76-9df127732a3a"/>
+          <timestamp value="2026-09-14T01:54:41+00:00"/>
           <total value="1"/>
           <offset value="0"/>
           <parameter>
@@ -121,6 +126,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-empfehlung-status-begruendung"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -182,7 +191,8 @@
         <name value="MII_VS_Seltene_Empfehlung_StatusBegruendung"/>
         <title value="MII VS SE Empfehlung Status Begründung"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -191,8 +201,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2cda5286-4a3e-49b3-bca3-dc5751e1e01c"/>
-          <timestamp value="2026-09-07T01:53:52+00:00"/>
+          <identifier value="urn:uuid:45d83d23-4c7b-42b5-af76-9df127732a3a"/>
+          <timestamp value="2026-09-14T01:54:41+00:00"/>
           <total value="1"/>
           <offset value="0"/>
           <parameter>
@@ -232,6 +242,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-empfehlung-status-begruendung"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -293,7 +307,8 @@
         <name value="MII_VS_Seltene_Empfehlung_StatusBegruendung"/>
         <title value="MII VS SE Empfehlung Status Begründung"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -302,8 +317,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:98b5d23c-a835-4427-80bb-9a67d599ba21"/>
-          <timestamp value="2026-09-07T01:53:53+00:00"/>
+          <identifier value="urn:uuid:1915a1b0-b783-419d-b874-9a8f8da55fef"/>
+          <timestamp value="2026-09-14T01:54:42+00:00"/>
           <total value="1"/>
           <offset value="0"/>
           <parameter>
@@ -342,6 +357,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-change-status"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -488,7 +507,7 @@
         <title value="MII VS Seltene Erkrankungen HPO Change Status"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -497,8 +516,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:0cc218dc-b2a1-4c71-9786-319119d45ac0"/>
-          <timestamp value="2026-09-07T01:53:53+00:00"/>
+          <identifier value="urn:uuid:bf5126ca-de9e-4901-be76-6ae360f568d5"/>
+          <timestamp value="2026-09-14T01:54:42+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -558,6 +577,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-change-status"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -704,7 +727,7 @@
         <title value="MII VS Seltene Erkrankungen HPO Change Status"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -713,8 +736,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:0cc218dc-b2a1-4c71-9786-319119d45ac0"/>
-          <timestamp value="2026-09-07T01:53:53+00:00"/>
+          <identifier value="urn:uuid:bf5126ca-de9e-4901-be76-6ae360f568d5"/>
+          <timestamp value="2026-09-14T01:54:42+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -774,6 +797,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-change-status"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -920,7 +947,7 @@
         <title value="MII VS Seltene Erkrankungen HPO Change Status"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -929,8 +956,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:eb8c6a0d-80dd-4370-96ff-17699426e679"/>
-          <timestamp value="2026-09-07T01:53:53+00:00"/>
+          <identifier value="urn:uuid:11311a4a-c964-4d5f-9910-5d2ea1928f14"/>
+          <timestamp value="2026-09-14T01:54:42+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -985,6 +1012,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -1061,7 +1092,8 @@
         <name value="MII_VS_Seltene_HPOPresenceStatus"/>
         <title value="HPO Phenotype Presence Status"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1070,8 +1102,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:37ce22ea-0c6f-4855-a01b-f26dd0eedf66"/>
-          <timestamp value="2026-09-07T01:53:38+00:00"/>
+          <identifier value="urn:uuid:877d476c-b0cb-4d31-b2a2-4c8f09e57d37"/>
+          <timestamp value="2026-09-14T01:54:26+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -1120,6 +1152,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -1196,7 +1232,8 @@
         <name value="MII_VS_Seltene_HPOPresenceStatus"/>
         <title value="HPO Phenotype Presence Status"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1205,8 +1242,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:37ce22ea-0c6f-4855-a01b-f26dd0eedf66"/>
-          <timestamp value="2026-09-07T01:53:38+00:00"/>
+          <identifier value="urn:uuid:877d476c-b0cb-4d31-b2a2-4c8f09e57d37"/>
+          <timestamp value="2026-09-14T01:54:26+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -1255,6 +1292,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -1331,7 +1372,8 @@
         <name value="MII_VS_Seltene_HPOPresenceStatus"/>
         <title value="HPO Phenotype Presence Status"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1340,8 +1382,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:0c0ff6e7-8211-4d7d-a5cc-f24539e7322d"/>
-          <timestamp value="2026-09-07T01:53:39+00:00"/>
+          <identifier value="urn:uuid:72039115-93aa-45ff-9edc-838f5131bec3"/>
+          <timestamp value="2026-09-14T01:54:27+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -1388,6 +1430,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf-beurteilungsmerkmal"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -1597,7 +1643,7 @@
         <title value="MII VS SE ICF Qualifier Kind"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1606,8 +1652,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:db8c4ded-1dce-47ad-a25f-d542a9beb444"/>
-          <timestamp value="2026-09-07T01:53:54+00:00"/>
+          <identifier value="urn:uuid:97d6897c-5ff4-413d-b78e-98f7061c23df"/>
+          <timestamp value="2026-09-14T01:54:43+00:00"/>
           <total value="8"/>
           <offset value="0"/>
           <parameter>
@@ -1682,6 +1728,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf-beurteilungsmerkmal"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -1891,7 +1941,7 @@
         <title value="MII VS SE ICF Qualifier Kind"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1900,8 +1950,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:db8c4ded-1dce-47ad-a25f-d542a9beb444"/>
-          <timestamp value="2026-09-07T01:53:54+00:00"/>
+          <identifier value="urn:uuid:97d6897c-5ff4-413d-b78e-98f7061c23df"/>
+          <timestamp value="2026-09-14T01:54:43+00:00"/>
           <total value="8"/>
           <offset value="0"/>
           <parameter>
@@ -1976,6 +2026,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf-beurteilungsmerkmal"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -2185,7 +2239,7 @@
         <title value="MII VS SE ICF Qualifier Kind"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -2194,8 +2248,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:5a14e777-5af1-493e-80e1-83b118f5bf17"/>
-          <timestamp value="2026-09-07T01:53:54+00:00"/>
+          <identifier value="urn:uuid:ba1fe613-9b9d-4d4f-9a99-d7508be3de60"/>
+          <timestamp value="2026-09-14T01:54:43+00:00"/>
           <total value="8"/>
           <offset value="0"/>
           <parameter>
@@ -2262,6 +2316,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -21939,7 +21997,7 @@
         <title value="MII VS SE ICF Categories"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -21948,8 +22006,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:aa855422-2e4e-4e63-ace4-9a06e7a26d46"/>
-          <timestamp value="2026-09-07T01:53:40+00:00"/>
+          <identifier value="urn:uuid:b9cab70c-2a88-4260-92b5-93b3a92f6cf9"/>
+          <timestamp value="2026-09-14T01:54:27+00:00"/>
           <total value="1616"/>
           <offset value="0"/>
           <parameter>
@@ -27808,6 +27866,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -47485,7 +47547,7 @@
         <title value="MII VS SE ICF Categories"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -47494,8 +47556,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:aa855422-2e4e-4e63-ace4-9a06e7a26d46"/>
-          <timestamp value="2026-09-07T01:53:40+00:00"/>
+          <identifier value="urn:uuid:b9cab70c-2a88-4260-92b5-93b3a92f6cf9"/>
+          <timestamp value="2026-09-14T01:54:27+00:00"/>
           <total value="1616"/>
           <offset value="0"/>
           <parameter>
@@ -53354,6 +53416,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -73031,7 +73097,7 @@
         <title value="MII VS SE ICF Categories"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -73040,8 +73106,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:9ce4a8a9-d286-4632-8396-0a219fda188d"/>
-          <timestamp value="2026-09-07T01:53:41+00:00"/>
+          <identifier value="urn:uuid:cbda661f-c1ac-4e5c-90f6-9a16f8de6d99"/>
+          <timestamp value="2026-09-14T01:54:28+00:00"/>
           <total value="1616"/>
           <offset value="0"/>
           <parameter>
@@ -77900,6 +77966,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-narse-therapietyp"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -78151,7 +78221,7 @@
         <title value="MII VS Seltene Erkrankungen NARSE Therapietyp"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -78160,8 +78230,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:286ac5f5-6150-4e23-b95d-20cd3dc757b9"/>
-          <timestamp value="2026-09-07T01:53:54+00:00"/>
+          <identifier value="urn:uuid:9733644c-840c-4cf4-8a99-47562d32ca6a"/>
+          <timestamp value="2026-09-14T01:54:43+00:00"/>
           <total value="10"/>
           <offset value="0"/>
           <parameter>
@@ -78246,6 +78316,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-narse-therapietyp"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -78497,7 +78571,7 @@
         <title value="MII VS Seltene Erkrankungen NARSE Therapietyp"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -78506,8 +78580,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:286ac5f5-6150-4e23-b95d-20cd3dc757b9"/>
-          <timestamp value="2026-09-07T01:53:54+00:00"/>
+          <identifier value="urn:uuid:9733644c-840c-4cf4-8a99-47562d32ca6a"/>
+          <timestamp value="2026-09-14T01:54:43+00:00"/>
           <total value="10"/>
           <offset value="0"/>
           <parameter>
@@ -78592,6 +78666,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-narse-therapietyp"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -78843,7 +78921,7 @@
         <title value="MII VS Seltene Erkrankungen NARSE Therapietyp"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -78852,8 +78930,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:1d57b327-f322-49aa-9f27-3f4b8c8ac8d5"/>
-          <timestamp value="2026-09-07T01:53:54+00:00"/>
+          <identifier value="urn:uuid:190f34bf-9721-476a-bae1-34e7a682bebd"/>
+          <timestamp value="2026-09-14T01:54:43+00:00"/>
           <total value="10"/>
           <offset value="0"/>
           <parameter>
@@ -78928,6 +79006,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-acylcarnitine-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -80525,7 +80607,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Acylcarnitine (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -80534,8 +80616,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:d0f3e9b4-8b69-4e1d-bba2-6c0cd66d9b25"/>
-          <timestamp value="2026-09-07T01:53:54+00:00"/>
+          <identifier value="urn:uuid:94ea9d0d-b092-46ba-b11c-a452e7c3fa4c"/>
+          <timestamp value="2026-09-14T01:54:43+00:00"/>
           <total value="78"/>
           <offset value="0"/>
           <parameter>
@@ -80964,6 +81046,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-acylcarnitine-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -82561,7 +82647,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Acylcarnitine (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -82570,8 +82656,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:d0f3e9b4-8b69-4e1d-bba2-6c0cd66d9b25"/>
-          <timestamp value="2026-09-07T01:53:54+00:00"/>
+          <identifier value="urn:uuid:94ea9d0d-b092-46ba-b11c-a452e7c3fa4c"/>
+          <timestamp value="2026-09-14T01:54:43+00:00"/>
           <total value="78"/>
           <offset value="0"/>
           <parameter>
@@ -83000,6 +83086,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-acylcarnitine-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -84597,7 +84687,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Acylcarnitine (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -84606,8 +84696,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:9054c2fd-36ba-487a-b9f0-0ff90320ebf3"/>
-          <timestamp value="2026-09-07T01:53:55+00:00"/>
+          <identifier value="urn:uuid:0b4113a9-14fa-411d-91ba-9924e12ab543"/>
+          <timestamp value="2026-09-14T01:54:43+00:00"/>
           <total value="78"/>
           <offset value="0"/>
           <parameter>
@@ -84958,6 +85048,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-aminoacid-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -87016,7 +87110,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Aminosäuren (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -87025,8 +87119,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2e42ce1f-acff-4f88-b580-2768fc7e9869"/>
-          <timestamp value="2026-09-07T01:53:55+00:00"/>
+          <identifier value="urn:uuid:fb023199-ebf9-4f88-9fc8-66e639cdcb83"/>
+          <timestamp value="2026-09-14T01:54:43+00:00"/>
           <total value="96"/>
           <offset value="0"/>
           <parameter>
@@ -87553,6 +87647,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-aminoacid-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -89611,7 +89709,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Aminosäuren (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -89620,8 +89718,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2e42ce1f-acff-4f88-b580-2768fc7e9869"/>
-          <timestamp value="2026-09-07T01:53:55+00:00"/>
+          <identifier value="urn:uuid:fb023199-ebf9-4f88-9fc8-66e639cdcb83"/>
+          <timestamp value="2026-09-14T01:54:43+00:00"/>
           <total value="96"/>
           <offset value="0"/>
           <parameter>
@@ -90148,6 +90246,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-aminoacid-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -92206,7 +92308,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Aminosäuren (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -92215,8 +92317,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:6f77c572-686f-4607-a7dd-fdeb63d3f5b6"/>
-          <timestamp value="2026-09-07T01:53:55+00:00"/>
+          <identifier value="urn:uuid:73af1342-66ff-48aa-b1d2-c27b0e567d6d"/>
+          <timestamp value="2026-09-14T01:54:44+00:00"/>
           <total value="96"/>
           <offset value="0"/>
           <parameter>
@@ -92647,6 +92749,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-dbs-all"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -106068,7 +106174,7 @@
         <title value="MII VS Seltene Erkrankungen NBS alle Trockenblut-Analyte (LOINC)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -106077,8 +106183,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:bc6f1a1a-5830-4b0f-a03f-77349a529be4"/>
-          <timestamp value="2026-09-07T01:53:55+00:00"/>
+          <identifier value="urn:uuid:bcb76bbe-0040-4e77-9341-4a81c7937d65"/>
+          <timestamp value="2026-09-14T01:54:44+00:00"/>
           <total value="608"/>
           <offset value="0"/>
           <parameter>
@@ -109349,6 +109455,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-dbs-all"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -122770,7 +122880,7 @@
         <title value="MII VS Seltene Erkrankungen NBS alle Trockenblut-Analyte (LOINC)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -122779,8 +122889,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:bc6f1a1a-5830-4b0f-a03f-77349a529be4"/>
-          <timestamp value="2026-09-07T01:53:55+00:00"/>
+          <identifier value="urn:uuid:bcb76bbe-0040-4e77-9341-4a81c7937d65"/>
+          <timestamp value="2026-09-14T01:54:44+00:00"/>
           <total value="608"/>
           <offset value="0"/>
           <parameter>
@@ -126051,6 +126161,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-dbs-all"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -139472,7 +139586,7 @@
         <title value="MII VS Seltene Erkrankungen NBS alle Trockenblut-Analyte (LOINC)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -139481,8 +139595,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:386f5d19-38d8-4931-b533-b76b9bceb05e"/>
-          <timestamp value="2026-09-07T01:53:55+00:00"/>
+          <identifier value="urn:uuid:fef70e2b-fc7a-4207-839d-787bcca9da33"/>
+          <timestamp value="2026-09-14T01:54:44+00:00"/>
           <total value="608"/>
           <offset value="0"/>
           <parameter>
@@ -142145,6 +142259,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-enzyme-activity-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -142862,7 +142980,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Enzymaktivitäten (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -142871,8 +142989,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:79acc609-2d91-4978-aafb-451cd4ec4087"/>
-          <timestamp value="2026-09-07T01:53:55+00:00"/>
+          <identifier value="urn:uuid:573f1bde-cb75-46c1-b983-84ccf2760860"/>
+          <timestamp value="2026-09-14T01:54:44+00:00"/>
           <total value="34"/>
           <offset value="0"/>
           <parameter>
@@ -143081,6 +143199,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-enzyme-activity-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -143798,7 +143920,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Enzymaktivitäten (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -143807,8 +143929,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:79acc609-2d91-4978-aafb-451cd4ec4087"/>
-          <timestamp value="2026-09-07T01:53:55+00:00"/>
+          <identifier value="urn:uuid:573f1bde-cb75-46c1-b983-84ccf2760860"/>
+          <timestamp value="2026-09-14T01:54:44+00:00"/>
           <total value="34"/>
           <offset value="0"/>
           <parameter>
@@ -144017,6 +144139,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-enzyme-activity-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -144734,7 +144860,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Enzymaktivitäten (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -144743,8 +144869,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:8c39f14c-ad77-40fc-844c-2707bcc0d7fb"/>
-          <timestamp value="2026-09-07T01:53:56+00:00"/>
+          <identifier value="urn:uuid:0b5d6a08-41fb-4dc2-a65e-26b7ab3aff99"/>
+          <timestamp value="2026-09-14T01:54:44+00:00"/>
           <total value="34"/>
           <offset value="0"/>
           <parameter>
@@ -144919,6 +145045,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-hemoglobin-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -145136,7 +145266,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Hämoglobin-Fraktionen (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -145145,8 +145275,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:e4e62ecb-595e-4620-85cb-dfeadcfa17d2"/>
-          <timestamp value="2026-09-07T01:53:56+00:00"/>
+          <identifier value="urn:uuid:4cfa9376-98e2-4fce-a5a7-bfddb0131f3b"/>
+          <timestamp value="2026-09-14T01:54:44+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -145230,6 +145360,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-hemoglobin-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -145447,7 +145581,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Hämoglobin-Fraktionen (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -145456,8 +145590,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:e4e62ecb-595e-4620-85cb-dfeadcfa17d2"/>
-          <timestamp value="2026-09-07T01:53:56+00:00"/>
+          <identifier value="urn:uuid:4cfa9376-98e2-4fce-a5a7-bfddb0131f3b"/>
+          <timestamp value="2026-09-14T01:54:44+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -145541,6 +145675,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-hemoglobin-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -145758,7 +145896,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Hämoglobin-Fraktionen (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -145767,8 +145905,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:aadaec41-a0d8-4e7e-87ea-72f815e2692a"/>
-          <timestamp value="2026-09-07T01:53:56+00:00"/>
+          <identifier value="urn:uuid:e4f7e5aa-b760-46ca-a459-bc012371c46b"/>
+          <timestamp value="2026-09-14T01:54:44+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -145843,6 +145981,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-ratio-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -146820,7 +146962,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Quotienten (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -146829,8 +146971,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:417e3898-c459-4fcc-a3a0-c654671a8895"/>
-          <timestamp value="2026-09-07T01:53:56+00:00"/>
+          <identifier value="urn:uuid:bfc47a49-24b4-437b-bd70-5323fd696984"/>
+          <timestamp value="2026-09-14T01:54:44+00:00"/>
           <total value="47"/>
           <offset value="0"/>
           <parameter>
@@ -147104,6 +147246,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-ratio-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -148081,7 +148227,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Quotienten (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -148090,8 +148236,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:417e3898-c459-4fcc-a3a0-c654671a8895"/>
-          <timestamp value="2026-09-07T01:53:56+00:00"/>
+          <identifier value="urn:uuid:bfc47a49-24b4-437b-bd70-5323fd696984"/>
+          <timestamp value="2026-09-14T01:54:44+00:00"/>
           <total value="47"/>
           <offset value="0"/>
           <parameter>
@@ -148365,6 +148511,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-ratio-dbs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -149342,7 +149492,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Quotienten (Trockenblut)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -149351,8 +149501,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:08ecc6f5-450c-4696-bf6e-6a4179e1a4b6"/>
-          <timestamp value="2026-09-07T01:53:56+00:00"/>
+          <identifier value="urn:uuid:d2a1ca3b-face-4403-9ff9-e29f5a010ef3"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="47"/>
           <offset value="0"/>
           <parameter>
@@ -149579,6 +149729,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-target-analyte"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -150036,7 +150190,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Leitanalyten der Zielkrankheiten"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -150045,8 +150199,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:24032889-1bb2-4ea6-b1a5-134cc2a6aedb"/>
-          <timestamp value="2026-09-07T01:53:56+00:00"/>
+          <identifier value="urn:uuid:a5aa3c6c-0799-4cfa-b3b3-c1bf248edfeb"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="21"/>
           <offset value="0"/>
           <parameter>
@@ -150190,6 +150344,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-target-analyte"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -150647,7 +150805,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Leitanalyten der Zielkrankheiten"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -150656,8 +150814,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:24032889-1bb2-4ea6-b1a5-134cc2a6aedb"/>
-          <timestamp value="2026-09-07T01:53:56+00:00"/>
+          <identifier value="urn:uuid:a5aa3c6c-0799-4cfa-b3b3-c1bf248edfeb"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="21"/>
           <offset value="0"/>
           <parameter>
@@ -150801,6 +150959,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-target-analyte"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -151258,7 +151420,7 @@
         <title value="MII VS Seltene Erkrankungen NBS Leitanalyten der Zielkrankheiten"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -151267,8 +151429,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:8cd040fb-1140-4d0c-8eb5-ec18873dd19f"/>
-          <timestamp value="2026-09-07T01:53:56+00:00"/>
+          <identifier value="urn:uuid:1f0023a9-88ad-4324-b1c8-cbeeecb868a2"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="21"/>
           <offset value="0"/>
           <parameter>
@@ -151391,6 +151553,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-medikamentoes"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -151536,7 +151702,8 @@
         <name value="MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes"/>
         <title value="MII VS SE Therapieempfehlung Strategie - Medikamentös"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -151545,8 +151712,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2e146c5e-1568-424d-91b7-3035e6cb233f"/>
-          <timestamp value="2026-09-07T01:53:56+00:00"/>
+          <identifier value="urn:uuid:639b354f-fef7-439e-b79f-83c3f9b337a2"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -151606,6 +151773,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-medikamentoes"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -151751,7 +151922,8 @@
         <name value="MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes"/>
         <title value="MII VS SE Therapieempfehlung Strategie - Medikamentös"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -151760,8 +151932,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2e146c5e-1568-424d-91b7-3035e6cb233f"/>
-          <timestamp value="2026-09-07T01:53:56+00:00"/>
+          <identifier value="urn:uuid:639b354f-fef7-439e-b79f-83c3f9b337a2"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -151821,6 +151993,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-medikamentoes"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -151966,7 +152142,8 @@
         <name value="MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes"/>
         <title value="MII VS SE Therapieempfehlung Strategie - Medikamentös"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -151975,8 +152152,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:3993eddb-af9f-4204-b306-71044c6f2c43"/>
-          <timestamp value="2026-09-07T01:53:56+00:00"/>
+          <identifier value="urn:uuid:57319221-a826-4b6e-9466-d58c584b3caa"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -152031,6 +152208,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -152155,7 +152336,8 @@
         <name value="MII_VS_Seltene_TherapieempfehlungStrategieNichtMedikamentoes"/>
         <title value="MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -152164,8 +152346,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:96c1bea0-1962-417f-a6aa-31ddc46684e3"/>
-          <timestamp value="2026-09-07T01:53:57+00:00"/>
+          <identifier value="urn:uuid:a1078955-4931-4451-8c89-81c36963214c"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -152220,6 +152402,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -152344,7 +152530,8 @@
         <name value="MII_VS_Seltene_TherapieempfehlungStrategieNichtMedikamentoes"/>
         <title value="MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -152353,8 +152540,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:96c1bea0-1962-417f-a6aa-31ddc46684e3"/>
-          <timestamp value="2026-09-07T01:53:57+00:00"/>
+          <identifier value="urn:uuid:a1078955-4931-4451-8c89-81c36963214c"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -152409,6 +152596,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -152533,7 +152724,8 @@
         <name value="MII_VS_Seltene_TherapieempfehlungStrategieNichtMedikamentoes"/>
         <title value="MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -152542,8 +152734,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:328705b7-e58d-489a-a8c9-bd8f7d8f9704"/>
-          <timestamp value="2026-09-07T01:53:57+00:00"/>
+          <identifier value="urn:uuid:89ef7b62-c24c-4d77-a09f-9b97aa902d7c"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -152594,6 +152786,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -152823,7 +153019,8 @@
         <name value="MII_VS_Seltene_TherapieempfehlungStrategie"/>
         <title value="MII VS SE Therapieempfehlung Strategie"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -152832,8 +153029,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:8ac8fdba-2e79-4bf2-9627-9a4f6675ac7b"/>
-          <timestamp value="2026-09-07T01:53:57+00:00"/>
+          <identifier value="urn:uuid:9548f751-338c-4e5d-be70-2d20f094a19e"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -152913,6 +153110,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -153142,7 +153343,8 @@
         <name value="MII_VS_Seltene_TherapieempfehlungStrategie"/>
         <title value="MII VS SE Therapieempfehlung Strategie"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -153151,8 +153353,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:8ac8fdba-2e79-4bf2-9627-9a4f6675ac7b"/>
-          <timestamp value="2026-09-07T01:53:57+00:00"/>
+          <identifier value="urn:uuid:9548f751-338c-4e5d-be70-2d20f094a19e"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -153232,6 +153434,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -153461,7 +153667,8 @@
         <name value="MII_VS_Seltene_TherapieempfehlungStrategie"/>
         <title value="MII VS SE Therapieempfehlung Strategie"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -153470,8 +153677,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:97a01044-e487-4dcd-8961-1475b6fdc940"/>
-          <timestamp value="2026-09-07T01:53:57+00:00"/>
+          <identifier value="urn:uuid:9b83fb37-db20-4b6a-bd8d-c1347256772a"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -153542,6 +153749,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-typ"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -153624,7 +153835,8 @@
         <name value="MII_VS_Seltene_TherapieempfehlungTyp"/>
         <title value="MII VS SE Therapieempfehlung Typ"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -153633,8 +153845,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:5f05c541-aba6-4aac-8c3f-4f5c49ae35c4"/>
-          <timestamp value="2026-09-07T01:53:57+00:00"/>
+          <identifier value="urn:uuid:93751d1f-abc2-4598-900e-67f0e81572a9"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -153679,6 +153891,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-typ"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -153761,7 +153977,8 @@
         <name value="MII_VS_Seltene_TherapieempfehlungTyp"/>
         <title value="MII VS SE Therapieempfehlung Typ"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -153770,8 +153987,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:5f05c541-aba6-4aac-8c3f-4f5c49ae35c4"/>
-          <timestamp value="2026-09-07T01:53:57+00:00"/>
+          <identifier value="urn:uuid:93751d1f-abc2-4598-900e-67f0e81572a9"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -153816,6 +154033,10 @@
     <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-typ"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+          <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
@@ -153898,7 +154119,8 @@
         <name value="MII_VS_Seltene_TherapieempfehlungTyp"/>
         <title value="MII VS SE Therapieempfehlung Typ"/>
         <status value="active"/>
-        <date value="2026-09-07T01:49:31+00:00"/>
+        <experimental value="false"/>
+        <date value="2026-09-14T01:49:39+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -153907,8 +154129,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:24c8df64-f526-4f9d-9df7-c395a657734d"/>
-          <timestamp value="2026-09-07T01:53:57+00:00"/>
+          <identifier value="urn:uuid:ab8d917b-4ccf-4a5b-bdef-91113651b069"/>
+          <timestamp value="2026-09-14T01:54:45+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>

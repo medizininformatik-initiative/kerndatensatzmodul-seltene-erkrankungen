@@ -117,6 +117,7 @@
       <coding>
         <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
         <code value="C4873"/>
+        <display value="Rare Disorder"/>
       </coding>
     </valueCodeableConcept>
   </extension>
@@ -126,7 +127,7 @@
   <title value="MII IG Kerndatensatz-Modul Seltene Erkrankungen"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-02"/>
+  <date value="2026-09-09"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -157,14 +158,14 @@
     <version value="2027.0.0-ballot.rc3"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_molgen">
-    <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.molgen/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.molgen"/>
+    <uri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.molgen"/>
-    <version value="2026.0.4"/>
+    <version value="2027.0.0-ballot.rc2"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_icu">
     <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.icu/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.icu"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.icu"/>
-    <version value="2026.0.3"/>
+    <version value="2027.0.0-ballot.rc2"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_studie">
     <uri value="https://www.medizininformatik-initiative.de/fhir/modul-studie/ImplementationGuide/mii-ig-studie"/>
@@ -1092,7 +1093,7 @@
         <reference value="Consent/mii-exa-seltene-register-einwilligung"/>
       </reference>
       <name value="Beispiel Einwilligung zur Registerteilnahme"/>
-      <description value="Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusaetzliche Huerde."/>
+      <description value="Das Probanden-Profil des Moduls Studie fordert consent mit 1..1 — bei einer Registeraufnahme ist die Einwilligung der Sorgeberechtigten ohnehin die Grundlage, die Pflichtangabe deckt sich also mit der Praxis und ist keine zusätzliche Huerde."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1311,7 +1312,7 @@
       <reference>
         <reference value="Observation/mii-exa-seltene-molgen-cftr-heterozygous-carrier"/>
       </reference>
-      <name value="CFTR F508del - heterozygoter Anlagetraeger"/>
+      <name value="CFTR F508del - heterozygoter Anlageträger"/>
       <description value="Nur eine CFTR-Mutation nachweisbar; schliesst Mukoviszidose aus"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -1367,7 +1368,7 @@
         <reference value="Observation/mii-exa-seltene-molgen-variant-dmd-deletion-exon45"/>
       </reference>
       <name value="DMD Exon 45 Deletion - MolGen Variante"/>
-      <description value="Out-of-frame Deletion im DMD-Gen (Exon 45) — fuehrt zu Duchenne"/>
+      <description value="Out-of-frame Deletion im DMD-Gen (Exon 45) — führt zu Duchenne"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -2093,7 +2094,18 @@
         <reference value="StructureDefinition/mii-ex-seltene-register"/>
       </reference>
       <name value="MII EX SE Register"/>
-      <description value="Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug laeuft ueber ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt."/>
+      <description value="Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug läuft über ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-ex-seltene-von-se-betroffen"/>
+      </reference>
+      <name value="MII EX SE Von SE betroffen"/>
+      <description value="Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2390,7 +2402,7 @@
         <reference value="ValueSet/mii-vs-seltene-clinical-diagnosis-category"/>
       </reference>
       <name value="MII VS SE Clinical Diagnosis Category (retired)"/>
-      <description value="RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehoert in Condition.code."/>
+      <description value="RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehört in Condition.code."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2610,7 +2622,7 @@
         <reference value="ValueSet/mii-vs-seltene-nbs-target-analyte"/>
       </reference>
       <name value="MII VS Seltene Erkrankungen NBS Leitanalyten der Zielkrankheiten"/>
-      <description value="Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie § 17 Abs. 1 (20 Zielkrankheiten) und § 23 ff. (Mukoviszidose). Je Zielkrankheit der Analyt, über den sie im Screening erkannt wird."/>
+      <description value="Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie § 17 Abs. 1 (20 Zielkrankheiten) und 23 ff. (Mukoviszidose). Je Zielkrankheit der Analyt, über den sie im Screening erkannt wird."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2654,17 +2666,6 @@
         <reference value="Parameters/mii-param-seltene-manifest"/>
       </reference>
       <name value="mii-param-seltene-manifest"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/mii-ex-seltene-von-se-betroffen"/>
-      </reference>
-      <name value="MII_EX_Seltene_VonSEBetroffen"/>
-      <description value="Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2950,7 +2951,7 @@
         <reference value="ServiceRequest/mii-exa-seltene-studieneinschluss-anfrage"/>
       </reference>
       <name value="Studieneinschlussempfehlung"/>
-      <description value="Empfehlung, den Patienten fuer eine Studie zu evaluieren"/>
+      <description value="Empfehlung, den Patienten für eine Studie zu evaluieren"/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage"/>
     </resource>
     <resource>
