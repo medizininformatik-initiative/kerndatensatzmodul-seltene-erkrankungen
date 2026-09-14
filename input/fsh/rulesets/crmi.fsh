@@ -276,12 +276,19 @@ RuleSet: CRMICodeSystemMetadata
 
 // ── Profile mit MII-Elternprofil ─────────────────────────────────────────────
 //
-// Drei Profile leiten nicht von einer nackten FHIR-Ressource ab, sondern von
+// Vier Profile leiten nicht von einer nackten FHIR-Ressource ab, sondern von
 // einem Profil eines Nachbarmoduls:
 //
 //   MII_PR_Seltene_ClinicalDiagnosis   → base   .../modul-diagnose/…/Diagnose
 //   MII_PR_Seltene_GeneticDiagnosis    → base   .../modul-diagnose/…/Diagnose
 //   MII_PR_Seltene_Therapieempfehlung  → medikation .../MedicationRequest
+//   MII_PR_Seltene_Familienanamnese    → molgen .../familienanamnese
+//
+// Die Familienanamnese kam am 2026-09-13 dazu, nicht durch eine Aenderung hier:
+// molgen hat mit 2027.0.0-ballot.rc3 selbst CRMI auf seine Artefakte gelegt und
+// traegt seither Metadaten-Extensions, die es in rc2 noch nicht gab. Wer eine
+// Abhaengigkeit hochzieht, muss also damit rechnen, dass ein bis dahin
+// unauffaelliges Kindprofil neu kollidiert.
 //
 // Deren StructureDefinition traegt bereits 14 eigene Metadaten-Extensions, und
 // SUSHI setzt die des Kindes AUF DIESE DRAUF: ^extension[+] zaehlt ab dem
