@@ -5,6 +5,8 @@ Title: "MII PR SE Therapieplan"
 Description: "Therapieplan"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIProfileMetadata
+* ^experimental = false
 * ^status = #active
 
 * status ^short = "draft | active | on-hold | revoked | completed | entered-in-error | unknown"

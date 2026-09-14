@@ -4,6 +4,7 @@ Title: "MII VS SE Blutgruppe"
 Description: "ValueSet für Blutgruppen (AB0 und Rhesusfaktor) basierend auf LOINC Answer List für 882-1"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIValueSetMetadata
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-blutgruppe"
 * ^status = #active
 * ^experimental = false

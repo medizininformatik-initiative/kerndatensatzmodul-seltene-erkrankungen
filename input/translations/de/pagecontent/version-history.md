@@ -87,8 +87,29 @@ Die Repository-Variable `ENABLE_VERSION_COMPARISON=false` schaltet das
 gesamte Feature ab — den Publisher-Vergleich in allen Build-Workflows ebenso
 wie diese Demonstration; ein erstelltes Modul rendert die Demonstration nie.
 
-> [TODO: Falls Ihr Modul über das KDS-Schema hinaus eine eigene
-> Versionierungs-Politik hat — etwa einen Unterstützungszeitraum für ältere
-> Versionen oder eine Abkündigungs-Politik für Profile —, beschreiben Sie sie
-> hier. Löschen Sie diesen Hinweis anschließend.]
-{: .ig-highlight .ig-highlight-grey}
+### Zurückziehen von Artefakten
+
+Über das KDS-Schema hinaus befolgt das Modul eine eigene Regel, die es bisher
+zweimal angewandt hat: Ein Artefakt, das sich als falsch erweist, wird
+**zurückgezogen und nicht gelöscht**.
+
+* Sein Canonical bleibt auflösbar, damit bereits erhobene Daten lesbar bleiben.
+* Sein `status` wird `retired`; das hält Konformitätswerkzeuge davon ab, es erneut
+  zu binden.
+* Sein Titel erhält den Zusatz `(retired)`, und seine Beschreibung beginnt mit
+  `RETIRED. Nicht verwenden.` samt Begründung — der Befund ist damit sichtbar, ohne
+  die Änderungshistorie zu bemühen.
+
+Löschen wäre die schlechtere Wahl: Ein einmal veröffentlichtes Canonical ist von
+diesem Augenblick an die Abhängigkeit anderer. Zurückgezogene Artefakte stehen in
+den Artefakttabellen gesondert und verschwinden nicht stillschweigend.
+
+Bisher zurückgezogen, beides in Version 2027.0.0-ballot.rc1:
+
+| Artefakt | Grund |
+|---|---|
+| [`mii-vs-seltene-clinical-diagnosis-category`](ValueSet-mii-vs-seltene-clinical-diagnosis-category.html) | Beantwortete die falsche Frage: `Condition.category` bezeichnet die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehört in `Condition.code`. |
+| [`mii-vs-seltene-genetic-basis`](ValueSet-mii-vs-seltene-genetic-basis.html) | Acht seiner neun SNOMED-CT-Codes bezeichneten etwas anderes als ihr Display behauptete oder existierten nicht. Nicht reparabel; die bindende Extension war zudem nie an ein Profil angeschlossen. |
+
+Eine **eigene Unterstützungsfrist** für ältere Versionen legt das Modul nicht fest;
+dafür gilt das oben beschriebene KDS-Schema.

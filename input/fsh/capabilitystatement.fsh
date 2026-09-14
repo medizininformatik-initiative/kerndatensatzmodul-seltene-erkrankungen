@@ -33,6 +33,7 @@ Instance: mii-cps-seltene-capabilitystatement
 InstanceOf: CapabilityStatement
 Usage: #definition
 * insert SP_Publisher
+* insert CRMICapabilityStatementMetadata
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata"
 * name = "MII_CPS_Seltene_CapabilityStatement"
 * title = "MII CPS Seltene Erkrankungen CapabilityStatement"

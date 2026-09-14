@@ -24,6 +24,20 @@ vollständig).
 > des Meta-Moduls.
 {: .ig-highlight .ig-highlight-grey}
 
+> **Bekannte Einschränkung — ICF:** `mii-vs-seltene-icf` expandiert in dieser
+> Publikation nicht. Der MII-Terminologieserver führt
+> `http://hl7.org/fhir/sid/icf` derzeit nicht und meldet es als unbekanntes
+> CodeSystem. Betroffen ist [`mii-pr-seltene-icf-assessment`](StructureDefinition-mii-pr-seltene-icf-assessment.html),
+> dessen `code.coding` **required** gegen dieses ValueSet gebunden ist: Wer gegen
+> denselben Server validiert, kann ICF-Kategorien nicht prüfen lassen. Die
+> Bindung ist gewollt und bleibt bestehen — ICF-Unterstützung ist eine
+> Anforderung des JARDIN-MDS-Entwurfs und des ERDRI-CDS —, die Lücke liegt also
+> beim Serverbetrieb und nicht am Profil. Sie schließt sich, sobald das
+> BfArM-Paket `bfarm.terminologien.icf` auf dem Terminologieserver geladen ist.
+> Die ICF-Codes selbst bleiben gültig und können unabhängig davon verwendet
+> werden.
+{: .ig-highlight .ig-highlight-grey}
+
 <!-- BEGIN GENERATED: artifact-list (scripts/generate-artifact-lists.py) -->
 
 Das Modul definiert die folgenden ValueSets. Auch solche, die lediglich Codes einer externen Terminologie bündeln, stehen hier &mdash; ihr Canonical gehört diesem Modul.
@@ -48,7 +62,7 @@ Das Modul definiert die folgenden ValueSets. Auch solche, die lediglich Codes ei
 | MII VS Seltene Erkrankungen NBS Enzymaktivitäten (Trockenblut) | [`mii-vs-seltene-nbs-enzyme-activity-dbs`](ValueSet-mii-vs-seltene-nbs-enzyme-activity-dbs.html) | Enzymaktivitäten (katalytische Konzentration), die in Trockenblut bestimmt werden — u. a. Biotinidase und Galaktose-Enzyme des deutschen Neugeborenenscreenings sowie die Enzyme lysosomaler Speicherkrankheiten, die international gescreent werden. |
 | MII VS Seltene Erkrankungen NBS Hämoglobin-Fraktionen (Trockenblut) | [`mii-vs-seltene-nbs-hemoglobin-dbs`](ValueSet-mii-vs-seltene-nbs-hemoglobin-dbs.html) | Hämoglobin-Fraktionen in Trockenblut, bezogen auf das Gesamthämoglobin — die Messgrößen des Screenings auf Sichelzellkrankheit und weitere Hämoglobinopathien. Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb deutlich unvollständig gegenüber LOINC (rund ein Drittel der DBS-Hämoglobin-Codes); für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all. |
 | MII VS Seltene Erkrankungen NBS Quotienten (Trockenblut) | [`mii-vs-seltene-nbs-ratio-dbs`](ValueSet-mii-vs-seltene-nbs-ratio-dbs.html) | Diagnostische Quotienten aus Trockenblut-Analyten. Im Neugeborenenscreening tragen die Verhältnisse (z. B. C3/C2, Phe/Tyr) einen großen Teil der diagnostischen Trennschärfe, weil sie von der Probenqualität weniger abhängen als Einzelwerte. |
-| MII VS Seltene Erkrankungen NBS Leitanalyten der Zielkrankheiten | [`mii-vs-seltene-nbs-target-analyte`](ValueSet-mii-vs-seltene-nbs-target-analyte.html) | Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie § 17 Abs. 1 (20 Zielkrankheiten) und § 23 ff. (Mukoviszidose). Je Zielkrankheit der Analyt, über den sie im Screening erkannt wird. |
+| MII VS Seltene Erkrankungen NBS Leitanalyten der Zielkrankheiten | [`mii-vs-seltene-nbs-target-analyte`](ValueSet-mii-vs-seltene-nbs-target-analyte.html) | Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie § 17 Abs. 1 (20 Zielkrankheiten) und 23 ff. (Mukoviszidose). Je Zielkrankheit der Analyt, über den sie im Screening erkannt wird. |
 | MII VS SE Penetrance | [`mii-vs-seltene-penetrance`](ValueSet-mii-vs-seltene-penetrance.html) | Value set for qualitative descriptions of genetic penetrance, drawn from the HPO branch Inheritance qualifier (HP:0034335). Note that the graded terms (high/moderate/low penetrance) are subtypes of incomplete penetrance, not alternatives to complete penetrance. |
 | MII VS Seltene Erkrankungen Symptom Change Status (Combined) | [`mii-vs-seltene-symptom-change-status-combined`](ValueSet-mii-vs-seltene-symptom-change-status-combined.html) | ValueSet zur Dokumentation von Änderungen bei Symptomen/Phänotypen über Zeit. Kombiniert MVGenomSeq-spezifische Codes mit SNOMED CT-Codes für internationale Interoperabilität. |
 | Syndrome Category Value Set | [`mii-vs-seltene-syndrome-category`](ValueSet-mii-vs-seltene-syndrome-category.html) | Categories for classifying syndrome types in rare diseases |

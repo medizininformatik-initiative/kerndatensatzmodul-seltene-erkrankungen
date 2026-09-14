@@ -30,6 +30,7 @@ Title: "MII VS Seltene Erkrankungen NBS Acylcarnitine (Trockenblut)"
 Description: "Acylcarnitin- und Carnitin-Analyte in Trockenblut (dried blood spot) — die Messgrößen des MS/MS-Acylcarnitinprofils im Neugeborenenscreening (Fettsäureoxidationsstörungen, Organoazidopathien, Carnitinzyklusdefekte). Abgeleitet aus der LOINC-SNOMED-Ontologie und deshalb NICHT vollständig gegenüber LOINC: enthalten ist der nach SNOMED gemappte Teil. Für die lückenlose Menge siehe mii-vs-seltene-nbs-dbs-all."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIValueSetMetadata
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-acylcarnitine-dbs"
 * ^status = #active
 * ^experimental = false

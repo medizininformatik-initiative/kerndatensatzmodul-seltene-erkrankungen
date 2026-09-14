@@ -98,11 +98,40 @@ Not enabled in this scaffold, but prepared as commented blocks in
   [CRMI Manifest Parameters](https://hl7.org/fhir/uv/crmi/STU2/en/StructureDefinition-crmi-manifestparameters.html)
   resource and the `path-expansion-params` / `pin-manifest` parameters.
 
-> [TODO: Enable the blocks your module needs and then update the tables above.
-> If your module also applies the CRMI shareable/publishable profiles to its own
-> StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets — the
-> `kerndatensatz-basis` idiom is a shared `RuleSet` in
-> [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/input/fsh/rulesets/crmi.fsh) — add the corresponding rows here.]
+##### CRMI profiles on the module's own artefacts
+
+Since 2026-09-11 every artefact of this module claims the matching CRMI profiles
+and carries the same governance metadata as the `ImplementationGuide` itself. The
+rules live in [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/input/fsh/rulesets/crmi.fsh),
+ported from `kerndatensatz-basis`, and are applied through one composite rule set
+per artefact type:
+
+| Artefact type | Claimed CRMI profiles | Count |
+|---|---|---|
+| Profiles, extensions, logical model | `crmi-shareablestructuredefinition`, `crmi-publishablestructuredefinition` | 29 |
+| ValueSets | `crmi-shareablevalueset`, `crmi-publishablevalueset` | 29 |
+| CodeSystems | `crmi-shareablecodesystem`, `crmi-publishablecodesystem` | 6 |
+| CapabilityStatement | `crmi-shareablecapabilitystatement`, `crmi-publishablecapabilitystatement` | 1 |
+
+Alongside the profile claim each artefact carries `cqf-knowledgeCapability`,
+`artifact-usage`, `artifact-versionPolicy`, `resource-approvalDate`,
+`artifact-topic` and the contributor extensions, so an artefact read on its own —
+outside the guide — still states who is responsible for it and what it is for.
+
+`crmi-computablevalueset` is deliberately **not** claimed: it requires a compose
+definition that not every value set of this module has, and `kerndatensatz-basis`
+likewise claims it on only one of fourteen.
+
+> **Open point for the ballot:** three profiles derive from a profile of a
+> neighbouring module — the two diagnosis profiles from the `Diagnose` profile of
+> `kerndatensatz-base`, the therapy recommendation from the `MedicationRequest`
+> profile of `kerndatensatz-medikation`. A derived `StructureDefinition` inherits
+> the metadata extensions of its parent, and those name the **parent module's**
+> author. These three therefore claim only the CRMI profiles and do not restate
+> the metadata: a value of a different type cannot be overwritten at the same
+> extension index without both remaining in place. Whether a derived profile
+> should inherit its parent module's governance metadata at all is a question for
+> the MII-wide conventions, not for this module.
 {: .ig-highlight .ig-highlight-grey}
 
 ##### CodeSystem supplements
@@ -156,10 +185,24 @@ it with `path-expansion-params` and `pin-manifest`. Both readers and tooling
 then have one stable place to inspect the parameters used for expansion and
 package pinning.
 
-> [TODO: Add the manifest for your module (see the commented blocks in
-> `sushi-config.yaml`) and link the generated `Parameters` resource page here,
-> or state explicitly that this module does not pin expansion parameters.]
-{: .ig-highlight .ig-highlight-grey}
+This module does pin its expansion parameters. The seed lives in
+`input/resources/Parameters-expansion-manifest.json`, the publisher fills it during
+the build, and the result is published as
+[`mii-param-seltene-manifest`](Parameters-mii-param-seltene-manifest.html) — 253
+parameters in this release. It is linked from the `ImplementationGuide` via
+`cqf-expansionParameters` and named to the publisher through `path-expansion-params`
+and `pin-manifest`.
+
+The seed pins the two things the build cannot derive on its own:
+
+* **SNOMED CT** to the International Edition, version `20260701` — the same
+  release that `kerndatensatz-base` and `kerndatensatz-molgen` pin on the 2027
+  line, so a code means the same thing across the modules of one release.
+* the **artifact version policy** code system to `3.0.0`.
+
+Everything else in the published manifest is the build's own record of what it
+resolved, and is therefore the place to look when an expansion needs to be
+reproduced exactly.
 
 #### Relationship to FAIR
 
@@ -209,10 +252,11 @@ asserted to be a persistently identified FAIR dataset.
 | R1.3 | RDA-R1.3-01D | Data complies with a community standard | The examples declare this module's profiles. In production, conformance must be validated against the profiles, bindings and CapabilityStatement expectations. |
 | R1.3 | RDA-R1.3-02M | Metadata is machine-understandable per a community standard | CRMI-conformant FHIR metadata as JSON/XML and as a FHIR package in the NPM package format used by the IG Publisher ecosystem. |
 
-> [TODO: The table lists the indicators of priority *Essential*. If your module
-> wants the complete self-assessment, extend it with the *Important* and
-> *Useful* indicators — `kerndatensatz-basis` carries the full table.]
-{: .ig-highlight .ig-highlight-grey}
+The table deliberately lists the indicators of priority *Essential* only.
+The *Important* and *Useful* indicators are not assessed here: this section is an
+informative self-assessment, and a longer table would suggest a degree of formal
+evaluation that has not taken place. `kerndatensatz-basis` carries the full table
+for modules that want the complete picture.
 
 #### Practical use
 

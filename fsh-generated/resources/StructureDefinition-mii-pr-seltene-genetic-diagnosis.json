@@ -1,6 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-pr-seltene-genetic-diagnosis",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
+    ]
+  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
@@ -113,10 +119,11 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis",
-  "version": "2027.0.0-ballot.rc1",
+  "version": "2027.0.0-ballot",
   "name": "MII_PR_Seltene_GeneticDiagnosis",
   "title": "MII PR SE Genetic Diagnosis",
   "status": "active",
+  "experimental": false,
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -147,15 +154,6 @@
       {
         "id": "Condition",
         "path": "Condition",
-        "constraint": [
-          {
-            "key": "se-genetic-evidence",
-            "severity": "error",
-            "human": "Genetic diagnosis must have at least one evidence.detail referencing a MolGen resource",
-            "expression": "evidence.exists() and evidence.detail.exists()",
-            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
-          }
-        ],
         "mapping": [
           {
             "identity": "SE-LogicalModel",
@@ -214,7 +212,7 @@
         "id": "Condition.category",
         "path": "Condition.category",
         "short": "Kategorisierung als genetische Erkrankung",
-        "definition": "Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung",
+        "definition": "Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung. Bewusste Nutzung der extensible-Bindung von Condition.category: Der Wert bezeichnet nicht die Rolle im Datensatz, sondern macht die genetische Sicherung registeruebergreifend auswertbar.",
         "min": 1,
         "patternCodeableConcept": {
           "coding": [
@@ -273,6 +271,11 @@
             "identity": "SE-LogicalModel",
             "map": "anamneseUndDiagnostik.genetischeDiagnose",
             "comment": "OMIM-Code Diagnose"
+          },
+          {
+            "identity": "SE-LogicalModel",
+            "map": "anamneseUndDiagnostik.genetischeDiagnose.omimCode",
+            "comment": "OMIM-Code der Erkrankung"
           }
         ]
       },
@@ -342,11 +345,6 @@
             "comment": "Feststellungsdatum genetische SE-Diagnose"
           }
         ]
-      },
-      {
-        "id": "Condition.abatement[x]",
-        "path": "Condition.abatement[x]",
-        "mustSupport": true
       },
       {
         "id": "Condition.recorder",

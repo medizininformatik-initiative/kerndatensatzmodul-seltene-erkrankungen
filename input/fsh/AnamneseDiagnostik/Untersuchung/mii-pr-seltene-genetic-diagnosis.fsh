@@ -4,6 +4,8 @@ Parent: MII_PR_Diagnose_Condition
 Id: mii-pr-seltene-genetic-diagnosis
 Title: "MII PR SE Genetic Diagnosis"
 Description: "Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and links to MolGen variant/diagnostic implication resources. This profile is used when a rare disease diagnosis has been confirmed through genetic testing."
+* insert CRMIProfileMetadataInherited
+* ^experimental = false
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
 * insert PR_CS_VS_Version
 * insert Publisher
@@ -12,7 +14,6 @@ Description: "Profile for genetically confirmed diagnosis of rare diseases with 
 // Inherit all constraints from parent Diagnose profile
 * clinicalStatus MS
 * verificationStatus MS
-* category 1..* MS
 * severity MS
 * code MS
 * bodySite MS
@@ -27,12 +28,37 @@ Description: "Profile for genetically confirmed diagnosis of rare diseases with 
 * evidence MS
 * note MS
 
-// Add specific category for genetic diseases
-// Since the parent profile doesn't slice category, we just add as a required value
+// KATEGORIE — bewusste Abweichung, begruendet (Nutzerentscheid 2026-09-11,
+// nach einem Review-Hinweis auf die Ungleichbehandlung gegenueber der
+// klinischen Diagnose).
+//
+// Condition.category ist in FHIR R4 0..* und EXTENSIBLE an condition-category
+// gebunden (problem-list-item | encounter-diagnosis). Eine extensible Bindung
+// erlaubt ausdruecklich Codes ausserhalb des ValueSets, wenn keiner der
+// enthaltenen passt — die Spezifikation merkt am Element selbst an, die
+// Kategorisierung sei "often highly contextual". Der feste Wert hier ist also
+// keine Regelverletzung, sondern die vorgesehene Nutzung einer extensible
+// Bindung.
+//
+// Warum ueberhaupt: Die Kennzeichnung als genetisch gesicherte Erkrankung ist
+// das Merkmal, ueber das dieses Modul registeruebergreifend gefunden werden
+// will. Sie steht nicht in Condition.code — dort steht die Erkrankung selbst
+// (ICD-10-GM, ORPHA, OMIM) — und laesst sich aus dem Code auch nicht
+// herleiten, weil dieselbe Erkrankung klinisch oder genetisch gesichert sein
+// kann. Genau diese Unterscheidung traegt das Modul in zwei getrennten
+// Profilen, und category macht sie fuer eine Suche auswertbar.
+//
+// OFFEN und im Guide benannt: patternCodeableConcept auf einem wiederholbaren
+// Element verlangt, dass JEDE Wiederholung dem Muster entspricht. Eine zweite
+// Kategorie — etwa encounter-diagnosis fuer die Rolle im Datensatz — ist damit
+// derzeit unzulaessig. Alle zehn Beispiele fuehren folgerichtig nur diesen
+// einen Wert. Sauberer waere ein offener Slice, der 782964007 verlangt und
+// weitere Kategorien zulaesst; das aendert die publizierte Constraint-Form und
+// gehoert daher in die Ballotierung.
 * category 1..* MS
 * category = $SCT#782964007 "Genetic disease"
 * category ^short = "Kategorisierung als genetische Erkrankung"
-* category ^definition = "Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung"
+* category ^definition = "Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung. Bewusste Nutzung der extensible-Bindung von Condition.category: Der Wert bezeichnet nicht die Rolle im Datensatz, sondern macht die genetische Sicherung registeruebergreifend auswertbar."
 
 // Add OMIM slice to the existing code slices
 * code.coding ^slicing.discriminator[+].type = #pattern
@@ -76,13 +102,22 @@ Description: "Profile for genetically confirmed diagnosis of rare diseases with 
 * extension[penetrance] ^short = "Penetranz der genetischen Variante"
 * extension[penetrance] ^definition = "Angabe zur Penetranz der genetischen Variante bei dieser Erkrankung"
 
-// Apply invariant to ensure genetic evidence
-* obeys se-genetic-evidence
-
-Invariant: se-genetic-evidence
-Description: "Genetic diagnosis must have at least one evidence.detail referencing a MolGen resource"
-Expression: "evidence.exists() and evidence.detail.exists()"
-Severity: #error
+// Die Invariante se-genetic-evidence ist am 2026-09-11 entfallen (Hinweis aus
+// dem Review). Sie lautete:
+//   Expression: "evidence.exists() and evidence.detail.exists()"
+// und war vollstaendig redundant: evidence ist in diesem Profil 1..*, und
+// evidence.detail ebenfalls 1..*. Beide Teilbedingungen sind damit schon durch
+// die Kardinalitaeten erzwungen — die Invariante konnte nie greifen, ohne dass
+// zuvor schon die Kardinalitaet verletzt gewesen waere.
+//
+// Ihre Beschreibung behauptete zudem mehr, als der Ausdruck pruefte ("at least
+// one evidence.detail referencing a MolGen resource"): weder der Ausdruck noch
+// das Profil binden evidence.detail an ein MolGen-Profil, targetProfile ist
+// generisch Observation | DiagnosticReport. Eine Constraint, die etwas anderes
+// verspricht als sie prueft, ist schlechter als keine.
+//
+// Entfernen aendert das Verhalten nicht: Was die Invariante forderte, fordern
+// die Kardinalitaeten weiterhin.
 
 // Mapping to Logical Model
 Mapping: FHIR-SE-GeneticDiagnosis
@@ -98,6 +133,7 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * onset[x] -> "anamneseUndDiagnostik.genetischeDiagnose.alterGenDia" "Alter/Zeitpunkt bei genetischer SE-Diagnose"
 * onsetDateTime -> "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia" "Feststellungsdatum genetische SE-Diagnose"
 * evidence.code -> "anamneseUndDiagnostik.methodeDiagnosestellung" "Methode der Diagnosestellung"
+* code.coding[omim] -> "anamneseUndDiagnostik.genetischeDiagnose.omimCode" "OMIM-Code der Erkrankung"
 * evidence.detail -> "Verweis auf MolGen Variante/DiagnostischeImplikation" "Genetische Befunde"
 * subject -> "persoenlicheInfosIndexpatient" "Patient/Indexpatient"
 * encounter -> "anamneseUndDiagnostik.untersuchungsdatum" "Untersuchungsdatum"

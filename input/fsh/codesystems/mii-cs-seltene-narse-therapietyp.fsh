@@ -4,6 +4,7 @@ Title: "MII CS Seltene Erkrankungen NARSE Therapietyp"
 Description: "CodeSystem für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen"
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMICodeSystemMetadata
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-narse-therapietyp"
 * ^status = #active
 * ^experimental = false

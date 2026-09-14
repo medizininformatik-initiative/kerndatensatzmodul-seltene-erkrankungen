@@ -11,7 +11,10 @@
 // gezogen worden, inklusive seines expliziten ^url.
 Extension: MII_EX_Seltene_VonSEBetroffen
 Id: mii-ex-seltene-von-se-betroffen
+Title: "MII EX SE Von SE betroffen"
 Description: "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist."
 * insert PR_CS_VS_Version
+* insert CRMIExtensionMetadata
+* ^experimental = false
 * value[x] only CodeableConcept
 * value[x] from MII_VS_Seltene_VonSEBetroffen (required)

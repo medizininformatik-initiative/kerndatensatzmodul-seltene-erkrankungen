@@ -30,6 +30,7 @@ Title: "MII VS Seltene Erkrankungen NBS Quotienten (Trockenblut)"
 Description: "Diagnostische Quotienten aus Trockenblut-Analyten. Im Neugeborenenscreening tragen die Verhältnisse (z. B. C3/C2, Phe/Tyr) einen großen Teil der diagnostischen Trennschärfe, weil sie von der Probenqualität weniger abhängen als Einzelwerte."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIValueSetMetadata
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-ratio-dbs"
 * ^status = #active
 * ^experimental = false

@@ -65,6 +65,8 @@ Extension:   MII_EX_Seltene_Register
 Id:          mii-ex-seltene-register
 Title:       "MII EX SE Register"
 Description: "Optionaler Verweis auf den Library-Katalogeintrag des Registers nach dem Profil mii-pr-studie-register des MII KDS Moduls Studie. Der verbindliche Registerbezug läuft über ResearchSubject.study, das in R4 zwingend auf eine ResearchStudy zeigt."
+* insert CRMIExtensionMetadata
+* ^experimental = false
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-register"
 * insert PR_CS_VS_Version
 * insert Publisher
@@ -84,6 +86,8 @@ Title:       "MII PR SE Registerteilnahme"
 Description: "Teilnahme einer Person an einem Register für seltene Erkrankungen, insbesondere an einem Register eines European Reference Network (ERN). Gedacht für die Dokumentation aus zweiter Hand im Versorgungskontext: festgehalten wird, dass die Person teilnimmt. Nah am Probanden-Profil des MII KDS Moduls Studie, aber bewusst nicht davon abgeleitet, weil dessen Pflichtangabe consent den Sekundärfall ausschließt."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIProfileMetadata
+* ^experimental = false
 
 * extension contains MII_EX_Seltene_Register named register 0..1 MS
 * extension[register] ^short = "Katalogeintrag des Registers als Library (optional)"

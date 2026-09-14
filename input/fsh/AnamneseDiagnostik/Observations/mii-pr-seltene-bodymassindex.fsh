@@ -5,6 +5,8 @@ Title:       "Body Mass Index (BMI) of the patient"
 Description: "Describes the Body Mass Index (BMI) of the patient."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIProfileMetadata
+* ^experimental = false
 * ^status = #active
 
 * status MS

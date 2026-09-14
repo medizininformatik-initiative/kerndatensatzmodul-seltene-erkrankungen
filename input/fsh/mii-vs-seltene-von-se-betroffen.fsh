@@ -4,6 +4,7 @@ Title: "Von SE betroffen Value Set"
 Description: "ValueSet zur Angabe ob ein Familienmitglied an der gleichen SE erkrankt ist. Verwendet SNOMED CT codes für internationale Interoperabilität."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIValueSetMetadata
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-von-se-betroffen"
 * ^status = #active
 * ^experimental = false

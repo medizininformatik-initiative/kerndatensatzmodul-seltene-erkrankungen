@@ -40,8 +40,9 @@ Alias: $MII_PR_Diagnose_Condition = https://www.medizininformatik-initiative.de/
 // FHIR observation related code systems
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 
-// ICU module aliases
-Alias: $MII_PR_ICU_Kopfumfang = https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang
+// ICU module aliases — entfernt 2026-09-13 mit der ICU-Abhaengigkeit.
+// mii-pr-seltene-kopfumfang erbt jetzt direkt vom deutschen Basisprofil;
+// die Begruendung steht im Kopf jenes Profils.
 
 // ---- Template-Aliases (mii-kds-module-template v0.11.3, per-Definition-Merge; Modul-Definitionen gewinnen) ----
 Alias: $sct = http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250701

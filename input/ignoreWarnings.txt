@@ -4,12 +4,50 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 #
-# NOTE: ignoreWarnings.txt only suppresses WARNINGS and HINTS — it cannot suppress
-# ERRORS. Terminology-server false-positives that surface as errors (e.g. the
-# BCP-47/all-languages "UNABLE_TO_INFER_CODESYSTEM" / "Terminology_TX_NoValid_16"
-# messages on inherited translation metadata) are reclassified via the advisory
-# framework in ../advisor.json (passed to the IG Publisher with -advisor-file),
-# NOT here.
+# KORRIGIERT 2026-09-14. Hier standen zwei Behauptungen aus der Vorlage, die
+# beide nicht stimmen:
+#
+#   1. "ignoreWarnings.txt kann keine ERRORS unterdruecken." Doch. Der Publisher
+#      prueft in ValidationPresenter.filterMessages jede Meldung unabhaengig vom
+#      Schweregrad gegen diese Liste.
+#   2. "Fehler werden ueber ../advisor.json mit -advisor-file umklassifiziert."
+#      -advisor-file ist ein Flag des VALIDATOR-CLI (org.hl7.fhir.validation.cli),
+#      nicht des IG Publishers. Kein Publisher-Aufruf dieses Repos uebergibt es,
+#      kerndatensatz-basis uebergibt es nirgends — advisor.json erreicht den
+#      Publisher also nie. Sie wirkt ausschliesslich in validation.yml.
+#
+# WONACH hier abgeglichen wird: der Publisher vergleicht fuenf Dinge —
+# display, message, html, messageId und invId. Eine Zeile darf also der
+# MELDUNGSTEXT oder die MESSAGE-ID sein. Muster oder regulaere Ausdruecke gibt es
+# nicht, der Vergleich ist exakt.
+
+# ---- Terminologieserver: Protokollinkompatibilitaet, kein Modulfehler ----
+#
+# 354 Fehler, gemessen im Trockenlauf fuer 2027.0.0-ballot (2026-09-14) und
+# unveraendert seit 2027.0.0-ballot.rc1: 287 LOINC, 35 SNOMED CT, 32 HPO. Alle
+# tragen denselben Wortlaut:
+#
+#   The code '<code>' is not valid in the system <system> (error: [<uuid>]:
+#   Type-level request to $validate-code must specify either valueSet or url
+#   parameter.)
+#
+# Das ist eine Inkompatibilitaet zwischen IG Publisher 2.3.2 und Ontoserver
+# 6.25.3 auf dem Einzelcode-Pfad, NICHT ein falscher Code. Beleg: derselbe Server
+# expandiert dieselben Systeme gleichzeitig einwandfrei — die HPO-Expansion nennt
+# in ihrer Fusszeile "Expansion from 127.0.0.1 based on codesystem Human
+# Phenotype Ontology version 20250303" mit 31.154 Codes, das NBS-ValueSet
+# expandiert ueber einen LOINC-Filter auf 610 Konzepte.
+#
+# Der Meldungstext taugt hier NICHT als Schluessel: jede der 354 Meldungen traegt
+# eine eigene UUID. Deshalb steht unten die MESSAGE-ID.
+#
+# WAS DAS KOSTET: die Id deckt auch einen echten Tippfehler in einem aufgezaehlten
+# ValueSet-Code zu. Diese Luecke ist bewusst und anderweitig geschlossen —
+# scripts/verify-valueset-codes.py prueft JEDEN aufgezaehlten Code samt Display
+# gegen einen Terminologieserver und war genau dafuer gebaut (es fand seinerzeit
+# sieben Codes, deren Display etwas voellig anderes behauptete). Diese Pruefung
+# gehoert vor jede Freigabe.
+VALUESET_INCLUDE_INVALID_CONCEPT_CODE
 
 # ---- Imported from mii-kds-module-template v0.11.3 ----
 

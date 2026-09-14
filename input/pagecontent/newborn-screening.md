@@ -18,7 +18,7 @@ which makes its results a natural starting point for the patient journeys this m
 
 The G-BA Kinder-Richtlinie (version of 15 May 2025, in force since 1 January 2026) lists **20
 target conditions** in § 17 (1). Screening for cystic fibrosis is a legally separate programme
-under § 23 ff. and is listed separately below. Since May 2026 the list includes vitamin B12
+under 23 ff. and is listed separately below. Since May 2026 the list includes vitamin B12
 deficiency, homocystinuria, propionic acidemia and methylmalonic aciduria — four additions that
 older overviews of "the German newborn screening" do not have.
 
@@ -38,9 +38,9 @@ ValueSet holds 21 codes rather than 21 conditions.
 | 7 | MCAD deficiency | octanoylcarnitine (C8) | `53175-6` | 42 | E71.3 |
 | 8 | LCHAD deficiency | C16-OH | `50125-4` | 5 | E71.3 |
 | 9 | VLCAD deficiency | C14:1 | `53191-3` | 26793 | E71.3 |
-| 10 | Carnitine cycle defects — CPT-I | free carnitine (C0) | `38481-8` | 156 | E71.3 |
-| 10 | Carnitine cycle defects — CPT-II | palmitoylcarnitine (C16) | `53199-6` | 157 | E71.3 |
-| 10 | Carnitine cycle defects — CACT | C0/(C16+C18) | `53235-8` | 159 | E71.3 |
+| 10a | Carnitine cycle defects — CPT-I | free carnitine (C0) | `38481-8` | 156 | E71.3 |
+| 10b | Carnitine cycle defects — CPT-II | palmitoylcarnitine (C16) | `53199-6` | 157 | E71.3 |
+| 10c | Carnitine cycle defects — CACT | C0/(C16+C18) | `53235-8` | 159 | E71.3 |
 | 11 | Glutaric aciduria type I | glutarylcarnitine (C5-DC) | `45207-8` | 25 | E72.3 |
 | 12 | Isovaleric acidemia | isovalerylcarnitine (C5) | `42920-9` | 33 | E71.1 |
 | 13 | Tyrosinemia type I | succinylacetone | `53231-7` | 882 | E70.2 |
@@ -66,7 +66,7 @@ extend them.
 
 | ValueSet | Codes | How it was determined |
 |---|---|---|
-| [NBS lead analytes](ValueSet-mii-vs-seltene-nbs-target-analyte.html) | 21 | curated: § 17 (1) and § 23 ff. of the Richtlinie |
+| [NBS lead analytes](ValueSet-mii-vs-seltene-nbs-target-analyte.html) | 21 | curated: § 17 (1) and 23 ff. of the Richtlinie |
 | [Acylcarnitines in DBS](ValueSet-mii-vs-seltene-nbs-acylcarnitine-dbs.html) | 78 | ECL over the ontology |
 | [Amino acids in DBS](ValueSet-mii-vs-seltene-nbs-aminoacid-dbs.html) | 96 | ECL over the ontology |
 | [Enzyme activities in DBS](ValueSet-mii-vs-seltene-nbs-enzyme-activity-dbs.html) | 34 | ECL over the ontology |
@@ -155,8 +155,13 @@ screen to molecular confirmation.
 
 ### Limits — what LOINC does not offer
 
-These gaps were established by searching, not assumed. They matter because each one is a place
-where an implementer will otherwise invent a code.
+The table below lists the codes this module looked for and did **not** find. Each entry was
+checked against LOINC directly, rather than inferred — so "missing" means searched-for and absent,
+not merely unknown to us.
+
+Why this matters: wherever a code is missing, an implementer needs one anyway and will invent a
+local one. Naming the gaps here means the same gap gets the same workaround across sites, instead
+of a different private code in each.
 
 | Missing | Context | What exists instead |
 |---|---|---|
@@ -199,7 +204,7 @@ official LOINC release file.
 
 ### Sources
 
-* G-BA Kinder-Richtlinie, version of 15 May 2025, in force 1 January 2026 — § 17 (target conditions), § 23 ff. (cystic fibrosis)
+* G-BA Kinder-Richtlinie, version of 15 May 2025, in force 1 January 2026 — § 17 (target conditions), 23 ff. (cystic fibrosis)
 * LOINC 2.82 via tx.fhir.org
 * LOINC-SNOMED edition, Snowstorm branch `MAIN/SNOMEDCT-LOINC`, version 2026-03-21
 * ORPHA 2025 and ICD-10-GM 2026 via the MII Ontoserver

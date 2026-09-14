@@ -6,6 +6,8 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIProfileMetadata
+* ^experimental = false
 * ^status = #active
 
 // Core elements

@@ -13,6 +13,8 @@ Extension: MII_EX_Seltene_Penetrance
 Id: mii-ex-seltene-penetrance
 Title: "MII EX SE Penetrance"
 Description: "Extension to capture the penetrance of genetic variants associated with a rare disease"
+* insert CRMIExtensionMetadata
+* ^experimental = false
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-penetrance"
 * insert PR_CS_VS_Version
 * insert Publisher

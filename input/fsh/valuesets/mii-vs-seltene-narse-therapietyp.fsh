@@ -4,6 +4,7 @@ Title: "MII VS Seltene Erkrankungen NARSE Therapietyp"
 Description: "ValueSet für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen"
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIValueSetMetadata
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-narse-therapietyp"
 * ^status = #active
 * ^experimental = false

@@ -99,12 +99,42 @@ In diesem Gerüst nicht aktiviert, aber als auskommentierte Blöcke in
   [CRMI-Manifest-Parameters](https://hl7.org/fhir/uv/crmi/STU2/en/StructureDefinition-crmi-manifestparameters.html)-Ressource
   und den Parametern `path-expansion-params` / `pin-manifest`.
 
-> [TODO: Aktivieren Sie die für Ihr Modul nötigen Blöcke und ziehen Sie die
-> Tabellen oben nach. Wenn Ihr Modul die CRMI-Shareable-/Publishable-Profile
-> zusätzlich auf seine eigenen StructureDefinitions, CapabilityStatements,
-> CodeSysteme und ValueSets anwendet — das Idiom aus `kerndatensatz-basis` ist
-> ein gemeinsames `RuleSet` in [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/input/fsh/rulesets/crmi.fsh) —, ergänzen Sie die
-> entsprechenden Zeilen.]
+##### CRMI-Profile auf den eigenen Artefakten
+
+Seit dem 2026-09-11 beansprucht jedes Artefakt dieses Moduls die passenden
+CRMI-Profile und trägt dieselben Governance-Metadaten wie der
+`ImplementationGuide` selbst. Die Regeln stehen in
+[`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/input/fsh/rulesets/crmi.fsh),
+aus `kerndatensatz-basis` portiert, und werden über je ein Sammel-RuleSet pro
+Artefakttyp angewandt:
+
+| Artefakttyp | Beanspruchte CRMI-Profile | Anzahl |
+|---|---|---|
+| Profile, Extensions, Datensatzmodell | `crmi-shareablestructuredefinition`, `crmi-publishablestructuredefinition` | 29 |
+| ValueSets | `crmi-shareablevalueset`, `crmi-publishablevalueset` | 29 |
+| CodeSystems | `crmi-shareablecodesystem`, `crmi-publishablecodesystem` | 6 |
+| CapabilityStatement | `crmi-shareablecapabilitystatement`, `crmi-publishablecapabilitystatement` | 1 |
+
+Neben dem Profilanspruch trägt jedes Artefakt `cqf-knowledgeCapability`,
+`artifact-usage`, `artifact-versionPolicy`, `resource-approvalDate`,
+`artifact-topic` und die Beitragenden-Extensions. Wer ein Artefakt für sich allein
+liest — außerhalb des Leitfadens —, erfährt damit weiterhin, wer dafür einsteht
+und wozu es dient.
+
+`crmi-computablevalueset` wird bewusst **nicht** beansprucht: Es verlangt eine
+compose-Definition, die nicht jedes ValueSet dieses Moduls hat, und
+`kerndatensatz-basis` beansprucht es ebenfalls nur bei einem von vierzehn.
+
+> **Offener Punkt für den Ballot:** Drei Profile leiten von einem Profil eines
+> Nachbarmoduls ab — die beiden Diagnoseprofile vom `Diagnose`-Profil aus
+> `kerndatensatz-base`, die Therapieempfehlung vom `MedicationRequest`-Profil aus
+> `kerndatensatz-medikation`. Eine abgeleitete `StructureDefinition` erbt die
+> Metadaten-Extensions ihres Elternprofils, und die nennen den Autor des
+> **Elternmoduls**. Diese drei beanspruchen deshalb nur die CRMI-Profile und
+> wiederholen die Metadaten nicht: Ein andersartiger Wert lässt sich am selben
+> Extension-Index nicht ersetzen, ohne dass beide stehen bleiben. Ob ein
+> abgeleitetes Profil die Governance-Metadaten seines Elternmoduls überhaupt erben
+> sollte, ist eine Frage der MII-weiten Konventionen und nicht dieses Moduls.
 {: .ig-highlight .ig-highlight-grey}
 
 ##### CodeSystem-Supplements
@@ -158,11 +188,25 @@ Publisher mit `path-expansion-params` und `pin-manifest` darauf hin. Lesende wie
 Werkzeuge haben dann eine stabile Stelle, an der die Parameter für Expansion und
 Paket-Pinnung einsehbar sind.
 
-> [TODO: Ergänzen Sie das Manifest Ihres Moduls (siehe die auskommentierten
-> Blöcke in `sushi-config.yaml`) und verlinken Sie hier die erzeugte
-> `Parameters`-Seite — oder halten Sie ausdrücklich fest, dass dieses Modul
-> keine Expansions-Parameter pinnt.]
-{: .ig-highlight .ig-highlight-grey}
+Dieses Modul pinnt seine Expansionsparameter. Das Saatgut liegt in
+`input/resources/Parameters-expansion-manifest.json`, der Publisher füllt es während
+des Builds, und das Ergebnis erscheint als
+[`mii-param-seltene-manifest`](Parameters-mii-param-seltene-manifest.html) — 253
+Parameter in dieser Auflage. Verlinkt ist es aus dem `ImplementationGuide` über
+`cqf-expansionParameters` und dem Publisher über `path-expansion-params` und
+`pin-manifest` benannt.
+
+Das Saatgut pinnt die beiden Dinge, die der Build nicht selbst herleiten kann:
+
+* **SNOMED CT** auf die International Edition, Version `20260701` — dieselbe
+  Ausgabe, die `kerndatensatz-base` und `kerndatensatz-molgen` auf der 2027er
+  Linie pinnen, damit ein Code über die Module einer Auflage hinweg dasselbe
+  bedeutet.
+* das CodeSystem der **Artefakt-Versionspolitik** auf `3.0.0`.
+
+Alles Weitere im publizierten Manifest ist die Mitschrift des Builds über das, was
+er aufgelöst hat — und damit die Stelle, an der nachzusehen ist, wenn eine
+Expansion exakt reproduziert werden soll.
 
 #### Bezug zu FAIR
 
@@ -214,11 +258,11 @@ dauerhaft identifizierter FAIR-Datensatz behauptet.
 | R1.3 | RDA-R1.3-01D | Daten entsprechen einem Community-Standard | Die Beispiele deklarieren die Profile dieses Moduls. Produktiv muss die Konformität gegen Profile, Bindings und CapabilityStatement-Erwartungen validiert werden. |
 | R1.3 | RDA-R1.3-02M | Metadaten sind gemäß einem Community-Standard maschinenverständlich | CRMI-konforme FHIR-Metadaten als JSON/XML und als FHIR-Paket im NPM-Format des IG-Publisher-Ökosystems. |
 
-> [TODO: Die Tabelle führt die Indikatoren der Priorität *Essential* auf. Wenn
-> Ihr Modul die vollständige Selbsteinschätzung will, ergänzen Sie die
-> Indikatoren der Prioritäten *Important* und *Useful* — `kerndatensatz-basis`
-> führt die vollständige Tabelle.]
-{: .ig-highlight .ig-highlight-grey}
+Die Tabelle führt bewusst nur die Indikatoren der Priorität *Essential* auf.
+Die Indikatoren *Important* und *Useful* werden hier nicht bewertet: Dieser Abschnitt
+ist eine informative Selbsteinschätzung, und eine längere Tabelle würde ein Maß an
+förmlicher Prüfung nahelegen, das nicht stattgefunden hat. Die vollständige Tabelle
+führt `kerndatensatz-basis` für Module, die das ganze Bild wollen.
 
 #### Praktische Nutzung
 

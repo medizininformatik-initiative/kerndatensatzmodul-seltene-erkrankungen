@@ -148,19 +148,20 @@
         "coding": [
           {
             "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-            "code": "C4873"
+            "code": "C4873",
+            "display": "Rare Disorder"
           }
         ]
       }
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene",
-  "version": "2027.0.0-ballot.rc1",
+  "version": "2027.0.0-ballot",
   "name": "MII_IG_Seltene_Erkrankungen",
   "title": "MII IG Kerndatensatz-Modul Seltene Erkrankungen",
   "status": "active",
   "experimental": false,
-  "date": "2026-09-09",
+  "date": "2026-09-14",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -199,37 +200,31 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
-      "version": "2027.0.0-ballot.rc3",
+      "version": "2027.0.0-ballot",
       "uri": "https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta",
       "id": "de_medizininformatikinitiative_kerndatensatz_meta"
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.molgen",
-      "version": "2027.0.0-ballot.rc2",
+      "version": "2027.0.0-ballot.1",
       "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen",
       "id": "de_medizininformatikinitiative_kerndatensatz_molgen"
     },
     {
-      "packageId": "de.medizininformatikinitiative.kerndatensatz.icu",
-      "version": "2027.0.0-ballot.rc2",
-      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.icu/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.icu",
-      "id": "de_medizininformatikinitiative_kerndatensatz_icu"
-    },
-    {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.studie",
-      "version": "2027.0.0-ballot.rc1",
+      "version": "2027.0.0-ballot",
       "uri": "https://www.medizininformatik-initiative.de/fhir/modul-studie/ImplementationGuide/mii-ig-studie",
       "id": "de_medizininformatikinitiative_kerndatensatz_studie"
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.base",
-      "version": "2027.0.0-ballot.rc1",
+      "version": "2027.0.0-ballot",
       "uri": "https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base",
       "id": "de_medizininformatikinitiative_kerndatensatz_base"
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.medikation",
-      "version": "2026.0.1",
+      "version": "2027.0.0-ballot",
       "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ImplementationGuide/mii-ig-medikation",
       "id": "de_medizininformatikinitiative_kerndatensatz_medikation"
     },
@@ -241,13 +236,13 @@
     },
     {
       "packageId": "hl7.terminology.r4",
-      "version": "7.3.0",
+      "version": "7.1.0",
       "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "id": "hl7_terminology_r4"
     },
     {
       "packageId": "hl7.fhir.uv.extensions.r4",
-      "version": "5.3.0",
+      "version": "5.2.0",
       "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
       "id": "hl7_fhir_uv_extensions_r4"
     }
@@ -1096,6 +1091,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-ex-seltene-von-se-betroffen"
+        },
+        "name": "MII EX SE Von SE betroffen",
+        "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Patient/mii-exa-seltene-patient"
         },
         "name": "MII EXA SE Beispielpatient",
@@ -1203,7 +1206,7 @@
           "reference": "StructureDefinition/mii-pr-seltene-kopfumfang"
         },
         "name": "MII PR SE Kopfumfang",
-        "description": "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom MII ICU Kopfumfang-Profil.",
+        "description": "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom deutschen Basisprofil für den Vitalparameter Kopfumfang.",
         "exampleBoolean": false
       },
       {
@@ -1467,7 +1470,7 @@
           "reference": "ValueSet/mii-vs-seltene-nbs-target-analyte"
         },
         "name": "MII VS Seltene Erkrankungen NBS Leitanalyten der Zielkrankheiten",
-        "description": "Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie § 17 Abs. 1 (20 Zielkrankheiten) und § 23 ff. (Mukoviszidose). Je Zielkrankheit der Analyt, über den sie im Screening erkannt wird.",
+        "description": "Leitanalyten der Zielkrankheiten des deutschen Neugeborenenscreenings nach G-BA Kinder-Richtlinie § 17 Abs. 1 (20 Zielkrankheiten) und 23 ff. (Mukoviszidose). Je Zielkrankheit der Analyt, über den sie im Screening erkannt wird.",
         "exampleBoolean": false
       },
       {
@@ -1500,14 +1503,6 @@
         },
         "exampleBoolean": false,
         "name": "mii-param-seltene-manifest"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-ex-seltene-von-se-betroffen"
-        },
-        "name": "MII_EX_Seltene_VonSEBetroffen",
-        "description": "Wird in der MII Modul SE Familienanamnese genutzt um zu bestimmen ob ein Familienmitglied an der gleichen SE erkrankt ist.",
-        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1932,7 +1927,7 @@
       },
       {
         "code": "releaselabel",
-        "value": "ci-build"
+        "value": "ballot"
       },
       {
         "code": "special-url",

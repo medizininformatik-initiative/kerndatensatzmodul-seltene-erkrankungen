@@ -1,8 +1,8 @@
 {
   "name": "de.medizininformatikinitiative.kerndatensatz.seltene",
-  "version": "2027.0.0-ballot.rc1",
+  "version": "2027.0.0-ballot",
   "title": "MII IG Seltene Erkrankungen",
-  "description": "Medizininformatik Initiative - Modul Seltene Erkrankungen. Version 2026.0.1: Patch-Release mit Aktualisierung der Abhängigkeiten (Studie 2026.0.2, ICU 2026.0.2), Fix ICU-Kopfumfang-Alias und Penetrance-Extension-Context. Release Notes: https://simplifier.net/guide/mii-ig-seltene-erkrankungen-v2026-de/ReleaseNotes",
+  "description": "Medizininformatik Initiative - Modul Seltene Erkrankungen. Version 2027.0.0-ballot: Ballotierungsfassung 2027 auf Basis des MII-KDS-Modultemplates.",
   "author": "thomasdebertshaeuser",
   "fhirVersions": [
     "4.0.1"
@@ -29,14 +29,13 @@
   "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",
   "dependencies": {
     "de.basisprofil.r4": "1.6.0",
-    "de.medizininformatikinitiative.kerndatensatz.meta": "2027.0.0-ballot.rc3",
-    "de.medizininformatikinitiative.kerndatensatz.molgen": "2027.0.0-ballot.rc2",
-    "de.medizininformatikinitiative.kerndatensatz.icu": "2027.0.0-ballot.rc2",
-    "de.medizininformatikinitiative.kerndatensatz.studie": "2027.0.0-ballot.rc1",
-    "de.medizininformatikinitiative.kerndatensatz.base": "2027.0.0-ballot.rc1",
-    "de.medizininformatikinitiative.kerndatensatz.medikation": "2026.0.1",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "2027.0.0-ballot",
+    "de.medizininformatikinitiative.kerndatensatz.molgen": "2027.0.0-ballot.1",
+    "de.medizininformatikinitiative.kerndatensatz.studie": "2027.0.0-ballot",
+    "de.medizininformatikinitiative.kerndatensatz.base": "2027.0.0-ballot",
+    "de.medizininformatikinitiative.kerndatensatz.medikation": "2027.0.0-ballot",
     "hl7.fhir.uv.crmi": "2.0.0",
-    "hl7.terminology.r4": "7.3.0",
-    "hl7.fhir.uv.extensions.r4": "5.3.0"
+    "hl7.terminology.r4": "7.1.0",
+    "hl7.fhir.uv.extensions.r4": "5.2.0"
   }
 }

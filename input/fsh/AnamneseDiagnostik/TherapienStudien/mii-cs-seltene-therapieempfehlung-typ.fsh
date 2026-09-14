@@ -7,6 +7,8 @@ Title: "MII CS SE Therapieempfehlung Typ"
 Description: "Therapietyp (kausal vs. symptomatisch) für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMICodeSystemMetadata
+* ^experimental = false
 * ^status = #active
 * ^caseSensitive = true
 * ^content = #complete
@@ -25,6 +27,8 @@ Title: "MII VS SE Therapieempfehlung Typ"
 Description: "ValueSet für Therapietypen (kausal/symptomatisch) bei seltenen Erkrankungen (Modellvorhaben GenomSeq)"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIValueSetMetadata
+* ^experimental = false
 * ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-typ"
 * include codes from system MII_CS_Seltene_TherapieempfehlungTyp

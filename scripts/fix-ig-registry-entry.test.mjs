@@ -181,6 +181,34 @@ test("rejects placeholder or mismatched generated metadata before writing", () =
     /edition\.name/,
   );
 
+  // Eine Ballot-Publikation darf " Ballot" an die sequence anhaengen — so
+  // benennt der IG Publisher sie, und so stehen 68 Editionen in der echten
+  // FHIR-IG-Registry ("STU 3 Ballot", "STU1 Ballot", ...). Die Pruefung verlangte
+  // frueher Gleichheit mit der sequence und brach jede Ballot-Publikation ab.
+  const ballotEdition = fixture(
+    targetEntry({
+      editions: [
+        {
+          name: `${request.sequence} Ballot`,
+          "ig-version": request.version,
+          package: `${packageId}#${request.version}`,
+          "fhir-version": ["4.0.1"],
+          url: request.path,
+        },
+      ],
+    }),
+  );
+  assert.doesNotThrow(() =>
+    fixIgRegistryEntry(
+      ballotEdition.registry,
+      ballotEdition.requestFile,
+      ballotEdition.packageFile,
+      canonical,
+      history,
+      ["en", "de"],
+    ),
+  );
+
   const wrongFhirVersion = fixture(
     targetEntry({
       editions: [

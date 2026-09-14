@@ -4,6 +4,7 @@ Title: "MII VS Seltene Erkrankungen Symptom Change Status (Combined)"
 Description: "ValueSet zur Dokumentation von Änderungen bei Symptomen/Phänotypen über Zeit. Kombiniert MVGenomSeq-spezifische Codes mit SNOMED CT-Codes für internationale Interoperabilität."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIValueSetMetadata
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-symptom-change-status-combined"
 * ^status = #active
 * ^experimental = false

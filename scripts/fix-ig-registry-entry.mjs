@@ -265,12 +265,26 @@ function validateEntry(
     );
   } else {
     const edition = editions[0];
-    assertEqual(
-      edition.name,
-      requiredString(request, "sequence", "Publication request"),
-      "edition.name",
-      errors,
-    );
+    // edition.name ist NICHT immer die blosse sequence. Bei einer Ballot-
+    // Publikation haengt der IG Publisher " Ballot" an: aus sequence "2027" wird
+    // "2027 Ballot". Das ist die Konvention der echten FHIR-IG-Registry und kein
+    // Ausrutscher — 68 der dortigen Editionen fuehren "Ballot" im Namen
+    // ("STU 3 Ballot", "STU1 Ballot", …; geprueft 2026-09-14 gegen
+    // FHIR/ig-registry@master).
+    //
+    // Die alte Fassung verlangte Gleichheit mit sequence und brach deshalb jede
+    // Ballot-Publikation ab. Aufgefallen beim Trockenlauf fuer
+    // 2027.0.0-ballot: "edition.name: expected \"2027\", found \"2027 Ballot\"",
+    // und zwar NACH einem erfolgreichen Publisher-Lauf — also spaet und teuer.
+    const sequence = requiredString(request, "sequence", "Publication request");
+    const acceptedEditionNames = [sequence, `${sequence} Ballot`];
+    if (!acceptedEditionNames.includes(edition.name)) {
+      errors.push(
+        `edition.name: expected one of ` +
+          `${acceptedEditionNames.map((value) => JSON.stringify(value)).join(" or ")}, ` +
+          `found ${JSON.stringify(edition.name)}`,
+      );
+    }
     assertEqual(edition.package, `${packageId}#${version}`, "edition.package", errors);
     assertEqual(
       normalizeUrl(edition.url ?? "", "Generated edition URL"),

@@ -16,6 +16,8 @@ ValueSet: MII_VS_Seltene_ClinicalDiagnosisCategory
 Id: mii-vs-seltene-clinical-diagnosis-category
 Title: "MII VS SE Clinical Diagnosis Category (retired)"
 Description: "RETIRED. Nicht verwenden. Das ValueSet war zur Kategorisierung klinischer Diagnosen gedacht, beantwortet aber die falsche Frage: Condition.category bezeichnet in FHIR die Rolle der Condition im Datensatz, nicht die Art der Krankheit. Die Krankheitsart gehört in Condition.code."
+* insert CRMIValueSetMetadata
+* ^experimental = false
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-clinical-diagnosis-category"
 * insert PR_CS_VS_Version
 * insert Publisher
@@ -43,6 +45,8 @@ ValueSet: MII_VS_Seltene_HPOAgeOfOnset
 Id: mii-vs-seltene-hpo-age-of-onset
 Title: "MII VS SE HPO Age of Onset"
 Description: "Value set containing HPO terms for age of onset of diseases"
+* insert CRMIValueSetMetadata
+* ^experimental = false
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-age-of-onset"
 * insert PR_CS_VS_Version
 * insert Publisher
@@ -77,6 +81,8 @@ ValueSet: MII_VS_Seltene_HPOInheritancePattern
 Id: mii-vs-seltene-hpo-inheritance-pattern
 Title: "MII VS SE HPO Inheritance Pattern"
 Description: "Value set containing HPO terms for modes of inheritance"
+* insert CRMIValueSetMetadata
+* ^experimental = false
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-inheritance-pattern"
 * insert PR_CS_VS_Version
 * insert Publisher
@@ -119,6 +125,8 @@ ValueSet: MII_VS_Seltene_GeneticBasis
 Id: mii-vs-seltene-genetic-basis
 Title: "MII VS SE Genetic Basis (retired)"
 Description: "RETIRED. Nicht verwenden. Acht der neun enthaltenen SNOMED-Codes bezeichnen etwas anderes als ihr Display behauptet oder existieren nicht; das ValueSet muss neu erstellt werden."
+* insert CRMIValueSetMetadata
+* ^experimental = false
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-genetic-basis"
 * insert PR_CS_VS_Version
 * insert Publisher
@@ -159,6 +167,8 @@ ValueSet: MII_VS_Seltene_Penetrance
 Id: mii-vs-seltene-penetrance
 Title: "MII VS SE Penetrance"
 Description: "Value set for qualitative descriptions of genetic penetrance, drawn from the HPO branch Inheritance qualifier (HP:0034335). Note that the graded terms (high/moderate/low penetrance) are subtypes of incomplete penetrance, not alternatives to complete penetrance."
+* insert CRMIValueSetMetadata
+* ^experimental = false
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-penetrance"
 * insert PR_CS_VS_Version
 * insert Publisher

@@ -7,6 +7,8 @@ Title: "MII CS SE Therapieempfehlung Strategie"
 Description: "Strategietypen für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMICodeSystemMetadata
+* ^experimental = false
 * ^status = #active
 * ^caseSensitive = true
 * ^content = #complete
@@ -46,6 +48,8 @@ Title: "MII VS SE Therapieempfehlung Strategie"
 Description: "ValueSet für Strategietypen von Therapieempfehlungen bei seltenen Erkrankungen (Modellvorhaben GenomSeq)"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIValueSetMetadata
+* ^experimental = false
 * ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie"
 * include codes from system MII_CS_Seltene_TherapieempfehlungStrategie
@@ -57,6 +61,8 @@ Title: "MII VS SE Therapieempfehlung Strategie - Medikamentös"
 Description: "ValueSet für medikamentöse Therapiestrategien (für MedicationRequest Profile) - Verwendet für MedicationRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIValueSetMetadata
+* ^experimental = false
 * ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-medikamentoes"
 * MII_CS_Seltene_TherapieempfehlungStrategie#systemic-medication "Systemische Medikation"
@@ -72,6 +78,8 @@ Title: "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös"
 Description: "ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profile) - Verwendet für ServiceRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert CRMIValueSetMetadata
+* ^experimental = false
 * ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes"
 * MII_CS_Seltene_TherapieempfehlungStrategie#prophylactic "Prophylaxe"
