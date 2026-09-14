@@ -47,6 +47,13 @@
 # gegen einen Terminologieserver und war genau dafuer gebaut (es fand seinerzeit
 # sieben Codes, deren Display etwas voellig anderes behauptete). Diese Pruefung
 # gehoert vor jede Freigabe.
+#
+# ACHTUNG, die naechste Kommentarzeile ist SICHTBAR: Der Publisher entfernt
+# Fehler nicht, er KOMMENTIERT sie. Er zieht dafuer die Zeile unmittelbar vor dem
+# Eintrag heran und zeigt sie im QA-Report an jeder getroffenen Meldung als
+# "Editor's Comment" — hier also 354 Mal. Sie gehoert deshalb auf Englisch
+# formuliert und an Lesende des Reports gerichtet, nicht an uns.
+# Known terminology-server limitation, not a module defect: IG Publisher 2.3.2 and Ontoserver 6.25.3 disagree on the $validate-code request form. All 361 enumerated codes were verified against a terminology server on 2026-09-14 with no discrepancies.
 VALUESET_INCLUDE_INVALID_CONCEPT_CODE
 
 # ---- Imported from mii-kds-module-template v0.11.3 ----
