@@ -185,12 +185,6 @@
     "version" : "2027.0.0-ballot.1"
   },
   {
-    "id" : "de_medizininformatikinitiative_kerndatensatz_icu",
-    "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.icu/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.icu",
-    "packageId" : "de.medizininformatikinitiative.kerndatensatz.icu",
-    "version" : "2027.0.0-ballot.rc2"
-  },
-  {
     "id" : "de_medizininformatikinitiative_kerndatensatz_studie",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/modul-studie/ImplementationGuide/mii-ig-studie",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.studie",
@@ -2686,7 +2680,7 @@
         "reference" : "StructureDefinition/mii-pr-seltene-kopfumfang"
       },
       "name" : "MII PR SE Kopfumfang",
-      "description" : "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom MII ICU Kopfumfang-Profil.",
+      "description" : "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom deutschen Basisprofil für den Vitalparameter Kopfumfang.",
       "exampleBoolean" : false
     },
     {

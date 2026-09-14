@@ -139,7 +139,7 @@ Human Phenotype Ontology codes for phenotypic observations
   "title" : "HPO Phenotypic Observation Codes",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T07:31:58+00:00",
+  "date" : "2026-09-14T08:42:11+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

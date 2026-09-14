@@ -711,7 +711,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang|2027.0.0-ballot.rc1"
+    "valueCanonical" : "http://fhir.de/StructureDefinition/observation-de-vitalsign-kopfumfang|1.6.0"
   },
   {
     "name" : "default-canonical-version",
@@ -908,10 +908,6 @@
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "http://hl7.org/fhir/ValueSet/procedure-code|4.0.1"
-  },
-  {
-    "name" : "default-valueset-version",
-    "valueCanonical" : "http://fhir.de/ValueSet/bfarm/ops|1.5.4"
   },
   {
     "name" : "default-canonical-version",

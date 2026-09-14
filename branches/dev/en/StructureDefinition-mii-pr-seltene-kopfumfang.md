@@ -12,7 +12,7 @@
 | Active as of 2026-09-14 | *Computable Name*:MII_PR_Seltene_Kopfumfang |
 
  
-Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom MII ICU Kopfumfang-Profil. 
+Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom deutschen Basisprofil für den Vitalparameter Kopfumfang. 
 
 This profile describes the measurement of the head circumference (occipital-frontal) of a patient. The head circumference is particularly relevant for rare diseases affecting skull growth, e.g. skeletal dysplasias, neurological diseases or syndromes with macro-/microcephaly.
 
@@ -157,7 +157,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ko
   "title" : "MII PR SE Kopfumfang",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T07:31:58+00:00",
+  "date" : "2026-09-14T08:42:11+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -179,7 +179,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ko
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom MII ICU Kopfumfang-Profil.",
+  "description" : "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom deutschen Basisprofil für den Vitalparameter Kopfumfang.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -196,7 +196,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ko
   "kind" : "resource",
   "abstract" : false,
   "type" : "Observation",
-  "baseDefinition" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang",
+  "baseDefinition" : "http://fhir.de/StructureDefinition/observation-de-vitalsign-kopfumfang",
   "derivation" : "constraint",
   "differential" : {
     "element" : [{
@@ -232,9 +232,23 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ko
       }]
     },
     {
+      "id" : "Observation.effective[x]",
+      "path" : "Observation.effective[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
       "id" : "Observation.effective[x]:effectiveDateTime",
       "path" : "Observation.effective[x]",
       "sliceName" : "effectiveDateTime",
+      "min" : 0,
+      "max" : "1",
       "type" : [{
         "code" : "dateTime"
       }],
