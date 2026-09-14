@@ -1,8 +1,34 @@
+// -----------------------------------------------------------------------------
+// Elternprofil 2026-09-13 von ICU auf das deutsche Basisprofil umgestellt.
+//
+// Vorher:  https://…/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang
+// Jetzt:   http://fhir.de/StructureDefinition/observation-de-vitalsign-kopfumfang
+//
+// Das ICU-Profil leitet SELBST von genau diesem Basisprofil ab und war fuer
+// dieses Modul eine Zwischenschicht ohne Beitrag: Was das Beispiel braucht —
+// die Slices category[VSCat], code.coding[loinc] und code.coding[snomed] —
+// stammt aus der Basisprofil-Kette, nicht aus ICU. Gemessen 2026-09-13: nach
+// der Umstellung nennt keine einzige erzeugte Ressource noch modul-icu.
+//
+// Damit entfaellt die ICU-Abhaengigkeit (124 Ressourcen) ersatzlos. Das ist
+// kein Schoenheitsargument: der Restore-Schritt der CI scheitert regelmaessig
+// an der Drosselung der Registry, und jede Abhaengigkeit weniger ist dort eine
+// Fehlerquelle weniger.
+//
+// BREAKING gegenueber 2027.0.0-ballot.rc1: baseDefinition dieses Profils
+// aendert sich. Bewusst in Kauf genommen (Nutzerentscheid 2026-09-13, gleiche
+// Begruendung wie bei den Umbenennungen: noch niemand hat das Modul umgesetzt).
+//
+// Die beiden Verweise auf ICU-Koerpergewicht und -Koerpergroesse im
+// Datensatzmodell bleiben stehen. Sie sind Freitext und dokumentieren, WO diese
+// Datenpunkte MII-weit gefuehrt werden — das bleibt richtig, auch ohne dass das
+// Paket eine Abhaengigkeit ist.
+// -----------------------------------------------------------------------------
 Profile:     MII_PR_Seltene_Kopfumfang
 Id:          mii-pr-seltene-kopfumfang
-Parent:      $MII_PR_ICU_Kopfumfang
+Parent:      http://fhir.de/StructureDefinition/observation-de-vitalsign-kopfumfang
 Title:       "MII PR SE Kopfumfang"
-Description: "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom MII ICU Kopfumfang-Profil."
+Description: "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom deutschen Basisprofil für den Vitalparameter Kopfumfang."
 
 * insert PR_CS_VS_Version
 * insert Publisher
