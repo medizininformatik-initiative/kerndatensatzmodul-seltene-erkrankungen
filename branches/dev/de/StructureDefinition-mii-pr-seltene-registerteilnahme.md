@@ -192,7 +192,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "title" : "MII PR SE Registerteilnahme",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T10:17:04+00:00",
+  "date" : "2026-09-14T14:24:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
