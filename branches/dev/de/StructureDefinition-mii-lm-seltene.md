@@ -180,7 +180,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
   "title" : "MII LM SE",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T18:57:54+00:00",
+  "date" : "2026-09-14T20:28:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

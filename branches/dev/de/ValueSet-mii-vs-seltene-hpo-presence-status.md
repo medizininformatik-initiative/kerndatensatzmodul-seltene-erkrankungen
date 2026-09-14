@@ -137,7 +137,7 @@ LOINC codes for indicating presence or absence of phenotypic features. Follows H
   "title" : "HPO Phenotype Presence Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T18:57:54+00:00",
+  "date" : "2026-09-14T20:28:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
