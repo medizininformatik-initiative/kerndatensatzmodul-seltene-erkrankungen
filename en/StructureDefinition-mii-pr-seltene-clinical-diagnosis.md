@@ -1,4 +1,4 @@
-# MII PR SE Clinical Diagnosis - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# MII PR SE Clinical Diagnosis - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Seltene_ClinicalDiagnosis |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Seltene_ClinicalDiagnosis |
 
  
 Profile for clinical diagnosis of rare diseases with HPO phenotype codes. This profile is used for clinically diagnosed rare diseases based on phenotypic presentation. 
@@ -43,6 +43,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
 {
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-seltene-clinical-diagnosis",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
+  },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
@@ -149,11 +153,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Seltene_ClinicalDiagnosis",
   "title" : "MII PR SE Clinical Diagnosis",
   "status" : "active",
-  "date" : "2026-09-09T13:15:21+00:00",
+  "experimental" : false,
+  "date" : "2026-09-14T22:11:28+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -357,11 +362,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
         "map" : "anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia",
         "comment" : "Feststellungsdatum klinische SE-Diagnose"
       }]
-    },
-    {
-      "id" : "Condition.abatement[x]",
-      "path" : "Condition.abatement[x]",
-      "mustSupport" : true
     },
     {
       "id" : "Condition.recorder",

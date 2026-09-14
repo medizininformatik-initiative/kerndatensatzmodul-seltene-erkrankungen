@@ -1,4 +1,4 @@
-# MII PR SE Kopfumfang - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# MII PR SE Kopfumfang - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,11 +8,11 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_PR_Seltene_Kopfumfang |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_PR_Seltene_Kopfumfang |
 
  
-Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom MII ICU Kopfumfang-Profil. 
+Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom deutschen Basisprofil für den Vitalparameter Kopfumfang. 
 
 Dieses Profil beschreibt die Messung des Kopfumfangs (okzipital-frontal) eines Patienten. Der Kopfumfang ist besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen oder Syndrome mit Makro-/Mikrozephalie.
 
@@ -55,15 +55,21 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang) 
+Diese Struktur ist abgeleitet von [VitalSignDE_Kopfumfang](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.de/StructureDefinition/observation-de-vitalsign-kopfumfang) 
 
 #### Terminology Bindings
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang) 
+Diese Struktur ist abgeleitet von [VitalSignDE_Kopfumfang](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.de/StructureDefinition/observation-de-vitalsign-kopfumfang) 
 
 ** Summary **
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Observation.effective[x]
 
  **Schlüsselelemente-Ansicht** 
 
@@ -73,7 +79,7 @@ Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang) 
+Diese Struktur ist abgeleitet von [VitalSignDE_Kopfumfang](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.de/StructureDefinition/observation-de-vitalsign-kopfumfang) 
 
  **Snapshot-AnsichtView** 
 
@@ -81,9 +87,15 @@ Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_ICU_MUV_Kopfumfang](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.icu@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang) 
+Diese Struktur ist abgeleitet von [VitalSignDE_Kopfumfang](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.de/StructureDefinition/observation-de-vitalsign-kopfumfang) 
 
 ** Summary **
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Observation.effective[x]
 
  
 
@@ -97,12 +109,107 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
 {
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-seltene-kopfumfang",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-09-02"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C4873"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Seltene_Kopfumfang",
   "title" : "MII PR SE Kopfumfang",
   "status" : "active",
-  "date" : "2026-09-09T13:15:21+00:00",
+  "experimental" : false,
+  "date" : "2026-09-14T22:11:28+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -124,7 +231,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom MII ICU Kopfumfang-Profil.",
+  "description" : "Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom deutschen Basisprofil für den Vitalparameter Kopfumfang.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -141,7 +248,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "kind" : "resource",
   "abstract" : false,
   "type" : "Observation",
-  "baseDefinition" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang",
+  "baseDefinition" : "http://fhir.de/StructureDefinition/observation-de-vitalsign-kopfumfang",
   "derivation" : "constraint",
   "differential" : {
     "element" : [{
@@ -177,9 +284,23 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       }]
     },
     {
+      "id" : "Observation.effective[x]",
+      "path" : "Observation.effective[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
       "id" : "Observation.effective[x]:effectiveDateTime",
       "path" : "Observation.effective[x]",
       "sliceName" : "effectiveDateTime",
+      "min" : 0,
+      "max" : "1",
       "type" : [{
         "code" : "dateTime"
       }],

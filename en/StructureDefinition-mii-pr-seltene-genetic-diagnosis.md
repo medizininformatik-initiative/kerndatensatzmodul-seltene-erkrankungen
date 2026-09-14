@@ -1,4 +1,4 @@
-# MII PR SE Genetic Diagnosis - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# MII PR SE Genetic Diagnosis - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Seltene_GeneticDiagnosis |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Seltene_GeneticDiagnosis |
 
  
 Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and links to MolGen variant/diagnostic implication resources. This profile is used when a rare disease diagnosis has been confirmed through genetic testing. 
@@ -43,6 +43,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
 {
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-seltene-genetic-diagnosis",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
+  },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
@@ -149,11 +153,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Seltene_GeneticDiagnosis",
   "title" : "MII PR SE Genetic Diagnosis",
   "status" : "active",
-  "date" : "2026-09-09T13:15:21+00:00",
+  "experimental" : false,
+  "date" : "2026-09-14T22:11:28+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -227,13 +232,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
     "element" : [{
       "id" : "Condition",
       "path" : "Condition",
-      "constraint" : [{
-        "key" : "se-genetic-evidence",
-        "severity" : "error",
-        "human" : "Genetic diagnosis must have at least one evidence.detail referencing a MolGen resource",
-        "expression" : "evidence.exists() and evidence.detail.exists()",
-        "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis"
-      }],
       "mapping" : [{
         "identity" : "SE-LogicalModel",
         "map" : "anamneseUndDiagnostik.genetischeDiagnose",
@@ -282,7 +280,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
       "id" : "Condition.category",
       "path" : "Condition.category",
       "short" : "Kategorisierung als genetische Erkrankung",
-      "definition" : "Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung",
+      "definition" : "Pflicht-Kategorie zur Kennzeichnung als genetisch bestätigte Erkrankung. Bewusste Nutzung der extensible-Bindung von Condition.category: Der Wert bezeichnet nicht die Rolle im Datensatz, sondern macht die genetische Sicherung registeruebergreifend auswertbar.",
       "min" : 1,
       "patternCodeableConcept" : {
         "coding" : [{
@@ -334,6 +332,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
         "identity" : "SE-LogicalModel",
         "map" : "anamneseUndDiagnostik.genetischeDiagnose",
         "comment" : "OMIM-Code Diagnose"
+      },
+      {
+        "identity" : "SE-LogicalModel",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.omimCode",
+        "comment" : "OMIM-Code der Erkrankung"
       }]
     },
     {
@@ -392,11 +395,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
         "map" : "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia",
         "comment" : "Feststellungsdatum genetische SE-Diagnose"
       }]
-    },
-    {
-      "id" : "Condition.abatement[x]",
-      "path" : "Condition.abatement[x]",
-      "mustSupport" : true
     },
     {
       "id" : "Condition.recorder",

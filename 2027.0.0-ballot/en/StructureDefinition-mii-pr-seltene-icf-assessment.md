@@ -1,0 +1,671 @@
+# MII PR SE ICF Assessment - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII PR SE ICF Assessment**
+
+## Resource Profile: MII PR SE ICF Assessment 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Seltene_ICFAssessment |
+
+ 
+Observation profile grading a single ICF category for a patient, as required by the JARDIN MDS draft and the ERDRI-CDS. Observation.code carries the ICF category; the WHO qualifiers are carried as components, because body structures take three of them and activities/participation take two (capacity and performance). 
+
+This profile grades a single category of the WHO **International Classification of Functioning, Disability and Health (ICF)** for one patient. Both the JARDIN MDS draft and the ERDRI-CDS require functioning and disability to be recorded this way, and no MII module covered it before.
+
+`Observation.code` carries the ICF category, `Observation.component` carries the WHO qualifiers.
+
+### Why qualifiers are components, not a value
+
+The number of qualifiers differs by ICF chapter, so a single `value[x]` cannot carry them. `value[x]` is therefore closed off (`0..0`), and an invariant per chapter enforces which components may appear:
+
+| | | |
+| :--- | :--- | :--- |
+| `b` | Body functions | extent of impairment |
+| `s` | Body structures | extent, nature of change, anatomical location |
+| `d` | Activities and participation | **capacity**and**performance** |
+| `e` | Environmental factors | barrier or facilitator |
+
+Without these constraints the profile would accept an anatomical location on a body **function**, which the ICF does not define.
+
+The distinction in chapter `d` is the heart of the classification and is frequently the whole point in rare disease: **capacity** is what someone can do under test conditions, **performance** is what they actually do in their own environment. Both share one BfArM code system, so they are told apart by the component code, not by the value system.
+
+> **Note on ordering:** the ICF's own convention for chapter `d` puts performance first and capacity second. The slice order in this profile is alphabetical and carries no meaning — read the component code, not the position.
+
+### Terminology
+
+Resolved against the BfArM FHIR package `bfarm.terminologien.icf`:
+
+* The classification is published under the HL7 canonical `http://hl7.org/fhir/sid/icf`. BfArM does not mint its own URI for it.
+* **German is not a second code system.** `icf-translation` is a `content=supplement` against the same canonical — one code system, both languages. Nothing here has to choose a language, and the value set needs no German twin.
+* The **qualifiers** are separate code systems, seven of them, published by BfArM under `https://terminologien.bfarm.de/fhir/CodeSystem/icf-q-*`.
+* The separator carries meaning, and BfArM put it **into** the codes: extent of impairment runs `.0`…`.4`, `.8`, `.9`, while facilitators run `+0`…`+4`. A barrier and a facilitator are therefore distinguished by the code itself, not by a sign a parser has to reconstruct.
+
+### Three open points
+
+> **The binding may not resolve in a build.** The MII terminology server does not currently carry `http://hl7.org/fhir/sid/icf` and reports it as an unknown code system, so [`mii-vs-seltene-icf`](ValueSet-mii-vs-seltene-icf.md) has no expansion in this publication even though `code.coding` is bound **required** against it. The gap is one of server provisioning and closes once the BfArM package is loaded there. ICF codes themselves remain valid.**The edition is not pinned.** BfArM ships release 2005 with 1495 concepts; `tx.fhir.org` serves 2017a under the **same** canonical URI, and an expansion there returned 1616. Same URI, roughly 120 concepts apart. A required binding must not straddle both silently.**Ownership is open — deliberately, not by oversight.** This data point is **not** specific to rare diseases: functioning and disability are graded for stroke, oncology and geriatric patients alike, and the ICF is a WHO classification for the whole of health, not for one indication. It is modelled here because the need arose here and was concrete — the JARDIN MDS draft is the data requirement of a European reference network with a deadline, and no connected MII module covered it. A module for **symptoms and the clinical phenotype** is the natural home should one take it on; the same weighing came out differently for sex at birth (HDB-782), which was referred to the base module because both a standard and a place for it already existed. Comments on this point are welcome in the ballot.
+
+-------
+
+**Search parameters** are declared module-wide in the [CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md) — machine-readable and complete there, rather than repeated by hand per profile.
+
+Example instances are linked in the "Examples" section of the profile page.
+
+**Usages:**
+
+* Examples for this Profile: [Observation/mii-exa-seltene-icf-aktivitaet](Observation-mii-exa-seltene-icf-aktivitaet.md), [Observation/mii-exa-seltene-icf-koerperfunktion](Observation-mii-exa-seltene-icf-koerperfunktion.md), [Observation/mii-exa-seltene-icf-koerperstruktur](Observation-mii-exa-seltene-icf-koerperstruktur.md) and [Observation/mii-exa-seltene-icf-umweltfaktor](Observation-mii-exa-seltene-icf-umweltfaktor.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-pr-seltene-icf-assessment.json)
+
+### Formal Views of Profile Content
+
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+ 
+
+Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-icf-assessment.csv), [Excel](../StructureDefinition-mii-pr-seltene-icf-assessment.xlsx), [Schematron](../StructureDefinition-mii-pr-seltene-icf-assessment.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "mii-pr-seltene-icf-assessment",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-09-02"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C4873"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  }],
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_PR_Seltene_ICFAssessment",
+  "title" : "MII PR SE ICF Assessment",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-14T21:59:44+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Observation profile grading a single ICF category for a patient, as required by the JARDIN MDS draft and the ERDRI-CDS. Observation.code carries the ICF category; the WHO qualifiers are carried as components, because body structures take three of them and activities/participation take two (capacity and performance).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "SE-LogicalModel",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene",
+    "name" : "Mapping FHIR zu Seltene Erkrankungen Logical Model"
+  },
+  {
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "sct-concept",
+    "uri" : "http://snomed.info/conceptdomain",
+    "name" : "SNOMED CT Concept Domain Binding"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "sct-attr",
+    "uri" : "http://snomed.org/attributebinding",
+    "name" : "SNOMED CT Attribute Binding"
+  }],
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "Observation",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "Observation",
+      "path" : "Observation",
+      "constraint" : [{
+        "key" : "mii-icf-1",
+        "severity" : "error",
+        "human" : "Body functions (chapter b) take only the extent-of-impairment qualifier.",
+        "expression" : "code.coding.where(system='http://hl7.org/fhir/sid/icf').code.first().startsWith('b') implies component.where(code.coding.code != 'extent-of-impairment').empty()",
+        "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment"
+      },
+      {
+        "key" : "mii-icf-2",
+        "severity" : "error",
+        "human" : "Body structures (chapter s) take only extent, nature of change and anatomical location.",
+        "expression" : "code.coding.where(system='http://hl7.org/fhir/sid/icf').code.first().startsWith('s') implies component.where(code.coding.code != 'extent-of-impairment-structure' and code.coding.code != 'nature-of-change' and code.coding.code != 'anatomical-location').empty()",
+        "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment"
+      },
+      {
+        "key" : "mii-icf-3",
+        "severity" : "error",
+        "human" : "Activities and participation (chapter d) take only capacity and performance.",
+        "expression" : "code.coding.where(system='http://hl7.org/fhir/sid/icf').code.first().startsWith('d') implies component.where(code.coding.code != 'capacity' and code.coding.code != 'performance').empty()",
+        "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment"
+      },
+      {
+        "key" : "mii-icf-4",
+        "severity" : "error",
+        "human" : "Environmental factors (chapter e) take only the barrier or facilitator qualifier.",
+        "expression" : "code.coding.where(system='http://hl7.org/fhir/sid/icf').code.first().startsWith('e') implies component.where(code.coding.code != 'barrier' and code.coding.code != 'facilitator').empty()",
+        "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment"
+      },
+      {
+        "key" : "mii-icf-5",
+        "severity" : "error",
+        "human" : "An environmental factor is graded as a barrier or as a facilitator, not as both at once.",
+        "expression" : "component.where(code.coding.code = 'barrier').empty() or component.where(code.coding.code = 'facilitator').empty()",
+        "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment"
+      }]
+    },
+    {
+      "id" : "Observation.id",
+      "path" : "Observation.id",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.meta",
+      "path" : "Observation.meta",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.meta.profile",
+      "path" : "Observation.meta.profile",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.status",
+      "path" : "Observation.status",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.category",
+      "path" : "Observation.category",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "pattern",
+          "path" : "$this"
+        }],
+        "rules" : "open"
+      },
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.category:survey",
+      "path" : "Observation.category",
+      "sliceName" : "survey",
+      "short" : "Category: survey/assessment",
+      "min" : 1,
+      "max" : "1",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "survey"
+        }]
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code",
+      "path" : "Observation.code",
+      "short" : "ICF category being graded",
+      "definition" : "A single ICF category, e.g. b280 |Sensation of pain| or d450 |Walking|. The chapters are b (body functions), s (body structures), d (activities and participation) and e (environmental factors). German display text is available through the BfArM language supplement without changing the code system.",
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "funktionsfaehigkeit.icfCode",
+        "comment" : "ICF-Code"
+      }]
+    },
+    {
+      "id" : "Observation.code.coding",
+      "path" : "Observation.code.coding",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf"
+      }
+    },
+    {
+      "id" : "Observation.code.coding.system",
+      "path" : "Observation.code.coding.system",
+      "patternUri" : "http://hl7.org/fhir/sid/icf"
+    },
+    {
+      "id" : "Observation.subject",
+      "path" : "Observation.subject",
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.effective[x]",
+      "path" : "Observation.effective[x]",
+      "short" : "When the assessment was made — ICF gradings are point-in-time and change over the course of a disease",
+      "min" : 1,
+      "type" : [{
+        "code" : "dateTime"
+      },
+      {
+        "code" : "Period"
+      }],
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "funktionsfaehigkeit.erhebungsdatum",
+        "comment" : "Erhebungsdatum"
+      }]
+    },
+    {
+      "id" : "Observation.performer",
+      "path" : "Observation.performer",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.value[x]",
+      "path" : "Observation.value[x]",
+      "max" : "0"
+    },
+    {
+      "id" : "Observation.note",
+      "path" : "Observation.note",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component",
+      "path" : "Observation.component",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "pattern",
+          "path" : "code"
+        }],
+        "description" : "One slice per ICF qualifier. Which ones apply depends on the chapter of the category in Observation.code.",
+        "rules" : "open"
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component.value[x]",
+      "path" : "Observation.component.value[x]",
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "funktionsfaehigkeit.beurteilungsmerkmal",
+        "comment" : "WHO-Qualifier zum ICF-Kode"
+      }]
+    },
+    {
+      "id" : "Observation.component:extentOfImpairment",
+      "path" : "Observation.component",
+      "sliceName" : "extentOfImpairment",
+      "short" : "Body functions (b): extent of impairment",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:extentOfImpairment.code",
+      "path" : "Observation.component.code",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal",
+          "code" : "extent-of-impairment"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.component:extentOfImpairment.value[x]",
+      "path" : "Observation.component.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://terminologien.bfarm.de/fhir/ValueSet/icf-q-ausmass-der-schaedigung"
+      }
+    },
+    {
+      "id" : "Observation.component:extentOfImpairmentBodyStructure",
+      "path" : "Observation.component",
+      "sliceName" : "extentOfImpairmentBodyStructure",
+      "short" : "Body structures (s), first qualifier: extent of impairment",
+      "comment" : "BfArM publishes a separate code system for body structures even though the scale reads the same as for body functions. The two are kept apart here rather than merged, so that an instance stays valid against the source terminology.",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:extentOfImpairmentBodyStructure.code",
+      "path" : "Observation.component.code",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal",
+          "code" : "extent-of-impairment-structure"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.component:extentOfImpairmentBodyStructure.value[x]",
+      "path" : "Observation.component.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://terminologien.bfarm.de/fhir/ValueSet/icf-q-ausmass-der-schaedigung-s"
+      }
+    },
+    {
+      "id" : "Observation.component:natureOfChange",
+      "path" : "Observation.component",
+      "sliceName" : "natureOfChange",
+      "short" : "Body structures (s), second qualifier: nature of the change",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:natureOfChange.code",
+      "path" : "Observation.component.code",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal",
+          "code" : "nature-of-change"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.component:natureOfChange.value[x]",
+      "path" : "Observation.component.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://terminologien.bfarm.de/fhir/ValueSet/icf-q-art-oder-veraenderung-in-der-entsprechenden-koerperstruktur"
+      }
+    },
+    {
+      "id" : "Observation.component:anatomicalLocation",
+      "path" : "Observation.component",
+      "sliceName" : "anatomicalLocation",
+      "short" : "Body structures (s), third qualifier: anatomical location",
+      "comment" : "The ICF marks this third qualifier as still under development ('in Entwicklung').",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:anatomicalLocation.code",
+      "path" : "Observation.component.code",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal",
+          "code" : "anatomical-location"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.component:anatomicalLocation.value[x]",
+      "path" : "Observation.component.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://terminologien.bfarm.de/fhir/ValueSet/icf-q-anatomische-lokalisation"
+      }
+    },
+    {
+      "id" : "Observation.component:capacity",
+      "path" : "Observation.component",
+      "sliceName" : "capacity",
+      "short" : "Activities and participation (d): CAPACITY — what the person can do in a standardised environment",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:capacity.code",
+      "path" : "Observation.component.code",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal",
+          "code" : "capacity"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.component:capacity.value[x]",
+      "path" : "Observation.component.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://terminologien.bfarm.de/fhir/ValueSet/icf-q-leistungsfaehigkeit-und-leistung"
+      }
+    },
+    {
+      "id" : "Observation.component:performance",
+      "path" : "Observation.component",
+      "sliceName" : "performance",
+      "short" : "Activities and participation (d): PERFORMANCE — what the person actually does in their current environment",
+      "comment" : "Capacity and performance draw on the same BfArM code system and are distinguished only by this component code. The gap between them is what quantifies the effect of assistive devices and personal assistance.",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:performance.code",
+      "path" : "Observation.component.code",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal",
+          "code" : "performance"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.component:performance.value[x]",
+      "path" : "Observation.component.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://terminologien.bfarm.de/fhir/ValueSet/icf-q-leistungsfaehigkeit-und-leistung"
+      }
+    },
+    {
+      "id" : "Observation.component:barrier",
+      "path" : "Observation.component",
+      "sliceName" : "barrier",
+      "short" : "Environmental factors (e): extent to which the factor acts as a barrier",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:barrier.code",
+      "path" : "Observation.component.code",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal",
+          "code" : "barrier"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.component:barrier.value[x]",
+      "path" : "Observation.component.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://terminologien.bfarm.de/fhir/ValueSet/icf-q-barrieren"
+      }
+    },
+    {
+      "id" : "Observation.component:facilitator",
+      "path" : "Observation.component",
+      "sliceName" : "facilitator",
+      "short" : "Environmental factors (e): extent to which the factor acts as a facilitator",
+      "comment" : "Facilitator codes carry a leading '+' ('+0'..'+4'), barriers a leading '.'. The sign is part of the code, so barrier and facilitator never collide.",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:facilitator.code",
+      "path" : "Observation.component.code",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-icf-beurteilungsmerkmal",
+          "code" : "facilitator"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.component:facilitator.value[x]",
+      "path" : "Observation.component.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://terminologien.bfarm.de/fhir/ValueSet/icf-q-foerderfaktoren"
+      }
+    }]
+  }
+}
+
+```

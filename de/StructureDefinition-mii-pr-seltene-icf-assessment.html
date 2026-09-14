@@ -7,7 +7,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>MII PR SE ICF Assessment - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1</title>
+    <title>MII PR SE ICF Assessment - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -142,7 +142,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Seltene Erkrankungen</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+            <span style="display:inline-block;">2027.0.0-ballot - 
 
 
 
@@ -269,7 +269,7 @@
 
 <!-- layouts\layout-profile -->
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII Implementation Guide Seltene Erkrankungen (v2027.0.0-ballot.rc1: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII Implementation Guide Seltene Erkrankungen (v2027.0.0-ballot: 2027 Ballot 1) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-seltene-erkrankungen/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -355,7 +355,7 @@ MII PR SE ICF Assessment
       <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">2027.0.0-ballot.rc1<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment|2027.0.0-ballot.rc1"/></span>
+      <span class="copy-text">2027.0.0-ballot<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment|2027.0.0-ballot"/></span>
       </td>
     </tr>
 
@@ -373,7 +373,7 @@ MII PR SE ICF Assessment
           
 
             Stand: 
-2026-09-09
+2026-09-14
 
           
         
@@ -396,6 +396,133 @@ MII PR SE ICF Assessment
 
 
 <!-- insert intro if present -->
+
+
+
+
+<div style="display:inline-block" markdown="1">
+
+<p>Dieses Profil stuft für eine Patientin oder einen Patienten <strong>eine</strong> Kategorie der
+WHO-<strong>Internationalen Klassifikation der Funktionsfähigkeit, Behinderung und
+Gesundheit (ICF)</strong> ein. Sowohl der JARDIN-MDS-Entwurf als auch das ERDRI-CDS
+verlangen, Funktionsfähigkeit und Behinderung auf diese Weise zu erfassen; kein
+MII-Modul deckte das bisher ab.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Observation.code</code> trägt die ICF-Kategorie, <code class="language-plaintext highlighter-rouge">Observation.component</code> die
+WHO-Beurteilungsmerkmale.</p>
+
+<h3 id="warum-die-beurteilungsmerkmale-components-sind-und-kein-wert">Warum die Beurteilungsmerkmale Components sind und kein Wert</h3>
+
+<p>Ihre Zahl ist je ICF-Kapitel verschieden, ein einzelnes <code class="language-plaintext highlighter-rouge">value[x]</code> kann sie daher
+nicht tragen. <code class="language-plaintext highlighter-rouge">value[x]</code> ist folglich geschlossen (<code class="language-plaintext highlighter-rouge">0..0</code>), und je Kapitel regelt
+eine Invariante, welche Components auftreten dürfen:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kapitel</th>
+      <th>Gegenstand</th>
+      <th>Beurteilungsmerkmale</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">b</code></td>
+      <td>Körperfunktionen</td>
+      <td>Ausmaß der Schädigung</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">s</code></td>
+      <td>Körperstrukturen</td>
+      <td>Ausmaß, Art der Schädigung, Lokalisation</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">d</code></td>
+      <td>Aktivitäten und Partizipation</td>
+      <td><strong>Leistungsfähigkeit</strong> und <strong>Leistung</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">e</code></td>
+      <td>Umweltfaktoren</td>
+      <td>Barriere oder Förderfaktor</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ohne diese Einschränkungen nähme das Profil anstandslos eine anatomische
+Lokalisation auf einer Körper<em>funktion</em> entgegen — etwas, das die ICF nicht
+definiert.</p>
+
+<p>Die Unterscheidung in Kapitel <code class="language-plaintext highlighter-rouge">d</code> ist das Herzstück der Klassifikation und bei
+seltenen Erkrankungen häufig der eigentliche Punkt: <strong>Leistungsfähigkeit</strong>
+(capacity) ist, was jemand unter Testbedingungen kann, <strong>Leistung</strong>
+(performance), was er in seiner eigenen Umgebung tatsächlich tut. Beide teilen
+sich ein BfArM-CodeSystem und werden deshalb am Component-Code auseinandergehalten,
+nicht am Wertesystem.</p>
+
+<blockquote>
+  <p><strong>Hinweis zur Reihenfolge:</strong> Die ICF selbst nennt in Kapitel <code class="language-plaintext highlighter-rouge">d</code> zuerst die
+Leistung und dann die Leistungsfähigkeit. Die Slice-Reihenfolge dieses Profils
+ist alphabetisch und bedeutet nichts — maßgeblich ist der Component-Code, nicht
+die Position.</p>
+</blockquote>
+
+<h3 id="terminologie">Terminologie</h3>
+
+<p>Aufgelöst gegen das BfArM-FHIR-Paket <code class="language-plaintext highlighter-rouge">bfarm.terminologien.icf</code>:</p>
+
+<ul>
+  <li>Die Klassifikation erscheint unter dem HL7-Canonical
+<code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/sid/icf</code>. Ein eigenes URI prägt das BfArM dafür nicht.</li>
+  <li><strong>Deutsch ist kein zweites CodeSystem.</strong> <code class="language-plaintext highlighter-rouge">icf-translation</code> ist ein
+<code class="language-plaintext highlighter-rouge">content=supplement</code> gegen dasselbe Canonical — ein CodeSystem, beide Sprachen.
+Hier muss sich nichts für eine Sprache entscheiden, und das ValueSet braucht
+keinen deutschen Zwilling.</li>
+  <li>Die <strong>Beurteilungsmerkmale</strong> sind eigene CodeSystems, sieben an der Zahl,
+veröffentlicht unter <code class="language-plaintext highlighter-rouge">https://terminologien.bfarm.de/fhir/CodeSystem/icf-q-*</code>.</li>
+  <li>Das Trennzeichen trägt Bedeutung, und das BfArM hat es <strong>in</strong> die Codes
+gelegt: Das Ausmaß der Schädigung läuft <code class="language-plaintext highlighter-rouge">.0</code>…<code class="language-plaintext highlighter-rouge">.4</code>, <code class="language-plaintext highlighter-rouge">.8</code>, <code class="language-plaintext highlighter-rouge">.9</code>, Förderfaktoren
+laufen <code class="language-plaintext highlighter-rouge">+0</code>…<code class="language-plaintext highlighter-rouge">+4</code>. Barriere und Förderfaktor unterscheiden sich damit am Code
+selbst und nicht an einem Vorzeichen, das ein Parser rekonstruieren müsste.</li>
+</ul>
+
+<h3 id="drei-offene-punkte">Drei offene Punkte</h3>
+
+<blockquote class="ig-highlight ig-highlight-grey">
+  <p><strong>Die Bindung löst im Build womöglich nicht auf.</strong> Der MII-Terminologieserver
+führt <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/sid/icf</code> derzeit nicht und meldet es als unbekanntes
+CodeSystem. <a href="ValueSet-mii-vs-seltene-icf.html"><code class="language-plaintext highlighter-rouge">mii-vs-seltene-icf</code></a> hat in
+dieser Publikation deshalb keine Expansion, obwohl <code class="language-plaintext highlighter-rouge">code.coding</code> <strong>required</strong>
+dagegen gebunden ist. Die Lücke liegt beim Serverbetrieb und schließt sich,
+sobald das BfArM-Paket dort geladen ist; die ICF-Codes selbst bleiben gültig.</p>
+
+  <p><strong>Die Edition ist nicht gepinnt.</strong> Das BfArM liefert Release 2005 mit 1495
+Konzepten; <code class="language-plaintext highlighter-rouge">tx.fhir.org</code> führt unter <em>demselben</em> Canonical 2017a, eine
+Expansion dort ergab 1616. Gleiches URI, rund 120 Konzepte Unterschied. Eine
+required-Bindung darf nicht stillschweigend über beides hinweggehen.</p>
+
+  <p><strong>Die Zuständigkeit ist offen — bewusst, nicht aus Versehen.</strong> Dieser
+Datenpunkt ist <strong>nicht</strong> spezifisch für seltene Erkrankungen: Funktionsfähigkeit
+und Behinderung werden bei Schlaganfall, in der Onkologie und in der Geriatrie
+genauso eingestuft, und die ICF ist eine WHO-Klassifikation für die gesamte
+Gesundheit, nicht für eine Indikation. Modelliert ist sie hier, weil der Bedarf
+hier entstand und konkret war — der JARDIN-MDS-Entwurf ist die Datenanforderung
+eines europäischen Referenznetzwerks mit Frist, und kein angebundenes MII-Modul
+deckte sie ab. Ein Modul für <strong>Symptome und den klinischen Phänotyp</strong> wäre der
+naheliegende Ort, sollte eines sie übernehmen; dieselbe Abwägung fiel beim
+Geschlecht bei Geburt anders aus (HDB-782), das ans Basismodul verwiesen wurde,
+weil es dort sowohl einen Standard als auch einen Platz dafür schon gab.
+Rückmeldungen dazu sind im Ballot willkommen.</p>
+</blockquote>
+
+<hr />
+
+<p><strong>Suchparameter</strong> sind modulweit im <a href="CapabilityStatement-mii-cps-seltene-capabilitystatement.html">CapabilityStatement</a> deklariert — dort maschinenlesbar und vollständig, statt je Profil von Hand wiederholt.</p>
+
+<p>Beispielinstanzen sind auf der Profilseite im Abschnitt „Examples" verlinkt.</p>
+
+
+</div>
 
 
 
@@ -1295,7 +1422,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Actual component result<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="https://terminologien.bfarm.de/fhir/ValueSet/icf-q-foerderfaktoren" class="binding">https://terminologien.bfarm.de/fhir/ValueSet/icf-q-foerderfaktoren</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bbace09e-7e19-4155-a285-c6b54a974dd6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 14bd2f39-80f1-429c-8950-759cd50fecab
 document.getElementById('cbmii-pr-seltene-icf-assessmentK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-icf-assessmentK'), 'binding', document.getElementById('cbmii-pr-seltene-icf-assessmentK-binding').checked, document.getElementById('ppmii-pr-seltene-icf-assessmentK'));
 document.getElementById('cbmii-pr-seltene-icf-assessmentK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1398,7 +1525,7 @@ filterDesc(document.getElementById('mii-pr-seltene-icf-assessmentK'), 'obligatio
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-icf.html">MII VS SE ICF Categories</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -2166,7 +2293,7 @@ filterDesc(document.getElementById('mii-pr-seltene-icf-assessmentK'), 'obligatio
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Actual component result</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="https://terminologien.bfarm.de/fhir/ValueSet/icf-q-foerderfaktoren" class="binding">https://terminologien.bfarm.de/fhir/ValueSet/icf-q-foerderfaktoren</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bbace09e-7e19-4155-a285-c6b54a974dd6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 14bd2f39-80f1-429c-8950-759cd50fecab
 document.getElementById('cbmii-pr-seltene-icf-assessmentD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-icf-assessmentD'), 'binding', document.getElementById('cbmii-pr-seltene-icf-assessmentD-binding').checked, document.getElementById('ppmii-pr-seltene-icf-assessmentD'));
 document.getElementById('cbmii-pr-seltene-icf-assessmentD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2211,7 +2338,7 @@ filterDesc(document.getElementById('mii-pr-seltene-icf-assessmentD'), 'obligatio
       <a style="opacity: 0.5" href="ValueSet-mii-vs-seltene-icf.html">MII VS SE ICF Categories</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -3696,7 +3823,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bbace09e-7e19-4155-a285-c6b54a974dd6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 14bd2f39-80f1-429c-8950-759cd50fecab
 document.getElementById('cbmii-pr-seltene-icf-assessmentS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-icf-assessmentS'), 'binding', document.getElementById('cbmii-pr-seltene-icf-assessmentS-binding').checked, document.getElementById('ppmii-pr-seltene-icf-assessmentS'));
 document.getElementById('cbmii-pr-seltene-icf-assessmentS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3845,7 +3972,7 @@ filterDesc(document.getElementById('mii-pr-seltene-icf-assessmentS'), 'obligatio
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-icf.html">MII VS SE ICF Categories</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -5674,7 +5801,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Actual component result<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="https://terminologien.bfarm.de/fhir/ValueSet/icf-q-foerderfaktoren" class="binding">https://terminologien.bfarm.de/fhir/ValueSet/icf-q-foerderfaktoren</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bbace09e-7e19-4155-a285-c6b54a974dd6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 14bd2f39-80f1-429c-8950-759cd50fecab
 document.getElementById('cbmii-pr-seltene-icf-assessmentKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-icf-assessmentKA'), 'binding', document.getElementById('cbmii-pr-seltene-icf-assessmentKA-binding').checked, document.getElementById('ppmii-pr-seltene-icf-assessmentKA'));
 document.getElementById('cbmii-pr-seltene-icf-assessmentKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -5776,7 +5903,7 @@ filterDesc(document.getElementById('mii-pr-seltene-icf-assessmentKA'), 'obligati
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-icf.html">MII VS SE ICF Categories</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -6544,7 +6671,7 @@ filterDesc(document.getElementById('mii-pr-seltene-icf-assessmentKA'), 'obligati
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Actual component result</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="https://terminologien.bfarm.de/fhir/ValueSet/icf-q-foerderfaktoren" class="binding">https://terminologien.bfarm.de/fhir/ValueSet/icf-q-foerderfaktoren</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bbace09e-7e19-4155-a285-c6b54a974dd6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 14bd2f39-80f1-429c-8950-759cd50fecab
 document.getElementById('cbmii-pr-seltene-icf-assessmentDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-icf-assessmentDA'), 'binding', document.getElementById('cbmii-pr-seltene-icf-assessmentDA-binding').checked, document.getElementById('ppmii-pr-seltene-icf-assessmentDA'));
 document.getElementById('cbmii-pr-seltene-icf-assessmentDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -6586,7 +6713,7 @@ filterDesc(document.getElementById('mii-pr-seltene-icf-assessmentDA'), 'obligati
       <a style="opacity: 0.5" href="ValueSet-mii-vs-seltene-icf.html">MII VS SE ICF Categories</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -8071,7 +8198,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bbace09e-7e19-4155-a285-c6b54a974dd6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 14bd2f39-80f1-429c-8950-759cd50fecab
 document.getElementById('cbmii-pr-seltene-icf-assessmentSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-seltene-icf-assessmentSA'), 'binding', document.getElementById('cbmii-pr-seltene-icf-assessmentSA-binding').checked, document.getElementById('ppmii-pr-seltene-icf-assessmentSA'));
 document.getElementById('cbmii-pr-seltene-icf-assessmentSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -8218,7 +8345,7 @@ filterDesc(document.getElementById('mii-pr-seltene-icf-assessmentSA'), 'obligati
       <a style="opacity: 1.0" href="ValueSet-mii-vs-seltene-icf.html">MII VS SE ICF Categories</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc1</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -9228,8 +9355,8 @@ Summary
 
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 13:15+0000">2026-09-09</span>
+          Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Mon, Sep 14, 2026 22:11+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

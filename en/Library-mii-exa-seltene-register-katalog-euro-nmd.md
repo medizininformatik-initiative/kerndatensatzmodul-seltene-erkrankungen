@@ -1,4 +1,4 @@
-# Beispiel Register-Katalogeintrag (Library) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# Beispiel Register-Katalogeintrag (Library) - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Library/mii-exa-seltene-register-katalog-euro-nmd | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:ERNEuroNMDRegistry |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Library/mii-exa-seltene-register-katalog-euro-nmd | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:ERNEuroNMDRegistry |
 | *Other Identifiers:*https://ern-euro-nmd.eu/fhir/sid/registry#EURO-NMD-REG | |
 
 -------
@@ -18,7 +18,7 @@
 
 -------
 
-**Exception parsing generated Narrative (see /tmp/liquid-a18ad7b4-4438-4a7f-922b-92f5bc0df145.html): unexpected non-end of element null::a at line 135 column 50**
+**Exception parsing generated Narrative (see /tmp/liquid-245726dd-fc77-4b32-b758-5f35ab876b27.html): unexpected non-end of element null::a at line 135 column 50**
 
 
 
@@ -33,7 +33,7 @@
     "system" : "https://ern-euro-nmd.eu/fhir/sid/registry",
     "value" : "EURO-NMD-REG"
   }],
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "ERNEuroNMDRegistry",
   "title" : "ERN EURO-NMD Patient Registry — Katalogeintrag",
   "status" : "active",
@@ -43,7 +43,7 @@
       "code" : "asset-collection"
     }]
   },
-  "date" : "2026-09-09T13:15:21+00:00",
+  "date" : "2026-09-14T22:11:28+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -1,4 +1,4 @@
-# MII PR SE ICF Assessment - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot.rc1
+# MII PR SE ICF Assessment - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,11 +8,51 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_PR_Seltene_ICFAssessment |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_PR_Seltene_ICFAssessment |
 
  
 Observation profile grading a single ICF category for a patient, as required by the JARDIN MDS draft and the ERDRI-CDS. Observation.code carries the ICF category; the WHO qualifiers are carried as components, because body structures take three of them and activities/participation take two (capacity and performance). 
+
+Dieses Profil stuft für eine Patientin oder einen Patienten **eine** Kategorie der WHO-**Internationalen Klassifikation der Funktionsfähigkeit, Behinderung und Gesundheit (ICF)** ein. Sowohl der JARDIN-MDS-Entwurf als auch das ERDRI-CDS verlangen, Funktionsfähigkeit und Behinderung auf diese Weise zu erfassen; kein MII-Modul deckte das bisher ab.
+
+`Observation.code` trägt die ICF-Kategorie, `Observation.component` die WHO-Beurteilungsmerkmale.
+
+### Warum die Beurteilungsmerkmale Components sind und kein Wert
+
+Ihre Zahl ist je ICF-Kapitel verschieden, ein einzelnes `value[x]` kann sie daher nicht tragen. `value[x]` ist folglich geschlossen (`0..0`), und je Kapitel regelt eine Invariante, welche Components auftreten dürfen:
+
+| | | |
+| :--- | :--- | :--- |
+| `b` | Körperfunktionen | Ausmaß der Schädigung |
+| `s` | Körperstrukturen | Ausmaß, Art der Schädigung, Lokalisation |
+| `d` | Aktivitäten und Partizipation | **Leistungsfähigkeit**und**Leistung** |
+| `e` | Umweltfaktoren | Barriere oder Förderfaktor |
+
+Ohne diese Einschränkungen nähme das Profil anstandslos eine anatomische Lokalisation auf einer Körper**funktion** entgegen — etwas, das die ICF nicht definiert.
+
+Die Unterscheidung in Kapitel `d` ist das Herzstück der Klassifikation und bei seltenen Erkrankungen häufig der eigentliche Punkt: **Leistungsfähigkeit** (capacity) ist, was jemand unter Testbedingungen kann, **Leistung** (performance), was er in seiner eigenen Umgebung tatsächlich tut. Beide teilen sich ein BfArM-CodeSystem und werden deshalb am Component-Code auseinandergehalten, nicht am Wertesystem.
+
+> **Hinweis zur Reihenfolge:** Die ICF selbst nennt in Kapitel `d` zuerst die Leistung und dann die Leistungsfähigkeit. Die Slice-Reihenfolge dieses Profils ist alphabetisch und bedeutet nichts — maßgeblich ist der Component-Code, nicht die Position.
+
+### Terminologie
+
+Aufgelöst gegen das BfArM-FHIR-Paket `bfarm.terminologien.icf`:
+
+* Die Klassifikation erscheint unter dem HL7-Canonical `http://hl7.org/fhir/sid/icf`. Ein eigenes URI prägt das BfArM dafür nicht.
+* **Deutsch ist kein zweites CodeSystem.** `icf-translation` ist ein `content=supplement` gegen dasselbe Canonical — ein CodeSystem, beide Sprachen. Hier muss sich nichts für eine Sprache entscheiden, und das ValueSet braucht keinen deutschen Zwilling.
+* Die **Beurteilungsmerkmale** sind eigene CodeSystems, sieben an der Zahl, veröffentlicht unter `https://terminologien.bfarm.de/fhir/CodeSystem/icf-q-*`.
+* Das Trennzeichen trägt Bedeutung, und das BfArM hat es **in** die Codes gelegt: Das Ausmaß der Schädigung läuft `.0`…`.4`, `.8`, `.9`, Förderfaktoren laufen `+0`…`+4`. Barriere und Förderfaktor unterscheiden sich damit am Code selbst und nicht an einem Vorzeichen, das ein Parser rekonstruieren müsste.
+
+### Drei offene Punkte
+
+> **Die Bindung löst im Build womöglich nicht auf.** Der MII-Terminologieserver führt `http://hl7.org/fhir/sid/icf` derzeit nicht und meldet es als unbekanntes CodeSystem. [`mii-vs-seltene-icf`](ValueSet-mii-vs-seltene-icf.md) hat in dieser Publikation deshalb keine Expansion, obwohl `code.coding` **required** dagegen gebunden ist. Die Lücke liegt beim Serverbetrieb und schließt sich, sobald das BfArM-Paket dort geladen ist; die ICF-Codes selbst bleiben gültig.**Die Edition ist nicht gepinnt.** Das BfArM liefert Release 2005 mit 1495 Konzepten; `tx.fhir.org` führt unter **demselben** Canonical 2017a, eine Expansion dort ergab 1616. Gleiches URI, rund 120 Konzepte Unterschied. Eine required-Bindung darf nicht stillschweigend über beides hinweggehen.**Die Zuständigkeit ist offen — bewusst, nicht aus Versehen.** Dieser Datenpunkt ist **nicht** spezifisch für seltene Erkrankungen: Funktionsfähigkeit und Behinderung werden bei Schlaganfall, in der Onkologie und in der Geriatrie genauso eingestuft, und die ICF ist eine WHO-Klassifikation für die gesamte Gesundheit, nicht für eine Indikation. Modelliert ist sie hier, weil der Bedarf hier entstand und konkret war — der JARDIN-MDS-Entwurf ist die Datenanforderung eines europäischen Referenznetzwerks mit Frist, und kein angebundenes MII-Modul deckte sie ab. Ein Modul für **Symptome und den klinischen Phänotyp** wäre der naheliegende Ort, sollte eines sie übernehmen; dieselbe Abwägung fiel beim Geschlecht bei Geburt anders aus (HDB-782), das ans Basismodul verwiesen wurde, weil es dort sowohl einen Standard als auch einen Platz dafür schon gab. Rückmeldungen dazu sind im Ballot willkommen.
+
+-------
+
+**Suchparameter** sind modulweit im [CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md) deklariert — dort maschinenlesbar und vollständig, statt je Profil von Hand wiederholt.
+
+Beispielinstanzen sind auf der Profilseite im Abschnitt „Examples" verlinkt.
 
 **Usages:**
 
@@ -106,12 +146,107 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
 {
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-seltene-icf-assessment",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-09-02"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C4873"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Seltene_ICFAssessment",
   "title" : "MII PR SE ICF Assessment",
   "status" : "active",
-  "date" : "2026-09-09T13:15:21+00:00",
+  "experimental" : false,
+  "date" : "2026-09-14T22:11:28+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
