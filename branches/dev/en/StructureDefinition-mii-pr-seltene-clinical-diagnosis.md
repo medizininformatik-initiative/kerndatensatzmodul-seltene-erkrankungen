@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-11 | *Computable Name*:MII_PR_Seltene_ClinicalDiagnosis |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Seltene_ClinicalDiagnosis |
 
  
 Profile for clinical diagnosis of rare diseases with HPO phenotype codes. This profile is used for clinically diagnosed rare diseases based on phenotypic presentation. 
@@ -158,7 +158,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
   "title" : "MII PR SE Clinical Diagnosis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T14:10:38+00:00",
+  "date" : "2026-09-14T07:31:58+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

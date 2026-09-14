@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-11 | *Computable Name*:MII_PR_Seltene_GeneticDiagnosis |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Seltene_GeneticDiagnosis |
 
  
 Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and links to MolGen variant/diagnostic implication resources. This profile is used when a rare disease diagnosis has been confirmed through genetic testing. 
@@ -158,7 +158,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
   "title" : "MII PR SE Genetic Diagnosis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T14:10:38+00:00",
+  "date" : "2026-09-14T07:31:58+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

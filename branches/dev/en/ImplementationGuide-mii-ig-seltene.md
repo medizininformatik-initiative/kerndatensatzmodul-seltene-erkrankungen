@@ -54,6 +54,8 @@ This IG contains the following dependencies on other IGs.
 
 
 
+
+
 > **Where the versions come from.** Every package in the table is pinned directly in [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-seltene-erkrankungen/blob/main/sushi-config.yaml) (`dependencies:`) — including `hl7.terminology.r4` (THO) and `hl7.fhir.uv.extensions.r4`, and those two deliberately so: the IG Publisher's [automatic-packages rule](https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages) consults only this guide's **own** dependency list, so without a direct pin every build would silently inject the latest THO/extensions release — a version pinned by the MII meta package alone cannot control the build (verified in the publisher source at the pinned release). A weekly check warns when these two pins drift from what the pinned meta package ships, and the exact versions a concrete build used are recorded in its `qa-versions.json` output.
 
 ### Global Profiles
@@ -370,7 +372,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     "id" : "de_medizininformatikinitiative_kerndatensatz_molgen",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.molgen",
-    "version" : "2027.0.0-ballot.rc2"
+    "version" : "2027.0.0-ballot.1"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_icu",
@@ -394,7 +396,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     "id" : "de_medizininformatikinitiative_kerndatensatz_medikation",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ImplementationGuide/mii-ig-medikation",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.medikation",
-    "version" : "2026.0.1"
+    "version" : "2027.0.0-ballot"
   },
   {
     "id" : "hl7_fhir_uv_crmi",

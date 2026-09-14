@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_PR_Seltene_Familienanamnese |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_PR_Seltene_Familienanamnese |
 
  
 
@@ -142,13 +142,13 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.rc2/StructureDefinition-mii-pr-molgen-familienanamnese.html) 
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.1/StructureDefinition-mii-pr-molgen-familienanamnese.html) 
 
 #### Terminology Bindings
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.rc2/StructureDefinition-mii-pr-molgen-familienanamnese.html) 
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.1/StructureDefinition-mii-pr-molgen-familienanamnese.html) 
 
 ** Summary **
 
@@ -177,7 +177,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.rc2/StructureDefinition-mii-pr-molgen-familienanamnese.html) 
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.1/StructureDefinition-mii-pr-molgen-familienanamnese.html) 
 
  **Snapshot-AnsichtView** 
 
@@ -185,7 +185,7 @@ Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://mediz
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.rc2/StructureDefinition-mii-pr-molgen-familienanamnese.html) 
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_Familienanamnese](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.1/StructureDefinition-mii-pr-molgen-familienanamnese.html) 
 
 ** Summary **
 
@@ -239,21 +239,18 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "version" : "3.0.0",
         "code" : "package",
         "display" : "Package"
       }]
     }
   },
   {
-    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-09-02"
-  },
-  {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-        "code" : "C4873"
+        "code" : "C17457"
       }]
     }
   },
@@ -311,6 +308,24 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
         "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
       }]
     }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-09-15"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2027"
+    }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-familienanamnese",
   "version" : "2027.0.0-ballot.rc1",
@@ -318,7 +333,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "title" : "MII PR SE Familienanamnese",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T14:10:38+00:00",
+  "date" : "2026-09-14T07:31:58+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
