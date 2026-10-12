@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-seltene-symptom-mitral-regurg"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-seltene-symptom-mitral-regurg</b></p><a name="mii-exa-seltene-symptom-mitral-regurg"> </a><a name="hcmii-exa-seltene-symptom-mitral-regurg"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category imaging}">Imaging</span></p><p><b>code</b>: <span title="Codes:{http://human-phenotype-ontology.org HP:0001653}, {http://snomed.info/sct 48724000}">Mitralklappeninsuffizienz</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient-marfan-001.html">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>effective</b>: 2024-12-15</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 838451005}">Mitralklappeninsuffizienz Grad I</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation A}">Abnormal</span></p></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-seltene-symptom-mitral-regurg</b></p><a name="de-mii-exa-seltene-symptom-mitral-regurg"> </a><a name="de-hcmii-exa-seltene-symptom-mitral-regurg"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category imaging}">Imaging</span></p><p><b>code</b>: <span title="Codes:{http://human-phenotype-ontology.org HP:0001653}, {http://snomed.info/sct 48724000}">Mitralklappeninsuffizienz</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient-marfan-001.html">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>effective</b>: 2024-12-15</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 838451005}">Mitralklappeninsuffizienz Grad I</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation A}">Abnormal</span></p></div></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="imaging"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://human-phenotype-ontology.org"/>
+      <code value="HP:0001653"/>
+      <display value="Mitral regurgitation"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="48724000"/>
+      <display value="Mitral valve regurgitation"/>
+    </coding>
+    <text value="Mitralklappeninsuffizienz"/>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+  </subject>
+  <effectiveDateTime value="2024-12-15"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="838451005"/>
+      <display value="Mild mitral valve regurgitation"/>
+    </coding>
+    <text value="Mitralklappeninsuffizienz Grad I"/>
+  </valueCodeableConcept>
+  <interpretation>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+      <code value="A"/>
+      <display value="Abnormal"/>
+    </coding>
+  </interpretation>
+</Observation>

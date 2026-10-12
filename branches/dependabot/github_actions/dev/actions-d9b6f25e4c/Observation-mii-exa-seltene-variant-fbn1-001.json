@@ -1,0 +1,99 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-seltene-variant-fbn1-001",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-seltene-variant-fbn1-001</b></p><a name=\"mii-exa-seltene-variant-fbn1-001\"> </a><a name=\"hcmii-exa-seltene-variant-fbn1-001\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 55233-1}\">Genetic analysis master panel</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-seltene-patient-marfan-001.html\">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>effective</b>: 2024-12-20</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 10828004}\">Positive</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation POS}\">Positive</span></p><p><b>note</b>: </p><blockquote><div><p>Pathogene FBN1-Mutation, krankheitsursächlich für Marfan-Syndrom</p>\n</div></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48018-6}\">Gene studied [ID]</span></p><p><b>value</b>: <span title=\"Codes:{http://www.genenames.org/geneId HGNC:3603}\">FBN1</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48004-6}\">DNA change (c.HGVS)</span></p><p><b>value</b>: <span title=\"Codes:\">c.3217G&gt;A</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48005-3}\">Amino acid change (pHGVS)</span></p><p><b>value</b>: <span title=\"Codes:\">p.Gly1073Arg</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 53037-8}\">Genetic variation clinical significance [Imp]</span></p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA6668-3}\">Pathogenic</span></p></blockquote></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-seltene-variant-fbn1-001</b></p><a name=\"de-mii-exa-seltene-variant-fbn1-001\"> </a><a name=\"de-hcmii-exa-seltene-variant-fbn1-001\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 55233-1}\">Genetic analysis master panel</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-seltene-patient-marfan-001.html\">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>effective</b>: 2024-12-20</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 10828004}\">Positive</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation POS}\">Positive</span></p><p><b>note</b>: </p><blockquote><div><p>Pathogene FBN1-Mutation, krankheitsursächlich für Marfan-Syndrom</p>\n</div></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48018-6}\">Gene studied [ID]</span></p><p><b>value</b>: <span title=\"Codes:{http://www.genenames.org/geneId HGNC:3603}\">FBN1</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48004-6}\">DNA change (c.HGVS)</span></p><p><b>value</b>: <span title=\"Codes:\">c.3217G&gt;A</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48005-3}\">Amino acid change (pHGVS)</span></p><p><b>value</b>: <span title=\"Codes:\">p.Gly1073Arg</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 53037-8}\">Genetic variation clinical significance [Imp]</span></p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA6668-3}\">Pathogenic</span></p></blockquote></div></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "55233-1",
+      "display" : "Genetic analysis master panel"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-seltene-patient-marfan-001"
+  },
+  "effectiveDateTime" : "2024-12-20",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "10828004",
+      "display" : "Positive"
+    }]
+  },
+  "interpretation" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code" : "POS",
+      "display" : "Positive"
+    }]
+  }],
+  "note" : [{
+    "text" : "Pathogene FBN1-Mutation, krankheitsursächlich für Marfan-Syndrom"
+  }],
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "48018-6",
+        "display" : "Gene studied [ID]"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://www.genenames.org/geneId",
+        "code" : "HGNC:3603",
+        "display" : "FBN1"
+      }]
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "48004-6",
+        "display" : "DNA change (c.HGVS)"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "text" : "c.3217G>A"
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "48005-3",
+        "display" : "Amino acid change (pHGVS)"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "text" : "p.Gly1073Arg"
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "53037-8",
+        "display" : "Genetic variation clinical significance [Imp]"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "LA6668-3",
+        "display" : "Pathogenic"
+      }]
+    }
+  }]
+}

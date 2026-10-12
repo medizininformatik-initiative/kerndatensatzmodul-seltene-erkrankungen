@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-seltene-procedure-cataract-surgery"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-seltene-procedure-cataract-surgery</b></p><a name="de-mii-exa-seltene-procedure-cataract-surgery"> </a><a name="de-hcmii-exa-seltene-procedure-cataract-surgery"> </a><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 387713003}">Surgical procedure</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-144.5a}, {http://snomed.info/sct 54885007}">Phakoemulsifikation mit IOL-Implantation</span></p><p><b>subject</b>: <a href="Patient-mii-exa-seltene-patient-marfan-001.html">Anonymous Patient Male, DoB: 2005-01-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#MRF-2024-001)</a></p><p><b>performed</b>: 2024-11-12</p><p><b>reasonReference</b>: <a href="Condition-mii-exa-seltene-condition-cataract.html">Condition Katarakt, nicht näher bezeichnet</a></p><p><b>outcome</b>: <span title="Codes:">Erfolgreiche Linsenimplantation ohne Komplikationen</span></p><p><b>note</b>: </p><blockquote><div><p>Komplikationslose Phakoemulsifikation beider Augen mit Implantation monofokaler Intraokularlinsen</p>
+</div></blockquote></div>
+  </text>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="387713003"/>
+      <display value="Surgical procedure"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <code value="5-144.5a"/>
+      <display value="Extrakapsuläre Extraktion der Linse [ECCE]: Linsenkernverflüssigung [Phakoemulsifikation] über kornealen Zugang: Mit Einführung einer kapselfixierten Hinterkammerlinse, monofokale Intraokularlinse"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="54885007"/>
+      <display value="Extraction of cataract"/>
+    </coding>
+    <text value="Phakoemulsifikation mit IOL-Implantation"/>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-seltene-patient-marfan-001"/>
+  </subject>
+  <performedDateTime value="2024-11-12"/>
+  <reasonReference>
+    <reference value="Condition/mii-exa-seltene-condition-cataract"/>
+  </reasonReference>
+  <outcome>
+    <text value="Erfolgreiche Linsenimplantation ohne Komplikationen"/>
+  </outcome>
+  <note>
+    <text value="Komplikationslose Phakoemulsifikation beider Augen mit Implantation monofokaler Intraokularlinsen"/>
+  </note>
+</Procedure>

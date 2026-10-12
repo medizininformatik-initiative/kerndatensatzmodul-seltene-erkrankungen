@@ -1,0 +1,52 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-seltene-lactate-normal",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-seltene-lactate-normal</b></p><a name=\"mii-exa-seltene-lactate-normal\"> </a><a name=\"hcmii-exa-seltene-lactate-normal\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2524-7}\">Lactate [Moles/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-seltene-patient.html\">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>effective</b>: 2024-10-01</p><p><b>value</b>: 1.4 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></p><p><b>note</b>: </p><blockquote><div><p>Laktat in Ruhe und unter Belastung normwertig.</p>\n</div></blockquote><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style=\"display: none\">*</td><td>0.5 mmol/L</td><td>2.2 mmol/L</td></tr></table></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-seltene-lactate-normal</b></p><a name=\"de-mii-exa-seltene-lactate-normal\"> </a><a name=\"de-hcmii-exa-seltene-lactate-normal\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2524-7}\">Lactate [Moles/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-seltene-patient.html\">Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)</a></p><p><b>effective</b>: 2024-10-01</p><p><b>value</b>: 1.4 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></p><p><b>note</b>: </p><blockquote><div><p>Laktat in Ruhe und unter Belastung normwertig.</p>\n</div></blockquote><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style=\"display: none\">*</td><td>0.5 mmol/L</td><td>2.2 mmol/L</td></tr></table></div></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "2524-7",
+      "display" : "Lactate [Moles/volume] in Serum or Plasma"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-seltene-patient"
+  },
+  "effectiveDateTime" : "2024-10-01",
+  "valueQuantity" : {
+    "value" : 1.4,
+    "unit" : "mmol/L",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "mmol/L"
+  },
+  "interpretation" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code" : "N",
+      "display" : "Normal"
+    }]
+  }],
+  "note" : [{
+    "text" : "Laktat in Ruhe und unter Belastung normwertig."
+  }],
+  "referenceRange" : [{
+    "low" : {
+      "value" : 0.5,
+      "unit" : "mmol/L"
+    },
+    "high" : {
+      "value" : 2.2,
+      "unit" : "mmol/L"
+    }
+  }]
+}
