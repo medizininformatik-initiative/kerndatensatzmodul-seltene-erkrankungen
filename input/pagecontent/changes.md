@@ -3,6 +3,15 @@ This page tracks the differences between versions, beginning with the difference
 
 ---
 
+### Ballot reconciliation (after 2027.0.0-ballot.rc1, unreleased)
+
+#### Bug fixes
+
+- `fix` **ICF value set now references the BfArM language supplement** (HDB-1125). The BfArM base code system `http://hl7.org/fhir/sid/icf` carries codes and hierarchy only, no display in any language; the German designations live in the supplement `icf-translation`, which a terminology server applies only when it is referenced. `mii-vs-seltene-icf` now carries the `valueset-supplement` extension pointing at the supplement, so expansions with `displayLanguage=de` return German text and German displays validate. Verified against the SU-TermServ staging server, which has carried the BfArM package since 2026-11-05; production has not followed yet
+- `fix` the four ICF examples carry the German designation from the supplement instead of an English text the base code system cannot validate
+
+---
+
 ### Version 2027.0.0-ballot.rc1
 
 #### New features

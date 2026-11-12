@@ -78,7 +78,7 @@ Description: "Muscle power functions in SMA type 1, graded as a complete problem
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment)
 * status = #final
 * category[survey] = $observation-category#survey
-* code.coding = $icf#b730 "Muscle power functions"
+* code.coding = $icf#b730 "Funktionen der Muskelkraft"
 * subject = Reference(mii-exa-seltene-patient-sma-001)
 * effectiveDateTime = "2025-07-01"
 * component[extentOfImpairment].code = MII_CS_Seltene_ICFBeurteilungsmerkmal#extent-of-impairment
@@ -92,7 +92,7 @@ Description: "Spinal cord in SMA type 1: degeneration of the anterior horn cells
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment)
 * status = #final
 * category[survey] = $observation-category#survey
-* code.coding = $icf#s120 "Spinal cord and related structures"
+* code.coding = $icf#s120 "Struktur des Rückenmarks und mit ihm in Zusammenhang stehende Strukturen"
 * subject = Reference(mii-exa-seltene-patient-sma-001)
 * effectiveDateTime = "2025-07-01"
 * component[extentOfImpairmentBodyStructure].code = MII_CS_Seltene_ICFBeurteilungsmerkmal#extent-of-impairment-structure
@@ -110,7 +110,7 @@ Description: "Eating in SMA type 1, and the reason chapter d takes two qualifier
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment)
 * status = #final
 * category[survey] = $observation-category#survey
-* code.coding = $icf#d550 "Eating"
+* code.coding = $icf#d550 "Essen"
 * subject = Reference(mii-exa-seltene-patient-sma-001)
 * effectiveDateTime = "2025-07-01"
 * component[capacity].code = MII_CS_Seltene_ICFBeurteilungsmerkmal#capacity
@@ -127,7 +127,7 @@ Description: "Assistive products for mobility, graded as a substantial FACILITAT
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment)
 * status = #final
 * category[survey] = $observation-category#survey
-* code.coding = $icf#e1201 "Assistive products and technology for personal indoor and outdoor mobility and transportation"
+* code.coding = $icf#e1201 "Hilfsprodukte und unterstützende Technologien zur persönlichen Mobilität drinnen und draußen und zum Transport"
 * subject = Reference(mii-exa-seltene-patient-sma-001)
 * effectiveDateTime = "2025-07-01"
 * component[facilitator].code = MII_CS_Seltene_ICFBeurteilungsmerkmal#facilitator
