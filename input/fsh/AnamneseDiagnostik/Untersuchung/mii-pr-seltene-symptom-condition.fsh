@@ -74,7 +74,10 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 // HPO Coding slice with pattern
 * code.coding[hpoCoding] ^short = "HPO Code für das Symptom"
 * code.coding[hpoCoding] ^definition = "Human Phenotype Ontology Code zur Beschreibung des phänotypischen Symptoms"
-* code.coding[hpoCoding] ^patternCoding.system = "http://purl.obolibrary.org/obo/hp.owl"
+// Bevorzugte HPO-URI laut HL7-NamingSystem (THO), wie Alias $HPO, alle HPO-ValueSets
+// und Beispiele dieses Moduls. Bis 2026-11-12 stand hier die nicht bevorzugte
+// OBO-URI http://purl.obolibrary.org/obo/hp.owl, in die kein Coding des Moduls fiel.
+* code.coding[hpoCoding] ^patternCoding.system = $HPO
 * code.coding[hpoCoding].system 1..1
 * code.coding[hpoCoding].code 1..1
 * code.coding[hpoCoding].display MS
