@@ -142,7 +142,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Condition",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -168,15 +168,9 @@
         "mustSupport": true
       },
       {
-        "id": "Condition.identifier",
-        "path": "Condition.identifier",
-        "mustSupport": true
-      },
-      {
         "id": "Condition.clinicalStatus",
         "path": "Condition.clinicalStatus",
         "short": "Klinischer Status der Symptom-Erkrankung",
-        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/condition-clinical"
@@ -186,7 +180,6 @@
         "id": "Condition.verificationStatus",
         "path": "Condition.verificationStatus",
         "short": "Verifikationsstatus der Symptom-Erkrankung",
-        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status"
@@ -197,15 +190,13 @@
         "path": "Condition.category",
         "short": "Kategorie der Erkrankung - muss Symptom-Kategorie enthalten",
         "definition": "Kategoriecodes, die die Erkrankung klassifizieren, mit besonderem Fokus auf symptombezogene Kategorien",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Condition.severity",
         "path": "Condition.severity",
         "short": "Schweregrad der Symptom-Erkrankung",
         "definition": "Schweregradbewertung der Symptom-Erkrankung unter Verwendung von HPO-Schweregrad-Werten",
-        "mustSupport": true,
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity"
@@ -224,7 +215,6 @@
         "short": "HPO-basierter Symptom-Erkrankungs-Code",
         "definition": "Code zur Identifikation der Symptom-Erkrankung, vorzugsweise unter Verwendung von Human Phenotype Ontology (HPO) Codes",
         "min": 1,
-        "mustSupport": true,
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes"
@@ -390,8 +380,7 @@
         "id": "Condition.bodySite",
         "path": "Condition.bodySite",
         "short": "Anatomische Lokalisation des Symptoms",
-        "definition": "Die anatomische Lokalisation, wo sich das Symptom manifestiert",
-        "mustSupport": true
+        "definition": "Die anatomische Lokalisation, wo sich das Symptom manifestiert"
       },
       {
         "id": "Condition.subject",
@@ -406,7 +395,6 @@
             ]
           }
         ],
-        "mustSupport": true,
         "mapping": [
           {
             "identity": "SE-LogicalModel",
@@ -418,7 +406,6 @@
       {
         "id": "Condition.encounter",
         "path": "Condition.encounter",
-        "mustSupport": true,
         "mapping": [
           {
             "identity": "SE-LogicalModel",
@@ -430,36 +417,20 @@
       {
         "id": "Condition.onset[x]",
         "path": "Condition.onset[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "short": "Beginn der Symptom-Erkrankung",
-        "definition": "Geschätztes oder tatsächliches Datum, Alter, Zeitraum oder zeitliche Beschreibung, wann die Symptom-Erkrankung begann",
-        "mustSupport": true
-      },
-      {
-        "id": "Condition.onset[x]:onsetDateTime",
-        "path": "Condition.onset[x]",
-        "sliceName": "onsetDateTime",
-        "min": 0,
-        "max": "1",
+        "definition": "Geschätztes oder tatsächliches Datum, Alter oder Zeitraum, wann die Symptom-Erkrankung begann. Die Lebensphase steht kodiert in der Extension lebensphase auf onsetPeriod.start bzw. onsetPeriod.end.",
         "type": [
           {
             "code": "dateTime"
-          }
-        ],
-        "mapping": [
+          },
           {
-            "identity": "SE-LogicalModel",
-            "map": "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
-            "comment": "Startdatum des Symptoms"
+            "code": "Age"
+          },
+          {
+            "code": "Period"
+          },
+          {
+            "code": "Range"
           }
         ]
       },
@@ -467,8 +438,6 @@
         "id": "Condition.onset[x]:onsetPeriod",
         "path": "Condition.onset[x]",
         "sliceName": "onsetPeriod",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "Period"
@@ -487,6 +456,23 @@
         ]
       },
       {
+        "id": "Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von",
+        "path": "Condition.onset[x].start.extension",
+        "sliceName": "lebensphase-von",
+        "short": "Lebensphase bei Symptombeginn"
+      },
+      {
+        "id": "Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von.value[x]",
+        "path": "Condition.onset[x].start.extension.value[x]",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase",
+            "comment": "Lebensphase bei Symptombeginn"
+          }
+        ]
+      },
+      {
         "id": "Condition.onset[x]:onsetPeriod.end",
         "path": "Condition.onset[x].end",
         "mapping": [
@@ -494,6 +480,42 @@
             "identity": "SE-LogicalModel",
             "map": "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
             "comment": "Ende Symptomzeitraum"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis",
+        "path": "Condition.onset[x].end.extension",
+        "sliceName": "lebensphase-bis",
+        "short": "Lebensphase bei Symptomende"
+      },
+      {
+        "id": "Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis.value[x]",
+        "path": "Condition.onset[x].end.extension.value[x]",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase",
+            "comment": "Lebensphase bei Symptomende"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]:onsetDateTime",
+        "path": "Condition.onset[x]",
+        "sliceName": "onsetDateTime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
+            "comment": "Startdatum des Symptoms"
           }
         ]
       },
@@ -517,25 +539,6 @@
         ]
       },
       {
-        "id": "Condition.onset[x]:onsetString",
-        "path": "Condition.onset[x]",
-        "sliceName": "onsetString",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "SE-LogicalModel",
-            "map": "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase",
-            "comment": "Lebensphase Symptom"
-          }
-        ]
-      },
-      {
         "id": "Condition.abatement[x]",
         "path": "Condition.abatement[x]",
         "slicing": {
@@ -549,7 +552,21 @@
           "rules": "open"
         },
         "short": "Auflösung der Symptom-Erkrankung",
-        "definition": "Datum, Alter, Zeitraum oder zeitliche Beschreibung, wann die Symptom-Erkrankung abgeklungen ist oder in Remission ging",
+        "definition": "Datum, Alter oder Zeitraum, wann die Symptom-Erkrankung abgeklungen ist oder in Remission ging",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Age"
+          },
+          {
+            "code": "Period"
+          },
+          {
+            "code": "Range"
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -574,7 +591,6 @@
       {
         "id": "Condition.recordedDate",
         "path": "Condition.recordedDate",
-        "mustSupport": true,
         "mapping": [
           {
             "identity": "SE-LogicalModel",
@@ -586,8 +602,7 @@
       {
         "id": "Condition.stage",
         "path": "Condition.stage",
-        "short": "Stadium oder Progression der Symptom-Erkrankung",
-        "mustSupport": true
+        "short": "Stadium oder Progression der Symptom-Erkrankung"
       },
       {
         "id": "Condition.stage.summary",
@@ -613,8 +628,7 @@
       {
         "id": "Condition.evidence",
         "path": "Condition.evidence",
-        "short": "Unterstützende Evidenz für die Symptom-Erkrankung",
-        "mustSupport": true
+        "short": "Unterstützende Evidenz für die Symptom-Erkrankung"
       },
       {
         "id": "Condition.evidence.code",

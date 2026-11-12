@@ -209,6 +209,13 @@ dependencies:
   de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot
   # Quelle: 2026.0.x
   de.medizininformatikinitiative.kerndatensatz.medikation: 2027.0.0-ballot
+  # Symptom / Klinischer Phaenotyp, aufgenommen 2026-11-12 (Nutzerentscheid). Bis
+  # dahin erbte mii-pr-seltene-symptom-condition direkt von Condition, weil vom
+  # Symptom-Modul nur ein Release Candidate vorlag (Issue #32, 2026-07-01). Mit
+  # 2027.0.0-ballot hat es denselben Stand wie base, studie und medikation, und
+  # sein Condition-Profil traegt die Lebensphase (fhir.de) auf onsetPeriod.start
+  # und .end — das Element, das dem SE-Symptomprofil fehlte.
+  de.medizininformatikinitiative.kerndatensatz.symptom: 2027.0.0-ballot
   # ── Template-Maschinerie (Gate A dokumentiert, Skill Schritt 3) ────────────
   # CRMI — verlangt von den meta.profile-Claims oben.
   hl7.fhir.uv.crmi: 2.0.0
