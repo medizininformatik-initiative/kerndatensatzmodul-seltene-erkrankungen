@@ -1,6 +1,11 @@
 Profile:     MII_PR_Seltene_Symptom_Condition
 Id:          mii-pr-seltene-symptom-condition
-Parent:      Condition
+Parent:      MII_PR_Symptom_Condition
+// Parent seit 2026-11-12 das Condition-Profil des Moduls Symptom / Klinischer
+// Phaenotyp (2027.0.0-ballot). Bis dahin bewusst direkt Condition, weil das
+// Symptom-Modul nur als Release Candidate vorlag (Issue #32). Von dort kommen jetzt
+// der MS-Slice onsetPeriod mit der Lebensphase (http://fhir.de/StructureDefinition/
+// lebensphase) auf Period.start und Period.end sowie die assertedDate-Extension.
 Title:       "MII Profile SE Symptom Condition"
 Description: "Profile for symptom-based conditions in the context of rare diseases. This profile captures symptomatic conditions with temporal characteristics, complementing the HPO Assessment Observation profile."
 
@@ -69,7 +74,10 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 // HPO Coding slice with pattern
 * code.coding[hpoCoding] ^short = "HPO Code für das Symptom"
 * code.coding[hpoCoding] ^definition = "Human Phenotype Ontology Code zur Beschreibung des phänotypischen Symptoms"
-* code.coding[hpoCoding] ^patternCoding.system = "http://purl.obolibrary.org/obo/hp.owl"
+// Bevorzugte HPO-URI laut HL7-NamingSystem (THO), wie Alias $HPO, alle HPO-ValueSets
+// und Beispiele dieses Moduls. Bis 2026-11-12 stand hier die nicht bevorzugte
+// OBO-URI http://purl.obolibrary.org/obo/hp.owl, in die kein Coding des Moduls fiel.
+* code.coding[hpoCoding] ^patternCoding.system = $HPO
 * code.coding[hpoCoding].system 1..1
 * code.coding[hpoCoding].code 1..1
 * code.coding[hpoCoding].display MS
@@ -104,13 +112,18 @@ Description: "Profile for symptom-based conditions in the context of rare diseas
 * severity ^definition = "Schweregradbewertung der Symptom-Erkrankung unter Verwendung von HPO-Schweregrad-Werten"
 
 // Temporal constraints - key feature for symptom conditions
-* onset[x] only dateTime or Age or Period or Range or string
+// string entfaellt (2026-11-12): Die Lebensphase war bis dahin auf onsetString
+// gemappt, also Freitext ohne Kodierung. Sie liegt jetzt kodiert in der
+// fhir.de-Extension auf onsetPeriod.start (lebensphase-von) und .end (lebensphase-bis).
+* onset[x] only dateTime or Age or Period or Range
 * onset[x] ^short = "Beginn der Symptom-Erkrankung"
-* onset[x] ^definition = "Geschätztes oder tatsächliches Datum, Alter, Zeitraum oder zeitliche Beschreibung, wann die Symptom-Erkrankung begann"
+* onset[x] ^definition = "Geschätztes oder tatsächliches Datum, Alter oder Zeitraum, wann die Symptom-Erkrankung begann. Die Lebensphase steht kodiert in der Extension lebensphase auf onsetPeriod.start bzw. onsetPeriod.end."
+* onsetPeriod.start.extension[lebensphase-von] ^short = "Lebensphase bei Symptombeginn"
+* onsetPeriod.end.extension[lebensphase-bis] ^short = "Lebensphase bei Symptomende"
 
-* abatement[x] only dateTime or Age or Period or Range or string 
+* abatement[x] only dateTime or Age or Period or Range
 * abatement[x] ^short = "Auflösung der Symptom-Erkrankung"
-* abatement[x] ^definition = "Datum, Alter, Zeitraum oder zeitliche Beschreibung, wann die Symptom-Erkrankung abgeklungen ist oder in Remission ging"
+* abatement[x] ^definition = "Datum, Alter oder Zeitraum, wann die Symptom-Erkrankung abgeklungen ist oder in Remission ging"
 
 // Evidence constraints
 * evidence ^short = "Unterstützende Evidenz für die Symptom-Erkrankung"
@@ -147,7 +160,8 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * onsetPeriod.start -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom" "Beginn Symptomzeitraum"
 * onsetPeriod.end -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom" "Ende Symptomzeitraum"
 * onsetAge -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.alterSymptom" "Alter bei Symptombeginn"
-* onsetString -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase" "Lebensphase Symptom"
+* onsetPeriod.start.extension[lebensphase-von].valueCodeableConcept -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase" "Lebensphase bei Symptombeginn"
+* onsetPeriod.end.extension[lebensphase-bis].valueCodeableConcept -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase" "Lebensphase bei Symptomende"
 * abatementDateTime -> "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom" "Enddatum des Symptoms"
 * evidence.code -> "anamneseUndDiagnostik.phaenotypisierung.hpoTerm" "Unterstützende HPO-Symptome"
 * evidence.detail -> "anamneseUndDiagnostik.phaenotypisierung" "Verweis auf Beobachtungen"

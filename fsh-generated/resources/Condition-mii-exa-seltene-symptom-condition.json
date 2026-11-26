@@ -6,6 +6,25 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition|2027.0.0-ballot"
     ]
   },
+  "onsetPeriod": {
+    "start": "2022",
+    "_start": {
+      "extension": [
+        {
+          "url": "http://fhir.de/StructureDefinition/lebensphase",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "263659003",
+                "system": "http://snomed.info/sct",
+                "display": "Adolescence (qualifier value)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
   "clinicalStatus": {
     "coding": [
       {
@@ -58,12 +77,6 @@
   "subject": {
     "reference": "Patient/mii-exa-seltene-patient",
     "display": "Example Patient"
-  },
-  "onsetAge": {
-    "value": 15,
-    "unit": "years",
-    "system": "http://unitsofmeasure.org",
-    "code": "a"
   },
   "recordedDate": "2024-01-15",
   "bodySite": [

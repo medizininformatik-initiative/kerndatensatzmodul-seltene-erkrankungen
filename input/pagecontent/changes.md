@@ -3,6 +3,24 @@ This page tracks the differences between versions, beginning with the difference
 
 ---
 
+### Ballot reconciliation (after 2027.0.0-ballot.rc1, unreleased)
+
+#### Breaking changes
+
+- `change` **`mii-pr-seltene-symptom-condition` now derives from the Symptom module** (`MII_PR_Symptom_Condition`, package `de.medizininformatikinitiative.kerndatensatz.symptom` 2027.0.0-ballot) instead of plain `Condition`. Deriving from `Condition` was a deliberate choice in July 2026 (issue #32), because the Symptom module existed only as a release candidate. It now has the same ballot standing as the other dependencies, and its Condition profile carries the fhir.de `lebensphase` extension on `onsetPeriod.start` and `onsetPeriod.end`, in a context the extension allows. The life phase at symptom onset therefore has a coded slot; before it was mapped to `onsetString`, free text without a value set. `string` is removed from `onset[x]` and `abatement[x]`; all own rules (HPO binding, coding slices, HPO severity) stay on top. The example `mii-exa-seltene-symptom-condition` shows a `Period` with the life phase
+
+#### Changes
+
+- `change` **Lebensphase at diagnosis is now Must Support** in `mii-pr-seltene-clinical-diagnosis` and `mii-pr-seltene-genetic-diagnosis`. The base Diagnose profile allows the fhir.de extension `lebensphase` on `onsetAge` but does not flag it; the logical model carries `zeitpunktKlinischeDia` and `zeitpunktGenDia` as data elements of their own, so the module now requires support for it. The logical-model mappings for both elements point at the fhir.de extension instead of the removed module extension `mii-ext-seltene-onset-age`; the Marfan and CF clinical examples now carry the age at diagnosis. They do not carry the life phase yet: the fhir.de extension allows only `dateTime`, `Period` and `Range` as context, so the validator rejects it on `onsetAge` where the base profile currently places it. Once the base module moves the slice to `onsetRange` (HDB-1075), the path follows with the dependency bump and the examples get the life phase
+
+#### Bug fixes
+
+- `fix` **HPO slice in `mii-pr-seltene-symptom-condition` uses the preferred HPO URI** `http://human-phenotype-ontology.org`, as the alias, every HPO value set and every example of this module do. The slice `hpoCoding` was patterned on the OBO URI `http://purl.obolibrary.org/obo/hp.owl`, which HL7's naming system lists as non-preferred and which no instance in the module used, so the Must-Support slice never matched a coding
+- `fix` **ICF value set now references the BfArM language supplement** (HDB-1125). The BfArM base code system `http://hl7.org/fhir/sid/icf` carries codes and hierarchy only, no display in any language; the German designations live in the supplement `icf-translation`, which a terminology server applies only when it is referenced. `mii-vs-seltene-icf` now carries the `valueset-supplement` extension pointing at the supplement, so expansions with `displayLanguage=de` return German text and German displays validate. Verified against the SU-TermServ staging server, which has carried the BfArM package since 2026-11-05; production has not followed yet
+- `fix` the four ICF examples carry the German designation from the supplement instead of an English text the base code system cannot validate
+
+---
+
 ### Version 2027.0.0-ballot.rc1
 
 #### New features

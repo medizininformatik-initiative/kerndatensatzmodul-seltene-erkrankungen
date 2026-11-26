@@ -347,6 +347,33 @@
         ]
       },
       {
+        "id": "Condition.onset[x]:onsetAge",
+        "path": "Condition.onset[x]",
+        "sliceName": "onsetAge",
+        "type": [
+          {
+            "code": "Age"
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn",
+        "path": "Condition.onset[x].extension",
+        "sliceName": "Lebensphase-Beginn",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn.value[x]",
+        "path": "Condition.onset[x].extension.value[x]",
+        "mapping": [
+          {
+            "identity": "SE-LogicalModel",
+            "map": "anamneseUndDiagnostik.genetischeDiagnose.zeitpunktGenDia",
+            "comment": "Lebensphase bei genetischer SE-Diagnose"
+          }
+        ]
+      },
+      {
         "id": "Condition.recorder",
         "path": "Condition.recorder",
         "mustSupport": true

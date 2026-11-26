@@ -39,8 +39,15 @@ Description: "Beispiel einer klinischen Diagnose des Marfan-Syndroms basierend a
 * evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0001166 "Arachnodactyly"
 * evidence[=].code.text = "Arachnodaktylie"
 * evidence[=].detail = Reference(Observation/mii-exa-seltene-arachnodactyly)
-// Extensions
-// Extensions for age of onset and inheritance pattern would go here if defined in profile
+// Alter bei klinischer Diagnose (LM: alterKlinischeDia)
+* onsetAge.value = 14
+* onsetAge.unit = "years"
+* onsetAge.system = $UCUM
+* onsetAge.code = #a
+// Lebensphase (http://fhir.de/StructureDefinition/lebensphase) fehlt hier bewusst: Die Basis
+// haengt sie an onsetAge, die Extension selbst erlaubt aber nur dateTime, Period und Range
+// als Kontext (de.basisprofil.r4 1.6.0), der Validator lehnt sie auf Age ab. Sobald die
+// Basis nach HDB-1075 auf onsetRange umzieht, kommt die Lebensphase ins Beispiel.
 * note.text = "Klinische Diagnose basierend auf Ghent-Kriterien. Patient erfüllt Major-Kriterien in kardiovaskulärem und ophthalmologischem System. Genetische Testung wird veranlasst."
 
 // Example 2: Noonan Syndrome - Clinical Diagnosis
@@ -195,7 +202,15 @@ Description: "Initiale klinische Verdachtsdiagnose Mukoviszidose"
 * evidence[=].detail = Reference(Observation/mii-exa-seltene-chronic-diarrhea)
 * evidence[+].code.coding = http://human-phenotype-ontology.org#HP:0001508 "Failure to thrive"
 * evidence[=].detail = Reference(Observation/mii-exa-seltene-failure-to-thrive)
-// Age of onset extension would go here if defined in profile
+// Alter bei klinischer Verdachtsdiagnose (LM: alterKlinischeDia)
+* onsetAge.value = 6
+* onsetAge.unit = "months"
+* onsetAge.system = $UCUM
+* onsetAge.code = #mo
+// Lebensphase (http://fhir.de/StructureDefinition/lebensphase) fehlt hier bewusst: Die Basis
+// haengt sie an onsetAge, die Extension selbst erlaubt aber nur dateTime, Period und Range
+// als Kontext (de.basisprofil.r4 1.6.0), der Validator lehnt sie auf Age ab. Sobald die
+// Basis nach HDB-1075 auf onsetRange umzieht, kommt die Lebensphase ins Beispiel.
 * note.text = "Schweißtest positiv (Chlorid 85 mmol/l). Klinisches Bild vereinbar mit CF. Genetische Testung veranlasst."
 
 Instance: mii-exa-seltene-example-cf-genetic

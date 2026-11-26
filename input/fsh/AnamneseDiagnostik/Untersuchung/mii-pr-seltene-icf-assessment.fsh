@@ -8,7 +8,12 @@
 // Tracking: GitHub issue #36, ballot ticket HDB-784.
 //
 // SERVER GAP, measured 2026-09-11 against the published rc1: SU-TermServ does
-// not carry http://hl7.org/fhir/sid/icf. The rendered ValueSet-mii-vs-seltene-icf
+// not carry http://hl7.org/fhir/sid/icf. UPDATE 2026-11-12 (HDB-1125): the BfArM
+// package is loaded on ontoserver-staging.su-termserv.de since 2026-11-05
+// (base 2005 with 1495 categories, de supplement, all seven qualifier code
+// systems); production has not followed yet. The base has no displays at all,
+// so examples carry the German designation from the supplement and the value
+// set below references the supplement through valueset-supplement. The rendered ValueSet-mii-vs-seltene-icf
 // page says "No Expansion for this valueset (Unknown Code System)", and the CI
 // terminology server is the only one the build talks to (TX_URL points at the
 // local mTLS proxy, there is no tx.fhir.org fallback). Against tx.fhir.org the
@@ -285,6 +290,17 @@ Description: "All categories of the WHO International Classification of Function
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf"
 * ^status = #active
 * ^experimental = false
+// German display text. The BfArM base code system carries codes and hierarchy
+// only, no display in any language; the German designations live in the
+// supplement icf-translation. A supplement that is not marked as a global
+// language pack is applied only when it is referenced, either by useSupplement
+// on the request or by this extension on the value set (tx-ecosystem IG,
+// "Passing CodeSystem resources in requests"). The HL7 validator reads this
+// extension and sends the supplement along; Ontoserver then expands with
+// displayLanguage=de and validates German displays. Verified 2026-11-12 on
+// ontoserver-staging.su-termserv.de (HDB-1125).
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-supplement"
+* ^extension[=].valueCanonical = "https://terminologien.bfarm.de/fhir/CodeSystem/icf-translation|2005"
 * include codes from system $icf
 
 

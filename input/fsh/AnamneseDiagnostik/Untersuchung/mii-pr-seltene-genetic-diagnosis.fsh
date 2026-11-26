@@ -20,6 +20,15 @@ Description: "Profile for genetically confirmed diagnosis of rare diseases with 
 * subject MS
 * encounter MS
 * onset[x] MS
+// Lebensphase (http://fhir.de/StructureDefinition/lebensphase) auf onsetAge: Die Basis
+// erlaubt den Slice Lebensphase-Beginn (0..1), setzt aber kein Must Support darauf.
+// Das logische Modell fuehrt zeitpunktGenDia als eigenes Element, deshalb ist die
+// Extension hier Must Support. Instanzen koennen sie heute noch nicht tragen: Die
+// Extension erlaubt nur dateTime, Period und Range als Kontext, nicht Age, und der
+// Validator lehnt sie auf onsetAge ab. Mit HDB-1075 zieht die Basis den Slice von
+// onsetAge nach onsetRange um; dann ist dieser Pfad nachzuziehen und ein Beispiel
+// zu ergaenzen.
+* onsetAge.extension[Lebensphase-Beginn] MS
 * abatement[x] MS
 * recordedDate MS
 * recorder MS
@@ -132,6 +141,7 @@ Target: "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/Stru
 * extension[assertedDate].valueDateTime -> "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia" "Feststellungsdatum genetische SE-Diagnose"
 * onset[x] -> "anamneseUndDiagnostik.genetischeDiagnose.alterGenDia" "Alter/Zeitpunkt bei genetischer SE-Diagnose"
 * onsetDateTime -> "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia" "Feststellungsdatum genetische SE-Diagnose"
+* onsetAge.extension[Lebensphase-Beginn].valueCodeableConcept -> "anamneseUndDiagnostik.genetischeDiagnose.zeitpunktGenDia" "Lebensphase bei genetischer SE-Diagnose"
 * evidence.code -> "anamneseUndDiagnostik.methodeDiagnosestellung" "Methode der Diagnosestellung"
 * code.coding[omim] -> "anamneseUndDiagnostik.genetischeDiagnose.omimCode" "OMIM-Code der Erkrankung"
 * evidence.detail -> "Verweis auf MolGen Variante/DiagnostischeImplikation" "Genetische Befunde"

@@ -24,11 +24,10 @@ Description: "Example of a symptom condition in the context of rare diseases usi
 * subject = Reference(mii-exa-seltene-patient)
 * subject.display = "Example Patient"
 
-// Temporal information - onset at age 15
-* onsetAge.value = 15
-* onsetAge.unit = "years"
-* onsetAge.system = $UCUM
-* onsetAge.code = #a
+// Zeitlicher Bezug: Beginn 2022 in der Adoleszenz, Lebensphase kodiert in der
+// fhir.de-Extension auf onsetPeriod.start (geerbt aus dem Modul Symptom)
+* onsetPeriod.start = "2022"
+* onsetPeriod.start.extension[lebensphase-von].valueCodeableConcept = $SCT#263659003 "Adolescence (qualifier value)"
 
 // Recorded date
 * recordedDate = "2024-01-15"
