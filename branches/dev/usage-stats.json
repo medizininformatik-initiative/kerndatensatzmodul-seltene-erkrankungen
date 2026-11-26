@@ -137,7 +137,10 @@
     ],
     "http://fhir.de/StructureDefinition/lebensphase": [
       "Condition.abatement[x]",
-      "Condition.onset[x]"
+      "Condition.onsetPeriod.start",
+      "Condition.onset[x]",
+      "Condition.onset[x].end",
+      "Condition.onset[x].start"
     ],
     "http://fhir.de/StructureDefinition/seitenlokalisation": [
       "Condition.code.coding",
@@ -244,6 +247,9 @@
     "http://hl7.org/fhir/StructureDefinition/package-source": [
       "ImplementationGuide"
     ],
+    "http://hl7.org/fhir/StructureDefinition/regex": [
+      "StructureDefinition.snapshot.element.type"
+    ],
     "http://hl7.org/fhir/StructureDefinition/request-statusReason": [
       "ServiceRequest"
     ],
@@ -279,6 +285,9 @@
       "StructureDefinition.snapshot.element.definition",
       "StructureDefinition.snapshot.element.short",
       "ValueSet.publisher"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/valueset-supplement": [
+      "ValueSet"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters": [
       "ImplementationGuide.definition"

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-ex-seltene-empfehlung-prioritaet | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_EX_Seltene_Empfehlung_Prioritaet |
+| Active as of 2026-11-26 | *Computable Name*:MII_EX_Seltene_Empfehlung_Prioritaet |
 
 Priorität der (einzelnen) Empfehlung
 
@@ -139,7 +139,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-seltene-em
   "title" : "MII EX SE Empfehlung Priorität",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T21:28:16+00:00",
+  "date" : "2026-11-26T17:48:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

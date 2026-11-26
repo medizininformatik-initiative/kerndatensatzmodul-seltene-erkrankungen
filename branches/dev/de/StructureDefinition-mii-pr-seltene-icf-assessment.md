@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-icf-assessment | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_PR_Seltene_ICFAssessment |
+| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_PR_Seltene_ICFAssessment |
 
  
 Observation profile grading a single ICF category for a patient, as required by the JARDIN MDS draft and the ERDRI-CDS. Observation.code carries the ICF category; the WHO qualifiers are carried as components, because body structures take three of them and activities/participation take two (capacity and performance). 
@@ -246,7 +246,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "title" : "MII PR SE ICF Assessment",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T21:28:16+00:00",
+  "date" : "2026-11-26T17:48:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

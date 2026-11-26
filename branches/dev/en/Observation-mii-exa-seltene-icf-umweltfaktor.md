@@ -18,7 +18,7 @@ Profile: [MII PR SE ICF Assessment](StructureDefinition-mii-pr-seltene-icf-asses
 
 **category**: Survey
 
-**code**: Assistive products and technology for personal indoor and outdoor mobility and transportation
+**code**: Hilfsprodukte und unterstützende Technologien zur persönlichen Mobilität drinnen und draußen und zum Transport
 
 **subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-mii-exa-seltene-patient-sma-001.md)
 
@@ -60,7 +60,7 @@ Angepasste Sitzschale und Lagerungshilfen.
     "coding" : [{
       "system" : "http://hl7.org/fhir/sid/icf",
       "code" : "e1201",
-      "display" : "Assistive products and technology for personal indoor and outdoor mobility and transportation"
+      "display" : "Hilfsprodukte und unterstützende Technologien zur persönlichen Mobilität drinnen und draußen und zum Transport"
     }]
   },
   "subject" : {

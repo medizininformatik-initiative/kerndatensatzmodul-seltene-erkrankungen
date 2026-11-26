@@ -882,12 +882,20 @@
     "valueCanonical" : "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|3.0.0"
   },
   {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition|2027.0.0-ballot"
+  },
+  {
     "name" : "default-valueset-version",
     "valueCanonical" : "http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1"
   },
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core|2.0.0"
   },
   {
     "name" : "default-valueset-version",

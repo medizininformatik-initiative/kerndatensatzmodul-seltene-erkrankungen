@@ -332,6 +332,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#ballot-reconciliation-after-202700-ballotrc1-unreleased" id="markdown-toc-ballot-reconciliation-after-202700-ballotrc1-unreleased">Ballot reconciliation (after 2027.0.0-ballot.rc1, unreleased)</a></li>
   <li><a href="#version-202700-ballotrc1" id="markdown-toc-version-202700-ballotrc1">Version 2027.0.0-ballot.rc1</a></li>
   <li><a href="#version-202601-patch-release" id="markdown-toc-version-202601-patch-release">Version 2026.0.1 (patch release)</a></li>
   <li><a href="#version-202600-final-version" id="markdown-toc-version-202600-final-version">Version 2026.0.0 (final version)</a></li>
@@ -341,6 +342,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <!-- TODO:REVIEW machine translation of source page release-notes.md (de) — Migration 2026-08-28, page-map.tsv -->
 <p>This page tracks the differences between versions, beginning with the differences between the ballot version and the final 2026 version.</p>
+
+<hr />
+
+<h3 id="ballot-reconciliation-after-202700-ballotrc1-unreleased">Ballot reconciliation (after 2027.0.0-ballot.rc1, unreleased)</h3>
+
+<h4 id="breaking-changes">Breaking changes</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">change</code> <strong><code class="language-plaintext highlighter-rouge">mii-pr-seltene-symptom-condition</code> now derives from the Symptom module</strong> (<code class="language-plaintext highlighter-rouge">MII_PR_Symptom_Condition</code>, package <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.symptom</code> 2027.0.0-ballot) instead of plain <code class="language-plaintext highlighter-rouge">Condition</code>. Deriving from <code class="language-plaintext highlighter-rouge">Condition</code> was a deliberate choice in July 2026 (issue #32), because the Symptom module existed only as a release candidate. It now has the same ballot standing as the other dependencies, and its Condition profile carries the fhir.de <code class="language-plaintext highlighter-rouge">lebensphase</code> extension on <code class="language-plaintext highlighter-rouge">onsetPeriod.start</code> and <code class="language-plaintext highlighter-rouge">onsetPeriod.end</code>, in a context the extension allows. The life phase at symptom onset therefore has a coded slot; before it was mapped to <code class="language-plaintext highlighter-rouge">onsetString</code>, free text without a value set. <code class="language-plaintext highlighter-rouge">string</code> is removed from <code class="language-plaintext highlighter-rouge">onset[x]</code> and <code class="language-plaintext highlighter-rouge">abatement[x]</code>; all own rules (HPO binding, coding slices, HPO severity) stay on top. The example <code class="language-plaintext highlighter-rouge">mii-exa-seltene-symptom-condition</code> shows a <code class="language-plaintext highlighter-rouge">Period</code> with the life phase</li>
+</ul>
+
+<h4 id="changes">Changes</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">change</code> <strong>Lebensphase at diagnosis is now Must Support</strong> in <code class="language-plaintext highlighter-rouge">mii-pr-seltene-clinical-diagnosis</code> and <code class="language-plaintext highlighter-rouge">mii-pr-seltene-genetic-diagnosis</code>. The base Diagnose profile allows the fhir.de extension <code class="language-plaintext highlighter-rouge">lebensphase</code> on <code class="language-plaintext highlighter-rouge">onsetAge</code> but does not flag it; the logical model carries <code class="language-plaintext highlighter-rouge">zeitpunktKlinischeDia</code> and <code class="language-plaintext highlighter-rouge">zeitpunktGenDia</code> as data elements of their own, so the module now requires support for it. The logical-model mappings for both elements point at the fhir.de extension instead of the removed module extension <code class="language-plaintext highlighter-rouge">mii-ext-seltene-onset-age</code>; the Marfan and CF clinical examples now carry the age at diagnosis. They do not carry the life phase yet: the fhir.de extension allows only <code class="language-plaintext highlighter-rouge">dateTime</code>, <code class="language-plaintext highlighter-rouge">Period</code> and <code class="language-plaintext highlighter-rouge">Range</code> as context, so the validator rejects it on <code class="language-plaintext highlighter-rouge">onsetAge</code> where the base profile currently places it. Once the base module moves the slice to <code class="language-plaintext highlighter-rouge">onsetRange</code> (HDB-1075), the path follows with the dependency bump and the examples get the life phase</li>
+</ul>
+
+<h4 id="bug-fixes">Bug fixes</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>HPO slice in <code class="language-plaintext highlighter-rouge">mii-pr-seltene-symptom-condition</code> uses the preferred HPO URI</strong> <code class="language-plaintext highlighter-rouge">http://human-phenotype-ontology.org</code>, as the alias, every HPO value set and every example of this module do. The slice <code class="language-plaintext highlighter-rouge">hpoCoding</code> was patterned on the OBO URI <code class="language-plaintext highlighter-rouge">http://purl.obolibrary.org/obo/hp.owl</code>, which HL7's naming system lists as non-preferred and which no instance in the module used, so the Must-Support slice never matched a coding</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>ICF value set now references the BfArM language supplement</strong> (HDB-1125). The BfArM base code system <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/sid/icf</code> carries codes and hierarchy only, no display in any language; the German designations live in the supplement <code class="language-plaintext highlighter-rouge">icf-translation</code>, which a terminology server applies only when it is referenced. <code class="language-plaintext highlighter-rouge">mii-vs-seltene-icf</code> now carries the <code class="language-plaintext highlighter-rouge">valueset-supplement</code> extension pointing at the supplement, so expansions with <code class="language-plaintext highlighter-rouge">displayLanguage=de</code> return German text and German displays validate. Verified against the SU-TermServ staging server, which has carried the BfArM package since 2026-11-05; production has not followed yet</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> the four ICF examples carry the German designation from the supplement instead of an English text the base code system cannot validate</li>
+</ul>
 
 <hr />
 
@@ -362,7 +387,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">feat</code> 13 new example instances, anchored on the existing SMA case example</li>
 </ul>
 
-<h4 id="breaking-changes">Breaking changes</h4>
+<h4 id="breaking-changes-1">Breaking changes</h4>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">remove</code> extension <code class="language-plaintext highlighter-rouge">mii-ex-seltene-empfehlung-evidenzgraduierung</code> removed, along with its use in the three Therapieempfehlung profiles. It was a copy from the MTB module whose <code class="language-plaintext highlighter-rouge">system</code> discriminator never carried a value — the mandatory <code class="language-plaintext highlighter-rouge">Evidenzgrad 1..1</code> slice could not be satisfied by any instance. Published but unusable, and used by no example. Which evidence scale applies is tracked in ballot ticket HDB-543 and framed in oncological terms; for rare diseases it was never answered</li>
@@ -382,7 +407,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">change</code> all conformance resources now carry <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc1</code>. <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>, <code class="language-plaintext highlighter-rouge">input/fsh/rulesets/version.fsh</code> and <code class="language-plaintext highlighter-rouge">package.json</code> each claimed a different value; 56 resources carried the version of the already published predecessor <code class="language-plaintext highlighter-rouge">2026.0.1</code>, nine carried none at all. The <code class="language-plaintext highlighter-rouge">meta.profile</code> claims of the examples follow</li>
 </ul>
 
-<h4 id="bug-fixes">Bug fixes</h4>
+<h4 id="bug-fixes-1">Bug fixes</h4>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>two examples contradicted each other clinically.</strong> The deletion of exons 45-47 in the DMD gene was documented once as "out-of-frame … Duchenne muscular dystrophy" and, in the exclusion example, as "in-frame … consistent with Becker, NOT Duchenne". The arithmetic settles it: <code class="language-plaintext highlighter-rouge">c.6439</code>–<code class="language-plaintext highlighter-rouge">c.6912</code> spans 474 bases, 474 ÷ 3 = 158 — the reading frame is preserved. The deletion is in-frame and causes Becker. Variant and diagnostic report corrected (<code class="language-plaintext highlighter-rouge">conclusionCode</code> now OMIM 300376 Becker); the confirmed Duchenne example received a genuine out-of-frame finding, the deletion of exon 45 (176 bases, not divisible by three)</li>
@@ -432,7 +457,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">chore</code> dependency on module ICU updated to <code class="language-plaintext highlighter-rouge">2026.0.x</code> (resolved: <code class="language-plaintext highlighter-rouge">2026.0.2</code>)</li>
 </ul>
 
-<h4 id="bug-fixes-1">Bug fixes</h4>
+<h4 id="bug-fixes-2">Bug fixes</h4>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">fix</code> ICU head circumference alias updated to the renamed profile <code class="language-plaintext highlighter-rouge">mii-pr-icu-muv-kopfumfang</code></li>
@@ -491,7 +516,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">docs</code> documentation clarifications (HDB-741, HDB-739)</li>
 </ul>
 
-<h4 id="bug-fixes-2">Bug fixes</h4>
+<h4 id="bug-fixes-3">Bug fixes</h4>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">fix</code> incorrect oBDS mappings removed from the therapy plan page (HDB-751)</li>
@@ -539,7 +564,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Sep 14, 2026 21:28+0000">2026-09-14</span>
+          Generated <span title="Thu, Nov 26, 2026 17:48+0000">2026-11-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

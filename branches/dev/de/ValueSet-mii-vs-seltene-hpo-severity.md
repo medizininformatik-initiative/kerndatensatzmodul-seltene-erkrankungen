@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Seltene_HPOSeverity |
+| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_VS_Seltene_HPOSeverity |
 | **Copyright/Rechtliches**: This value set includes content from Human Phenotype Ontology (HPO). | |
 
  
@@ -25,6 +25,8 @@ HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Pheno
  
 
 ### Expansion
+
+No Expansion for this valueset (Unknown Code System)
 
 -------
 
@@ -138,7 +140,7 @@ HPO codes for describing severity of phenotypic abnormalities. Follows HL7 Pheno
   "title" : "HPO Severity",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T21:28:16+00:00",
+  "date" : "2026-11-26T17:48:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

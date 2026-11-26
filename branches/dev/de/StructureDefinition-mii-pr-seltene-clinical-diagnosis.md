@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_PR_Seltene_ClinicalDiagnosis |
+| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_PR_Seltene_ClinicalDiagnosis |
 
  
 Profile for clinical diagnosis of rare diseases with HPO phenotype codes. This profile is used for clinically diagnosed rare diseases based on phenotypic presentation. 
@@ -54,7 +54,7 @@ Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://medizininf
 ** Summary **
 
 Mandatory: 1 element(2 nested mandatory elements)
- Must-Support: 14 elements
+ Must-Support: 15 elements
 
  **Schlüsselelemente-Ansicht** 
 
@@ -79,7 +79,7 @@ Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://medizininf
 ** Summary **
 
 Mandatory: 1 element(2 nested mandatory elements)
- Must-Support: 14 elements
+ Must-Support: 15 elements
 
  
 
@@ -208,7 +208,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "title" : "MII PR SE Clinical Diagnosis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T21:28:16+00:00",
+  "date" : "2026-11-26T17:48:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -411,6 +411,29 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
         "identity" : "SE-LogicalModel",
         "map" : "anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia",
         "comment" : "Feststellungsdatum klinische SE-Diagnose"
+      }]
+    },
+    {
+      "id" : "Condition.onset[x]:onsetAge",
+      "path" : "Condition.onset[x]",
+      "sliceName" : "onsetAge",
+      "type" : [{
+        "code" : "Age"
+      }]
+    },
+    {
+      "id" : "Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn",
+      "path" : "Condition.onset[x].extension",
+      "sliceName" : "Lebensphase-Beginn",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn.value[x]",
+      "path" : "Condition.onset[x].extension.value[x]",
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose.zeitpunktKlinischeDia",
+        "comment" : "Lebensphase bei klinischer SE-Diagnose"
       }]
     },
     {

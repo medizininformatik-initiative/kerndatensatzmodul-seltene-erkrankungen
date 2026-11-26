@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Seltene_TherapieempfehlungStrategieNichtMedikamentoes |
+| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_VS_Seltene_TherapieempfehlungStrategieNichtMedikamentoes |
 
  
 ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profile) - Verwendet für ServiceRequest-basierte Therapieempfehlungen im Kontext Modellvorhaben GenomSeq 
@@ -136,7 +136,7 @@ ValueSet für nicht-medikamentöse Therapiestrategien (für ServiceRequest Profi
   "title" : "MII VS SE Therapieempfehlung Strategie - Nicht-Medikamentös",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T21:28:16+00:00",
+  "date" : "2026-11-26T17:48:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-inheritance-pattern | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_VS_Seltene_HPOInheritancePattern |
+| Active as of 2026-11-26 | *Computable Name*:MII_VS_Seltene_HPOInheritancePattern |
 
  
 Value set containing HPO terms for modes of inheritance 
@@ -23,6 +23,8 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
  
 
 ### Expansion
+
+No Expansion for this valueset (Unknown Code System)
 
 -------
 
@@ -136,7 +138,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "MII VS SE HPO Inheritance Pattern",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T21:28:16+00:00",
+  "date" : "2026-11-26T17:48:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -28,6 +28,8 @@ Profile: [MII PR SE Clinical Diagnosis](StructureDefinition-mii-pr-seltene-clini
 
 **encounter**: [Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Seen in cardiac clinic (finding); period = 2024-12-15 --> 2024-12-15](Encounter-mii-exa-seltene-encounter-cardiology-consultation.md)
 
+**onset**: 14 years (Details: UCUM codea = 'a')
+
 **recordedDate**: 2024-12-15
 
 > **evidence****code**: Aortenwurzeldilatation**detail**: [Observation Aortic root aneurysm](Observation-mii-exa-seltene-aortic-root-dilatation.md)
@@ -102,6 +104,12 @@ Klinische Diagnose basierend auf Ghent-Kriterien. Patient erfüllt Major-Kriteri
   },
   "encounter" : {
     "reference" : "Encounter/mii-exa-seltene-encounter-cardiology-consultation"
+  },
+  "onsetAge" : {
+    "value" : 14,
+    "unit" : "years",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "a"
   },
   "recordedDate" : "2024-12-15",
   "evidence" : [{

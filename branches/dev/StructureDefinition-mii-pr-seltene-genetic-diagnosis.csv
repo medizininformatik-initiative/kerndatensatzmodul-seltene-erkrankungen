@@ -616,8 +616,8 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn","Condition.onset[x].extension","Lebensphase-Beginn","","",0,1,"","","","Extension {[CanonicalType[http://fhir.de/StructureDefinition/lebensphase]]} {[]}
-","Lebensphase des Erkrankungsbeginns","Optional Extension Element - found in all resources.","Alternative Angabe, wenn genauere Eingrenzungen des Zeitraums nicht möglich sind, insbesondere im Kontext anamnestischer Diagnosen","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn","Condition.onset[x].extension","Lebensphase-Beginn","","",0,1,"Y","","","Extension {[CanonicalType[http://fhir.de/StructureDefinition/lebensphase]]} {[]}
+","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn.id","Condition.onset[x].extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -632,7 +632,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn.value[x]","Condition.onset[x].extension.value[x]","","","",1,1,"Y","","","CodeableConcept {[]} {[]}
 ","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","KlinischRelevanterZeitraum.Lebensphase.von"
+","anamneseUndDiagnostik.genetischeDiagnose.zeitpunktGenDia","KlinischRelevanterZeitraum.Lebensphase.von"
 "Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn.value[x].id","Condition.onset[x].extension.value[x].id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
 "Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn.value[x].extension","Condition.onset[x].extension.value[x].extension","","extensions

@@ -28,7 +28,7 @@ Profile: [MII PR SE Familienanamnese](StructureDefinition-mii-pr-seltene-familie
 
 **deceased**: 2004
 
-**reasonCode**: Osteogenesis imperfecta
+**reasonCode**: 666
 
 > **condition****code**: Sonstige näher bezeichnete Affektionen der Netzhaut
 

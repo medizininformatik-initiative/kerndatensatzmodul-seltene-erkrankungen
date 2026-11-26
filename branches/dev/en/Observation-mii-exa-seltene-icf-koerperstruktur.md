@@ -18,7 +18,7 @@ Profile: [MII PR SE ICF Assessment](StructureDefinition-mii-pr-seltene-icf-asses
 
 **category**: Survey
 
-**code**: Spinal cord and related structures
+**code**: Struktur des Rückenmarks und mit ihm in Zusammenhang stehende Strukturen
 
 **subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-mii-exa-seltene-patient-sma-001.md)
 
@@ -52,7 +52,7 @@ Profile: [MII PR SE ICF Assessment](StructureDefinition-mii-pr-seltene-icf-asses
     "coding" : [{
       "system" : "http://hl7.org/fhir/sid/icf",
       "code" : "s120",
-      "display" : "Spinal cord and related structures"
+      "display" : "Struktur des Rückenmarks und mit ihm in Zusammenhang stehende Strukturen"
     }]
   },
   "subject" : {

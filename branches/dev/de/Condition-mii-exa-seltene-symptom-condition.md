@@ -28,7 +28,7 @@ Profile: [MII Profile SE Symptom Condition](StructureDefinition-mii-pr-seltene-s
 
 **subject**: [Example Patient](Patient-mii-exa-seltene-patient.md)
 
-**onset**: 15 years (Details: UCUM codea = 'a')
+**onset**: 2022 --> (ongoing)
 
 **recordedDate**: 2024-01-15
 
@@ -106,11 +106,20 @@ Patient reports progressive muscle weakness affecting daily activities, particul
     "reference" : "Patient/mii-exa-seltene-patient",
     "display" : "Example Patient"
   },
-  "onsetAge" : {
-    "value" : 15,
-    "unit" : "years",
-    "system" : "http://unitsofmeasure.org",
-    "code" : "a"
+  "onsetPeriod" : {
+    "start" : "2022",
+    "_start" : {
+      "extension" : [{
+        "url" : "http://fhir.de/StructureDefinition/lebensphase",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "263659003",
+            "display" : "Adolescence (qualifier value)"
+          }]
+        }
+      }]
+    }
   },
   "recordedDate" : "2024-01-15",
   "evidence" : [{

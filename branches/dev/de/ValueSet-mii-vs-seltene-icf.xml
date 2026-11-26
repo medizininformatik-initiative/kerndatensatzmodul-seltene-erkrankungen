@@ -8,7 +8,7 @@
   </meta>
   <language value="de"/>
   <text>
-    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-seltene-icf</b></p><a name="de-mii-vs-seltene-icf"> </a><a name="de-hcmii-vs-seltene-icf"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html">CRMI Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html">CRMI Publishable ValueSet</a></p></div><ul><li>Include all codes defined in <a href="http://terminology.hl7.org/6.5.0/CodeSystem-ICF.html"><code>http://hl7.org/fhir/sid/icf</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li></ul></div>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-seltene-icf</b></p><a name="de-mii-vs-seltene-icf"> </a><a name="de-hcmii-vs-seltene-icf"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html">CRMI Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html">CRMI Publishable ValueSet</a></p></div><p>This ValueSet requires the Code system Supplement <code>https://terminologien.bfarm.de/fhir/CodeSystem/icf-translation|2005</code>.</p><ul><li>Include all codes defined in <a href="http://terminology.hl7.org/6.5.0/CodeSystem-ICF.html"><code>http://hl7.org/fhir/sid/icf</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li></ul></div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
     <valueCode value="shareable"/>
@@ -88,13 +88,16 @@
       </telecom>
     </valueContactDetail>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-supplement">
+    <valueCanonical value="https://terminologien.bfarm.de/fhir/CodeSystem/icf-translation|2005"/>
+  </extension>
   <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-icf"/>
   <version value="2027.0.0-ballot"/>
   <name value="MII_VS_Seltene_ICF"/>
   <title value="MII VS SE ICF Categories"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-14T21:28:16+00:00"/>
+  <date value="2026-11-26T17:48:40+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>

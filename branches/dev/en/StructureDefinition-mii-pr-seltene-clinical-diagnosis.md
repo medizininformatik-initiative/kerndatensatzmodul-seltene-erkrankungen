@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_PR_Seltene_ClinicalDiagnosis |
+| Active as of 2026-11-26 | *Computable Name*:MII_PR_Seltene_ClinicalDiagnosis |
 
  
 Profile for clinical diagnosis of rare diseases with HPO phenotype codes. This profile is used for clinically diagnosed rare diseases based on phenotypic presentation. 
@@ -158,7 +158,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
   "title" : "MII PR SE Clinical Diagnosis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T21:28:16+00:00",
+  "date" : "2026-11-26T17:48:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -361,6 +361,29 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
         "identity" : "SE-LogicalModel",
         "map" : "anamneseUndDiagnostik.klinischeDiagnose.feststellungsdatumKlinischeDia",
         "comment" : "Feststellungsdatum klinische SE-Diagnose"
+      }]
+    },
+    {
+      "id" : "Condition.onset[x]:onsetAge",
+      "path" : "Condition.onset[x]",
+      "sliceName" : "onsetAge",
+      "type" : [{
+        "code" : "Age"
+      }]
+    },
+    {
+      "id" : "Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn",
+      "path" : "Condition.onset[x].extension",
+      "sliceName" : "Lebensphase-Beginn",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn.value[x]",
+      "path" : "Condition.onset[x].extension.value[x]",
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "anamneseUndDiagnostik.klinischeDiagnose.zeitpunktKlinischeDia",
+        "comment" : "Lebensphase bei klinischer SE-Diagnose"
       }]
     },
     {

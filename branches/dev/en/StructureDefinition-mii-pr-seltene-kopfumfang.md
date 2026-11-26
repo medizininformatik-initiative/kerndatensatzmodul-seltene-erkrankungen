@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-kopfumfang | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_PR_Seltene_Kopfumfang |
+| Active as of 2026-11-26 | *Computable Name*:MII_PR_Seltene_Kopfumfang |
 
  
 Profil zur Dokumentation des Kopfumfangs (okzipital-frontal) eines Patienten. Besonders relevant bei seltenen Erkrankungen mit Auswirkungen auf das Schädelwachstum, z.B. Skelettdysplasien, neurologische Erkrankungen. Erbt vom deutschen Basisprofil für den Vitalparameter Kopfumfang. 
@@ -157,7 +157,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ko
   "title" : "MII PR SE Kopfumfang",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T21:28:16+00:00",
+  "date" : "2026-11-26T17:48:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

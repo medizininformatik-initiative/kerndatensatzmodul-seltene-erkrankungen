@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-empfehlung-status-begruendung | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_VS_Seltene_Empfehlung_StatusBegruendung |
+| Active as of 2026-11-26 | *Computable Name*:MII_VS_Seltene_Empfehlung_StatusBegruendung |
 
  
 ValueSet für Begründung bei fehlender Empfehlung 
@@ -136,7 +136,7 @@ ValueSet für Begründung bei fehlender Empfehlung
   "title" : "MII VS SE Empfehlung Status Begründung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T21:28:16+00:00",
+  "date" : "2026-11-26T17:48:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

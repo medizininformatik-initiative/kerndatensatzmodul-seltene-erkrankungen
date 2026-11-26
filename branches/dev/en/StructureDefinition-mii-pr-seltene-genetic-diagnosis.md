@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_PR_Seltene_GeneticDiagnosis |
+| Active as of 2026-11-26 | *Computable Name*:MII_PR_Seltene_GeneticDiagnosis |
 
  
 Profile for genetically confirmed diagnosis of rare diseases with OMIM codes and links to MolGen variant/diagnostic implication resources. This profile is used when a rare disease diagnosis has been confirmed through genetic testing. 
@@ -158,7 +158,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
   "title" : "MII PR SE Genetic Diagnosis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T21:28:16+00:00",
+  "date" : "2026-11-26T17:48:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -394,6 +394,29 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-ge
         "identity" : "SE-LogicalModel",
         "map" : "anamneseUndDiagnostik.genetischeDiagnose.feststellungsdatumGenDia",
         "comment" : "Feststellungsdatum genetische SE-Diagnose"
+      }]
+    },
+    {
+      "id" : "Condition.onset[x]:onsetAge",
+      "path" : "Condition.onset[x]",
+      "sliceName" : "onsetAge",
+      "type" : [{
+        "code" : "Age"
+      }]
+    },
+    {
+      "id" : "Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn",
+      "path" : "Condition.onset[x].extension",
+      "sliceName" : "Lebensphase-Beginn",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn.value[x]",
+      "path" : "Condition.onset[x].extension.value[x]",
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "anamneseUndDiagnostik.genetischeDiagnose.zeitpunktGenDia",
+        "comment" : "Lebensphase bei genetischer SE-Diagnose"
       }]
     },
     {

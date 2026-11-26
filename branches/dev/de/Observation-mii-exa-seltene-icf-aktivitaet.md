@@ -18,7 +18,7 @@ Profile: [MII PR SE ICF Assessment](StructureDefinition-mii-pr-seltene-icf-asses
 
 **category**: Survey
 
-**code**: Eating
+**code**: Essen
 
 **subject**: [Anonymous Patient Female, DoB: 2024-07-01 ( https://www.medizininformatik-initiative.de/fhir/sid/patient-id#SMA-2024-001)](Patient-mii-exa-seltene-patient-sma-001.md)
 
@@ -57,7 +57,7 @@ Leistungsfähigkeit ohne Hilfsmittel beurteilt, Leistung mit liegender PEG. Die 
     "coding" : [{
       "system" : "http://hl7.org/fhir/sid/icf",
       "code" : "d550",
-      "display" : "Eating"
+      "display" : "Essen"
     }]
   },
   "subject" : {

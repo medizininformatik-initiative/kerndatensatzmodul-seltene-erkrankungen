@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-syndrome-category | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Seltene_SyndromeCategory |
+| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_VS_Seltene_SyndromeCategory |
 
  
 Categories for classifying syndrome types in rare diseases 
@@ -136,7 +136,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "Syndrome Category Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T21:28:16+00:00",
+  "date" : "2026-11-26T17:48:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

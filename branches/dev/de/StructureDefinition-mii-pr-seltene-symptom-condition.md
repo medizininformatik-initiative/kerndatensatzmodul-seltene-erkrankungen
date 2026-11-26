@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_PR_Seltene_Symptom_Condition |
+| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_PR_Seltene_Symptom_Condition |
 
  
 Profile for symptom-based conditions in the context of rare diseases. This profile captures symptomatic conditions with temporal characteristics, complementing the HPO Assessment Observation profile. 
@@ -104,7 +104,7 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [Condition](http://hl7.org/fhir/R4/condition.html) 
+Diese Struktur ist abgeleitet von [MII_PR_Symptom_Condition](https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/2027.0.0-ballot/StructureDefinition-mii-pr-symptom-condition.html) 
 
 #### Terminology Bindings (Differential)
 
@@ -112,19 +112,18 @@ Diese Struktur ist abgeleitet von [Condition](http://hl7.org/fhir/R4/condition.h
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [Condition](http://hl7.org/fhir/R4/condition.html) 
+Diese Struktur ist abgeleitet von [MII_PR_Symptom_Condition](https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/2027.0.0-ballot/StructureDefinition-mii-pr-symptom-condition.html) 
 
 ** Summary **
 
 Mandatory: 2 elements(8 nested mandatory elements)
- Must-Support: 26 elements
+ Must-Support: 13 elements
 
 **Slices**
 
 This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
 * The element 1 is sliced based on the value of Condition.code.coding
-* The element 1 is sliced based on the value of Condition.onset[x]
 * The element 1 is sliced based on the value of Condition.abatement[x]
 
  **Schlüsselelemente-Ansicht** 
@@ -135,7 +134,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [Condition](http://hl7.org/fhir/R4/condition.html) 
+Diese Struktur ist abgeleitet von [MII_PR_Symptom_Condition](https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/2027.0.0-ballot/StructureDefinition-mii-pr-symptom-condition.html) 
 
 #### Terminology Bindings (Differential)
 
@@ -145,19 +144,18 @@ Diese Struktur ist abgeleitet von [Condition](http://hl7.org/fhir/R4/condition.h
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [Condition](http://hl7.org/fhir/R4/condition.html) 
+Diese Struktur ist abgeleitet von [MII_PR_Symptom_Condition](https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/2027.0.0-ballot/StructureDefinition-mii-pr-symptom-condition.html) 
 
 ** Summary **
 
 Mandatory: 2 elements(8 nested mandatory elements)
- Must-Support: 26 elements
+ Must-Support: 13 elements
 
 **Slices**
 
 This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
 * The element 1 is sliced based on the value of Condition.code.coding
-* The element 1 is sliced based on the value of Condition.onset[x]
 * The element 1 is sliced based on the value of Condition.abatement[x]
 
  
@@ -272,7 +270,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "title" : "MII Profile SE Symptom Condition",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T21:28:16+00:00",
+  "date" : "2026-11-26T17:48:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -336,7 +334,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
   "kind" : "resource",
   "abstract" : false,
   "type" : "Condition",
-  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Condition",
+  "baseDefinition" : "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition",
   "derivation" : "constraint",
   "differential" : {
     "element" : [{
@@ -359,15 +357,9 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "mustSupport" : true
     },
     {
-      "id" : "Condition.identifier",
-      "path" : "Condition.identifier",
-      "mustSupport" : true
-    },
-    {
       "id" : "Condition.clinicalStatus",
       "path" : "Condition.clinicalStatus",
       "short" : "Klinischer Status der Symptom-Erkrankung",
-      "mustSupport" : true,
       "binding" : {
         "strength" : "required",
         "valueSet" : "http://hl7.org/fhir/ValueSet/condition-clinical"
@@ -377,7 +369,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "id" : "Condition.verificationStatus",
       "path" : "Condition.verificationStatus",
       "short" : "Verifikationsstatus der Symptom-Erkrankung",
-      "mustSupport" : true,
       "binding" : {
         "strength" : "required",
         "valueSet" : "http://hl7.org/fhir/ValueSet/condition-ver-status"
@@ -388,15 +379,13 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "path" : "Condition.category",
       "short" : "Kategorie der Erkrankung - muss Symptom-Kategorie enthalten",
       "definition" : "Kategoriecodes, die die Erkrankung klassifizieren, mit besonderem Fokus auf symptombezogene Kategorien",
-      "min" : 1,
-      "mustSupport" : true
+      "min" : 1
     },
     {
       "id" : "Condition.severity",
       "path" : "Condition.severity",
       "short" : "Schweregrad der Symptom-Erkrankung",
       "definition" : "Schweregradbewertung der Symptom-Erkrankung unter Verwendung von HPO-Schweregrad-Werten",
-      "mustSupport" : true,
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-severity"
@@ -413,7 +402,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "short" : "HPO-basierter Symptom-Erkrankungs-Code",
       "definition" : "Code zur Identifikation der Symptom-Erkrankung, vorzugsweise unter Verwendung von Human Phenotype Ontology (HPO) Codes",
       "min" : 1,
-      "mustSupport" : true,
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-phenotypic-observation-codes"
@@ -442,7 +430,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "min" : 0,
       "max" : "1",
       "patternCoding" : {
-        "system" : "http://purl.obolibrary.org/obo/hp.owl"
+        "system" : "http://human-phenotype-ontology.org"
       },
       "mustSupport" : true,
       "mapping" : [{
@@ -569,8 +557,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       "id" : "Condition.bodySite",
       "path" : "Condition.bodySite",
       "short" : "Anatomische Lokalisation des Symptoms",
-      "definition" : "Die anatomische Lokalisation, wo sich das Symptom manifestiert",
-      "mustSupport" : true
+      "definition" : "Die anatomische Lokalisation, wo sich das Symptom manifestiert"
     },
     {
       "id" : "Condition.subject",
@@ -581,7 +568,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
       }],
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
         "map" : "persoenlicheInfosIndexpatient",
@@ -591,7 +577,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     {
       "id" : "Condition.encounter",
       "path" : "Condition.encounter",
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
         "map" : "anamneseUndDiagnostik.untersuchungsdatum",
@@ -601,39 +586,25 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     {
       "id" : "Condition.onset[x]",
       "path" : "Condition.onset[x]",
-      "slicing" : {
-        "discriminator" : [{
-          "type" : "type",
-          "path" : "$this"
-        }],
-        "ordered" : false,
-        "rules" : "open"
-      },
       "short" : "Beginn der Symptom-Erkrankung",
-      "definition" : "Geschätztes oder tatsächliches Datum, Alter, Zeitraum oder zeitliche Beschreibung, wann die Symptom-Erkrankung begann",
-      "mustSupport" : true
-    },
-    {
-      "id" : "Condition.onset[x]:onsetDateTime",
-      "path" : "Condition.onset[x]",
-      "sliceName" : "onsetDateTime",
-      "min" : 0,
-      "max" : "1",
+      "definition" : "Geschätztes oder tatsächliches Datum, Alter oder Zeitraum, wann die Symptom-Erkrankung begann. Die Lebensphase steht kodiert in der Extension lebensphase auf onsetPeriod.start bzw. onsetPeriod.end.",
       "type" : [{
         "code" : "dateTime"
-      }],
-      "mapping" : [{
-        "identity" : "SE-LogicalModel",
-        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
-        "comment" : "Startdatum des Symptoms"
+      },
+      {
+        "code" : "Age"
+      },
+      {
+        "code" : "Period"
+      },
+      {
+        "code" : "Range"
       }]
     },
     {
       "id" : "Condition.onset[x]:onsetPeriod",
       "path" : "Condition.onset[x]",
       "sliceName" : "onsetPeriod",
-      "min" : 0,
-      "max" : "1",
       "type" : [{
         "code" : "Period"
       }]
@@ -648,12 +619,57 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       }]
     },
     {
+      "id" : "Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von",
+      "path" : "Condition.onset[x].start.extension",
+      "sliceName" : "lebensphase-von",
+      "short" : "Lebensphase bei Symptombeginn"
+    },
+    {
+      "id" : "Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von.value[x]",
+      "path" : "Condition.onset[x].start.extension.value[x]",
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase",
+        "comment" : "Lebensphase bei Symptombeginn"
+      }]
+    },
+    {
       "id" : "Condition.onset[x]:onsetPeriod.end",
       "path" : "Condition.onset[x].end",
       "mapping" : [{
         "identity" : "SE-LogicalModel",
         "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
         "comment" : "Ende Symptomzeitraum"
+      }]
+    },
+    {
+      "id" : "Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis",
+      "path" : "Condition.onset[x].end.extension",
+      "sliceName" : "lebensphase-bis",
+      "short" : "Lebensphase bei Symptomende"
+    },
+    {
+      "id" : "Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis.value[x]",
+      "path" : "Condition.onset[x].end.extension.value[x]",
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase",
+        "comment" : "Lebensphase bei Symptomende"
+      }]
+    },
+    {
+      "id" : "Condition.onset[x]:onsetDateTime",
+      "path" : "Condition.onset[x]",
+      "sliceName" : "onsetDateTime",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }],
+      "mapping" : [{
+        "identity" : "SE-LogicalModel",
+        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.zeitraumSymptom",
+        "comment" : "Startdatum des Symptoms"
       }]
     },
     {
@@ -672,21 +688,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
       }]
     },
     {
-      "id" : "Condition.onset[x]:onsetString",
-      "path" : "Condition.onset[x]",
-      "sliceName" : "onsetString",
-      "min" : 0,
-      "max" : "1",
-      "type" : [{
-        "code" : "string"
-      }],
-      "mapping" : [{
-        "identity" : "SE-LogicalModel",
-        "map" : "anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.lebensphase",
-        "comment" : "Lebensphase Symptom"
-      }]
-    },
-    {
       "id" : "Condition.abatement[x]",
       "path" : "Condition.abatement[x]",
       "slicing" : {
@@ -698,7 +699,19 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
         "rules" : "open"
       },
       "short" : "Auflösung der Symptom-Erkrankung",
-      "definition" : "Datum, Alter, Zeitraum oder zeitliche Beschreibung, wann die Symptom-Erkrankung abgeklungen ist oder in Remission ging",
+      "definition" : "Datum, Alter oder Zeitraum, wann die Symptom-Erkrankung abgeklungen ist oder in Remission ging",
+      "type" : [{
+        "code" : "dateTime"
+      },
+      {
+        "code" : "Age"
+      },
+      {
+        "code" : "Period"
+      },
+      {
+        "code" : "Range"
+      }],
       "mustSupport" : true
     },
     {
@@ -719,7 +732,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     {
       "id" : "Condition.recordedDate",
       "path" : "Condition.recordedDate",
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "SE-LogicalModel",
         "map" : "anamneseUndDiagnostik.untersuchungsdatum",
@@ -729,8 +741,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     {
       "id" : "Condition.stage",
       "path" : "Condition.stage",
-      "short" : "Stadium oder Progression der Symptom-Erkrankung",
-      "mustSupport" : true
+      "short" : "Stadium oder Progression der Symptom-Erkrankung"
     },
     {
       "id" : "Condition.stage.summary",
@@ -752,8 +763,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-selte
     {
       "id" : "Condition.evidence",
       "path" : "Condition.evidence",
-      "short" : "Unterstützende Evidenz für die Symptom-Erkrankung",
-      "mustSupport" : true
+      "short" : "Unterstützende Evidenz für die Symptom-Erkrankung"
     },
     {
       "id" : "Condition.evidence.code",

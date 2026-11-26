@@ -26,6 +26,8 @@ Profile: [MII PR SE Clinical Diagnosis](StructureDefinition-mii-pr-seltene-clini
 
 **subject**: [Max Mustermann (official) Male, DoB: 1990-01-01 ( http://test-krankenhaus.de/fhir/sid/patienten#12345)](Patient-mii-exa-seltene-patient.md)
 
+**onset**: 6 months (Details: UCUM codemo = 'mo')
+
 **recordedDate**: 2024-08-10
 
 > **evidence****code**: Asthma**detail**: [Observation Asthma](Observation-mii-exa-seltene-recurrent-respiratory-infections.md)
@@ -89,6 +91,12 @@ Schweißtest positiv (Chlorid 85 mmol/l). Klinisches Bild vereinbar mit CF. Gene
   },
   "subject" : {
     "reference" : "Patient/mii-exa-seltene-patient"
+  },
+  "onsetAge" : {
+    "value" : 6,
+    "unit" : "months",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "mo"
   },
   "recordedDate" : "2024-08-10",
   "evidence" : [{
