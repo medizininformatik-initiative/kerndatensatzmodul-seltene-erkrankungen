@@ -39,10 +39,10 @@ The table below is generated from the published logical model (`mii-lm-seltene`)
 | &nbsp;&nbsp;&nbsp;&nbsp;`methodeDiagnosestellung` | 0..* | code | Gibt an, welche Methode zur Diagnosestellung verwendet wurde. |
 | `koerperlicheUntersuchung` | 0..* | BackboneElement | Körperliche Untersuchung |
 | &nbsp;&nbsp;&nbsp;&nbsp;`koerpergewicht` | 0..* | BackboneElement | Körpergewicht |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`koerpergewicht` | 0..1 | decimal | Körpergewicht des SE-Patienten in kg (aus MII ICU Modul). |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`koerpergewicht` | 0..1 | decimal | Körpergewicht des SE-Patienten in kg (nach ISiK Vitalparameter, ISiKKoerpergewicht). |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`datumKoerpergewicht` | 0..1 | dateTime | Datum der Körpergewichtsmessung. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`koerpergroesse` | 0..* | BackboneElement | Körpergröße |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`koerpergroesse` | 0..1 | decimal | Körpergröße des SE-Patienten in cm (aus MII ICU Modul). |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`koerpergroesse` | 0..1 | decimal | Körpergröße des SE-Patienten in cm (nach ISiK Vitalparameter, ISiKKoerpergroesse). |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`datumKoerpergroesse` | 0..1 | dateTime | Datum der Körpergrößenmessung. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`bmi` | 0..* | BackboneElement | BMI |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`bmi` | 0..1 | decimal | BMI des SE-Patienten. |
