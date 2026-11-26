@@ -204,7 +204,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-th
   "title" : "MII PR SE Therapieempfehlung Nicht-Medikamentös",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-26T17:48:40+00:00",
+  "date" : "2026-11-26T18:07:27+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

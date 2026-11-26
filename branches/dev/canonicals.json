@@ -48,6 +48,20 @@
   "name" : "MII_CS_Seltene_TherapieempfehlungTyp"
 },
 {
+  "id" : "mii-cm-seltene-therapieempfehlung-to-mvgenomseq",
+  "type" : "ConceptMap",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ConceptMap/mii-cm-seltene-therapieempfehlung-to-mvgenomseq",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_CM_Seltene_Therapieempfehlung_To_MVGenomSeq"
+},
+{
+  "id" : "mii-cm-seltene-to-mvgenomseq",
+  "type" : "ConceptMap",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ConceptMap/mii-cm-seltene-to-mvgenomseq",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_CM_Seltene_To_MVGenomSeq"
+},
+{
   "id" : "mii-ig-seltene",
   "type" : "ImplementationGuide",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ImplementationGuide/mii-ig-seltene",
@@ -67,6 +81,13 @@
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene",
   "version" : "2027.0.0-ballot",
   "name" : "MII_LM_Seltene"
+},
+{
+  "id" : "mii-lm-seltene-mvgenomseq",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_LM_Seltene_MVGenomSeq"
 },
 {
   "id" : "mii-ex-seltene-empfehlung-prioritaet",

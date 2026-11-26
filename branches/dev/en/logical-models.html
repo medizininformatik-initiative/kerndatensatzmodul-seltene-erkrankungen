@@ -68,7 +68,7 @@
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"7"}
-    h3,h4,h5,h6{--heading-prefix:"7"}</style>
+    h3,h4,h5,h6{--heading-prefix:"7.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -344,6 +344,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <p><strong>Written during migration - review before release.</strong> The logical model was reactivated on 2026-09-02 (it had been parked as <code class="language-plaintext highlighter-rouge">disabled/mii-lm-seltene.fsh.disabled</code> and builds without error). It is therefore part of the build again, and the 22 unresolvable mapping links every profile carried are resolved.</p>
 </blockquote>
 
+<p>The mapping of the clinical data set (KDK) of the genome sequencing model project to the profiles of this module has a page of its own: <a href="mapping-mvgenomseq.html">Mapping Genome Sequencing Model Project</a>.</p>
+
 <!-- BEGIN GENERATED: logical-model-table (scripts/generate-lm-table.py) -->
 
 <p>The table below is generated from the published logical model (<code class="language-plaintext highlighter-rouge">mii-lm-seltene</code>) and lists every data element with its cardinality, type and description. Indentation reflects nesting.</p>
@@ -518,7 +520,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>        <code class="language-plaintext highlighter-rouge">koerpergewicht</code></td>
       <td>0..1</td>
       <td>decimal</td>
-      <td>Körpergewicht des SE-Patienten in kg (aus MII ICU Modul).</td>
+      <td>Körpergewicht des SE-Patienten in kg (nach ISiK Vitalparameter, ISiKKoerpergewicht).</td>
     </tr>
     <tr>
       <td>        <code class="language-plaintext highlighter-rouge">datumKoerpergewicht</code></td>
@@ -536,7 +538,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>        <code class="language-plaintext highlighter-rouge">koerpergroesse</code></td>
       <td>0..1</td>
       <td>decimal</td>
-      <td>Körpergröße des SE-Patienten in cm (aus MII ICU Modul).</td>
+      <td>Körpergröße des SE-Patienten in cm (nach ISiK Vitalparameter, ISiKKoerpergroesse).</td>
     </tr>
     <tr>
       <td>        <code class="language-plaintext highlighter-rouge">datumKoerpergroesse</code></td>
@@ -916,7 +918,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Nov 26, 2026 17:48+0000">2026-11-26</span>
+          Generated <span title="Thu, Nov 26, 2026 18:07+0000">2026-11-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -68,7 +68,7 @@
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"7"}
-    h3,h4,h5,h6{--heading-prefix:"7"}</style>
+    h3,h4,h5,h6{--heading-prefix:"7.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -310,6 +310,8 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
   <p><strong>Written during migration - review before release.</strong> Das Logical Model des Moduls ist derzeit nicht Teil des Builds (Quelle: <code class="language-plaintext highlighter-rouge">disabled/mii-lm-seltene.fsh.disabled</code>); die Datensatzbeschreibung oben ist maßgeblich.</p>
 </blockquote>
 
+<p>Die Zuordnung des Klinischen Datenkranzes (KDK) des Modellvorhabens Genomsequenzierung zu den Profilen dieses Moduls hat eine eigene Seite: <a href="mapping-mvgenomseq.html">Mapping Modellvorhaben Genomsequenzierung</a>.</p>
+
 <!-- BEGIN GENERATED: logical-model-table (scripts/generate-lm-table.py) -->
 
 <p>Die folgende Tabelle wird aus dem publizierten Logical Model (<code class="language-plaintext highlighter-rouge">mii-lm-seltene</code>) erzeugt und listet jedes Datenelement mit Kardinalität, Typ und Beschreibung. Die Einrückung bildet die Verschachtelung ab.</p>
@@ -484,7 +486,7 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
       <td>        <code class="language-plaintext highlighter-rouge">koerpergewicht</code></td>
       <td>0..1</td>
       <td>decimal</td>
-      <td>Körpergewicht des SE-Patienten in kg (aus MII ICU Modul).</td>
+      <td>Körpergewicht des SE-Patienten in kg (nach ISiK Vitalparameter, ISiKKoerpergewicht).</td>
     </tr>
     <tr>
       <td>        <code class="language-plaintext highlighter-rouge">datumKoerpergewicht</code></td>
@@ -502,7 +504,7 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
       <td>        <code class="language-plaintext highlighter-rouge">koerpergroesse</code></td>
       <td>0..1</td>
       <td>decimal</td>
-      <td>Körpergröße des SE-Patienten in cm (aus MII ICU Modul).</td>
+      <td>Körpergröße des SE-Patienten in cm (nach ISiK Vitalparameter, ISiKKoerpergroesse).</td>
     </tr>
     <tr>
       <td>        <code class="language-plaintext highlighter-rouge">datumKoerpergroesse</code></td>
@@ -882,7 +884,7 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Nov 26, 2026 17:48+0000">2026-11-26</span>
+          Erstellt <span title="Thu, Nov 26, 2026 18:07+0000">2026-11-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

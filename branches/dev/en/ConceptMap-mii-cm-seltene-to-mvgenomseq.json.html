@@ -1,0 +1,1174 @@
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MII CM Seltene Erkrankungen zu Modellvorhaben Genomsequenzierung (KDK) - JSON Representation - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"18.67"}
+    h3,h4,h5,h6{--heading-prefix:"18.67"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Network of University Medicine — Data Integration Center)" src="assets/images/logo-num-diz-en.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Font size">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Font size: default">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Font size: larger">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Font size: largest">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Back to top">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Seltene Erkrankungen</span>
+            <br/>
+            <span style="display:inline-block;">2027.0.0-ballot - 
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- Menu in the IG's DEFAULT language (English).
+     The IG Publisher renders the navigation from this file. To translate it,
+     ship a per-language copy at input/translations/<lang>/includes/menu.xml —
+     this is the mechanism the HL7 reference IG FHIR/multi-lang-test-ig uses and
+     the ONLY way to get a TRANSLATED menu: the `menu:` property in
+     sushi-config.yaml generates a single menu.xml that cannot be translated.
+     Rules: keep the href targets identical across languages; dropdown parents
+     must link to a REAL page (href="#" is rejected by the template's menu QA);
+     only one sub-menu level is supported.
+
+     STRUCTURE: this menu implements the TF-KDS-agreed module menu (see
+     docs/page-structure.md for the full structure with cardinalities).
+     Entries marked OPTIONAL (0..1) below may be removed per module — the
+     removal procedure per entry is in docs/optional-pages.md in this
+     repository. Entries without a marker are mandatory (1..1).
+
+     LINK-ONLY ENTRIES (no page of their own):
+     - "Datasets and Descriptions" points at the Logical Models page
+       (logical-models.html) — the module's datasets ARE its logical models.
+       NEITHER Artifacts-Summary anchor is usable for the TF-KDS "Sec.
+       15.0.2" target: the numeric #2 is POSITIONAL (grouping index — wrong
+       section whenever the artifact mix differs from the full standard set),
+       and the browser-generated NAMED AnchorJS anchor
+       (#structures-logical-models) is invisible to the IG Publisher's link
+       validator — it injects a marker anchor into the menu (rendered as an
+       EMPTY menu entry) and logs a broken-link ERROR on every page's QA.
+       Full analysis: docs/page-structure.md, "Datasets and Descriptions".
+     - The four Conformance entries point at the KDS-wide conformance rules of
+       the Meta module (kerndatensatz-meta). INTERIM: the Meta module has no
+       published IG rendering yet (only a CI build with no conformance pages),
+       so these link to the authoritative meta-wiki sections; switch them to
+       the Meta IG's menu entries once a stable rendering exists (Gate item in
+       docs/page-structure.md). -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Guidance<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Guidance</a></li>
+      <li><a href="implementer-guidance.html">Guidance for Implementers</a></li>
+      <li><a href="clinical-genetic-diagnosis-guide.html">Clinical vs. Genetic Diagnosis</a></li>
+      <li><a href="coding-best-practices.html">Coding Best Practices</a></li>
+      <li><a href="newborn-screening.html">Newborn Screening</a></li>
+      <!-- link-only entry: Logical-Models section of the Artifacts Summary (see header note) -->
+      <li><a href="logical-models.html">Datasets and Descriptions</a></li>
+      <li><a href="uml-diagrams.html">UML Diagrams</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <!-- The parent and the first four entries link to the KDS-wide conformance
+         rules of the Meta module (INTERIM: meta-wiki; see header note). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Conformance<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Conformance</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">General Requirements</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Handling Missing Data</a></li>
+      <li><a href="security-and-privacy.html">Security and Privacy</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artifacts<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artifacts Summary</a></li>
+      <li><a href="profiles.html">Profiles</a></li>
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="extensions.html">Extensions (optional)</a></li>
+      <li><a href="capability-statements.html">Capability Statements</a></li>
+      <li><a href="logical-models.html">Logical Models</a></li>
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="value-sets.html">Value Sets (optional)</a></li>
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="code-systems.html">Code Systems (optional)</a></li>
+      <li><a href="sma-example-annotations.html">Case Example SMA</a></li>
+      <li><a href="marfan-example-annotations.html">Case Example Marfan</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Changelog</a></li>
+  <li class="dropdown">
+    <!-- The parent deliberately links the MANDATORY child (Versioning): the
+         Metadata Overview page is optional, and a parent pointing at it would
+         have to be re-targeted when that page is removed. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadata<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
+      <li><a href="metadata.html">Metadata Overview (optional)</a></li>
+      <li><a href="version-history.html">Versioning</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/ConceptMap-mii-cm-seltene-to-mvgenomseq.json.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MII CM Seltene Erkrankungen zu Modellvorhaben Genomsequenzierung (KDK)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-instance-format -->
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Seltene Erkrankungen - Local Development build (v2027.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="ConceptMap-mii-cm-seltene-to-mvgenomseq.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ConceptMap-mii-cm-seltene-to-mvgenomseq.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+
+<h2 id="root">: MII CM Seltene Erkrankungen zu Modellvorhaben Genomsequenzierung (KDK)</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+
+            as of 
+2026-11-26
+
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="ConceptMap-mii-cm-seltene-to-mvgenomseq.json" no-download="true">Raw json</a> | <a href="ConceptMap-mii-cm-seltene-to-mvgenomseq.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap">resourceType</a>" : "ConceptMap",
+  "<a href="http://hl7.org/fhir/R4/resource.html#ConceptMap.id">id</a>" : "mii-cm-seltene-to-mvgenomseq",
+  "<a href="http://hl7.org/fhir/R4/resource.html#ConceptMap.language">language</a>" : "en",
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#ConceptMap.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xml:lang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;English&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ConceptMap mii-cm-seltene-to-mvgenomseq&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;mii-cm-seltene-to-mvgenomseq\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmii-cm-seltene-to-mvgenomseq\&quot;&gt; &lt;/a&gt;&lt;p&gt;Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene to &lt;a href=\&quot;StructureDefinition-mii-lm-seltene-mvgenomseq.html\&quot;&gt;MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen&lt;/a&gt;&lt;/p&gt;&lt;br/&gt;&lt;p&gt;&lt;b&gt;Group 1 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-mii-pr-seltene-hpo-assessment.html\&quot;&gt;MII Profile SE HPO Assessment&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-mii-lm-seltene-mvgenomseq.html\&quot;&gt;MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-hpo-assessment.html#s-Observation.code.coding.code\&quot;&gt;Observation.code.coding.code&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.phenotypes.code&lt;/td&gt;&lt;td&gt;Nur beobachtete Merkmale melden; als ausgeschlossen dokumentierte [component:status = Absent] gehören nicht in den KDK.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-hpo-assessment.html#s-Observation.code.coding.version\&quot;&gt;Observation.code.coding.version&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.phenotypes.version&lt;/td&gt;&lt;td&gt;Im KDK Pflicht. Ohne Version im Quelldatum muss das DIZ die verwendete HPO-Version ergänzen.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-hpo-assessment.html#s-Observation.code.coding.system\&quot;&gt;Observation.code.coding.system&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.phenotypes.system&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-hpo-assessment.html#s-Observation.code.coding.display\&quot;&gt;Observation.code.coding.display&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.phenotypes.display&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=\&quot;3\&quot;&gt;Observation.note.text&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#inexact\&quot; title=\&quot;inexact\&quot;&gt;maps loosely to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.phenotypes.text&lt;/td&gt;&lt;td&gt;Freitext; nur übernehmen, wenn die Anmerkung den Phänotyp beschreibt.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-hpo-assessment.html#s-Observation.code.coding.code\&quot;&gt;Observation.code.coding.code&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;followUp.followUpRds.phenotypes.code&lt;/td&gt;&lt;td&gt;Verlaufsmeldung: Phänotypen zum Zeitpunkt followUpDate.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-hpo-assessment.html#s-Observation.code.coding.version\&quot;&gt;Observation.code.coding.version&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;followUp.followUpRds.phenotypes.version&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-hpo-assessment.html#s-Observation.code.coding.system\&quot;&gt;Observation.code.coding.system&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;followUp.followUpRds.phenotypes.system&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-hpo-assessment.html#s-Observation.code.coding.display\&quot;&gt;Observation.code.coding.display&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;followUp.followUpRds.phenotypes.display&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=\&quot;3\&quot;&gt;Observation.note.text&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#inexact\&quot; title=\&quot;inexact\&quot;&gt;maps loosely to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;followUp.followUpRds.phenotypes.text&lt;/td&gt;&lt;td&gt;Freitext; nur übernehmen, wenn die Anmerkung den Phänotyp beschreibt.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-hpo-assessment.html#s-Observation.effective[x]\&quot;&gt;Observation.effective[x]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;followUp.followUpRds.followUpDate&lt;/td&gt;&lt;td&gt;Datum der Verlaufserhebung; bei mehreren Beobachtungen eines Termins deren gemeinsames Datum.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-hpo-assessment.html#s-Observation.component:status.value[x]\&quot;&gt;Observation.component:status.value[x]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;followUp.followUpRds.phenotypes.change&lt;/td&gt;&lt;td&gt;Abgeleitet aus dem Vergleich zweier Erhebungen: neu beobachtet = newlyAdded, Present zu Absent = noLongerObserved, unverändert = unchanged. improved/degraded nur über component:severity ableitbar.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 2 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-mii-pr-seltene-symptom-condition.html\&quot;&gt;MII Profile SE Symptom Condition&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-mii-lm-seltene-mvgenomseq.html\&quot;&gt;MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-symptom-condition.html#s-Condition.code.coding:hpoCoding.code\&quot;&gt;Condition.code.coding:hpoCoding.code&lt;/a&gt;&lt;/td&gt;&lt;td&gt;1..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.phenotypes.code&lt;/td&gt;&lt;td&gt;Symptome mit HPO-Kodierung zählen als Phänotypen.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-symptom-condition.html#s-Condition.onset[x]:onsetDateTime\&quot;&gt;Condition.onset[x]:onsetDateTime&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider\&quot; title=\&quot;wider\&quot;&gt;maps to wider concept&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.symptomOnsetDate&lt;/td&gt;&lt;td&gt;Frühester Beginn über alle Symptome des Falls, auf JJJJ-MM gekürzt.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-symptom-condition.html#s-Condition.onset[x]:onsetPeriod.start\&quot;&gt;Condition.onset[x]:onsetPeriod.start&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider\&quot; title=\&quot;wider\&quot;&gt;maps to wider concept&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.symptomOnsetDate&lt;/td&gt;&lt;td&gt;Wie onsetDateTime; bei Zeitraum dessen Beginn.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 3 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-mii-pr-seltene-clinical-diagnosis.html\&quot;&gt;MII PR SE Clinical Diagnosis&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-mii-lm-seltene-mvgenomseq.html\&quot;&gt;MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-clinical-diagnosis.html#s-Condition.code.coding:orphanet\&quot;&gt;Condition.code.coding:orphanet&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.noMatchingCodeExists&lt;/td&gt;&lt;td&gt;true, wenn für die Erkrankung kein spezifischer ORPHAcode existiert und ein unspezifischer gesetzt wurde.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-clinical-diagnosis.html#s-Condition.code.coding:icd10-gm\&quot;&gt;Condition.code.coding:icd10-gm&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.diagnoses&lt;/td&gt;&lt;td&gt;Im KDK Pflicht mit code, system, version.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-clinical-diagnosis.html#s-Condition.code.coding:orphanet\&quot;&gt;Condition.code.coding:orphanet&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.diagnoses&lt;/td&gt;&lt;td&gt;Im KDK Pflicht.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-clinical-diagnosis.html#s-Condition.code.coding:alpha-id\&quot;&gt;Condition.code.coding:alpha-id&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.diagnoses&lt;/td&gt;&lt;td&gt;Im KDK Pflicht. Slice aus dem Basisprofil Diagnose.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-clinical-diagnosis.html#s-Condition.verificationStatus\&quot;&gt;Condition.verificationStatus&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;followUp.followUpRds.diagnosisEstablished&lt;/td&gt;&lt;td&gt;confirmed = true, sonst false.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 4 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-mii-pr-seltene-genetic-diagnosis.html\&quot;&gt;MII PR SE Genetic Diagnosis&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-mii-lm-seltene-mvgenomseq.html\&quot;&gt;MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-genetic-diagnosis.html#s-Condition.code.coding:orphanet\&quot;&gt;Condition.code.coding:orphanet&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.noMatchingCodeExists&lt;/td&gt;&lt;td&gt;true, wenn für die Erkrankung kein spezifischer ORPHAcode existiert und ein unspezifischer gesetzt wurde.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-genetic-diagnosis.html#s-Condition.code.coding:icd10-gm\&quot;&gt;Condition.code.coding:icd10-gm&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.diagnoses&lt;/td&gt;&lt;td&gt;Im KDK Pflicht mit code, system, version.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-genetic-diagnosis.html#s-Condition.code.coding:orphanet\&quot;&gt;Condition.code.coding:orphanet&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.diagnoses&lt;/td&gt;&lt;td&gt;Im KDK Pflicht.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-genetic-diagnosis.html#s-Condition.code.coding:alpha-id\&quot;&gt;Condition.code.coding:alpha-id&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.diagnoses&lt;/td&gt;&lt;td&gt;Im KDK Pflicht. Slice aus dem Basisprofil Diagnose.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-genetic-diagnosis.html#s-Condition.verificationStatus\&quot;&gt;Condition.verificationStatus&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;case.diagnosisRd.diagnosticAssessment&lt;/td&gt;&lt;td&gt;confirmed = confirmedGeneticDiagnosis, provisional oder differential = suspectedGeneticDiagnosis. partialGeneticDiagnosis und furtherGeneticDiagnosticRecommended sind aus dem Status nicht ableitbar.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-genetic-diagnosis.html#s-Condition.verificationStatus\&quot;&gt;Condition.verificationStatus&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;followUp.followUpRds.diagnosisEstablished&lt;/td&gt;&lt;td&gt;confirmed = true, sonst false.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 5 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-mii-pr-seltene-clinical-impression.html\&quot;&gt;MII Profile SE Clinical Impression&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-mii-lm-seltene-mvgenomseq.html\&quot;&gt;MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-clinical-impression.html#s-ClinicalImpression.summary\&quot;&gt;ClinicalImpression.summary&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#inexact\&quot; title=\&quot;inexact\&quot;&gt;maps loosely to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;followUp.followUpRds.diseaseProgression&lt;/td&gt;&lt;td&gt;Freitext der Verlaufsbeurteilung.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 6 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieplan.html\&quot;&gt;MII PR SE Therapieplan&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-mii-lm-seltene-mvgenomseq.html\&quot;&gt;MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieplan.html#s-CarePlan.created\&quot;&gt;CarePlan.created&lt;/a&gt;&lt;/td&gt;&lt;td&gt;1..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.carePlanRd.molecularBoardDecisionDate&lt;/td&gt;&lt;td&gt;Das Modul führt das Datum des Beschlusses als Erstellungsdatum des Plans.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieplan.html#s-CarePlan.activity:MedikamentoesTherapie\&quot;&gt;CarePlan.activity:MedikamentoesTherapie&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..*&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.carePlanRd.therapyRecommended&lt;/td&gt;&lt;td&gt;true, sobald der Plan mindestens eine Therapieempfehlung mit MVGenomSeq-Therapiestrategie enthält. Empfehlungen zu Beratung, Reevaluation oder Versorgung tragen keine Strategie und zählen nicht.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieplan.html#s-CarePlan.activity:NichtMedikamentoesTherapie\&quot;&gt;CarePlan.activity:NichtMedikamentoesTherapie&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..*&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.carePlanRd.therapyRecommended&lt;/td&gt;&lt;td&gt;Nur Empfehlungen mit category:MVGenomSeqTherapieStrategie; siehe MedikamentoesTherapie.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieplan.html#s-CarePlan.activity:NichtMedikamentoesTherapie\&quot;&gt;CarePlan.activity:NichtMedikamentoesTherapie&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..*&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.carePlanRd.counsellingRecommended&lt;/td&gt;&lt;td&gt;true, wenn eine referenzierte Empfehlung code = SNOMED 79841006 Genetic counseling oder ein Unterkonzept trägt.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieplan.html#s-CarePlan.activity:NichtMedikamentoesTherapie\&quot;&gt;CarePlan.activity:NichtMedikamentoesTherapie&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..*&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.carePlanRd.reEvaluationRecommended&lt;/td&gt;&lt;td&gt;true, wenn eine referenzierte Empfehlung eine Reevaluation empfiehlt. SNOMED hat dafür kein spezifisches Konzept; Vorschlag SNOMED 386053000 Evaluation procedure mit code.text.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieplan.html#s-CarePlan.activity:NichtMedikamentoesTherapie\&quot;&gt;CarePlan.activity:NichtMedikamentoesTherapie&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..*&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.carePlanRd.clinicalManagementRecommended&lt;/td&gt;&lt;td&gt;true, wenn eine referenzierte Empfehlung eine Überweisung oder Anbindung empfiehlt, code = SNOMED 3457005 Patient referral oder ein Unterkonzept.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieplan.html#s-CarePlan.activity:Studieneinschlussempfehlung\&quot;&gt;CarePlan.activity:Studieneinschlussempfehlung&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..*&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.carePlanRd.studyRecommended&lt;/td&gt;&lt;td&gt;true, sobald der Plan eine Studieneinschlussempfehlung enthält.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 7 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieempfehlung.html\&quot;&gt;MII PR SE Therapieempfehlung Systemische Therapie&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-mii-lm-seltene-mvgenomseq.html\&quot;&gt;MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieempfehlung.html#s-MedicationRequest.id\&quot;&gt;MedicationRequest.id&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.recommendedTherapies.identifier&lt;/td&gt;&lt;td&gt;Beliebige stabile Kennung; die Ressourcen-Id genügt.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieempfehlung.html#s-MedicationRequest.category:MVGenomSeqTherapieTyp\&quot;&gt;MedicationRequest.category:MVGenomSeqTherapieTyp&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.recommendedTherapies.type&lt;/td&gt;&lt;td&gt;Codes über mii-cm-seltene-therapieempfehlung-to-mvgenomseq übersetzen.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieempfehlung.html#s-MedicationRequest.category:MVGenomSeqTherapieStrategie\&quot;&gt;MedicationRequest.category:MVGenomSeqTherapieStrategie&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.recommendedTherapies.strategy&lt;/td&gt;&lt;td&gt;Codes über mii-cm-seltene-therapieempfehlung-to-mvgenomseq übersetzen [gene-therapy = genetic].&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 8 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html\&quot;&gt;MII PR SE Therapieempfehlung Nicht-Medikamentös&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-mii-lm-seltene-mvgenomseq.html\&quot;&gt;MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html#s-ServiceRequest.id\&quot;&gt;ServiceRequest.id&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.recommendedTherapies.identifier&lt;/td&gt;&lt;td&gt;Nur Empfehlungen mit category:MVGenomSeqTherapieStrategie werden zu recommendedTherapies; Beratung, Reevaluation und Versorgung gehen in carePlanRd.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html#s-ServiceRequest.category:MVGenomSeqTherapieTyp\&quot;&gt;ServiceRequest.category:MVGenomSeqTherapieTyp&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.recommendedTherapies.type&lt;/td&gt;&lt;td&gt;Codes über mii-cm-seltene-therapieempfehlung-to-mvgenomseq übersetzen.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html#s-ServiceRequest.category:MVGenomSeqTherapieStrategie\&quot;&gt;ServiceRequest.category:MVGenomSeqTherapieStrategie&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.recommendedTherapies.strategy&lt;/td&gt;&lt;td&gt;Codes über mii-cm-seltene-therapieempfehlung-to-mvgenomseq übersetzen [early-detection = earlyDetection].&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.html#s-ServiceRequest.code.text\&quot;&gt;ServiceRequest.code.text&lt;/a&gt;&lt;/td&gt;&lt;td&gt;1..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#inexact\&quot; title=\&quot;inexact\&quot;&gt;maps loosely to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.recommendedTherapies.strategyOther&lt;/td&gt;&lt;td&gt;Nur bei strategy = other.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 9 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.html\&quot;&gt;MII PR SE Therapieempfehlung Kombinationstherapie&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-mii-lm-seltene-mvgenomseq.html\&quot;&gt;MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.html#s-RequestGroup.id\&quot;&gt;RequestGroup.id&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.recommendedTherapies.identifier&lt;/td&gt;&lt;td&gt;Die Kombination ist eine Empfehlung mit strategy = combination.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.html#s-RequestGroup.action.resource\&quot;&gt;RequestGroup.action.resource&lt;/a&gt;&lt;/td&gt;&lt;td&gt;1..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#inexact\&quot; title=\&quot;inexact\&quot;&gt;maps loosely to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.recommendedTherapies.strategyCombination&lt;/td&gt;&lt;td&gt;Freitext aus den referenzierten Einzelempfehlungen zusammensetzen.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 10 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html\&quot;&gt;MII PR SE Studieneinschluss Anfrage&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-mii-lm-seltene-mvgenomseq.html\&quot;&gt;MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html#s-ServiceRequest.id\&quot;&gt;ServiceRequest.id&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.recommendedStudies.identifier&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html#s-ServiceRequest.supportingInfo:Studie\&quot;&gt;ServiceRequest.supportingInfo:Studie&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..*&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.recommendedStudies.id&lt;/td&gt;&lt;td&gt;ResearchStudy.identifier der referenzierten Studie.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html#s-ServiceRequest.supportingInfo:Studie\&quot;&gt;ServiceRequest.supportingInfo:Studie&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..*&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.recommendedStudies.register&lt;/td&gt;&lt;td&gt;Aus dem identifier.system der Studie ableiten [NCT, DRKS, EU CT]; unbekannte Studie = yesButStudyIsUnknown.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.html#s-ServiceRequest.supportingInfo:Studie\&quot;&gt;ServiceRequest.supportingInfo:Studie&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0..*&lt;/td&gt;&lt;td&gt;todo&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\&quot; title=\&quot;relatedto\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;plan.recommendedStudies.name&lt;/td&gt;&lt;td&gt;ResearchStudy.title der referenzierten Studie.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#ConceptMap.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/spdx-license",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "CC-BY-4.0",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Creative Commons Attribution 4.0 International"
+          }
+        ]
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.url">url</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ConceptMap/mii-cm-seltene-to-mvgenomseq",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.version">version</a>" : "2027.0.0-ballot",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.name">name</a>" : "MII_CM_Seltene_To_MVGenomSeq",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.title">title</a>" : "MII CM Seltene Erkrankungen zu Modellvorhaben Genomsequenzierung (KDK)",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.status">status</a>" : "draft",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.experimental">experimental</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.date">date</a>" : "2026-11-26",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.publisher">publisher</a>" : "Medizininformatik Initiative",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Medizininformatik Initiative",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.medizininformatik-initiative.de/"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.description">description</a>" : "Zuordnung der Profile des Moduls Seltene Erkrankungen zu den Feldern des Klinischen Datenkranzes (KDK) Seltene Erkrankungen des Modellvorhabens Genomsequenzierung nach § 64e SGB V, BfArM-Schema v2.3 (Teile case, plan, followUp). Richtung MII-Profil zu KDK-Feld. metaData gehört zu den Modulen Person und Consent, molecular zum Modul Molekulargenetischer Befundbericht; beide sind hier nicht enthalten.",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:iso:std:iso:3166",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "DE",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Germany"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.purpose">purpose</a>" : "Erleichtert Datenintegrationszentren den Aufbau harmonisierbarer ETL-Strecken vom MII-Kerndatensatz zur KDK-Einreichung im Modellvorhaben Genomsequenzierung.",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.source_x_">sourceUri</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.target_x_">targetUri</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.sourceVersion">sourceVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">target</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.targetVersion">targetVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Observation.code.coding.code",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "HPO-Term",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.phenotypes.code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Phänotyp [Fall]",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Nur beobachtete Merkmale melden; als ausgeschlossen dokumentierte [component:status = Absent] gehören nicht in den KDK."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Observation.code.coding.version",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "HPO-Version",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.phenotypes.version",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Phänotyp-Version",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Im KDK Pflicht. Ohne Version im Quelldatum muss das DIZ die verwendete HPO-Version ergänzen."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Observation.code.coding.system",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "HPO-System",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.phenotypes.system",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Phänotyp-System",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Observation.code.coding.display",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "HPO-Anzeigetext",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.phenotypes.display",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Phänotyp-Anzeigetext",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Observation.note.text",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Anmerkung",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.phenotypes.text",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Klinische Beschreibung",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "inexact",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Freitext; nur übernehmen, wenn die Anmerkung den Phänotyp beschreibt."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Observation.code.coding.code",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "HPO-Term",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "followUp.followUpRds.phenotypes.code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Phänotyp [Verlauf]",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Verlaufsmeldung: Phänotypen zum Zeitpunkt followUpDate."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Observation.code.coding.version",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "HPO-Version",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "followUp.followUpRds.phenotypes.version",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Phänotyp-Version",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Observation.code.coding.system",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "HPO-System",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "followUp.followUpRds.phenotypes.system",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Phänotyp-System",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Observation.code.coding.display",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "HPO-Anzeigetext",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "followUp.followUpRds.phenotypes.display",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Phänotyp-Anzeigetext",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Observation.note.text",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Anmerkung",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "followUp.followUpRds.phenotypes.text",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Klinische Beschreibung",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "inexact",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Freitext; nur übernehmen, wenn die Anmerkung den Phänotyp beschreibt."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Observation.effective[x]",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Erhebungszeitpunkt",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "followUp.followUpRds.followUpDate",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Datum der Verlaufsmeldung",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Datum der Verlaufserhebung; bei mehreren Beobachtungen eines Termins deren gemeinsames Datum."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Observation.component:status.value[x]",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Status Present/Absent",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "followUp.followUpRds.phenotypes.change",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Veränderung",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Abgeleitet aus dem Vergleich zweier Erhebungen: neu beobachtet = newlyAdded, Present zu Absent = noLongerObserved, unverändert = unchanged. improved/degraded nur über component:severity ableitbar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.sourceVersion">sourceVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">target</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.targetVersion">targetVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Condition.code.coding:hpoCoding.code",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "HPO-Term",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.phenotypes.code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Phänotyp [Fall]",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Symptome mit HPO-Kodierung zählen als Phänotypen."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Condition.onset[x]:onsetDateTime",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Beginn",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.symptomOnsetDate",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Beginn der Symptome",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "wider",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Frühester Beginn über alle Symptome des Falls, auf JJJJ-MM gekürzt."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Condition.onset[x]:onsetPeriod.start",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Beginn [Zeitraum]",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.symptomOnsetDate",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Beginn der Symptome",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "wider",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Wie onsetDateTime; bei Zeitraum dessen Beginn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.sourceVersion">sourceVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">target</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.targetVersion">targetVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Condition.code.coding:orphanet",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "ORPHAcode",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.noMatchingCodeExists",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Kein passender Code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "true, wenn für die Erkrankung kein spezifischer ORPHAcode existiert und ein unspezifischer gesetzt wurde."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Condition.code.coding:icd10-gm",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "ICD-10-GM",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.diagnoses",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Diagnosen",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Im KDK Pflicht mit code, system, version."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Condition.code.coding:orphanet",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "ORPHAcode",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.diagnoses",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Diagnosen",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Im KDK Pflicht."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Condition.code.coding:alpha-id",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Alpha-ID",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.diagnoses",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Diagnosen",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Im KDK Pflicht. Slice aus dem Basisprofil Diagnose."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Condition.verificationStatus",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Verifikationsstatus",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "followUp.followUpRds.diagnosisEstablished",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Diagnose gesichert",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "confirmed = true, sonst false."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.sourceVersion">sourceVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">target</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.targetVersion">targetVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Condition.code.coding:orphanet",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "ORPHAcode",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.noMatchingCodeExists",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Kein passender Code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "true, wenn für die Erkrankung kein spezifischer ORPHAcode existiert und ein unspezifischer gesetzt wurde."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Condition.code.coding:icd10-gm",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "ICD-10-GM",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.diagnoses",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Diagnosen",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Im KDK Pflicht mit code, system, version."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Condition.code.coding:orphanet",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "ORPHAcode",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.diagnoses",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Diagnosen",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Im KDK Pflicht."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Condition.code.coding:alpha-id",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Alpha-ID",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.diagnoses",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Diagnosen",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Im KDK Pflicht. Slice aus dem Basisprofil Diagnose."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Condition.verificationStatus",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Verifikationsstatus",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "case.diagnosisRd.diagnosticAssessment",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Bewertung der genetischen Diagnostik",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "confirmed = confirmedGeneticDiagnosis, provisional oder differential = suspectedGeneticDiagnosis. partialGeneticDiagnosis und furtherGeneticDiagnosticRecommended sind aus dem Status nicht ableitbar."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "Condition.verificationStatus",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Verifikationsstatus",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "followUp.followUpRds.diagnosisEstablished",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Diagnose gesichert",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "confirmed = true, sonst false."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.sourceVersion">sourceVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">target</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.targetVersion">targetVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "ClinicalImpression.summary",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Zusammenfassung",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "followUp.followUpRds.diseaseProgression",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Krankheitsverlauf",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "inexact",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Freitext der Verlaufsbeurteilung."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.sourceVersion">sourceVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">target</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.targetVersion">targetVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "CarePlan.created",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Erstellungsdatum",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.carePlanRd.molecularBoardDecisionDate",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Datum der Fallkonferenz",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Das Modul führt das Datum des Beschlusses als Erstellungsdatum des Plans."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "CarePlan.activity:MedikamentoesTherapie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Medikamentöse Therapieempfehlung",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.carePlanRd.therapyRecommended",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Therapie empfohlen",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "true, sobald der Plan mindestens eine Therapieempfehlung mit MVGenomSeq-Therapiestrategie enthält. Empfehlungen zu Beratung, Reevaluation oder Versorgung tragen keine Strategie und zählen nicht."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "CarePlan.activity:NichtMedikamentoesTherapie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Nicht-medikamentöse Therapieempfehlung",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.carePlanRd.therapyRecommended",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Therapie empfohlen",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Nur Empfehlungen mit category:MVGenomSeqTherapieStrategie; siehe MedikamentoesTherapie."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "CarePlan.activity:NichtMedikamentoesTherapie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Nicht-medikamentöse Therapieempfehlung",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.carePlanRd.counsellingRecommended",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Humangenetische Beratung empfohlen",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "true, wenn eine referenzierte Empfehlung code = SNOMED 79841006 Genetic counseling oder ein Unterkonzept trägt."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "CarePlan.activity:NichtMedikamentoesTherapie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Nicht-medikamentöse Therapieempfehlung",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.carePlanRd.reEvaluationRecommended",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Reevaluation empfohlen",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "true, wenn eine referenzierte Empfehlung eine Reevaluation empfiehlt. SNOMED hat dafür kein spezifisches Konzept; Vorschlag SNOMED 386053000 Evaluation procedure mit code.text."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "CarePlan.activity:NichtMedikamentoesTherapie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Nicht-medikamentöse Therapieempfehlung",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.carePlanRd.clinicalManagementRecommended",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Klinisches Management empfohlen",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "true, wenn eine referenzierte Empfehlung eine Überweisung oder Anbindung empfiehlt, code = SNOMED 3457005 Patient referral oder ein Unterkonzept."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "CarePlan.activity:Studieneinschlussempfehlung",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Studieneinschlussempfehlung",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.carePlanRd.studyRecommended",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Studie empfohlen",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "true, sobald der Plan eine Studieneinschlussempfehlung enthält."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.sourceVersion">sourceVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">target</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.targetVersion">targetVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "MedicationRequest.id",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Ressourcen-Id",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.recommendedTherapies.identifier",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Kennung der Empfehlung",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Beliebige stabile Kennung; die Ressourcen-Id genügt."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "MedicationRequest.category:MVGenomSeqTherapieTyp",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Therapietyp",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.recommendedTherapies.type",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Therapietyp",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Codes über mii-cm-seltene-therapieempfehlung-to-mvgenomseq übersetzen."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "MedicationRequest.category:MVGenomSeqTherapieStrategie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Therapiestrategie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.recommendedTherapies.strategy",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Therapiestrategie",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Codes über mii-cm-seltene-therapieempfehlung-to-mvgenomseq übersetzen [gene-therapy = genetic]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.sourceVersion">sourceVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">target</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.targetVersion">targetVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "ServiceRequest.id",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Ressourcen-Id",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.recommendedTherapies.identifier",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Kennung der Empfehlung",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Nur Empfehlungen mit category:MVGenomSeqTherapieStrategie werden zu recommendedTherapies; Beratung, Reevaluation und Versorgung gehen in carePlanRd."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "ServiceRequest.category:MVGenomSeqTherapieTyp",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Therapietyp",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.recommendedTherapies.type",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Therapietyp",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Codes über mii-cm-seltene-therapieempfehlung-to-mvgenomseq übersetzen."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "ServiceRequest.category:MVGenomSeqTherapieStrategie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Therapiestrategie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.recommendedTherapies.strategy",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Therapiestrategie",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Codes über mii-cm-seltene-therapieempfehlung-to-mvgenomseq übersetzen [early-detection = earlyDetection]."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "ServiceRequest.code.text",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Freitext der Maßnahme",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.recommendedTherapies.strategyOther",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Freitext Strategie",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "inexact",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Nur bei strategy = other."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-kombination",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.sourceVersion">sourceVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">target</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.targetVersion">targetVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "RequestGroup.id",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Ressourcen-Id",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.recommendedTherapies.identifier",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Kennung der Empfehlung",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Die Kombination ist eine Empfehlung mit strategy = combination."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "RequestGroup.action.resource",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Bestandteile der Kombination",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.recommendedTherapies.strategyCombination",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Freitext Kombination",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "inexact",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Freitext aus den referenzierten Einzelempfehlungen zusammensetzen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.sourceVersion">sourceVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">target</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.targetVersion">targetVersion</a>" : "2027.0.0-ballot",
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "ServiceRequest.id",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Ressourcen-Id",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.recommendedStudies.identifier",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Kennung der Empfehlung",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "ServiceRequest.supportingInfo:Studie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Referenzierte Studie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.recommendedStudies.id",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Kennung der Studie im Register",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "ResearchStudy.identifier der referenzierten Studie."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "ServiceRequest.supportingInfo:Studie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Referenzierte Studie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.recommendedStudies.register",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Studienregister",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Aus dem identifier.system der Studie ableiten [NCT, DRKS, EU CT]; unbekannte Studie = yesButStudyIsUnknown."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "ServiceRequest.supportingInfo:Studie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Referenzierte Studie",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "plan.recommendedStudies.name",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "Name der Studie",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "relatedto",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "ResearchStudy.title der referenzierten Studie."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Thu, Nov 26, 2026 18:07+0000">2026-11-26</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/en/legal-notice">Legal notice</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

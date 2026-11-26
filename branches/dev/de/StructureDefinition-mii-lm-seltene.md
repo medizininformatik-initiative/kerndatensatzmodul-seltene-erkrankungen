@@ -180,7 +180,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
   "title" : "MII LM SE",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-26T17:48:40+00:00",
+  "date" : "2026-11-26T18:07:27+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -513,7 +513,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       "id" : "Seltene.koerperlicheUntersuchung.koerpergewicht.koerpergewicht",
       "path" : "Seltene.koerperlicheUntersuchung.koerpergewicht.koerpergewicht",
       "short" : "Körpergewicht in kg",
-      "definition" : "Körpergewicht des SE-Patienten in kg (aus MII ICU Modul).",
+      "definition" : "Körpergewicht des SE-Patienten in kg (nach ISiK Vitalparameter, ISiKKoerpergewicht).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -546,7 +546,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-selte
       "id" : "Seltene.koerperlicheUntersuchung.koerpergroesse.koerpergroesse",
       "path" : "Seltene.koerperlicheUntersuchung.koerpergroesse.koerpergroesse",
       "short" : "Körpergröße in cm",
-      "definition" : "Körpergröße des SE-Patienten in cm (aus MII ICU Modul).",
+      "definition" : "Körpergröße des SE-Patienten in cm (nach ISiK Vitalparameter, ISiKKoerpergroesse).",
       "min" : 0,
       "max" : "1",
       "type" : [{

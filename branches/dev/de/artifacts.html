@@ -311,10 +311,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#6">Terminologie: CodeSysteme</a>
       </li>
       <li>
-         <a href="#7">Beispiel: Beispielinstanzen</a>
+         <a href="#7">Terminologie: ConceptMaps</a>
       </li>
       <li>
-         <a href="#8">Sonstige</a>
+         <a href="#8">Beispiel: Beispielinstanzen</a>
+      </li>
+      <li>
+         <a href="#9">Sonstige</a>
       </li>
    </ul>
 </div>
@@ -348,6 +351,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-lm-seltene-mvgenomseq.html"
+                  title="StructureDefinition/mii-lm-seltene-mvgenomseq">
+                  <span title="StructureDefinition/mii-lm-seltene-mvgenomseq">MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen
+</span>
+               </a>
+            </td>
+            <td>
+<p>Klinischer Datenkranz (KDK) Seltene Erkrankungen des Modellvorhabens Genomsequenzierung nach § 64e SGB V (BfArM, Schema v2.3), Teile case, plan und followUp. Zielstruktur der ConceptMap mii-cm-seltene-to-mvgenomseq; Feldnamen quelltreu aus dem JSON-Schema.</p>
+</td>
+         </tr>
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-mii-lm-seltene.html"
@@ -1159,6 +1174,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </tbody>
    </table>
    <a name="7"> </a>
+   <h3>Terminologie: ConceptMaps </h3>
+    <p>Diese definieren Transformationen zur Konvertierung zwischen Codes durch Systeme, die mit diesem Implementierungsleitfaden konform sind.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mii-cm-seltene-to-mvgenomseq.html"
+                  title="ConceptMap/mii-cm-seltene-to-mvgenomseq">
+                  <span title="ConceptMap/mii-cm-seltene-to-mvgenomseq">MII CM Seltene Erkrankungen zu Modellvorhaben Genomsequenzierung (KDK)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zuordnung der Profile des Moduls Seltene Erkrankungen zu den Feldern des Klinischen Datenkranzes (KDK) Seltene Erkrankungen des Modellvorhabens Genomsequenzierung nach § 64e SGB V, BfArM-Schema v2.3 (Teile case, plan, followUp). Richtung MII-Profil zu KDK-Feld. metaData gehört zu den Modulen Person und Consent, molecular zum Modul Molekulargenetischer Befundbericht; beide sind hier nicht enthalten.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mii-cm-seltene-therapieempfehlung-to-mvgenomseq.html"
+                  title="ConceptMap/mii-cm-seltene-therapieempfehlung-to-mvgenomseq">
+                  <span title="ConceptMap/mii-cm-seltene-therapieempfehlung-to-mvgenomseq">MII CM Seltene Therapieempfehlung zu MVGenomSeq-KDK-Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Übersetzt die Codes der MVGenomSeq-Kategorien an den Therapieempfehlungen (Therapietyp, Therapiestrategie) in die Wertelisten des KDK Seltene Erkrankungen, Schema v2.3 (RareDiseasesPlan.recommendedTherapies.type und .strategy). Das Modul führt die Codes in kebab-case, der KDK in camelCase; gene-therapy heißt im KDK genetic.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="8"> </a>
    <h3>Beispiel: Beispielinstanzen </h3>
     <p>Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Systemen produziert und konsumiert werden, die mit diesem Implementierungsleitfaden konform sind.</p>
 <table class="grid">
@@ -2702,7 +2749,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="8"> </a>
+   <a name="9"> </a>
    <h3>Sonstige </h3>
     <p>Dies sind Ressourcen, die in diesem Implementierungsleitfaden verwendet werden, die in keine der anderen Kategorien passen.</p>
 <table class="grid">
@@ -2743,7 +2790,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Nov 26, 2026 17:48+0000">2026-11-26</span>
+          Erstellt <span title="Thu, Nov 26, 2026 18:07+0000">2026-11-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

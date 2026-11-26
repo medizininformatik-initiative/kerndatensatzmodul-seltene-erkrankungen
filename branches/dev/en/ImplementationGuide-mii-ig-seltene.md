@@ -59,7 +59,7 @@ This publication includes IP covered under the following statements.
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [ERNEuroNMDRegistry](Library-mii-exa-seltene-register-katalog-euro-nmd.md), [MII_CPS_Seltene_CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md)... Show 65 more, [MII_CS_Seltene_Empfehlung_StatusBegruendung](CodeSystem-mii-cs-seltene-empfehlung-status-begruendung.md), [MII_CS_Seltene_HPO_ChangeStatus](CodeSystem-mii-cs-seltene-hpo-change-status.md), [MII_CS_Seltene_ICFBeurteilungsmerkmal](CodeSystem-mii-cs-seltene-icf-beurteilungsmerkmal.md), [MII_CS_Seltene_NARSE_Therapietyp](CodeSystem-mii-cs-seltene-narse-therapietyp.md), [MII_CS_Seltene_TherapieempfehlungStrategie](CodeSystem-mii-cs-seltene-therapieempfehlung-strategie.md), [MII_CS_Seltene_TherapieempfehlungTyp](CodeSystem-mii-cs-seltene-therapieempfehlung-typ.md), [MII_EX_Seltene_Empfehlung_Prioritaet](StructureDefinition-mii-ex-seltene-empfehlung-prioritaet.md), [MII_EX_Seltene_Empfehlung_Publikation](StructureDefinition-mii-ex-seltene-empfehlung-publikation.md), [MII_EX_Seltene_Penetrance](StructureDefinition-mii-ex-seltene-penetrance.md), [MII_EX_Seltene_Register](StructureDefinition-mii-ex-seltene-register.md), [MII_EX_Seltene_VonSEBetroffen](StructureDefinition-mii-ex-seltene-von-se-betroffen.md), [MII_IG_Seltene_Erkrankungen](index.md), [MII_LM_Seltene](StructureDefinition-mii-lm-seltene.md), [MII_PR_Seltene_Blutgruppe](StructureDefinition-mii-pr-seltene-blutgruppe.md), [MII_PR_Seltene_Bodymassindex](StructureDefinition-mii-pr-seltene-bodymassindex.md), [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_ClinicalImpression](StructureDefinition-mii-pr-seltene-clinical-impression.md), [MII_PR_Seltene_Consanguinity](StructureDefinition-mii-pr-seltene-consanguinity.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md), [MII_PR_Seltene_Geburtsgewicht](StructureDefinition-mii-pr-seltene-geburtsgewicht.md), [MII_PR_Seltene_Geburtslaenge](StructureDefinition-mii-pr-seltene-geburtslaenge.md), [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md), [MII_PR_Seltene_Gestationsalter](StructureDefinition-mii-pr-seltene-gestationsalter.md), [MII_PR_Seltene_HPO_Assessment](StructureDefinition-mii-pr-seltene-hpo-assessment.md), [MII_PR_Seltene_Hueftumfang](StructureDefinition-mii-pr-seltene-hueftumfang.md), [MII_PR_Seltene_ICFAssessment](StructureDefinition-mii-pr-seltene-icf-assessment.md), [MII_PR_Seltene_Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md), [MII_PR_Seltene_Registerteilnahme](StructureDefinition-mii-pr-seltene-registerteilnahme.md), [MII_PR_Seltene_Studieneinschluss_Anfrage](StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.md), [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md), [MII_PR_Seltene_Taillenumfang](StructureDefinition-mii-pr-seltene-taillenumfang.md), [MII_PR_Seltene_TherapieDurchgefuehrt](StructureDefinition-mii-pr-seltene-therapie-durchgefuehrt.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md), [MII_PR_Seltene_Therapieempfehlung_Kombination](StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.md), [MII_PR_Seltene_Therapieplan](StructureDefinition-mii-pr-seltene-therapieplan.md), [MII_VS_Seltene_Blutgruppe](ValueSet-mii-vs-seltene-blutgruppe.md), [MII_VS_Seltene_ClinicalDiagnosisCategory](ValueSet-mii-vs-seltene-clinical-diagnosis-category.md), [MII_VS_Seltene_Consanguinity](ValueSet-mii-vs-seltene-consanguinity.md), [MII_VS_Seltene_Empfehlung_StatusBegruendung](ValueSet-mii-vs-seltene-empfehlung-status-begruendung.md), [MII_VS_Seltene_GeneticBasis](ValueSet-mii-vs-seltene-genetic-basis.md), [MII_VS_Seltene_HPOAgeOfOnset](ValueSet-mii-vs-seltene-hpo-age-of-onset.md), [MII_VS_Seltene_HPOInheritancePattern](ValueSet-mii-vs-seltene-hpo-inheritance-pattern.md), [MII_VS_Seltene_HPOPhenotypicObservationCodes](ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.md), [MII_VS_Seltene_HPOPresenceStatus](ValueSet-mii-vs-seltene-hpo-presence-status.md), [MII_VS_Seltene_HPOSeverity](ValueSet-mii-vs-seltene-hpo-severity.md), [MII_VS_Seltene_HPO_ChangeStatus](ValueSet-mii-vs-seltene-hpo-change-status.md), [MII_VS_Seltene_ICF](ValueSet-mii-vs-seltene-icf.md), [MII_VS_Seltene_ICFBeurteilungsmerkmal](ValueSet-mii-vs-seltene-icf-beurteilungsmerkmal.md), [MII_VS_Seltene_NARSE_Therapietyp](ValueSet-mii-vs-seltene-narse-therapietyp.md), [MII_VS_Seltene_NBS_Acylcarnitine_DBS](ValueSet-mii-vs-seltene-nbs-acylcarnitine-dbs.md), [MII_VS_Seltene_NBS_AminoAcid_DBS](ValueSet-mii-vs-seltene-nbs-aminoacid-dbs.md), [MII_VS_Seltene_NBS_DBS_All](ValueSet-mii-vs-seltene-nbs-dbs-all.md), [MII_VS_Seltene_NBS_EnzymeActivity_DBS](ValueSet-mii-vs-seltene-nbs-enzyme-activity-dbs.md), [MII_VS_Seltene_NBS_Hemoglobin_DBS](ValueSet-mii-vs-seltene-nbs-hemoglobin-dbs.md), [MII_VS_Seltene_NBS_Ratio_DBS](ValueSet-mii-vs-seltene-nbs-ratio-dbs.md), [MII_VS_Seltene_NBS_TargetAnalyte](ValueSet-mii-vs-seltene-nbs-target-analyte.md), [MII_VS_Seltene_Penetrance](ValueSet-mii-vs-seltene-penetrance.md), [MII_VS_Seltene_Symptom_ChangeStatus_Combined](ValueSet-mii-vs-seltene-symptom-change-status-combined.md), [MII_VS_Seltene_SyndromeCategory](ValueSet-mii-vs-seltene-syndrome-category.md), [MII_VS_Seltene_TherapieempfehlungStrategie](ValueSet-mii-vs-seltene-therapieempfehlung-strategie.md), [MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes](ValueSet-mii-vs-seltene-therapieempfehlung-strategie-medikamentoes.md), [MII_VS_Seltene_TherapieempfehlungStrategieNichtMedikamentoes](ValueSet-mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes.md), [MII_VS_Seltene_TherapieempfehlungTyp](ValueSet-mii-vs-seltene-therapieempfehlung-typ.md) and [MII_VS_Seltene_VonSEBetroffen](ValueSet-mii-vs-seltene-von-se-betroffen.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [ERNEuroNMDRegistry](Library-mii-exa-seltene-register-katalog-euro-nmd.md), [MII_CM_Seltene_Therapieempfehlung_To_MVGenomSeq](ConceptMap-mii-cm-seltene-therapieempfehlung-to-mvgenomseq.md)... Show 68 more, [MII_CM_Seltene_To_MVGenomSeq](ConceptMap-mii-cm-seltene-to-mvgenomseq.md), [MII_CPS_Seltene_CapabilityStatement](CapabilityStatement-mii-cps-seltene-capabilitystatement.md), [MII_CS_Seltene_Empfehlung_StatusBegruendung](CodeSystem-mii-cs-seltene-empfehlung-status-begruendung.md), [MII_CS_Seltene_HPO_ChangeStatus](CodeSystem-mii-cs-seltene-hpo-change-status.md), [MII_CS_Seltene_ICFBeurteilungsmerkmal](CodeSystem-mii-cs-seltene-icf-beurteilungsmerkmal.md), [MII_CS_Seltene_NARSE_Therapietyp](CodeSystem-mii-cs-seltene-narse-therapietyp.md), [MII_CS_Seltene_TherapieempfehlungStrategie](CodeSystem-mii-cs-seltene-therapieempfehlung-strategie.md), [MII_CS_Seltene_TherapieempfehlungTyp](CodeSystem-mii-cs-seltene-therapieempfehlung-typ.md), [MII_EX_Seltene_Empfehlung_Prioritaet](StructureDefinition-mii-ex-seltene-empfehlung-prioritaet.md), [MII_EX_Seltene_Empfehlung_Publikation](StructureDefinition-mii-ex-seltene-empfehlung-publikation.md), [MII_EX_Seltene_Penetrance](StructureDefinition-mii-ex-seltene-penetrance.md), [MII_EX_Seltene_Register](StructureDefinition-mii-ex-seltene-register.md), [MII_EX_Seltene_VonSEBetroffen](StructureDefinition-mii-ex-seltene-von-se-betroffen.md), [MII_IG_Seltene_Erkrankungen](index.md), [MII_LM_Seltene](StructureDefinition-mii-lm-seltene.md), [MII_LM_Seltene_MVGenomSeq](StructureDefinition-mii-lm-seltene-mvgenomseq.md), [MII_PR_Seltene_Blutgruppe](StructureDefinition-mii-pr-seltene-blutgruppe.md), [MII_PR_Seltene_Bodymassindex](StructureDefinition-mii-pr-seltene-bodymassindex.md), [MII_PR_Seltene_ClinicalDiagnosis](StructureDefinition-mii-pr-seltene-clinical-diagnosis.md), [MII_PR_Seltene_ClinicalImpression](StructureDefinition-mii-pr-seltene-clinical-impression.md), [MII_PR_Seltene_Consanguinity](StructureDefinition-mii-pr-seltene-consanguinity.md), [MII_PR_Seltene_Familienanamnese](StructureDefinition-mii-pr-seltene-familienanamnese.md), [MII_PR_Seltene_Geburtsgewicht](StructureDefinition-mii-pr-seltene-geburtsgewicht.md), [MII_PR_Seltene_Geburtslaenge](StructureDefinition-mii-pr-seltene-geburtslaenge.md), [MII_PR_Seltene_GeneticDiagnosis](StructureDefinition-mii-pr-seltene-genetic-diagnosis.md), [MII_PR_Seltene_Gestationsalter](StructureDefinition-mii-pr-seltene-gestationsalter.md), [MII_PR_Seltene_HPO_Assessment](StructureDefinition-mii-pr-seltene-hpo-assessment.md), [MII_PR_Seltene_Hueftumfang](StructureDefinition-mii-pr-seltene-hueftumfang.md), [MII_PR_Seltene_ICFAssessment](StructureDefinition-mii-pr-seltene-icf-assessment.md), [MII_PR_Seltene_Kopfumfang](StructureDefinition-mii-pr-seltene-kopfumfang.md), [MII_PR_Seltene_Registerteilnahme](StructureDefinition-mii-pr-seltene-registerteilnahme.md), [MII_PR_Seltene_Studieneinschluss_Anfrage](StructureDefinition-mii-pr-seltene-studieneinschluss-anfrage.md), [MII_PR_Seltene_Symptom_Condition](StructureDefinition-mii-pr-seltene-symptom-condition.md), [MII_PR_Seltene_Taillenumfang](StructureDefinition-mii-pr-seltene-taillenumfang.md), [MII_PR_Seltene_TherapieDurchgefuehrt](StructureDefinition-mii-pr-seltene-therapie-durchgefuehrt.md), [MII_PR_Seltene_Therapieempfehlung](StructureDefinition-mii-pr-seltene-therapieempfehlung.md), [MII_PR_Seltene_TherapieempfehlungNichtMedikamentoes](StructureDefinition-mii-pr-seltene-therapieempfehlung-nicht-medikamentoes.md), [MII_PR_Seltene_Therapieempfehlung_Kombination](StructureDefinition-mii-pr-seltene-therapieempfehlung-kombination.md), [MII_PR_Seltene_Therapieplan](StructureDefinition-mii-pr-seltene-therapieplan.md), [MII_VS_Seltene_Blutgruppe](ValueSet-mii-vs-seltene-blutgruppe.md), [MII_VS_Seltene_ClinicalDiagnosisCategory](ValueSet-mii-vs-seltene-clinical-diagnosis-category.md), [MII_VS_Seltene_Consanguinity](ValueSet-mii-vs-seltene-consanguinity.md), [MII_VS_Seltene_Empfehlung_StatusBegruendung](ValueSet-mii-vs-seltene-empfehlung-status-begruendung.md), [MII_VS_Seltene_GeneticBasis](ValueSet-mii-vs-seltene-genetic-basis.md), [MII_VS_Seltene_HPOAgeOfOnset](ValueSet-mii-vs-seltene-hpo-age-of-onset.md), [MII_VS_Seltene_HPOInheritancePattern](ValueSet-mii-vs-seltene-hpo-inheritance-pattern.md), [MII_VS_Seltene_HPOPhenotypicObservationCodes](ValueSet-mii-vs-seltene-hpo-phenotypic-observation-codes.md), [MII_VS_Seltene_HPOPresenceStatus](ValueSet-mii-vs-seltene-hpo-presence-status.md), [MII_VS_Seltene_HPOSeverity](ValueSet-mii-vs-seltene-hpo-severity.md), [MII_VS_Seltene_HPO_ChangeStatus](ValueSet-mii-vs-seltene-hpo-change-status.md), [MII_VS_Seltene_ICF](ValueSet-mii-vs-seltene-icf.md), [MII_VS_Seltene_ICFBeurteilungsmerkmal](ValueSet-mii-vs-seltene-icf-beurteilungsmerkmal.md), [MII_VS_Seltene_NARSE_Therapietyp](ValueSet-mii-vs-seltene-narse-therapietyp.md), [MII_VS_Seltene_NBS_Acylcarnitine_DBS](ValueSet-mii-vs-seltene-nbs-acylcarnitine-dbs.md), [MII_VS_Seltene_NBS_AminoAcid_DBS](ValueSet-mii-vs-seltene-nbs-aminoacid-dbs.md), [MII_VS_Seltene_NBS_DBS_All](ValueSet-mii-vs-seltene-nbs-dbs-all.md), [MII_VS_Seltene_NBS_EnzymeActivity_DBS](ValueSet-mii-vs-seltene-nbs-enzyme-activity-dbs.md), [MII_VS_Seltene_NBS_Hemoglobin_DBS](ValueSet-mii-vs-seltene-nbs-hemoglobin-dbs.md), [MII_VS_Seltene_NBS_Ratio_DBS](ValueSet-mii-vs-seltene-nbs-ratio-dbs.md), [MII_VS_Seltene_NBS_TargetAnalyte](ValueSet-mii-vs-seltene-nbs-target-analyte.md), [MII_VS_Seltene_Penetrance](ValueSet-mii-vs-seltene-penetrance.md), [MII_VS_Seltene_Symptom_ChangeStatus_Combined](ValueSet-mii-vs-seltene-symptom-change-status-combined.md), [MII_VS_Seltene_SyndromeCategory](ValueSet-mii-vs-seltene-syndrome-category.md), [MII_VS_Seltene_TherapieempfehlungStrategie](ValueSet-mii-vs-seltene-therapieempfehlung-strategie.md), [MII_VS_Seltene_TherapieempfehlungStrategieMedikamentoes](ValueSet-mii-vs-seltene-therapieempfehlung-strategie-medikamentoes.md), [MII_VS_Seltene_TherapieempfehlungStrategieNichtMedikamentoes](ValueSet-mii-vs-seltene-therapieempfehlung-strategie-nicht-medikamentoes.md), [MII_VS_Seltene_TherapieempfehlungTyp](ValueSet-mii-vs-seltene-therapieempfehlung-typ.md) and [MII_VS_Seltene_VonSEBetroffen](ValueSet-mii-vs-seltene-von-se-betroffen.md)
 
 
 * Publications of the World Health Organization enjoy copyright protection in accordance with the provisions of Protocol 2 of the Universal Copyright Convention. All rights reserved.
@@ -410,6 +410,17 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       {
         "url" : "value",
         "valueString" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -926,6 +937,17 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       {
         "url" : "value",
         "valueString" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -2909,6 +2931,38 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-mii-cm-seltene-to-mvgenomseq.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mii-cm-seltene-to-mvgenomseq"
+      },
+      "name" : "MII CM Seltene Erkrankungen zu Modellvorhaben Genomsequenzierung (KDK)",
+      "description" : "Zuordnung der Profile des Moduls Seltene Erkrankungen zu den Feldern des Klinischen Datenkranzes (KDK) Seltene Erkrankungen des Modellvorhabens Genomsequenzierung nach § 64e SGB V, BfArM-Schema v2.3 (Teile case, plan, followUp). Richtung MII-Profil zu KDK-Feld. metaData gehört zu den Modulen Person und Consent, molecular zum Modul Molekulargenetischer Befundbericht; beide sind hier nicht enthalten.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-mii-cm-seltene-therapieempfehlung-to-mvgenomseq.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mii-cm-seltene-therapieempfehlung-to-mvgenomseq"
+      },
+      "name" : "MII CM Seltene Therapieempfehlung zu MVGenomSeq-KDK-Codes",
+      "description" : "Übersetzt die Codes der MVGenomSeq-Kategorien an den Therapieempfehlungen (Therapietyp, Therapiestrategie) in die Wertelisten des KDK Seltene Erkrankungen, Schema v2.3 (RareDiseasesPlan.recommendedTherapies.type und .strategy). Das Modul führt die Codes in kebab-case, der KDK in camelCase; gene-therapy heißt im KDK genetic.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
       },
       {
@@ -3129,6 +3183,22 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       "name" : "MII Example SE Symptom Condition",
       "description" : "Example of a symptom condition in the context of rare diseases using HPO codes",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-mii-lm-seltene-mvgenomseq.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/mii-lm-seltene-mvgenomseq"
+      },
+      "name" : "MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen",
+      "description" : "Klinischer Datenkranz (KDK) Seltene Erkrankungen des Modellvorhabens Genomsequenzierung nach § 64e SGB V (BfArM, Schema v2.3), Teile case, plan und followUp. Zielstruktur der ConceptMap mii-cm-seltene-to-mvgenomseq; Feldnamen quelltreu aus dem JSON-Schema.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -4775,7 +4845,16 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
         },
-        "generation" : "markdown"
+        "generation" : "markdown",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "mapping-mvgenomseq.html"
+          }],
+          "nameUrl" : "mapping-mvgenomseq.html",
+          "title" : "Mapping Genome Sequencing Model Project (KDK)",
+          "generation" : "markdown"
+        }]
       },
       {
         "extension" : [{

@@ -13,6 +13,8 @@ Das zugehörige Logical Model ist in der Artefakt-Übersicht abrufbar (siehe [Ar
 
 > **Written during migration - review before release.** Das Logical Model des Moduls ist derzeit nicht Teil des Builds (Quelle: `disabled/mii-lm-seltene.fsh.disabled`); die Datensatzbeschreibung oben ist maßgeblich.
 
+Die Zuordnung des Klinischen Datenkranzes (KDK) des Modellvorhabens Genomsequenzierung zu den Profilen dieses Moduls hat eine eigene Seite: [Mapping Modellvorhaben Genomsequenzierung](mapping-mvgenomseq.md).
+
 Die folgende Tabelle wird aus dem publizierten Logical Model (`mii-lm-seltene`) erzeugt und listet jedes Datenelement mit Kardinalität, Typ und Beschreibung. Die Einrückung bildet die Verschachtelung ab.
 
 | | | | |
@@ -43,10 +45,10 @@ Die folgende Tabelle wird aus dem publizierten Logical Model (`mii-lm-seltene`) 
 |     `methodeDiagnosestellung` | 0..* | code | Gibt an, welche Methode zur Diagnosestellung verwendet wurde. |
 | `koerperlicheUntersuchung` | 0..* | BackboneElement | Körperliche Untersuchung |
 |     `koerpergewicht` | 0..* | BackboneElement | Körpergewicht |
-|         `koerpergewicht` | 0..1 | decimal | Körpergewicht des SE-Patienten in kg (aus MII ICU Modul). |
+|         `koerpergewicht` | 0..1 | decimal | Körpergewicht des SE-Patienten in kg (nach ISiK Vitalparameter, ISiKKoerpergewicht). |
 |         `datumKoerpergewicht` | 0..1 | dateTime | Datum der Körpergewichtsmessung. |
 |     `koerpergroesse` | 0..* | BackboneElement | Körpergröße |
-|         `koerpergroesse` | 0..1 | decimal | Körpergröße des SE-Patienten in cm (aus MII ICU Modul). |
+|         `koerpergroesse` | 0..1 | decimal | Körpergröße des SE-Patienten in cm (nach ISiK Vitalparameter, ISiKKoerpergroesse). |
 |         `datumKoerpergroesse` | 0..1 | dateTime | Datum der Körpergrößenmessung. |
 |     `bmi` | 0..* | BackboneElement | BMI |
 |         `bmi` | 0..1 | decimal | BMI des SE-Patienten. |

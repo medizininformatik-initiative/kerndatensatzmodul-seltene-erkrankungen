@@ -292,17 +292,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#version-202700-ballotrc1" id="markdown-toc-version-202700-ballotrc1">Version 2027.0.0-ballot.rc1</a>    <ul>
-      <li><a href="#neue-funktionen" id="markdown-toc-neue-funktionen">Neue Funktionen</a></li>
+  <li><a href="#ballot-auflösung-nach-202700-ballotrc1-unveröffentlicht" id="markdown-toc-ballot-auflösung-nach-202700-ballotrc1-unveröffentlicht">Ballot-Auflösung (nach 2027.0.0-ballot.rc1, unveröffentlicht)</a>    <ul>
       <li><a href="#breaking-changes" id="markdown-toc-breaking-changes">Breaking Changes</a></li>
+      <li><a href="#neue-funktionen" id="markdown-toc-neue-funktionen">Neue Funktionen</a></li>
+      <li><a href="#änderungen" id="markdown-toc-änderungen">Änderungen</a></li>
       <li><a href="#fehlerbehebungen" id="markdown-toc-fehlerbehebungen">Fehlerbehebungen</a></li>
+    </ul>
+  </li>
+  <li><a href="#version-202700-ballotrc1" id="markdown-toc-version-202700-ballotrc1">Version 2027.0.0-ballot.rc1</a>    <ul>
+      <li><a href="#neue-funktionen-1" id="markdown-toc-neue-funktionen-1">Neue Funktionen</a></li>
+      <li><a href="#breaking-changes-1" id="markdown-toc-breaking-changes-1">Breaking Changes</a></li>
+      <li><a href="#fehlerbehebungen-1" id="markdown-toc-fehlerbehebungen-1">Fehlerbehebungen</a></li>
       <li><a href="#dokumentation" id="markdown-toc-dokumentation">Dokumentation</a></li>
       <li><a href="#governance" id="markdown-toc-governance">Governance</a></li>
     </ul>
   </li>
   <li><a href="#version-202601-patch-release" id="markdown-toc-version-202601-patch-release">Version 2026.0.1 (Patch-Release)</a>    <ul>
       <li><a href="#abhängigkeiten" id="markdown-toc-abhängigkeiten">Abhängigkeiten</a></li>
-      <li><a href="#fehlerbehebungen-1" id="markdown-toc-fehlerbehebungen-1">Fehlerbehebungen</a></li>
+      <li><a href="#fehlerbehebungen-2" id="markdown-toc-fehlerbehebungen-2">Fehlerbehebungen</a></li>
       <li><a href="#cicd-und-tooling" id="markdown-toc-cicd-und-tooling">CI/CD und Tooling</a></li>
     </ul>
   </li>
@@ -311,9 +318,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </ul>
   </li>
   <li><a href="#änderungen-version-v202600-rc1-release-candidate-1" id="markdown-toc-änderungen-version-v202600-rc1-release-candidate-1">Änderungen Version v2026.0.0-rc.1 (Release Candidate 1)</a>    <ul>
-      <li><a href="#neue-funktionen-1" id="markdown-toc-neue-funktionen-1">Neue Funktionen</a></li>
+      <li><a href="#neue-funktionen-2" id="markdown-toc-neue-funktionen-2">Neue Funktionen</a></li>
       <li><a href="#dokumentationsverbesserungen" id="markdown-toc-dokumentationsverbesserungen">Dokumentationsverbesserungen</a></li>
-      <li><a href="#fehlerbehebungen-2" id="markdown-toc-fehlerbehebungen-2">Fehlerbehebungen</a></li>
+      <li><a href="#fehlerbehebungen-3" id="markdown-toc-fehlerbehebungen-3">Fehlerbehebungen</a></li>
       <li><a href="#validierung-und-qualitätsverbesserungen-aus-ballot-feedback" id="markdown-toc-validierung-und-qualitätsverbesserungen-aus-ballot-feedback">Validierung und Qualitätsverbesserungen (aus Ballot-Feedback)</a></li>
     </ul>
   </li>
@@ -325,9 +332,39 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="version-202700-ballotrc1">Version 2027.0.0-ballot.rc1</h2>
+<h2 id="ballot-auflösung-nach-202700-ballotrc1-unveröffentlicht">Ballot-Auflösung (nach 2027.0.0-ballot.rc1, unveröffentlicht)</h2>
+
+<h3 id="breaking-changes">Breaking Changes</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">change</code> <strong><code class="language-plaintext highlighter-rouge">mii-pr-seltene-symptom-condition</code> erbt jetzt vom Modul Symptom</strong> (<code class="language-plaintext highlighter-rouge">MII_PR_Symptom_Condition</code>, Paket <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.symptom</code> 2027.0.0-ballot) statt von <code class="language-plaintext highlighter-rouge">Condition</code>. Die Ableitung von <code class="language-plaintext highlighter-rouge">Condition</code> war im Juli 2026 bewusst gewählt (Issue #32), weil das Modul Symptom nur als Release Candidate vorlag. Inzwischen hat es denselben Ballot-Stand wie die übrigen Abhängigkeiten, und sein Condition-Profil trägt die fhir.de-Extension <code class="language-plaintext highlighter-rouge">lebensphase</code> an <code class="language-plaintext highlighter-rouge">onsetPeriod.start</code> und <code class="language-plaintext highlighter-rouge">onsetPeriod.end</code>, in einem Kontext, den die Extension zulässt. Die Lebensphase bei Symptombeginn hat damit einen kodierten Platz; vorher lief sie auf <code class="language-plaintext highlighter-rouge">onsetString</code>, Freitext ohne ValueSet. <code class="language-plaintext highlighter-rouge">string</code> entfällt in <code class="language-plaintext highlighter-rouge">onset[x]</code> und <code class="language-plaintext highlighter-rouge">abatement[x]</code>; alle eigenen Regeln (HPO-Bindung, Coding-Slices, HPO-Schweregrad) bleiben darüber bestehen. Das Beispiel <code class="language-plaintext highlighter-rouge">mii-exa-seltene-symptom-condition</code> zeigt eine <code class="language-plaintext highlighter-rouge">Period</code> mit Lebensphase</li>
+</ul>
 
 <h3 id="neue-funktionen">Neue Funktionen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>Mapping zum Modellvorhaben Genomsequenzierung (KDK Seltene Erkrankungen, BfArM-Schema v2.3)</strong>, nach dem Muster des Moduls Onkologie. Neu sind das Logical Model <code class="language-plaintext highlighter-rouge">mii-lm-seltene-mvgenomseq</code> (Teile <code class="language-plaintext highlighter-rouge">case</code>, <code class="language-plaintext highlighter-rouge">plan</code>, <code class="language-plaintext highlighter-rouge">followUp</code>, Feldnamen unverändert aus dem JSON-Schema), die ConceptMap <code class="language-plaintext highlighter-rouge">mii-cm-seltene-to-mvgenomseq</code> (Profilelement zu KDK-Feld, 10 Profile, 47 Zuordnungen) und die ConceptMap <code class="language-plaintext highlighter-rouge">mii-cm-seltene-therapieempfehlung-to-mvgenomseq</code> für die Therapie-Codes, die vom KDK abweichen (<code class="language-plaintext highlighter-rouge">gene-therapy</code> gegenüber <code class="language-plaintext highlighter-rouge">genetic</code>, kebab-case gegenüber camelCase). Die neue Seite <a href="mapping-mvgenomseq.html">Mapping Modellvorhaben Genomsequenzierung</a> zeigt Abdeckung, Zuordnungen und die KDK-Felder ohne Quelle, erzeugt von <code class="language-plaintext highlighter-rouge">scripts/generate-mvgenomseq-mapping.py</code>. <code class="language-plaintext highlighter-rouge">metaData</code> (Person, Consent) und <code class="language-plaintext highlighter-rouge">molecular</code> (Molekulargenetik) sind wie in der Onkologie nicht Gegenstand. Der auskommentierte Mapping-Block zum Modellvorhaben in <code class="language-plaintext highlighter-rouge">mii-lm-seltene</code> ist entfernt: Er beschrieb einen älteren Schemastand und mischte Felder der Onkologie hinein</li>
+</ul>
+
+<h3 id="änderungen">Änderungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">change</code> <strong>Lebensphase bei Diagnose ist jetzt Must Support</strong> in <code class="language-plaintext highlighter-rouge">mii-pr-seltene-clinical-diagnosis</code> und <code class="language-plaintext highlighter-rouge">mii-pr-seltene-genetic-diagnosis</code>. Das Basisprofil Diagnose lässt die fhir.de-Extension <code class="language-plaintext highlighter-rouge">lebensphase</code> an <code class="language-plaintext highlighter-rouge">onsetAge</code> zu, kennzeichnet sie aber nicht; das Logical Model führt <code class="language-plaintext highlighter-rouge">zeitpunktKlinischeDia</code> und <code class="language-plaintext highlighter-rouge">zeitpunktGenDia</code> als eigene Datenelemente, also verlangt das Modul jetzt ihre Unterstützung. Die Mappings beider Elemente im Logical Model zeigen auf die fhir.de-Extension statt auf die entfernte Modul-Extension <code class="language-plaintext highlighter-rouge">mii-ext-seltene-onset-age</code>; die klinischen Beispiele Marfan und CF tragen jetzt das Alter bei Diagnose. Die Lebensphase tragen sie noch nicht: Die fhir.de-Extension erlaubt als Kontext nur <code class="language-plaintext highlighter-rouge">dateTime</code>, <code class="language-plaintext highlighter-rouge">Period</code> und <code class="language-plaintext highlighter-rouge">Range</code>, der Validator lehnt sie deshalb an <code class="language-plaintext highlighter-rouge">onsetAge</code> ab, wo das Basisprofil sie derzeit platziert. Sobald das Basismodul den Slice nach <code class="language-plaintext highlighter-rouge">onsetRange</code> verlegt (HDB-1075), folgt der Pfad mit dem Abhängigkeits-Update und die Beispiele bekommen die Lebensphase</li>
+</ul>
+
+<h3 id="fehlerbehebungen">Fehlerbehebungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>HPO-Slice in <code class="language-plaintext highlighter-rouge">mii-pr-seltene-symptom-condition</code> nutzt die bevorzugte HPO-URI</strong> <code class="language-plaintext highlighter-rouge">http://human-phenotype-ontology.org</code>, wie der Alias, alle HPO-ValueSets und alle Beispiele des Moduls. Der Slice <code class="language-plaintext highlighter-rouge">hpoCoding</code> war auf die OBO-URI <code class="language-plaintext highlighter-rouge">http://purl.obolibrary.org/obo/hp.owl</code> gepatternt, die das NamingSystem von HL7 als nicht bevorzugt führt und die keine Instanz des Moduls verwendete; der Must-Support-Slice traf deshalb nie ein Coding</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>ICF-ValueSet verweist auf das BfArM-Sprachsupplement</strong> (HDB-1125). Das Basis-CodeSystem des BfArM <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/sid/icf</code> trägt nur Codes und Hierarchie, in keiner Sprache ein Display; die deutschen Bezeichnungen stehen im Supplement <code class="language-plaintext highlighter-rouge">icf-translation</code>, das ein Terminologieserver nur anwendet, wenn es referenziert ist. <code class="language-plaintext highlighter-rouge">mii-vs-seltene-icf</code> trägt jetzt die Extension <code class="language-plaintext highlighter-rouge">valueset-supplement</code> mit Verweis auf das Supplement, sodass Expansionen mit <code class="language-plaintext highlighter-rouge">displayLanguage=de</code> deutschen Text liefern und deutsche Displays validieren. Geprüft gegen den Staging-Server der SU-TermServ, der das BfArM-Paket seit 2026-11-05 führt; die Produktion ist noch nicht nachgezogen</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> die vier ICF-Beispiele tragen die deutsche Bezeichnung aus dem Supplement statt eines englischen Textes, den das Basis-CodeSystem nicht validieren kann</li>
+</ul>
+
+<hr />
+
+<h2 id="version-202700-ballotrc1">Version 2027.0.0-ballot.rc1</h2>
+
+<h3 id="neue-funktionen-1">Neue Funktionen</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>JARDIN-Datenpunkte</strong> aus der Gegenüberstellung des europäischen Minimaldatensatzes mit dem Modul (Issues #35, #36, #38). Alle drei sind konkrete Datenbedarfe eines europäischen Referenznetzwerks, keiner davon ist auf seltene Erkrankungen beschränkt — die Profile sagen das im Kopfkommentar auch selbst
@@ -343,7 +380,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">feat</code> 13 neue Beispielinstanzen, angebunden an das bestehende SMA-Fallbeispiel</li>
 </ul>
 
-<h3 id="breaking-changes">Breaking Changes</h3>
+<h3 id="breaking-changes-1">Breaking Changes</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">remove</code> Extension <code class="language-plaintext highlighter-rouge">mii-ex-seltene-empfehlung-evidenzgraduierung</code> entfernt, samt ihrer Verwendung in den drei Therapieempfehlungs-Profilen. Sie war eine Kopie aus dem MTB-Modul, deren <code class="language-plaintext highlighter-rouge">system</code>-Discriminator nie einen Wert trug — der Pflicht-Slice <code class="language-plaintext highlighter-rouge">Evidenzgrad 1..1</code> war von keiner Instanz erfüllbar. Publiziert, aber unbenutzbar, und von keinem Beispiel verwendet. Die Skalenfrage verhandelt Ballot-Ticket HDB-543 und ist onkologisch geprägt; für seltene Erkrankungen wurde sie nie beantwortet</li>
@@ -363,7 +400,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">change</code> alle Konformitätsressourcen tragen jetzt <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc1</code>. <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>, <code class="language-plaintext highlighter-rouge">input/fsh/rulesets/version.fsh</code> und <code class="language-plaintext highlighter-rouge">package.json</code> behaupteten drei verschiedene Stände; 56 Ressourcen trugen die Version des bereits publizierten Vorgängers <code class="language-plaintext highlighter-rouge">2026.0.1</code>, neun gar keine. Die <code class="language-plaintext highlighter-rouge">meta.profile</code>-Claims der Beispiele ziehen mit</li>
 </ul>
 
-<h3 id="fehlerbehebungen">Fehlerbehebungen</h3>
+<h3 id="fehlerbehebungen-1">Fehlerbehebungen</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>zwei Beispiele widersprachen sich fachlich.</strong> Die Deletion der Exons 45-47 im DMD-Gen wurde an einer Stelle als „Out-of-frame … Duchenne-Muskeldystrophie" geführt, im Ausschlussbeispiel dagegen als „In-frame … vereinbar mit Becker, NICHT Duchenne". Die Arithmetik entscheidet: <code class="language-plaintext highlighter-rouge">c.6439</code>–<code class="language-plaintext highlighter-rouge">c.6912</code> sind 474 Basen, 474 ÷ 3 = 158 — das Leseraster bleibt erhalten. Die Deletion ist in-frame und führt zu Becker. Variante und diagnostischer Bericht sind korrigiert (<code class="language-plaintext highlighter-rouge">conclusionCode</code> jetzt OMIM 300376 Becker); das bestätigte Duchenne-Beispiel hat mit der Deletion des Exons 45 einen echten out-of-frame Beleg erhalten (176 Basen, nicht durch drei teilbar)</li>
@@ -413,7 +450,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">chore</code> Abhängigkeit auf Modul ICU auf <code class="language-plaintext highlighter-rouge">2026.0.x</code> (resolved: <code class="language-plaintext highlighter-rouge">2026.0.2</code>) aktualisiert</li>
 </ul>
 
-<h3 id="fehlerbehebungen-1">Fehlerbehebungen</h3>
+<h3 id="fehlerbehebungen-2">Fehlerbehebungen</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">fix</code> ICU-Kopfumfang-Alias auf umbenanntes Profil <code class="language-plaintext highlighter-rouge">mii-pr-icu-muv-kopfumfang</code> aktualisiert</li>
@@ -454,7 +491,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h2 id="änderungen-version-v202600-rc1-release-candidate-1">Änderungen Version v2026.0.0-rc.1 (Release Candidate 1)</h2>
 
-<h3 id="neue-funktionen-1">Neue Funktionen</h3>
+<h3 id="neue-funktionen-2">Neue Funktionen</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">feat</code> MetaProfile RuleSet für alle Beispiel-Instanzen mit versionierter Profil-URL hinzugefügt</li>
@@ -472,7 +509,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">docs</code> Dokumentationsklarstellungen (HDB-741, HDB-739)</li>
 </ul>
 
-<h3 id="fehlerbehebungen-2">Fehlerbehebungen</h3>
+<h3 id="fehlerbehebungen-3">Fehlerbehebungen</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">fix</code> Inkorrekte oBDS-Mappings aus Therapieplan-Seite entfernt (HDB-751)</li>
@@ -520,7 +557,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.seltene#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Nov 26, 2026 17:48+0000">2026-11-26</span>
+          Erstellt <span title="Thu, Nov 26, 2026 18:07+0000">2026-11-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -267,6 +267,17 @@
       },
       {
         "url" : "value",
+        "valueString" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
         "valueString" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CapabilityStatement/metadata"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -773,6 +784,17 @@
       {
         "url" : "value",
         "valueString" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/Seltene"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -2380,6 +2402,30 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mii-cm-seltene-to-mvgenomseq"
+      },
+      "name" : "MII CM Seltene Erkrankungen zu Modellvorhaben Genomsequenzierung (KDK)",
+      "description" : "Zuordnung der Profile des Moduls Seltene Erkrankungen zu den Feldern des Klinischen Datenkranzes (KDK) Seltene Erkrankungen des Modellvorhabens Genomsequenzierung nach § 64e SGB V, BfArM-Schema v2.3 (Teile case, plan, followUp). Richtung MII-Profil zu KDK-Feld. metaData gehört zu den Modulen Person und Consent, molecular zum Modul Molekulargenetischer Befundbericht; beide sind hier nicht enthalten.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mii-cm-seltene-therapieempfehlung-to-mvgenomseq"
+      },
+      "name" : "MII CM Seltene Therapieempfehlung zu MVGenomSeq-KDK-Codes",
+      "description" : "Übersetzt die Codes der MVGenomSeq-Kategorien an den Therapieempfehlungen (Therapietyp, Therapiestrategie) in die Wertelisten des KDK Seltene Erkrankungen, Schema v2.3 (RareDiseasesPlan.recommendedTherapies.type und .strategy). Das Modul führt die Codes in kebab-case, der KDK in camelCase; gene-therapy heißt im KDK genetic.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
       }],
       "reference" : {
@@ -2544,6 +2590,18 @@
       "name" : "MII Example SE Symptom Condition",
       "description" : "Example of a symptom condition in the context of rare diseases using HPO codes",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/mii-lm-seltene-mvgenomseq"
+      },
+      "name" : "MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen",
+      "description" : "Klinischer Datenkranz (KDK) Seltene Erkrankungen des Modellvorhabens Genomsequenzierung nach § 64e SGB V (BfArM, Schema v2.3), Teile case, plan und followUp. Zielstruktur der ConceptMap mii-cm-seltene-to-mvgenomseq; Feldnamen quelltreu aus dem JSON-Schema.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -3690,7 +3748,16 @@
         }],
         "nameUrl" : "logical-models.html",
         "title" : "Datensätze und Beschreibungen",
-        "generation" : "markdown"
+        "generation" : "markdown",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "mapping-mvgenomseq.html"
+          }],
+          "nameUrl" : "mapping-mvgenomseq.html",
+          "title" : "Mapping Genome Sequencing Model Project (KDK)",
+          "generation" : "markdown"
+        }]
       },
       {
         "extension" : [{

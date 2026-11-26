@@ -21,6 +21,7 @@ These define data models that represent the domain covered by this implementatio
 
 | | |
 | :--- | :--- |
+| [ MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen  ](StructureDefinition-mii-lm-seltene-mvgenomseq.md) | Klinischer Datenkranz (KDK) Seltene Erkrankungen des Modellvorhabens Genomsequenzierung nach § 64e SGB V (BfArM, Schema v2.3), Teile case, plan und followUp. Zielstruktur der ConceptMap mii-cm-seltene-to-mvgenomseq; Feldnamen quelltreu aus dem JSON-Schema. |
 | [ MII LM SE  ](StructureDefinition-mii-lm-seltene.md) | MII LogicalModel Modul Seltene Erkraknungen |
 
 ### Structures: Resource Profiles 
@@ -117,6 +118,15 @@ These define new code systems used by systems conforming to this implementation 
 | [ MII CS SE Therapieempfehlung Typ  ](CodeSystem-mii-cs-seltene-therapieempfehlung-typ.md) | Therapietyp (kausal vs. symptomatisch) für Therapieempfehlungen bei seltenen Erkrankungen, abgeleitet aus MV GenomSeq |
 | [ MII CS Seltene Erkrankungen HPO Change Status  ](CodeSystem-mii-cs-seltene-hpo-change-status.md) | CodeSystem zur Dokumentation von Änderungen bei HPO-Phänotypen über Zeit. Eigene Codes des Moduls: HPO führt für diesen Zweck nichts. Sein Zweig Clinical course (HP:0031797) beschreibt den Verlauf der Krankheit — Onset, Pace of progression, Temporal pattern, Disease remission —, nicht die Veränderung eines einzelnen Phänotyps zwischen zwei Erhebungen. Vier der fünf Konzepte haben SNOMED-CT-Entsprechungen, die je Code unten angegeben sind; für newly-added führt SNOMED kein generisches Konzept. |
 | [ MII CS Seltene Erkrankungen NARSE Therapietyp  ](CodeSystem-mii-cs-seltene-narse-therapietyp.md) | CodeSystem für NARSE-spezifische Therapietypen bei Seltenen Erkrankungen |
+
+### Terminology: Concept Maps 
+
+These define transformations to convert between codes by systems conforming with this implementation guide.
+
+| | |
+| :--- | :--- |
+| [ MII CM Seltene Erkrankungen zu Modellvorhaben Genomsequenzierung (KDK)  ](ConceptMap-mii-cm-seltene-to-mvgenomseq.md) | Zuordnung der Profile des Moduls Seltene Erkrankungen zu den Feldern des Klinischen Datenkranzes (KDK) Seltene Erkrankungen des Modellvorhabens Genomsequenzierung nach § 64e SGB V, BfArM-Schema v2.3 (Teile case, plan, followUp). Richtung MII-Profil zu KDK-Feld. metaData gehört zu den Modulen Person und Consent, molecular zum Modul Molekulargenetischer Befundbericht; beide sind hier nicht enthalten. |
+| [ MII CM Seltene Therapieempfehlung zu MVGenomSeq-KDK-Codes  ](ConceptMap-mii-cm-seltene-therapieempfehlung-to-mvgenomseq.md) | Übersetzt die Codes der MVGenomSeq-Kategorien an den Therapieempfehlungen (Therapietyp, Therapiestrategie) in die Wertelisten des KDK Seltene Erkrankungen, Schema v2.3 (RareDiseasesPlan.recommendedTherapies.type und .strategy). Das Modul führt die Codes in kebab-case, der KDK in camelCase; gene-therapy heißt im KDK genetic. |
 
 ### Example: Example Instances 
 
