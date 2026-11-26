@@ -3,6 +3,28 @@ Auf dieser Seite werden die Unterschiede zwischen den Versionen nachgehalten, be
 
 ---
 
+## Ballot-Auflösung (nach 2027.0.0-ballot.rc1, unveröffentlicht)
+
+### Breaking Changes
+
+- `change` **`mii-pr-seltene-symptom-condition` erbt jetzt vom Modul Symptom** (`MII_PR_Symptom_Condition`, Paket `de.medizininformatikinitiative.kerndatensatz.symptom` 2027.0.0-ballot) statt von `Condition`. Die Ableitung von `Condition` war im Juli 2026 bewusst gewählt (Issue #32), weil das Modul Symptom nur als Release Candidate vorlag. Inzwischen hat es denselben Ballot-Stand wie die übrigen Abhängigkeiten, und sein Condition-Profil trägt die fhir.de-Extension `lebensphase` an `onsetPeriod.start` und `onsetPeriod.end`, in einem Kontext, den die Extension zulässt. Die Lebensphase bei Symptombeginn hat damit einen kodierten Platz; vorher lief sie auf `onsetString`, Freitext ohne ValueSet. `string` entfällt in `onset[x]` und `abatement[x]`; alle eigenen Regeln (HPO-Bindung, Coding-Slices, HPO-Schweregrad) bleiben darüber bestehen. Das Beispiel `mii-exa-seltene-symptom-condition` zeigt eine `Period` mit Lebensphase
+
+### Neue Funktionen
+
+- `feat` **Mapping zum Modellvorhaben Genomsequenzierung (KDK Seltene Erkrankungen, BfArM-Schema v2.3)**, nach dem Muster des Moduls Onkologie. Neu sind das Logical Model `mii-lm-seltene-mvgenomseq` (Teile `case`, `plan`, `followUp`, Feldnamen unverändert aus dem JSON-Schema), die ConceptMap `mii-cm-seltene-to-mvgenomseq` (Profilelement zu KDK-Feld, 10 Profile, 47 Zuordnungen) und die ConceptMap `mii-cm-seltene-therapieempfehlung-to-mvgenomseq` für die Therapie-Codes, die vom KDK abweichen (`gene-therapy` gegenüber `genetic`, kebab-case gegenüber camelCase). Die neue Seite [Mapping Modellvorhaben Genomsequenzierung](mapping-mvgenomseq.html) zeigt Abdeckung, Zuordnungen und die KDK-Felder ohne Quelle, erzeugt von `scripts/generate-mvgenomseq-mapping.py`. `metaData` (Person, Consent) und `molecular` (Molekulargenetik) sind wie in der Onkologie nicht Gegenstand. Der auskommentierte Mapping-Block zum Modellvorhaben in `mii-lm-seltene` ist entfernt: Er beschrieb einen älteren Schemastand und mischte Felder der Onkologie hinein
+
+### Änderungen
+
+- `change` **Lebensphase bei Diagnose ist jetzt Must Support** in `mii-pr-seltene-clinical-diagnosis` und `mii-pr-seltene-genetic-diagnosis`. Das Basisprofil Diagnose lässt die fhir.de-Extension `lebensphase` an `onsetAge` zu, kennzeichnet sie aber nicht; das Logical Model führt `zeitpunktKlinischeDia` und `zeitpunktGenDia` als eigene Datenelemente, also verlangt das Modul jetzt ihre Unterstützung. Die Mappings beider Elemente im Logical Model zeigen auf die fhir.de-Extension statt auf die entfernte Modul-Extension `mii-ext-seltene-onset-age`; die klinischen Beispiele Marfan und CF tragen jetzt das Alter bei Diagnose. Die Lebensphase tragen sie noch nicht: Die fhir.de-Extension erlaubt als Kontext nur `dateTime`, `Period` und `Range`, der Validator lehnt sie deshalb an `onsetAge` ab, wo das Basisprofil sie derzeit platziert. Sobald das Basismodul den Slice nach `onsetRange` verlegt (HDB-1075), folgt der Pfad mit dem Abhängigkeits-Update und die Beispiele bekommen die Lebensphase
+
+### Fehlerbehebungen
+
+- `fix` **HPO-Slice in `mii-pr-seltene-symptom-condition` nutzt die bevorzugte HPO-URI** `http://human-phenotype-ontology.org`, wie der Alias, alle HPO-ValueSets und alle Beispiele des Moduls. Der Slice `hpoCoding` war auf die OBO-URI `http://purl.obolibrary.org/obo/hp.owl` gepatternt, die das NamingSystem von HL7 als nicht bevorzugt führt und die keine Instanz des Moduls verwendete; der Must-Support-Slice traf deshalb nie ein Coding
+- `fix` **ICF-ValueSet verweist auf das BfArM-Sprachsupplement** (HDB-1125). Das Basis-CodeSystem des BfArM `http://hl7.org/fhir/sid/icf` trägt nur Codes und Hierarchie, in keiner Sprache ein Display; die deutschen Bezeichnungen stehen im Supplement `icf-translation`, das ein Terminologieserver nur anwendet, wenn es referenziert ist. `mii-vs-seltene-icf` trägt jetzt die Extension `valueset-supplement` mit Verweis auf das Supplement, sodass Expansionen mit `displayLanguage=de` deutschen Text liefern und deutsche Displays validieren. Geprüft gegen den Staging-Server der SU-TermServ, der das BfArM-Paket seit 2026-11-05 führt; die Produktion ist noch nicht nachgezogen
+- `fix` die vier ICF-Beispiele tragen die deutsche Bezeichnung aus dem Supplement statt eines englischen Textes, den das Basis-CodeSystem nicht validieren kann
+
+---
+
 ## Version 2027.0.0-ballot.rc1
 
 ### Neue Funktionen

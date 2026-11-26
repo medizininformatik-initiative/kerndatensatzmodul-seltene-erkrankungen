@@ -7,6 +7,8 @@ Das zugehörige Logical Model ist in der Artefakt-Übersicht abrufbar (siehe [Ar
 > **Written during migration - review before release.** Das Logical Model des Moduls ist derzeit nicht Teil des Builds (Quelle: `disabled/mii-lm-seltene.fsh.disabled`); die Datensatzbeschreibung oben ist maßgeblich.
 {: .ig-highlight .ig-highlight-blue}
 
+Die Zuordnung des Klinischen Datenkranzes (KDK) des Modellvorhabens Genomsequenzierung zu den Profilen dieses Moduls hat eine eigene Seite: [Mapping Modellvorhaben Genomsequenzierung](mapping-mvgenomseq.html).
+
 <!-- BEGIN GENERATED: logical-model-table (scripts/generate-lm-table.py) -->
 
 Die folgende Tabelle wird aus dem publizierten Logical Model (`mii-lm-seltene`) erzeugt und listet jedes Datenelement mit Kardinalität, Typ und Beschreibung. Die Einrückung bildet die Verschachtelung ab.
