@@ -7,117 +7,191 @@ package "MII_Datenmodell_Seltene_Erkrankungen" {
   package MII_Person #33CCFF{
     object MII_Patient {
       o Geschlecht
+      ' lm: -
       o Geburtstag/Alter
+      ' lm: -
 
     }
     object Vitalstatus  {
       o Datum
+      ' lm: persoenlicheInfosIndexpatient.tod.sterbedatum
       o Status
+      ' lm: persoenlicheInfosIndexpatient.tod
     }
 
   }
   package "MII_Modul_Diagnose" #33CCFF {
     object MII_Diagnose {
       o code: ICD10GM
+      ' lm: -
       o code: ORPHAcodes
+      ' lm: -
       o Alter bei Diagnose
+      ' lm: -
       o Status (Verdacht, gesichert..)
+      ' lm: -
     }
   }
  
   package "MII_Modul_Seltene_Erkrankungen" #FFEE22{
     object MII_Diagnose_SE {
       o code: ICD10GM
+      ' lm: anamneseUndDiagnostik.klinischeDiagnose
       o code: ORPHAcodes
+      ' lm: anamneseUndDiagnostik.klinischeDiagnose
     }
     object MII_MolGen_Variante_SE  {
       o code: HGVS
+      ' lm: -
     }
     object MII_Familienanamnese_SE {
       o Verwandtschaftsverhaeltnis
+      ' lm: familienanamnese.verwandtschaftsverhaeltnis
       o Geschlecht
+      ' lm: familienanamnese.geschlecht
       o gleiche Erkrankung
+      ' lm: familienanamnese.gleicheSE
       o andere Erkrankung
+      ' lm: familienanamnese.andereSE
       o Penetranz
+      ' lm: familienanamnese.penetranz
       o verstorben
+      ' lm: familienanamnese.familienmitgliedVerstorben, familienanamnese.todDurchSE
     }
     object MII_Symptom_Observation_SE  {
       o code: HPO | SNOMED CT | LOINC
+      ' lm: anamneseUndDiagnostik.phaenotypisierung.hpoTerm
       o value: Present/Absent (LOINC)
+      ' lm: anamneseUndDiagnostik.phaenotypisierung.hpoExcluded
       o date: effectiveDateTime
+      ' lm: anamneseUndDiagnostik.untersuchungsdatum
       o change: Änderung (Verlauf)
+      ' lm: anamneseUndDiagnostik.phaenotypisierung.verlaufSymptom
     }
     object MII_Symptom_Condition_SE {
       o code: HPO | SNOMED CT | ICD-10-GM
+      ' lm: anamneseUndDiagnostik.phaenotypisierung.hpoTerm
       o onset: dateTime | Age | Period
+      ' lm: anamneseUndDiagnostik.phaenotypisierung.zeitraumSymptom.*
       o abatement: dateTime | Age | Period
+      ' lm: -
       o severity: Schweregrad
+      ' lm: -
       o bodySite: Anatomische Lokalisation
+      ' lm: -
     }
 
     object Untersuchung {
       o Koerperliche_Untersuchung
+      ' lm: koerperlicheUntersuchung
       o Diagnostik
+      ' lm: anamneseUndDiagnostik
       o Therapiestatus
+      ' lm: therapieForschung.therapie
       o Datum
+      ' lm: anamneseUndDiagnostik.untersuchungsdatum
     }
     object Therapiestatus {
       o Therapieempfehlungen
+      ' lm: therapieForschung.therapie.therapieempfehlung
       o Durchgeführte_Therapien
+      ' lm: therapieForschung.therapie.durchgefuehrteTherapie
     }
     object Therapieempfehlungen{
       o Therapieart
+      ' lm: therapieForschung.therapie.therapieempfehlung
       o off-label
+      ' lm: therapieForschung.offLabel.*
       o Studie
+      ' lm: therapieForschung.studie.*
     }
     object Durchgeführte_Therapien {
       o Therapieart
+      ' lm: therapieForschung.therapie.durchgefuehrteTherapie
       o Startdatum
+      ' lm: therapieForschung.therapie.startdatumTherapie
       o Enddatum
+      ' lm: therapieForschung.therapie.enddatumTherapie
       o Grund_Beendigung
+      ' lm: therapieForschung.therapie.grundEndeTherapie
       o off-label
+      ' lm: therapieForschung.offLabel.*
       o Studie
+      ' lm: therapieForschung.studie.*
     }
     object Koerperliche_Untersuchung_SE {
       o Körpermaße
+      ' lm: koerperlicheUntersuchung
     }
     object BMI_SE {
+    ' lm: koerperlicheUntersuchung.bmi
       o Wert (decimal)
+      ' lm: koerperlicheUntersuchung.bmi.bmi
       o Datum
+      ' lm: koerperlicheUntersuchung.bmi.datumBMI
     }
     object Kopfumfang_SE {
+    ' lm: koerperlicheUntersuchung.kopfumfang
       o Wert_cm (decimal)
+      ' lm: koerperlicheUntersuchung.kopfumfang.kopfumfang
       o Datum
+      ' lm: koerperlicheUntersuchung.kopfumfang.datumKopfumfang
     }
     object Bauchumfang_SE {
+    ' lm: koerperlicheUntersuchung.bauchumfang
       o Wert_cm (decimal)
+      ' lm: koerperlicheUntersuchung.bauchumfang.bauchumfang
       o Datum
+      ' lm: koerperlicheUntersuchung.bauchumfang.datumBauchumfang
     }
     object Hueftumfang_SE {
+    ' lm: koerperlicheUntersuchung.hueftumfang
       o Wert_cm (decimal)
+      ' lm: koerperlicheUntersuchung.hueftumfang.hueftumfang
       o Datum
+      ' lm: koerperlicheUntersuchung.hueftumfang.datumHueftumfang
     }
     object Blutgruppe_SE {
       o AB0_Rhesusfaktor
+      ' lm: koerperlicheUntersuchung.blutgruppe
+    }
+    object Registerteilnahme_SE {
+      o Register (ResearchStudy)
+      ' lm: registerteilnahme.registerName
+      o Teilnahmestatus
+      ' lm: registerteilnahme.teilnahmestatus
+      o Teilnahmezeitraum
+      ' lm: registerteilnahme.teilnahmezeitraum
     }
     object InformationIndexpatient {
       o Konsanguinitaet der Eltern
+      ' lm: familienanamnese.konsanguinitaetEltern
     }
   }
-  package "MII_Modul_ICU" #00DD00{
-    object Koerpergewicht
-    object Koerpergroeße
+  package "ISiK_Vitalparameter" #00DD00{
+    object "ISiKKoerpergewicht" as Koerpergewicht
+    ' lm: koerperlicheUntersuchung.koerpergewicht.*
+    object "ISiKKoerpergroesse" as Koerpergroeße
+    ' lm: koerperlicheUntersuchung.koerpergroesse.*
   }
   package "MII_Modul_Labor" #00DD00 {
     object Laborparameter
   }
   package "MII_Modul_Studie" #00DD00 {
-    object MII_Studie
+    object MII_Studie {
+      o ResearchStudy
+      ' lm: -
+    }
+    object MII_Register {
+      o Library (Katalog)
+      ' lm: -
+    }
   }
 
   package "MII_Modul_Molekulargenetischer_Befundbericht" #33CCFF{
     object MII_MolGen_Variante {
       o code: HGVS
+      ' lm: -
     }
     object MII_MolGen_Familienanamnese
   }
@@ -153,8 +227,12 @@ package "MII_Datenmodell_Seltene_Erkrankungen" {
   Untersuchung "0..1" o-- "0..1" InformationIndexpatient
   Therapiestatus "0..*" o-down- "1..1" Therapieempfehlungen
   Therapiestatus "0..*" o-down- "1..1" Durchgeführte_Therapien
-  Therapieempfehlungen "0..*" o-down- "0..*" MII_Studie
-  Durchgeführte_Therapien "0..*" o-down- "0..*" MII_Studie
+  Therapieempfehlungen "0..*" o-down- MII_Studie
+  Durchgeführte_Therapien "0..*" o-down- MII_Studie
+  InformationIndexpatient "0..1" o-- "0..*" Registerteilnahme_SE
+  Registerteilnahme_SE -down-> MII_Studie
+  Registerteilnahme_SE ..down.> MII_Register
+  MII_Studie -[hidden]left- MII_Register
 
 }
 
