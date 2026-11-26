@@ -1,0 +1,691 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "mii-cm-seltene-to-mvgenomseq",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ConceptMap/mii-cm-seltene-to-mvgenomseq",
+  "title": "MII CM Seltene Erkrankungen zu Modellvorhaben Genomsequenzierung (KDK)",
+  "description": "Zuordnung der Profile des Moduls Seltene Erkrankungen zu den Feldern des Klinischen Datenkranzes (KDK) Seltene Erkrankungen des Modellvorhabens Genomsequenzierung nach § 64e SGB V, BfArM-Schema v2.3 (Teile case, plan, followUp). Richtung MII-Profil zu KDK-Feld. metaData gehört zu den Modulen Person und Consent, molecular zum Modul Molekulargenetischer Befundbericht; beide sind hier nicht enthalten.",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "version": "2027.0.0-ballot",
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "CC-BY-4.0",
+            "system": "http://hl7.org/fhir/spdx-license",
+            "display": "Creative Commons Attribution 4.0 International"
+          }
+        ]
+      }
+    }
+  ],
+  "name": "MII_CM_Seltene_To_MVGenomSeq",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-11-26",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
+  "purpose": "Erleichtert Datenintegrationszentren den Aufbau harmonisierbarer ETL-Strecken vom MII-Kerndatensatz zur KDK-Einreichung im Modellvorhaben Genomsequenzierung.",
+  "sourceUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene",
+  "targetUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+  "group": [
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-hpo-assessment",
+      "sourceVersion": "2027.0.0-ballot",
+      "target": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "targetVersion": "2027.0.0-ballot",
+      "element": [
+        {
+          "code": "Observation.code.coding.code",
+          "display": "HPO-Term",
+          "target": [
+            {
+              "code": "case.diagnosisRd.phenotypes.code",
+              "display": "Phänotyp [Fall]",
+              "equivalence": "equivalent",
+              "comment": "Nur beobachtete Merkmale melden; als ausgeschlossen dokumentierte [component:status = Absent] gehören nicht in den KDK."
+            }
+          ]
+        },
+        {
+          "code": "Observation.code.coding.version",
+          "display": "HPO-Version",
+          "target": [
+            {
+              "code": "case.diagnosisRd.phenotypes.version",
+              "display": "Phänotyp-Version",
+              "equivalence": "equivalent",
+              "comment": "Im KDK Pflicht. Ohne Version im Quelldatum muss das DIZ die verwendete HPO-Version ergänzen."
+            }
+          ]
+        },
+        {
+          "code": "Observation.code.coding.system",
+          "display": "HPO-System",
+          "target": [
+            {
+              "code": "case.diagnosisRd.phenotypes.system",
+              "display": "Phänotyp-System",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Observation.code.coding.display",
+          "display": "HPO-Anzeigetext",
+          "target": [
+            {
+              "code": "case.diagnosisRd.phenotypes.display",
+              "display": "Phänotyp-Anzeigetext",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Observation.note.text",
+          "display": "Anmerkung",
+          "target": [
+            {
+              "code": "case.diagnosisRd.phenotypes.text",
+              "display": "Klinische Beschreibung",
+              "equivalence": "inexact",
+              "comment": "Freitext; nur übernehmen, wenn die Anmerkung den Phänotyp beschreibt."
+            }
+          ]
+        },
+        {
+          "code": "Observation.code.coding.code",
+          "display": "HPO-Term",
+          "target": [
+            {
+              "code": "followUp.followUpRds.phenotypes.code",
+              "display": "Phänotyp [Verlauf]",
+              "equivalence": "equivalent",
+              "comment": "Verlaufsmeldung: Phänotypen zum Zeitpunkt followUpDate."
+            }
+          ]
+        },
+        {
+          "code": "Observation.code.coding.version",
+          "display": "HPO-Version",
+          "target": [
+            {
+              "code": "followUp.followUpRds.phenotypes.version",
+              "display": "Phänotyp-Version",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Observation.code.coding.system",
+          "display": "HPO-System",
+          "target": [
+            {
+              "code": "followUp.followUpRds.phenotypes.system",
+              "display": "Phänotyp-System",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Observation.code.coding.display",
+          "display": "HPO-Anzeigetext",
+          "target": [
+            {
+              "code": "followUp.followUpRds.phenotypes.display",
+              "display": "Phänotyp-Anzeigetext",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Observation.note.text",
+          "display": "Anmerkung",
+          "target": [
+            {
+              "code": "followUp.followUpRds.phenotypes.text",
+              "display": "Klinische Beschreibung",
+              "equivalence": "inexact",
+              "comment": "Freitext; nur übernehmen, wenn die Anmerkung den Phänotyp beschreibt."
+            }
+          ]
+        },
+        {
+          "code": "Observation.effective[x]",
+          "display": "Erhebungszeitpunkt",
+          "target": [
+            {
+              "code": "followUp.followUpRds.followUpDate",
+              "display": "Datum der Verlaufsmeldung",
+              "equivalence": "relatedto",
+              "comment": "Datum der Verlaufserhebung; bei mehreren Beobachtungen eines Termins deren gemeinsames Datum."
+            }
+          ]
+        },
+        {
+          "code": "Observation.component:status.value[x]",
+          "display": "Status Present/Absent",
+          "target": [
+            {
+              "code": "followUp.followUpRds.phenotypes.change",
+              "display": "Veränderung",
+              "equivalence": "relatedto",
+              "comment": "Abgeleitet aus dem Vergleich zweier Erhebungen: neu beobachtet = newlyAdded, Present zu Absent = noLongerObserved, unverändert = unchanged. improved/degraded nur über component:severity ableitbar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-symptom-condition",
+      "sourceVersion": "2027.0.0-ballot",
+      "target": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "targetVersion": "2027.0.0-ballot",
+      "element": [
+        {
+          "code": "Condition.code.coding:hpoCoding.code",
+          "display": "HPO-Term",
+          "target": [
+            {
+              "code": "case.diagnosisRd.phenotypes.code",
+              "display": "Phänotyp [Fall]",
+              "equivalence": "equivalent",
+              "comment": "Symptome mit HPO-Kodierung zählen als Phänotypen."
+            }
+          ]
+        },
+        {
+          "code": "Condition.onset[x]:onsetDateTime",
+          "display": "Beginn",
+          "target": [
+            {
+              "code": "case.diagnosisRd.symptomOnsetDate",
+              "display": "Beginn der Symptome",
+              "equivalence": "wider",
+              "comment": "Frühester Beginn über alle Symptome des Falls, auf JJJJ-MM gekürzt."
+            }
+          ]
+        },
+        {
+          "code": "Condition.onset[x]:onsetPeriod.start",
+          "display": "Beginn [Zeitraum]",
+          "target": [
+            {
+              "code": "case.diagnosisRd.symptomOnsetDate",
+              "display": "Beginn der Symptome",
+              "equivalence": "wider",
+              "comment": "Wie onsetDateTime; bei Zeitraum dessen Beginn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-diagnosis",
+      "sourceVersion": "2027.0.0-ballot",
+      "target": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "targetVersion": "2027.0.0-ballot",
+      "element": [
+        {
+          "code": "Condition.code.coding:orphanet",
+          "display": "ORPHAcode",
+          "target": [
+            {
+              "code": "case.diagnosisRd.noMatchingCodeExists",
+              "display": "Kein passender Code",
+              "equivalence": "relatedto",
+              "comment": "true, wenn für die Erkrankung kein spezifischer ORPHAcode existiert und ein unspezifischer gesetzt wurde."
+            }
+          ]
+        },
+        {
+          "code": "Condition.code.coding:icd10-gm",
+          "display": "ICD-10-GM",
+          "target": [
+            {
+              "code": "case.diagnosisRd.diagnoses",
+              "display": "Diagnosen",
+              "equivalence": "equivalent",
+              "comment": "Im KDK Pflicht mit code, system, version."
+            }
+          ]
+        },
+        {
+          "code": "Condition.code.coding:orphanet",
+          "display": "ORPHAcode",
+          "target": [
+            {
+              "code": "case.diagnosisRd.diagnoses",
+              "display": "Diagnosen",
+              "equivalence": "equivalent",
+              "comment": "Im KDK Pflicht."
+            }
+          ]
+        },
+        {
+          "code": "Condition.code.coding:alpha-id",
+          "display": "Alpha-ID",
+          "target": [
+            {
+              "code": "case.diagnosisRd.diagnoses",
+              "display": "Diagnosen",
+              "equivalence": "equivalent",
+              "comment": "Im KDK Pflicht. Slice aus dem Basisprofil Diagnose."
+            }
+          ]
+        },
+        {
+          "code": "Condition.verificationStatus",
+          "display": "Verifikationsstatus",
+          "target": [
+            {
+              "code": "followUp.followUpRds.diagnosisEstablished",
+              "display": "Diagnose gesichert",
+              "equivalence": "relatedto",
+              "comment": "confirmed = true, sonst false."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-genetic-diagnosis",
+      "sourceVersion": "2027.0.0-ballot",
+      "target": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "targetVersion": "2027.0.0-ballot",
+      "element": [
+        {
+          "code": "Condition.code.coding:orphanet",
+          "display": "ORPHAcode",
+          "target": [
+            {
+              "code": "case.diagnosisRd.noMatchingCodeExists",
+              "display": "Kein passender Code",
+              "equivalence": "relatedto",
+              "comment": "true, wenn für die Erkrankung kein spezifischer ORPHAcode existiert und ein unspezifischer gesetzt wurde."
+            }
+          ]
+        },
+        {
+          "code": "Condition.code.coding:icd10-gm",
+          "display": "ICD-10-GM",
+          "target": [
+            {
+              "code": "case.diagnosisRd.diagnoses",
+              "display": "Diagnosen",
+              "equivalence": "equivalent",
+              "comment": "Im KDK Pflicht mit code, system, version."
+            }
+          ]
+        },
+        {
+          "code": "Condition.code.coding:orphanet",
+          "display": "ORPHAcode",
+          "target": [
+            {
+              "code": "case.diagnosisRd.diagnoses",
+              "display": "Diagnosen",
+              "equivalence": "equivalent",
+              "comment": "Im KDK Pflicht."
+            }
+          ]
+        },
+        {
+          "code": "Condition.code.coding:alpha-id",
+          "display": "Alpha-ID",
+          "target": [
+            {
+              "code": "case.diagnosisRd.diagnoses",
+              "display": "Diagnosen",
+              "equivalence": "equivalent",
+              "comment": "Im KDK Pflicht. Slice aus dem Basisprofil Diagnose."
+            }
+          ]
+        },
+        {
+          "code": "Condition.verificationStatus",
+          "display": "Verifikationsstatus",
+          "target": [
+            {
+              "code": "case.diagnosisRd.diagnosticAssessment",
+              "display": "Bewertung der genetischen Diagnostik",
+              "equivalence": "relatedto",
+              "comment": "confirmed = confirmedGeneticDiagnosis, provisional oder differential = suspectedGeneticDiagnosis. partialGeneticDiagnosis und furtherGeneticDiagnosticRecommended sind aus dem Status nicht ableitbar."
+            }
+          ]
+        },
+        {
+          "code": "Condition.verificationStatus",
+          "display": "Verifikationsstatus",
+          "target": [
+            {
+              "code": "followUp.followUpRds.diagnosisEstablished",
+              "display": "Diagnose gesichert",
+              "equivalence": "relatedto",
+              "comment": "confirmed = true, sonst false."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-clinical-impression",
+      "sourceVersion": "2027.0.0-ballot",
+      "target": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "targetVersion": "2027.0.0-ballot",
+      "element": [
+        {
+          "code": "ClinicalImpression.summary",
+          "display": "Zusammenfassung",
+          "target": [
+            {
+              "code": "followUp.followUpRds.diseaseProgression",
+              "display": "Krankheitsverlauf",
+              "equivalence": "inexact",
+              "comment": "Freitext der Verlaufsbeurteilung."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieplan",
+      "sourceVersion": "2027.0.0-ballot",
+      "target": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "targetVersion": "2027.0.0-ballot",
+      "element": [
+        {
+          "code": "CarePlan.created",
+          "display": "Erstellungsdatum",
+          "target": [
+            {
+              "code": "plan.carePlanRd.molecularBoardDecisionDate",
+              "display": "Datum der Fallkonferenz",
+              "equivalence": "relatedto",
+              "comment": "Das Modul führt das Datum des Beschlusses als Erstellungsdatum des Plans."
+            }
+          ]
+        },
+        {
+          "code": "CarePlan.activity:MedikamentoesTherapie",
+          "display": "Medikamentöse Therapieempfehlung",
+          "target": [
+            {
+              "code": "plan.carePlanRd.therapyRecommended",
+              "display": "Therapie empfohlen",
+              "equivalence": "relatedto",
+              "comment": "true, sobald der Plan mindestens eine Therapieempfehlung mit MVGenomSeq-Therapiestrategie enthält. Empfehlungen zu Beratung, Reevaluation oder Versorgung tragen keine Strategie und zählen nicht."
+            }
+          ]
+        },
+        {
+          "code": "CarePlan.activity:NichtMedikamentoesTherapie",
+          "display": "Nicht-medikamentöse Therapieempfehlung",
+          "target": [
+            {
+              "code": "plan.carePlanRd.therapyRecommended",
+              "display": "Therapie empfohlen",
+              "equivalence": "relatedto",
+              "comment": "Nur Empfehlungen mit category:MVGenomSeqTherapieStrategie; siehe MedikamentoesTherapie."
+            }
+          ]
+        },
+        {
+          "code": "CarePlan.activity:NichtMedikamentoesTherapie",
+          "display": "Nicht-medikamentöse Therapieempfehlung",
+          "target": [
+            {
+              "code": "plan.carePlanRd.counsellingRecommended",
+              "display": "Humangenetische Beratung empfohlen",
+              "equivalence": "relatedto",
+              "comment": "true, wenn eine referenzierte Empfehlung code = SNOMED 79841006 Genetic counseling oder ein Unterkonzept trägt."
+            }
+          ]
+        },
+        {
+          "code": "CarePlan.activity:NichtMedikamentoesTherapie",
+          "display": "Nicht-medikamentöse Therapieempfehlung",
+          "target": [
+            {
+              "code": "plan.carePlanRd.reEvaluationRecommended",
+              "display": "Reevaluation empfohlen",
+              "equivalence": "relatedto",
+              "comment": "true, wenn eine referenzierte Empfehlung eine Reevaluation empfiehlt. SNOMED hat dafür kein spezifisches Konzept; Vorschlag SNOMED 386053000 Evaluation procedure mit code.text."
+            }
+          ]
+        },
+        {
+          "code": "CarePlan.activity:NichtMedikamentoesTherapie",
+          "display": "Nicht-medikamentöse Therapieempfehlung",
+          "target": [
+            {
+              "code": "plan.carePlanRd.clinicalManagementRecommended",
+              "display": "Klinisches Management empfohlen",
+              "equivalence": "relatedto",
+              "comment": "true, wenn eine referenzierte Empfehlung eine Überweisung oder Anbindung empfiehlt, code = SNOMED 3457005 Patient referral oder ein Unterkonzept."
+            }
+          ]
+        },
+        {
+          "code": "CarePlan.activity:Studieneinschlussempfehlung",
+          "display": "Studieneinschlussempfehlung",
+          "target": [
+            {
+              "code": "plan.carePlanRd.studyRecommended",
+              "display": "Studie empfohlen",
+              "equivalence": "relatedto",
+              "comment": "true, sobald der Plan eine Studieneinschlussempfehlung enthält."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung",
+      "sourceVersion": "2027.0.0-ballot",
+      "target": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "targetVersion": "2027.0.0-ballot",
+      "element": [
+        {
+          "code": "MedicationRequest.id",
+          "display": "Ressourcen-Id",
+          "target": [
+            {
+              "code": "plan.recommendedTherapies.identifier",
+              "display": "Kennung der Empfehlung",
+              "equivalence": "relatedto",
+              "comment": "Beliebige stabile Kennung; die Ressourcen-Id genügt."
+            }
+          ]
+        },
+        {
+          "code": "MedicationRequest.category:MVGenomSeqTherapieTyp",
+          "display": "Therapietyp",
+          "target": [
+            {
+              "code": "plan.recommendedTherapies.type",
+              "display": "Therapietyp",
+              "equivalence": "equivalent",
+              "comment": "Codes über mii-cm-seltene-therapieempfehlung-to-mvgenomseq übersetzen."
+            }
+          ]
+        },
+        {
+          "code": "MedicationRequest.category:MVGenomSeqTherapieStrategie",
+          "display": "Therapiestrategie",
+          "target": [
+            {
+              "code": "plan.recommendedTherapies.strategy",
+              "display": "Therapiestrategie",
+              "equivalence": "equivalent",
+              "comment": "Codes über mii-cm-seltene-therapieempfehlung-to-mvgenomseq übersetzen [gene-therapy = genetic]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-nicht-medikamentoes",
+      "sourceVersion": "2027.0.0-ballot",
+      "target": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "targetVersion": "2027.0.0-ballot",
+      "element": [
+        {
+          "code": "ServiceRequest.id",
+          "display": "Ressourcen-Id",
+          "target": [
+            {
+              "code": "plan.recommendedTherapies.identifier",
+              "display": "Kennung der Empfehlung",
+              "equivalence": "relatedto",
+              "comment": "Nur Empfehlungen mit category:MVGenomSeqTherapieStrategie werden zu recommendedTherapies; Beratung, Reevaluation und Versorgung gehen in carePlanRd."
+            }
+          ]
+        },
+        {
+          "code": "ServiceRequest.category:MVGenomSeqTherapieTyp",
+          "display": "Therapietyp",
+          "target": [
+            {
+              "code": "plan.recommendedTherapies.type",
+              "display": "Therapietyp",
+              "equivalence": "equivalent",
+              "comment": "Codes über mii-cm-seltene-therapieempfehlung-to-mvgenomseq übersetzen."
+            }
+          ]
+        },
+        {
+          "code": "ServiceRequest.category:MVGenomSeqTherapieStrategie",
+          "display": "Therapiestrategie",
+          "target": [
+            {
+              "code": "plan.recommendedTherapies.strategy",
+              "display": "Therapiestrategie",
+              "equivalence": "equivalent",
+              "comment": "Codes über mii-cm-seltene-therapieempfehlung-to-mvgenomseq übersetzen [early-detection = earlyDetection]."
+            }
+          ]
+        },
+        {
+          "code": "ServiceRequest.code.text",
+          "display": "Freitext der Maßnahme",
+          "target": [
+            {
+              "code": "plan.recommendedTherapies.strategyOther",
+              "display": "Freitext Strategie",
+              "equivalence": "inexact",
+              "comment": "Nur bei strategy = other."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-therapieempfehlung-kombination",
+      "sourceVersion": "2027.0.0-ballot",
+      "target": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "targetVersion": "2027.0.0-ballot",
+      "element": [
+        {
+          "code": "RequestGroup.id",
+          "display": "Ressourcen-Id",
+          "target": [
+            {
+              "code": "plan.recommendedTherapies.identifier",
+              "display": "Kennung der Empfehlung",
+              "equivalence": "relatedto",
+              "comment": "Die Kombination ist eine Empfehlung mit strategy = combination."
+            }
+          ]
+        },
+        {
+          "code": "RequestGroup.action.resource",
+          "display": "Bestandteile der Kombination",
+          "target": [
+            {
+              "code": "plan.recommendedTherapies.strategyCombination",
+              "display": "Freitext Kombination",
+              "equivalence": "inexact",
+              "comment": "Freitext aus den referenzierten Einzelempfehlungen zusammensetzen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/mii-pr-seltene-studieneinschluss-anfrage",
+      "sourceVersion": "2027.0.0-ballot",
+      "target": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+      "targetVersion": "2027.0.0-ballot",
+      "element": [
+        {
+          "code": "ServiceRequest.id",
+          "display": "Ressourcen-Id",
+          "target": [
+            {
+              "code": "plan.recommendedStudies.identifier",
+              "display": "Kennung der Empfehlung",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "ServiceRequest.supportingInfo:Studie",
+          "display": "Referenzierte Studie",
+          "target": [
+            {
+              "code": "plan.recommendedStudies.id",
+              "display": "Kennung der Studie im Register",
+              "equivalence": "relatedto",
+              "comment": "ResearchStudy.identifier der referenzierten Studie."
+            }
+          ]
+        },
+        {
+          "code": "ServiceRequest.supportingInfo:Studie",
+          "display": "Referenzierte Studie",
+          "target": [
+            {
+              "code": "plan.recommendedStudies.register",
+              "display": "Studienregister",
+              "equivalence": "relatedto",
+              "comment": "Aus dem identifier.system der Studie ableiten [NCT, DRKS, EU CT]; unbekannte Studie = yesButStudyIsUnknown."
+            }
+          ]
+        },
+        {
+          "code": "ServiceRequest.supportingInfo:Studie",
+          "display": "Referenzierte Studie",
+          "target": [
+            {
+              "code": "plan.recommendedStudies.name",
+              "display": "Name der Studie",
+              "equivalence": "relatedto",
+              "comment": "ResearchStudy.title der referenzierten Studie."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
