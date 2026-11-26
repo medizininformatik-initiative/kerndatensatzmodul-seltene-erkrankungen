@@ -7,6 +7,8 @@ The associated logical model can be found in the artifact overview (see [Artifac
 > **Written during migration - review before release.** The logical model was reactivated on 2026-09-02 (it had been parked as `disabled/mii-lm-seltene.fsh.disabled` and builds without error). It is therefore part of the build again, and the 22 unresolvable mapping links every profile carried are resolved.
 {: .ig-highlight .ig-highlight-blue}
 
+The mapping of the clinical data set (KDK) of the genome sequencing model project to the profiles of this module has a page of its own: [Mapping Genome Sequencing Model Project](mapping-mvgenomseq.html).
+
 <!-- BEGIN GENERATED: logical-model-table (scripts/generate-lm-table.py) -->
 
 The table below is generated from the published logical model (`mii-lm-seltene`) and lists every data element with its cardinality, type and description. Indentation reflects nesting.
