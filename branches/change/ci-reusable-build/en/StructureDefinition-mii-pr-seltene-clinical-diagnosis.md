@@ -158,7 +158,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-seltene-cl
   "title" : "MII PR SE Clinical Diagnosis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T09:38:50+00:00",
+  "date" : "2026-11-27T13:34:14+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

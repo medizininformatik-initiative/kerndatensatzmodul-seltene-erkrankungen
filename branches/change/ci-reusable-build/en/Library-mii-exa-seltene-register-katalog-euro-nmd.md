@@ -27,7 +27,7 @@
 * **Related Artifacts: **: ** **
   * **Documentation***:  EURO-NMD-REG 
 * **Related Artifacts: **: **Date: **
-  * **Documentation***: 2026-11-27 09:38:50+0000
+  * **Documentation***: 2026-11-27 13:34:14+0000
 * **Related Artifacts: **: **Publisher: **
   * **Documentation***: Medizininformatik Initiative
 * **Related Artifacts: **: **Jurisdiction: **
@@ -56,7 +56,7 @@
       "code" : "asset-collection"
     }]
   },
-  "date" : "2026-11-27T09:38:50+00:00",
+  "date" : "2026-11-27T13:34:14+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
