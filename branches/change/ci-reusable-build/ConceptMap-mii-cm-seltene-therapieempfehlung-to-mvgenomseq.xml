@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-seltene-therapieempfehlung-to-mvgenomseq"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-seltene-therapieempfehlung-to-mvgenomseq</b></p><a name="mii-cm-seltene-therapieempfehlung-to-mvgenomseq"> </a><a name="hcmii-cm-seltene-therapieempfehlung-to-mvgenomseq"> </a><p>Mapping from (not specified) to https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/v2.3/KDK/RareDiseasesPlan.json</p><br/><p><b>Group 1 </b>Mapping from <a href="CodeSystem-mii-cs-seltene-therapieempfehlung-typ.html">MII CS SE Therapieempfehlung Typ</a> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/v2.3/KDK/RareDiseasesPlan.json#recommendedTherapies.type|v2.3</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>causal (Kausal)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>causal</td></tr><tr><td>symptomatic (Symptomatisch)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>symptomatic</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="CodeSystem-mii-cs-seltene-therapieempfehlung-strategie.html">MII CS SE Therapieempfehlung Strategie</a> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/v2.3/KDK/RareDiseasesPlan.json#recommendedTherapies.strategy|v2.3</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>systemic-medication (Systemische Medikation)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>systemicMedication</td></tr><tr><td>targeted-medication (Zielgerichtete Medikation)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>targetedMedication</td></tr><tr><td>prevention-medication (Präventive Medikation)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>preventionMedication</td></tr><tr><td>gene-therapy (Gentherapie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>genetic</td></tr><tr><td>prophylactic (Prophylaxe)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>prophylactic</td></tr><tr><td>early-detection (Früherkennung)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>earlyDetection</td></tr><tr><td>combination (Kombinationstherapie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>combination</td></tr><tr><td>nutrition (Ernährungstherapie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>nutrition</td></tr><tr><td>other (Sonstige)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>other</td></tr></table></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-seltene-therapieempfehlung-to-mvgenomseq</b></p><a name="de-mii-cm-seltene-therapieempfehlung-to-mvgenomseq"> </a><a name="de-hcmii-cm-seltene-therapieempfehlung-to-mvgenomseq"> </a><p>Mapping from (not specified) to https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/v2.3/KDK/RareDiseasesPlan.json</p><br/><p><b>Group 1 </b>Mapping from <a href="CodeSystem-mii-cs-seltene-therapieempfehlung-typ.html">MII CS SE Therapieempfehlung Typ</a> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/v2.3/KDK/RareDiseasesPlan.json#recommendedTherapies.type|v2.3</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>causal (Kausal)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>causal</td></tr><tr><td>symptomatic (Symptomatisch)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>symptomatic</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="CodeSystem-mii-cs-seltene-therapieempfehlung-strategie.html">MII CS SE Therapieempfehlung Strategie</a> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/v2.3/KDK/RareDiseasesPlan.json#recommendedTherapies.strategy|v2.3</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>systemic-medication (Systemische Medikation)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>systemicMedication</td></tr><tr><td>targeted-medication (Zielgerichtete Medikation)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>targetedMedication</td></tr><tr><td>prevention-medication (Präventive Medikation)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>preventionMedication</td></tr><tr><td>gene-therapy (Gentherapie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>genetic</td></tr><tr><td>prophylactic (Prophylaxe)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>prophylactic</td></tr><tr><td>early-detection (Früherkennung)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>earlyDetection</td></tr><tr><td>combination (Kombinationstherapie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>combination</td></tr><tr><td>nutrition (Ernährungstherapie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>nutrition</td></tr><tr><td>other (Sonstige)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>other</td></tr></table></div></div>
+  </text>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org/fhir/spdx-license"/>
+        <code value="CC-BY-4.0"/>
+        <display value="Creative Commons Attribution 4.0 International"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ConceptMap/mii-cm-seltene-therapieempfehlung-to-mvgenomseq"/>
+  <version value="2027.0.0-ballot"/>
+  <name value="MII_CM_Seltene_Therapieempfehlung_To_MVGenomSeq"/>
+  <title value="MII CM Seltene Therapieempfehlung zu MVGenomSeq-KDK-Codes"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-11-26"/>
+  <publisher value="Medizininformatik Initiative">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="de"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Medizininformatik Initiative"/>
+      </extension>
+    </extension>
+  </publisher>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Übersetzt die Codes der MVGenomSeq-Kategorien an den Therapieempfehlungen (Therapietyp, Therapiestrategie) in die Wertelisten des KDK Seltene Erkrankungen, Schema v2.3 (RareDiseasesPlan.recommendedTherapies.type und .strategy). Das Modul führt die Codes in kebab-case, der KDK in camelCase; gene-therapy heißt im KDK genetic."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <targetUri value="https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/v2.3/KDK/RareDiseasesPlan.json"/>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-typ"/>
+    <target value="https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/v2.3/KDK/RareDiseasesPlan.json#recommendedTherapies.type"/>
+    <targetVersion value="v2.3"/>
+    <element>
+      <code value="causal"/>
+      <display value="Kausal"/>
+      <target>
+        <code value="causal"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="symptomatic"/>
+      <display value="Symptomatisch"/>
+      <target>
+        <code value="symptomatic"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/CodeSystem/mii-cs-seltene-therapieempfehlung-strategie"/>
+    <target value="https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/v2.3/KDK/RareDiseasesPlan.json#recommendedTherapies.strategy"/>
+    <targetVersion value="v2.3"/>
+    <element>
+      <code value="systemic-medication"/>
+      <display value="Systemische Medikation"/>
+      <target>
+        <code value="systemicMedication"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="targeted-medication"/>
+      <display value="Zielgerichtete Medikation"/>
+      <target>
+        <code value="targetedMedication"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="prevention-medication"/>
+      <display value="Präventive Medikation"/>
+      <target>
+        <code value="preventionMedication"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="gene-therapy"/>
+      <display value="Gentherapie"/>
+      <target>
+        <code value="genetic"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="prophylactic"/>
+      <display value="Prophylaxe"/>
+      <target>
+        <code value="prophylactic"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="early-detection"/>
+      <display value="Früherkennung"/>
+      <target>
+        <code value="earlyDetection"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="combination"/>
+      <display value="Kombinationstherapie"/>
+      <target>
+        <code value="combination"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="nutrition"/>
+      <display value="Ernährungstherapie"/>
+      <target>
+        <code value="nutrition"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="other"/>
+      <display value="Sonstige"/>
+      <target>
+        <code value="other"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

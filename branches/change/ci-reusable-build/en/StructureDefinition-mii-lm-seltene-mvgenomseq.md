@@ -1,0 +1,856 @@
+# MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen - MII IG Kerndatensatz-Modul Seltene Erkrankungen v2027.0.0-ballot
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen**
+
+## Logical Model: MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq | *Version*:2027.0.0-ballot |
+| Active as of 2026-11-27 | *Computable Name*:MII_LM_Seltene_MVGenomSeq |
+
+ 
+Klinischer Datenkranz (KDK) Seltene Erkrankungen des Modellvorhabens Genomsequenzierung nach § 64e SGB V (BfArM, Schema v2.3), Teile case, plan und followUp. Zielstruktur der ConceptMap mii-cm-seltene-to-mvgenomseq; Feldnamen quelltreu aus dem JSON-Schema. 
+
+**Usages:**
+
+* This Logical Model is not used by any profiles in this Specification
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.seltene|current/StructureDefinition/StructureDefinition-mii-lm-seltene-mvgenomseq.json)
+
+### Formal Views of Profile Content
+
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+ 
+
+Other representations of profile: [CSV](../StructureDefinition-mii-lm-seltene-mvgenomseq.csv), [Excel](../StructureDefinition-mii-lm-seltene-mvgenomseq.xlsx) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "mii-lm-seltene-mvgenomseq",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+    "valueMarkdown" : "Use this logical model as the module-specific information model for the Medical Informatics Initiative core dataset. The model describes clinically or administratively relevant information in a domain-oriented form and provides a bridge between the conceptual content specification and the corresponding technical FHIR profiles. It is a pattern for describing the intended content model and is not intended to be exchanged as a concrete FHIR resource instance. Implementers should use it to understand the scope, semantics, and structure of the module before applying the related FHIR profiles and mappings."
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-09-02"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C4873"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  }],
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+  "version" : "2027.0.0-ballot",
+  "name" : "MII_LM_Seltene_MVGenomSeq",
+  "title" : "MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-27T09:38:50+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Klinischer Datenkranz (KDK) Seltene Erkrankungen des Modellvorhabens Genomsequenzierung nach § 64e SGB V (BfArM, Schema v2.3), Teile case, plan und followUp. Zielstruktur der ConceptMap mii-cm-seltene-to-mvgenomseq; Feldnamen quelltreu aus dem JSON-Schema.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "kind" : "logical",
+  "abstract" : false,
+  "type" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/StructureDefinition/LogicalModel/SelteneMVGenomSeq",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation" : "specialization",
+  "differential" : {
+    "element" : [{
+      "id" : "SelteneMVGenomSeq",
+      "path" : "SelteneMVGenomSeq",
+      "short" : "MII LM Modellvorhaben Genomsequenzierung Seltene Erkrankungen",
+      "definition" : "Klinischer Datenkranz (KDK) Seltene Erkrankungen des Modellvorhabens Genomsequenzierung nach § 64e SGB V (BfArM, Schema v2.3), Teile case, plan und followUp. Zielstruktur der ConceptMap mii-cm-seltene-to-mvgenomseq; Feldnamen quelltreu aus dem JSON-Schema."
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case",
+      "path" : "SelteneMVGenomSeq.case",
+      "short" : "case",
+      "definition" : "Falldaten (RareDiseasesCase.json)",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd",
+      "short" : "diagnosisRd",
+      "definition" : "Diagnose und Diagnostikentscheidung",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd.phenotypes",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd.phenotypes",
+      "short" : "phenotypes",
+      "definition" : "HPO-Phänotypen (Coding mit code und version Pflicht)",
+      "min" : 1,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd.phenotypes.system",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd.phenotypes.system",
+      "short" : "system",
+      "definition" : "Terminologie, hier HPO",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "uri"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd.phenotypes.version",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd.phenotypes.version",
+      "short" : "version",
+      "definition" : "HPO-Version",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd.phenotypes.code",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd.phenotypes.code",
+      "short" : "code",
+      "definition" : "HPO-Term",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd.phenotypes.display",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd.phenotypes.display",
+      "short" : "display",
+      "definition" : "Anzeigetext",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd.phenotypes.text",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd.phenotypes.text",
+      "short" : "text",
+      "definition" : "Klinische Beschreibung des Phänotyps",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd.symptomOnsetDate",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd.symptomOnsetDate",
+      "short" : "symptomOnsetDate",
+      "definition" : "Beginn der Symptome, Format JJJJ-MM",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd.molecularBoardDecisionDate",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd.molecularBoardDecisionDate",
+      "short" : "molecularBoardDecisionDate",
+      "definition" : "Datum der Fallkonferenz",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd.diagnosticExtent",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd.diagnosticExtent",
+      "short" : "diagnosticExtent",
+      "definition" : "Empfohlener Diagnostikumfang: singleGenome | duoGenome | trioGenome",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd.libraryType",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd.libraryType",
+      "short" : "libraryType",
+      "definition" : "Art der Sequenzierung: panel | wes | wgs | wgs_lr | none",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd.diagnosticAssessment",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd.diagnosticAssessment",
+      "short" : "diagnosticAssessment",
+      "definition" : "Bewertung der genetischen Diagnostik: noGeneticDiagnosis | suspectedGeneticDiagnosis | furtherGeneticDiagnosticRecommended | confirmedGeneticDiagnosis | partialGeneticDiagnosis",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd.diagnoses",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd.diagnoses",
+      "short" : "diagnoses",
+      "definition" : "Diagnosen; ICD-10-GM, ORPHAcode und Alpha-ID sind Pflicht (code, system, version)",
+      "min" : 3,
+      "max" : "*",
+      "type" : [{
+        "code" : "Coding"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd.noMatchingCodeExists",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd.noMatchingCodeExists",
+      "short" : "noMatchingCodeExists",
+      "definition" : "Kein passender Code vorhanden",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "boolean"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.diagnosisRd.diagnosisGmfcs",
+      "path" : "SelteneMVGenomSeq.case.diagnosisRd.diagnosisGmfcs",
+      "short" : "diagnosisGmfcs",
+      "definition" : "GMFCS-Level I | II | III | IV | V, altersabhängig; leer, wenn nicht zutreffend",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.priorRds",
+      "path" : "SelteneMVGenomSeq.case.priorRds",
+      "short" : "priorRds",
+      "definition" : "Vordiagnostik",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.priorRds.genomicTestType",
+      "path" : "SelteneMVGenomSeq.case.priorRds.genomicTestType",
+      "short" : "genomicTestType",
+      "definition" : "Art der Vordiagnostik: exome | genomeLongRead | genomeShortRead | panel | single | array | karyotyping | other | none",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.priorRds.genomicStudyType",
+      "path" : "SelteneMVGenomSeq.case.priorRds.genomicStudyType",
+      "short" : "genomicStudyType",
+      "definition" : "single | duo | trio",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.priorRds.diagnosticDate",
+      "path" : "SelteneMVGenomSeq.case.priorRds.diagnosticDate",
+      "short" : "diagnosticDate",
+      "definition" : "Datum der Vordiagnostik",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.priorRds.diagnosticResult",
+      "path" : "SelteneMVGenomSeq.case.priorRds.diagnosticResult",
+      "short" : "diagnosticResult",
+      "definition" : "Ergebnis: phenotypeNotCompletelyClarified | structuralVariantWithUnclearBreakpoint | unclearVariantInGeneticDisease | noPathogenicVariantDetected | other",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.priorRds.hospitalizationPeriods",
+      "path" : "SelteneMVGenomSeq.case.priorRds.hospitalizationPeriods",
+      "short" : "hospitalizationPeriods",
+      "definition" : "Zahl stationärer Behandlungen in den letzten fünf Jahren, gebändert: none | upToFive | upToTen | upToFifteen | moreThanFifteen | unknown",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.priorRds.hospitalizationDuration",
+      "path" : "SelteneMVGenomSeq.case.priorRds.hospitalizationDuration",
+      "short" : "hospitalizationDuration",
+      "definition" : "Geschätzte Dauer stationärer fallrelevanter Vorbehandlung in Tagen, gebändert: none | upToFive | upToFifteen | upToFifty | moreThanFifty | unknown",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.case.priorRds.zseContactDate",
+      "path" : "SelteneMVGenomSeq.case.priorRds.zseContactDate",
+      "short" : "zseContactDate",
+      "definition" : "Erstkontakt mit einem Zentrum für Seltene Erkrankungen, Format JJJJ-MM",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan",
+      "path" : "SelteneMVGenomSeq.plan",
+      "short" : "plan",
+      "definition" : "Fallkonferenzbeschluss (RareDiseasesPlan.json)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.carePlanRd",
+      "path" : "SelteneMVGenomSeq.plan.carePlanRd",
+      "short" : "carePlanRd",
+      "definition" : "Empfehlungen der Fallkonferenz",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.carePlanRd.molecularBoardDecisionDate",
+      "path" : "SelteneMVGenomSeq.plan.carePlanRd.molecularBoardDecisionDate",
+      "short" : "molecularBoardDecisionDate",
+      "definition" : "Datum der Fallkonferenz",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.carePlanRd.studyRecommended",
+      "path" : "SelteneMVGenomSeq.plan.carePlanRd.studyRecommended",
+      "short" : "studyRecommended",
+      "definition" : "Studienteilnahme empfohlen",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "boolean"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.carePlanRd.counsellingRecommended",
+      "path" : "SelteneMVGenomSeq.plan.carePlanRd.counsellingRecommended",
+      "short" : "counsellingRecommended",
+      "definition" : "Humangenetische Beratung empfohlen",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "boolean"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.carePlanRd.reEvaluationRecommended",
+      "path" : "SelteneMVGenomSeq.plan.carePlanRd.reEvaluationRecommended",
+      "short" : "reEvaluationRecommended",
+      "definition" : "Reevaluation empfohlen",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "boolean"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.carePlanRd.therapyRecommended",
+      "path" : "SelteneMVGenomSeq.plan.carePlanRd.therapyRecommended",
+      "short" : "therapyRecommended",
+      "definition" : "Therapie empfohlen",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "boolean"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.carePlanRd.clinicalManagementRecommended",
+      "path" : "SelteneMVGenomSeq.plan.carePlanRd.clinicalManagementRecommended",
+      "short" : "clinicalManagementRecommended",
+      "definition" : "Empfehlungen zum klinischen Management",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "boolean"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.carePlanRd.clinicalManagementDescriptions",
+      "path" : "SelteneMVGenomSeq.plan.carePlanRd.clinicalManagementDescriptions",
+      "short" : "clinicalManagementDescriptions",
+      "definition" : "diseaseSpecificAmbulatoryCare | universityAmbulatoryCare | localCrd | otherCrd | otherAmbulatoryCare | gp | specialist",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.recommendedStudies",
+      "path" : "SelteneMVGenomSeq.plan.recommendedStudies",
+      "short" : "recommendedStudies",
+      "definition" : "Empfohlene Studien",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.recommendedStudies.identifier",
+      "path" : "SelteneMVGenomSeq.plan.recommendedStudies.identifier",
+      "short" : "identifier",
+      "definition" : "Kennung der Empfehlung",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.recommendedStudies.register",
+      "path" : "SelteneMVGenomSeq.plan.recommendedStudies.register",
+      "short" : "register",
+      "definition" : "Studienregister, NCT bevorzugt: NCT | DRKS | Eudra-CT/CTIS | other | yesButStudyIsUnknown",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.recommendedStudies.name",
+      "path" : "SelteneMVGenomSeq.plan.recommendedStudies.name",
+      "short" : "name",
+      "definition" : "Name der Studie",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.recommendedStudies.id",
+      "path" : "SelteneMVGenomSeq.plan.recommendedStudies.id",
+      "short" : "id",
+      "definition" : "Kennung der Studie im Register",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.recommendedStudies.variants",
+      "path" : "SelteneMVGenomSeq.plan.recommendedStudies.variants",
+      "short" : "variants",
+      "definition" : "Bezug auf Varianten (identifier aus molecular)",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.recommendedTherapies",
+      "path" : "SelteneMVGenomSeq.plan.recommendedTherapies",
+      "short" : "recommendedTherapies",
+      "definition" : "Empfohlene Therapien",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.recommendedTherapies.identifier",
+      "path" : "SelteneMVGenomSeq.plan.recommendedTherapies.identifier",
+      "short" : "identifier",
+      "definition" : "Kennung der Empfehlung",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.recommendedTherapies.type",
+      "path" : "SelteneMVGenomSeq.plan.recommendedTherapies.type",
+      "short" : "type",
+      "definition" : "causal | symptomatic",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.recommendedTherapies.strategy",
+      "path" : "SelteneMVGenomSeq.plan.recommendedTherapies.strategy",
+      "short" : "strategy",
+      "definition" : "systemicMedication | targetedMedication | preventionMedication | genetic | prophylactic | earlyDetection | combination | nutrition | other",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.recommendedTherapies.strategyOther",
+      "path" : "SelteneMVGenomSeq.plan.recommendedTherapies.strategyOther",
+      "short" : "strategyOther",
+      "definition" : "Freitext, nur bei strategy = other",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.recommendedTherapies.strategyCombination",
+      "path" : "SelteneMVGenomSeq.plan.recommendedTherapies.strategyCombination",
+      "short" : "strategyCombination",
+      "definition" : "Freitext, nur bei strategy = combination",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.plan.recommendedTherapies.variants",
+      "path" : "SelteneMVGenomSeq.plan.recommendedTherapies.variants",
+      "short" : "variants",
+      "definition" : "Bezug auf Varianten (identifier aus molecular)",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp",
+      "path" : "SelteneMVGenomSeq.followUp",
+      "short" : "followUp",
+      "definition" : "Verlauf (RareDiseasesFollowUp.json)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp.followUpRds",
+      "path" : "SelteneMVGenomSeq.followUp.followUpRds",
+      "short" : "followUpRds",
+      "definition" : "Je Verlaufsmeldung ein Eintrag mit dem aktuellen Stand",
+      "min" : 1,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp.followUpRds.followUpDate",
+      "path" : "SelteneMVGenomSeq.followUp.followUpRds.followUpDate",
+      "short" : "followUpDate",
+      "definition" : "Datum der Verlaufsmeldung",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp.followUpRds.phenotypes",
+      "path" : "SelteneMVGenomSeq.followUp.followUpRds.phenotypes",
+      "short" : "phenotypes",
+      "definition" : "HPO-Phänotypen mit Veränderung",
+      "min" : 1,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp.followUpRds.phenotypes.system",
+      "path" : "SelteneMVGenomSeq.followUp.followUpRds.phenotypes.system",
+      "short" : "system",
+      "definition" : "Terminologie, hier HPO",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "uri"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp.followUpRds.phenotypes.version",
+      "path" : "SelteneMVGenomSeq.followUp.followUpRds.phenotypes.version",
+      "short" : "version",
+      "definition" : "HPO-Version",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp.followUpRds.phenotypes.code",
+      "path" : "SelteneMVGenomSeq.followUp.followUpRds.phenotypes.code",
+      "short" : "code",
+      "definition" : "HPO-Term",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp.followUpRds.phenotypes.display",
+      "path" : "SelteneMVGenomSeq.followUp.followUpRds.phenotypes.display",
+      "short" : "display",
+      "definition" : "Anzeigetext",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp.followUpRds.phenotypes.text",
+      "path" : "SelteneMVGenomSeq.followUp.followUpRds.phenotypes.text",
+      "short" : "text",
+      "definition" : "Klinische Beschreibung des Phänotyps",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp.followUpRds.phenotypes.change",
+      "path" : "SelteneMVGenomSeq.followUp.followUpRds.phenotypes.change",
+      "short" : "change",
+      "definition" : "newlyAdded | improved | degraded | noLongerObserved | unchanged",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp.followUpRds.gmfcs",
+      "path" : "SelteneMVGenomSeq.followUp.followUpRds.gmfcs",
+      "short" : "gmfcs",
+      "definition" : "GMFCS-Level I | II | III | IV | V; leer, wenn nicht zutreffend",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp.followUpRds.diagnosisEstablished",
+      "path" : "SelteneMVGenomSeq.followUp.followUpRds.diagnosisEstablished",
+      "short" : "diagnosisEstablished",
+      "definition" : "Diagnose gesichert",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "boolean"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp.followUpRds.diseaseProgression",
+      "path" : "SelteneMVGenomSeq.followUp.followUpRds.diseaseProgression",
+      "short" : "diseaseProgression",
+      "definition" : "Fallrelevante Angaben zum Krankheitsverlauf",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp.followUpRds.vitalStatus",
+      "path" : "SelteneMVGenomSeq.followUp.followUpRds.vitalStatus",
+      "short" : "vitalStatus",
+      "definition" : "living | deceased, Stand letzter Kontakt",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "SelteneMVGenomSeq.followUp.followUpRds.deathDate",
+      "path" : "SelteneMVGenomSeq.followUp.followUpRds.deathDate",
+      "short" : "deathDate",
+      "definition" : "Sterbemonat, Format JJJJ-MM",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    }]
+  }
+}
+
+```
